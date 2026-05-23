@@ -16,10 +16,14 @@ UFO Lab Tokyo は、UFO・UAPに関する情報や検証体験を、Webアプリ
 
 初期フェーズでは、断定的な主張ではなく「根拠に基づいた確認」を重視し、ユーザーが画像の来歴や加工可能性を理解できる体験の提供を目指します。
 
+このリポジトリでは、ブランドサイトを東京UFO研究室全体の入口として扱い、個別アプリをその活動の一部として整理します。最初の公開アプリは、UFO画像のAI生成・AI加工可能性を確認する Ohtsuki です。
+
 ## First App: Ohtsuki
 
 - プロダクト名: `Ohtsuki`
 - 表示名: **Ohtsuki - UFO画像AI判定チェッカー β**
+- ユーザー向け名称: **Ohtsuki – UFO画像AI判定チェッカー β**
+- URL名・技術名: `ohtsuki`
 - 対応ページ: `/ohtsuki`
 - 旧URL互換: `/ufo-image-checker` は `/ohtsuki` にリダイレクト
 
@@ -37,6 +41,8 @@ UFO Lab Tokyo は、UFO・UAPに関する情報や検証体験を、Webアプリ
 
 仕様書は以下を参照してください。
 
+- `docs/brand/ufo-lab-tokyo-brand.md`
+- `docs/apps/ohtsuki-ai-image-checker-spec.md`
 - `docs/specs/brand-site.md`
 - `docs/specs/ohtsuki-mvp.md`
 
