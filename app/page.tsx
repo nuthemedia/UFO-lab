@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { checkerRoadmap, futureFeatures } from "@/data/futureFeatures";
+import { researchPillars } from "@/data/futureFeatures";
+import { ohtsukiConfig, siteConfig } from "@/lib/site";
 
 export default function HomePage() {
   return (
@@ -11,61 +12,74 @@ export default function HomePage() {
           <div className="ufo-body" />
         </div>
         <div className="hero-content">
-          <p className="eyebrow">UFO・UAP observation lab</p>
-          <h1>UFOlab</h1>
-          <p className="lead">
-            未確認の光、写真、目撃談を冷静に見つめるための小さな実験場です。
-            最初のMVPではトップページとUFO画像チェッカーから始めます。
-          </p>
+          <p className="eyebrow">{siteConfig.englishName}</p>
+          <h1>{siteConfig.formalName}</h1>
+          <p className="tagline">{siteConfig.tagline}</p>
+          <p className="lead">{siteConfig.description}</p>
           <div className="hero-actions">
-            <Link className="primary-action" href="/ufo-image-checker">
-              UFO画像チェッカーへ
+            <Link className="primary-action" href="/ohtsuki">
+              Ohtsukiを開く
+            </Link>
+            <Link className="secondary-action" href="#about">
+              研究室について
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="section">
+      <section id="about" className="section intro-section">
         <div className="section-heading">
-          <p className="eyebrow">MVP focus</p>
-          <h2>最初に作るもの</h2>
+          <p className="eyebrow">{siteConfig.shortName}</p>
+          <h2>未知を、未知のまま雑に扱わない。</h2>
         </div>
-        <div className="feature-grid">
-          <article className="feature-card">
-            <span className="feature-number">01</span>
-            <h3>トップページ</h3>
+        <div className="split-layout">
+          <div>
             <p>
-              UFOlabの入口として、プロジェクトの方向性と初期機能への導線を用意します。
+              東京UFO研究室は、UFO・UAPを娯楽や断定だけに閉じ込めず、
+              観察可能な現象として記録し、検証し、語り直すための小さな研究室です。
             </p>
-          </article>
-          <article className="feature-card">
-            <span className="feature-number">02</span>
-            <h3>UFO画像チェッカー</h3>
             <p>
-              本物のAI判定APIを使う前の仮ページとして、将来の解析項目を確認できます。
+              まだ説明できないものを、ただちに本物とも偽物とも決めつけない。
+              その態度から、ブランドサイトと画像判定ツール Ohtsuki を育てていきます。
             </p>
-          </article>
+          </div>
+          <aside className="statement-panel" aria-label="ブランド表記">
+            <span>正式名称</span>
+            <strong>{siteConfig.formalName}</strong>
+            <span>English</span>
+            <strong>{siteConfig.englishName}</strong>
+            <span>Logo</span>
+            <strong>{siteConfig.shortName}</strong>
+          </aside>
         </div>
       </section>
 
       <section className="section muted-section">
         <div className="section-heading">
-          <p className="eyebrow">Roadmap</p>
-          <h2>将来追加予定</h2>
+          <p className="eyebrow">Research stance</p>
+          <h2>研究室の中心に置くこと</h2>
         </div>
-        <ul className="pill-list" aria-label="将来追加予定の機能">
-          {futureFeatures.map((feature) => (
-            <li key={feature}>{feature}</li>
+        <div className="feature-grid">
+          {researchPillars.map((pillar, index) => (
+            <article className="feature-card" key={pillar.title}>
+              <span className="feature-number">{String(index + 1).padStart(2, "0")}</span>
+              <h3>{pillar.title}</h3>
+              <p>{pillar.description}</p>
+            </article>
           ))}
-        </ul>
-        <div className="roadmap-panel">
-          <h3>画像チェッカーで扱う予定の観点</h3>
-          <ul>
-            {checkerRoadmap.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
         </div>
+      </section>
+
+      <section className="product-band">
+        <div>
+          <p className="eyebrow">First product</p>
+          <h2>{ohtsukiConfig.name}</h2>
+          <p className="lead">{ohtsukiConfig.label}</p>
+          <p>{ohtsukiConfig.description}</p>
+        </div>
+        <Link className="primary-action" href="/ohtsuki">
+          β版を見る
+        </Link>
       </section>
     </>
   );
