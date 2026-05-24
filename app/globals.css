@@ -341,6 +341,10 @@ h3 {
   font-weight: 400;
 }
 
+.tagline-mobile {
+  display: none;
+}
+
 .brand-video-frame {
   position: relative;
   width: min(100%, 760px);
@@ -1961,6 +1965,14 @@ h3 {
 
   .brand-taglines p:first-child {
     font-size: 1.18rem;
+  }
+
+  .tagline-desktop {
+    display: none;
+  }
+
+  .tagline-mobile {
+    display: inline;
   }
 
   .brand-video-play span {

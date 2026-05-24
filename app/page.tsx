@@ -18,8 +18,24 @@ export default function HomePage() {
               <h1 className="brand-logo">{siteConfig.shortName}</h1>
             </div>
             <div className="brand-taglines">
-              <p>{siteConfig.tagline}</p>
-              <p>UFOs are phenomena that remain unexplained, yet undeniably exist.</p>
+              <p>
+                <span className="tagline-desktop">{siteConfig.tagline}</span>
+                <span className="tagline-mobile" aria-hidden="true">
+                  UFOはまだ解明されていないが
+                  <br />
+                  確かに実在する現象である
+                </span>
+              </p>
+              <p>
+                <span className="tagline-desktop">
+                  UFOs are phenomena that remain unexplained, yet undeniably exist.
+                </span>
+                <span className="tagline-mobile" aria-hidden="true">
+                  UFOs remain unexplained,
+                  <br />
+                  yet undeniably exist.
+                </span>
+              </p>
             </div>
           </div>
 
@@ -44,9 +60,6 @@ export default function HomePage() {
                 Ohtsukiを開く
               </Link>
             </article>
-            <p className="otsuki-note">
-              Ruppelt βは米政府UAP公開資料を確認するためのブラウザ。OhtsukiはUFO画像がAI生成かどうかをチェックするツール。
-            </p>
           </div>
         </div>
       </section>
