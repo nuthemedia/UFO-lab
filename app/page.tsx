@@ -46,7 +46,7 @@ export default function HomePage() {
               <p className="eyebrow">Beta</p>
               <h2>Ruppelt β</h2>
               <p className="otsuki-title">Ruppelt β – PURSUE日本語インデックス</p>
-              <Link className="primary-action" href="/ruppelt">
+              <Link className="primary-action" href={{ pathname: "/ruppelt" }}>
                 Ruppeltを開く
               </Link>
             </article>
