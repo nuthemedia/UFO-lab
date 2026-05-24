@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/ogp-v2.jpg",
+        url: "/ogp-ohtsuki.jpg",
         width: 1200,
         height: 630,
         alt: `${ohtsukiConfig.name} | ${ohtsukiConfig.label}`,
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${ohtsukiConfig.name} | ${ohtsukiConfig.label}`,
     description: ohtsukiConfig.description,
-    images: ["/ogp-v2.jpg"],
+    images: ["/ogp-ohtsuki.jpg"],
   },
   other: {
     "twitter:image:alt": `${ohtsukiConfig.name} | ${ohtsukiConfig.label}`,

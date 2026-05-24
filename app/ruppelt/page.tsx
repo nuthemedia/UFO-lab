@@ -8,11 +8,39 @@ import type { PursueIndex } from "@/lib/pursue";
 export const metadata: Metadata = {
   title: "Ruppelt β | Ruppelt β - PURSUE日本語インデックス",
   description: "米政府UAP公開資料を、日本語でさくっと確認できる資料ブラウザです。",
+  alternates: {
+    canonical: "/ruppelt",
+  },
+  openGraph: {
+    title: "Ruppelt β - PURSUE日本語インデックス",
+    description: "米政府UAP公開資料をスマホでさくっと確認。",
+    url: "/ruppelt",
+    siteName: "UFO Lab Tokyo",
+    images: [
+      {
+        url: "/ogp-ruppelt.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Ruppelt β - PURSUE日本語インデックス",
+        type: "image/jpeg",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ruppelt β - PURSUE日本語インデックス",
+    description: "米政府UAP公開資料をスマホでさくっと確認。",
+    images: ["/ogp-ruppelt.jpg"],
+  },
+  other: {
+    "twitter:image:alt": "Ruppelt β - PURSUE日本語インデックス",
+  },
 };
 
 export default function RuppeltPage() {
   return (
-    <section className="checker-page">
+    <section className="checker-page ruppelt-page">
       <div className="checker-hero">
         <div className="ohtsuki-brand-mark" aria-label={siteConfig.shortName}>
           <div className="orbital-mark orbital-mark-compact" aria-hidden="true">

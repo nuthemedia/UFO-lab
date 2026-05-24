@@ -1324,6 +1324,11 @@ h3 {
 .ruppelt-browser {
   display: grid;
   gap: 16px;
+  padding-bottom: 48px;
+}
+
+.ruppelt-page {
+  padding-bottom: max(160px, env(safe-area-inset-bottom));
 }
 
 .ruppelt-controls {
@@ -1521,6 +1526,8 @@ h3 {
 .ruppelt-carousel-shell {
   display: grid;
   gap: 10px;
+  scroll-margin-top: 150px;
+  padding-top: 6px;
 }
 
 .ruppelt-carousel-hint {
@@ -1536,7 +1543,7 @@ h3 {
   display: flex;
   gap: 2px;
   overflow-x: auto;
-  padding: 8px var(--ruppelt-carousel-edge) 18px;
+  padding: 14px var(--ruppelt-carousel-edge) 20px;
   scroll-snap-type: x mandatory;
   scroll-padding-inline: var(--ruppelt-carousel-edge);
   overscroll-behavior-x: contain;
@@ -1553,6 +1560,7 @@ h3 {
   flex: 0 0 var(--ruppelt-carousel-card-width);
   scroll-snap-align: center;
   scroll-snap-stop: always;
+  scroll-margin-top: 150px;
   position: relative;
   transition: transform 180ms ease, opacity 180ms ease;
   transform-origin: center center;
@@ -2085,10 +2093,16 @@ h3 {
 
   .ruppelt-carousel {
     --ruppelt-carousel-card-width: min(76vw, 380px);
+    padding-top: 18px;
   }
 
   .ruppelt-carousel-item {
     flex-basis: var(--ruppelt-carousel-card-width);
+    scroll-margin-top: 190px;
+  }
+
+  .ruppelt-carousel-shell {
+    scroll-margin-top: 190px;
   }
 
   .ruppelt-card-topbar {
