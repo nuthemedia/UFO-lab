@@ -10,7 +10,7 @@ const siteUrl =
 const siteTitle = "UFO Lab Tokyo";
 const siteDescription =
   "東京UFO研究室。UFO・UAPをめぐる画像、資料、公開情報を検証するための実験的ラボ。";
-const ogpImage = "/ogp.jpg";
+const ogpImage = "/ogp-v2.jpg";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -30,6 +30,7 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: siteTitle,
+        type: "image/jpeg",
       },
     ],
     type: "website",
@@ -39,6 +40,9 @@ export const metadata: Metadata = {
     title: siteTitle,
     description: siteDescription,
     images: [ogpImage],
+  },
+  other: {
+    "twitter:image:alt": siteTitle,
   },
 };
 
