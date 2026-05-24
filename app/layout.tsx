@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const productionSiteUrl = "https://ufo-lab.vercel.app";
@@ -55,6 +56,7 @@ export default function RootLayout({
     <html lang="ja">
       <body>
         <main>{children}</main>
+        <Analytics />
       </body>
     </html>
   );
