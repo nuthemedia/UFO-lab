@@ -27,6 +27,14 @@ export default function HomePage() {
 
           <div className="otsuki-showcase">
             <article className="otsuki-card">
+              <p className="eyebrow">Beta</p>
+              <h2>Ruppelt β</h2>
+              <p className="otsuki-title">Ruppelt β – PURSUE日本語インデックス</p>
+              <Link className="primary-action" href="/ruppelt">
+                Ruppeltを開く
+              </Link>
+            </article>
+            <article className="otsuki-card">
               <p className="eyebrow">Version 0.5 Beta</p>
               <h2>{ohtsukiConfig.name}</h2>
               <p className="otsuki-title">
@@ -36,7 +44,9 @@ export default function HomePage() {
                 Ohtsukiを開く
               </Link>
             </article>
-            <p className="otsuki-note">UFO画像がAI生成かどうかをチェックするツール</p>
+            <p className="otsuki-note">
+              Ruppelt βは米政府UAP公開資料を確認するためのブラウザ。OhtsukiはUFO画像がAI生成かどうかをチェックするツール。
+            </p>
           </div>
         </div>
       </section>

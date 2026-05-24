@@ -1,13 +1,45 @@
 import type { Metadata } from "next";
-import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
+const productionSiteUrl = "https://ufo-lab.vercel.app";
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.NODE_ENV === "production"
+    ? productionSiteUrl
+    : "http://localhost:3000");
+const siteTitle = "UFO Lab Tokyo";
+const siteDescription =
+  "東京UFO研究室。UFO・UAPをめぐる画像、資料、公開情報を検証するための実験的ラボ。";
+const ogpImage = "/ogp.jpg";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
-    default: siteConfig.formalName,
-    template: `%s | ${siteConfig.shortName}`,
+    default: siteTitle,
+    template: `%s | ${siteTitle}`,
   },
-  description: siteConfig.description,
+  description: siteDescription,
+  openGraph: {
+    title: siteTitle,
+    description: siteDescription,
+    url: siteUrl,
+    siteName: siteTitle,
+    images: [
+      {
+        url: ogpImage,
+        width: 1200,
+        height: 630,
+        alt: siteTitle,
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+    images: [ogpImage],
+  },
 };
 
 export default function RootLayout({

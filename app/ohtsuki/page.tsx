@@ -6,6 +6,30 @@ import { ohtsukiConfig, siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: `${ohtsukiConfig.name} | ${ohtsukiConfig.label}`,
   description: ohtsukiConfig.description,
+  alternates: {
+    canonical: "https://ufo-lab.vercel.app/ohtsuki",
+  },
+  openGraph: {
+    title: `${ohtsukiConfig.name} | ${ohtsukiConfig.label}`,
+    description: ohtsukiConfig.description,
+    url: "https://ufo-lab.vercel.app/ohtsuki",
+    siteName: "UFO Lab Tokyo",
+    type: "website",
+    images: [
+      {
+        url: "/ogp.jpg",
+        width: 1200,
+        height: 630,
+        alt: `${ohtsukiConfig.name} | ${ohtsukiConfig.label}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${ohtsukiConfig.name} | ${ohtsukiConfig.label}`,
+    description: ohtsukiConfig.description,
+    images: ["/ogp.jpg"],
+  },
 };
 
 export default function OhtsukiPage() {
