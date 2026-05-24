@@ -1548,7 +1548,7 @@ h3 {
   scroll-padding-inline: var(--ruppelt-carousel-edge);
   overscroll-behavior-x: contain;
   -webkit-overflow-scrolling: touch;
-  touch-action: pan-x pinch-zoom;
+  touch-action: pan-x pan-y pinch-zoom;
   scrollbar-width: none;
 }
 
@@ -1817,6 +1817,7 @@ h3 {
 .ruppelt-card-thumbnail iframe {
   border: 0;
   background: #111;
+  pointer-events: none;
 }
 
 .ruppelt-card-thumbnail--video {
