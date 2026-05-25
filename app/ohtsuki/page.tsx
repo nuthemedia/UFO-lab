@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   title: `${ohtsukiConfig.name} | ${ohtsukiConfig.label}`,
   description: ohtsukiConfig.description,
   alternates: {
-    canonical: "https://ufo-lab.vercel.app/ohtsuki",
+    canonical: "https://ufolab.tokyo/ohtsuki",
   },
   openGraph: {
     title: `${ohtsukiConfig.name} | ${ohtsukiConfig.label}`,
     description: ohtsukiConfig.description,
-    url: "https://ufo-lab.vercel.app/ohtsuki",
+    url: "https://ufolab.tokyo/ohtsuki",
     siteName: "UFO Lab Tokyo",
     type: "website",
     images: [

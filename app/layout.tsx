@@ -2,12 +2,11 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
-const productionSiteUrl = "https://ufo-lab.vercel.app";
+const productionSiteUrl = "https://ufolab.tokyo";
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ||
-  (process.env.NODE_ENV === "production"
+  process.env.NODE_ENV === "production"
     ? productionSiteUrl
-    : "http://localhost:3000");
+    : process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 const siteTitle = "UFO Lab Tokyo";
 const siteDescription =
   "東京UFO研究室。UFO・UAPをめぐる画像、資料、公開情報を検証するための実験的ラボ。";

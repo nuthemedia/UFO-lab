@@ -5,7 +5,7 @@ export const siteConfig = {
   tagline: "UFOはまだ解明されていないが確かに実在する現象である",
   description:
     "東京UFO研究室は、UFO・UAP現象を観察、記録、検証するための研究室型ブランドです。",
-  url: "https://ufo-lab.vercel.app",
+  url: "https://ufolab.tokyo",
 };
 
 export const ohtsukiConfig = {
