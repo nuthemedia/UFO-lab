@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { OhtsukiChecker } from "@/components/OhtsukiChecker";
+import { SiteFooter } from "@/components/SiteFooter";
 import { ohtsukiConfig, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 
 export default function OhtsukiPage() {
   return (
-      <section className="checker-page">
+    <section className="checker-page">
       <div className="checker-hero">
         <div className="ohtsuki-brand-mark" aria-label={siteConfig.shortName}>
           <div className="orbital-mark orbital-mark-compact" aria-hidden="true">
@@ -63,11 +63,7 @@ export default function OhtsukiPage() {
 
       <OhtsukiChecker />
 
-      <footer className="site-footer ohtsuki-footer">
-      <Link href="/">東京UFO研究室</Link>
-        <p>UFO Research Lab Tokyo <span>All rights reserved</span></p>
-        <p>&copy; 2026 東京UFO研究室</p>
-      </footer>
+      <SiteFooter className="ohtsuki-footer" />
     </section>
   );
 }

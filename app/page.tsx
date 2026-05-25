@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BrandVideo } from "@/components/BrandVideo";
+import { SiteFooter } from "@/components/SiteFooter";
 import { ohtsukiConfig, siteConfig } from "@/lib/site";
 
 export default function HomePage() {
@@ -39,13 +40,26 @@ export default function HomePage() {
             </div>
           </div>
 
+          <section className="mission-block" aria-labelledby="mission-heading">
+            <p className="mission-label" id="mission-heading">Mission</p>
+            <p className="mission-copy">ソフトウェアの魔法で、UFOコミュニティに貢献する</p>
+            <p className="mission-copy-en">
+              Contributing to the UFO community through the magic of software.
+            </p>
+          </section>
+
           <BrandVideo />
+
+          <p className="brand-update">
+            <span>Update</span>
+            Ruppelt v1.1にファイルの公開情報が追加されました。
+          </p>
 
           <div className="otsuki-showcase">
             <article className="otsuki-card">
-              <p className="eyebrow">Beta</p>
-              <h2>Ruppelt β</h2>
-              <p className="otsuki-title">Ruppelt β – PURSUE日本語インデックス</p>
+              <p className="eyebrow">Version 1.1</p>
+              <h2>Ruppelt v1.1</h2>
+              <p className="otsuki-title">Ruppelt v1.1 – PURSUE日本語インデックス</p>
               <Link className="primary-action" href={{ pathname: "/ruppelt" }}>
                 Ruppeltを開く
               </Link>
@@ -64,11 +78,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <footer className="site-footer">
-        <p>東京UFO研究室</p>
-        <p>UFO Research Lab Tokyo <span>All rights reserved</span></p>
-        <p>&copy; 2026 東京UFO研究室</p>
-      </footer>
+      <SiteFooter />
     </>
   );
 }

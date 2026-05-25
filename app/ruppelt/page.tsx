@@ -1,18 +1,25 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import pursueIndex from "@/data/pursue/pursue-records.json";
 import { RuppeltBrowser } from "@/components/RuppeltBrowser";
+import { SiteFooter } from "@/components/SiteFooter";
 import { siteConfig } from "@/lib/site";
-import type { PursueIndex } from "@/lib/pursue";
+import { priorDisclosureLabels, type PriorDisclosureStatus, type PursueIndex } from "@/lib/pursue";
+
+const statusDashboardOrder: PriorDisclosureStatus[] = [
+  "first_time_public",
+  "partial",
+  "previously_public",
+  "unknown",
+];
 
 export const metadata: Metadata = {
-  title: "Ruppelt β | Ruppelt β - PURSUE日本語インデックス",
+  title: "Ruppelt v1.1 | Ruppelt v1.1 - PURSUE日本語インデックス",
   description: "米政府UAP公開資料を、日本語でさくっと確認できる資料ブラウザです。",
   alternates: {
     canonical: "/ruppelt",
   },
   openGraph: {
-    title: "Ruppelt β - PURSUE日本語インデックス",
+    title: "Ruppelt v1.1 - PURSUE日本語インデックス",
     description: "米政府UAP公開資料をスマホでさくっと確認。",
     url: "/ruppelt",
     siteName: "UFO Lab Tokyo",
@@ -21,7 +28,7 @@ export const metadata: Metadata = {
         url: "/ogp-ruppelt.jpg",
         width: 1200,
         height: 630,
-        alt: "Ruppelt β - PURSUE日本語インデックス",
+        alt: "Ruppelt v1.1 - PURSUE日本語インデックス",
         type: "image/jpeg",
       },
     ],
@@ -29,16 +36,36 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ruppelt β - PURSUE日本語インデックス",
+    title: "Ruppelt v1.1 - PURSUE日本語インデックス",
     description: "米政府UAP公開資料をスマホでさくっと確認。",
     images: ["/ogp-ruppelt.jpg"],
   },
   other: {
-    "twitter:image:alt": "Ruppelt β - PURSUE日本語インデックス",
+    "twitter:image:alt": "Ruppelt v1.1 - PURSUE日本語インデックス",
   },
 };
 
 export default function RuppeltPage() {
+  const index = pursueIndex as PursueIndex;
+  const statusCounts = index.records.reduce<Record<PriorDisclosureStatus, number>>(
+    (counts, record) => {
+      const status = record.searchFacets?.priorDisclosureStatus;
+
+      if (status && statusDashboardOrder.includes(status)) {
+        counts[status] += 1;
+      }
+
+      return counts;
+    },
+    {
+      first_time_public: 0,
+      previously_public: 0,
+      partial: 0,
+      known_case_new_file: 0,
+      unknown: 0,
+    },
+  );
+
   return (
     <section className="checker-page ruppelt-page">
       <div className="checker-hero">
@@ -54,20 +81,22 @@ export default function RuppeltPage() {
           </div>
           <span className="sr-only">{siteConfig.shortName}</span>
         </div>
-        <h1>Ruppelt β</h1>
-        <p className="tagline">Ruppelt β - PURSUE日本語インデックス</p>
+        <h1>Ruppelt v1.1</h1>
+        <p className="tagline">Ruppelt v1.1 - PURSUE日本語インデックス</p>
         <p className="lead">米政府UAP公開資料をスマホでさくっと確認。</p>
+        <div className="ruppelt-status-dashboard" aria-label="公開状況の件数">
+          {statusDashboardOrder.map((status) => (
+            <div key={status} className={`ruppelt-status-stat ruppelt-status-stat--${status}`}>
+              <span>{priorDisclosureLabels[status]}</span>
+              <strong>{statusCounts[status]}</strong>
+            </div>
+          ))}
+        </div>
       </div>
 
-      <RuppeltBrowser index={pursueIndex as PursueIndex} />
+      <RuppeltBrowser index={index} />
 
-      <footer className="site-footer ohtsuki-footer">
-        <Link href="/">東京UFO研究室</Link>
-        <p>
-          UFO Research Lab Tokyo <span>All rights reserved</span>
-        </p>
-        <p>&copy; 2026 東京UFO研究室</p>
-      </footer>
+      <SiteFooter className="ohtsuki-footer" />
     </section>
   );
 }

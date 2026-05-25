@@ -25,6 +25,91 @@ export type PursueJaRecord = {
 export type PursueRecord = {
   source: PursueSourceRecord;
   ja: PursueJaRecord;
+  priorDisclosure?: PriorDisclosure;
+  searchFacets?: PursueSearchFacets;
+};
+
+export type PriorDisclosureStatus =
+  | "first_time_public"
+  | "previously_public"
+  | "partial"
+  | "known_case_new_file"
+  | "unknown";
+
+export type PriorDisclosureConfidence = "high" | "medium" | "low";
+
+export type PriorDisclosureEvidenceType =
+  | "official_source"
+  | "archive_match"
+  | "catalog_match"
+  | "file_match"
+  | "text_match"
+  | "metadata_match"
+  | "case_match"
+  | "image_match"
+  | "audio_match"
+  | "video_match"
+  | "manual_review";
+
+export type PriorDisclosureAttributionSource =
+  | "they_are_here"
+  | "ruppelt"
+  | "nara"
+  | "fbi_vault"
+  | "nasa"
+  | "aaro"
+  | "cia_crest"
+  | "black_vault"
+  | "internet_archive"
+  | "wikimedia_commons"
+  | "dvids"
+  | "news"
+  | "research_site";
+
+export type PriorDisclosureEvidence = {
+  type: PriorDisclosureEvidenceType;
+  label: string;
+  url?: string;
+  noteJa: string;
+  matchedFields?: string[];
+  confidence?: PriorDisclosureConfidence;
+};
+
+export type PriorDisclosureAttribution = {
+  source: PriorDisclosureAttributionSource;
+  sourceUrl?: string;
+  role:
+    | "external_audit_reference"
+    | "official_archive"
+    | "auxiliary_archive"
+    | "ruppelt_review"
+    | "news_context"
+    | "research_analysis";
+  visible: "primary" | "secondary" | "hidden";
+};
+
+export type PriorDisclosure = {
+  status: PriorDisclosureStatus;
+  labelJa: string;
+  confidence: PriorDisclosureConfidence;
+  evidenceSummaryJa: string[];
+  evidence: PriorDisclosureEvidence[];
+  attribution: PriorDisclosureAttribution[];
+  checkedAt?: string;
+  checkedBy?: "ruppelt" | "external";
+  ruppeltVerified: boolean;
+  manualReviewRequired?: boolean;
+  reviewerNoteJa?: string;
+};
+
+export type PursueSearchFacets = {
+  releaseId: "release_01" | "release_02";
+  priorDisclosureStatus?: PriorDisclosureStatus;
+  priorDisclosureConfidence?: PriorDisclosureConfidence;
+  ruppeltVerified: boolean;
+  manualReviewRequired: boolean;
+  hasPriorDisclosureEvidence: boolean;
+  attributionSources: PriorDisclosureAttributionSource[];
 };
 
 export type PursueIndex = {
@@ -42,6 +127,27 @@ export type PursueIndex = {
 
 export type PursueSort = "newest" | "oldest" | "title" | "agency";
 
+export const priorDisclosureLabels: Record<PriorDisclosureStatus, string> = {
+  first_time_public: "初公開",
+  previously_public: "既に公開済み",
+  partial: "一部公開済み",
+  known_case_new_file: "事件は既知・資料は初公開",
+  unknown: "判定不能",
+};
+
+export const priorDisclosureConfidenceLabels: Record<PriorDisclosureConfidence, string> = {
+  high: "高",
+  medium: "中",
+  low: "低",
+};
+
+export const priorDisclosureStatusOptions = [
+  "first_time_public",
+  "previously_public",
+  "partial",
+  "unknown",
+] as PriorDisclosureStatus[];
+
 const videoPortalPattern = /^https:\/\/www\.war\.gov\/Portals\/1\/Interactive\/2026\/UFO\/\d+\/?$/i;
 const videoPortalIdPattern = /\/(\d+)\/?$/;
 
@@ -55,6 +161,58 @@ function compareStableStrings(a: string, b: string) {
 
 export function displayValue(primary: string, fallback: string) {
   return primary.trim() || fallback.trim() || "不明";
+}
+
+export function getReleaseId(record: PursueRecord): PursueSearchFacets["releaseId"] {
+  return record.source.release.includes("5/22") ? "release_02" : "release_01";
+}
+
+export function getDefaultPriorDisclosure(record: PursueRecord): PriorDisclosure {
+  return {
+    status: "unknown",
+    labelJa: priorDisclosureLabels.unknown,
+    confidence: "low",
+    evidenceSummaryJa: [],
+    evidence: [],
+    attribution: [
+      {
+        source: "ruppelt",
+        role: "ruppelt_review",
+        visible: "secondary",
+      },
+    ],
+    ruppeltVerified: false,
+    manualReviewRequired: true,
+    reviewerNoteJa:
+      getReleaseId(record) === "release_02"
+        ? "Release 02 はRuppelt側での公開状況照合が未完了です。"
+        : "公開状況の照合データがまだ登録されていません。",
+  };
+}
+
+export function hasPriorDisclosureData(record: PursueRecord) {
+  return Boolean(record.priorDisclosure);
+}
+
+export function getPriorDisclosure(record: PursueRecord) {
+  return record.priorDisclosure || getDefaultPriorDisclosure(record);
+}
+
+export function getSearchFacets(record: PursueRecord): PursueSearchFacets {
+  const priorDisclosure = getPriorDisclosure(record);
+
+  return (
+    record.searchFacets || {
+      releaseId: getReleaseId(record),
+      priorDisclosureStatus: record.priorDisclosure ? priorDisclosure.status : undefined,
+      priorDisclosureConfidence: record.priorDisclosure ? priorDisclosure.confidence : undefined,
+      ruppeltVerified: priorDisclosure.ruppeltVerified,
+      manualReviewRequired: Boolean(priorDisclosure.manualReviewRequired),
+      hasPriorDisclosureEvidence:
+        priorDisclosure.evidenceSummaryJa.length > 0 || priorDisclosure.evidence.length > 0,
+      attributionSources: priorDisclosure.attribution.map((item) => item.source),
+    }
+  );
 }
 
 export function getTitle(record: PursueRecord) {
@@ -98,6 +256,8 @@ export function getTitleByLanguage(record: PursueRecord, language: "ja" | "en") 
 }
 
 export function getSearchText(record: PursueRecord) {
+  const priorDisclosure = getPriorDisclosure(record);
+
   return [
     record.source.assetFileName,
     record.source.release,
@@ -113,6 +273,10 @@ export function getSearchText(record: PursueRecord) {
     record.ja.incidentLocationJa,
     record.ja.documentTypeJa,
     record.ja.descriptionJa,
+    priorDisclosure.labelJa,
+    priorDisclosure.reviewerNoteJa || "",
+    ...priorDisclosure.evidenceSummaryJa,
+    ...priorDisclosure.evidence.map((item) => `${item.label} ${item.noteJa}`),
   ]
     .join(" ")
     .toLowerCase();

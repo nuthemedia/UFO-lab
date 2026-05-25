@@ -1,19 +1,27 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type PointerEvent } from "react";
 import {
   getAgency,
   getDescriptionByLanguage,
   getDocumentType,
+  hasPriorDisclosureData,
   getLocation,
+  getPriorDisclosure,
   getJapaneseTitle,
   getRelease,
+  getSearchFacets,
   getSearchText,
   getTitle,
   getVideoEmbedUrl,
   getVideoUrl,
+  priorDisclosureConfidenceLabels,
+  priorDisclosureLabels,
+  priorDisclosureStatusOptions,
   sortRecords,
   uniqueValues,
+  type PriorDisclosureAttributionSource,
+  type PriorDisclosureStatus,
   type PursueIndex,
   type PursueRecord,
   type PursueSort,
@@ -28,6 +36,7 @@ const viewModeStorageKey = "ruppelt.viewMode";
 
 type RuppeltViewMode = "carousel" | "list";
 type CardLanguage = "ja" | "en";
+type PriorDisclosureFilter = PriorDisclosureStatus | "unreviewed" | "";
 
 function readParam(name: string) {
   if (typeof window === "undefined") {
@@ -77,7 +86,24 @@ function writeViewMode(mode: RuppeltViewMode) {
   window.localStorage.setItem(viewModeStorageKey, mode);
 }
 
-function matchesRecord(record: PursueRecord, query: string, release: string, agency: string, type: string) {
+function normalizePriorDisclosureFilter(value: string): PriorDisclosureFilter {
+  if (value === "unreviewed") {
+    return "unreviewed";
+  }
+
+  return priorDisclosureStatusOptions.includes(value as PriorDisclosureStatus)
+    ? (value as PriorDisclosureStatus)
+    : "";
+}
+
+function matchesRecord(
+  record: PursueRecord,
+  query: string,
+  release: string,
+  agency: string,
+  type: string,
+  priorDisclosureStatus: PriorDisclosureFilter,
+) {
   const normalizedQuery = query.trim().toLowerCase();
 
   if (normalizedQuery && !getSearchText(record).includes(normalizedQuery)) {
@@ -96,18 +122,152 @@ function matchesRecord(record: PursueRecord, query: string, release: string, age
     return false;
   }
 
+  if (priorDisclosureStatus === "unreviewed") {
+    return !record.priorDisclosure;
+  }
+
+  if (priorDisclosureStatus && !record.priorDisclosure) {
+    return false;
+  }
+
+  if (priorDisclosureStatus && getSearchFacets(record).priorDisclosureStatus !== priorDisclosureStatus) {
+    return false;
+  }
+
   return true;
+}
+
+function getAttributionLabel(source: PriorDisclosureAttributionSource) {
+  const labels: Record<PriorDisclosureAttributionSource, string> = {
+    they_are_here: "they-are-here.com",
+    ruppelt: "Ruppelt",
+    nara: "NARA",
+    fbi_vault: "FBI Vault",
+    nasa: "NASA",
+    aaro: "AARO",
+    cia_crest: "CIA Reading Room / CREST",
+    black_vault: "The Black Vault",
+    internet_archive: "Internet Archive",
+    wikimedia_commons: "Wikimedia Commons",
+    dvids: "DVIDS",
+    news: "報道",
+    research_site: "研究者サイト",
+  };
+
+  return labels[source];
+}
+
+function PriorDisclosurePanel({
+  record,
+  onClose,
+}: {
+  record: PursueRecord;
+  onClose: () => void;
+}) {
+  const priorDisclosure = getPriorDisclosure(record);
+  const disclosureLabel = hasPriorDisclosureData(record) ? priorDisclosure.labelJa : "未照合";
+  const confidenceLabel = priorDisclosureConfidenceLabels[priorDisclosure.confidence];
+  const visibleAttribution = priorDisclosure.attribution.filter((item) => item.visible !== "hidden");
+  const evidenceNotes = Array.from(
+    new Set([
+      ...priorDisclosure.evidenceSummaryJa,
+      ...priorDisclosure.evidence.map((item) => item.noteJa),
+    ].filter(Boolean)),
+  );
+  const hasEvidence = evidenceNotes.length > 0;
+
+  return (
+    <div className="ruppelt-disclosure-layer" role="presentation" onClick={onClose}>
+      <aside
+        className="ruppelt-disclosure-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-label="公開状況の詳細"
+        onClick={(event) => event.stopPropagation()}
+      >
+        <div className="ruppelt-disclosure-header">
+          <div>
+            <p className="ruppelt-disclosure-kicker">公開状況</p>
+            <h2>{disclosureLabel}</h2>
+          </div>
+          <button type="button" aria-label="公開状況の詳細を閉じる" onClick={onClose}>
+            ×
+          </button>
+        </div>
+
+        <div className="ruppelt-disclosure-status-row">
+          <span>信頼度：{confidenceLabel}</span>
+          {priorDisclosure.ruppeltVerified ? <span>Ruppelt確認済み</span> : null}
+        </div>
+
+        <section>
+          <h3>判定材料</h3>
+          {hasEvidence ? (
+            <ul>
+              {evidenceNotes.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          ) : (
+            <p>公開状況を判断できる材料はまだ登録されていません。</p>
+          )}
+        </section>
+
+        {priorDisclosure.evidence.some((item) => item.url) ? (
+          <section>
+            <h3>確認リンク</h3>
+            <div className="ruppelt-disclosure-links">
+              {priorDisclosure.evidence
+                .filter((item) => item.url)
+                .map((item) => (
+                  <a key={`${item.label}-${item.url}`} href={item.url} target="_blank" rel="noreferrer">
+                    {item.label}
+                  </a>
+                ))}
+            </div>
+          </section>
+        ) : null}
+
+        {priorDisclosure.reviewerNoteJa ? (
+          <section>
+            <h3>補足メモ</h3>
+            <p>{priorDisclosure.reviewerNoteJa}</p>
+          </section>
+        ) : null}
+
+        {visibleAttribution.length > 0 ? (
+          <p className="ruppelt-disclosure-reference">
+            参考照合元：
+            {visibleAttribution.map((item, indexValue) => (
+              <span key={`${item.source}-${item.sourceUrl || indexValue}`}>
+                {indexValue > 0 ? "、" : ""}
+                {item.sourceUrl ? (
+                  <a href={item.sourceUrl} target="_blank" rel="noreferrer">
+                    {getAttributionLabel(item.source)}
+                  </a>
+                ) : (
+                  getAttributionLabel(item.source)
+                )}
+              </span>
+            ))}
+          </p>
+        ) : null}
+      </aside>
+    </div>
+  );
 }
 
 function RecordCard({
   record,
   saved,
   onToggleSaved,
+  onOpenPriorDisclosure,
   variant = "list",
 }: {
   record: PursueRecord;
   saved: boolean;
   onToggleSaved: (id: string) => void;
+  onOpenPriorDisclosure: (record: PursueRecord) => void;
   variant?: RuppeltViewMode;
 }) {
   const [language, setLanguage] = useState<CardLanguage>("ja");
@@ -124,6 +284,9 @@ function RecordCard({
   const hasVideoPreview = Boolean(videoEmbedUrl) && !hasThumbnail;
   const description = getDescriptionByLanguage(record, language);
   const japaneseTitle = getJapaneseTitle(record);
+  const priorDisclosure = getPriorDisclosure(record);
+  const disclosureLabel = hasPriorDisclosureData(record) ? priorDisclosure.labelJa : "未照合";
+  const disclosureStatusClass = record.priorDisclosure?.status || "unreviewed";
 
   return (
     <article className={`ruppelt-card ruppelt-card--${variant}`}>
@@ -158,6 +321,18 @@ function RecordCard({
       <div className="ruppelt-card-meta">
         <span>{getRelease(record)}</span>
         <span>{getDocumentType(record)}</span>
+        <button
+          type="button"
+          className={`ruppelt-prior-disclosure ruppelt-prior-disclosure--${disclosureStatusClass}`}
+          aria-label={`公開状況の詳細を表示: ${disclosureLabel}`}
+          onPointerDown={(event) => event.stopPropagation()}
+          onClick={(event) => {
+            event.stopPropagation();
+            onOpenPriorDisclosure(record);
+          }}
+        >
+          {disclosureLabel} <span aria-hidden="true">ⓘ</span>
+        </button>
       </div>
       <h2>{getTitle(record)}</h2>
       {language === "ja" ? <p className="ruppelt-card-title-ja">{japaneseTitle}</p> : null}
@@ -226,33 +401,66 @@ export function RuppeltBrowser({ index }: RuppeltBrowserProps) {
   const [release, setRelease] = useState("");
   const [agency, setAgency] = useState("");
   const [type, setType] = useState("");
+  const [priorDisclosureStatus, setPriorDisclosureStatus] = useState<PriorDisclosureFilter>("");
   const [sort, setSort] = useState<PursueSort>("newest");
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [showSavedOnly, setShowSavedOnly] = useState(false);
   const [savedIds, setSavedIds] = useState<string[]>([]);
   const [viewMode, setViewMode] = useState<RuppeltViewMode>("carousel");
+  const [selectedDisclosureRecord, setSelectedDisclosureRecord] = useState<PursueRecord | null>(null);
   const [activeCarouselIndex, setActiveCarouselIndex] = useState(0);
+  const [carouselDragging, setCarouselDragging] = useState(false);
   const carouselRef = useRef<HTMLDivElement | null>(null);
   const carouselItemRefs = useRef<Array<HTMLDivElement | null>>([]);
+  const carouselDragRef = useRef({
+    active: false,
+    moved: false,
+    pointerId: 0,
+    scrollLeft: 0,
+    startX: 0,
+  });
 
   useEffect(() => {
     setQuery(readParam("q"));
     setRelease(readParam("release"));
     setAgency(readParam("agency"));
     setType(readParam("type"));
+    setPriorDisclosureStatus(normalizePriorDisclosureFilter(readParam("status")));
     setSort((readParam("sort") as PursueSort) || "newest");
     setSavedIds(readSavedIds());
     setViewMode(readViewMode());
   }, []);
 
   useEffect(() => {
-    syncQuery({ q: query, release, agency, type, sort });
-  }, [agency, query, release, sort, type]);
+    syncQuery({ q: query, release, agency, type, status: priorDisclosureStatus, sort });
+  }, [agency, priorDisclosureStatus, query, release, sort, type]);
 
   const releases = useMemo(() => uniqueValues(index.records, (record) => record.source.release), [index.records]);
   const agencies = useMemo(() => uniqueValues(index.records, (record) => record.source.agency), [index.records]);
   const types = useMemo(() => uniqueValues(index.records, (record) => record.source.documentType), [index.records]);
-  const hasActiveFilters = Boolean(query || release || agency || type || showSavedOnly);
+  const priorDisclosureCounts = useMemo(() => {
+    return index.records.reduce<Record<PriorDisclosureStatus, number>>(
+      (counts, record) => {
+        if (record.priorDisclosure) {
+          counts[record.priorDisclosure.status] += 1;
+        }
+
+        return counts;
+      },
+      {
+        first_time_public: 0,
+        previously_public: 0,
+        partial: 0,
+        known_case_new_file: 0,
+        unknown: 0,
+      },
+    );
+  }, [index.records]);
+  const unreviewedCount = useMemo(
+    () => index.records.filter((record) => !record.priorDisclosure).length,
+    [index.records],
+  );
+  const hasActiveFilters = Boolean(query || release || agency || type || priorDisclosureStatus || showSavedOnly);
   const sortLabel = {
     newest: "新しい順",
     oldest: "古い順",
@@ -263,13 +471,22 @@ export function RuppeltBrowser({ index }: RuppeltBrowserProps) {
     `公開日: ${release || "すべて"}`,
     `機関: ${agency || "すべて"}`,
     `種別: ${type || "すべて"}`,
+    `公開状況: ${
+      priorDisclosureStatus === "unreviewed"
+        ? "未照合"
+        : priorDisclosureStatus
+          ? priorDisclosureLabels[priorDisclosureStatus]
+          : "すべて"
+    }`,
     sortLabel,
   ];
   const visibleRecords = useMemo(() => {
-    const filtered = index.records.filter((record) => matchesRecord(record, query, release, agency, type));
+    const filtered = index.records.filter((record) =>
+      matchesRecord(record, query, release, agency, type, priorDisclosureStatus),
+    );
     const savedFiltered = showSavedOnly ? filtered.filter((record) => savedIds.includes(record.source.id)) : filtered;
     return sortRecords(savedFiltered, sort);
-  }, [agency, index.records, query, release, savedIds, showSavedOnly, sort, type]);
+  }, [agency, index.records, priorDisclosureStatus, query, release, savedIds, showSavedOnly, sort, type]);
 
   function toggleSaved(id: string) {
     const next = savedIds.includes(id) ? savedIds.filter((savedId) => savedId !== id) : [...savedIds, id];
@@ -282,6 +499,7 @@ export function RuppeltBrowser({ index }: RuppeltBrowserProps) {
     setRelease("");
     setAgency("");
     setType("");
+    setPriorDisclosureStatus("");
     setSort("newest");
     setShowSavedOnly(false);
     setFiltersOpen(false);
@@ -290,6 +508,72 @@ export function RuppeltBrowser({ index }: RuppeltBrowserProps) {
   function changeViewMode(mode: RuppeltViewMode) {
     setViewMode(mode);
     writeViewMode(mode);
+  }
+
+  function scrollCarousel(direction: -1 | 1) {
+    const element = carouselRef.current;
+
+    if (!element) {
+      return;
+    }
+
+    const activeItem = carouselItemRefs.current[activeCarouselIndex];
+    const distance = activeItem?.getBoundingClientRect().width || element.clientWidth * 0.8;
+
+    element.scrollBy({
+      left: distance * direction,
+      behavior: "smooth",
+    });
+  }
+
+  function startCarouselDrag(event: PointerEvent<HTMLDivElement>) {
+    if (event.pointerType === "touch" || event.button !== 0) {
+      return;
+    }
+
+    carouselDragRef.current = {
+      active: true,
+      moved: false,
+      pointerId: event.pointerId,
+      scrollLeft: event.currentTarget.scrollLeft,
+      startX: event.clientX,
+    };
+    event.currentTarget.setPointerCapture(event.pointerId);
+    setCarouselDragging(true);
+  }
+
+  function moveCarouselDrag(event: PointerEvent<HTMLDivElement>) {
+    const drag = carouselDragRef.current;
+
+    if (!drag.active || drag.pointerId !== event.pointerId) {
+      return;
+    }
+
+    const delta = event.clientX - drag.startX;
+
+    if (Math.abs(delta) > 4) {
+      drag.moved = true;
+    }
+
+    event.currentTarget.scrollLeft = drag.scrollLeft - delta;
+  }
+
+  function endCarouselDrag(event: PointerEvent<HTMLDivElement>) {
+    const drag = carouselDragRef.current;
+
+    if (!drag.active || drag.pointerId !== event.pointerId) {
+      return;
+    }
+
+    carouselDragRef.current = {
+      active: false,
+      moved: drag.moved,
+      pointerId: 0,
+      scrollLeft: 0,
+      startX: 0,
+    };
+    event.currentTarget.releasePointerCapture(event.pointerId);
+    setCarouselDragging(false);
   }
 
   useEffect(() => {
@@ -427,6 +711,24 @@ export function RuppeltBrowser({ index }: RuppeltBrowserProps) {
             </select>
           </label>
           <label className="ruppelt-filter-field">
+            <span>公開状況</span>
+            <select
+              value={priorDisclosureStatus}
+              onChange={(event) => setPriorDisclosureStatus(normalizePriorDisclosureFilter(event.target.value))}
+              aria-label="公開状況"
+            >
+              <option value="">すべての公開状況</option>
+              <option value="unreviewed" disabled={unreviewedCount === 0}>
+                未照合（{unreviewedCount}）
+              </option>
+              {priorDisclosureStatusOptions.map((value) => (
+                <option key={value} value={value} disabled={priorDisclosureCounts[value] === 0}>
+                  {priorDisclosureLabels[value]}（{priorDisclosureCounts[value]}）
+                </option>
+              ))}
+            </select>
+          </label>
+          <label className="ruppelt-filter-field">
             <span>並び順</span>
             <select value={sort} onChange={(event) => setSort(event.target.value as PursueSort)} aria-label="並び順">
               <option value="newest">新しい順</option>
@@ -484,8 +786,33 @@ export function RuppeltBrowser({ index }: RuppeltBrowserProps) {
         <>
           {viewMode === "carousel" ? (
             <div className="ruppelt-carousel-shell" aria-label="カルーセル表示">
-              <p className="ruppelt-carousel-hint">横にスワイプして資料を選べます。</p>
-              <div className="ruppelt-carousel" ref={carouselRef} tabIndex={0}>
+              <div className="ruppelt-carousel-header">
+                <p className="ruppelt-carousel-hint">横にスワイプして資料を選べます。</p>
+                <div className="ruppelt-carousel-buttons" aria-label="カルーセル操作">
+                  <button type="button" aria-label="前の資料" onClick={() => scrollCarousel(-1)}>
+                    ←
+                  </button>
+                  <button type="button" aria-label="次の資料" onClick={() => scrollCarousel(1)}>
+                    →
+                  </button>
+                </div>
+              </div>
+              <div
+                className={`ruppelt-carousel${carouselDragging ? " ruppelt-carousel--dragging" : ""}`}
+                ref={carouselRef}
+                tabIndex={0}
+                onPointerDown={startCarouselDrag}
+                onPointerMove={moveCarouselDrag}
+                onPointerUp={endCarouselDrag}
+                onPointerCancel={endCarouselDrag}
+                onClickCapture={(event) => {
+                  if (carouselDragRef.current.moved) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    carouselDragRef.current.moved = false;
+                  }
+                }}
+              >
                 {visibleRecords.map((record, itemIndex) => (
                   <div
                     key={record.source.id}
@@ -502,6 +829,7 @@ export function RuppeltBrowser({ index }: RuppeltBrowserProps) {
                       record={record}
                       saved={savedIds.includes(record.source.id)}
                       onToggleSaved={toggleSaved}
+                      onOpenPriorDisclosure={setSelectedDisclosureRecord}
                       variant="carousel"
                     />
                   </div>
@@ -516,6 +844,7 @@ export function RuppeltBrowser({ index }: RuppeltBrowserProps) {
                   record={record}
                   saved={savedIds.includes(record.source.id)}
                   onToggleSaved={toggleSaved}
+                  onOpenPriorDisclosure={setSelectedDisclosureRecord}
                   variant="list"
                 />
               ))}
@@ -523,6 +852,12 @@ export function RuppeltBrowser({ index }: RuppeltBrowserProps) {
           )}
         </>
       )}
+      {selectedDisclosureRecord ? (
+        <PriorDisclosurePanel
+          record={selectedDisclosureRecord}
+          onClose={() => setSelectedDisclosureRecord(null)}
+        />
+      ) : null}
     </section>
   );
 }
