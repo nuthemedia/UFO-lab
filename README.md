@@ -18,7 +18,7 @@ UFO Lab Tokyo は、UFO・UAPに関する情報や検証体験を、Webアプリ
 
 このリポジトリでは、ブランドサイトを東京UFO研究室全体の入口として扱い、個別アプリをその活動の一部として整理します。現在の公開面は、日本語・英語のブランドサイト、PURSUE日本語インデックスの Ruppelt、ディスクロージャー人物地図の Kean、UFO画像AI判定チェッカーの Ohtsuki v0.5 です。
 
-## First App: Ohtsuki v0.5
+## Current Apps: Ohtsuki v0.5
 
 - プロダクト名: `Ohtsuki v0.5`
 - 表示名: **Ohtsuki v0.5 - UFO画像AI判定チェッカー**
