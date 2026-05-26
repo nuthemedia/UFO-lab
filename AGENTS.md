@@ -105,5 +105,17 @@ At the end of every task, always report in the following format:
   - `Documentation updated: [files]`
   - or `Documentation update needed but not included because: [reason]`
   - or `Documentation update not needed`
+- Task queue:
+  - `Updated: [files]`
+  - or `Update not needed because: [reason]`
 - Notes:
   - Any remaining issues, decisions deferred, or open questions
+
+## 9. Task Queue Maintenance
+
+- If the current task comes from `docs/codex/next-tasks.md`, update that file before marking the work complete.
+- Mark completed tasks as checked.
+- If a task is only partially complete, leave it unchecked and add a short note about what remains.
+- If you discover additional follow-up work during implementation, add it as a small unchecked task.
+- Do not mark a task complete until the requested change, verification, and documentation check are all finished.
+- Include whether the task queue was updated in the final report.
