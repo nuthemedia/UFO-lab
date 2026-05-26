@@ -697,6 +697,32 @@ h3 {
   gap: 12px;
 }
 
+@media (min-width: 761px) {
+  .brand-challenge-grid:not(:has(.brand-challenge-radio:checked))
+    .brand-challenge-item:first-child
+    .brand-challenge-tab {
+    transform: translateY(-1px);
+    border-color: rgba(111, 143, 126, 0.34);
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 12px 28px rgba(31, 36, 32, 0.07);
+  }
+
+  .brand-challenge-grid:not(:has(.brand-challenge-radio:checked))
+    .brand-challenge-item:first-child
+    .brand-challenge-tab
+    span {
+    color: var(--accent-strong);
+  }
+
+  .brand-challenge-grid:not(:has(.brand-challenge-radio:checked))
+    .brand-challenge-item:first-child
+    .brand-challenge-panel {
+    display: grid;
+    align-content: center;
+    gap: 12px;
+  }
+}
+
 .brand-challenge-panel-number {
   margin: 0;
   color: rgba(111, 143, 126, 0.42);

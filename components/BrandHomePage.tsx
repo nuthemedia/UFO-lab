@@ -89,7 +89,6 @@ export function BrandHomePage({ locale }: BrandHomePageProps) {
                     type="radio"
                     id={`${locale}-brand-challenge-${index + 1}`}
                     name={`${locale}-brand-challenge`}
-                    defaultChecked={index === 0}
                   />
                   <label
                     className="brand-challenge-tab"
