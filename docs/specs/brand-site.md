@@ -29,6 +29,7 @@
 - Challenges
 - 更新情報
 - Ruppelt v1.5 への導線
+- Kean への導線
 - Ohtsuki v0.5 への導線
 - フッターのブランド・SNS導線
 
