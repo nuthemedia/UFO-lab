@@ -47,12 +47,12 @@ export const brandHomeContent = {
         description: "過去のUFO研究が、現代の議論につながりにくい。",
       },
     ],
-    update: "Ruppelt v1.5でOCR全文検索と日本語全文表示のサンプルに対応しました。",
+    update: "Ruppelt v1.1にファイルの公開情報が追加されました。",
     products: [
       {
-        version: "Version 1.5",
-        name: "Ruppelt v1.5",
-        title: "Ruppelt v1.5 – PURSUE日本語インデックス",
+        version: "Version 1.1",
+        name: "Ruppelt v1.1",
+        title: "Ruppelt v1.1 – PURSUE日本語インデックス",
         href: "/ruppelt",
         cta: "Ruppeltを開く",
       },
@@ -115,12 +115,12 @@ export const brandHomeContent = {
         description: "Past UFO research does not easily connect to today's discussion.",
       },
     ],
-    update: "Ruppelt v1.5 now includes OCR full-text search and Japanese full-text samples.",
+    update: "Ruppelt v1.1 now includes public file disclosure information.",
     products: [
       {
-        version: "Version 1.5",
-        name: "Ruppelt v1.5",
-        title: "Ruppelt v1.5 – UAP Public Records Viewer",
+        version: "Version 1.1",
+        name: "Ruppelt v1.1",
+        title: "Ruppelt v1.1 – UAP Public Records Viewer",
         href: "/ruppelt",
         cta: "Open Ruppelt",
       },
