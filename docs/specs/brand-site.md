@@ -10,20 +10,27 @@
 ## 目的
 
 東京UFO研究室の公式入口として、UFO・UAP現象を冷静に観察、記録、検証する姿勢を伝える。
-初期段階では、ブランドの考え方と Ohtsuki への導線を中心にする。
+現在のブランドサイトは日本語版と英語版を持ち、Ruppelt、Kean、Ohtsuki への導線をまとめる役割を持つ。
 
 ## 初期ページ
 
 - `/`: ブランドサイトのトップページ
+- `/en`: 英語版ブランドサイト
+- `/ruppelt`: Ruppelt v1.5 への主要導線
+- `/kean`: Kean への主要導線
 - `/ohtsuki`: Ohtsuki への主要導線
+- `/ufo-image-checker`: 旧URL互換。`/ohtsuki` へリダイレクト
 
 ## 表示する内容
 
 - ブランド名
 - タグライン
-- 研究室の立場
-- 主要活動
-- Ohtsuki β への導線
+- Mission
+- Challenges
+- 更新情報
+- Ruppelt v1.5 への導線
+- Ohtsuki v0.5 への導線
+- フッターのブランド・SNS導線
 
 ## 初期スコープ外
 
