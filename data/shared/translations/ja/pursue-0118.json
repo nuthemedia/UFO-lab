@@ -1,0 +1,13 @@
+{
+  "documentId": "pursue-0118",
+  "recordId": "pursue-0118",
+  "fullTextJa": "[Page 1] [[page 1 confidence: 72]]\n[REDACTED]\n\n[REDACTED]                                    [REDACTED]\n\n              3                                    3\n\n[REDACTED]  [REDACTED]              [REDACTED]  [REDACTED]\n\n[REDACTED]  [REDACTED]              [REDACTED]  [REDACTED]\n\n12/31/99 18:20:22",
+  "summaryJa": "PURSUE OCRのPage 1抜粋。本文の大部分が「[REDACTED]」で伏せられている。ページ上に「3」の表示がある。OCR信頼度は72%。「--- Japanese translation excerpt ---」という見出しと同文の繰り返しが含まれ、末尾にタイムスタンプ「12/31/99 18:20:22」が記載されている。",
+  "summaryEn": "Excerpt of Page 1 from PURSUE OCR. The majority of the text is redacted as \"[REDACTED]\". A page indicator \"3\" appears. OCR confidence is 72%. The header \"--- Japanese translation excerpt ---\" and a repetition of the same content are present, and a timestamp \"12/31/99 18:20:22\" is shown at the end.",
+  "status": {
+    "translationJa": "machine_translation",
+    "summary": "summary_generated",
+    "humanReview": "unreviewed"
+  },
+  "noteJa": "機械翻訳です。公式PDFを正本とし、OCR誤読や翻訳誤りを含む可能性があります。"
+}

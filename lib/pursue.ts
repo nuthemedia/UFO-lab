@@ -25,6 +25,7 @@ export type PursueJaRecord = {
 export type PursueRecord = {
   source: PursueSourceRecord;
   ja: PursueJaRecord;
+  documentId?: string;
   priorDisclosure?: PriorDisclosure;
   searchFacets?: PursueSearchFacets;
 };
@@ -127,6 +128,90 @@ export type PursueIndex = {
 
 export type PursueSort = "newest" | "oldest" | "title" | "agency";
 
+export type PursueSearchMode = "description" | "fulltext";
+
+export type PursueStatusState =
+  | "missing"
+  | "ocr_imported_unverified"
+  | "ocr_verified"
+  | "machine_translation"
+  | "translation_reviewed"
+  | "summary_generated"
+  | "summary_reviewed";
+
+export type PursueOcrQualityStatus = "none" | "low" | "medium" | "high" | "unknown";
+
+export type PursueSharedDocument = {
+  documentId: string;
+  recordId: string;
+  assetFileName: string;
+  release: string;
+  agency: string;
+  officialPdfUrl: string;
+  sourcePdfUrl: string;
+  documentStatus: {
+    ocr: PursueStatusState;
+    translationJa: PursueStatusState;
+    summary: PursueStatusState;
+    humanReview: "unreviewed" | "reviewed";
+  };
+};
+
+export type PursueOcrDocument = {
+  documentId: string;
+  recordId: string;
+  officialPdfUrl: string;
+  sourcePdfUrl: string;
+  ocrTextEn: string;
+  ocrQuality: PursueOcrQualityStatus;
+  source: {
+    repo: string;
+    repoUrl: string;
+    filePath: string;
+    githubUrl: string;
+    rawUrl: string;
+    fetchedAt: string;
+    license: string;
+    licenseUrl?: string;
+  };
+  status: {
+    ocr: PursueStatusState;
+    humanReview: "unreviewed" | "reviewed";
+  };
+};
+
+export type PursueTranslationJaDocument = {
+  documentId: string;
+  recordId: string;
+  fullTextJa: string;
+  summaryJa: string;
+  summaryEn: string;
+  status: {
+    translationJa: PursueStatusState;
+    summary: PursueStatusState;
+    humanReview: "unreviewed" | "reviewed";
+  };
+  noteJa?: string;
+};
+
+export type PursueSharedDocumentBundle = {
+  document: PursueSharedDocument;
+  ocr?: PursueOcrDocument;
+  translationJa?: PursueTranslationJaDocument;
+};
+
+export type PursueDescriptionSearchEntry = {
+  documentId: string;
+  recordId: string;
+  searchText: string;
+};
+
+export type PursueFulltextSearchEntry = {
+  documentId: string;
+  recordId: string;
+  searchText: string;
+};
+
 export const priorDisclosureLabels: Record<PriorDisclosureStatus, string> = {
   first_time_public: "初公開",
   previously_public: "既に公開済み",
@@ -161,6 +246,10 @@ function compareStableStrings(a: string, b: string) {
 
 export function displayValue(primary: string, fallback: string) {
   return primary.trim() || fallback.trim() || "不明";
+}
+
+export function getDocumentId(record: PursueRecord) {
+  return record.documentId || record.source.id;
 }
 
 export function getReleaseId(record: PursueRecord): PursueSearchFacets["releaseId"] {

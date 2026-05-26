@@ -1,0 +1,15 @@
+{
+  "documentId": "pursue-0120",
+  "recordId": "pursue-0120",
+  "assetFileName": "FBI Photo B17",
+  "release": "5/8/26",
+  "agency": "FBI",
+  "officialPdfUrl": "https://www.war.gov/medialink/ufo/release_1/fbi-photo-b17.pdf",
+  "sourcePdfUrl": "https://www.war.gov/medialink/ufo/release_1/fbi-photo-b17.pdf",
+  "documentStatus": {
+    "ocr": "ocr_imported_unverified",
+    "translationJa": "machine_translation",
+    "summary": "summary_generated",
+    "humanReview": "unreviewed"
+  }
+}

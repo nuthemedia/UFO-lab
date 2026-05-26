@@ -1,0 +1,597 @@
+{
+  "sourceRepo": "zexiro/uap-disclosure-archive",
+  "sourceRepoUrl": "https://github.com/zexiro/uap-disclosure-archive",
+  "sourceListUrl": "https://api.github.com/repos/zexiro/uap-disclosure-archive/contents/raw/text?ref=main",
+  "mode": "all",
+  "fetchedAt": "2026-05-26T12:27:16.199Z",
+  "attempted": 222,
+  "imported": 132,
+  "emptyOcr": 24,
+  "documentOnly": 90,
+  "unmatched": [
+    {
+      "recordId": "pursue-0006",
+      "assetFileName": "65_HS1-834228961_62-HQ-83894_Section_6",
+      "sourceKey": "a"
+    },
+    {
+      "recordId": "pursue-0019",
+      "assetFileName": "255_413270_UFO's_and_Defense_What_Should_we_Prepare_For",
+      "sourceKey": "255_413270_ufos_and_defense_what_should_we_prepare_for"
+    },
+    {
+      "recordId": "pursue-0021",
+      "assetFileName": "NASA-UAP-D3A, Gemini 7 Audio Excerpt, 1965",
+      "sourceKey": "nasa_uap_d3a_gemini_7_audio_excerpt_1965"
+    },
+    {
+      "recordId": "pursue-0083",
+      "assetFileName": "DOW-UAP-PR28, Unresolved UAP Report, Greece, January 2024",
+      "sourceKey": "dow_uap_pr28_unresolved_uap_report_greece_january_2024"
+    },
+    {
+      "recordId": "pursue-0084",
+      "assetFileName": "DOW-UAP-PR29, Unresolved UAP Report, United Arab Emirates, June 2024",
+      "sourceKey": "dow_uap_pr29_unresolved_uap_report_united_arab_emirates_june_2024"
+    },
+    {
+      "recordId": "pursue-0091",
+      "assetFileName": "DOW-UAP-PR37, Unresolved UAP Report, Middle East, 2020",
+      "sourceKey": "dow_uap_pr37_unresolved_uap_report_middle_east_2020"
+    },
+    {
+      "recordId": "pursue-0092",
+      "assetFileName": "DOW-UAP-PR38, Unresolved UAP Report, Middle East, 2013",
+      "sourceKey": "dow_uap_pr38_unresolved_uap_report_middle_east_2013"
+    },
+    {
+      "recordId": "pursue-0093",
+      "assetFileName": "DOW-UAP-PR39, Unresolved UAP Report, Middle East, 2020",
+      "sourceKey": "dow_uap_pr39_unresolved_uap_report_middle_east_2020"
+    },
+    {
+      "recordId": "pursue-0094",
+      "assetFileName": "DOW-UAP-PR40, Unresolved UAP Report, Middle East, 2020",
+      "sourceKey": "dow_uap_pr40_unresolved_uap_report_middle_east_2020"
+    },
+    {
+      "recordId": "pursue-0095",
+      "assetFileName": "DOW-UAP-PR41, Unresolved UAP Report, Middle East, 2020",
+      "sourceKey": "dow_uap_pr41_unresolved_uap_report_middle_east_2020"
+    },
+    {
+      "recordId": "pursue-0096",
+      "assetFileName": "DOW-UAP-PR42, Unresolved UAP Report, Middle East, 2020",
+      "sourceKey": "dow_uap_pr42_unresolved_uap_report_middle_east_2020"
+    },
+    {
+      "recordId": "pursue-0097",
+      "assetFileName": "DOW-UAP-PR43, Unresolved UAP Report, Africa, 2025",
+      "sourceKey": "dow_uap_pr43_unresolved_uap_report_africa_2025"
+    },
+    {
+      "recordId": "pursue-0098",
+      "assetFileName": "DOW-UAP-PR44, Unresolved UAP Report, Middle East, 2020",
+      "sourceKey": "dow_uap_pr44_unresolved_uap_report_middle_east_2020"
+    },
+    {
+      "recordId": "pursue-0099",
+      "assetFileName": "DOW-UAP-PR45, Unresolved UAP Report, Middle East, 2020",
+      "sourceKey": "dow_uap_pr45_unresolved_uap_report_middle_east_2020"
+    },
+    {
+      "recordId": "pursue-0100",
+      "assetFileName": "DOW-UAP-PR46, Unresolved UAP Report, INDOPACOM, 2024",
+      "sourceKey": "dow_uap_pr46_unresolved_uap_report_indopacom_2024"
+    },
+    {
+      "recordId": "pursue-0101",
+      "assetFileName": "DOW-UAP-PR47, Unresolved UAP Report, INDOPACOM, 2023",
+      "sourceKey": "dow_uap_pr47_unresolved_uap_report_indopacom_2023"
+    },
+    {
+      "recordId": "pursue-0102",
+      "assetFileName": "DOW-UAP-PR48, Unresolved UAP Report, INDOPACOM, 2024",
+      "sourceKey": "dow_uap_pr48_unresolved_uap_report_indopacom_2024"
+    },
+    {
+      "recordId": "pursue-0103",
+      "assetFileName": "DOW-UAP-PR49, Unresolved UAP Report, Department of the Army, 2026",
+      "sourceKey": "dow_uap_pr49_unresolved_uap_report_department_of_the_army_2026"
+    },
+    {
+      "recordId": "pursue-0104",
+      "assetFileName": "FBI Photo A1",
+      "sourceKey": "fbi_photo_a1"
+    },
+    {
+      "recordId": "pursue-0105",
+      "assetFileName": "FBI Photo A2",
+      "sourceKey": "fbi_photo_a2"
+    },
+    {
+      "recordId": "pursue-0106",
+      "assetFileName": "FBI Photo A3",
+      "sourceKey": "fbi_photo_a3"
+    },
+    {
+      "recordId": "pursue-0107",
+      "assetFileName": "FBI Photo A4",
+      "sourceKey": "fbi_photo_a4"
+    },
+    {
+      "recordId": "pursue-0108",
+      "assetFileName": "FBI Photo A5",
+      "sourceKey": "fbi_photo_a5"
+    },
+    {
+      "recordId": "pursue-0109",
+      "assetFileName": "FBI Photo A6",
+      "sourceKey": "fbi_photo_a6"
+    },
+    {
+      "recordId": "pursue-0110",
+      "assetFileName": "FBI Photo A7",
+      "sourceKey": "fbi_photo_a7"
+    },
+    {
+      "recordId": "pursue-0111",
+      "assetFileName": "FBI Photo A8",
+      "sourceKey": "fbi_photo_a8"
+    },
+    {
+      "recordId": "pursue-0142",
+      "assetFileName": "NASA-UAP-VM1, Apollo 12, 1969",
+      "sourceKey": "nasa_uap_vm1_apollo_12_1969"
+    },
+    {
+      "recordId": "pursue-0143",
+      "assetFileName": "NASA-UAP-VM2, Apollo 12, 1969",
+      "sourceKey": "nasa_uap_vm2_apollo_12_1969"
+    },
+    {
+      "recordId": "pursue-0144",
+      "assetFileName": "NASA-UAP-VM3, Apollo 12, 1969",
+      "sourceKey": "nasa_uap_vm3_apollo_12_1969"
+    },
+    {
+      "recordId": "pursue-0145",
+      "assetFileName": "NASA-UAP-VM4, Apollo 12, 1969",
+      "sourceKey": "nasa_uap_vm4_apollo_12_1969"
+    },
+    {
+      "recordId": "pursue-0146",
+      "assetFileName": "NASA-UAP-VM5, Apollo 12, 1969",
+      "sourceKey": "nasa_uap_vm5_apollo_12_1969"
+    },
+    {
+      "recordId": "pursue-0147",
+      "assetFileName": "NASA-UAP-VM6, Apollo 17, 1972",
+      "sourceKey": "nasa_uap_vm6_apollo_17_1972"
+    },
+    {
+      "recordId": "pursue-0159",
+      "assetFileName": "4 UAP Formation Iran 26 Aug 2022 over water [CALLSIGN]",
+      "sourceKey": "4_uap_formation_iran_26_aug_2022_over_water_callsign"
+    },
+    {
+      "recordId": "pursue-0160",
+      "assetFileName": "Syrian UAP instant acceleration",
+      "sourceKey": "syrian_uap_instant_acceleration"
+    },
+    {
+      "recordId": "pursue-0164",
+      "assetFileName": "Apollo 12 Medical Debriefing - Tape 12, 1969",
+      "sourceKey": "apollo_12_medical_debriefing_tape_12_1969"
+    },
+    {
+      "recordId": "pursue-0168",
+      "assetFileName": "UAP USO Formation [CALLSIGN] (Mission)",
+      "sourceKey": "uap_uso_formation_callsign_mission"
+    },
+    {
+      "recordId": "pursue-0169",
+      "assetFileName": "Cigar Shaped or Fast Sherical UAP clip 15 OCT 22",
+      "sourceKey": "cigar_shaped_or_fast_sherical_uap_clip_15_oct_22"
+    },
+    {
+      "recordId": "pursue-0170",
+      "assetFileName": "Spherical UAP Erratic movement [CALLSIGN] (Mission) 2022",
+      "sourceKey": "spherical_uap_erratic_movement_callsign_mission_2022"
+    },
+    {
+      "recordId": "pursue-0171",
+      "assetFileName": "Spherical UAP over AFG in and out of clouds 23 Nov 2020",
+      "sourceKey": "spherical_uap_over_afg_in_and_out_of_clouds_23_nov_2020"
+    },
+    {
+      "recordId": "pursue-0172",
+      "assetFileName": "Spherical UAP pulsing over water [CALLSIGN]",
+      "sourceKey": "spherical_uap_pulsing_over_water_callsign"
+    },
+    {
+      "recordId": "pursue-0173",
+      "assetFileName": "Spherical UAP in clouds",
+      "sourceKey": "spherical_uap_in_clouds"
+    },
+    {
+      "recordId": "pursue-0174",
+      "assetFileName": "[Platform] Observes UAP in East China Sea 05 JAN 2023 INDOPACOM",
+      "sourceKey": "platform_observes_uap_in_east_china_sea_05_jan_2023_indopacom"
+    },
+    {
+      "recordId": "pursue-0175",
+      "assetFileName": "[CALLSIGN] (Mission) UAP",
+      "sourceKey": "callsign_mission_uap"
+    },
+    {
+      "recordId": "pursue-0176",
+      "assetFileName": "NAG UAP 1 Jun 20",
+      "sourceKey": "nag_uap_1_jun_20"
+    },
+    {
+      "recordId": "pursue-0177",
+      "assetFileName": "Spherical UAP [CALLSIGN] 2021/04/12 obj 2",
+      "sourceKey": "spherical_uap_callsign_2021_04_12_obj_2"
+    },
+    {
+      "recordId": "pursue-0178",
+      "assetFileName": "Spherical UAP [CALLSIGN] 2021/04/12 vid 0",
+      "sourceKey": "spherical_uap_callsign_2021_04_12_vid_0"
+    },
+    {
+      "recordId": "pursue-0179",
+      "assetFileName": "Spherical UAP [CALLSIGN] 2021/04/12 vid 1",
+      "sourceKey": "spherical_uap_callsign_2021_04_12_vid_1"
+    },
+    {
+      "recordId": "pursue-0180",
+      "assetFileName": "Spherical UAP [CALLSIGN] 2021/04/12 vid 2",
+      "sourceKey": "spherical_uap_callsign_2021_04_12_vid_2"
+    },
+    {
+      "recordId": "pursue-0181",
+      "assetFileName": "AFSOC Kabul UAP Jul 2017",
+      "sourceKey": "afsoc_kabul_uap_jul_2017"
+    },
+    {
+      "recordId": "pursue-0182",
+      "assetFileName": "USCG C-144 Tyndall UAP 2 TIC TAC IR hot 24 April 2024",
+      "sourceKey": "uscg_c_144_tyndall_uap_2_tic_tac_ir_hot_24_april_2024"
+    },
+    {
+      "recordId": "pursue-0183",
+      "assetFileName": "USCG C-144 Tyndall UAP 1 TIC TAC IR hot 24 April 2024",
+      "sourceKey": "uscg_c_144_tyndall_uap_1_tic_tac_ir_hot_24_april_2024"
+    },
+    {
+      "recordId": "pursue-0184",
+      "assetFileName": "Multiple Spherical UAP USO near Sub. [CALLSIGN] 2022/03/25 in and out of water",
+      "sourceKey": "multiple_spherical_uap_uso_near_sub_callsign_2022_03_25_in_and_out_of_water"
+    },
+    {
+      "recordId": "pursue-0185",
+      "assetFileName": "IIR 1 666 S0151 23/Video Footage of Unidentified Aerial Phenomenon (UAP) captured by fifth generation aircraft on 20 Jan 23",
+      "sourceKey": "iir_1_666_s0151_23_video_footage_of_unidentified_aerial_phenomenon_uap_captured_by_fifth_generation_aircraft_on_20_jan_23"
+    },
+    {
+      "recordId": "pursue-0186",
+      "assetFileName": "F/A-18 FLIR UAP",
+      "sourceKey": "f_a_18_flir_uap"
+    },
+    {
+      "recordId": "pursue-0187",
+      "assetFileName": "IIR 1 655 S0301 23/Eglin AFB Aircrew Observed Unidentified Aerial Phenomena (UAP) on 13 Feb 23",
+      "sourceKey": "iir_1_655_s0301_23_eglin_afb_aircrew_observed_unidentified_aerial_phenomena_uap_on_13_feb_23"
+    },
+    {
+      "recordId": "pursue-0188",
+      "assetFileName": "USAF ANG F-16C (callsign [CALLSIGN]) Shoots Down UAP over Lake Huron with [Weapon System], 12 Feb 2023",
+      "sourceKey": "usaf_ang_f_16c_callsign_callsign_shoots_down_uap_over_lake_huron_with_weapon_system_12_feb_2023"
+    },
+    {
+      "recordId": "pursue-0189",
+      "assetFileName": "ADMINISTRATIVE REVISION: IIR 1777 J0032 22 Kazakhstan - UAP in the vicinity of Karaganda International Airport",
+      "sourceKey": "administrative_revision_iir_1777_j0032_22_kazakhstan_uap_in_the_vicinity_of_karaganda_international_airport"
+    },
+    {
+      "recordId": "pursue-0190",
+      "assetFileName": "IIR 1 655 S0053 23/Several Unidentified Aerial Phenomenon Encountered In The Vicinity of Columbus OH\"",
+      "sourceKey": "iir_1_655_s0053_23_several_unidentified_aerial_phenomenon_encountered_in_the_vicinity_of_columbus_oh"
+    },
+    {
+      "recordId": "pursue-0191",
+      "assetFileName": "[CALLSIGN] (Mission)HD_20220613",
+      "sourceKey": "callsign_mission_hd_20220613"
+    },
+    {
+      "recordId": "pursue-0192",
+      "assetFileName": "09JUN2021 [Platform] observed UAP in the ECS",
+      "sourceKey": "09jun2021_platform_observed_uap_in_the_ecs"
+    },
+    {
+      "recordId": "pursue-0193",
+      "assetFileName": "03 January 2021 [CALLSIGN] (Mission) observes UAP",
+      "sourceKey": "03_january_2021_callsign_mission_observes_uap"
+    },
+    {
+      "recordId": "pursue-0194",
+      "assetFileName": "2 November 2020 [CALLSIGN] [CALLSIGN] Observes and tracks UAP 1 of 2",
+      "sourceKey": "2_november_2020_callsign_callsign_observes_and_tracks_uap_1_of_2"
+    },
+    {
+      "recordId": "pursue-0195",
+      "assetFileName": "2 November 2020 [CALLSIGN] [CALLSIGN] Observes and tracks UAP 2 of 2",
+      "sourceKey": "2_november_2020_callsign_callsign_observes_and_tracks_uap_2_of_2"
+    },
+    {
+      "recordId": "pursue-0196",
+      "assetFileName": "29 October 2020 [CALLSIGN] (Mission) observes 3 fast moving UAP's",
+      "sourceKey": "29_october_2020_callsign_mission_observes_3_fast_moving_uaps"
+    },
+    {
+      "recordId": "pursue-0197",
+      "assetFileName": "20 October 2020 [CALLSIGN] [CALLSIGN] Observes UAP",
+      "sourceKey": "20_october_2020_callsign_callsign_observes_uap"
+    },
+    {
+      "recordId": "pursue-0198",
+      "assetFileName": "18 Oct 2020 [CALLSIGN] observes UAP",
+      "sourceKey": "18_oct_2020_callsign_observes_uap"
+    },
+    {
+      "recordId": "pursue-0199",
+      "assetFileName": "16 OCT 2020 [CALLSIGN] views UAP",
+      "sourceKey": "16_oct_2020_callsign_views_uap"
+    },
+    {
+      "recordId": "pursue-0200",
+      "assetFileName": "7 October 2020 [CALLSIGN] observes UAP",
+      "sourceKey": "7_october_2020_callsign_observes_uap"
+    },
+    {
+      "recordId": "pursue-0201",
+      "assetFileName": "17 Sept 2020 [CALLSIGN] observes UAP",
+      "sourceKey": "17_sept_2020_callsign_observes_uap"
+    },
+    {
+      "recordId": "pursue-0202",
+      "assetFileName": "16 Sept 2020 [CALLSIGN] [CALLSIGN] observes UAP",
+      "sourceKey": "16_sept_2020_callsign_callsign_observes_uap"
+    },
+    {
+      "recordId": "pursue-0203",
+      "assetFileName": "UAP from Dec 2019 (East Coast)",
+      "sourceKey": "uap_from_dec_2019_east_coast"
+    },
+    {
+      "recordId": "pursue-0204",
+      "assetFileName": "05 September 2020 [CALLSIGN] UAP",
+      "sourceKey": "05_september_2020_callsign_uap"
+    },
+    {
+      "recordId": "pursue-0205",
+      "assetFileName": "31 AUG [CALLSIGN] [CALLSIGN] Observes UAP",
+      "sourceKey": "31_aug_callsign_callsign_observes_uap"
+    },
+    {
+      "recordId": "pursue-0206",
+      "assetFileName": "31 AUG [CALLSIGN] [CALLSIGN] Observes UAP part2",
+      "sourceKey": "31_aug_callsign_callsign_observes_uap_part2"
+    },
+    {
+      "recordId": "pursue-0207",
+      "assetFileName": "24 AUG 2020 [CALLSIGN] (Mission) Observes UAP",
+      "sourceKey": "24_aug_2020_callsign_mission_observes_uap"
+    },
+    {
+      "recordId": "pursue-0208",
+      "assetFileName": "21 AUG [CALLSIGN] Observes UAP in Persian Gulf",
+      "sourceKey": "21_aug_callsign_observes_uap_in_persian_gulf"
+    },
+    {
+      "recordId": "pursue-0209",
+      "assetFileName": "08 AUG 2020 [CALLSIGN] [CALLSIGN] UAP observation",
+      "sourceKey": "08_aug_2020_callsign_callsign_uap_observation"
+    },
+    {
+      "recordId": "pursue-0210",
+      "assetFileName": "May 05 2020 Gulf of Arabia [CALLSIGN] (Platform) Dual UAP",
+      "sourceKey": "may_05_2020_gulf_of_arabia_callsign_platform_dual_uap"
+    },
+    {
+      "recordId": "pursue-0211",
+      "assetFileName": "[CALLSIGN] (Mission) - HD 2020-02-13",
+      "sourceKey": "callsign_mission_hd_2020_02_13"
+    },
+    {
+      "recordId": "pursue-0212",
+      "assetFileName": "May 05 2020 Gulf of Arabia [CALLSIGN] (Platform) Dual UAP",
+      "sourceKey": "may_05_2020_gulf_of_arabia_callsign_platform_dual_uap"
+    },
+    {
+      "recordId": "pursue-0213",
+      "assetFileName": "HH11 03 July 2018 UAPs",
+      "sourceKey": "hh11_03_july_2018_uaps"
+    },
+    {
+      "recordId": "pursue-0214",
+      "assetFileName": "Hi-Res: [CALLSIGN] Observes UAP on 25SEP19 at 2135Z",
+      "sourceKey": "hi_res_callsign_observes_uap_on_25sep19_at_2135z"
+    },
+    {
+      "recordId": "pursue-0215",
+      "assetFileName": "UFOs in formation over Persian Gulf?",
+      "sourceKey": "ufos_in_formation_over_persian_gulf"
+    },
+    {
+      "recordId": "pursue-0216",
+      "assetFileName": "Hi-Res: [CALLSIGN] Observes UAP on 25SEP19 at 1715Z",
+      "sourceKey": "hi_res_callsign_observes_uap_on_25sep19_at_1715z"
+    },
+    {
+      "recordId": "pursue-0217",
+      "assetFileName": "Apollo 17 Audio Excerpt, December 7, 1972",
+      "sourceKey": "apollo_17_audio_excerpt_december_7_1972"
+    },
+    {
+      "recordId": "pursue-0218",
+      "assetFileName": "Mercury Atlas 9 Audio Excerpt, May 15, 1963",
+      "sourceKey": "mercury_atlas_9_audio_excerpt_may_15_1963"
+    },
+    {
+      "recordId": "pursue-0219",
+      "assetFileName": "Mercury Atlas 9 Audio Excerpt, May 15, 1963",
+      "sourceKey": "mercury_atlas_9_audio_excerpt_may_15_1963"
+    },
+    {
+      "recordId": "pursue-0220",
+      "assetFileName": "Mercury Atlas 8 Audio Excerpt, October 3, 1962",
+      "sourceKey": "mercury_atlas_8_audio_excerpt_october_3_1962"
+    },
+    {
+      "recordId": "pursue-0221",
+      "assetFileName": "Mercury Atlas 7, May 24, 1962",
+      "sourceKey": "mercury_atlas_7_may_24_1962"
+    },
+    {
+      "recordId": "pursue-0222",
+      "assetFileName": "Mercury-Redstone 4, July 21, 1961",
+      "sourceKey": "mercury_redstone_4_july_21_1961"
+    }
+  ],
+  "importedRecordIds": [
+    "pursue-0001",
+    "pursue-0002",
+    "pursue-0003",
+    "pursue-0004",
+    "pursue-0005",
+    "pursue-0007",
+    "pursue-0008",
+    "pursue-0009",
+    "pursue-0010",
+    "pursue-0011",
+    "pursue-0012",
+    "pursue-0013",
+    "pursue-0014",
+    "pursue-0015",
+    "pursue-0016",
+    "pursue-0017",
+    "pursue-0018",
+    "pursue-0020",
+    "pursue-0022",
+    "pursue-0023",
+    "pursue-0024",
+    "pursue-0025",
+    "pursue-0026",
+    "pursue-0027",
+    "pursue-0028",
+    "pursue-0029",
+    "pursue-0030",
+    "pursue-0031",
+    "pursue-0032",
+    "pursue-0033",
+    "pursue-0034",
+    "pursue-0035",
+    "pursue-0036",
+    "pursue-0037",
+    "pursue-0038",
+    "pursue-0039",
+    "pursue-0040",
+    "pursue-0041",
+    "pursue-0042",
+    "pursue-0043",
+    "pursue-0044",
+    "pursue-0045",
+    "pursue-0046",
+    "pursue-0047",
+    "pursue-0048",
+    "pursue-0049",
+    "pursue-0050",
+    "pursue-0051",
+    "pursue-0052",
+    "pursue-0053",
+    "pursue-0054",
+    "pursue-0055",
+    "pursue-0056",
+    "pursue-0057",
+    "pursue-0058",
+    "pursue-0059",
+    "pursue-0060",
+    "pursue-0061",
+    "pursue-0062",
+    "pursue-0063",
+    "pursue-0064",
+    "pursue-0065",
+    "pursue-0066",
+    "pursue-0067",
+    "pursue-0068",
+    "pursue-0069",
+    "pursue-0070",
+    "pursue-0071",
+    "pursue-0072",
+    "pursue-0073",
+    "pursue-0074",
+    "pursue-0075",
+    "pursue-0076",
+    "pursue-0077",
+    "pursue-0078",
+    "pursue-0079",
+    "pursue-0080",
+    "pursue-0081",
+    "pursue-0082",
+    "pursue-0085",
+    "pursue-0086",
+    "pursue-0087",
+    "pursue-0088",
+    "pursue-0089",
+    "pursue-0090",
+    "pursue-0112",
+    "pursue-0113",
+    "pursue-0114",
+    "pursue-0115",
+    "pursue-0116",
+    "pursue-0117",
+    "pursue-0118",
+    "pursue-0119",
+    "pursue-0120",
+    "pursue-0121",
+    "pursue-0122",
+    "pursue-0123",
+    "pursue-0124",
+    "pursue-0125",
+    "pursue-0126",
+    "pursue-0127",
+    "pursue-0128",
+    "pursue-0129",
+    "pursue-0130",
+    "pursue-0131",
+    "pursue-0132",
+    "pursue-0133",
+    "pursue-0134",
+    "pursue-0135",
+    "pursue-0136",
+    "pursue-0137",
+    "pursue-0138",
+    "pursue-0139",
+    "pursue-0140",
+    "pursue-0141",
+    "pursue-0148",
+    "pursue-0149",
+    "pursue-0150",
+    "pursue-0151",
+    "pursue-0152",
+    "pursue-0153",
+    "pursue-0154",
+    "pursue-0155",
+    "pursue-0156",
+    "pursue-0157",
+    "pursue-0158",
+    "pursue-0161",
+    "pursue-0162",
+    "pursue-0163",
+    "pursue-0165",
+    "pursue-0166",
+    "pursue-0167"
+  ]
+}

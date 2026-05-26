@@ -1,0 +1,22 @@
+{
+  "documentId": "pursue-0051",
+  "recordId": "pursue-0051",
+  "officialPdfUrl": "https://www.war.gov/medialink/ufo/release_1/dow-uap-d4-mission-report-arabian-gulf-2020.pdf",
+  "sourcePdfUrl": "https://www.war.gov/medialink/ufo/release_1/dow-uap-d4-mission-report-arabian-gulf-2020.pdf",
+  "ocrTextEn": "[OCR skipped on page(s) 1-5]",
+  "ocrQuality": "medium",
+  "source": {
+    "repo": "zexiro/uap-disclosure-archive",
+    "repoUrl": "https://github.com/zexiro/uap-disclosure-archive",
+    "filePath": "raw/text/dow-uap-d4-mission-report-arabian-gulf-2020.txt",
+    "githubUrl": "https://github.com/zexiro/uap-disclosure-archive/blob/main/raw/text/dow-uap-d4-mission-report-arabian-gulf-2020.txt",
+    "rawUrl": "https://raw.githubusercontent.com/zexiro/uap-disclosure-archive/main/raw/text/dow-uap-d4-mission-report-arabian-gulf-2020.txt",
+    "fetchedAt": "2026-05-26T12:27:16.199Z",
+    "license": "MIT licensed source; U.S. government source material described as public domain by source repository",
+    "licenseUrl": "https://github.com/zexiro/uap-disclosure-archive/blob/main/LICENSE"
+  },
+  "status": {
+    "ocr": "ocr_imported_unverified",
+    "humanReview": "unreviewed"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "documentId": "pursue-0113",
+  "recordId": "pursue-0113",
+  "fullTextJa": "[Page 1] [[page 1 confidence: 72]]\n15        10        5                    5        10        15\n\n12/31/99 18:10:50",
+  "summaryJa": "ページ1のOCR抜粋。目盛り表示（15、10、5、5、10、15）があり、タイムスタンプ「12/31/99 18:10:50」と見出し「--- Japanese translation excerpt ---」、およびページ情報「[Page 1] [[page 1 confidence: 72]]」が記録されている。",
+  "summaryEn": "OCR excerpt of page 1. Displays scale markings (15, 10, 5, 5, 10, 15), a timestamp \"12/31/99 18:10:50\", the header \"--- Japanese translation excerpt ---\", and page info \"[Page 1] [[page 1 confidence: 72]]\".",
+  "status": {
+    "translationJa": "machine_translation",
+    "summary": "summary_generated",
+    "humanReview": "unreviewed"
+  },
+  "noteJa": "機械翻訳です。公式PDFを正本とし、OCR誤読や翻訳誤りを含む可能性があります。"
+}

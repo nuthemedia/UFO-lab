@@ -95,6 +95,7 @@ const mergedRecords = raw.records.map((record) => {
 
   return {
     ...baseRecord,
+    documentId: record.documentId || record.source.id,
     ja: {
       assetFileNameJa: translation.assetFileNameJa || "",
       releaseJa: translation.releaseJa || "",

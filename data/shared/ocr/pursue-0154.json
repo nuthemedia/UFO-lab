@@ -1,0 +1,25 @@
+{
+  "documentId": "pursue-0154",
+  "recordId": "pursue-0154",
+  "officialPdfUrl": "https://www.war.gov/medialink/ufo/release_1/2024-04-30-composite-sketch.pdf",
+  "sourcePdfUrl": "https://www.war.gov/medialink/ufo/release_1/2024-04-30-composite-sketch.pdf",
+  "ocrTextEn": "[Page 1] [[page 1 confidence: 0]]",
+  "ocrQuality": "low",
+  "source": {
+    "repo": "BPSAI/pursue-index",
+    "repoUrl": "https://github.com/BPSAI/pursue-index",
+    "filePath": "data/altered-ocr/1701a0f307714921/pages.jsonl",
+    "githubUrl": "https://github.com/BPSAI/pursue-index/blob/main/data/altered-ocr/1701a0f307714921/pages.jsonl",
+    "rawUrl": "https://raw.githubusercontent.com/BPSAI/pursue-index/main/data/altered-ocr/1701a0f307714921/pages.jsonl",
+    "fetchedAt": "2026-05-26T12:33:29.766Z",
+    "license": "PURSUE source documents are U.S. Government works; source project states mechanically generated OCR transcripts carry no additional copyright claim. Project code is Apache-2.0.",
+    "licenseUrl": "https://github.com/BPSAI/pursue-index/blob/main/LICENSE",
+    "cardId": "1701a0f307714921",
+    "pageCount": 1,
+    "sourceAssetUrl": "https://www.war.gov/medialink/ufo/release_1/2024-04-30-composite-sketch.pdf"
+  },
+  "status": {
+    "ocr": "ocr_imported_unverified",
+    "humanReview": "unreviewed"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "documentId": "pursue-0165",
+  "recordId": "pursue-0165",
+  "officialPdfUrl": "https://www.war.gov/medialink/ufo/052226/release_02/documents/DOE-UAP-D001_PANTEX_Image.pdf",
+  "sourcePdfUrl": "https://www.war.gov/medialink/ufo/052226/release_02/documents/DOE-UAP-D001_PANTEX_Image.pdf",
+  "ocrTextEn": "                                                       _________\n PanTEX/\n                                                         UCNI\n\n    M....,.,..t,.,olO,,.......,l,r\n Comolnaittd N•idHr SNunly, LlC\n                                       Pantex Unidentified Object Incident Report\n\n                                     Image from Ground Surveillance Radar Tower\n\n\n\n\n                                                                                    0\n(bX3) (UCNI)\n\n\n\n\n                                                      ______\n                                                      UCNI                          Page 5 of 6\n\fPanr£x�\n   � and O,,.rlNCI by\n                                                 ______\n                                                  UCNI\n\nCcmoloat<d Nldnr s«urity llC\n                                   Pantex Unidentified Object Incident Report\n\n\n\n                               Sandia National Labs Enhanced Images of the Object\n\n\n\n\n                                                  _____\n                                                  UCNI                              Page 6 of 6\n\f",
+  "ocrQuality": "low",
+  "source": {
+    "repo": "zexiro/uap-disclosure-archive",
+    "repoUrl": "https://github.com/zexiro/uap-disclosure-archive",
+    "filePath": "raw/text/DOE-UAP-D001_PANTEX_Image.txt",
+    "githubUrl": "https://github.com/zexiro/uap-disclosure-archive/blob/main/raw/text/DOE-UAP-D001_PANTEX_Image.txt",
+    "rawUrl": "https://raw.githubusercontent.com/zexiro/uap-disclosure-archive/main/raw/text/DOE-UAP-D001_PANTEX_Image.txt",
+    "fetchedAt": "2026-05-26T12:27:16.199Z",
+    "license": "MIT licensed source; U.S. government source material described as public domain by source repository",
+    "licenseUrl": "https://github.com/zexiro/uap-disclosure-archive/blob/main/LICENSE"
+  },
+  "status": {
+    "ocr": "ocr_imported_unverified",
+    "humanReview": "unreviewed"
+  }
+}

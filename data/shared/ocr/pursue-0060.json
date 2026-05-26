@@ -1,0 +1,22 @@
+{
+  "documentId": "pursue-0060",
+  "recordId": "pursue-0060",
+  "officialPdfUrl": "https://www.war.gov/medialink/ufo/release_1/dow-uap-d54-mission-report-mediterranean-sea-na.pdf",
+  "sourcePdfUrl": "https://www.war.gov/medialink/ufo/release_1/dow-uap-d54-mission-report-mediterranean-sea-na.pdf",
+  "ocrTextEn": "1.4(a)\n\f1.4(a)\n\f1.4(a)\n\f1.4(a)\n\f1.4(a)\n\f1.4(a)\n\f                                       1.4(a)\n\n\n1.4(a)\n\n\n\n\nGENTEXT/UAP\n• UAP Description (e.g., size, shape, color, markings, recognizable features): (SECRET//NOFORN)\n1X UAP DETECTED WITH DESCRIPTIVE INFORMATION SUCH AS BEING A TRIANGLUAR\nAND METALLIC UAP.\n(SECRET//NOFORN)\n• Gentext (UAP Event Description): (SECRET//NOFORN)\nDURING RTB AT 1319Z, 1.4(a)          OBSERVED 1X UAP WHILE TRANSITING OVER 363453N\n0255943E FLYING AT AN ALTITUDE OF 24,989FT MSL AND SPEED OF 168KTS.\n(SECRET//NOFORN)\n\n\n\n\n                          1.4(a)\n\f",
+  "ocrQuality": "medium",
+  "source": {
+    "repo": "zexiro/uap-disclosure-archive",
+    "repoUrl": "https://github.com/zexiro/uap-disclosure-archive",
+    "filePath": "raw/text/dow-uap-d54-mission-report-mediterranean-sea-na.txt",
+    "githubUrl": "https://github.com/zexiro/uap-disclosure-archive/blob/main/raw/text/dow-uap-d54-mission-report-mediterranean-sea-na.txt",
+    "rawUrl": "https://raw.githubusercontent.com/zexiro/uap-disclosure-archive/main/raw/text/dow-uap-d54-mission-report-mediterranean-sea-na.txt",
+    "fetchedAt": "2026-05-26T12:27:16.199Z",
+    "license": "MIT licensed source; U.S. government source material described as public domain by source repository",
+    "licenseUrl": "https://github.com/zexiro/uap-disclosure-archive/blob/main/LICENSE"
+  },
+  "status": {
+    "ocr": "ocr_imported_unverified",
+    "humanReview": "unreviewed"
+  }
+}

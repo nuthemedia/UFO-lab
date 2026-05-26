@@ -1,0 +1,13 @@
+{
+  "documentId": "pursue-0128",
+  "recordId": "pursue-0128",
+  "fullTextJa": "[Page 1] [[page 1 confidence: 72]]\n[REDACTED]\n\n[REDACTED]                                    [REDACTED]\n\n              3                           3\n\n[REDACTED]                                    [REDACTED]\n\n[REDACTED]                                    [REDACTED]\n\n12/31/99 18:19:40",
+  "summaryJa": "本文は大部分が[REDACTED]で伏せられており、有意な本文は読み取れない。ページ表記（Page 1、page 1 confidence: 72）と繰り返しの伏字行、中央に「3」らしき数字が並ぶ行、およびタイムスタンプ「12/31/99 18:19:40」が含まれる。末尾に「--- Japanese translation excerpt ---」の表示がある。",
+  "summaryEn": "The document is largely redacted ([REDACTED]) with no substantive readable content. It includes page markers (Page 1, page 1 confidence: 72), repeated redaction lines, a line showing the digit(s) “3”, and a timestamp “12/31/99 18:19:40”. It also contains the label “--- Japanese translation excerpt ---” at the end.",
+  "status": {
+    "translationJa": "machine_translation",
+    "summary": "summary_generated",
+    "humanReview": "unreviewed"
+  },
+  "noteJa": "機械翻訳です。公式PDFを正本とし、OCR誤読や翻訳誤りを含む可能性があります。"
+}

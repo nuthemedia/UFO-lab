@@ -1,0 +1,25 @@
+{
+  "documentId": "pursue-0122",
+  "recordId": "pursue-0122",
+  "officialPdfUrl": "https://www.war.gov/medialink/ufo/release_1/fbi-photo-b19.pdf",
+  "sourcePdfUrl": "https://www.war.gov/medialink/ufo/release_1/fbi-photo-b19.pdf",
+  "ocrTextEn": "[Page 1] [[page 1 confidence: 72]]\n15    10    5         5    10    15\n\n12/31/99 18:18:53",
+  "ocrQuality": "medium",
+  "source": {
+    "repo": "BPSAI/pursue-index",
+    "repoUrl": "https://github.com/BPSAI/pursue-index",
+    "filePath": "data/altered-ocr/eda0a3d37c6dbbc3/pages.jsonl",
+    "githubUrl": "https://github.com/BPSAI/pursue-index/blob/main/data/altered-ocr/eda0a3d37c6dbbc3/pages.jsonl",
+    "rawUrl": "https://raw.githubusercontent.com/BPSAI/pursue-index/main/data/altered-ocr/eda0a3d37c6dbbc3/pages.jsonl",
+    "fetchedAt": "2026-05-26T12:33:29.766Z",
+    "license": "PURSUE source documents are U.S. Government works; source project states mechanically generated OCR transcripts carry no additional copyright claim. Project code is Apache-2.0.",
+    "licenseUrl": "https://github.com/BPSAI/pursue-index/blob/main/LICENSE",
+    "cardId": "eda0a3d37c6dbbc3",
+    "pageCount": 1,
+    "sourceAssetUrl": "https://www.war.gov/medialink/ufo/release_1/fbi-photo-b19.pdf"
+  },
+  "status": {
+    "ocr": "ocr_imported_unverified",
+    "humanReview": "unreviewed"
+  }
+}

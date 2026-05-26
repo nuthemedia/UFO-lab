@@ -1,0 +1,729 @@
+{
+  "sourceRepo": "BPSAI/pursue-index",
+  "sourceRepoUrl": "https://github.com/BPSAI/pursue-index",
+  "sourceRoot": "/private/tmp/bpsai-pursue-index",
+  "manifestPath": "/private/tmp/bpsai-pursue-index/data/manifests/latest.json",
+  "fetchedAt": "2026-05-26T12:33:29.766Z",
+  "cardsWithPageFiles": 91,
+  "matched": 91,
+  "imported": 58,
+  "skippedExistingLonger": 33,
+  "unmatched": [],
+  "missingPages": [
+    {
+      "cardId": "d7c07f24a96f8bac",
+      "title": "DOW-UAP-PR050, \"4 UAP Formation Iran 26 Aug 2022 over water [CALLSIGN]\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "d6efb186cd925560",
+      "title": "DOW-UAP-PR051, \"Syrian UAP instant acceleration\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "09001c140b97a5db",
+      "title": "DOW-UAP-D017, UAP Reported at Sandia Base, 1948-1950",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "0f469fcf6fb42875",
+      "title": "CIA-UAP-D001, Intelligence Information Report, USSR, 1973",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "fd342b7508668b0e",
+      "title": "ODNI-UAP-D001, USPER Narrative, Senior USIC Official",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "9ed140b9186c20c5",
+      "title": "NASA-UAP-D008, Apollo 12 Medical Debriefing - Tape 12, 1969",
+      "assetType": "AUD"
+    },
+    {
+      "cardId": "aaafecbc47103f4b",
+      "title": "DOE-UAP-D001, Enhanced PANTEX Imagery",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "7bd99ac64660258e",
+      "title": "331_120752_Numeric_Files_1944–1945_37153_German_Armament_Equipment_Documents",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "8156067f7ff4b983",
+      "title": "DOE-UAP-D002, James Tuck Correspondence, 1970s",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "b1c6f5c4a7fbeee1",
+      "title": "DOE-UAP-D003, Pajarito Astronomers Invitation, 1986",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "fd8bfb9481bcbdd3",
+      "title": "DOW-UAP-D003, Mission Report, Arabian Gulf, 2020",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "4382ccbf2a39513d",
+      "title": "DOW-UAP-D004, Mission Report, Arabian Gulf, 2020",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "b21122b1b7b2d953",
+      "title": "DOW-UAP-D005, Mission Report, Arabian Gulf, 2020",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "f6d9556247ebeb2d",
+      "title": "DOW-UAP-D006, Mission Report, Arabian Gulf, 2020",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "6fc6419676926f13",
+      "title": "DOW-UAP-D007, Mission Report, Arabian Gulf, 2020",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "33cca99659328520",
+      "title": "DOW-UAP-D008, Mission Report, Djibouti, 2025",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "9a0a2d62e9f47eb8",
+      "title": "DOW-UAP-D012, Mission Report, Iraq, May 2022",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "57e9cc7f9942e2cf",
+      "title": "DOW-UAP-D019, Mission Report, Syria, February 21, 2023",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "15d23b5f88df64fa",
+      "title": "DOW-UAP-D025, Mission Report, Greece, January 2024",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "3a0d83f3e51179db",
+      "title": "DOW-UAP-D027, Mission Report, United Arab Emirates, October 2023",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "9151e15016109463",
+      "title": "DOW-UAP-D028, Mission Report, Iraq, September 2024",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "a0f6663169c21caf",
+      "title": "DOW-UAP-D042, Range Fouler Debrief, Japan, 2023",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "cc33e8c352fc80ce",
+      "title": "DOW-UAP-D044, Range Fouler Reporting Form, Gulf of Aden, October 2020",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "17a8cc07fd8c694f",
+      "title": "DOW-UAP-D048, Department of the Air Force Report, 1996",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "775d16ead1ec8fa1",
+      "title": "DOW-UAP-D049, Launch Summary, Vandenberg AFB, 2000",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "6d7faf71150107e9",
+      "title": "DOW-UAP-D050, Email Correspondence, INDOPACOM, April 2025",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "71758de42a2df926",
+      "title": "DOW-UAP-D051, Email Correspondence, Pacific Time Zone, March 2023",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "a3f68d208681dc64",
+      "title": "DOW-UAP-D052, Email Correspondance, NA, August 2024",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "2201422e542ed597",
+      "title": "DOW-UAP-D054, Mission Report, Mediterranean Sea, NA",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "669dd29723dd423f",
+      "title": "DOW-UAP-D055, Mission Report, Syria, November 2016",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "205f9d0f627074c3",
+      "title": "DOW-UAP-D056, Range Fouler Debrief, Arabian Sea, August 2020",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "c2961d7ccb95ae45",
+      "title": "DOW-UAP-D057, Range Fouler Reporting Form, Gulf of Aden, September 2020",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "9a3f23d9136eddf3",
+      "title": "DOW-UAP-D058, Range Fouler Debrief, NA, October 2020",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "39c999bd61b2e20f",
+      "title": "DOW-UAP-D060, Mission Report, Arabian Gulf, August 2020",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "a33faf4c40674462",
+      "title": "DOW-UAP-D061, Mission Report, Arabian Gulf, August 2020",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "b8b5b17a6d70ef39",
+      "title": "DOW-UAP-D062, Mission Report, Strait of Hormuz, September 2020",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "8e727ae36892cba9",
+      "title": "DOW-UAP-D063, Mission Report, Strait of Hormuz, October 2020",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "2fecc4f3b434e64d",
+      "title": "DOW-UAP-D064, Mission Report, Iran, November 2020",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "aef933642db8134a",
+      "title": "DOW-UAP-D065, Mission Report, Arabian Gulf, July 2020",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "bbc494426d526bdc",
+      "title": "DOW-UAP-D074, Mission Report, Syria, November 2023",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "852224ee097b52cf",
+      "title": "DOW-UAP-D075, Mission Report, Gulf of Aden, July 2024",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "5ffbe11403179567",
+      "title": "DOW-UAP-PR028, Unresolved UAP Report, Greece, January 2024",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "aa638778a043c89c",
+      "title": "DOW-UAP-PR029, Unresolved UAP Report, United Arab Emirates, June 2024",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "46d871c93e4585fd",
+      "title": "DOW-UAP-PR037, Unresolved UAP Report, Middle East, 2020",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "9532749afe2d4273",
+      "title": "DOW-UAP-PR038, Unresolved UAP Report, Middle East, 2013",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "e924a48f55719a0d",
+      "title": "DOW-UAP-PR039, Unresolved UAP Report, Middle East, 2020",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "0499d6dc86c848d6",
+      "title": "DOW-UAP-PR040, Unresolved UAP Report, Middle East, 2020",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "cf5c53c84485c70d",
+      "title": "DOW-UAP-PR041, Unresolved UAP Report, Middle East, 2020",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "c4da38582fc64334",
+      "title": "DOW-UAP-PR042, Unresolved UAP Report, Middle East, 2020",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "7aede23a09ee4c6b",
+      "title": "DOW-UAP-PR043, Unresolved UAP Report, Africa, 2025",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "42158cfc89c7ab84",
+      "title": "DOW-UAP-PR044, Unresolved UAP Report, Middle East, 2020",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "2b6de60628336eb8",
+      "title": "DOW-UAP-PR045, Unresolved UAP Report, Middle East, 2020",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "9fdc75d250206f65",
+      "title": "DOW-UAP-PR046, Unresolved UAP Report, INDOPACOM, 2024",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "86c966cdd1f9f31a",
+      "title": "DOW-UAP-PR047, Unresolved UAP Report, INDOPACOM, 2023",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "c5850afb384c768b",
+      "title": "DOW-UAP-PR048, Unresolved UAP Report, INDOPACOM, 2024",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "8d3833f36d05ec03",
+      "title": "DOW-UAP-PR049, Unresolved UAP Report, Department of the Army, 2026",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "76780f0336af79e1",
+      "title": "DOW-UAP-PR052, \"UAP USO Formation [CALLSIGN] (Mission)\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "79325f4e62f8f9b9",
+      "title": "DOW-UAP-PR053, \"Cigar Shaped or Fast Sherical UAP clip 15 OCT 22\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "09fef4b135f48798",
+      "title": "DOW-UAP-PR054, \"Spherical UAP Erratic movement [CALLSIGN] (Mission) 2022\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "03b017d5b76f3a7e",
+      "title": "DOW-UAP-PR055, \"Spherical UAP over AFG in and out of clouds 23 Nov 2020\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "7c49f1a10e1d45ec",
+      "title": "DOW-UAP-PR056, \"Spherical UAP pulsing over water [CALLSIGN]\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "e04b05b132f03e28",
+      "title": "DOW-UAP-PR057a, \"Spherical UAP in clouds\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "b4dc3f79f7616313",
+      "title": "DOW-UAP-PR057b, \"[Platform] Observes UAP in East China Sea 05 JAN 2023 INDOPACOM\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "47cb76adb62d7e44",
+      "title": "DOW-UAP-PR058, \"[CALLSIGN] (Mission) UAP\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "414f485a5a580d74",
+      "title": "DOW-UAP-PR059, \"NAG UAP 1 Jun 20\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "f8810c11687af675",
+      "title": "DOW-UAP-PR060, \"Spherical UAP [CALLSIGN] 2021/04/12 obj 2\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "a7ec8e0ae80d9061",
+      "title": "DOW-UAP-PR061, \"Spherical UAP [CALLSIGN] 2021/04/12 vid 0\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "0cccf7db865c827c",
+      "title": "DOW-UAP-PR062, \"Spherical UAP [CALLSIGN] 2021/04/12 vid 1\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "8f68a0b98c4647ab",
+      "title": "DOW-UAP-PR063, \"Spherical UAP [CALLSIGN] 2021/04/12 vid 2\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "b6549669cd12c33f",
+      "title": "DOW-UAP-PR064, \"AFSOC Kabul UAP Jul 2017\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "034173b3a4641614",
+      "title": "DOW-UAP-PR065, \"USCG C-144 Tyndall UAP 2 TIC TAC IR hot 24 April 2024\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "cd8858cf829e6ef7",
+      "title": "DOW-UAP-PR066, \"USCG C-144 Tyndall UAP 1 TIC TAC IR hot 24 April 2024\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "9fedb1373b50d856",
+      "title": "DOW-UAP-PR067, \"Multiple Spherical UAP USO near Sub. [CALLSIGN] 2022/03/25 in and out of water\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "ea2e2a6496bbdbb1",
+      "title": "DOW-UAP-PR068, \"IIR 1 666 S0151 23/Video Footage of Unidentified Aerial Phenomenon (UAP) captured by fifth generation aircraft on 20 Jan 23\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "0699b4948ba6fb90",
+      "title": "DOW-UAP-PR069, \"F/A-18 FLIR UAP\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "bff6df8420d4cbdc",
+      "title": "DOW-UAP-PR070, \"IIR 1 655 S0301 23/Eglin AFB Aircrew Observed Unidentified Aerial Phenomena (UAP) on 13 Feb 23\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "b242f32347c819a5",
+      "title": "DOW-UAP-PR071, \"USAF ANG F-16C (callsign [CALLSIGN]) Shoots Down UAP over Lake Huron with [Weapon System], 12 Feb 2023\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "2a9f746d66a05666",
+      "title": "DOW-UAP-PR072, \"ADMINISTRATIVE REVISION: IIR 1777 J0032 22 Kazakhstan - UAP in the vicinity of Karaganda International Airport\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "e07aead6d20b2925",
+      "title": "DOW-UAP-PR073, IIR 1 655 S0053 23/Several Unidentified Aerial Phenomenon Encountered In The Vicinity of Columbus OH\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "cc72a9adcc562f7a",
+      "title": "DOW-UAP-PR074, \"[CALLSIGN] (Mission)HD_20220613\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "bb61c203319b4b25",
+      "title": "DOW-UAP-PR075, \"09JUN2021 [Platform] observed UAP in the ECS\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "58402012053be609",
+      "title": "DOW-UAP-PR076, \"03 January 2021 [CALLSIGN] (Mission) observes UAP\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "22f4d050e1dad88c",
+      "title": "DOW-UAP-PR077, \"2 November 2020 [CALLSIGN] [CALLSIGN] Observes and tracks UAP 1 of 2\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "d02f9eac223b1525",
+      "title": "DOW-UAP-PR078, \"2 November 2020 [CALLSIGN] [CALLSIGN] Observes and tracks UAP 2 of 2\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "814d0aa44e632c73",
+      "title": "DOW-UAP-PR079, \"29 October 2020 [CALLSIGN] (Mission) observes 3 fast moving UAP's\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "62abad9fdfc1652e",
+      "title": "DOW-UAP-PR080, \"20 October 2020 [CALLSIGN] [CALLSIGN] Observes UAP\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "2163031bf38f0a63",
+      "title": "DOW-UAP-PR081, \"18 Oct 2020 [CALLSIGN] observes UAP\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "44209964c97d2c53",
+      "title": "DOW-UAP-PR082, \"16 OCT 2020 [CALLSIGN] views UAP\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "d8944e2bc6627e5d",
+      "title": "DOW-UAP-PR083, \"7 October 2020 [CALLSIGN] observes UAP\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "d42052963cb29aaa",
+      "title": "DOW-UAP-PR084, \"17 Sept 2020 [CALLSIGN] observes UAP\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "a021a640e3108c35",
+      "title": "DOW-UAP-PR085, \"16 Sept 2020 [CALLSIGN] [CALLSIGN] observes UAP\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "4b0bd5b1c75a0c6f",
+      "title": "DOW-UAP-PR086, \"UAP from Dec 2019 (East Coast)\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "aec4d4da8ac17636",
+      "title": "DOW-UAP-PR087, \"05 September 2020 [CALLSIGN] UAP\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "4649af95e88b6643",
+      "title": "DOW-UAP-PR088, \"31 AUG [CALLSIGN] [CALLSIGN] Observes UAP\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "b2a7526ec9774d17",
+      "title": "DOW-UAP-PR089, \"31 AUG [CALLSIGN] [CALLSIGN] Observes UAP part2\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "10d757c7b1bf6aa1",
+      "title": "DOW-UAP-PR090, \"24 AUG 2020 [CALLSIGN] (Mission) Observes UAP\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "4af74afe8dc054bc",
+      "title": "DOW-UAP-PR091, \"21 AUG [CALLSIGN] Observes UAP in Persian Gulf\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "9dfbbb6de5c73272",
+      "title": "DOW-UAP-PR092, \"08 AUG 2020 [CALLSIGN] [CALLSIGN] UAP observation\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "40a4c3e0843b0de7",
+      "title": "DOW-UAP-PR093, \"May 05 2020 Gulf of Arabia [CALLSIGN] (Platform) Dual UAP\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "5f526642200e3985",
+      "title": "DOW-UAP-PR094, \"[CALLSIGN] (Mission) - HD 2020-02-13\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "804d5367a7e29ee0",
+      "title": "DOW-UAP-PR095, \"May 05 2020 Gulf of Arabia [CALLSIGN] (Platform) Dual UAP\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "5f5e3ee158c91a63",
+      "title": "DOW-UAP-PR096, \"HH11 03 July 2018 UAPs\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "23e7db6d552332e5",
+      "title": "DOW-UAP-PR097, \"Hi-Res: [CALLSIGN] Observes UAP on 25SEP19 at 2135Z\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "f3ef3a248b605aa0",
+      "title": "DOW-UAP-PR098, \"UFOs in formation over Persian Gulf?\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "7d5b9bff15c9a44d",
+      "title": "DOW-UAP-PR099, \"Hi-Res: [CALLSIGN] Observes UAP on 25SEP19 at 1715Z\"",
+      "assetType": "VID"
+    },
+    {
+      "cardId": "3893e5d0279db3b1",
+      "title": "FBI Photo A001",
+      "assetType": "IMG"
+    },
+    {
+      "cardId": "ba30b5fdb4f6d153",
+      "title": "FBI Photo A002",
+      "assetType": "IMG"
+    },
+    {
+      "cardId": "93cbdaad1d4ac853",
+      "title": "FBI Photo A003",
+      "assetType": "IMG"
+    },
+    {
+      "cardId": "04b9179a7637d6ad",
+      "title": "FBI Photo A004",
+      "assetType": "IMG"
+    },
+    {
+      "cardId": "613dc8ef961f9399",
+      "title": "FBI Photo A005",
+      "assetType": "IMG"
+    },
+    {
+      "cardId": "5a487c793b488382",
+      "title": "FBI Photo A006",
+      "assetType": "IMG"
+    },
+    {
+      "cardId": "c142741e8cafc659",
+      "title": "FBI Photo A007",
+      "assetType": "IMG"
+    },
+    {
+      "cardId": "819e725592d1ba79",
+      "title": "FBI Photo A008",
+      "assetType": "IMG"
+    },
+    {
+      "cardId": "c304734c04357887",
+      "title": "FBI Photo B021",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "b03309df6758ab15",
+      "title": "FBI September 2023 Sighting - Serial 003",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "83aa439781e60e7b",
+      "title": "FBI September 2023 Sighting - Serial 005",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "167f6a21c7238d0c",
+      "title": "NASA-UAP-D003A, Gemini 7 Audio Excerpt, 1965",
+      "assetType": "AUD"
+    },
+    {
+      "cardId": "d14e0371a5bf0f5e",
+      "title": "NASA-UAP-D004, Apollo 11 Technical Crew Debriefing, 1969",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "0b298cfc9c65a4d6",
+      "title": "NASA-UAP-D006, Apollo 17 Technical Crew Debriefing, 1973",
+      "assetType": "PDF"
+    },
+    {
+      "cardId": "002eaa383e76a277",
+      "title": "NASA-UAP-D009, Apollo 17 Audio Excerpt, December 7, 1972",
+      "assetType": "AUD"
+    },
+    {
+      "cardId": "1bc28d0e03b79e35",
+      "title": "NASA-UAP-D010, Mercury Atlas 9 Audio Excerpt, May 15, 1963",
+      "assetType": "AUD"
+    },
+    {
+      "cardId": "ef779c3f0f7ba4d3",
+      "title": "NASA-UAP-D011, Mercury Atlas 9 Audio Excerpt, May 15, 1963",
+      "assetType": "AUD"
+    },
+    {
+      "cardId": "35e0a7cff95a3e93",
+      "title": "NASA-UAP-D012, Mercury Atlas 8 Audio Excerpt, October 3, 1962",
+      "assetType": "AUD"
+    },
+    {
+      "cardId": "6b12c3ddc6a96008",
+      "title": "NASA-UAP-D013, Mercury Atlas 7, May 24, 1962",
+      "assetType": "AUD"
+    },
+    {
+      "cardId": "01765a63bbd3f02f",
+      "title": "NASA-UAP-D014, Mercury-Redstone 4, July 21, 1961",
+      "assetType": "AUD"
+    },
+    {
+      "cardId": "303ad110cb5fa8b4",
+      "title": "NASA-UAP-VM001, Apollo 12, 1969",
+      "assetType": "IMG"
+    },
+    {
+      "cardId": "bd9411951868bc3e",
+      "title": "NASA-UAP-VM002, Apollo 12, 1969",
+      "assetType": "IMG"
+    },
+    {
+      "cardId": "19b18b71420602c5",
+      "title": "NASA-UAP-VM003, Apollo 12, 1969",
+      "assetType": "IMG"
+    },
+    {
+      "cardId": "34f3278ad20d348f",
+      "title": "NASA-UAP-VM004, Apollo 12, 1969",
+      "assetType": "IMG"
+    },
+    {
+      "cardId": "784dc42f885dc12e",
+      "title": "NASA-UAP-VM005, Apollo 12, 1969",
+      "assetType": "IMG"
+    },
+    {
+      "cardId": "3deb237b1d68e203",
+      "title": "NASA-UAP-VM006, Apollo 17, 1972",
+      "assetType": "IMG"
+    }
+  ],
+  "importedRecordIds": [
+    "pursue-0017",
+    "pursue-0018",
+    "pursue-0019",
+    "pursue-0023",
+    "pursue-0024",
+    "pursue-0025",
+    "pursue-0026",
+    "pursue-0027",
+    "pursue-0028",
+    "pursue-0029",
+    "pursue-0031",
+    "pursue-0032",
+    "pursue-0033",
+    "pursue-0002",
+    "pursue-0003",
+    "pursue-0004",
+    "pursue-0005",
+    "pursue-0006",
+    "pursue-0007",
+    "pursue-0034",
+    "pursue-0008",
+    "pursue-0001",
+    "pursue-0009",
+    "pursue-0010",
+    "pursue-0011",
+    "pursue-0012",
+    "pursue-0013",
+    "pursue-0014",
+    "pursue-0015",
+    "pursue-0016",
+    "pursue-0112",
+    "pursue-0123",
+    "pursue-0129",
+    "pursue-0130",
+    "pursue-0131",
+    "pursue-0132",
+    "pursue-0133",
+    "pursue-0134",
+    "pursue-0135",
+    "pursue-0113",
+    "pursue-0114",
+    "pursue-0115",
+    "pursue-0116",
+    "pursue-0117",
+    "pursue-0118",
+    "pursue-0119",
+    "pursue-0120",
+    "pursue-0121",
+    "pursue-0122",
+    "pursue-0124",
+    "pursue-0126",
+    "pursue-0127",
+    "pursue-0128",
+    "pursue-0154",
+    "pursue-0156",
+    "pursue-0137",
+    "pursue-0020",
+    "pursue-0141"
+  ]
+}

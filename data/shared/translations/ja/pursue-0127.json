@@ -1,0 +1,13 @@
+{
+  "documentId": "pursue-0127",
+  "recordId": "pursue-0127",
+  "fullTextJa": "[Page 1] [[page 1 confidence: 72]]\n3                    3\n\n12/31/99 18:19:33",
+  "summaryJa": "ページ1のOCR本文。ページ上に「3                    3」との表示とタイムスタンプ「12/31/99 18:19:33」が含まれ、「--- Japanese translation excerpt ---」という見出しがある。ページのOCR信頼度は72%と表示されている。",
+  "summaryEn": "OCR text of page 1. Contains the display \"3                    3\", the timestamp \"12/31/99 18:19:33\", and the heading \"--- Japanese translation excerpt ---\". OCR confidence for the page is shown as 72%.",
+  "status": {
+    "translationJa": "machine_translation",
+    "summary": "summary_generated",
+    "humanReview": "unreviewed"
+  },
+  "noteJa": "機械翻訳です。公式PDFを正本とし、OCR誤読や翻訳誤りを含む可能性があります。"
+}

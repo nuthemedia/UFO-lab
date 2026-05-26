@@ -1,0 +1,13 @@
+{
+  "documentId": "pursue-0123",
+  "recordId": "pursue-0123",
+  "fullTextJa": "[Page 1] [[page 1 confidence: 72]]\n15    10    5         5    10    15\n\n12/31/99 18:11:27",
+  "summaryJa": "ページ1（OCR信頼度72）の本文は、数値列「15 10 5 5 10 15」とタイムスタンプ「12/31/99 18:11:27」、および「--- Japanese translation excerpt ---」という見出しを含む短い断片のみで構成されている。",
+  "summaryEn": "The OCR page 1 (confidence 72) contains only a short fragment: the numeric sequence \"15 10 5 5 10 15\", the timestamp \"12/31/99 18:11:27\", and the heading \"--- Japanese translation excerpt ---\".",
+  "status": {
+    "translationJa": "machine_translation",
+    "summary": "summary_generated",
+    "humanReview": "unreviewed"
+  },
+  "noteJa": "機械翻訳です。公式PDFを正本とし、OCR誤読や翻訳誤りを含む可能性があります。"
+}
