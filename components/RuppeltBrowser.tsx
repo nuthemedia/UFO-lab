@@ -12,7 +12,6 @@ import {
   getRelease,
   getSearchFacets,
   getSearchText,
-  getDocumentId,
   getTitle,
   getVideoEmbedUrl,
   getVideoUrl,
@@ -23,23 +22,13 @@ import {
   uniqueValues,
   type PriorDisclosureAttributionSource,
   type PriorDisclosureStatus,
-  type PursueDescriptionSearchEntry,
-  type PursueFulltextSearchEntry,
   type PursueIndex,
   type PursueRecord,
-  type PursueSearchMode,
-  type PursueSharedDocumentBundle,
   type PursueSort,
 } from "@/lib/pursue";
 
 type RuppeltBrowserProps = {
   index: PursueIndex;
-  descriptionSearchIndex: PursueDescriptionSearchEntry[];
-};
-
-type RuppeltSharedDataResponse = {
-  sharedDocuments: Record<string, PursueSharedDocumentBundle>;
-  fulltextSearchIndex: PursueFulltextSearchEntry[];
 };
 
 const storageKey = "ruppelt.savedRecordIds";
@@ -48,7 +37,6 @@ const viewModeStorageKey = "ruppelt.viewMode";
 type RuppeltViewMode = "carousel" | "list";
 type CardLanguage = "ja" | "en";
 type PriorDisclosureFilter = PriorDisclosureStatus | "unreviewed" | "";
-type DetailTab = "overview" | "summary" | "fulltext" | "metadata" | "source";
 
 function readParam(name: string) {
   if (typeof window === "undefined") {
@@ -108,10 +96,6 @@ function normalizePriorDisclosureFilter(value: string): PriorDisclosureFilter {
     : "";
 }
 
-function normalizeSearchMode(value: string): PursueSearchMode {
-  return value === "fulltext" ? "fulltext" : "description";
-}
-
 function matchesRecord(
   record: PursueRecord,
   query: string,
@@ -119,21 +103,11 @@ function matchesRecord(
   agency: string,
   type: string,
   priorDisclosureStatus: PriorDisclosureFilter,
-  searchMode: PursueSearchMode,
-  descriptionSearchByRecordId: Map<string, string>,
-  fulltextSearchByRecordId: Map<string, string>,
 ) {
   const normalizedQuery = query.trim().toLowerCase();
 
-  if (normalizedQuery) {
-    const searchText =
-      searchMode === "fulltext"
-        ? fulltextSearchByRecordId.get(record.source.id) || ""
-        : descriptionSearchByRecordId.get(record.source.id) || getSearchText(record);
-
-    if (!searchText.includes(normalizedQuery)) {
-      return false;
-    }
+  if (normalizedQuery && !getSearchText(record).includes(normalizedQuery)) {
+    return false;
   }
 
   if (release && record.source.release !== release) {
@@ -162,24 +136,6 @@ function matchesRecord(
 
   return true;
 }
-
-const statusStateLabels = {
-  missing: "なし",
-  ocr_imported_unverified: "OCR取得済み・未確認",
-  ocr_verified: "OCR確認済み",
-  machine_translation: "機械翻訳",
-  translation_reviewed: "翻訳レビュー済み",
-  summary_generated: "要約生成済み",
-  summary_reviewed: "要約レビュー済み",
-};
-
-const ocrQualityLabels = {
-  none: "OCRなし",
-  low: "低",
-  medium: "中",
-  high: "高",
-  unknown: "不明",
-};
 
 function getAttributionLabel(source: PriorDisclosureAttributionSource) {
   const labels: Record<PriorDisclosureAttributionSource, string> = {
@@ -301,236 +257,17 @@ function PriorDisclosurePanel({
   );
 }
 
-function DetailPanel({
-  record,
-  bundle,
-  onClose,
-  initialTab = "overview",
-}: {
-  record: PursueRecord;
-  bundle?: PursueSharedDocumentBundle;
-  onClose: () => void;
-  initialTab?: DetailTab;
-}) {
-  const [activeTab, setActiveTab] = useState<DetailTab>(initialTab);
-  const document = bundle?.document;
-  const ocr = bundle?.ocr;
-  const translation = bundle?.translationJa;
-  const documentId = getDocumentId(record);
-  const officialPdfUrl = document?.officialPdfUrl || record.source.downloadUrl;
-  const tabs: Array<[DetailTab, string]> = [
-    ["overview", "概要"],
-    ["summary", "要約"],
-    ["fulltext", "全文"],
-    ["metadata", "メタデータ"],
-    ["source", "出典"],
-  ];
-
-  return (
-    <div className="ruppelt-detail-layer" role="presentation" onClick={onClose}>
-      <aside
-        className="ruppelt-detail-panel"
-        role="dialog"
-        aria-modal="true"
-        aria-label="資料詳細"
-        onClick={(event) => event.stopPropagation()}
-      >
-        <div className="ruppelt-detail-header">
-          <div>
-            <p className="ruppelt-detail-kicker">資料詳細</p>
-            <h2>{getTitle(record)}</h2>
-          </div>
-          <button type="button" aria-label="資料詳細を閉じる" onClick={onClose}>
-            ×
-          </button>
-        </div>
-
-        <div className="ruppelt-detail-tabs" role="tablist" aria-label="資料詳細タブ">
-          {tabs.map(([value, label]) => (
-            <button
-              key={value}
-              type="button"
-              role="tab"
-              aria-selected={activeTab === value}
-              aria-pressed={activeTab === value}
-              onClick={() => setActiveTab(value)}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
-
-        <div className="ruppelt-detail-body">
-          {activeTab === "overview" ? (
-            <section>
-              <h3>概要</h3>
-              <p>{getDescriptionByLanguage(record, "ja")}</p>
-              <div className="ruppelt-detail-actions">
-                {officialPdfUrl ? (
-                  <a href={officialPdfUrl} target="_blank" rel="noreferrer">
-                    公式PDFを開く
-                  </a>
-                ) : null}
-                <button type="button" onClick={() => setActiveTab("summary")}>
-                  要約を見る
-                </button>
-              </div>
-            </section>
-          ) : null}
-
-          {activeTab === "summary" ? (
-            <section>
-              <h3>日本語要約</h3>
-              {translation?.summaryJa ? <p>{translation.summaryJa}</p> : <p>未作成</p>}
-              <h3>英語要約</h3>
-              {translation?.summaryEn ? <p lang="en">{translation.summaryEn}</p> : <p>未作成</p>}
-              {translation?.noteJa ? <p className="ruppelt-detail-note">{translation.noteJa}</p> : null}
-            </section>
-          ) : null}
-
-          {activeTab === "fulltext" ? (
-            <section>
-              <div className="ruppelt-detail-actions">
-                {officialPdfUrl ? (
-                  <a href={officialPdfUrl} target="_blank" rel="noreferrer">
-                    公式PDFを開く
-                  </a>
-                ) : null}
-              </div>
-              <h3>日本語全文訳</h3>
-              {translation?.fullTextJa ? (
-                <div className="ruppelt-detail-fulltext">{translation.fullTextJa}</div>
-              ) : (
-                <p>未翻訳</p>
-              )}
-              <h3>英語OCR全文</h3>
-              {ocr?.ocrTextEn ? (
-                <pre className="ruppelt-detail-fulltext" lang="en">
-                  {ocr.ocrTextEn}
-                </pre>
-              ) : (
-                <p>OCRデータなし</p>
-              )}
-            </section>
-          ) : null}
-
-          {activeTab === "metadata" ? (
-            <section>
-              <h3>メタデータ</h3>
-              <dl className="ruppelt-detail-dl">
-                <div>
-                  <dt>Document ID</dt>
-                  <dd>{documentId}</dd>
-                </div>
-                <div>
-                  <dt>Agency</dt>
-                  <dd>{record.source.agency || "不明"}</dd>
-                </div>
-                <div>
-                  <dt>Release</dt>
-                  <dd>{record.source.release || "不明"}</dd>
-                </div>
-                <div>
-                  <dt>Incident Date</dt>
-                  <dd>{record.source.incidentDate || "不明"}</dd>
-                </div>
-                <div>
-                  <dt>Incident Location</dt>
-                  <dd>{record.source.incidentLocation || "不明"}</dd>
-                </div>
-                <div>
-                  <dt>Type</dt>
-                  <dd>{record.source.documentType || "不明"}</dd>
-                </div>
-              </dl>
-            </section>
-          ) : null}
-
-          {activeTab === "source" ? (
-            <section>
-              <h3>出典</h3>
-              <p>公式PDFを正本とし、OCR・翻訳・要約は検索と閲覧のための補助データです。</p>
-              <dl className="ruppelt-detail-dl">
-                <div>
-                  <dt>公式PDF</dt>
-                  <dd>
-                    {officialPdfUrl ? (
-                      <a href={officialPdfUrl} target="_blank" rel="noreferrer">
-                        war.gov
-                      </a>
-                    ) : (
-                      "なし"
-                    )}
-                  </dd>
-                </div>
-                <div>
-                  <dt>OCR取得元</dt>
-                  <dd>
-                    {ocr?.source.githubUrl ? (
-                      <a href={ocr.source.githubUrl} target="_blank" rel="noreferrer">
-                        {ocr.source.repo}
-                      </a>
-                    ) : (
-                      "OCRデータなし"
-                    )}
-                  </dd>
-                </div>
-                <div>
-                  <dt>OCRファイルパス</dt>
-                  <dd>{ocr?.source.filePath || "OCRデータなし"}</dd>
-                </div>
-                <div>
-                  <dt>取得日時</dt>
-                  <dd>{ocr?.source.fetchedAt || "OCRデータなし"}</dd>
-                </div>
-                <div>
-                  <dt>ライセンス</dt>
-                  <dd>{ocr?.source.license || "OCRデータなし"}</dd>
-                </div>
-                <div>
-                  <dt>OCR状態</dt>
-                  <dd>{ocr ? statusStateLabels[ocr.status.ocr] : "OCRなし"}</dd>
-                </div>
-                <div>
-                  <dt>OCR品質</dt>
-                  <dd>{ocr ? ocrQualityLabels[ocr.ocrQuality] : "OCRなし"}</dd>
-                </div>
-                <div>
-                  <dt>翻訳状態</dt>
-                  <dd>
-                    {translation ? statusStateLabels[translation.status.translationJa] : "未翻訳"}
-                  </dd>
-                </div>
-                <div>
-                  <dt>要約状態</dt>
-                  <dd>{translation ? statusStateLabels[translation.status.summary] : "未作成"}</dd>
-                </div>
-                <div>
-                  <dt>レビュー状態</dt>
-                  <dd>{translation?.status.humanReview === "reviewed" ? "レビュー済み" : "未レビュー"}</dd>
-                </div>
-              </dl>
-            </section>
-          ) : null}
-        </div>
-      </aside>
-    </div>
-  );
-}
-
 function RecordCard({
   record,
   saved,
   onToggleSaved,
   onOpenPriorDisclosure,
-  onOpenDetail,
   variant = "list",
 }: {
   record: PursueRecord;
   saved: boolean;
   onToggleSaved: (id: string) => void;
   onOpenPriorDisclosure: (record: PursueRecord) => void;
-  onOpenDetail: (record: PursueRecord, tab?: DetailTab) => void;
   variant?: RuppeltViewMode;
 }) {
   const [language, setLanguage] = useState<CardLanguage>("ja");
@@ -649,22 +386,6 @@ function RecordCard({
         </div>
       </dl>
       <div className="ruppelt-card-actions">
-        <button
-          type="button"
-          onPointerDown={(event) => event.stopPropagation()}
-          onTouchEnd={(event) => {
-            event.preventDefault();
-            event.stopPropagation();
-            onOpenDetail(record, "fulltext");
-          }}
-          onClick={(event) => {
-            event.preventDefault();
-            event.stopPropagation();
-            onOpenDetail(record, "fulltext");
-          }}
-        >
-          日本語全文
-        </button>
         {links.map(([label, url]) => (
           <a key={label} href={url} target="_blank" rel="noreferrer">
             {label}
@@ -675,12 +396,8 @@ function RecordCard({
   );
 }
 
-export function RuppeltBrowser({
-  index,
-  descriptionSearchIndex,
-}: RuppeltBrowserProps) {
+export function RuppeltBrowser({ index }: RuppeltBrowserProps) {
   const [query, setQuery] = useState("");
-  const [searchMode, setSearchMode] = useState<PursueSearchMode>("description");
   const [release, setRelease] = useState("");
   const [agency, setAgency] = useState("");
   const [type, setType] = useState("");
@@ -691,11 +408,6 @@ export function RuppeltBrowser({
   const [savedIds, setSavedIds] = useState<string[]>([]);
   const [viewMode, setViewMode] = useState<RuppeltViewMode>("carousel");
   const [selectedDisclosureRecord, setSelectedDisclosureRecord] = useState<PursueRecord | null>(null);
-  const [selectedDetailRecord, setSelectedDetailRecord] = useState<PursueRecord | null>(null);
-  const [selectedDetailTab, setSelectedDetailTab] = useState<DetailTab>("overview");
-  const [sharedDocuments, setSharedDocuments] = useState<Record<string, PursueSharedDocumentBundle>>({});
-  const [fulltextSearchIndex, setFulltextSearchIndex] = useState<PursueFulltextSearchEntry[]>([]);
-  const [sharedDataLoading, setSharedDataLoading] = useState(false);
   const [activeCarouselIndex, setActiveCarouselIndex] = useState(0);
   const [carouselDragging, setCarouselDragging] = useState(false);
   const carouselRef = useRef<HTMLDivElement | null>(null);
@@ -710,7 +422,6 @@ export function RuppeltBrowser({
 
   useEffect(() => {
     setQuery(readParam("q"));
-    setSearchMode(normalizeSearchMode(readParam("target")));
     setRelease(readParam("release"));
     setAgency(readParam("agency"));
     setType(readParam("type"));
@@ -720,57 +431,13 @@ export function RuppeltBrowser({
     setViewMode(readViewMode());
   }, []);
 
-  async function loadSharedData() {
-    if (sharedDataLoading || fulltextSearchIndex.length > 0 || Object.keys(sharedDocuments).length > 0) {
-      return;
-    }
-
-    setSharedDataLoading(true);
-
-    try {
-      const response = await fetch("/api/ruppelt/shared-data");
-
-      if (!response.ok) {
-        return;
-      }
-
-      const data = (await response.json()) as RuppeltSharedDataResponse;
-      setSharedDocuments(data.sharedDocuments || {});
-      setFulltextSearchIndex(data.fulltextSearchIndex || []);
-    } finally {
-      setSharedDataLoading(false);
-    }
-  }
-
   useEffect(() => {
-    if (searchMode === "fulltext") {
-      void loadSharedData();
-    }
-  }, [searchMode]);
-
-  useEffect(() => {
-    syncQuery({
-      q: query,
-      target: searchMode === "fulltext" ? searchMode : "",
-      release,
-      agency,
-      type,
-      status: priorDisclosureStatus,
-      sort,
-    });
-  }, [agency, priorDisclosureStatus, query, release, searchMode, sort, type]);
+    syncQuery({ q: query, release, agency, type, status: priorDisclosureStatus, sort });
+  }, [agency, priorDisclosureStatus, query, release, sort, type]);
 
   const releases = useMemo(() => uniqueValues(index.records, (record) => record.source.release), [index.records]);
   const agencies = useMemo(() => uniqueValues(index.records, (record) => record.source.agency), [index.records]);
   const types = useMemo(() => uniqueValues(index.records, (record) => record.source.documentType), [index.records]);
-  const descriptionSearchByRecordId = useMemo(
-    () => new Map(descriptionSearchIndex.map((entry) => [entry.recordId, entry.searchText])),
-    [descriptionSearchIndex],
-  );
-  const fulltextSearchByRecordId = useMemo(
-    () => new Map(fulltextSearchIndex.map((entry) => [entry.recordId, entry.searchText])),
-    [fulltextSearchIndex],
-  );
   const priorDisclosureCounts = useMemo(() => {
     return index.records.reduce<Record<PriorDisclosureStatus, number>>(
       (counts, record) => {
@@ -811,39 +478,15 @@ export function RuppeltBrowser({
           ? priorDisclosureLabels[priorDisclosureStatus]
           : "すべて"
     }`,
-    `検索対象: ${searchMode === "fulltext" ? "全文" : "資料説明"}`,
     sortLabel,
   ];
   const visibleRecords = useMemo(() => {
     const filtered = index.records.filter((record) =>
-      matchesRecord(
-        record,
-        query,
-        release,
-        agency,
-        type,
-        priorDisclosureStatus,
-        searchMode,
-        descriptionSearchByRecordId,
-        fulltextSearchByRecordId,
-      ),
+      matchesRecord(record, query, release, agency, type, priorDisclosureStatus),
     );
     const savedFiltered = showSavedOnly ? filtered.filter((record) => savedIds.includes(record.source.id)) : filtered;
     return sortRecords(savedFiltered, sort);
-  }, [
-    agency,
-    descriptionSearchByRecordId,
-    fulltextSearchByRecordId,
-    index.records,
-    priorDisclosureStatus,
-    query,
-    release,
-    savedIds,
-    searchMode,
-    showSavedOnly,
-    sort,
-    type,
-  ]);
+  }, [agency, index.records, priorDisclosureStatus, query, release, savedIds, showSavedOnly, sort, type]);
 
   function toggleSaved(id: string) {
     const next = savedIds.includes(id) ? savedIds.filter((savedId) => savedId !== id) : [...savedIds, id];
@@ -853,7 +496,6 @@ export function RuppeltBrowser({
 
   function resetFilters() {
     setQuery("");
-    setSearchMode("description");
     setRelease("");
     setAgency("");
     setType("");
@@ -866,12 +508,6 @@ export function RuppeltBrowser({
   function changeViewMode(mode: RuppeltViewMode) {
     setViewMode(mode);
     writeViewMode(mode);
-  }
-
-  function openDetail(record: PursueRecord, tab: DetailTab = "overview") {
-    setSelectedDetailTab(tab);
-    setSelectedDetailRecord(record);
-    void loadSharedData();
   }
 
   function scrollCarousel(direction: -1 | 1) {
@@ -1019,23 +655,6 @@ export function RuppeltBrowser({
             enterKeyHint="search"
           />
         </label>
-
-        <div className="ruppelt-search-mode" role="group" aria-label="検索対象">
-          <button
-            type="button"
-            aria-pressed={searchMode === "description"}
-            onClick={() => setSearchMode("description")}
-          >
-            資料説明
-          </button>
-          <button
-            type="button"
-            aria-pressed={searchMode === "fulltext"}
-            onClick={() => setSearchMode("fulltext")}
-          >
-            全文
-          </button>
-        </div>
 
         <div className="ruppelt-filter-summary">
           <button
@@ -1187,20 +806,6 @@ export function RuppeltBrowser({
                 onPointerUp={endCarouselDrag}
                 onPointerCancel={endCarouselDrag}
                 onClickCapture={(event) => {
-                  const target = event.target;
-                  const isCardControl =
-                    target instanceof Element &&
-                    Boolean(
-                      target.closest(
-                        ".ruppelt-card-actions button, .ruppelt-card-actions a, .ruppelt-prior-disclosure, .ruppelt-card-save, .ruppelt-language-switch button, .ruppelt-description-toggle",
-                      ),
-                    );
-
-                  if (isCardControl) {
-                    carouselDragRef.current.moved = false;
-                    return;
-                  }
-
                   if (carouselDragRef.current.moved) {
                     event.preventDefault();
                     event.stopPropagation();
@@ -1225,7 +830,6 @@ export function RuppeltBrowser({
                       saved={savedIds.includes(record.source.id)}
                       onToggleSaved={toggleSaved}
                       onOpenPriorDisclosure={setSelectedDisclosureRecord}
-                      onOpenDetail={openDetail}
                       variant="carousel"
                     />
                   </div>
@@ -1241,7 +845,6 @@ export function RuppeltBrowser({
                   saved={savedIds.includes(record.source.id)}
                   onToggleSaved={toggleSaved}
                   onOpenPriorDisclosure={setSelectedDisclosureRecord}
-                  onOpenDetail={openDetail}
                   variant="list"
                 />
               ))}
@@ -1253,14 +856,6 @@ export function RuppeltBrowser({
         <PriorDisclosurePanel
           record={selectedDisclosureRecord}
           onClose={() => setSelectedDisclosureRecord(null)}
-        />
-      ) : null}
-      {selectedDetailRecord ? (
-        <DetailPanel
-          record={selectedDetailRecord}
-          bundle={sharedDocuments[getDocumentId(selectedDetailRecord)]}
-          initialTab={selectedDetailTab}
-          onClose={() => setSelectedDetailRecord(null)}
         />
       ) : null}
     </section>
