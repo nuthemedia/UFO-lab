@@ -23,9 +23,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/hynek-top.png",
-        width: 1023,
-        height: 1537,
+        url: `${siteUrl}/hynek-dashboard-og.jpg`,
+        width: 1200,
+        height: 630,
         alt: "日本のUFO観ダッシュボード",
       },
     ],
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description,
-    images: ["/hynek-top.png"],
+    images: [`${siteUrl}/hynek-dashboard-og.jpg`],
   },
   other: {
     "twitter:image:alt": "日本のUFO観ダッシュボード",
