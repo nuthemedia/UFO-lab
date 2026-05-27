@@ -232,22 +232,23 @@ async function readState(): Promise<StoreState> {
   if (kv) {
     try {
       const userIds = (await kv.smembers<string[]>(KV_SUBMISSION_INDEX_KEY)) || [];
-      const submissionKeys = userIds.map((userId) => `hynek:submission:${userId}`);
-      const rawSubmissions = submissionKeys.length ? await kv.mget(...submissionKeys) : [];
-      const submissions = Object.fromEntries(
-        userIds.flatMap((userId, index) => {
-          const rawSubmission = rawSubmissions[index];
+      const entries = await Promise.all(
+        userIds.map(async (userId) => {
+          const rawSubmission = await kv.get<string>(`hynek:submission:${userId}`);
 
           if (typeof rawSubmission !== "string") {
-            return [];
+            return null;
           }
 
           try {
-            return [[userId, JSON.parse(rawSubmission) as HynekSubmission]];
+            return [userId, JSON.parse(rawSubmission) as HynekSubmission] as const;
           } catch {
-            return [];
+            return null;
           }
         }),
+      );
+      const submissions = Object.fromEntries(
+        entries.filter((entry): entry is readonly [string, HynekSubmission] => Boolean(entry)),
       );
 
       return { submissions };
