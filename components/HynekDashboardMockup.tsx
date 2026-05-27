@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import type { HynekDashboardData } from "@/lib/hynekStore";
 
@@ -631,7 +631,51 @@ function TabPanel({ activeTab, filter, data }: { activeTab: TabId; filter: Filte
 export function HynekDashboardMockup({ initialData }: { initialData: HynekDashboardData }) {
   const [activeTab, setActiveTab] = useState<TabId>("overview");
   const [activeFilter, setActiveFilter] = useState<FilterId>("all");
+  const [dashboardData, setDashboardData] = useState(initialData);
   const activeFilterNote = useMemo(() => filters.find((filter) => filter.id === activeFilter)?.note ?? "", [activeFilter]);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    async function refreshDashboard() {
+      try {
+        const response = await fetch("/api/hynek", { cache: "no-store" });
+        if (!response.ok) {
+          return;
+        }
+
+        const nextData = (await response.json()) as HynekDashboardData;
+        if (!cancelled) {
+          setDashboardData(nextData);
+        }
+      } catch {
+        // ダッシュボードは表示を止めず、取得に失敗したら初期値のまま維持する
+      }
+    }
+
+    refreshDashboard();
+    const intervalId = window.setInterval(refreshDashboard, 15000);
+
+    const handleFocus = () => {
+      refreshDashboard();
+    };
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "visible") {
+        refreshDashboard();
+      }
+    };
+
+    window.addEventListener("focus", handleFocus);
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    return () => {
+      cancelled = true;
+      window.clearInterval(intervalId);
+      window.removeEventListener("focus", handleFocus);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, []);
 
   return (
     <div className="hynek-dashboard">
@@ -666,7 +710,7 @@ export function HynekDashboardMockup({ initialData }: { initialData: HynekDashbo
       </section>
 
       <div className="hynek-dashboard-grid">
-        <TabPanel activeTab={activeTab} filter={activeFilter} data={initialData} />
+        <TabPanel activeTab={activeTab} filter={activeFilter} data={dashboardData} />
       </div>
 
       <section className="hynek-dashboard-card hynek-dashboard-cta">
