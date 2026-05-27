@@ -5,6 +5,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { siteConfig } from "@/lib/site";
 import { getHynekDashboardData } from "@/lib/hynekStore";
 import { siteUrl } from "@/lib/seo";
+import { withHynekSocialImageVersion } from "@/lib/hynekShare";
 
 const title = "日本のUFO観ダッシュボード | UFO Lab Tokyo";
 const description = "UFOファンタイプ診断の匿名回答から、日本のUFO観の傾向を可視化するダッシュボードです。";
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${siteUrl}/hynek-dashboard-og.jpg`,
+        url: withHynekSocialImageVersion(`${siteUrl}/hynek-dashboard-og.jpg`),
         width: 1200,
         height: 630,
         alt: "日本のUFO観ダッシュボード",
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description,
-    images: [`${siteUrl}/hynek-dashboard-og.jpg`],
+    images: [withHynekSocialImageVersion(`${siteUrl}/hynek-dashboard-og.jpg`)],
   },
   other: {
     "twitter:image:alt": "日本のUFO観ダッシュボード",

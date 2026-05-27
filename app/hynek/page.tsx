@@ -3,7 +3,9 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { HynekFanTypeMockup } from "@/components/HynekFanTypeMockup";
 import { siteConfig } from "@/lib/site";
 import { siteUrl } from "@/lib/seo";
-import { getHynekShareImagePath, getHynekShareLabel } from "@/lib/hynekShare";
+import { getHynekShareImagePath, getHynekShareLabel, withHynekSocialImageVersion } from "@/lib/hynekShare";
+
+export const dynamic = "force-dynamic";
 
 export const dynamic = "force-dynamic";
 
@@ -26,7 +28,9 @@ export async function generateMetadata({ searchParams }: HynekPageProps): Promis
   const shareImagePath = getHynekShareImagePath(resultType, gender);
   const resultLabel = shareImagePath ? getHynekShareLabel(resultType) : null;
 
-  const imageUrl = shareImagePath ? `${siteUrl}${shareImagePath}` : `${siteUrl}/hynek-og.jpg`;
+  const imageUrl = shareImagePath
+    ? withHynekSocialImageVersion(`${siteUrl}${shareImagePath}`)
+    : withHynekSocialImageVersion(`${siteUrl}/hynek-og.jpg`);
   const imageAlt = resultLabel
     ? `${resultLabel}の診断結果画像`
     : "Hynek v1 - UFOファンタイプ診断の紹介画像";
