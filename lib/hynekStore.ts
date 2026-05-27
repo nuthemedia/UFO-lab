@@ -207,6 +207,22 @@ function currentTimestamp() {
   return new Date().toISOString();
 }
 
+function parseStoredSubmission(rawSubmission: unknown): HynekSubmission | null {
+  if (typeof rawSubmission === "string") {
+    try {
+      return JSON.parse(rawSubmission) as HynekSubmission;
+    } catch {
+      return null;
+    }
+  }
+
+  if (rawSubmission && typeof rawSubmission === "object") {
+    return rawSubmission as HynekSubmission;
+  }
+
+  return null;
+}
+
 function countOf(map: Record<string, number>, key: string) {
   return map[key] || 0;
 }
@@ -234,17 +250,10 @@ async function readState(): Promise<StoreState> {
       const userIds = (await kv.smembers<string[]>(KV_SUBMISSION_INDEX_KEY)) || [];
       const entries = await Promise.all(
         userIds.map(async (userId) => {
-          const rawSubmission = await kv.get<string>(`hynek:submission:${userId}`);
+          const rawSubmission = await kv.get<unknown>(`hynek:submission:${userId}`);
+          const submission = parseStoredSubmission(rawSubmission);
 
-          if (typeof rawSubmission !== "string") {
-            return null;
-          }
-
-          try {
-            return [userId, JSON.parse(rawSubmission) as HynekSubmission] as const;
-          } catch {
-            return null;
-          }
+          return submission ? ([userId, submission] as const) : null;
         }),
       );
       const submissions = Object.fromEntries(
