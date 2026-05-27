@@ -111,6 +111,14 @@ At the end of every task, always report in the following format:
 - Notes:
   - Any remaining issues, decisions deferred, or open questions
 
+## Git / Deployment Rules
+
+- Do not push directly to `main`.
+- Always create a `feature/...` branch for changes.
+- Push changes to the feature branch.
+- Create a Pull Request after changes are complete.
+- Use Vercel Preview Deployment for review.
+- Do not merge into `main` or trigger production deployment without explicit user approval.
 ## 9. Task Queue Maintenance
 
 - If the current task comes from `docs/codex/next-tasks.md`, update that file before marking the work complete.
