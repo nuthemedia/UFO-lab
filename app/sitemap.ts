@@ -30,10 +30,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${siteUrl}/kean`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.86,
+    },
+    {
       url: `${siteUrl}/ohtsuki`,
       lastModified,
       changeFrequency: "monthly",
       priority: 0.8,
+    },
+    {
+      url: `${siteUrl}/hynek`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.82,
+    },
+    {
+      url: `${siteUrl}/hynek/dashboard`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.78,
     },
   ];
 }
