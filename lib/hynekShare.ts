@@ -56,6 +56,8 @@ export const hynekResultLabels: Record<HynekShareResultType, string> = {
   contact: "接触・メッセージ関心派",
 };
 
+export const HYNEK_SOCIAL_IMAGE_VERSION = "2";
+
 export function getHynekShareImagePath(resultType?: string, gender?: string) {
   if (
     !resultType ||
@@ -74,4 +76,14 @@ export function getHynekShareLabel(resultType?: string) {
   }
 
   return hynekResultLabels[resultType as HynekShareResultType];
+}
+
+export function withHynekSocialImageVersion(url: string) {
+  const [baseUrl, hash = ""] = url.split("#");
+  const [path, query = ""] = baseUrl.split("?");
+  const params = new URLSearchParams(query);
+  params.set("v", HYNEK_SOCIAL_IMAGE_VERSION);
+
+  const nextUrl = `${path}?${params.toString()}`;
+  return hash ? `${nextUrl}#${hash}` : nextUrl;
 }

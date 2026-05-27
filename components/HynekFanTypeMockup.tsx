@@ -719,7 +719,12 @@ export function HynekFanTypeMockup() {
   const currentShare = totalResponses > 0 ? Math.round((typeCount / totalResponses) * 100) : 0;
   const resultGender = (answers.gender === "女性" ? "female" : "male") as HynekShareGender;
   const shareText = `Hynek v1 - UFOファンタイプ診断の結果は「${result.profile.label}」でした。`;
-  const shareUrl = `https://x.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(`https://ufolab.tokyo/hynek?resultType=${result.resultType}&gender=${resultGender}`)}`;
+  const sharePageUrl = `https://ufolab.tokyo/hynek?${new URLSearchParams({
+    resultType: result.resultType,
+    gender: resultGender,
+    share: "v2",
+  }).toString()}`;
+  const shareUrl = `https://x.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(sharePageUrl)}`;
   const currentQuestion =
     currentVisibleStep !== "intro" &&
     currentVisibleStep !== "age" &&
