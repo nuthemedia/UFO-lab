@@ -83,6 +83,7 @@ type StoreState = {
 };
 
 const STORE_PATH = process.env.HYNEK_STORE_PATH || path.join(os.tmpdir(), "hynek-store.json");
+const KV_SUBMISSIONS_KEY = "hynek:submissions";
 
 const TYPE_PRIORITY: UfoTypeId[] = [
   "evidence",
@@ -179,6 +180,20 @@ const fallbackState: StoreState = {
   submissions: {},
 };
 
+function hasKvConfig() {
+  return Boolean(process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN);
+}
+
+async function getKvClient() {
+  if (!hasKvConfig()) {
+    return null;
+  }
+
+  const { kv } = await import("@vercel/kv");
+
+  return kv;
+}
+
 function increment(map: Record<string, number>, key: string) {
   const normalizedKey = key.trim();
   if (!normalizedKey) {
@@ -212,6 +227,27 @@ function readCookie(request: Request, name: string) {
 }
 
 async function readState(): Promise<StoreState> {
+  const kv = await getKvClient();
+
+  if (kv) {
+    try {
+      const rawSubmissions = await kv.hgetall<Record<string, string>>(KV_SUBMISSIONS_KEY);
+      const submissions = Object.fromEntries(
+        Object.entries(rawSubmissions || {}).flatMap(([userId, rawSubmission]) => {
+          try {
+            return [[userId, JSON.parse(rawSubmission) as HynekSubmission]];
+          } catch {
+            return [];
+          }
+        }),
+      );
+
+      return { submissions };
+    } catch {
+      return fallbackState;
+    }
+  }
+
   try {
     const raw = await fs.readFile(STORE_PATH, "utf-8");
     const parsed = JSON.parse(raw) as Partial<StoreState>;
@@ -227,6 +263,18 @@ async function readState(): Promise<StoreState> {
 async function writeState(state: StoreState) {
   await fs.mkdir(path.dirname(STORE_PATH), { recursive: true });
   await fs.writeFile(STORE_PATH, JSON.stringify(state, null, 2), "utf-8");
+}
+
+async function writeKvSubmission(submission: HynekSubmission) {
+  const kv = await getKvClient();
+
+  if (!kv) {
+    return null;
+  }
+
+  const inserted = await kv.hsetnx(KV_SUBMISSIONS_KEY, submission.userId, JSON.stringify(submission));
+
+  return inserted === 1;
 }
 
 function aggregateState(state: StoreState): HynekDashboardData {
@@ -294,6 +342,18 @@ export function getHynekUserId(request: Request) {
 }
 
 export async function recordHynekSubmission(submission: HynekSubmission) {
+  const recordedInKv = await writeKvSubmission(submission);
+
+  if (typeof recordedInKv === "boolean") {
+    const dashboard = await getHynekDashboardData();
+
+    return {
+      recorded: recordedInKv,
+      totalResponses: dashboard.counts.totalResponses,
+      dashboard,
+    };
+  }
+
   const state = await readState();
   const alreadyRecorded = Boolean(state.submissions[submission.userId]);
 
