@@ -83,7 +83,7 @@ type StoreState = {
 };
 
 const STORE_PATH = process.env.HYNEK_STORE_PATH || path.join(os.tmpdir(), "hynek-store.json");
-const KV_SUBMISSIONS_KEY = "hynek:submissions";
+const KV_SUBMISSION_INDEX_KEY = "hynek:submission-users";
 
 const TYPE_PRIORITY: UfoTypeId[] = [
   "evidence",
@@ -231,9 +231,17 @@ async function readState(): Promise<StoreState> {
 
   if (kv) {
     try {
-      const rawSubmissions = await kv.hgetall<Record<string, string>>(KV_SUBMISSIONS_KEY);
+      const userIds = (await kv.smembers<string[]>(KV_SUBMISSION_INDEX_KEY)) || [];
+      const submissionKeys = userIds.map((userId) => `hynek:submission:${userId}`);
+      const rawSubmissions = submissionKeys.length ? await kv.mget(...submissionKeys) : [];
       const submissions = Object.fromEntries(
-        Object.entries(rawSubmissions || {}).flatMap(([userId, rawSubmission]) => {
+        userIds.flatMap((userId, index) => {
+          const rawSubmission = rawSubmissions[index];
+
+          if (typeof rawSubmission !== "string") {
+            return [];
+          }
+
           try {
             return [[userId, JSON.parse(rawSubmission) as HynekSubmission]];
           } catch {
@@ -272,9 +280,14 @@ async function writeKvSubmission(submission: HynekSubmission) {
     return null;
   }
 
-  const inserted = await kv.hsetnx(KV_SUBMISSIONS_KEY, submission.userId, JSON.stringify(submission));
+  const submissionKey = `hynek:submission:${submission.userId}`;
+  const inserted = await kv.set(submissionKey, JSON.stringify(submission), { nx: true });
 
-  return inserted === 1;
+  if (inserted) {
+    await kv.sadd(KV_SUBMISSION_INDEX_KEY, submission.userId);
+  }
+
+  return inserted !== null;
 }
 
 function aggregateState(state: StoreState): HynekDashboardData {
