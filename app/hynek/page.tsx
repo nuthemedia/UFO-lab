@@ -5,6 +5,8 @@ import { siteConfig } from "@/lib/site";
 import { siteUrl } from "@/lib/seo";
 import { getHynekShareImagePath, getHynekShareLabel } from "@/lib/hynekShare";
 
+export const dynamic = "force-dynamic";
+
 const title = "Hynek v1 - UFOファンタイプ診断 | UFO Lab Tokyo";
 const description =
   "UFO・宇宙人・アブダクション・コンタクティへの向き合い方から、あなたのUFO観測スタイルを診断します。";
