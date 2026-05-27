@@ -3,42 +3,65 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { HynekFanTypeMockup } from "@/components/HynekFanTypeMockup";
 import { siteConfig } from "@/lib/site";
 import { siteUrl } from "@/lib/seo";
+import { getHynekShareImagePath, getHynekShareLabel } from "@/lib/hynekShare";
 
 const title = "Hynek v1 - UFOファンタイプ診断 | UFO Lab Tokyo";
 const description =
   "UFO・宇宙人・アブダクション・コンタクティへの向き合い方から、あなたのUFO観測スタイルを診断します。";
 
-export const metadata: Metadata = {
-  title,
-  description,
-  alternates: {
-    canonical: "/hynek",
-  },
-  openGraph: {
-    title,
-    description,
-    url: `${siteUrl}/hynek`,
-    siteName: "UFO Lab Tokyo",
-    type: "website",
-    images: [
-      {
-        url: "/hynek-top.png",
-        width: 1023,
-        height: 1537,
-        alt: "Hynek v1 - UFOファンタイプ診断",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title,
-    description,
-    images: ["/hynek-top.png"],
-  },
-  other: {
-    "twitter:image:alt": "Hynek v1 - UFOファンタイプ診断",
-  },
+type HynekPageProps = {
+  searchParams?: Record<string, string | string[] | undefined>;
 };
+
+function firstValue(value: string | string[] | undefined) {
+  return Array.isArray(value) ? value[0] : value;
+}
+
+export async function generateMetadata({ searchParams }: HynekPageProps): Promise<Metadata> {
+  const params = searchParams || {};
+  const resultType = firstValue(params.resultType);
+  const gender = firstValue(params.gender);
+  const shareImagePath = getHynekShareImagePath(resultType, gender);
+  const resultLabel = shareImagePath ? getHynekShareLabel(resultType) : null;
+
+  const imageUrl = shareImagePath ? `${siteUrl}${shareImagePath}` : `${siteUrl}/hynek-og.jpg`;
+  const imageAlt = resultLabel
+    ? `${resultLabel}の診断結果画像`
+    : "Hynek v1 - UFOファンタイプ診断の紹介画像";
+  const dynamicTitle = resultLabel ? `${resultLabel} | UFO Lab Tokyo` : title;
+
+  return {
+    title: dynamicTitle,
+    description,
+    alternates: {
+      canonical: "/hynek",
+    },
+    openGraph: {
+      title: dynamicTitle,
+      description,
+      url: `${siteUrl}/hynek`,
+      siteName: "UFO Lab Tokyo",
+      type: "website",
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: imageAlt,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: dynamicTitle,
+      description,
+      images: [imageUrl],
+    },
+    other: {
+      "twitter:image:alt": imageAlt,
+    },
+  };
+}
 
 export default function HynekPage() {
   return (

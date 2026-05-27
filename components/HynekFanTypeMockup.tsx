@@ -4,16 +4,9 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { HynekDashboardData } from "@/lib/hynekStore";
+import { hynekResultImagePaths, type HynekShareGender, type HynekShareResultType } from "@/lib/hynekShare";
 
-type UfoTypeId =
-  | "evidence"
-  | "cautious"
-  | "romantic"
-  | "witness"
-  | "wonder"
-  | "news"
-  | "entertainment"
-  | "contact";
+type UfoTypeId = HynekShareResultType;
 
 type TraitId =
   | "evidence"
@@ -73,11 +66,6 @@ type ResultProfile = {
   description: string;
   sampleShare: number;
   accent: string;
-};
-
-type CardAssets = {
-  male: string;
-  female: string;
 };
 
 const resultTypeOrder: UfoTypeId[] = [
@@ -158,41 +146,6 @@ const resultProfiles: Record<UfoTypeId, ResultProfile> = {
       "コンタクティ、チャネリング、接触体験の話に感度があるタイプです。メッセージ性や対話の可能性に目が向きます。",
     sampleShare: 7,
     accent: "#6a6582",
-  },
-};
-
-const resultCardAssets: Record<UfoTypeId, CardAssets> = {
-  evidence: {
-    male: "/hynek/evidence-male.png",
-    female: "/hynek/evidence-female.png",
-  },
-  cautious: {
-    male: "/hynek/cautious-male.png",
-    female: "/hynek/cautious-female.png",
-  },
-  romantic: {
-    male: "/hynek/romantic-male.png",
-    female: "/hynek/romantic-female.png",
-  },
-  witness: {
-    male: "/hynek/witness-male.png",
-    female: "/hynek/witness-female.png",
-  },
-  wonder: {
-    male: "/hynek/wonder-male.png",
-    female: "/hynek/wonder-female.png",
-  },
-  news: {
-    male: "/hynek/news-male.png",
-    female: "/hynek/news-female.png",
-  },
-  entertainment: {
-    male: "/hynek/entertainment-male.png",
-    female: "/hynek/entertainment-female.png",
-  },
-  contact: {
-    male: "/hynek/contact-male.png",
-    female: "/hynek/contact-female.png",
   },
 };
 
@@ -722,7 +675,7 @@ function ShareCard({
   region: string;
   resultType: UfoTypeId;
 }) {
-  const imageSrc = gender === "女性" ? resultCardAssets[resultType].female : resultCardAssets[resultType].male;
+  const imageSrc = gender === "女性" ? hynekResultImagePaths[resultType].female : hynekResultImagePaths[resultType].male;
   const genderLabel = gender === "女性" ? "女性版カード" : "男性版カード";
 
   return (
@@ -758,14 +711,15 @@ export function HynekFanTypeMockup() {
   const currentVisibleStep = currentIndex >= 0 ? flow[currentIndex] : "intro";
   const result = calculateResults(answers);
   const resultImageSrc = answers.gender === "女性"
-    ? resultCardAssets[result.resultType].female
-    : resultCardAssets[result.resultType].male;
+    ? hynekResultImagePaths[result.resultType].female
+    : hynekResultImagePaths[result.resultType].male;
   const resultImageAlt = `${result.profile.label}${answers.gender === "女性" ? "女性版" : "男性版"}カード`;
   const totalResponses = dashboardData?.counts.totalResponses || 0;
   const typeCount = dashboardData?.counts.typeCounts[result.resultType] || 0;
   const currentShare = totalResponses > 0 ? Math.round((typeCount / totalResponses) * 100) : 0;
+  const resultGender = (answers.gender === "女性" ? "female" : "male") as HynekShareGender;
   const shareText = `Hynek v1 - UFOファンタイプ診断の結果は「${result.profile.label}」でした。`;
-  const shareUrl = `https://x.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent("https://ufolab.tokyo/hynek")}`;
+  const shareUrl = `https://x.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(`https://ufolab.tokyo/hynek?resultType=${result.resultType}&gender=${resultGender}`)}`;
   const currentQuestion =
     currentVisibleStep !== "intro" &&
     currentVisibleStep !== "age" &&
