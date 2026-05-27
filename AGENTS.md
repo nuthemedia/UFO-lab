@@ -119,6 +119,7 @@ At the end of every task, always report in the following format:
 - Create a Pull Request after changes are complete.
 - Use Vercel Preview Deployment for review.
 - Do not merge into `main` or trigger production deployment without explicit user approval.
+
 ## 9. Task Queue Maintenance
 
 - If the current task comes from `docs/codex/next-tasks.md`, update that file before marking the work complete.

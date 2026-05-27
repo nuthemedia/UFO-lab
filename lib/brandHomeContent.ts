@@ -47,8 +47,30 @@ export const brandHomeContent = {
         description: "過去のUFO研究が、現代の議論につながりにくい。",
       },
     ],
-    update: "Ruppelt v1.1にファイルの公開情報が追加されました。",
+    update: "Hynek v1と日本のUFO観ダッシュボードを追加しました。",
+    updateFeedback: {
+      heading: "更新情報・フィードバック",
+      body: [
+        "今後も新しいアプリを追加していきます。",
+        "更新情報はXで発信しているので、ぜひフォローしてください。",
+      ],
+      cta: "Xをフォロー",
+    },
     products: [
+      {
+        version: "Version 1.0",
+        name: "Hynek v1",
+        title: "Hynek v1 – UFOファンタイプ診断",
+        href: "/hynek",
+        cta: "Hynekを開く",
+      },
+      {
+        version: "Dashboard",
+        name: "日本のUFO観",
+        title: "日本のUFO観ダッシュボード",
+        href: "/hynek/dashboard",
+        cta: "ダッシュボードを見る",
+      },
       {
         version: "Version 1.1",
         name: "Ruppelt v1.1",
@@ -69,7 +91,7 @@ export const brandHomeContent = {
       brand: "UFO Lab Tokyo - 東京UFO研究室",
       rights: "UFO Lab Tokyo All rights reserved",
       copyright: "© 2026 東京UFO研究室",
-      feedback: "アプリのフィードバックはこちら→",
+      feedback: "更新情報・フィードバックは→",
     },
   },
   en: {
@@ -115,8 +137,30 @@ export const brandHomeContent = {
         description: "Past UFO research does not easily connect to today's discussion.",
       },
     ],
-    update: "Ruppelt v1.1 now includes public file disclosure information.",
+    update: "Added Hynek v1 and the Japan UFO View Dashboard.",
+    updateFeedback: {
+      heading: "Updates & Feedback",
+      body: [
+        "We will keep adding new apps.",
+        "We share updates on X, so please follow us there.",
+      ],
+      cta: "Follow on X",
+    },
     products: [
+      {
+        version: "Version 1.0",
+        name: "Hynek v1",
+        title: "Hynek v1 – UFO Fan Type Quiz",
+        href: "/hynek",
+        cta: "Open Hynek",
+      },
+      {
+        version: "Dashboard",
+        name: "Japan UFO View",
+        title: "Japan UFO View Dashboard",
+        href: "/hynek/dashboard",
+        cta: "View Dashboard",
+      },
       {
         version: "Version 1.1",
         name: "Ruppelt v1.1",
@@ -137,7 +181,7 @@ export const brandHomeContent = {
       brand: "UFO Lab Tokyo",
       rights: "UFO Lab Tokyo All rights reserved",
       copyright: "© 2026 UFO Lab Tokyo",
-      feedback: "App feedback →",
+      feedback: "Updates & feedback →",
     },
   },
 } as const;

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BrandChallenges } from "@/components/BrandChallenges";
 import { BrandVideo } from "@/components/BrandVideo";
 import { SiteFooter } from "@/components/SiteFooter";
 import { brandHomeContent, type BrandLocale } from "@/lib/brandHomeContent";
@@ -76,37 +77,31 @@ export function BrandHomePage({ locale }: BrandHomePageProps) {
 
           <BrandVideo />
 
-          <section className="brand-challenges" aria-labelledby="brand-challenges-heading">
-            <div className="brand-challenges-header">
-              <p className="mission-label">Challenges</p>
-              <h2 id="brand-challenges-heading">{content.challengesHeading}</h2>
-            </div>
-            <div className="brand-challenge-grid">
-              {content.challenges.map((challenge, index) => (
-                <div className="brand-challenge-item" key={challenge.title}>
-                  <input
-                    className="brand-challenge-radio"
-                    type="radio"
-                    id={`${locale}-brand-challenge-${index + 1}`}
-                    name={`${locale}-brand-challenge`}
-                  />
-                  <label
-                    className="brand-challenge-tab"
-                    htmlFor={`${locale}-brand-challenge-${index + 1}`}
-                  >
-                    <span>{String(index + 1).padStart(2, "0")}</span>
-                    <strong>{challenge.title}</strong>
-                  </label>
-                  <article className="brand-challenge-panel">
-                    <p className="brand-challenge-panel-number">
-                      {String(index + 1).padStart(2, "0")}
-                    </p>
-                    <h3>{challenge.title}</h3>
-                    <p>{challenge.description}</p>
-                  </article>
-                </div>
+          <BrandChallenges heading={content.challengesHeading} challenges={content.challenges} />
+
+          <section className="brand-feedback-card" aria-labelledby="brand-feedback-heading">
+            <p className="brand-feedback-label" id="brand-feedback-heading">
+              {content.updateFeedback.heading}
+            </p>
+            <div className="brand-feedback-copy">
+              {content.updateFeedback.body.map((line) => (
+                <p key={line}>{line}</p>
               ))}
             </div>
+            <a
+              className="brand-feedback-action"
+              href="https://x.com/UFOLabTokyo"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label={content.updateFeedback.cta}
+              title={content.updateFeedback.cta}
+            >
+              <span className="brand-feedback-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                  <path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.47l8.6-9.83L0 1.15h7.59l5.24 6.93 6.07-6.93Zm-1.29 19.5h2.04L6.49 3.24H4.3l13.31 17.41Z" />
+                </svg>
+              </span>
+            </a>
           </section>
 
           <p className="brand-update">
