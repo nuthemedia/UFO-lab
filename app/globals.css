@@ -2176,6 +2176,12 @@ h3 {
     inset 0 1px 0 rgba(255, 255, 255, 0.92);
 }
 
+.hynek-result-side-stack {
+  display: grid;
+  gap: 14px;
+  align-content: start;
+}
+
 .hynek-result-card strong,
 .hynek-mini-summary strong,
 .hynek-share-card h3 {
@@ -2190,6 +2196,70 @@ h3 {
   border: 1px solid rgba(217, 222, 215, 0.96);
   border-radius: 14px;
   background: #e9ece8;
+}
+
+.hynek-image-trigger {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  cursor: zoom-in;
+}
+
+.hynek-image-trigger:focus-visible {
+  outline: 2px solid rgba(62, 99, 86, 0.34);
+  outline-offset: 3px;
+  border-radius: 16px;
+}
+
+.hynek-image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(17, 22, 18, 0.78);
+  backdrop-filter: blur(8px);
+}
+
+.hynek-image-lightbox-panel {
+  display: grid;
+  gap: 12px;
+  width: min(92vw, 680px);
+  max-height: min(88vh, 900px);
+  padding: 14px;
+  border: 1px solid rgba(235, 239, 233, 0.22);
+  border-radius: 18px;
+  background: rgba(250, 251, 248, 0.98);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+}
+
+.hynek-image-lightbox-image {
+  width: 100%;
+  max-height: calc(88vh - 86px);
+  object-fit: contain;
+  border-radius: 12px;
+  background: #eef0ed;
+}
+
+.hynek-image-lightbox-close {
+  justify-self: end;
+  padding: 8px 12px;
+  border: 1px solid rgba(217, 222, 215, 0.96);
+  border-radius: 999px;
+  background: #fff;
+  color: #1f2420;
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.hynek-image-lightbox-close:hover,
+.hynek-image-lightbox-close:focus-visible {
+  border-color: rgba(62, 99, 86, 0.34);
 }
 
 .hynek-card-label,
@@ -2297,6 +2367,37 @@ h3 {
 
 .hynek-share-card {
   align-content: start;
+  gap: 10px;
+}
+
+.hynek-share-body {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+
+.hynek-share-thumb {
+  display: block;
+  width: 120px;
+  min-width: 120px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  cursor: zoom-in;
+}
+
+.hynek-share-thumb:focus-visible {
+  outline: 2px solid rgba(62, 99, 86, 0.34);
+  outline-offset: 3px;
+  border-radius: 14px;
+}
+
+.hynek-share-copy-block {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
 }
 
 .hynek-share-eyebrow {
@@ -2332,6 +2433,11 @@ h3 {
 .hynek-summary-list {
   display: grid;
   gap: 10px;
+}
+
+.hynek-mini-divider {
+  height: 1px;
+  background: rgba(198, 206, 199, 0.96);
 }
 
 .hynek-summary-list div {
@@ -2413,6 +2519,11 @@ h3 {
   line-height: 1.68;
 }
 
+.hynek-dashboard-update-card {
+  justify-self: center;
+  margin: 2px auto 0;
+}
+
 .hynek-dashboard-tabs,
 .hynek-dashboard-filter-row {
   display: flex;
@@ -2449,6 +2560,20 @@ h3 {
   background: linear-gradient(135deg, #3e6356, #6f8f7e);
 }
 
+.hynek-dashboard-filter-row button:disabled {
+  opacity: 0.42;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.hynek-dashboard-filter-select {
+  width: min(100%, 320px);
+}
+
+.hynek-dashboard-filter-select select {
+  width: 100%;
+}
+
 .hynek-dashboard-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2479,6 +2604,54 @@ h3 {
   align-content: start;
   gap: 8px;
   padding: 16px;
+}
+
+.hynek-dashboard-ring-card {
+  justify-items: center;
+  text-align: center;
+}
+
+.hynek-dashboard-ring {
+  width: 96px;
+  height: 96px;
+  overflow: visible;
+}
+
+.hynek-dashboard-ring-track,
+.hynek-dashboard-ring-value {
+  fill: none;
+  stroke-width: 16;
+}
+
+.hynek-dashboard-ring-track {
+  stroke: rgba(217, 222, 215, 0.88);
+}
+
+.hynek-dashboard-ring-value {
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.hynek-dashboard-ring text {
+  fill: #1f2420;
+  color: #1f2420;
+  font-size: 1.48rem;
+  font-weight: 900;
+}
+
+.hynek-dashboard-ring-card > span {
+  color: #1f2420;
+  font-size: 0.94rem;
+  font-weight: 900;
+  line-height: 1.35;
+}
+
+.hynek-dashboard-ring-card p {
+  color: #5a645e;
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1.5;
 }
 
 .hynek-dashboard-summary-grid span,
@@ -5441,6 +5614,15 @@ h3 {
   .hynek-primary,
   .hynek-secondary {
     width: 100%;
+  }
+
+  .hynek-share-body {
+    grid-template-columns: 1fr;
+  }
+
+  .hynek-share-thumb {
+    width: min(100%, 220px);
+    min-width: 0;
   }
 
   .hynek-share-image,

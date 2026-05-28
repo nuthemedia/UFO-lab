@@ -2,10 +2,11 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import type { HynekDashboardData } from "@/lib/hynekStore";
+import { aggregateHynekSubmissions, filterHynekSubmissions, HYNEK_PREFECTURES, type HynekDashboardFilterMode } from "@/lib/hynekDashboardData";
+import type { HynekDashboardData, HynekSubmission } from "@/lib/hynekStore";
 
 type TabId = "overview" | "types" | "belief" | "sightings" | "contact" | "region";
-type FilterId = "all" | "witness" | "age" | "region";
+type FilterId = HynekDashboardFilterMode;
 
 type BarItem = {
   id?: string;
@@ -21,17 +22,17 @@ type TypeItem = BarItem & {
 const tabs: { id: TabId; label: string }[] = [
   { id: "overview", label: "全体" },
   { id: "types", label: "タイプ" },
-  { id: "belief", label: "UFO観" },
+  { id: "belief", label: "宇宙人観" },
   { id: "sightings", label: "UFO目撃" },
   { id: "contact", label: "接触" },
   { id: "region", label: "地域" },
 ];
 
 const filters: { id: FilterId; label: string; note: string }[] = [
-  { id: "all", label: "みんな", note: "全回答の傾向" },
-  { id: "witness", label: "目撃した人", note: "目撃経験ありで見る" },
-  { id: "age", label: "年代で見る", note: "年代差を強調" },
-  { id: "region", label: "地域で見る", note: "地域差を強調" },
+  { id: "all", label: "みんな", note: "全回答で集計" },
+  { id: "witness", label: "目撃した人", note: "目撃回答だけで集計" },
+  { id: "age", label: "年代で見る", note: "年代を選んで集計" },
+  { id: "region", label: "地域で見る", note: "地域を選んで集計" },
 ];
 
 const typeRanking: TypeItem[] = [
@@ -199,21 +200,8 @@ const ageComparison: BarItem[] = [
   { id: "witness-no", label: "目撃経験なし: 宇宙人来訪説", value: 0 },
 ];
 
-function percentForFilter(value: number, filter: FilterId) {
-  if (filter === "witness") {
-    return Math.min(96, value + 8);
-  }
-
-  if (filter === "age") {
-    return Math.max(3, value - 2);
-  }
-
-  if (filter === "region") {
-    return Math.min(96, value + 3);
-  }
-
-  return value;
-}
+const ageFilterOptions = ["10代", "20代", "30代", "40代", "50代", "60代以上", "回答しない"];
+const regionFilterOptions = [...HYNEK_PREFECTURES, "海外", "回答しない"];
 
 function percentOf(count: number, total: number) {
   if (total <= 0) {
@@ -231,11 +219,11 @@ function countMany(map: Record<string, number>, keys: string[]) {
   return keys.reduce((sum, key) => sum + countFor(map, key), 0);
 }
 
-function BarList({ items, filter }: { items: BarItem[]; filter: FilterId }) {
+function BarList({ items }: { items: BarItem[] }) {
   return (
     <div className="hynek-dashboard-bars">
       {items.map((item) => {
-        const value = percentForFilter(item.value, filter);
+        const value = item.value;
 
         return (
           <div className="hynek-dashboard-bar-row" key={item.label}>
@@ -256,11 +244,9 @@ function BarList({ items, filter }: { items: BarItem[]; filter: FilterId }) {
 
 function ExpandableBarList({
   items,
-  filter,
   initialCount = 6,
 }: {
   items: BarItem[];
-  filter: FilterId;
   initialCount?: number;
 }) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -269,7 +255,7 @@ function ExpandableBarList({
 
   return (
     <>
-      <BarList items={visibleItems} filter={filter} />
+      <BarList items={visibleItems} />
       {canExpand ? (
         <button className="hynek-dashboard-more" type="button" onClick={() => setIsExpanded((current) => !current)}>
           {isExpanded ? "閉じる" : "続きを見る"}
@@ -289,7 +275,7 @@ function SectionHeading({ label, title, copy }: { label: string; title: string; 
   );
 }
 
-function TypeRanking({ filter, data }: { filter: FilterId; data: HynekDashboardData }) {
+function TypeRanking({ data }: { data: HynekDashboardData }) {
   const items = [...typeRanking]
     .map((item) => ({
       ...item,
@@ -302,12 +288,10 @@ function TypeRanking({ filter, data }: { filter: FilterId; data: HynekDashboardD
       <SectionHeading
         label="タイプ"
         title="みんなは何タイプ？"
-        copy="円グラフではなく、タイプ画像つきのランキングで分布を見ます。"
+        copy="タイプ別のランキングです。"
       />
       <div className="hynek-type-ranking" id="hynek-dashboard-types">
         {items.map((item, index) => {
-          const value = percentForFilter(item.value, filter);
-
           return (
             <article className="hynek-type-rank-card" key={item.label}>
               <span className="hynek-type-rank-number">{index + 1}</span>
@@ -317,7 +301,7 @@ function TypeRanking({ filter, data }: { filter: FilterId; data: HynekDashboardD
                 <strong>{item.label}</strong>
                 <p>{item.detail}</p>
               </div>
-              <span className="hynek-type-rank-percent">{value}%</span>
+              <span className="hynek-type-rank-percent">{item.value}%</span>
             </article>
           );
         })}
@@ -326,7 +310,43 @@ function TypeRanking({ filter, data }: { filter: FilterId; data: HynekDashboardD
   );
 }
 
-function SummaryCards({ filter, data }: { filter: FilterId; data: HynekDashboardData }) {
+function SummaryRing({
+  label,
+  value,
+  detail,
+  accent,
+}: {
+  label: string;
+  value: number;
+  detail: string;
+  accent: string;
+}) {
+  const clampedValue = Math.max(0, Math.min(100, value));
+
+  return (
+    <article className="hynek-dashboard-ring-card">
+      <svg className="hynek-dashboard-ring" viewBox="0 0 120 120" role="img" aria-label={`${label} ${value}%`}>
+        <circle className="hynek-dashboard-ring-track" cx="60" cy="60" r="46" />
+        <circle
+          className="hynek-dashboard-ring-value"
+          cx="60"
+          cy="60"
+          r="46"
+          pathLength="100"
+          strokeDasharray={`${clampedValue} ${100 - clampedValue}`}
+          stroke={accent}
+        />
+        <text x="60" y="66" textAnchor="middle">
+          {value}%
+        </text>
+      </svg>
+      <span>{label}</span>
+      <p>{detail}</p>
+    </article>
+  );
+}
+
+function SummaryCards({ data }: { data: HynekDashboardData }) {
   const total = data.counts.totalResponses;
   const topTypeId = data.summary.topTypeId;
   const topTypeLabel =
@@ -360,21 +380,23 @@ function SummaryCards({ filter, data }: { filter: FilterId; data: HynekDashboard
         <strong>{topTypeLabel}</strong>
         <p>タイプ分布の先頭に表示しています。</p>
       </article>
-      <article>
-        <span>UFOを見たことがある割合</span>
-        <strong>{data.summary.sightingRate}%</strong>
-        <p>はっきりある・たぶんあるの合計です。</p>
-      </article>
-      <article>
-        <span>政府は何か隠していると思う</span>
-        <strong>{percentForFilter(data.summary.secretRate, filter)}%</strong>
-        <p>政府・軍情報への感覚を集計しています。</p>
-      </article>
+      <SummaryRing
+        label="UFOを見たことがある割合"
+        value={data.summary.sightingRate}
+        detail="はっきりある・たぶんあるの合計です。"
+        accent="#3e6356"
+      />
+      <SummaryRing
+        label="政府は何か隠していると思う"
+        value={data.summary.secretRate}
+        detail="政府・軍情報への感覚を集計しています。"
+        accent="#9a7f49"
+      />
     </section>
   );
 }
 
-function RegionRanking({ filter, data }: { filter: FilterId; data: HynekDashboardData }) {
+function RegionRanking({ data }: { data: HynekDashboardData }) {
   const items = regionRanking
     .map((item) => ({
       ...item,
@@ -390,7 +412,7 @@ function RegionRanking({ filter, data }: { filter: FilterId; data: HynekDashboar
         title="回答者数都道府県ランキング"
         copy="回答者数が多い都道府県をランキングで表示します。"
       />
-      <ExpandableBarList items={items} filter={filter} initialCount={10} />
+      <ExpandableBarList items={items} initialCount={10} />
       <p className="hynek-map-note">
         この集計は本サイト利用者の任意回答に基づく非科学的な集計です。回答数が少ない都道府県は参考値として表示しています。
       </p>
@@ -398,7 +420,7 @@ function RegionRanking({ filter, data }: { filter: FilterId; data: HynekDashboar
   );
 }
 
-function SightingPrefectureMap({ filter, data }: { filter: FilterId; data: HynekDashboardData }) {
+function SightingPrefectureMap({ data }: { data: HynekDashboardData }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const items = sightingPrefectures
     .map((item) => ({
@@ -420,7 +442,7 @@ function SightingPrefectureMap({ filter, data }: { filter: FilterId; data: Hynek
         {visibleItems.map((item) => (
           <article key={item.label}>
             <span>{item.label}</span>
-            <strong>{percentForFilter(item.value, filter)}%</strong>
+            <strong>{item.value}%</strong>
             <p>{item.detail}</p>
           </article>
         ))}
@@ -435,13 +457,13 @@ function SightingPrefectureMap({ filter, data }: { filter: FilterId; data: Hynek
   );
 }
 
-function OverviewPanel({ filter, data }: { filter: FilterId; data: HynekDashboardData }) {
+function OverviewPanel({ data }: { data: HynekDashboardData }) {
   return (
     <>
-      <SummaryCards filter={filter} data={data} />
-      <TypeRanking filter={filter} data={data} />
+      <SummaryCards data={data} />
+      <TypeRanking data={data} />
       <section className="hynek-dashboard-card">
-        <SectionHeading label="UFO観" title="UFO観の階段" copy="宇宙人の存在感とUFO解釈の差を段階で見ます。" />
+        <SectionHeading label="宇宙人観" title="宇宙人観" copy="宇宙人はUFOに乗って地球に来てる？" />
         <BarList
           items={[
             {
@@ -461,17 +483,15 @@ function OverviewPanel({ filter, data }: { filter: FilterId; data: HynekDashboar
               value: percentOf(countMany(data.counts.q6Counts, ["hide", "some"]), data.counts.totalResponses),
             },
           ]}
-          filter={filter}
         />
       </section>
       <section className="hynek-dashboard-card">
-        <SectionHeading label="正体" title="UFOの正体ランキング" copy="Q2の回答を横棒で表示します。" />
+        <SectionHeading label="UFOの正体" title="UFOってなに？" copy="UFOってなに？" />
         <BarList
           items={identityRanking.map((item) => ({
             ...item,
             value: percentOf(countFor(data.counts.q2Counts, item.id), data.counts.totalResponses),
           }))}
-          filter={filter}
         />
       </section>
       <section className="hynek-dashboard-card">
@@ -481,24 +501,23 @@ function OverviewPanel({ filter, data }: { filter: FilterId; data: HynekDashboar
             ...item,
             value: percentOf(countFor(data.counts.q11Counts, item.id), data.counts.totalResponses),
           }))}
-          filter={filter}
         />
       </section>
-      <RegionRanking filter={filter} data={data} />
+      <RegionRanking data={data} />
     </>
   );
 }
 
-function TabPanel({ activeTab, filter, data }: { activeTab: TabId; filter: FilterId; data: HynekDashboardData }) {
+function TabPanel({ activeTab, data }: { activeTab: TabId; data: HynekDashboardData }) {
   if (activeTab === "types") {
-    return <TypeRanking filter={filter} data={data} />;
+    return <TypeRanking data={data} />;
   }
 
   if (activeTab === "belief") {
     return (
       <>
         <section className="hynek-dashboard-card">
-          <SectionHeading label="UFO観" title="UFO観の階段" copy="存在、来訪、乗り物説、政府秘匿感の差を見ます。" />
+          <SectionHeading label="宇宙人観" title="宇宙人観" copy="宇宙人はUFOに乗って地球に来てる？" />
           <BarList
             items={[
               {
@@ -518,17 +537,15 @@ function TabPanel({ activeTab, filter, data }: { activeTab: TabId; filter: Filte
                 value: percentOf(countMany(data.counts.q6Counts, ["hide", "some"]), data.counts.totalResponses),
               },
             ]}
-            filter={filter}
           />
         </section>
         <section className="hynek-dashboard-card">
-          <SectionHeading label="正体" title="UFOの正体ランキング" copy="何をUFO/UAPの正体に近いと見るかの集計です。" />
+          <SectionHeading label="UFOの正体" title="UFOってなに？" copy="UFOってなに？" />
           <BarList
             items={identityRanking.map((item) => ({
               ...item,
               value: percentOf(countFor(data.counts.q2Counts, item.id), data.counts.totalResponses),
             }))}
-            filter={filter}
           />
         </section>
       </>
@@ -545,7 +562,6 @@ function TabPanel({ activeTab, filter, data }: { activeTab: TabId; filter: Filte
               ...item,
               value: percentOf(countFor(data.counts.q11Counts, item.id), data.counts.totalResponses),
             }))}
-            filter={filter}
           />
         </section>
         <section className="hynek-dashboard-card">
@@ -555,11 +571,10 @@ function TabPanel({ activeTab, filter, data }: { activeTab: TabId; filter: Filte
               ...item,
               value: percentOf(countFor(data.counts.q13Counts, item.id), data.counts.totalResponses),
             }))}
-            filter={filter}
             initialCount={6}
           />
         </section>
-        <SightingPrefectureMap filter={filter} data={data} />
+        <SightingPrefectureMap data={data} />
       </>
     );
   }
@@ -592,7 +607,6 @@ function TabPanel({ activeTab, filter, data }: { activeTab: TabId; filter: Filte
               value: percentOf(value, data.counts.totalResponses),
             };
           })}
-          filter={filter}
         />
       </section>
     );
@@ -601,7 +615,7 @@ function TabPanel({ activeTab, filter, data }: { activeTab: TabId; filter: Filte
   if (activeTab === "region") {
     return (
       <>
-        <RegionRanking filter={filter} data={data} />
+        <RegionRanking data={data} />
         <section className="hynek-dashboard-card hynek-dashboard-wide">
           <SectionHeading label="比較" title="属性別比較" copy="年代、地域、目撃経験による違いを入口カードとして表示します。" />
           <BarList
@@ -615,23 +629,45 @@ function TabPanel({ activeTab, filter, data }: { activeTab: TabId; filter: Filte
                     : item.id === "age-50-plus"
                       ? percentOf(countMany(data.counts.ageCounts, ["50代以上"]), data.counts.totalResponses)
                       : item.id === "witness-yes"
-                        ? percentOf(countMany(data.counts.q11Counts, ["certain", "maybe"]), data.counts.totalResponses)
+                      ? percentOf(countMany(data.counts.q11Counts, ["certain", "maybe"]), data.counts.totalResponses)
                         : percentOf(countMany(data.counts.q11Counts, ["no", "unsure", "pass"]), data.counts.totalResponses),
             }))}
-            filter={filter}
           />
         </section>
       </>
     );
   }
 
-  return <OverviewPanel filter={filter} data={data} />;
+  return <OverviewPanel data={data} />;
 }
 
-export function HynekDashboardMockup({ initialData }: { initialData: HynekDashboardData }) {
+export function HynekDashboardMockup({ submissions }: { submissions: HynekSubmission[] }) {
   const [activeTab, setActiveTab] = useState<TabId>("overview");
   const [activeFilter, setActiveFilter] = useState<FilterId>("all");
-  const activeFilterNote = useMemo(() => filters.find((filter) => filter.id === activeFilter)?.note ?? "", [activeFilter]);
+  const [selectedAge, setSelectedAge] = useState("");
+  const [selectedRegion, setSelectedRegion] = useState("");
+  const activeFilterNote = useMemo(() => {
+    const note = filters.find((filter) => filter.id === activeFilter)?.note ?? "";
+
+    if (activeFilter === "age") {
+      return selectedAge ? `${note} / ${selectedAge}で表示` : "年代を選んでください。";
+    }
+
+    if (activeFilter === "region") {
+      return selectedRegion ? `${note} / ${selectedRegion}で表示` : "地域を選んでください。";
+    }
+
+    return note;
+  }, [activeFilter, selectedAge, selectedRegion]);
+
+  const filteredSubmissions = useMemo(
+    () => filterHynekSubmissions(submissions, { mode: activeFilter, age: selectedAge, region: selectedRegion }),
+    [activeFilter, selectedAge, selectedRegion, submissions],
+  );
+  const filteredData = useMemo(() => aggregateHynekSubmissions(filteredSubmissions), [filteredSubmissions]);
+
+  const ageOptions = useMemo(() => ageFilterOptions, []);
+  const regionOptions = useMemo(() => regionFilterOptions, []);
 
   return (
     <div className="hynek-dashboard">
@@ -656,17 +692,45 @@ export function HynekDashboardMockup({ initialData }: { initialData: HynekDashbo
               key={filter.id}
               type="button"
               className={activeFilter === filter.id ? "is-active" : ""}
+              disabled={filter.id === "region" && selectedRegion !== ""}
+              aria-disabled={filter.id === "region" && selectedRegion !== ""}
               onClick={() => setActiveFilter(filter.id)}
             >
               {filter.label}
             </button>
           ))}
         </div>
+        {activeFilter === "age" ? (
+          <label className="hynek-field hynek-dashboard-filter-select">
+            <span className="hynek-field-label">年代を選ぶ</span>
+            <select value={selectedAge} onChange={(event) => setSelectedAge(event.target.value)}>
+              <option value="">年代を選んでください</option>
+              {ageOptions.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+          </label>
+        ) : null}
+        {activeFilter === "region" ? (
+          <label className="hynek-field hynek-dashboard-filter-select">
+            <span className="hynek-field-label">地域を選ぶ</span>
+            <select value={selectedRegion} onChange={(event) => setSelectedRegion(event.target.value)}>
+              <option value="">地域を選んでください</option>
+              {regionOptions.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+          </label>
+        ) : null}
         <p>{activeFilterNote}</p>
       </section>
 
       <div className="hynek-dashboard-grid">
-        <TabPanel activeTab={activeTab} filter={activeFilter} data={initialData} />
+        <TabPanel activeTab={activeTab} data={filteredData} />
       </div>
 
       <section className="hynek-dashboard-card hynek-dashboard-cta">
