@@ -668,6 +668,10 @@ export function HynekDashboardMockup({ submissions }: { submissions: HynekSubmis
 
   const ageOptions = useMemo(() => ageFilterOptions, []);
   const regionOptions = useMemo(() => regionFilterOptions, []);
+  const visibleFilters = useMemo(
+    () => filters.filter((filter) => !(filter.id === "region" && selectedRegion)),
+    [selectedRegion],
+  );
 
   return (
     <div className="hynek-dashboard">
@@ -687,13 +691,11 @@ export function HynekDashboardMockup({ submissions }: { submissions: HynekSubmis
           ))}
         </div>
         <div className="hynek-dashboard-filter-row" aria-label="フィルター">
-          {filters.map((filter) => (
+          {visibleFilters.map((filter) => (
             <button
               key={filter.id}
               type="button"
               className={activeFilter === filter.id ? "is-active" : ""}
-              disabled={filter.id === "region" && selectedRegion !== ""}
-              aria-disabled={filter.id === "region" && selectedRegion !== ""}
               onClick={() => setActiveFilter(filter.id)}
             >
               {filter.label}
