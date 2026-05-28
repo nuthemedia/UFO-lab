@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { HynekDashboardData } from "@/lib/hynekStore";
 import { hynekResultImagePaths, type HynekShareGender, type HynekShareResultType } from "@/lib/hynekShare";
+import { siteUrl } from "@/lib/seo";
 
 type UfoTypeId = HynekShareResultType;
 
@@ -667,6 +668,7 @@ function ShareCard({
   gender,
   region,
   resultType,
+  onPreviewImage,
 }: {
   profile: ResultProfile;
   sharePercent: number;
@@ -674,23 +676,36 @@ function ShareCard({
   gender: string;
   region: string;
   resultType: UfoTypeId;
+  onPreviewImage: (image: { src: string; alt: string }) => void;
 }) {
   const imageSrc = gender === "女性" ? hynekResultImagePaths[resultType].female : hynekResultImagePaths[resultType].male;
   const genderLabel = gender === "女性" ? "女性版カード" : "男性版カード";
+  const imageAlt = `${profile.label}の${genderLabel}`;
 
   return (
     <section className="hynek-share-card" aria-label="シェア画像風カード" style={{ borderColor: profile.accent }}>
       <span className="hynek-share-badge">SHARE</span>
-      <p className="hynek-share-eyebrow">Hynek - UFOファンタイプ診断</p>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img className="hynek-share-image" src={imageSrc} alt={`${profile.label}の${genderLabel}`} />
-      <h3>{profile.label}</h3>
-      <p className="hynek-share-copy">{profile.description}</p>
-      <div className="hynek-share-meta">
-        <span>全体の{sharePercent}%に近い</span>
-        <span>{age || "年代未回答"}</span>
-        <span>{gender || "性別未回答"}</span>
-        <span>{region || "居住地域未回答"}</span>
+      <div className="hynek-share-body">
+        <button
+          className="hynek-share-thumb"
+          type="button"
+          onClick={() => onPreviewImage({ src: imageSrc, alt: imageAlt })}
+          aria-label={`${imageAlt}を拡大表示`}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="hynek-share-image" src={imageSrc} alt={imageAlt} />
+        </button>
+        <div className="hynek-share-copy-block">
+          <p className="hynek-share-eyebrow">Hynek - UFOファンタイプ診断</p>
+          <h3>{profile.label}</h3>
+          <p className="hynek-share-copy">{profile.description}</p>
+          <div className="hynek-share-meta">
+            <span>全体の{sharePercent}%に近い</span>
+            <span>{age || "年代未回答"}</span>
+            <span>{gender || "性別未回答"}</span>
+            <span>{region || "居住地域未回答"}</span>
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -700,6 +715,7 @@ export function HynekFanTypeMockup() {
   const [currentStep, setCurrentStep] = useState<StepId>("intro");
   const [answers, setAnswers] = useState<AnswersState>(initialAnswers);
   const [dashboardData, setDashboardData] = useState<HynekDashboardData | null>(null);
+  const [previewImage, setPreviewImage] = useState<{ src: string; alt: string } | null>(null);
   const submittedSignatureRef = useRef<string | null>(null);
 
   useEffect(() => {
@@ -717,13 +733,9 @@ export function HynekFanTypeMockup() {
   const totalResponses = dashboardData?.counts.totalResponses || 0;
   const typeCount = dashboardData?.counts.typeCounts[result.resultType] || 0;
   const currentShare = totalResponses > 0 ? Math.round((typeCount / totalResponses) * 100) : 0;
-  const resultGender = (answers.gender === "女性" ? "female" : "male") as HynekShareGender;
+  const resultGender = answers.gender === "女性" ? "female" : answers.gender === "男性" ? "male" : null;
   const shareText = `Hynek v1 - UFOファンタイプ診断の結果は「${result.profile.label}」でした。`;
-  const sharePageUrl = `https://ufolab.tokyo/hynek?${new URLSearchParams({
-    resultType: result.resultType,
-    gender: resultGender,
-    share: "v2",
-  }).toString()}`;
+  const sharePageUrl = getHynekSharePageUrl(result.resultType, resultGender);
   const shareUrl = `https://x.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(sharePageUrl)}`;
   const currentQuestion =
     currentVisibleStep !== "intro" &&
@@ -895,6 +907,28 @@ export function HynekFanTypeMockup() {
     return () => controller.abort();
   }, [answers, currentVisibleStep, result.resultType, result.totalScore]);
 
+  useEffect(() => {
+    if (!previewImage) {
+      return;
+    }
+
+    const { overflow } = document.body.style;
+    document.body.style.overflow = "hidden";
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setPreviewImage(null);
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = overflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [previewImage]);
+
   const canAdvance =
     currentVisibleStep === "intro"
       ? true
@@ -953,8 +987,15 @@ export function HynekFanTypeMockup() {
             <div className="hynek-result-grid">
               <section className="hynek-result-card" aria-label="あなたのタイプ" style={{ borderColor: result.profile.accent }}>
                 <span className="hynek-card-label">あなたのUFOウォッチャータイプ</span>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img className="hynek-result-image" src={resultImageSrc} alt={resultImageAlt} style={{ borderColor: result.profile.accent }} />
+                <button
+                  className="hynek-image-trigger"
+                  type="button"
+                  onClick={() => setPreviewImage({ src: resultImageSrc, alt: resultImageAlt })}
+                  aria-label={`${resultImageAlt}を拡大表示`}
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img className="hynek-result-image" src={resultImageSrc} alt={resultImageAlt} style={{ borderColor: result.profile.accent }} />
+                </button>
                 <strong>{result.profile.label}</strong>
                 <p>{result.profile.description}</p>
                 <div className="hynek-result-percent">
@@ -964,8 +1005,8 @@ export function HynekFanTypeMockup() {
                 </div>
               </section>
 
-              <section className="hynek-result-card" aria-label="回答傾向">
-                <span className="hynek-card-label">回答傾向</span>
+              <section className="hynek-mini-summary" aria-label="回答内容">
+                <p className="hynek-label">回答の傾向</p>
                 <div className="hynek-trait-list">
                   {result.topTraits.map((traitItem) => (
                     <span key={traitItem.id} className="hynek-trait-pill">
@@ -973,7 +1014,26 @@ export function HynekFanTypeMockup() {
                     </span>
                   ))}
                 </div>
-              </section>
+                <div className="hynek-mini-divider" aria-hidden="true" />
+                <p className="hynek-label">どんな人？</p>
+                <div className="hynek-summary-list">
+                  <div>
+                    <span>年代</span>
+                    <strong>{answers.age || "未回答"}</strong>
+                  </div>
+                  <div>
+                    <span>性別</span>
+                    <strong>{answers.gender || "未回答"}</strong>
+                  </div>
+                  <div>
+                    <span>居住地域</span>
+                    <strong>{answers.region || "未回答"}</strong>
+                  </div>
+                </div>
+                  <p className="hynek-result-note">
+                    再診断はボタンでいつでもやり直せます。
+                  </p>
+                </section>
             </div>
 
             <section className="hynek-sample-block" aria-labelledby="hynek-sample-heading">
@@ -1001,42 +1061,6 @@ export function HynekFanTypeMockup() {
                 <p className="hynek-result-note">集計を読み込んでいます。</p>
               )}
             </section>
-
-            <div className="hynek-share-grid">
-              <ShareCard
-                profile={result.profile}
-                sharePercent={currentShare}
-                age={answers.age}
-                gender={answers.gender}
-                region={answers.region}
-                resultType={result.resultType}
-              />
-
-              <section className="hynek-mini-summary" aria-label="回答の要約">
-                <p className="hynek-label">回答の要約</p>
-                <div className="hynek-summary-list">
-                  <div>
-                    <span>年代</span>
-                    <strong>{answers.age || "未回答"}</strong>
-                  </div>
-                  <div>
-                    <span>性別</span>
-                    <strong>{answers.gender || "未回答"}</strong>
-                  </div>
-                  <div>
-                    <span>居住地域</span>
-                    <strong>{answers.region || "未回答"}</strong>
-                  </div>
-                  <div>
-                    <span>今回のスコア合計</span>
-                    <strong>{result.totalScore}</strong>
-                  </div>
-                </div>
-                <p className="hynek-result-note">
-                  再診断はボタンでいつでもやり直せます。
-                </p>
-              </section>
-            </div>
 
             <p className="hynek-disclaimer">
               任意回答による非科学的集計です。UFO・宇宙人・アブダクションの事実認定ではありません。
@@ -1160,6 +1184,17 @@ export function HynekFanTypeMockup() {
           </section>
         ) : null}
       </article>
+      {previewImage ? (
+        <div className="hynek-image-lightbox" onClick={() => setPreviewImage(null)}>
+          <div className="hynek-image-lightbox-panel" role="dialog" aria-modal="true" aria-label="画像の拡大表示" onClick={(event) => event.stopPropagation()}>
+            <button className="hynek-image-lightbox-close" type="button" onClick={() => setPreviewImage(null)} aria-label="画像を閉じる">
+              閉じる
+            </button>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img className="hynek-image-lightbox-image" src={previewImage.src} alt={previewImage.alt} />
+          </div>
+        </div>
+      ) : null}
       {currentVisibleStep === "intro" ? (
         <section className="brand-feedback-card hynek-update-card" aria-labelledby="hynek-update-heading">
           <p className="brand-feedback-label" id="hynek-update-heading">
@@ -1187,4 +1222,17 @@ export function HynekFanTypeMockup() {
       ) : null}
     </>
   );
+}
+
+function getHynekSharePageUrl(resultType: UfoTypeId, gender: HynekShareGender | null) {
+  const params = new URLSearchParams({
+    resultType,
+    share: "v2",
+  });
+
+  if (gender === "female" || gender === "male") {
+    params.set("gender", gender);
+  }
+
+  return `${siteUrl}/hynek?${params.toString()}`;
 }
