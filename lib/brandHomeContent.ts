@@ -24,6 +24,12 @@ export const brandHomeContent = {
       secondaryMobile: ["UFOs remain unexplained,", "yet undeniably exist."],
     },
     mission: "テクノロジーの魔法で、UFOコミュニティに貢献する",
+    featuredApp: {
+      name: "Ruppelt",
+      description: "UFO米国政府機密解除情報の日本語リーダー",
+      note: "🔴 Ruppeltとは？",
+      noteHref: "/ruppelt/lp",
+    },
     challengesHeading: "UFO Lab Tokyo が解決する課題",
     challenges: [
       {
@@ -35,8 +41,8 @@ export const brandHomeContent = {
         description: "公開資料はあるが、探しにくく、読みづらい。",
       },
       {
-        title: "英語の壁",
-        description: "重要なUAP情報が英語圏に偏っている。",
+        title: "海外コミュニティとの壁",
+        description: "言語の問題。他国へ向けた情報発信の欠如。",
       },
       {
         title: "断片化する情報",
@@ -112,6 +118,12 @@ export const brandHomeContent = {
       secondaryMobile: [],
     },
     mission: "Contributing to the UFO community through the magic of technology.",
+    featuredApp: {
+      name: "Ruppelt",
+      description: "A Japanese reader for declassified UFO records from the U.S. government.",
+      note: "🔴 What is Ruppelt?",
+      noteHref: "/ruppelt/lp",
+    },
     challengesHeading: "Challenges UFO Lab Tokyo Takes On",
     challenges: [
       {
@@ -124,8 +136,8 @@ export const brandHomeContent = {
         description: "Public records exist, but they are hard to find and difficult to read.",
       },
       {
-        title: "Language Barriers",
-        description: "Important UAP information is concentrated in English-speaking spaces.",
+        title: "Barriers with Overseas Communities",
+        description: "Language issues. A lack of outreach to other countries.",
       },
       {
         title: "Fragmented Information",
