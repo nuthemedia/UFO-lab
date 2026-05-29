@@ -75,6 +75,27 @@ export function BrandHomePage({ locale }: BrandHomePageProps) {
             <p className="mission-copy">{content.mission}</p>
           </section>
 
+          <section className="brand-featured-app" aria-labelledby="featured-app-heading">
+            <article className="brand-featured-app-card">
+              <Link
+                className="brand-featured-app-main"
+                href="/ruppelt"
+                aria-labelledby="featured-app-heading"
+              >
+                <p className="brand-featured-app-eyebrow" id="featured-app-heading">
+                  Featured App
+                </p>
+                <h2 className="brand-featured-app-title">{content.featuredApp.name}</h2>
+                <p className="brand-featured-app-description">
+                  {content.featuredApp.description}
+                </p>
+              </Link>
+              <Link className="brand-featured-app-note" href={content.featuredApp.noteHref}>
+                {content.featuredApp.note}
+              </Link>
+            </article>
+          </section>
+
           <BrandVideo />
 
           <BrandChallenges heading={content.challengesHeading} challenges={content.challenges} />
