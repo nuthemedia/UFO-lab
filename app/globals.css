@@ -4004,6 +4004,7 @@ h3 {
 .ruppelt-lp-section p,
 .ruppelt-lp-final-cta p {
   max-width: 660px;
+  margin: 0;
   font-weight: 620;
 }
 
@@ -8024,6 +8025,26 @@ h3 {
   .ruppelt-lp-problem-layout,
   .ruppelt-lp-solution-layout {
     grid-template-columns: 1fr;
+  }
+
+  .ruppelt-lp-solution-layout {
+    gap: 10px;
+  }
+
+  .ruppelt-lp-solution-layout > div {
+    gap: 10px;
+  }
+
+  .ruppelt-lp-section-solution .ruppelt-lp-section-body {
+    gap: 8px;
+  }
+
+  .ruppelt-lp-section-body {
+    gap: 10px;
+  }
+
+  .ruppelt-lp-section-news .ruppelt-lp-section-body {
+    gap: 8px;
   }
 
   .ruppelt-lp-scattered-docs {
