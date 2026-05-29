@@ -8022,6 +8022,16 @@ h3 {
     padding: 48px 0;
   }
 
+  .ruppelt-lp-hero,
+  .ruppelt-lp-section {
+    min-height: auto;
+  }
+
+  .ruppelt-lp-hero-shell,
+  .ruppelt-lp-stage {
+    position: static;
+  }
+
   .ruppelt-lp-problem-layout,
   .ruppelt-lp-solution-layout {
     grid-template-columns: 1fr;
