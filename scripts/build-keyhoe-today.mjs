@@ -547,26 +547,19 @@ function extractSpecificSignals(item) {
 
 function makeFallbackEvidenceSummary(item) {
   const titleDetail = makeTitleDetail(item);
-  const sourceLabel = makeSourceLabel(item);
   const signals = extractSpecificSignals(item);
-  const signalText = signals.length ? `${signals.join("、")}が本文・抜粋上の主な手がかりです。` : "";
+  const sourceText = item.sourceName ? `${item.sourceName}は、` : "";
+  const signalText = signals.length ? `${signals.join("、")}に関する内容です。` : "UAP情報公開や関連資料の論点です。";
 
-  return compactSentences(
-    `${sourceLabel}は「${titleDetail}」を中心に扱っています。${signalText || "元タイトルと抜粋から確認できる範囲では、UAP情報公開や関連資料の論点です。"}`,
-  );
+  return compactSentences(`${sourceText}${titleDetail}について、${signalText}`);
 }
 
 function makeFallbackEvidenceDetail(item) {
-  const titleDetail = makeTitleDetail(item);
-  const sourceLabel = makeSourceLabel(item);
   const signals = extractSpecificSignals(item);
 
   return compactSentences(
     [
-      `この${sourceLabel}は「${titleDetail}」を扱っています。`,
-      signals.length
-        ? `${signals.join("、")}が内容を読むうえでの具体的な手がかりです。`
-        : "",
+      signals.length ? `本文・抜粋には、${signals.join("、")}が関連する固有名詞として出ています。` : "",
       item.sourceType === "reddit" ? "投稿本文だけでは事実関係を確定できないため、リンク先や一次資料で照合します。" : "",
     ]
       .filter(Boolean)
@@ -982,6 +975,8 @@ async function enrichWithOpenAi(items) {
 - summaryJaは取得説明ではなく記事内容を120〜180字、2文程度で要約する。1文目で「何が起きたか / 誰が何を述べたか / どの資料・制度なのか」を固有名詞つきで書く。冒頭に「XXの記事」「取得しました」と書かない。
 - detailJaは展開用の詳細要約として、記事で扱われている具体的な対象、発言者、資料名、制度名、主張、未確認点を250〜400字、3〜5文程度で要約する。背景説明だけ、読むポイントだけ、注意書きだけにしない。
 - detailJaはsummaryJaと同じ文を含めない。summaryJaの言い換えではなく、より詳しい記事内容を書く。
+- summaryJaに「記事は」「資料は」「投稿は」「〜を中心に扱っています」だけの分類文を書かない。
+- detailJaの冒頭に「この記事は」「この資料は」「この公式資料は」「このReddit投稿は」を置かない。分類導入ではなく具体内容から始める。
 - Reddit/SNS由来のdetailJaには、投稿で何が話題かを具体的に書いたうえで、コミュニティ発・未確認であることを自然に含める。
 - 「位置づけを確認」「接点を確認」「全体像を把握」「読む必要があります」などの汎用的な締め文は禁止。
 - overallSummaryはニュース内容・論点だけを3行で書く。取得件数、補完、未接続、AI判定、fallback、処理状況、Reddit件数などの運用説明は禁止。
@@ -1318,7 +1313,7 @@ function makeFallbackSummary(item) {
         : makeNewsFallbackSummaryFromTopic(topic);
   const evidenceSummary = makeFallbackEvidenceSummary(item);
 
-  return compactSentences(isGenericFallbackSummary(summary) ? evidenceSummary : mergeSpecificSummary(summary, evidenceSummary));
+  return makeConcreteSummary(isGenericFallbackSummary(summary) ? evidenceSummary : mergeSpecificSummary(summary, evidenceSummary), item);
 }
 
 function makeFallbackDetail(item) {
@@ -1327,7 +1322,7 @@ function makeFallbackDetail(item) {
   const evidenceDetail = makeFallbackEvidenceDetail(item);
   const detail = isGenericFallbackDetail(topicDetail) ? evidenceDetail : mergeSpecificDetail(topicDetail, evidenceDetail);
 
-  return makeDistinctDetail(makeFallbackSummary(item), compactSentences(detail));
+  return makeDistinctDetail(makeFallbackSummary(item), makeConcreteDetail(detail));
 }
 
 function makeFallbackTitle(item) {
@@ -1719,25 +1714,25 @@ function isGenericFallbackDetail(detail) {
 }
 
 function mergeSpecificSummary(topicSummary, evidenceSummary) {
-  const evidenceSentences = splitSentences(evidenceSummary);
-  const firstEvidence = evidenceSentences[0] || "";
+  const topicSentences = splitSentences(topicSummary);
+  const evidenceSentences = splitSentences(evidenceSummary).filter((sentence) => !isAbstractClassificationSentence(sentence));
+  const merged = [...topicSentences, ...evidenceSentences].filter(Boolean);
 
-  if (!firstEvidence || normalizeJapaneseText(topicSummary).includes(normalizeJapaneseText(firstEvidence))) {
-    return topicSummary;
-  }
-
-  const topicFirst = splitSentences(topicSummary)[0] || topicSummary;
-  return compactSentences(`${firstEvidence}${topicFirst}`);
+  return compactSentences(merged.slice(0, 2).join(""));
 }
 
 function mergeSpecificDetail(topicDetail, evidenceDetail) {
-  const detailSentences = [...splitSentences(evidenceDetail), ...splitSentences(topicDetail)];
+  const detailSentences = [...splitSentences(topicDetail), ...splitSentences(evidenceDetail)];
   const unique = [];
 
   for (const sentence of detailSentences) {
     const normalized = normalizeJapaneseText(sentence);
 
-    if (!normalized || unique.some((existing) => normalizeJapaneseText(existing) === normalized)) {
+    if (
+      !normalized ||
+      isAbstractClassificationSentence(sentence) ||
+      unique.some((existing) => normalizeJapaneseText(existing) === normalized)
+    ) {
       continue;
     }
 
@@ -1745,6 +1740,40 @@ function mergeSpecificDetail(topicDetail, evidenceDetail) {
   }
 
   return compactSentences(unique.slice(0, 5).join(""));
+}
+
+function makeConcreteSummary(summary, item) {
+  const cleaned = removeAbstractLeads(summary);
+  const sentences = splitSentences(cleaned).filter((sentence) => !isAbstractClassificationSentence(sentence));
+
+  if (sentences.length) {
+    return compactSentences(sentences.slice(0, 2).join(""));
+  }
+
+  return makeFallbackEvidenceSummary(item);
+}
+
+function makeConcreteDetail(detail) {
+  return compactSentences(
+    splitSentences(removeAbstractLeads(detail))
+      .filter((sentence) => !isAbstractClassificationSentence(sentence))
+      .slice(0, 5)
+      .join(""),
+  );
+}
+
+function removeAbstractLeads(text) {
+  return compactSentences(text)
+    .replace(/^(?:この記事|この記事では|記事|記事では)[は、]*/u, "")
+    .replace(/^(?:この公式資料|公式資料|この資料|資料|資料では)[は、]*/u, "")
+    .replace(/^(?:このReddit投稿|Reddit投稿|投稿|投稿では)[は、]*/u, "")
+    .replace(/^(?:この発表|発表|発表では)[は、]*/u, "");
+}
+
+function isAbstractClassificationSentence(sentence) {
+  return /^(?:この記事|記事|この資料|資料|この公式資料|公式資料|このReddit投稿|Reddit投稿|投稿|この発表|発表)は?「[^」]+」(?:を中心に)?扱っています。?$/.test(
+    sentence,
+  );
 }
 
 function makeFallbackDetailFromTopic(topic, item) {
@@ -1838,7 +1867,10 @@ function makeDistinctDetail(summary, detail) {
       return (
         normalized &&
         normalizedSummary &&
-        (normalized === normalizedSummary || normalized.includes(normalizedSummary) || normalizedSummary.includes(normalized))
+        (normalized === normalizedSummary ||
+          normalized.includes(normalizedSummary) ||
+          normalizedSummary.includes(normalized) ||
+          textSimilarity(normalized, normalizedSummary) >= 0.68)
       );
     });
   });
@@ -1855,6 +1887,30 @@ function splitSentences(text) {
 
 function normalizeJapaneseText(text) {
   return String(text).replace(/\s+/g, "").replace(/[、。！？「」『』（）()]/g, "");
+}
+
+function textSimilarity(left, right) {
+  const leftParts = characterBigrams(left);
+  const rightParts = characterBigrams(right);
+
+  if (!leftParts.size || !rightParts.size) {
+    return 0;
+  }
+
+  const intersection = [...leftParts].filter((part) => rightParts.has(part)).length;
+  const union = new Set([...leftParts, ...rightParts]).size;
+  return intersection / union;
+}
+
+function characterBigrams(value) {
+  const text = String(value);
+  const parts = new Set();
+
+  for (let index = 0; index < text.length - 1; index += 1) {
+    parts.add(text.slice(index, index + 2));
+  }
+
+  return parts;
 }
 
 function ensureUniqueHeadlines(items) {
@@ -2066,8 +2122,10 @@ function isOperationalSummaryLine(line) {
 }
 
 function isBadSummary(line) {
-  return /取得|取得しました|記事として|公式資料・リリースとして取得|原題と取得情報|参考情報です|位置づけを確認|接点を確認|全体像を把握|読む必要があります/.test(
-    String(line),
+  return (
+    /取得|取得しました|記事として|公式資料・リリースとして取得|原題と取得情報|参考情報です|位置づけを確認|接点を確認|全体像を把握|読む必要があります/.test(
+      String(line),
+    ) || isAbstractClassificationSentence(String(line))
   );
 }
 
