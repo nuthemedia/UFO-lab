@@ -290,7 +290,7 @@ export function KeyhoeFeed({ summary, categories, items, generatedAt }: KeyhoeFe
                             }))
                           }
                         >
-                          {isDetailExpanded ? "閉じる" : "背景を見る"}
+                          {isDetailExpanded ? "閉じる" : "要約"}
                         </button>
                       </div>
                     ) : null}

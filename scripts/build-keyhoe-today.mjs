@@ -761,8 +761,9 @@ async function enrichWithOpenAi(items) {
 - Reddit/SNS由来、噂、証言のみ、匿名情報、映像投稿、本文確認前の検索ページ由来記事は注意書きを明確にする。
 - 元タイトル・抜粋・URLから分からない事実は足さない。
 - summaryJaは取得説明ではなく記事内容を120〜180字、2文程度で要約する。冒頭に「XXの記事」「取得しました」と書かない。
-- detailJaは取得できているタイトル・抜粋・URL・ソース情報から分かる範囲で、背景・文脈・注意点を250〜400字、3〜5文程度で説明する。取得説明や本文全文を読んだような断定は禁止。
-- Reddit/SNS由来のdetailJaには、コミュニティ発・未確認であることを自然に含める。ただし注意書きだけで終わらせない。
+- detailJaは展開用の詳細要約として、記事で扱われている具体的な対象、発言者、資料名、制度名、主張、未確認点を250〜400字、3〜5文程度で要約する。背景説明だけ、読むポイントだけ、注意書きだけにしない。
+- detailJaはsummaryJaと同じ文を含めない。summaryJaの言い換えではなく、より詳しい記事内容を書く。
+- Reddit/SNS由来のdetailJaには、投稿で何が話題かを具体的に書いたうえで、コミュニティ発・未確認であることを自然に含める。
 - overallSummaryはニュース内容・論点だけを3行で書く。取得件数、補完、未接続、AI判定、fallback、処理状況、Reddit件数などの運用説明は禁止。
 
 候補:
@@ -799,6 +800,7 @@ function mergeAiItem(item, aiItem) {
   const headlineJa = String(aiItem.headlineJa || item.title);
   const aiSummary = String(aiItem.summaryJa || "");
   const aiDetail = String(aiItem.detailJa || "");
+  const summaryJa = isBadSummary(aiSummary) ? item.summaryJa : aiSummary || item.summaryJa;
   const aiScore = clampScore(aiItem.aiScore ?? aiItem.importanceScore ?? item.importanceScore);
   const importanceLabel =
     item.sourceType === "reddit" || aiItem.importanceLabel === "要注意"
@@ -812,8 +814,8 @@ function mergeAiItem(item, aiItem) {
     title: headlineJa,
     headlineJa,
     originalTitle: item.originalTitle || item.title,
-    summaryJa: isBadSummary(aiSummary) ? item.summaryJa : aiSummary || item.summaryJa,
-    detailJa: isBadSummary(aiDetail) ? item.detailJa : aiDetail || item.detailJa,
+    summaryJa,
+    detailJa: makeDistinctDetail(summaryJa, isBadSummary(aiDetail) ? item.detailJa : aiDetail || item.detailJa),
     importanceScore: aiScore,
     aiScore,
     aiReason: String(aiItem.aiReason || item.whyItMattersJa),
@@ -1095,10 +1097,9 @@ function makeFallbackSummary(item) {
 
 function makeFallbackDetail(item) {
   const topic = makeSummaryTopic(item);
-  const summary = makeFallbackSummary(item);
   const detail = makeFallbackDetailFromTopic(topic, item);
 
-  return compactSentences(`${summary}${detail ? ` ${detail}` : ""}`);
+  return makeDistinctDetail(makeFallbackSummary(item), compactSentences(detail));
 }
 
 function makeFallbackTitle(item) {
@@ -1487,45 +1488,45 @@ function expandFallbackSummary(summary, item, topic) {
 function makeFallbackDetailFromTopic(topic, item) {
   const details = {
     "uap-registration":
-      "登録制度という切り口は、UAP関連の産業・研究・情報公開をどこまで公的な枠組みに入れるかという議論につながります。法案や制度案はすぐに実現するとは限りませんが、議会や政策側がUAP問題をどう扱おうとしているかを見る材料になります。",
+      "記事は、UAP関連の産業や研究主体を登録制度で扱う案を軸に、ディスクロージャーを単なる暴露ではなく制度設計として進める考え方を紹介しています。登録対象、情報公開、政府との関係整理が主な論点です。法案化や実施が確定した話ではなく、政策提案として読む必要があります。",
     "doty-disinformation":
-      "Richard Doty氏やPaul Bennewitz事件に触れる話題は、UAP情報の信頼性を考えるうえで避けにくい文脈です。過去の偽情報工作や心理的影響の問題は、現在の内部告発、証言、匿名情報を評価する際の注意点にもつながります。",
+      "記事はRichard Doty氏、Paul Bennewitz事件、偽情報工作の文脈を取り上げ、UAP内部告発や証言の信頼性をどう評価するかを扱っています。過去の情報操作が個人やコミュニティに与えた影響を振り返り、現在の匿名証言や内部告発を読む際の注意点につなげています。",
     "information-gaps":
-      "国家安全保障上の情報ギャップという論点は、単なる目撃談ではなく、政府内の報告経路、分析体制、議会監督の問題としてUAPを扱う視点です。新政権や議会がどこまで制度改善に踏み込むかを見る材料になります。",
+      "記事は、UAPに関する情報ギャップを国家安全保障上の課題として扱い、議会や新政権に向けた改善案を論じています。焦点は目撃談そのものではなく、報告経路、分析体制、機関間共有、議会監督の不足です。制度改善の提案であり、新たな事例公開ではありません。",
     "public-hearing-full":
-      "公聴会の全編資料は、短い引用やSNS上の切り抜きでは分からない発言の前後関係を確認するために役立ちます。証言者が何を断定し、何を限定的に述べているのかを分けて読むことが重要です。",
+      "記事は、2023年4月19日のUAP公聴会を全編で確認できる資料として扱っています。議員の質問、証人の回答、政府側説明の流れをまとめて追えるため、短い引用では抜ける前後関係を確認できます。新情報の速報ではなく、過去公聴会を再確認する参照資料です。",
     "aaro-roundtable":
-      "AARO年次報告や記者説明は、未解決事例の扱い、調査範囲、政府側の説明姿勢を読む一次寄りの材料です。報告書本文とあわせて見ることで、報道見出しだけでは抜けやすい制約や留保も確認できます。",
+      "記事はAARO年次報告をめぐるJon Kosloski氏の記者説明を扱い、未解決事例、調査範囲、報告書の読み方に関する発言を整理しています。AARO側が何を説明し、何を断定していないかを確認する材料です。報告書本文と照合して読む必要があります。",
     "foia-withholding":
-      "全面不開示や長期化したFOIA請求は、情報公開制度が機能している部分と限界の両方を示します。公開されない理由、対象文書、機関側の説明を確認すると、単なる秘匿ではなく制度上の争点として読めます。",
+      "記事は、17年続いたFOIA請求が最終的に全面不開示で終わった事例を扱っています。請求対象、機関側の不開示判断、長期化した経緯が中心です。UAP関連資料そのものの中身よりも、情報公開制度の限界と不透明さを示すケースとして読めます。",
     "space-tiger-team":
-      "Space Tiger Team関連文書は、UAPを空中現象だけでなく宇宙・海中・複数領域の問題として扱う議論に関わります。文書名や抜粋だけでは中身を断定できないため、公開資料本文との照合が必要です。",
+      "記事は、新公開文書に見える「Space Tiger Team」を取り上げ、宇宙領域やトランスメディア事例を含むUAP検討体制として紹介しています。チーム名、扱うケースの範囲、公開文書から読み取れる構成が主な内容です。文書名だけで活動実態を断定しない注意も必要です。",
     "pursue-first-release":
-      "PURSUEは政府系UAP資料公開の導線として注目されます。初回公開は資料の範囲、更新頻度、映像や文書の扱い方を見る基準になり、今後の追加公開を評価するための起点になります。",
+      "記事はPURSUEの初回公開を扱い、国防総省系のUAP文書や関連資料がどのような形で提示されたかを紹介しています。公開対象、資料の種類、今後の追加公開への期待が中心です。初回公開のため、資料の網羅性や更新方針は継続確認が必要です。",
     "uap-video-release":
-      "映像公開の見通しは注目されやすい一方、映像だけでは由来や分析結果が不足しがちです。公開時には撮影条件、センサー情報、政府側の説明、独立検証の有無をあわせて確認する必要があります。",
+      "記事は、PURSUEなどを通じて新たなUAP映像が公開される可能性を扱っています。焦点は、公開予定の映像の数や性質、国防総省側の説明、既存文書との関係です。映像の由来、撮影条件、分析結果が公開時にどこまで示されるかは未確認です。",
     "hearing-schedule":
-      "公聴会予定は、議会がどの証人や論点を選ぶかによって重みが変わります。内部告発者保護、情報公開、国防総省や情報機関への監督がどこまで議題化されるかが焦点になります。",
+      "資料は、UAP透明性と内部告発者保護をテーマにした米下院公聴会の予定を示しています。公聴会名、開催日時、議題が中心で、議会が情報公開と証言保護を公式な論点として扱うことが分かります。証人や提出資料の詳細は元ページで確認が必要です。",
     "hearing-opening":
-      "開会発言は公聴会全体の問題設定を示します。個別の証言より前に、議会側が透明性、機密指定、内部告発者保護をどの優先順位で扱うかを確認できます。",
+      "資料は、ルナ議員によるUAP透明性公聴会の開会発言を掲載しています。発言では、UAPに関する調査や活動を持つ機関への監督、透明性の必要性、政府説明への問題意識が示されています。公聴会全体の問題設定を読むための一次資料です。",
     "hearing-wrap":
-      "公聴会後のまとめは、議会側がどの発言や争点を公式に残したいかを示します。証言内容そのものに加えて、今後の追加資料要求や法案議論につながるかが読みどころです。",
+      "資料は、UAP公聴会後に下院監視委側が公表した要点まとめです。政府にさらなる透明性を求める姿勢、証言や議論で強調された論点、今後の監督姿勢が整理されています。公聴会の全発言ではなく、委員会側が残した公式サマリーとして読む内容です。",
     "nara-guidance":
-      "NARAのUAP記録コレクションは、2024年NDAA以後の記録整理や移管の基盤になります。すぐに新事実が出る話ではなくても、各機関がどの文書をどう扱うかを見るうえで重要な公式導線です。",
+      "資料は、National Archivesが連邦機関向けに示したUAP記録コレクションのガイダンスです。各機関がUAP関連記録をどう識別し、移管や管理の対象にするかが中心です。新たなUAP事例の公開ではなく、2024年NDAA以後の記録整理プロセスを示す公式資料です。",
     "counter-uas":
-      "対UASの話題はUAPそのものとは異なりますが、未確認の空中対象を検知・追跡・識別する技術や運用と重なる部分があります。UAP報道と混同せず、防衛・空域監視の周辺文脈として読むのが適切です。",
+      "発表は、Joint Task Forceが6億ドル超を投じて新たなCounter-UAS能力を調達する内容です。対象はUAPそのものではなく、無人航空システムへの対処能力です。空中対象の検知・追跡・識別という周辺領域として関連しますが、UAP事例の発表ではありません。",
     "reddit-war-archive":
-      "資料アーカイブの共有は便利ですが、整理の仕方やリンク選定は投稿者に依存します。公式サイト上の原文、公開日、資料名を確認し、コメント欄の解釈と一次資料を分けて読む必要があります。",
+      "投稿は、war.gov上の公式UFO・UAPファイルを見やすく整理したインタラクティブアーカイブの共有です。話題の中心は、公式資料への導線、検索しやすさ、資料整理の見せ方です。投稿者作成の整理であり、資料本文や公開日の確認は公式サイト側で行う必要があります。",
     "reddit-ap-press":
-      "記者会見や公開要求に関する投稿は、行動喚起として広がりやすい性質があります。実際にどの議員や団体が関与しているのか、公式な告知や報道があるのかを確認すると、話題の強さと事実関係を分けられます。",
+      "投稿は、6月9日の記者会見、議員、内部告発者、UFOファイル公開要求、Grusch氏への言及をまとめて話題化しています。証言から行動へ移るべきだという趣旨の引用が注目点です。Reddit投稿由来のため、実際の会見告知や関係者の公式発表で確認が必要です。",
     "reddit-wapo":
-      "主要メディア記者への期待は、UAP問題を一般報道がどこまで扱うかという関心を反映しています。ただし投稿時点では取材着手や記事化を意味しないため、実際の報道公開までは未確認の話題として扱います。",
+      "投稿は、Washington Post記者を名乗る人物が現在のUAP/UFO discourseへの関心を示した内容です。コミュニティでは、主要メディアがこの分野をどう扱うか、どの論点を取材対象にするかへの期待が集まっています。投稿時点では記事化や取材成果を意味しない未確認情報です。",
     "reddit-journalists":
-      "調査報道への期待は、公式発表だけでは不十分だと感じるコミュニティの空気を示します。記者名、媒体、過去記事、公開予定の有無を確認し、憶測と実際の取材成果を切り分けて読む必要があります。",
+      "投稿は、UAP問題の解明には調査報道が重要だという主張を前面に出しています。公式発表だけでは不十分だとする不満、記者や報道機関への期待、外部検証を求める空気が中心です。具体的な新資料や公式発表ではなく、コミュニティ内の問題提起です。",
     "reddit-government-criticism":
-      "政府対応への批判は、透明性への不満や内部告発者保護への関心を示します。ただし感情的な反応も混ざりやすいため、公式資料、議会発言、信頼できる報道で確認できる要素だけを拾うのが安全です。",
+      "投稿は、政府サイトや内部告発者への扱いを批判し、議会で証言した人物を貶めているという不満を示しています。ALIENS.GOVサイトへの批判と謝罪要求が主な内容です。感情的な主張を含むReddit投稿であり、公式資料や議会発言とは分けて確認する必要があります。",
     "reddit-congress":
-      "議会や内部告発者に関する投稿は、コミュニティ内では関心が高い一方、未確認の引用や断片情報が混ざりやすい領域です。公聴会資料、議員発表、公式動画など一次情報にたどれるかを確認してください。",
+      "投稿は、議会、内部告発者、公聴会、記者会見に関する断片的な情報をめぐる話題です。コミュニティでは、証言が次の公開要求や政治的行動につながるかが関心になっています。引用や日程が混ざりやすいため、公聴会資料、議員発表、公式動画で確認が必要です。",
   };
 
   if (details[topic]) {
@@ -1545,6 +1546,37 @@ function makeFallbackDetailFromTopic(topic, item) {
 
 function compactSentences(text) {
   return String(text).replace(/\s+/g, " ").replace(/([。！？])\s+/g, "$1").trim();
+}
+
+function makeDistinctDetail(summary, detail) {
+  const summaryText = compactSentences(summary);
+  const summarySentences = splitSentences(summaryText);
+  const detailSentences = splitSentences(detail);
+  const filtered = detailSentences.filter((sentence) => {
+    const normalized = normalizeJapaneseText(sentence);
+
+    return !summarySentences.some((summarySentence) => {
+      const normalizedSummary = normalizeJapaneseText(summarySentence);
+      return (
+        normalized &&
+        normalizedSummary &&
+        (normalized === normalizedSummary || normalized.includes(normalizedSummary) || normalizedSummary.includes(normalized))
+      );
+    });
+  });
+
+  return compactSentences(filtered.join(""));
+}
+
+function splitSentences(text) {
+  return compactSentences(text)
+    .split(/(?<=[。！？])/)
+    .map((sentence) => sentence.trim())
+    .filter(Boolean);
+}
+
+function normalizeJapaneseText(text) {
+  return String(text).replace(/\s+/g, "").replace(/[、。！？「」『』（）()]/g, "");
 }
 
 function ensureUniqueHeadlines(items) {
