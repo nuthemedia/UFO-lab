@@ -36,6 +36,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.86,
     },
     {
+      url: `${siteUrl}/keyhoe`,
+      lastModified,
+      changeFrequency: "daily",
+      priority: 0.82,
+    },
+    {
+      url: `${siteUrl}/keyhoe/about`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.78,
+    },
+    {
       url: `${siteUrl}/ohtsuki`,
       lastModified,
       changeFrequency: "monthly",

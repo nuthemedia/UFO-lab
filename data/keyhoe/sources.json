@@ -1,0 +1,332 @@
+{
+  "official": [
+    {
+      "id": "aaro",
+      "name": "AARO",
+      "sourceKind": "official",
+      "category": "official",
+      "categoryLabel": "🇺🇸政府公式",
+      "url": "https://www.aaro.mil/",
+      "trustedDomain": "aaro.mil",
+      "lookbackDays": 90,
+      "minItems": 1,
+      "feedUrls": [],
+      "cardizeRules": {
+        "include": ["report", "uap", "foia", "document", "release", "pdf"],
+        "exclude": ["/$", "/News/$"]
+      }
+    },
+    {
+      "id": "nasa-uap",
+      "name": "NASA UAP",
+      "sourceKind": "official",
+      "category": "official",
+      "categoryLabel": "🇺🇸政府公式",
+      "url": "https://science.nasa.gov/uap/",
+      "trustedDomain": "nasa.gov",
+      "lookbackDays": 90,
+      "feedUrls": [
+        "https://www.nasa.gov/news-release/feed/"
+      ],
+      "searchUrls": [
+        "https://www.nasa.gov/?search=UAP",
+        "https://www.nasa.gov/?search=UFO"
+      ],
+      "cardizeRules": {
+        "include": ["uap", "unidentified", "anomalous", "report", "release"],
+        "exclude": ["/$", "/tag/", "/category/", "/search"]
+      }
+    },
+    {
+      "id": "war-gov",
+      "name": "war.gov",
+      "sourceKind": "official",
+      "category": "official",
+      "categoryLabel": "🇺🇸政府公式",
+      "url": "https://www.war.gov/",
+      "trustedDomain": "war.gov",
+      "lookbackDays": 90,
+      "feedUrls": [],
+      "searchUrls": [
+        "https://www.war.gov/News/"
+      ],
+      "cardizeRules": {
+        "include": ["uap", "ufo", "unidentified", "anomalous", "pursue", "release", "article"],
+        "exclude": ["/$", "/News/$"]
+      }
+    },
+    {
+      "id": "defense-gov",
+      "name": "Defense.gov",
+      "sourceKind": "official",
+      "category": "official",
+      "categoryLabel": "🇺🇸政府公式",
+      "url": "https://www.defense.gov/",
+      "trustedDomain": "defense.gov",
+      "lookbackDays": 90,
+      "feedUrls": [
+        "https://www.defense.gov/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=945"
+      ],
+      "manualItems": [
+        {
+          "title": "Department of Defense Releases the Annual Report on Unidentified Anomalous Phenomena (UAP)",
+          "url": "https://www.defense.gov/News/Releases/Release/Article/3964824/department-of-defense-releases-the-annual-report-on-unidentified-anomalous-phen/",
+          "publishedAt": "2024-11-14T00:00:00.000Z",
+          "excerpt": "DODによるUAP年次報告の公式リリース。AAROとODNIの公式報告への導線です。"
+        }
+      ],
+      "cardizeRules": {
+        "include": ["uap", "ufo", "unidentified", "anomalous", "aaro", "release", "article", "pdf"],
+        "exclude": ["/$", "/News/$"]
+      }
+    },
+    {
+      "id": "congress",
+      "name": "U.S. Congress",
+      "sourceKind": "official",
+      "category": "official",
+      "categoryLabel": "🇺🇸政府公式",
+      "url": "https://www.congress.gov/",
+      "trustedDomain": "congress.gov",
+      "lookbackDays": 90,
+      "feedUrls": [],
+      "manualItems": [
+        {
+          "title": "Unidentified Anomalous Phenomena: Exposing the Truth",
+          "url": "https://www.congress.gov/event/118th-congress/house-event/LC73681/text",
+          "publishedAt": "2024-11-13T00:00:00.000Z",
+          "excerpt": "UAP透明性に関する米議会公聴会の公式記録。"
+        }
+      ],
+      "cardizeRules": {
+        "include": ["uap", "ufo", "unidentified", "anomalous", "hearing", "event"],
+        "exclude": ["/$"]
+      }
+    },
+    {
+      "id": "foia",
+      "name": "FOIA.gov",
+      "sourceKind": "official",
+      "category": "official",
+      "categoryLabel": "🇺🇸政府公式",
+      "url": "https://www.foia.gov/",
+      "trustedDomain": "foia.gov",
+      "lookbackDays": 90,
+      "feedUrls": []
+    },
+    {
+      "id": "odni",
+      "name": "ODNI",
+      "sourceKind": "official",
+      "category": "official",
+      "categoryLabel": "🇺🇸政府公式",
+      "url": "https://www.dni.gov/",
+      "trustedDomain": "dni.gov",
+      "lookbackDays": 90,
+      "feedUrls": [],
+      "manualItems": [
+        {
+          "title": "2024 Consolidated Annual Report on Unidentified Anomalous Phenomena",
+          "url": "https://www.dni.gov/index.php/newsroom/reports-publications/reports-publications-2024/4020-uap-2024",
+          "publishedAt": "2024-11-14T00:00:00.000Z",
+          "excerpt": "ODNIとDODによるFY2024 UAP年次報告の公式ページ。"
+        }
+      ],
+      "cardizeRules": {
+        "include": ["uap", "unidentified", "anomalous", "report", "reports-publications"],
+        "exclude": ["/$"]
+      }
+    },
+    {
+      "id": "nara-uap",
+      "name": "National Archives UAP",
+      "sourceKind": "official",
+      "category": "official",
+      "categoryLabel": "🇺🇸政府公式",
+      "url": "https://www.archives.gov/research/topics/uaps",
+      "trustedDomain": "archives.gov",
+      "lookbackDays": 90,
+      "feedUrls": [],
+      "manualItems": [
+        {
+          "title": "Records Related to UFOs and UAPs at the National Archives",
+          "url": "https://www.archives.gov/research/topics/uaps",
+          "excerpt": "NARAのUAP記録コレクションに関する公式ページ。"
+        },
+        {
+          "title": "Guidance to Federal Agencies on Unidentified Anomalous Phenomena Records Collection",
+          "url": "https://www.archives.gov/records-mgmt/uap-guidance",
+          "excerpt": "2024 NDAAに基づくUAP記録コレクションの連邦機関向け公式ガイダンス。"
+        }
+      ],
+      "cardizeRules": {
+        "include": ["uap", "ufo", "unidentified", "anomalous", "records", "guidance"],
+        "exclude": ["/$"]
+      }
+    },
+    {
+      "id": "house-oversight",
+      "name": "House Oversight",
+      "sourceKind": "official",
+      "category": "official",
+      "categoryLabel": "🇺🇸政府公式",
+      "url": "https://oversight.house.gov/",
+      "trustedDomain": "oversight.house.gov",
+      "lookbackDays": 90,
+      "feedUrls": [],
+      "searchUrls": [
+        "https://oversight.house.gov/?s=UAP",
+        "https://oversight.house.gov/?s=unidentified+anomalous+phenomena"
+      ],
+      "manualItems": [
+        {
+          "title": "UAP Request Letter",
+          "url": "https://oversight.house.gov/wp-content/uploads/2026/03/UAP-Request-Letter-FINAL.pdf",
+          "publishedAt": "2026-03-31T00:00:00.000Z",
+          "excerpt": "米下院監視委員会タスクフォースによるUAP関連映像ファイル等の要請書。"
+        }
+      ],
+      "cardizeRules": {
+        "include": ["uap", "ufo", "unidentified", "anomalous", "hearing", "release", "pdf"],
+        "exclude": ["/$", "/tag/", "/category/", "/search"]
+      }
+    },
+    {
+      "id": "senate-armed-services",
+      "name": "Senate Armed Services",
+      "sourceKind": "official",
+      "category": "official",
+      "categoryLabel": "🇺🇸政府公式",
+      "url": "https://www.armed-services.senate.gov/",
+      "trustedDomain": "armed-services.senate.gov",
+      "lookbackDays": 90,
+      "feedUrls": [],
+      "manualItems": [
+        {
+          "title": "Hearing on the Mission, Activities, Oversight, and Budget of AARO",
+          "url": "https://www.armed-services.senate.gov/hearings/to-receive-testimony-on-the-mission-activities-oversight-and-budget-of-the-all-domain-anomaly-resolution-office",
+          "publishedAt": "2023-04-19T00:00:00.000Z",
+          "excerpt": "AAROの活動・予算・監督に関する米上院軍事委員会の公式公聴会ページ。"
+        }
+      ],
+      "cardizeRules": {
+        "include": ["aaro", "uap", "unidentified", "anomaly", "hearing"],
+        "exclude": ["/$"]
+      }
+    }
+  ],
+  "news": [
+    {
+      "id": "the-debrief",
+      "name": "The Debrief",
+      "sourceKind": "media",
+      "category": "news",
+      "categoryLabel": "ニュース",
+      "url": "https://thedebrief.org/",
+      "feedUrls": [
+        "https://thedebrief.org/feed/"
+      ],
+      "searchUrls": [
+        "https://thedebrief.org/?s=UAP",
+        "https://thedebrief.org/?s=UFO"
+      ]
+    },
+    {
+      "id": "liberation-times",
+      "name": "Liberation Times",
+      "sourceKind": "media",
+      "category": "news",
+      "categoryLabel": "ニュース",
+      "url": "https://www.liberationtimes.com/",
+      "feedUrls": [
+        "https://www.liberationtimes.com/feed"
+      ],
+      "searchUrls": [
+        "https://www.liberationtimes.com/home"
+      ]
+    },
+    {
+      "id": "the-black-vault",
+      "name": "The Black Vault",
+      "sourceKind": "media",
+      "category": "news",
+      "categoryLabel": "ニュース",
+      "url": "https://www.theblackvault.com/documentarchive/",
+      "feedUrls": [
+        "https://www.theblackvault.com/documentarchive/feed/"
+      ],
+      "searchUrls": [
+        "https://www.theblackvault.com/documentarchive/?s=UAP",
+        "https://www.theblackvault.com/documentarchive/?s=UFO"
+      ]
+    },
+    {
+      "id": "ask-a-pol",
+      "name": "Ask a Pol UAP",
+      "sourceKind": "media",
+      "category": "news",
+      "categoryLabel": "ニュース",
+      "url": "https://www.askapoluaps.com/",
+      "feedUrls": [
+        "https://www.askapoluaps.com/feed"
+      ]
+    },
+    {
+      "id": "space-com",
+      "name": "Space.com",
+      "sourceKind": "media",
+      "category": "news",
+      "categoryLabel": "ニュース",
+      "url": "https://www.space.com/",
+      "feedUrls": [
+        "https://www.space.com/feeds.xml"
+      ]
+    },
+    {
+      "id": "live-science",
+      "name": "Live Science",
+      "sourceKind": "media",
+      "category": "news",
+      "categoryLabel": "ニュース",
+      "url": "https://www.livescience.com/",
+      "feedUrls": [
+        "https://www.livescience.com/feeds.xml"
+      ]
+    }
+  ],
+  "reddit": [
+    {
+      "id": "reddit-ufos",
+      "name": "Reddit r/UFOs",
+      "sourceKind": "reddit",
+      "category": "buzz",
+      "categoryLabel": "ネットの話題",
+      "subreddit": "UFOs",
+      "requiresOAuth": true,
+      "lookbackDays": 30,
+      "minItems": 1
+    },
+    {
+      "id": "reddit-uap",
+      "name": "Reddit r/UAP",
+      "sourceKind": "reddit",
+      "category": "buzz",
+      "categoryLabel": "ネットの話題",
+      "subreddit": "UAP",
+      "requiresOAuth": true,
+      "lookbackDays": 30,
+      "minItems": 1
+    },
+    {
+      "id": "reddit-ufob",
+      "name": "Reddit r/UFOB",
+      "sourceKind": "reddit",
+      "category": "buzz",
+      "categoryLabel": "ネットの話題",
+      "subreddit": "UFOB",
+      "requiresOAuth": true,
+      "lookbackDays": 30,
+      "minItems": 1
+    }
+  ]
+}
