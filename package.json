@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "keyhoe:build": "node scripts/build-keyhoe-today.mjs",
+    "keyhoe:build:dry": "node scripts/build-keyhoe-today.mjs --dry",
+    "keyhoe:build:mock": "node scripts/build-keyhoe-today.mjs --mock"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

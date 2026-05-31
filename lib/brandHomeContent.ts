@@ -53,7 +53,7 @@ export const brandHomeContent = {
         description: "過去のUFO研究が、現代の議論につながりにくい。",
       },
     ],
-    update: "Hynek v1と日本のUFO観ダッシュボードを追加しました。",
+    update: "Keyhoe v0.5 - 海外UFO・UAPニュース日本語チェッカーを公開しました。",
     updateFeedback: {
       heading: "更新情報・フィードバック",
       body: [
@@ -63,6 +63,13 @@ export const brandHomeContent = {
       cta: "Xをフォロー",
     },
     products: [
+      {
+        version: "Version 0.5 Beta",
+        name: "Keyhoe v0.5",
+        title: "Keyhoe v0.5 – 海外UFO・UAPニュース日本語チェッカー",
+        href: "/keyhoe",
+        cta: "Keyhoeを開く",
+      },
       {
         version: "Version 1.0",
         name: "Hynek v1",
@@ -149,7 +156,7 @@ export const brandHomeContent = {
         description: "Past UFO research does not easily connect to today's discussion.",
       },
     ],
-    update: "Added Hynek v1 and the Japan UFO View Dashboard.",
+    update: "Released Keyhoe v0.5, the Japanese checker for overseas UFO and UAP news.",
     updateFeedback: {
       heading: "Updates & Feedback",
       body: [
@@ -159,6 +166,13 @@ export const brandHomeContent = {
       cta: "Follow on X",
     },
     products: [
+      {
+        version: "Version 0.5 Beta",
+        name: "Keyhoe v0.5",
+        title: "Keyhoe v0.5 – Overseas UFO and UAP News Checker",
+        href: "/keyhoe",
+        cta: "Open Keyhoe",
+      },
       {
         version: "Version 1.0",
         name: "Hynek v1",

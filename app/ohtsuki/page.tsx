@@ -63,6 +63,30 @@ export default function OhtsukiPage() {
 
       <OhtsukiChecker />
 
+      <section className="brand-feedback-card" aria-labelledby="ohtsuki-update-heading">
+        <p className="brand-feedback-label" id="ohtsuki-update-heading">
+          更新情報・フィードバック
+        </p>
+        <div className="brand-feedback-copy">
+          <p>Ohtsuki の更新や改善点は、今後も少しずつ足していきます。</p>
+          <p>気づいた点やフィードバックは X で受け取っています。</p>
+        </div>
+        <a
+          className="brand-feedback-action"
+          href="https://x.com/UFOLabTokyo"
+          target="_blank"
+          rel="noreferrer noopener"
+          aria-label="Xでフィードバックを送る"
+          title="Xでフィードバックを送る"
+        >
+          <span className="brand-feedback-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.47l8.6-9.83L0 1.15h7.59l5.24 6.93 6.07-6.93Zm-1.29 19.5h2.04L6.49 3.24H4.3l13.31 17.41Z" />
+            </svg>
+          </span>
+        </a>
+      </section>
+
       <SiteFooter className="ohtsuki-footer" />
     </section>
   );
