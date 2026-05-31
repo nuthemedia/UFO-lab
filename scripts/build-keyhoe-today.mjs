@@ -1279,6 +1279,10 @@ function wait(ms) {
 }
 
 function scoreItem(item) {
+  if (item.sourceType === "reddit") {
+    return scoreRedditItem(item);
+  }
+
   let score = item.sourceType === "official" ? 7 : item.sourceType === "news" ? 5 : 3;
   const haystack = `${item.title} ${item.excerpt}`.toLowerCase();
 
@@ -1311,12 +1315,60 @@ function scoreItem(item) {
   return Math.max(1, Math.min(10, score));
 }
 
+function scoreRedditItem(item) {
+  let score = 3;
+  const haystack = `${item.title || ""} ${item.originalTitle || ""} ${item.excerpt || ""}`.toLowerCase();
+  let topicBoost = 0;
+
+  if (/congress|hearing|whistleblower|burlison|mitre|pentagon|contractors|oversight/.test(haystack)) {
+    topicBoost = Math.max(topicBoost, 1.75);
+  }
+
+  if (/war\.gov|pursue|archive|documents?|files?|records?|official/.test(haystack)) {
+    topicBoost = Math.max(topicBoost, 1.5);
+  }
+
+  if (/john michael godier|event horizon|uap gerb|washington post|journalist|investigative|reporter/.test(haystack)) {
+    topicBoost = Math.max(topicBoost, 1.25);
+  }
+
+  if (/disclosure|signatures|netherlands|citizens/.test(haystack)) {
+    topicBoost = Math.max(topicBoost, 0.75);
+  }
+
+  score += topicBoost;
+
+  if (/video|footage|sighting|orb|drone|ontological|alien|aliens/.test(haystack)) {
+    score -= 0.5;
+  }
+
+  if (item.scoreHint > 300) {
+    score += 1;
+  } else if (item.scoreHint > 100) {
+    score += 0.5;
+  } else if (item.scoreHint > 20) {
+    score += 0.25;
+  }
+
+  if (item.publishedAtKnown) {
+    const ageHours = hoursSince(item.publishedAt);
+
+    if (ageHours <= 24) {
+      score += 0.3;
+    } else if (ageHours <= 24 * 7) {
+      score += 0.1;
+    }
+  }
+
+  return Math.max(2, Math.min(5.75, score));
+}
+
 function getLookbackDays(item) {
   return Number(item.lookbackDays || defaultLookbackDays[item.category] || 30);
 }
 
 function makeImportanceLabel(score, sourceType) {
-  if (sourceType === "reddit" && score <= 4) {
+  if (sourceType === "reddit") {
     return "要注意";
   }
 

@@ -19,6 +19,8 @@ Important item fields include `headlineJa`, `originalTitle`, `summaryJa`, `detai
 
 The UI defaults to importance order. Latest order prioritizes items with known `publishedAt`; date-unknown official documents or `公式資料` cards stay lower so they are not mistaken for new updates.
 
+Reddit fallback items keep low reliability and caution labels, but their internal importance scores may vary by topic signal and `scoreHint` so category-level importance order is not identical to latest order.
+
 ## Scripts
 
 - `npm run keyhoe:build`: generate `public/data/keyhoe-today.json`.

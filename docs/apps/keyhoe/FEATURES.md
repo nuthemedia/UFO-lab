@@ -5,6 +5,7 @@
 - Display daily overseas UFO/UAP items in Japanese.
 - Filter by `すべて`, `🇺🇸政府公式`, `ニュース`, and `ネットの話題`.
 - Switch feed order between `重要順` and `最新`.
+- Apply `重要順` and `最新` within the selected category.
 - Show source, freshness, importance, reliability/caution notes, summary, detail, and original URL.
 - Provide X share and feedback/update guidance.
 - Use Keyhoe-specific OG output for `/keyhoe` and `/keyhoe/about`.

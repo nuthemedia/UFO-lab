@@ -310,7 +310,7 @@ export function KeyhoeFeed({ summary, categories, items, generatedAt }: KeyhoeFe
           </span>
         </div>
 
-        <div className="keyhoe-card-list">
+        <div className="keyhoe-card-list" key={`${activeCategory}-${sortMode}`}>
           {categoryItems.length ? (
             <>
               {visibleItems.map((item) => {
@@ -319,7 +319,7 @@ export function KeyhoeFeed({ summary, categories, items, generatedAt }: KeyhoeFe
                 const isDetailExpanded = expandedDetails[item.id];
 
                 return (
-                  <article className="keyhoe-card" data-keyhoe-card key={`${activeCategory}-${item.id}`}>
+                  <article className="keyhoe-card" data-keyhoe-card key={`${activeCategory}-${sortMode}-${item.id}`}>
                     <div className="keyhoe-card-top">
                       <span className={`keyhoe-importance ${importanceClass(item.importanceLabel)}`}>
                         {item.importanceLabel}
