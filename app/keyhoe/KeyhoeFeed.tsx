@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { formatKeyhoeUpdatedAt } from "./format";
 
 type KeyhoeCategory = "all" | "official" | "news" | "buzz";
 
@@ -70,14 +71,7 @@ export function KeyhoeFeed({ summary, categories, items, generatedAt }: KeyhoeFe
   const [expandedDetails, setExpandedDetails] = useState<Record<string, boolean>>({});
   const [activeCategory, setActiveCategory] = useState<KeyhoeCategory>("all");
   const initialVisibleCount = 12;
-  const formatter = new Intl.DateTimeFormat("ja-JP", {
-    month: "numeric",
-    day: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-  });
-
-  const generatedLabel = formatter.format(new Date(generatedAt));
+  const generatedLabel = formatKeyhoeUpdatedAt(generatedAt);
   const categoryItems =
     activeCategory === "all" ? items : items.filter((item) => item.category === activeCategory);
   const activeCategoryLabel = categories.find((category) => category.id === activeCategory)?.label ?? "すべて";

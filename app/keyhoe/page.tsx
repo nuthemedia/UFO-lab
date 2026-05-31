@@ -4,6 +4,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { siteConfig } from "@/lib/site";
 import { siteUrl } from "@/lib/seo";
 import { KeyhoeFeed, type KeyhoeFeedProps } from "./KeyhoeFeed";
+import { formatKeyhoeUpdatedAt } from "./format";
 import keyhoeToday from "@/public/data/keyhoe-today.json";
 
 type KeyhoeCategory = "all" | "official" | "news" | "buzz";
@@ -77,13 +78,7 @@ export default function KeyhoePage() {
         <p className="keyhoe-lead">Keyhoe v0.5 - 海外UFO・UAPニュース日本語チェッカー</p>
         <div className="keyhoe-hero-meta">
           <span>
-            最終更新{" "}
-            {new Intl.DateTimeFormat("ja-JP", {
-              month: "numeric",
-              day: "numeric",
-              hour: "2-digit",
-              minute: "2-digit",
-            }).format(new Date(keyhoeToday.generatedAt))}
+            最終更新 {formatKeyhoeUpdatedAt(keyhoeToday.generatedAt)}
           </span>
           <Link className="keyhoe-about-link" href="/keyhoe/about">
             Keyhoeについて
