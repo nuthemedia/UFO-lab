@@ -1,0 +1,13 @@
+{
+  "documentId": "pursue-0114",
+  "recordId": "pursue-0114",
+  "fullTextJa": "[Page 1] [[page 1 confidence: 72]]\n15    10    5         5    10    15\n\n12/31/99 18:11:06",
+  "summaryJa": "ページ見出し「[Page 1]」とOCR信頼度（72）を含む。行に数値“15 10 5 5 10 15”、タイムスタンプ「12/31/99 18:11:06」が記載され、「--- Japanese translation excerpt ---」とある。ページ番号と同内容の繰り返しがある。",
+  "summaryEn": "Contains a page header \"[Page 1]\" with OCR confidence (72). Displays a row of numbers \"15 10 5 5 10 15\", a timestamp \"12/31/99 18:11:06\", and the label \"--- Japanese translation excerpt ---\". The page number and same content are repeated.",
+  "status": {
+    "translationJa": "machine_translation",
+    "summary": "summary_generated",
+    "humanReview": "unreviewed"
+  },
+  "noteJa": "機械翻訳です。公式PDFを正本とし、OCR誤読や翻訳誤りを含む可能性があります。"
+}

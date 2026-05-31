@@ -17,8 +17,11 @@ UFO Lab Tokyo は、その活動をWeb上でわかりやすく届けるための
 
 - `/`: 日本語版ブランドサイト
 - `/en`: 英語版ブランドサイト
-- `/ruppelt`: Ruppelt v1.5 - PURSUE日本語インデックス
-- `/kean`: Kean - ディスクロージャー人物地図
+- `/ruppelt`: Ruppelt v1.1 - PURSUE日本語インデックス
+- `/ruppelt/lp`: Ruppelt LP - アメリカ政府UAP・UFO機密解除資料を日本語で検索
+- `/kean`: Kean - UFO・UAPディスクロージャー入門ポータル
+- `/keyhoe`: Keyhoe v0.5 - 海外UFO・UAPニュース日本語チェッカー
+- `/keyhoe/about`: Keyhoeについて
 - `/ohtsuki`: Ohtsuki v0.5 - UFO画像AI判定チェッカー
 - `/ufo-image-checker`: 旧URL互換。`/ohtsuki` へリダイレクトする
 
@@ -38,7 +41,7 @@ UFO Lab Tokyo は、その活動をWeb上でわかりやすく届けるための
 - タグラインとブランドの世界観
 - UFO・UAPに対する検証重視の姿勢
 - 提供中または準備中のアプリ
-- 最初のアプリである Ohtsuki への導線
+- 最初のアプリである Ohtsuki v0.5 への導線
 
 ## 6. 表記ルール
 

@@ -1,0 +1,13 @@
+{
+  "documentId": "pursue-0128",
+  "recordId": "pursue-0128",
+  "fullTextJa": "[Page 1] [[page 1 confidence: 72]]\n[REDACTED]\n\n[REDACTED]                                    [REDACTED]\n\n              3                           3\n\n[REDACTED]                                    [REDACTED]\n\n[REDACTED]                                    [REDACTED]\n\n12/31/99 18:19:40",
+  "summaryJa": "OCR本文（ページ1）は大部分が［REDACTED］で遮蔽されている。ページ信頼度は72で、文末にタイムスタンプ「12/31/99 18:19:40」と「--- Japanese translation excerpt ---」の表記がある。ページ上に「3 3」の数字表記が見える。",
+  "summaryEn": "The OCR text (page 1) is largely redacted. Page confidence is 72, and the document includes the timestamp \"12/31/99 18:19:40\" and the label \"--- Japanese translation excerpt ---\". The page shows the numeric marking \"3 3\".",
+  "status": {
+    "translationJa": "machine_translation",
+    "summary": "summary_generated",
+    "humanReview": "unreviewed"
+  },
+  "noteJa": "機械翻訳です。公式PDFを正本とし、OCR誤読や翻訳誤りを含む可能性があります。"
+}

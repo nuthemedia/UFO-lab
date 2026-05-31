@@ -42,6 +42,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.86,
     },
     {
+      url: `${siteUrl}/kean/about`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.84,
+    },
+    {
+      url: `${siteUrl}/kean/history`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.84,
+    },
+    {
+      url: `${siteUrl}/kean/people`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.84,
+    },
+    {
       url: `${siteUrl}/keyhoe`,
       lastModified,
       changeFrequency: "daily",

@@ -1,0 +1,13 @@
+{
+  "documentId": "pursue-0132",
+  "recordId": "pursue-0132",
+  "fullTextJa": "[Page 1] [[page 1 confidence: 72]]\n[REDACTED]\n\n[REDACTED]                                    [REDACTED]\n\n         15        10        5              5        10        15\n\n[REDACTED]                                    [REDACTED]\n\n\n\n[REDACTED]                                    [REDACTED]\n\n12/31/99 18:10:00",
+  "summaryJa": "PURSUE OCRの1ページ目（ページ信頼度72）。本文は大部分が「[REDACTED]」で伏せられている。中央付近に「15 10 5    5 10 15」といった数値配列が見られる。末尾にタイムスタンプ「12/31/99 18:10:00」。同内容の日本語訳抜粋がページ内で繰り返されている。",
+  "summaryEn": "PURSUE OCR page 1 (page confidence 72). The body text is mostly redacted as \"[REDACTED]\". A numeric sequence \"15 10 5    5 10 15\" appears near the middle. The page includes a timestamp \"12/31/99 18:10:00\" at the end. A Japanese translation excerpt of the same content is repeated on the page.",
+  "status": {
+    "translationJa": "machine_translation",
+    "summary": "summary_generated",
+    "humanReview": "unreviewed"
+  },
+  "noteJa": "機械翻訳です。公式PDFを正本とし、OCR誤読や翻訳誤りを含む可能性があります。"
+}

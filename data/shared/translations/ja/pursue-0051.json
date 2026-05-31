@@ -1,0 +1,13 @@
+{
+  "documentId": "pursue-0051",
+  "recordId": "pursue-0051",
+  "fullTextJa": "[OCRはページ(1-5)をスキップしました]",
+  "summaryJa": "提供されたPURSUE OCR本文では「ページ(1-5)をスキップしました」とあり、本文テキストが提供されていないため要約できません。本文全体または該当するテキストを提供してください。",
+  "summaryEn": "The provided PURSUE OCR text indicates \"OCR skipped on page(s) 1-5\" and no body text was supplied, so a summary cannot be produced. Please provide the full OCR output or the relevant text.",
+  "status": {
+    "translationJa": "machine_translation",
+    "summary": "summary_generated",
+    "humanReview": "unreviewed"
+  },
+  "noteJa": "機械翻訳です。公式PDFを正本とし、OCR誤読や翻訳誤りを含む可能性があります。"
+}

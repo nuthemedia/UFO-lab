@@ -16,8 +16,9 @@
 
 - `/`: ブランドサイトのトップページ
 - `/en`: 英語版ブランドサイト
-- `/ruppelt`: Ruppelt v1.5 への主要導線
-- `/kean`: Kean への主要導線
+- `/ruppelt`: Ruppelt v1.1 への主要導線
+- `/ruppelt/lp`: Ruppelt LP への導線
+- `/kean`: Kean UFO・UAPディスクロージャー入門ポータルへの主要導線
 - `/ohtsuki`: Ohtsuki への主要導線
 - `/ufo-image-checker`: 旧URL互換。`/ohtsuki` へリダイレクト
 
@@ -28,7 +29,8 @@
 - Mission
 - Challenges
 - 更新情報
-- Ruppelt v1.5 への導線
+- Ruppelt v1.1 への導線
+- Kean への導線
 - Ohtsuki v0.5 への導線
 - フッターのブランド・SNS導線
 

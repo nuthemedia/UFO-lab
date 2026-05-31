@@ -91,3 +91,18 @@ export const organizationJsonLd = {
   url: localizedHomeSeo.ja.url,
   sameAs: ["https://x.com/UFOLabTokyo"],
 };
+
+export const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: localizedHomeSeo.ja.title,
+  alternateName: [siteName, "東京UFO研究室", "UFO Research Lab Tokyo"],
+  url: localizedHomeSeo.ja.url,
+  inLanguage: ["ja-JP", "en-US"],
+  publisher: {
+    "@type": "Organization",
+    name: siteName,
+    alternateName: ["東京UFO研究室", "UFO Research Lab Tokyo"],
+    url: localizedHomeSeo.ja.url,
+  },
+};

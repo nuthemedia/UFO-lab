@@ -3,6 +3,7 @@ import { resolve } from "node:path";
 
 const rootDir = resolve(process.cwd());
 const ocrDir = resolve(rootDir, "data/shared/ocr");
+const bundlePath = resolve(rootDir, "data/shared/pursue-document-bundles.json");
 const documentsDir = resolve(rootDir, "data/shared/pursue-documents");
 const translationsDir = resolve(rootDir, "data/shared/translations/ja");
 const allMode = process.argv.includes("--all");
@@ -64,7 +65,8 @@ const samples = {
 
 await mkdir(translationsDir, { recursive: true });
 
-const files = await readdir(ocrDir).catch(() => []);
+const hasOcrDir = await readdir(ocrDir).catch(() => null);
+const bundleData = await readJsonIfExists(bundlePath);
 let generated = 0;
 
 async function readJsonIfExists(path) {
@@ -73,6 +75,40 @@ async function readJsonIfExists(path) {
   } catch {
     return null;
   }
+}
+
+function loadTargetsFromBundle() {
+  if (!bundleData) {
+    return [];
+  }
+
+  return Object.values(bundleData)
+    .map((bundle) => ({
+      file: `${bundle.document.recordId}.json`,
+      ocr: bundle.ocr,
+    }))
+    .filter((entry) => entry.ocr?.ocrTextEn?.trim());
+}
+
+async function loadTargetsFromOcrDir() {
+  const files = hasOcrDir || [];
+  const targets = [];
+
+  for (const file of files) {
+    if (!file.endsWith(".json")) {
+      continue;
+    }
+
+    const ocr = await readJsonIfExists(resolve(ocrDir, file));
+
+    if (!ocr?.ocrTextEn?.trim()) {
+      continue;
+    }
+
+    targets.push({ file, ocr });
+  }
+
+  return targets;
 }
 
 function chunkText(text, maxLength = 12000) {
@@ -177,31 +213,26 @@ async function generateAllTranslations() {
     );
   }
 
+  const sourceTargets = hasOcrDir?.length ? await loadTargetsFromOcrDir() : loadTargetsFromBundle();
   const targets = [];
 
-  for (const file of files) {
-    if (!file.endsWith(".json")) {
+  for (const target of sourceTargets) {
+    if (
+      selectedRecordId &&
+      target.ocr.recordId !== selectedRecordId &&
+      target.ocr.documentId !== selectedRecordId
+    ) {
       continue;
     }
 
-    const ocr = await readJsonIfExists(resolve(ocrDir, file));
-
-    if (!ocr?.ocrTextEn?.trim()) {
-      continue;
-    }
-
-    if (selectedRecordId && ocr.recordId !== selectedRecordId && ocr.documentId !== selectedRecordId) {
-      continue;
-    }
-
-    const translationPath = resolve(translationsDir, file);
+    const translationPath = resolve(translationsDir, target.file);
     const existingTranslation = await readJsonIfExists(translationPath);
 
     if (existingTranslation?.fullTextJa && !force) {
       continue;
     }
 
-    targets.push({ file, ocr, translationPath });
+    targets.push({ ...target, translationPath });
   }
 
   if (smallFirst) {

@@ -14,13 +14,13 @@ const statusDashboardOrder: PriorDisclosureStatus[] = [
 
 export const metadata: Metadata = {
   title: "Ruppelt v1.1 | Ruppelt v1.1 - PURSUE日本語インデックス",
-  description: "米政府UAP公開資料を、日本語でさくっと確認できる資料ブラウザです。",
+  description: "アメリカ政府UAP公開資料を、日本語でさくっと確認できる資料ブラウザです。",
   alternates: {
     canonical: "/ruppelt",
   },
   openGraph: {
     title: "Ruppelt v1.1 - PURSUE日本語インデックス",
-    description: "米政府UAP公開資料をスマホでさくっと確認。",
+    description: "アメリカ政府UAP公開資料をスマホでさくっと確認。",
     url: "/ruppelt",
     siteName: "UFO Lab Tokyo",
     images: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Ruppelt v1.1 - PURSUE日本語インデックス",
-    description: "米政府UAP公開資料をスマホでさくっと確認。",
+    description: "アメリカ政府UAP公開資料をスマホでさくっと確認。",
     images: ["/ogp-ruppelt.jpg"],
   },
   other: {
@@ -83,7 +83,7 @@ export default function RuppeltPage() {
         </div>
         <h1>Ruppelt v1.1</h1>
         <p className="tagline">Ruppelt v1.1 - PURSUE日本語インデックス</p>
-        <p className="lead">米政府UAP公開資料をスマホでさくっと確認。</p>
+        <p className="lead">アメリカ政府UAP公開資料をスマホでさくっと確認。</p>
         <div className="ruppelt-status-dashboard" aria-label="公開状況の件数">
           {statusDashboardOrder.map((status) => (
             <div key={status} className={`ruppelt-status-stat ruppelt-status-stat--${status}`}>

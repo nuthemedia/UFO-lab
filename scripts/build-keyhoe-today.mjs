@@ -12,8 +12,6 @@ const redditClientId = process.env.REDDIT_CLIENT_ID || "";
 const redditClientSecret = process.env.REDDIT_CLIENT_SECRET || "";
 const redditUserAgent = process.env.REDDIT_USER_AGENT || "web:keyhoe:v0.5 (by UFO Lab Tokyo)";
 const openAiTimeoutMs = 90_000;
-const articleFetchTimeoutMs = 8_000;
-const articleContentMaxChars = 3_000;
 const now = new Date();
 const maxItems = 30;
 const aiScoreThreshold = 7;
@@ -81,7 +79,7 @@ async function main() {
     ...(await fetchRedditSources(sources.reddit || [])),
   ];
 
-  const dedupedItems = await attachContentHints(selectDisplayItems(rawItems, { broad: Boolean(openAiApiKey) }));
+  const dedupedItems = selectDisplayItems(rawItems, { broad: Boolean(openAiApiKey) });
   const enriched = openAiApiKey
     ? await enrichWithOpenAi(dedupedItems).catch((error) => {
         console.warn(`OpenAI enrichment failed; using fallback: ${error.message}`);
@@ -357,226 +355,18 @@ async function discoverFeedUrls(source) {
 }
 
 async function fetchText(url) {
-  return fetchTextWithTimeout(url);
-}
+  const response = await fetch(url, {
+    headers: {
+      "User-Agent": "UFO Lab Tokyo Keyhoe local checker/0.5",
+      Accept: "application/rss+xml, application/atom+xml, application/xml, text/xml, text/html, */*",
+    },
+  });
 
-async function fetchTextWithTimeout(url, timeoutMs) {
-  const controller = timeoutMs ? new AbortController() : null;
-  const timeoutId = controller ? setTimeout(() => controller.abort(), timeoutMs) : null;
-
-  try {
-    const response = await fetch(url, {
-      signal: controller?.signal,
-      headers: {
-        "User-Agent": "UFO Lab Tokyo Keyhoe local checker/0.5",
-        Accept: "application/rss+xml, application/atom+xml, application/xml, text/xml, text/html, */*",
-      },
-    });
-
-    if (!response.ok) {
-      throw new Error(`${response.status} ${response.statusText}`);
-    }
-
-    return response.text();
-  } catch (error) {
-    if (error?.name === "AbortError") {
-      throw new Error(`timed out after ${timeoutMs / 1000}s`);
-    }
-
-    throw error;
-  } finally {
-    if (timeoutId) {
-      clearTimeout(timeoutId);
-    }
-  }
-}
-
-async function attachContentHints(items) {
-  const hydrated = [];
-  const batchSize = 4;
-
-  for (let index = 0; index < items.length; index += batchSize) {
-    hydrated.push(...(await Promise.all(items.slice(index, index + batchSize).map(attachContentHint))));
+  if (!response.ok) {
+    throw new Error(`${response.status} ${response.statusText}`);
   }
 
-  return hydrated;
-}
-
-async function attachContentHint(item) {
-  if (item.sourceType === "reddit" || !shouldFetchArticleContent(item.originalUrl)) {
-    return {
-      ...item,
-      contentHint: cleanText(item.excerpt).slice(0, articleContentMaxChars),
-    };
-  }
-
-  try {
-    const html = await fetchTextWithTimeout(item.originalUrl, articleFetchTimeoutMs);
-    const contentHint = extractArticleContentHint(html);
-
-    return {
-      ...item,
-      contentHint: contentHint || cleanText(item.excerpt).slice(0, articleContentMaxChars),
-    };
-  } catch (error) {
-    console.warn(`Article content hint failed: ${item.sourceName} ${item.originalUrl} ${error.message}`);
-    return {
-      ...item,
-      contentHint: cleanText(item.excerpt).slice(0, articleContentMaxChars),
-    };
-  }
-}
-
-function shouldFetchArticleContent(url) {
-  try {
-    const parsed = new URL(url);
-
-    if (!/^https?:$/.test(parsed.protocol)) {
-      return false;
-    }
-
-    return !/\.(?:pdf|jpg|jpeg|png|gif|webp|zip|mp4|mov)(?:$|\?)/i.test(parsed.pathname);
-  } catch {
-    return false;
-  }
-}
-
-function extractArticleContentHint(html) {
-  const parts = [
-    extractMetaDescription(html),
-    ...extractJsonLdDescriptions(html),
-    ...extractParagraphs(html).slice(0, 8),
-  ]
-    .map(cleanText)
-    .filter((part) => part.length >= 40);
-
-  return compactSentences(dedupeTextParts(parts).join(" ")).slice(0, articleContentMaxChars);
-}
-
-function extractJsonLdDescriptions(html) {
-  const descriptions = [];
-  const blocks = [...html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)];
-
-  for (const block of blocks) {
-    try {
-      const parsed = JSON.parse(decodeHtml(block[1]).trim());
-      const nodes = Array.isArray(parsed) ? parsed : [parsed, ...(parsed?.["@graph"] || [])];
-
-      for (const node of nodes.filter(Boolean)) {
-        if (typeof node.description === "string") {
-          descriptions.push(node.description);
-        }
-
-        if (typeof node.articleBody === "string") {
-          descriptions.push(node.articleBody);
-        }
-      }
-    } catch {
-      // Ignore malformed JSON-LD; meta tags and paragraphs still provide enough context.
-    }
-  }
-
-  return descriptions;
-}
-
-function extractParagraphs(html) {
-  const readableHtml = html
-    .replace(/<script\b[\s\S]*?<\/script>/gi, " ")
-    .replace(/<style\b[\s\S]*?<\/style>/gi, " ")
-    .replace(/<nav\b[\s\S]*?<\/nav>/gi, " ")
-    .replace(/<footer\b[\s\S]*?<\/footer>/gi, " ")
-    .replace(/<aside\b[\s\S]*?<\/aside>/gi, " ");
-
-  return [...readableHtml.matchAll(/<p\b[^>]*>([\s\S]*?)<\/p>/gi)]
-    .map((match) => cleanText(match[1]))
-    .filter((paragraph) => paragraph.length >= 60 && !/cookie|subscribe|newsletter|advertisement/i.test(paragraph));
-}
-
-function dedupeTextParts(parts) {
-  const seen = new Set();
-  const deduped = [];
-
-  for (const part of parts) {
-    const key = normalizeTitle(part).slice(0, 120);
-
-    if (!key || seen.has(key)) {
-      continue;
-    }
-
-    seen.add(key);
-    deduped.push(part);
-  }
-
-  return deduped;
-}
-
-function makeEvidenceText(item) {
-  return compactSentences([item.contentHint, item.excerpt, item.originalTitle || item.title].map(cleanText).filter(Boolean).join(" "));
-}
-
-function makeSourceLabel(item) {
-  if (item.sourceType === "reddit") {
-    return "Reddit投稿";
-  }
-
-  if (item.sourceType === "official") {
-    return "公式資料";
-  }
-
-  return "記事";
-}
-
-function extractSpecificSignals(item) {
-  const text = makeEvidenceText(item);
-  const signals = [];
-  const patterns = [
-    /\b(?:AARO|PURSUE|FOIA|ODNI|NARA|NASA|UAPIST)\b/g,
-    /\b(?:Tim Burchett|Anna Paulina Luna|Jon Kosloski|Mike Gold|Richard Doty|Paul Bennewitz|David Grusch)\b/g,
-    /\b(?:National Archives|House Oversight|Senate Armed Services|Department of Defense|Pentagon|The Black Vault|The Debrief)\b/g,
-    /\b(?:UAP Registration Act|Space Tiger Team|Annual Report|Records Collection|Request Letter)\b/g,
-  ];
-
-  for (const pattern of patterns) {
-    for (const match of text.matchAll(pattern)) {
-      signals.push(match[0]);
-    }
-  }
-
-  return [...new Set(signals)].slice(0, 5);
-}
-
-function makeFallbackEvidenceSummary(item) {
-  const titleDetail = makeTitleDetail(item);
-  const signals = extractSpecificSignals(item);
-  const sourceText = item.sourceName ? `${item.sourceName}は、` : "";
-  const signalText = signals.length ? `${signals.join("、")}に関する内容です。` : "UAP情報公開や関連資料の論点です。";
-
-  return compactSentences(`${sourceText}${titleDetail}について、${signalText}`);
-}
-
-function makeFallbackEvidenceDetail(item) {
-  const signals = extractSpecificSignals(item);
-
-  return compactSentences(
-    [
-      signals.length ? `本文・抜粋には、${signals.join("、")}が関連する固有名詞として出ています。` : "",
-      item.sourceType === "reddit" ? "投稿本文だけでは事実関係を確定できないため、リンク先や一次資料で照合します。" : "",
-    ]
-      .filter(Boolean)
-      .join(""),
-  );
-}
-
-function makeCautionSentence(item) {
-  if (item.sourceType === "reddit") {
-    return "Reddit由来のため、投稿内の主張は公式資料や報道と照合して扱います。";
-  }
-
-  if (!item.contentHint || item.contentHint.length < 120) {
-    return "本文取得が限定的なため、細部は元ページで確認してください。";
-  }
-
-  return "";
+  return response.text();
 }
 
 function parseFeed(xml) {
@@ -860,7 +650,7 @@ function isRelevant(item, options = {}) {
   const hasUapSignal = hasUapRelevanceSignal(haystack);
 
   if (item.sourceType === "official") {
-    return hasUapSignal;
+    return hasUapSignal || /\brecords?\b|\btransparency\b/.test(haystack);
   }
 
   if (item.sourceType === "reddit") {
@@ -951,7 +741,6 @@ async function enrichWithOpenAi(items) {
     freshnessLabel: item.freshnessLabel,
     collectionNote: item.collectionNote,
     excerpt: cleanText(item.excerpt).slice(0, 700),
-    contentHint: cleanText(item.contentHint || item.excerpt).slice(0, articleContentMaxChars),
     originalUrl: item.originalUrl,
     publishedAt: item.publishedAt,
   }));
@@ -971,14 +760,9 @@ async function enrichWithOpenAi(items) {
 - 一般宇宙ニュースでUAP/UFOと無関係なもの、古いまとめ記事、投機性が高い記事、映像・目撃談だけで検証材料が薄いもの、宣伝、雑談、SEO寄りの記事は低評価。
 - Reddit/SNS由来、噂、証言のみ、匿名情報、映像投稿、本文確認前の検索ページ由来記事は注意書きを明確にする。
 - 元タイトル・抜粋・URLから分からない事実は足さない。
-- contentHintがある場合はcontentHintを主材料にする。なければtitle/excerptだけで分かる範囲に限定する。
-- summaryJaは取得説明ではなく記事内容を120〜180字、2文程度で要約する。1文目で「何が起きたか / 誰が何を述べたか / どの資料・制度なのか」を固有名詞つきで書く。冒頭に「XXの記事」「取得しました」と書かない。
-- detailJaは展開用の詳細要約として、記事で扱われている具体的な対象、発言者、資料名、制度名、主張、未確認点を250〜400字、3〜5文程度で要約する。背景説明だけ、読むポイントだけ、注意書きだけにしない。
-- detailJaはsummaryJaと同じ文を含めない。summaryJaの言い換えではなく、より詳しい記事内容を書く。
-- summaryJaに「記事は」「資料は」「投稿は」「〜を中心に扱っています」だけの分類文を書かない。
-- detailJaの冒頭に「この記事は」「この資料は」「この公式資料は」「このReddit投稿は」を置かない。分類導入ではなく具体内容から始める。
-- Reddit/SNS由来のdetailJaには、投稿で何が話題かを具体的に書いたうえで、コミュニティ発・未確認であることを自然に含める。
-- 「位置づけを確認」「接点を確認」「全体像を把握」「読む必要があります」などの汎用的な締め文は禁止。
+- summaryJaは取得説明ではなく記事内容を120〜180字、2文程度で要約する。冒頭に「XXの記事」「取得しました」と書かない。
+- detailJaは取得できているタイトル・抜粋・URL・ソース情報から分かる範囲で、背景・文脈・注意点を250〜400字、3〜5文程度で説明する。取得説明や本文全文を読んだような断定は禁止。
+- Reddit/SNS由来のdetailJaには、コミュニティ発・未確認であることを自然に含める。ただし注意書きだけで終わらせない。
 - overallSummaryはニュース内容・論点だけを3行で書く。取得件数、補完、未接続、AI判定、fallback、処理状況、Reddit件数などの運用説明は禁止。
 
 候補:
@@ -1015,7 +799,6 @@ function mergeAiItem(item, aiItem) {
   const headlineJa = String(aiItem.headlineJa || item.title);
   const aiSummary = String(aiItem.summaryJa || "");
   const aiDetail = String(aiItem.detailJa || "");
-  const summaryJa = isBadSummary(aiSummary) ? item.summaryJa : aiSummary || item.summaryJa;
   const aiScore = clampScore(aiItem.aiScore ?? aiItem.importanceScore ?? item.importanceScore);
   const importanceLabel =
     item.sourceType === "reddit" || aiItem.importanceLabel === "要注意"
@@ -1029,8 +812,8 @@ function mergeAiItem(item, aiItem) {
     title: headlineJa,
     headlineJa,
     originalTitle: item.originalTitle || item.title,
-    summaryJa,
-    detailJa: makeDistinctDetail(summaryJa, isBadSummary(aiDetail) ? item.detailJa : aiDetail || item.detailJa),
+    summaryJa: isBadSummary(aiSummary) ? item.summaryJa : aiSummary || item.summaryJa,
+    detailJa: isBadSummary(aiDetail) ? item.detailJa : aiDetail || item.detailJa,
     importanceScore: aiScore,
     aiScore,
     aiReason: String(aiItem.aiReason || item.whyItMattersJa),
@@ -1139,11 +922,6 @@ function sortItemsForDisplay(items) {
 }
 
 function hasHardRelevanceSignal(item) {
-  if (item.category === "official") {
-    const officialHaystack = `${item.originalTitle || ""} ${item.originalUrl || ""} ${item.summaryJa || ""}`.toLowerCase();
-    return hasUapRelevanceSignal(officialHaystack);
-  }
-
   if (item.category !== "news") {
     return true;
   }
@@ -1311,18 +1089,16 @@ function makeFallbackSummary(item) {
       : item.sourceType === "official"
         ? makeOfficialFallbackSummary(topic)
         : makeNewsFallbackSummaryFromTopic(topic);
-  const evidenceSummary = makeFallbackEvidenceSummary(item);
 
-  return makeConcreteSummary(isGenericFallbackSummary(summary) ? evidenceSummary : mergeSpecificSummary(summary, evidenceSummary), item);
+  return compactSentences(expandFallbackSummary(summary, item, topic));
 }
 
 function makeFallbackDetail(item) {
   const topic = makeSummaryTopic(item);
-  const topicDetail = makeFallbackDetailFromTopic(topic, item);
-  const evidenceDetail = makeFallbackEvidenceDetail(item);
-  const detail = isGenericFallbackDetail(topicDetail) ? evidenceDetail : mergeSpecificDetail(topicDetail, evidenceDetail);
+  const summary = makeFallbackSummary(item);
+  const detail = makeFallbackDetailFromTopic(topic, item);
 
-  return makeDistinctDetail(makeFallbackSummary(item), makeConcreteDetail(detail));
+  return compactSentences(`${summary}${detail ? ` ${detail}` : ""}`);
 }
 
 function makeFallbackTitle(item) {
@@ -1480,14 +1256,6 @@ function makeTitleDetail(item) {
     return "Mike Gold氏と宇宙政策";
   }
 
-  if (topic === "public-hearing-full") {
-    return "2023年UAP公聴会全編";
-  }
-
-  if (topic === "aaro-roundtable") {
-    return "AARO年次報告の記者説明";
-  }
-
   if (topic === "disclosure-investment") {
     return "ディスクロージャー投資テーマ";
   }
@@ -1550,14 +1318,6 @@ function makeTitleDetail(item) {
 
   if (/mike gold|uapist|space policy/.test(haystack)) {
     return "Mike Gold氏と宇宙政策";
-  }
-
-  if (/public hearing|in full|april 19, 2023/.test(haystack)) {
-    return "2023年UAP公聴会全編";
-  }
-
-  if (/kosloski|annual report|media roundtable/.test(haystack)) {
-    return "AARO年次報告の記者説明";
   }
 
   if (/investor|markets|etf/.test(haystack)) {
@@ -1684,7 +1444,7 @@ function makeNewsFallbackSummaryFromTopic(topic) {
     "foia-documents": "FOIAや公開文書を手がかりに、UAP関連資料の内容や公開状況を検証する記事です。",
     "disclosure-transparency": "UAP情報公開や透明性をめぐる制度・政治的な論点を扱っています。公開の進め方が焦点です。",
     "government-disclosure": "AARO、国防総省、PURSUEなど米政府側のUAP情報公開をめぐる動きを扱っています。",
-    "sighting-video": "UFO・UAP関連の映像や目撃情報を扱う記事です。撮影条件、元投稿、反証コメント、公式確認の有無が焦点です。",
+    "sighting-video": "UFO・UAP関連の映像や目撃情報を扱う記事です。検証材料の有無を意識して読む必要があります。",
   };
 
   return summaries[topic] || "UFO・UAP情報公開をめぐる周辺論点を扱っています。公式資料、報道、議会動向をあわせて読むための材料です。";
@@ -1697,143 +1457,75 @@ function makeRedditFallbackSummary(topic) {
     "reddit-wapo": "Washington Post記者がUAP/UFO議論への関心を示した投稿が注目されています。主要メディアの関与への期待が背景にあります。",
     "reddit-journalists": "調査報道や記者の役割に期待する投稿が話題になっています。公式発表だけでなく、外部検証を求める空気が見えます。",
     "reddit-government-criticism": "政府サイトや内部告発者への扱いをめぐる批判的な投稿です。公式確認とは別に、コミュニティの不信感を示しています。",
-    "reddit-congress": "議会、内部告発者、公聴会をめぐる投稿が話題です。公式な追加確認を要するコミュニティ発の論点です。",
+    "reddit-congress": "議会、内部告発者、公聴会をめぐる投稿が話題です。公式な追加確認が必要なコミュニティ発の論点です。",
   };
 
-  return summaries[topic] || "UAPコミュニティ内で注目されている投稿です。元リンクや一次資料とあわせて扱う話題です。";
+  return summaries[topic] || "UAPコミュニティ内で注目されている投稿です。公式情報ではないため、元リンクや一次資料とあわせて読む必要があります。";
 }
 
-function isGenericFallbackSummary(summary) {
-  return /周辺論点|動きです|確認する価値|情報公開をめぐる制度・資料面|関連資料や一次情報|コミュニティ内で注目/.test(
-    summary,
-  );
-}
-
-function isGenericFallbackDetail(detail) {
-  return /位置づけが分かりやす|見出しだけで断定|公式ソースの更新は頻度|今日のコミュニティの関心/.test(detail);
-}
-
-function mergeSpecificSummary(topicSummary, evidenceSummary) {
-  const topicSentences = splitSentences(topicSummary);
-  const evidenceSentences = splitSentences(evidenceSummary).filter((sentence) => !isAbstractClassificationSentence(sentence));
-  const merged = [...topicSentences, ...evidenceSentences].filter(Boolean);
-
-  return compactSentences(merged.slice(0, 2).join(""));
-}
-
-function mergeSpecificDetail(topicDetail, evidenceDetail) {
-  const detailSentences = [...splitSentences(topicDetail), ...splitSentences(evidenceDetail)];
-  const unique = [];
-
-  for (const sentence of detailSentences) {
-    const normalized = normalizeJapaneseText(sentence);
-
-    if (
-      !normalized ||
-      isAbstractClassificationSentence(sentence) ||
-      unique.some((existing) => normalizeJapaneseText(existing) === normalized)
-    ) {
-      continue;
-    }
-
-    unique.push(sentence);
+function expandFallbackSummary(summary, item, topic) {
+  if (summary.length >= 120) {
+    return summary;
   }
 
-  return compactSentences(unique.slice(0, 5).join(""));
-}
+  const additions = {
+    official:
+      "公式資料としての位置づけを確認し、後続の報道や議会論点とつながるかを見ると全体像を把握しやすくなります。",
+    news:
+      "一次資料や議会動向との接点を確認することで、単発記事ではなく今日の情報公開の流れとして読めます。",
+    reddit:
+      "コミュニティ発の未確認情報として扱い、公式資料や信頼できる報道で裏取りできる部分だけを切り分けて読む必要があります。",
+  };
 
-function makeConcreteSummary(summary, item) {
-  const cleaned = removeAbstractLeads(summary);
-  const sentences = splitSentences(cleaned).filter((sentence) => !isAbstractClassificationSentence(sentence));
-
-  if (sentences.length) {
-    return compactSentences(sentences.slice(0, 2).join(""));
+  if (topic === "sighting-video") {
+    return `${summary} 映像系の話題は拡散しやすいため、撮影条件、元投稿、反証コメント、公式確認の有無を分けて読む必要があります。`;
   }
 
-  return makeFallbackEvidenceSummary(item);
-}
-
-function makeConcreteDetail(detail) {
-  return compactSentences(
-    splitSentences(removeAbstractLeads(detail))
-      .filter((sentence) => !isAbstractClassificationSentence(sentence))
-      .slice(0, 5)
-      .join(""),
-  );
-}
-
-function removeAbstractLeads(text) {
-  return compactSentences(text)
-    .replace(/^(?:この記事|この記事では|記事|記事では)[は、]*/u, "")
-    .replace(/^(?:この公式資料|公式資料|この資料|資料|資料では)[は、]*/u, "")
-    .replace(/^(?:このReddit投稿|Reddit投稿|投稿|投稿では)[は、]*/u, "")
-    .replace(/^(?:この発表|発表|発表では)[は、]*/u, "");
-}
-
-function isAbstractClassificationSentence(sentence) {
-  return /^(?:この記事|記事|この資料|資料|この公式資料|公式資料|このReddit投稿|Reddit投稿|投稿|この発表|発表)は?「[^」]+」(?:を中心に)?扱っています。?$/.test(
-    sentence,
-  );
+  return `${summary} ${additions[item.sourceType] || additions.news}`;
 }
 
 function makeFallbackDetailFromTopic(topic, item) {
   const details = {
     "uap-registration":
-      "記事は、UAP関連の産業や研究主体を登録制度で扱う案を軸に、ディスクロージャーを単なる暴露ではなく制度設計として進める考え方を紹介しています。登録対象、情報公開、政府との関係整理が主な論点です。法案化や実施が確定した話ではなく、政策提案として扱います。",
+      "登録制度という切り口は、UAP関連の産業・研究・情報公開をどこまで公的な枠組みに入れるかという議論につながります。法案や制度案はすぐに実現するとは限りませんが、議会や政策側がUAP問題をどう扱おうとしているかを見る材料になります。",
     "doty-disinformation":
-      "記事はRichard Doty氏、Paul Bennewitz事件、偽情報工作の文脈を取り上げ、UAP内部告発や証言の信頼性をどう評価するかを扱っています。過去の情報操作が個人やコミュニティに与えた影響を振り返り、現在の匿名証言や内部告発を読む際の注意点につなげています。",
+      "Richard Doty氏やPaul Bennewitz事件に触れる話題は、UAP情報の信頼性を考えるうえで避けにくい文脈です。過去の偽情報工作や心理的影響の問題は、現在の内部告発、証言、匿名情報を評価する際の注意点にもつながります。",
     "information-gaps":
-      "記事は、UAPに関する情報ギャップを国家安全保障上の課題として扱い、議会や新政権に向けた改善案を論じています。焦点は目撃談そのものではなく、報告経路、分析体制、機関間共有、議会監督の不足です。制度改善の提案であり、新たな事例公開ではありません。",
-    "mike-gold":
-      "記事はMike Gold氏の発言を通じて、UAPIST、議会公聴会、宇宙政策の関係を扱っています。UAPを安全保障や情報公開だけでなく、宇宙政策・産業政策の文脈から見る内容です。人物インタビューや見解紹介が中心で、新たな公式資料公開ではありません。",
+      "国家安全保障上の情報ギャップという論点は、単なる目撃談ではなく、政府内の報告経路、分析体制、議会監督の問題としてUAPを扱う視点です。新政権や議会がどこまで制度改善に踏み込むかを見る材料になります。",
     "public-hearing-full":
-      "記事は、2023年4月19日のUAP公聴会を全編で確認できる資料として扱っています。議員の質問、証人の回答、政府側説明の流れをまとめて追えるため、短い引用では抜ける前後関係を確認できます。新情報の速報ではなく、過去公聴会を再確認する参照資料です。",
+      "公聴会の全編資料は、短い引用やSNS上の切り抜きでは分からない発言の前後関係を確認するために役立ちます。証言者が何を断定し、何を限定的に述べているのかを分けて読むことが重要です。",
     "aaro-roundtable":
-      "記事はAARO年次報告をめぐるJon Kosloski氏の記者説明を扱い、未解決事例、調査範囲、報告書の読み方に関する発言を整理しています。AARO側が何を説明し、何を断定していないかを確認する材料です。報告書本文との照合が前提になる記録です。",
+      "AARO年次報告や記者説明は、未解決事例の扱い、調査範囲、政府側の説明姿勢を読む一次寄りの材料です。報告書本文とあわせて見ることで、報道見出しだけでは抜けやすい制約や留保も確認できます。",
     "foia-withholding":
-      "記事は、17年続いたFOIA請求が最終的に全面不開示で終わった事例を扱っています。請求対象、機関側の不開示判断、長期化した経緯が中心です。UAP関連資料そのものの中身よりも、情報公開制度の限界と不透明さを示すケースとして読めます。",
+      "全面不開示や長期化したFOIA請求は、情報公開制度が機能している部分と限界の両方を示します。公開されない理由、対象文書、機関側の説明を確認すると、単なる秘匿ではなく制度上の争点として読めます。",
     "space-tiger-team":
-      "記事は、新公開文書に見える「Space Tiger Team」を取り上げ、宇宙領域やトランスメディア事例を含むUAP検討体制として紹介しています。チーム名、扱うケースの範囲、公開文書から読み取れる構成が主な内容です。文書名だけで活動実態を断定しない注意も必要です。",
+      "Space Tiger Team関連文書は、UAPを空中現象だけでなく宇宙・海中・複数領域の問題として扱う議論に関わります。文書名や抜粋だけでは中身を断定できないため、公開資料本文との照合が必要です。",
     "pursue-first-release":
-      "記事はPURSUEの初回公開を扱い、国防総省系のUAP文書や関連資料がどのような形で提示されたかを紹介しています。公開対象、資料の種類、今後の追加公開への期待が中心です。初回公開のため、資料の網羅性や更新方針は継続確認します。",
-    "pursue-politics":
-      "記事は、政権主導のUFOファイル公開やPURSUEの導入を政治的な情報公開施策として扱っています。大統領による公開姿勢、報告システム、国防総省系資料の見せ方が主な論点です。発表の演出と実際に確認できる資料内容の差が焦点です。",
-    "government-disclosure":
-      "記事は、AAROや国防総省など米政府側がUAP情報をどう説明し、どこまで公開できるのかを扱っています。焦点はUAPの存在断定ではなく、政府組織の説明能力、透明性、調査結果の出し方です。公式発表と記者・専門メディア側の評価を分けて確認する内容です。",
-    "disclosure-transparency":
-      "記事は、UAP情報公開と透明性をめぐる制度・政治的な争点を扱っています。公開請求、公聴会、機密指定、内部告発者保護のどれが論点になっているかを整理する内容です。新事実の断定より、公開プロセスのどこに課題があるかを見る記事です。",
-    "burchett-pentagon-files":
-      "記事はTim Burchett議員の発言を通じて、国防総省のUFOファイル公開が議会内の関心を高めたという見方を紹介しています。焦点は資料そのものの中身より、公開後の政治的反応と議会側の圧力です。発言記事なので、追加資料公開の有無は別途確認します。",
-    "media-reaction":
-      "記事は、国防総省のUFO文書公開に対する主要メディアの反応を整理しています。どの媒体がどの見出しで扱ったか、公開資料が一般報道でどう受け止められたかが中心です。資料の一次分析ではなく、報道環境の変化を見るまとめ記事です。",
-    "disclosure-investment":
-      "記事は、UFOディスクロージャーを市場や投資テーマとして読む視点を扱っています。情報公開が宇宙産業、防衛、テクノロジー銘柄などに影響し得るという仮説が中心です。投資助言ではなく、UAP情報公開が経済面でどう語られるかを見る記事です。",
-    "ocean-energy":
-      "記事は、海洋での異変、真空エネルギー、国防総省UFOファイルなど複数のUAP周辺話題をまとめています。単一の新資料ではなく、科学・エネルギー・国防情報公開を横断する編集記事です。各話題の根拠や一次情報は個別に確認します。",
+      "PURSUEは政府系UAP資料公開の導線として注目されます。初回公開は資料の範囲、更新頻度、映像や文書の扱い方を見る基準になり、今後の追加公開を評価するための起点になります。",
     "uap-video-release":
-      "記事は、PURSUEなどを通じて新たなUAP映像が公開される可能性を扱っています。焦点は、公開予定の映像の数や性質、国防総省側の説明、既存文書との関係です。映像の由来、撮影条件、分析結果が公開時にどこまで示されるかは未確認です。",
+      "映像公開の見通しは注目されやすい一方、映像だけでは由来や分析結果が不足しがちです。公開時には撮影条件、センサー情報、政府側の説明、独立検証の有無をあわせて確認する必要があります。",
     "hearing-schedule":
-      "資料は、UAP透明性と内部告発者保護をテーマにした米下院公聴会の予定を示しています。公聴会名、開催日時、議題が中心で、議会が情報公開と証言保護を公式な論点として扱うことが分かります。証人や提出資料の詳細は元ページで確認します。",
+      "公聴会予定は、議会がどの証人や論点を選ぶかによって重みが変わります。内部告発者保護、情報公開、国防総省や情報機関への監督がどこまで議題化されるかが焦点になります。",
     "hearing-opening":
-      "資料は、ルナ議員によるUAP透明性公聴会の開会発言を掲載しています。発言では、UAPに関する調査や活動を持つ機関への監督、透明性の必要性、政府説明への問題意識が示されています。公聴会全体の問題設定を読むための一次資料です。",
+      "開会発言は公聴会全体の問題設定を示します。個別の証言より前に、議会側が透明性、機密指定、内部告発者保護をどの優先順位で扱うかを確認できます。",
     "hearing-wrap":
-      "資料は、UAP公聴会後に下院監視委側が公表した要点まとめです。政府にさらなる透明性を求める姿勢、証言や議論で強調された論点、今後の監督姿勢が整理されています。公聴会の全発言ではなく、委員会側が残した公式サマリーです。",
+      "公聴会後のまとめは、議会側がどの発言や争点を公式に残したいかを示します。証言内容そのものに加えて、今後の追加資料要求や法案議論につながるかが読みどころです。",
     "nara-guidance":
-      "資料は、National Archivesが連邦機関向けに示したUAP記録コレクションのガイダンスです。各機関がUAP関連記録をどう識別し、移管や管理の対象にするかが中心です。新たなUAP事例の公開ではなく、2024年NDAA以後の記録整理プロセスを示す公式資料です。",
+      "NARAのUAP記録コレクションは、2024年NDAA以後の記録整理や移管の基盤になります。すぐに新事実が出る話ではなくても、各機関がどの文書をどう扱うかを見るうえで重要な公式導線です。",
     "counter-uas":
-      "発表は、Joint Task Forceが6億ドル超を投じて新たなCounter-UAS能力を調達する内容です。対象はUAPそのものではなく、無人航空システムへの対処能力です。空中対象の検知・追跡・識別という周辺領域として関連しますが、UAP事例の発表ではありません。",
+      "対UASの話題はUAPそのものとは異なりますが、未確認の空中対象を検知・追跡・識別する技術や運用と重なる部分があります。UAP報道と混同せず、防衛・空域監視の周辺文脈として読むのが適切です。",
     "reddit-war-archive":
-      "投稿は、war.gov上の公式UFO・UAPファイルを見やすく整理したインタラクティブアーカイブの共有です。話題の中心は、公式資料への導線、検索しやすさ、資料整理の見せ方です。投稿者作成の整理であり、資料本文や公開日は公式サイト側で照合します。",
+      "資料アーカイブの共有は便利ですが、整理の仕方やリンク選定は投稿者に依存します。公式サイト上の原文、公開日、資料名を確認し、コメント欄の解釈と一次資料を分けて読む必要があります。",
     "reddit-ap-press":
-      "投稿は、6月9日の記者会見、議員、内部告発者、UFOファイル公開要求、Grusch氏への言及をまとめて話題化しています。証言から行動へ移るべきだという趣旨の引用が注目点です。Reddit投稿由来のため、実際の会見告知や関係者の公式発表で確認します。",
+      "記者会見や公開要求に関する投稿は、行動喚起として広がりやすい性質があります。実際にどの議員や団体が関与しているのか、公式な告知や報道があるのかを確認すると、話題の強さと事実関係を分けられます。",
     "reddit-wapo":
-      "投稿は、Washington Post記者を名乗る人物が現在のUAP/UFO discourseへの関心を示した内容です。コミュニティでは、主要メディアがこの分野をどう扱うか、どの論点を取材対象にするかへの期待が集まっています。投稿時点では記事化や取材成果を意味しない未確認情報です。",
+      "主要メディア記者への期待は、UAP問題を一般報道がどこまで扱うかという関心を反映しています。ただし投稿時点では取材着手や記事化を意味しないため、実際の報道公開までは未確認の話題として扱います。",
     "reddit-journalists":
-      "投稿は、UAP問題の解明には調査報道が重要だという主張を前面に出しています。公式発表だけでは不十分だとする不満、記者や報道機関への期待、外部検証を求める空気が中心です。具体的な新資料や公式発表ではなく、コミュニティ内の問題提起です。",
+      "調査報道への期待は、公式発表だけでは不十分だと感じるコミュニティの空気を示します。記者名、媒体、過去記事、公開予定の有無を確認し、憶測と実際の取材成果を切り分けて読む必要があります。",
     "reddit-government-criticism":
-      "投稿は、政府サイトや内部告発者への扱いを批判し、議会で証言した人物を貶めているという不満を示しています。ALIENS.GOVサイトへの批判と謝罪要求が主な内容です。感情的な主張を含むReddit投稿であり、公式資料や議会発言とは分けて確認します。",
+      "政府対応への批判は、透明性への不満や内部告発者保護への関心を示します。ただし感情的な反応も混ざりやすいため、公式資料、議会発言、信頼できる報道で確認できる要素だけを拾うのが安全です。",
     "reddit-congress":
-      "投稿は、議会、内部告発者、公聴会、記者会見に関する断片的な情報をめぐる話題です。コミュニティでは、証言が次の公開要求や政治的行動につながるかが関心になっています。引用や日程が混ざりやすいため、公聴会資料、議員発表、公式動画で確認します。",
+      "議会や内部告発者に関する投稿は、コミュニティ内では関心が高い一方、未確認の引用や断片情報が混ざりやすい領域です。公聴会資料、議員発表、公式動画など一次情報にたどれるかを確認してください。",
   };
 
   if (details[topic]) {
@@ -1841,7 +1533,7 @@ function makeFallbackDetailFromTopic(topic, item) {
   }
 
   if (item.sourceType === "reddit") {
-    return "ネット上の話題は、今日のコミュニティの関心や疑問を知るには役立ちます。ただし公式確認前の投稿や解釈が含まれるため、元投稿、リンク先、コメント欄の反証、一次資料の有無を分けて扱います。";
+    return "ネット上の話題は、今日のコミュニティの関心や疑問を知るには役立ちます。ただし公式確認前の投稿や解釈が含まれるため、元投稿、リンク先、コメント欄の反証、一次資料の有無を分けて読む必要があります。";
   }
 
   if (item.sourceType === "official") {
@@ -1853,64 +1545,6 @@ function makeFallbackDetailFromTopic(topic, item) {
 
 function compactSentences(text) {
   return String(text).replace(/\s+/g, " ").replace(/([。！？])\s+/g, "$1").trim();
-}
-
-function makeDistinctDetail(summary, detail) {
-  const summaryText = compactSentences(summary);
-  const summarySentences = splitSentences(summaryText);
-  const detailSentences = splitSentences(detail);
-  const filtered = detailSentences.filter((sentence) => {
-    const normalized = normalizeJapaneseText(sentence);
-
-    return !summarySentences.some((summarySentence) => {
-      const normalizedSummary = normalizeJapaneseText(summarySentence);
-      return (
-        normalized &&
-        normalizedSummary &&
-        (normalized === normalizedSummary ||
-          normalized.includes(normalizedSummary) ||
-          normalizedSummary.includes(normalized) ||
-          textSimilarity(normalized, normalizedSummary) >= 0.68)
-      );
-    });
-  });
-
-  return compactSentences(filtered.join(""));
-}
-
-function splitSentences(text) {
-  return compactSentences(text)
-    .split(/(?<=[。！？])/)
-    .map((sentence) => sentence.trim())
-    .filter(Boolean);
-}
-
-function normalizeJapaneseText(text) {
-  return String(text).replace(/\s+/g, "").replace(/[、。！？「」『』（）()]/g, "");
-}
-
-function textSimilarity(left, right) {
-  const leftParts = characterBigrams(left);
-  const rightParts = characterBigrams(right);
-
-  if (!leftParts.size || !rightParts.size) {
-    return 0;
-  }
-
-  const intersection = [...leftParts].filter((part) => rightParts.has(part)).length;
-  const union = new Set([...leftParts, ...rightParts]).size;
-  return intersection / union;
-}
-
-function characterBigrams(value) {
-  const text = String(value);
-  const parts = new Set();
-
-  for (let index = 0; index < text.length - 1; index += 1) {
-    parts.add(text.slice(index, index + 2));
-  }
-
-  return parts;
 }
 
 function ensureUniqueHeadlines(items) {
@@ -2122,11 +1756,7 @@ function isOperationalSummaryLine(line) {
 }
 
 function isBadSummary(line) {
-  return (
-    /取得|取得しました|記事として|公式資料・リリースとして取得|原題と取得情報|参考情報です|位置づけを確認|接点を確認|全体像を把握|読む必要があります/.test(
-      String(line),
-    ) || isAbstractClassificationSentence(String(line))
-  );
+  return /取得|取得しました|記事として|公式資料・リリースとして取得|原題と取得情報|参考情報です/.test(String(line));
 }
 
 function parseDate(value) {
