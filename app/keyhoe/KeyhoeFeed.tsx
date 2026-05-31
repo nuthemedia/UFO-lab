@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { formatKeyhoeUpdatedAt } from "./format";
 
 type KeyhoeCategory = "all" | "official" | "news" | "buzz";
+type KeyhoeSortMode = "importance" | "latest";
 
 type KeyhoeItem = {
   id: string;
@@ -22,8 +23,10 @@ type KeyhoeItem = {
   cautionNote: string;
   originalUrl: string;
   publishedAt: string;
+  publishedAtKnown?: boolean;
   freshnessLabel?: "今日" | "最近の更新" | "最近の公式更新" | "公式資料" | "最近の話題";
   collectionNote?: string;
+  collectionMethod?: string;
   aiScore?: number;
   aiReason?: string;
   tags?: string[];
@@ -65,17 +68,53 @@ function emptyCategoryMessage(category: KeyhoeCategory) {
   return "このカテゴリで表示できるニュースはありません。";
 }
 
+function itemScore(item: KeyhoeItem) {
+  return item.aiScore ?? item.importanceScore;
+}
+
+function latestTime(item: KeyhoeItem) {
+  if (item.publishedAtKnown === false || item.freshnessLabel === "公式資料") {
+    return 0;
+  }
+
+  const time = new Date(item.publishedAt).getTime();
+  return Number.isFinite(time) ? time : 0;
+}
+
+function sortKeyhoeItems(items: KeyhoeItem[], sortMode: KeyhoeSortMode) {
+  return [...items].sort((left, right) => {
+    if (sortMode === "latest") {
+      const timeDiff = latestTime(right) - latestTime(left);
+      if (timeDiff !== 0) {
+        return timeDiff;
+      }
+
+      return itemScore(right) - itemScore(left);
+    }
+
+    const scoreDiff = itemScore(right) - itemScore(left);
+    if (scoreDiff !== 0) {
+      return scoreDiff;
+    }
+
+    return latestTime(right) - latestTime(left);
+  });
+}
+
 export function KeyhoeFeed({ summary, categories, items, generatedAt }: KeyhoeFeedProps) {
   const feedRef = useRef<HTMLDivElement | null>(null);
   const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({});
   const [expandedDetails, setExpandedDetails] = useState<Record<string, boolean>>({});
   const [activeCategory, setActiveCategory] = useState<KeyhoeCategory>("all");
+  const [sortMode, setSortMode] = useState<KeyhoeSortMode>("importance");
   const initialVisibleCount = 12;
   const generatedLabel = formatKeyhoeUpdatedAt(generatedAt);
-  const categoryItems =
+  const filteredItems =
     activeCategory === "all" ? items : items.filter((item) => item.category === activeCategory);
+  const categoryItems = sortKeyhoeItems(filteredItems, sortMode);
   const activeCategoryLabel = categories.find((category) => category.id === activeCategory)?.label ?? "すべて";
-  const isExpanded = expandedCategories[activeCategory];
+  const expansionKey = `${activeCategory}:${sortMode}`;
+  const isExpanded = expandedCategories[expansionKey];
   const visibleItems = isExpanded ? categoryItems : categoryItems.slice(0, initialVisibleCount);
   const hasMoreItems = categoryItems.length > visibleItems.length;
 
@@ -200,7 +239,7 @@ export function KeyhoeFeed({ summary, categories, items, generatedAt }: KeyhoeFe
       headObserver.disconnect();
       cardObserver.disconnect();
     };
-  }, [activeCategory, expandedCategories]);
+  }, [activeCategory, expandedCategories, sortMode]);
 
   return (
     <div className="keyhoe-feed-root" ref={feedRef}>
@@ -230,6 +269,28 @@ export function KeyhoeFeed({ summary, categories, items, generatedAt }: KeyhoeFe
           </button>
         ))}
       </nav>
+
+      <div className="keyhoe-sort-control" aria-label="並び替え">
+        <span>並び替え</span>
+        <div className="keyhoe-sort-buttons" role="group" aria-label="並び替え">
+          <button
+            aria-pressed={sortMode === "importance"}
+            className={sortMode === "importance" ? "is-active" : undefined}
+            type="button"
+            onClick={() => setSortMode("importance")}
+          >
+            重要順
+          </button>
+          <button
+            aria-pressed={sortMode === "latest"}
+            className={sortMode === "latest" ? "is-active" : undefined}
+            type="button"
+            onClick={() => setSortMode("latest")}
+          >
+            最新
+          </button>
+        </div>
+      </div>
 
       {items.length === 0 ? (
         <section className="keyhoe-empty" aria-label="取得結果なし">
@@ -326,7 +387,7 @@ export function KeyhoeFeed({ summary, categories, items, generatedAt }: KeyhoeFe
                   onClick={() =>
                     setExpandedCategories((current) => ({
                       ...current,
-                      [activeCategory]: true,
+                      [expansionKey]: true,
                     }))
                   }
                 >

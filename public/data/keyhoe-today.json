@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-05-31T04:00:44.604Z",
+  "generatedAt": "2026-05-31T04:32:25.582Z",
   "sourceMode": "live-fallback",
   "overallSummary": [
-    "公式側は、House OversightのUAP関連資料の要請書とNational Archives UAPの記録管理ガイダンスが目立ちます。",
-    "専門メディアでは、Liberation TimesのPURSUE公開の政治的文脈とAsk a Pol UAPのBurchett議員発言が目立ちます。",
-    "ネット上では、政府対応への批判や不信感をめぐる投稿とJohn Michael GodierとUAP Gerbのコラボ投稿が話題です。"
+    "公式側は、House OversightのUAP関連資料の要請書とNARAの記録管理ガイダンスが焦点です。",
+    "専門メディアでは、Liberation TimesのPURSUE公開の政治的文脈とAsk a PolのBurchett議員発言が読まれています。",
+    "ネット上では、政府対応への批判とJohn Michael Godier関連投稿が話題です。"
   ],
   "items": [
     {
@@ -695,7 +695,7 @@
       "reliabilityLabel": "高",
       "cautionNote": "",
       "originalUrl": "https://www.archives.gov/records-mgmt/uap-guidance",
-      "publishedAt": "2026-05-31T04:00:44.604Z",
+      "publishedAt": "2026-05-31T04:32:25.582Z",
       "publishedAtKnown": false,
       "freshnessLabel": "公式資料",
       "collectionMethod": "official-document",
@@ -724,7 +724,7 @@
       "reliabilityLabel": "高",
       "cautionNote": "",
       "originalUrl": "https://oversight.house.gov/hearing/restoring-public-trust-through-uap-transparency-and-whistleblower-protection/?highlight=UAP",
-      "publishedAt": "2026-05-31T04:00:44.604Z",
+      "publishedAt": "2026-05-31T04:32:25.582Z",
       "publishedAtKnown": false,
       "freshnessLabel": "公式資料",
       "collectionMethod": "search",
@@ -754,7 +754,7 @@
       "reliabilityLabel": "高",
       "cautionNote": "",
       "originalUrl": "https://oversight.house.gov/release/luna-opens-hearing-on-restoring-public-trust-through-uap-transparency/?highlight=UAP",
-      "publishedAt": "2026-05-31T04:00:44.604Z",
+      "publishedAt": "2026-05-31T04:32:25.582Z",
       "publishedAtKnown": false,
       "freshnessLabel": "公式資料",
       "collectionMethod": "search",

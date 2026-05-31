@@ -981,7 +981,7 @@ async function enrichWithOpenAi(items) {
 - detailJaの冒頭に「この記事は」「この資料は」「この公式資料は」「このReddit投稿は」を置かない。分類導入ではなく具体内容から始める。
 - Reddit/SNS由来のdetailJaには、投稿で何が話題かを具体的に書いたうえで、コミュニティ発・未確認であることを自然に含める。
 - 「位置づけを確認」「接点を確認」「全体像を把握」「読む必要があります」などの汎用的な締め文は禁止。
-- overallSummaryはニュース内容・論点だけを3行で書く。取得件数、補完、未接続、AI判定、fallback、処理状況、Reddit件数などの運用説明は禁止。
+- overallSummaryはニュース内容・論点だけを3行で書く。各行に固有名詞、資料名、人物名、制度名、投稿テーマのいずれかを入れ、「関連論点」「注目投稿」「中心論点」だけで終わる抽象文は禁止。取得件数、補完、未接続、AI判定、fallback、処理状況、Reddit件数などの運用説明も禁止。
 
 候補:
 ${JSON.stringify(compactItems)}`,
@@ -2065,19 +2065,18 @@ function makeFallbackOverallSummary(items) {
 
 function makeOfficialSummaryLine(items) {
   const officialItems = items.filter((item) => item.category === "official");
+  const highlights = makeOverviewHighlights(officialItems);
 
   if (!officialItems.length) {
     return "公式機関から大きな新発表は見当たらず、既存資料の確認が中心です。";
   }
 
-  const highlights = makeOverviewHighlights(officialItems);
-
   if (highlights.length === 1) {
-    return `公式側は、${highlights[0]}が中心です。`;
+    return `公式側は、${highlights[0]}が焦点です。`;
   }
 
   if (highlights.length >= 2) {
-    return `公式側は、${highlights[0]}と${highlights[1]}が目立ちます。`;
+    return `公式側は、${highlights[0]}と${highlights[1]}が焦点です。`;
   }
 
   return "公式ソースでは、UAP透明性や一次資料の更新確認が中心です。";
@@ -2085,19 +2084,18 @@ function makeOfficialSummaryLine(items) {
 
 function makeNewsSummaryLine(items) {
   const newsItems = items.filter((item) => item.category === "news");
+  const highlights = makeOverviewHighlights(newsItems);
 
   if (!newsItems.length) {
     return "専門メディアでは、目立った新規論点より既存テーマの確認が中心です。";
   }
 
-  const highlights = makeOverviewHighlights(newsItems);
-
   if (highlights.length === 1) {
-    return `専門メディアでは、${highlights[0]}が目立ちます。`;
+    return `専門メディアでは、${highlights[0]}が読まれています。`;
   }
 
   if (highlights.length >= 2) {
-    return `専門メディアでは、${highlights[0]}と${highlights[1]}が目立ちます。`;
+    return `専門メディアでは、${highlights[0]}と${highlights[1]}が読まれています。`;
   }
 
   return "専門メディアでは、UAP情報公開をめぐる制度・資料面の論点が続いています。";
@@ -2124,7 +2122,17 @@ function makeBuzzSummaryLine(items) {
 }
 
 function makeOverviewHighlights(items) {
-  return items.slice(0, 2).map((item) => `${item.sourceName}の${makeTitleDetail(item)}`);
+  return items
+    .map((item) => {
+      const detail = makeTitleDetail(item);
+      if (!detail || /関連論点|注目投稿|中心論点/.test(detail)) {
+        return "";
+      }
+
+      return `${simplifySourceName(item.sourceName)}の${detail}`;
+    })
+    .filter(Boolean)
+    .slice(0, 2);
 }
 
 function makeBuzzOverviewHighlights(items) {
@@ -2150,6 +2158,22 @@ function makeBuzzOverviewHighlight(item) {
   const originalTitle = String(item.originalTitle || "");
   const haystack = `${headline} ${originalTitle}`.toLowerCase();
 
+  if (/john michael godier|event horizon|uap gerb/.test(haystack)) {
+    return "John Michael Godier関連投稿";
+  }
+
+  if (/government|administration|aliens\.gov|批判|不信/.test(haystack)) {
+    return "政府対応への批判";
+  }
+
+  if (/war\.gov|pursue|archive|document|資料/.test(haystack)) {
+    return "war.gov資料アーカイブ共有";
+  }
+
+  if (/associated press|press conference|記者会見/.test(haystack)) {
+    return "AP記者会見関連投稿";
+  }
+
   if (!/ufo・uapコミュニティの注目投稿/.test(haystack)) {
     return headline;
   }
@@ -2167,6 +2191,22 @@ function makeBuzzOverviewHighlight(item) {
   }
 
   return originalTitle ? cleanText(originalTitle).slice(0, 34) : headline;
+}
+
+function simplifySourceName(sourceName) {
+  if (/National Archives/i.test(sourceName)) {
+    return "NARA";
+  }
+
+  if (/House Oversight/i.test(sourceName)) {
+    return "House Oversight";
+  }
+
+  if (/Ask a Pol/i.test(sourceName)) {
+    return "Ask a Pol";
+  }
+
+  return sourceName;
 }
 
 function itemText(item) {

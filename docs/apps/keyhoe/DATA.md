@@ -17,6 +17,8 @@ The feed includes:
 
 Important item fields include `headlineJa`, `originalTitle`, `summaryJa`, `detailJa`, `sourceName`, `category`, `importanceScore`, `importanceLabel`, `whyItMattersJa`, `reliabilityLabel`, `cautionNote`, `originalUrl`, `freshnessLabel`, `tags`, and `selectionMode`.
 
+The UI defaults to importance order. Latest order prioritizes items with known `publishedAt`; date-unknown official documents or `公式資料` cards stay lower so they are not mistaken for new updates.
+
 ## Scripts
 
 - `npm run keyhoe:build`: generate `public/data/keyhoe-today.json`.
