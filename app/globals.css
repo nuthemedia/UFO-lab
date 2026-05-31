@@ -7735,6 +7735,9 @@ h3 {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+}
+
 .keyhoe-page {
   --keyhoe-bg: #f7f8f5;
   --keyhoe-card: #ffffff;
