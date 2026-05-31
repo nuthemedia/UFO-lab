@@ -4,6 +4,7 @@
 
 - `data/keyhoe/sources.json`: configured official, news, and online discussion sources.
 - `public/data/keyhoe-today.json`: generated feed consumed by the UI.
+- `/keyhoe` reads `public/data/keyhoe-today.json` at request time, so rebuilding the JSON updates the page on the next refresh.
 - Reddit sources: `r/UFOs`, `r/UAP`, and `r/UFOB`.
 
 ## Generated Feed

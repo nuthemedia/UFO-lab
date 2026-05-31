@@ -918,7 +918,9 @@ function fallbackEnrich(items) {
       cautionNote: makeCautionNote(item),
       originalUrl: item.originalUrl,
       publishedAt: item.publishedAt,
+      publishedAtKnown: item.publishedAtKnown,
       freshnessLabel: item.freshnessLabel,
+      collectionMethod: item.collectionMethod,
       collectionNote: item.collectionNote,
       aiScore: importanceScore,
       aiReason: makeFallbackReason(item, importanceScore),
@@ -1134,8 +1136,16 @@ function sortItemsForDisplay(items) {
       return scoreDiff;
     }
 
-    return new Date(right.publishedAt).getTime() - new Date(left.publishedAt).getTime();
+    return sortDateValue(right) - sortDateValue(left);
   });
+}
+
+function sortDateValue(item) {
+  if (item.publishedAtKnown === false || item.freshnessLabel === "公式資料") {
+    return 0;
+  }
+
+  return new Date(item.publishedAt).getTime();
 }
 
 function hasHardRelevanceSignal(item) {
@@ -1278,6 +1288,20 @@ function scoreItem(item) {
 
   if (/video|sighting|orb|drone|reddit|posted/.test(haystack) || item.sourceType === "reddit") {
     score -= 1;
+  }
+
+  if (!item.publishedAtKnown) {
+    score -= 4;
+  } else {
+    const ageHours = hoursSince(item.publishedAt);
+
+    if (ageHours <= 24) {
+      score += 1;
+    } else if (ageHours <= 24 * 7) {
+      score += 0.5;
+    } else if (ageHours > 24 * 30) {
+      score -= 1;
+    }
   }
 
   if (item.scoreHint > 300) {
@@ -1526,6 +1550,10 @@ function makeTitleDetail(item) {
 
   if (topic === "hearing-opening") {
     return "公聴会開会発言";
+  }
+
+  if (/uap request letter|request letter/.test(haystack)) {
+    return "UAP関連資料の要請書";
   }
 
   if (topic === "nara-guidance") {
@@ -2031,60 +2059,45 @@ function makeFallbackOverallSummary(items) {
   const officialLine = makeOfficialSummaryLine(sortedItems);
   const newsLine = makeNewsSummaryLine(sortedItems);
   const buzzLine = makeBuzzSummaryLine(sortedItems);
-  const fallbackLines = [
-    "今日は大きな新発表より、既存資料・議会・情報公開を追う流れが中心です。",
-    "専門メディアでは、UAP透明性や政府資料の読み解きが主な論点です。",
-    "ネット上では、公式資料や報道への反応が静かに話題になっています。",
-  ];
 
-  return [officialLine, newsLine, buzzLine, ...fallbackLines].filter(Boolean).slice(0, 3);
+  return [officialLine, newsLine, buzzLine].filter(Boolean).slice(0, 3);
 }
 
 function makeOfficialSummaryLine(items) {
   const officialItems = items.filter((item) => item.category === "official");
-  const haystack = officialItems.map(itemText).join(" ").toLowerCase();
 
   if (!officialItems.length) {
     return "公式機関から大きな新発表は見当たらず、既存資料の確認が中心です。";
   }
 
-  if (/house|senate|congress|hearing|oversight|luna|burchett|議会/.test(haystack)) {
-    return "米議会のUAP透明性や公聴会関連資料が、公式側の中心論点です。";
+  const highlights = makeOverviewHighlights(officialItems);
+
+  if (highlights.length === 1) {
+    return `公式側は、${highlights[0]}が中心です。`;
   }
 
-  if (/nara|national archives|records collection|guidance/.test(haystack)) {
-    return "National ArchivesのUAP記録コレクション関連資料が一次情報の軸です。";
+  if (highlights.length >= 2) {
+    return `公式側は、${highlights[0]}と${highlights[1]}が目立ちます。`;
   }
 
-  if (/aaro|pursue|defense|war\.gov|pentagon/.test(haystack)) {
-    return "AAROや国防総省系の資料公開をめぐる確認が続いています。";
-  }
-
-  return "公式ソースでは、UAP関連資料や一次情報の更新確認が中心です。";
+  return "公式ソースでは、UAP透明性や一次資料の更新確認が中心です。";
 }
 
 function makeNewsSummaryLine(items) {
   const newsItems = items.filter((item) => item.category === "news");
-  const haystack = newsItems.map(itemText).join(" ").toLowerCase();
 
   if (!newsItems.length) {
     return "専門メディアでは、目立った新規論点より既存テーマの確認が中心です。";
   }
 
-  if (/foia|black vault|document|record|資料/.test(haystack)) {
-    return "専門メディアでは、FOIAや公開資料を手がかりにした検証記事が目立ちます。";
+  const highlights = makeOverviewHighlights(newsItems);
+
+  if (highlights.length === 1) {
+    return `専門メディアでは、${highlights[0]}が目立ちます。`;
   }
 
-  if (/pursue|pentagon|defense|war\.gov|aaro/.test(haystack)) {
-    return "専門メディアでは、米政府のUAP情報公開とPURSUE関連の論点が続いています。";
-  }
-
-  if (/congress|hearing|whistleblower|grusch|議会|証言/.test(haystack)) {
-    return "報道では、議会・証言・透明性をめぐる政治的な圧力が焦点です。";
-  }
-
-  if (/disclosure|transparency/.test(haystack)) {
-    return "報道では、UAP情報公開と透明性をどう進めるかが主な論点です。";
+  if (highlights.length >= 2) {
+    return `専門メディアでは、${highlights[0]}と${highlights[1]}が目立ちます。`;
   }
 
   return "専門メディアでは、UAP情報公開をめぐる制度・資料面の論点が続いています。";
@@ -2092,25 +2105,68 @@ function makeNewsSummaryLine(items) {
 
 function makeBuzzSummaryLine(items) {
   const buzzItems = items.filter((item) => item.category === "buzz");
-  const haystack = buzzItems.map(itemText).join(" ").toLowerCase();
 
   if (!buzzItems.length) {
     return "ネット上の話題は限定的で、報道や公式資料への反応が中心です。";
   }
 
-  if (/archive|documents?|files?|war\.gov|pursue|資料|アーカイブ/.test(haystack)) {
-    return "ネット上では、war.govや公式UAP資料アーカイブへの関心が集まっています。";
+  const highlights = makeBuzzOverviewHighlights(buzzItems);
+
+  if (highlights.length === 1) {
+    return `ネット上では、${highlights[0]}が話題です。`;
   }
 
-  if (/associated press|press conference|congress|whistleblower|grusch|hearing|議会/.test(haystack)) {
-    return "ネット上では、議会・内部告発者・記者会見をめぐる投稿が話題です。";
-  }
-
-  if (/journalist|investigative|washington post|reporter|報道/.test(haystack)) {
-    return "ネット上では、調査報道や主要メディアの関与への期待が話題です。";
+  if (highlights.length >= 2) {
+    return `ネット上では、${highlights[0]}と${highlights[1]}が話題です。`;
   }
 
   return "ネット上では、公式資料や報道への反応がUAPコミュニティで話題です。";
+}
+
+function makeOverviewHighlights(items) {
+  return items.slice(0, 2).map((item) => `${item.sourceName}の${makeTitleDetail(item)}`);
+}
+
+function makeBuzzOverviewHighlights(items) {
+  const highlights = [];
+
+  for (const item of items.slice(0, 3)) {
+    const headline = makeBuzzOverviewHighlight(item);
+
+    if (headline && !highlights.includes(headline)) {
+      highlights.push(headline);
+    }
+
+    if (highlights.length === 2) {
+      break;
+    }
+  }
+
+  return highlights;
+}
+
+function makeBuzzOverviewHighlight(item) {
+  const headline = String(item.title || "").replace(/^Redditで話題：/, "");
+  const originalTitle = String(item.originalTitle || "");
+  const haystack = `${headline} ${originalTitle}`.toLowerCase();
+
+  if (!/ufo・uapコミュニティの注目投稿/.test(haystack)) {
+    return headline;
+  }
+
+  if (/john michael godier|event horizon|uap gerb/.test(haystack)) {
+    return "John Michael GodierとUAP Gerbのコラボ投稿";
+  }
+
+  if (/burlison|mitre|whistleblower|pentagon|contractors/.test(haystack)) {
+    return "Burlison議員と防衛請負業者資料をめぐる投稿";
+  }
+
+  if (/dutch|50k|signatures|netherlands/.test(haystack)) {
+    return "オランダのUFO情報公開署名運動";
+  }
+
+  return originalTitle ? cleanText(originalTitle).slice(0, 34) : headline;
 }
 
 function itemText(item) {

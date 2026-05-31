@@ -1,13 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { readFile } from "node:fs/promises";
+import { resolve } from "node:path";
 import { SiteFooter } from "@/components/SiteFooter";
 import { siteConfig } from "@/lib/site";
 import { siteUrl } from "@/lib/seo";
 import { KeyhoeFeed, type KeyhoeFeedProps } from "./KeyhoeFeed";
 import { formatKeyhoeUpdatedAt } from "./format";
-import keyhoeToday from "@/public/data/keyhoe-today.json";
 
 type KeyhoeCategory = "all" | "official" | "news" | "buzz";
+
+type KeyhoeTodayData = {
+  generatedAt: string;
+  overallSummary: string[];
+  items: KeyhoeFeedProps["items"];
+};
 
 const title = "Keyhoe v0.5 - 海外UFO・UAPニュース日本語チェッカー | UFO Lab Tokyo";
 const description =
@@ -54,8 +61,17 @@ const categories: Array<{ id: KeyhoeCategory; label: string }> = [
   { id: "buzz", label: "ネットの話題" },
 ];
 
-export default function KeyhoePage() {
-  const items = [...(keyhoeToday.items as KeyhoeFeedProps["items"])].sort(
+export const dynamic = "force-dynamic";
+
+async function loadKeyhoeToday(): Promise<KeyhoeTodayData> {
+  const filePath = resolve(process.cwd(), "public/data/keyhoe-today.json");
+  const json = await readFile(filePath, "utf8");
+  return JSON.parse(json) as KeyhoeTodayData;
+}
+
+export default async function KeyhoePage() {
+  const keyhoeToday = await loadKeyhoeToday();
+  const items = [...keyhoeToday.items].sort(
     (left, right) => right.importanceScore - left.importanceScore,
   );
 
