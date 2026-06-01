@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root {
   --bg: #f6f7f3;
   --surface: #ffffff;
@@ -34,6 +36,32 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+@keyframes jacques-motif-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(251, 191, 36, 0.18);
+    opacity: 0.9;
+  }
+
+  50% {
+    box-shadow:
+      0 0 18px rgba(251, 191, 36, 0.42),
+      0 0 30px rgba(110, 231, 183, 0.16);
+    opacity: 1;
+  }
+}
+
+.jacques-motif-glow {
+  animation: jacques-motif-glow 1.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .jacques-motif-glow {
+    animation: none;
+    box-shadow: 0 0 18px rgba(251, 191, 36, 0.26);
+  }
 }
 
 .site-header {
