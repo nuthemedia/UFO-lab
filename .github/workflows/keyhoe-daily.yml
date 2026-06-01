@@ -25,6 +25,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Verify production routes
+        run: npm run verify:production-routes
+
       - name: Build Keyhoe data
         run: npm run keyhoe:build
         env:

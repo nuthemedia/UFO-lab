@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "verify:production-routes": "node scripts/verify-production-routes.mjs",
     "keyhoe:build": "node scripts/build-keyhoe-today.mjs",
     "keyhoe:build:dry": "node scripts/build-keyhoe-today.mjs --dry",
     "keyhoe:build:mock": "node scripts/build-keyhoe-today.mjs --mock"

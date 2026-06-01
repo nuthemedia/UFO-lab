@@ -142,6 +142,11 @@ export function BrandHomePage({ locale }: BrandHomePageProps) {
               </article>
             ))}
           </div>
+          {locale === "ja" ? (
+            <Link className="brand-experiment-link" href="/experiments/biorhythm">
+              UFO Lab Tokyo 実験室：バイオリズムマシン
+            </Link>
+          ) : null}
         </div>
       </section>
 

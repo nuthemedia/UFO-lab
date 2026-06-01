@@ -978,6 +978,25 @@ h3 {
   width: min(100%, 760px);
 }
 
+.brand-experiment-link {
+  justify-self: center;
+  width: fit-content;
+  margin-top: 2px;
+  color: #2f5f52;
+  font-size: 0.92rem;
+  font-weight: 800;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.brand-experiment-link:hover,
+.brand-experiment-link:focus-visible {
+  color: #18221d;
+}
+
 .otsuki-card {
   position: relative;
   overflow: hidden;
