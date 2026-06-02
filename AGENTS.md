@@ -87,3 +87,7 @@ When making a new public site, app, route, or experiment live on Vercel:
 - Confirm the build route list includes the new public route.
 - If Keyhoe daily updates or any automated workflow can trigger production redeploys, verify that the workflow runs `npm run verify:production-routes` before committing/pushing generated data.
 - Never let a generated-data update be the only commit on `main` if it would redeploy without a newly live public route.
+- Production deploys must be run from an up-to-date `origin/main` checkout unless the user explicitly asks to deploy a feature branch.
+- Do not deploy from an old feature worktree or temporary worktree if it is missing any public route that already exists on production.
+- Before `vercel deploy --prod`, run `npm run verify:production-routes` and confirm the build route list includes all currently public routes.
+- Make sure the Vercel CLI is linked to the canonical `ufo-lab` project, not a newly created temporary project.
