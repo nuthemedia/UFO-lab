@@ -75,3 +75,15 @@ Before implementing app-specific work, identify the target app slug.
 - During mock or implementation work, follow the target app docs and avoid adding behavior that is not documented there.
 - If implementation requires a product, UI, feature, data, API, or operational decision not covered by the app docs, update the relevant doc first or ask for clarification.
 - Keep changes surgical: do not reorganize unrelated app docs, legacy specs, or shared data unless the current task explicitly requires it.
+
+## 6. Production Route Protection
+
+When making a new public site, app, route, or experiment live on Vercel:
+
+- Do not treat a local direct Vercel deploy as complete if the route files are uncommitted or untracked.
+- Ensure the route and its required data/assets/docs are committed to `main` before considering it safe from automated redeploys.
+- Add the route's required files to `scripts/verify-production-routes.mjs`.
+- Run `npm run verify:production-routes` and `npm run build`.
+- Confirm the build route list includes the new public route.
+- If Keyhoe daily updates or any automated workflow can trigger production redeploys, verify that the workflow runs `npm run verify:production-routes` before committing/pushing generated data.
+- Never let a generated-data update be the only commit on `main` if it would redeploy without a newly live public route.
