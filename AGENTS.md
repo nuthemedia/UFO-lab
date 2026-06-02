@@ -80,14 +80,10 @@ Before implementing app-specific work, identify the target app slug.
 
 When making a new public site, app, route, or experiment live on Vercel:
 
-- Do not treat a local direct Vercel deploy as complete if the route files are uncommitted or untracked.
+- Do not run raw `vercel deploy --prod`. Use `npm run deploy:prod`.
+- Treat local direct Vercel deploys as incomplete if route files are uncommitted or untracked.
 - Ensure the route and its required data/assets/docs are committed to `main` before considering it safe from automated redeploys.
 - Add the route's required files to `scripts/verify-production-routes.mjs`.
-- Run `npm run verify:production-routes` and `npm run build`.
-- Confirm the build route list includes the new public route.
-- If Keyhoe daily updates or any automated workflow can trigger production redeploys, verify that the workflow runs `npm run verify:production-routes` before committing/pushing generated data.
-- Never let a generated-data update be the only commit on `main` if it would redeploy without a newly live public route.
-- Production deploys must be run from an up-to-date `origin/main` checkout unless the user explicitly asks to deploy a feature branch.
+- `npm run deploy:prod` must pass from a clean, up-to-date `origin/main` checkout linked to the canonical `ufo-lab` Vercel project.
 - Do not deploy from an old feature worktree or temporary worktree if it is missing any public route that already exists on production.
-- Before `vercel deploy --prod`, run `npm run verify:production-routes` and confirm the build route list includes all currently public routes.
-- Make sure the Vercel CLI is linked to the canonical `ufo-lab` project, not a newly created temporary project.
+- If Keyhoe daily updates or any automated workflow can trigger production redeploys, verify that the workflow runs `npm run verify:production-routes` before committing/pushing generated data.
