@@ -23,6 +23,11 @@ export const brandHomeContent = {
       secondaryDesktop: "UFOs are phenomena that remain unexplained, yet undeniably exist.",
       secondaryMobile: ["UFOs remain unexplained,", "yet undeniably exist."],
     },
+    aboutLink: {
+      label: "About",
+      text: "UFO Lab Tokyoについて",
+      href: "https://note.com/ufolabtokyo/n/n6b5144177134",
+    },
     mission: "テクノロジーの魔法で、UFOコミュニティに貢献する",
     featuredApp: {
       name: "Ruppelt",
@@ -61,6 +66,10 @@ export const brandHomeContent = {
         "更新情報はXで発信しているので、ぜひフォローしてください。",
       ],
       cta: "Xをフォロー",
+    },
+    experimentLink: {
+      text: "UFO Lab Tokyo 実験室：バイオリズムマシン",
+      href: "/experiments/biorhythm",
     },
     products: [
       {
@@ -124,6 +133,11 @@ export const brandHomeContent = {
       secondaryDesktop: "",
       secondaryMobile: [],
     },
+    aboutLink: {
+      label: "About",
+      text: "About UFO Lab Tokyo",
+      href: "https://note.com/ufolabtokyo/n/n6b5144177134",
+    },
     mission: "Contributing to the UFO community through the magic of technology.",
     featuredApp: {
       name: "Ruppelt",
@@ -164,6 +178,10 @@ export const brandHomeContent = {
         "We share updates on X, so please follow us there.",
       ],
       cta: "Follow on X",
+    },
+    experimentLink: {
+      text: "UFO Lab Tokyo Experiments: Biorhythm Machine",
+      href: "/experiments/biorhythm",
     },
     products: [
       {

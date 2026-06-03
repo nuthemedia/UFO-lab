@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { BrandChallenges } from "@/components/BrandChallenges";
-import { BrandVideo } from "@/components/BrandVideo";
 import { SiteFooter } from "@/components/SiteFooter";
 import { brandHomeContent, type BrandLocale } from "@/lib/brandHomeContent";
 import { organizationJsonLd } from "@/lib/seo";
@@ -66,6 +65,12 @@ export function BrandHomePage({ locale }: BrandHomePageProps) {
                 </p>
               ) : null}
             </div>
+            <div className="brand-about-link">
+              <span>{content.aboutLink.label}</span>
+              <Link href={content.aboutLink.href} target="_blank" rel="noreferrer noopener">
+                {content.aboutLink.text}
+              </Link>
+            </div>
           </div>
 
           <section className="mission-block" aria-labelledby="mission-heading">
@@ -95,8 +100,6 @@ export function BrandHomePage({ locale }: BrandHomePageProps) {
               </Link>
             </article>
           </section>
-
-          <BrandVideo />
 
           <BrandChallenges heading={content.challengesHeading} challenges={content.challenges} />
 
@@ -142,11 +145,9 @@ export function BrandHomePage({ locale }: BrandHomePageProps) {
               </article>
             ))}
           </div>
-          {locale === "ja" ? (
-            <Link className="brand-experiment-link" href="/experiments/biorhythm">
-              UFO Lab Tokyo 実験室：バイオリズムマシン
-            </Link>
-          ) : null}
+          <Link className="brand-experiment-link" href={content.experimentLink.href}>
+            {content.experimentLink.text}
+          </Link>
         </div>
       </section>
 

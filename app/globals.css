@@ -416,6 +416,38 @@ h3 {
   display: none;
 }
 
+.brand-about-link {
+  display: grid;
+  gap: 2px;
+  justify-items: center;
+  margin-top: 2px;
+}
+
+.brand-about-link span {
+  color: var(--signal);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.brand-about-link a {
+  color: #2f5f52;
+  font-size: 0.93rem;
+  font-weight: 800;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-decoration-color: rgba(47, 95, 82, 0.28);
+  text-underline-offset: 0.16em;
+}
+
+.brand-about-link a:hover,
+.brand-about-link a:focus-visible {
+  color: #18221d;
+  text-decoration-color: rgba(24, 34, 29, 0.46);
+}
+
 .mission-block {
   width: min(100%, 680px);
   display: grid;
