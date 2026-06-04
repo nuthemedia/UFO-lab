@@ -35,6 +35,13 @@ function getUapSeoKeywords(record: (typeof keanUapRecords)[number]) {
   );
 }
 
+function getOfficialSourceLink(record: (typeof keanUapRecords)[number]) {
+  return (
+    record.sourceLinks.find((source) => source.url.includes("navair.navy.mil/foia/documents")) ??
+    record.sourceLinks[0]
+  );
+}
+
 export function generateStaticParams() {
   return keanUapRecords.map((record) => ({ id: record.id }));
 }
@@ -105,6 +112,7 @@ export default async function KeanUapDetailPage({ params }: KeanUapDetailPagePro
     notFound();
   }
 
+  const officialSourceLink = getOfficialSourceLink(record);
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -191,9 +199,11 @@ export default async function KeanUapDetailPage({ params }: KeanUapDetailPagePro
             </>
           ) : (
             <div className="kean-uap-video-fallback">
-              <p>この公式動画はWMV形式のため、ブラウザ内再生に対応しない場合があります。</p>
-              <a href={record.officialVideoUrl} target="_blank" rel="noreferrer noopener">
-                公式動画を別タブで開く
+              <p>
+                この公式動画はWMV形式のため、直接開くと環境によってダウンロードになる場合があります。
+              </p>
+              <a href={officialSourceLink.url} target="_blank" rel="noreferrer noopener">
+                {officialSourceLink.label}で確認する
               </a>
             </div>
           )}
