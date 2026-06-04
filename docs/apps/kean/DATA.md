@@ -19,7 +19,7 @@
 - `TimelineEvent` includes `id`, chapter fields, visual theme, year label, title, image, summary text, what happened, importance, caution, related people, and sources.
 - `RelatedPersonRef` uses `{ personId, relationToEvent }`.
 - `ImageAsset` stores `src`, `alt`, `caption`, `credit`, `license`, `sourceUrl`, and `sourceName`.
-- `KeanUapRecord` stores id, display names, summary, explanation sections, official video URL, sources, and optional model metadata.
+- `KeanUapRecord` stores id, display names, summary, explanation sections, official video URL, optional browser-playable video mirror metadata, sources, and optional model metadata.
 - Person SEO metadata uses `jaName`, `name`, `aliases`, `tags`, `searchQueries`, category labels, and generated illustration paths.
 - UAP SEO metadata uses `keanUapRecords`, including display names, short summaries, official video URLs, and source links.
 

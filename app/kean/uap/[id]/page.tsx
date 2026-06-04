@@ -113,6 +113,8 @@ export default async function KeanUapDetailPage({ params }: KeanUapDetailPagePro
   }
 
   const officialSourceLink = getOfficialSourceLink(record);
+  const playableVideoUrl =
+    record.playbackVideoUrl ?? (record.officialVideoUrl.endsWith(".mp4") ? record.officialVideoUrl : null);
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -179,23 +181,25 @@ export default async function KeanUapDetailPage({ params }: KeanUapDetailPagePro
             <span>公式動画</span>
             <h2>{record.videoLabel}</h2>
             <p>
-              NAVAIRの公式公開動画は外部サーバーの制限や形式により、環境によって埋め込み再生できない場合があります。
-              その場合は公式リンクを別タブで開いて確認してください。
+              NAVAIRの公式原本は形式や外部サーバーの制限により再生できない場合があります。
+              ここではブラウザ再生できる公開ミラーを使い、公式原本の出典は下に残しています。
             </p>
           </div>
-          {record.officialVideoUrl.endsWith(".mp4") ? (
+          {playableVideoUrl ? (
             <>
-              <video controls preload="metadata" playsInline src={record.officialVideoUrl}>
-                <a href={record.officialVideoUrl}>公式動画を別タブで開く</a>
+              <video controls preload="metadata" playsInline src={playableVideoUrl}>
+                <a href={playableVideoUrl}>再生用動画を別タブで開く</a>
               </video>
-              <a
-                className="kean-uap-video-link"
-                href={record.officialVideoUrl}
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                公式動画を別タブで開く
-              </a>
+              {record.playbackSource ? (
+                <a
+                  className="kean-uap-video-link"
+                  href={record.playbackSource.url}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  {record.playbackSource.label}
+                </a>
+              ) : null}
             </>
           ) : (
             <div className="kean-uap-video-fallback">

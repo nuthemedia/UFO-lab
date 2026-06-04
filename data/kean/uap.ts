@@ -10,6 +10,11 @@ export type KeanUapRecord = {
   cautions: string[];
   videoLabel: string;
   officialVideoUrl: string;
+  playbackVideoUrl?: string;
+  playbackSource?: {
+    label: string;
+    url: string;
+  };
   sourceLinks: {
     label: string;
     url: string;
@@ -28,6 +33,21 @@ const dodRelease = {
 const navairReadingRoom = {
   label: "NAVAIR FOIA Reading Room",
   url: "https://www.navair.navy.mil/foia/documents",
+};
+
+const commonsFlir1 = {
+  label: "再生用ミラー: Wikimedia Commons",
+  url: "https://commons.wikimedia.org/wiki/File:FLIR1_Official_UAP_Footage_from_the_USG_for_Public_Release.webm",
+};
+
+const commonsGimbal = {
+  label: "再生用ミラー: Wikimedia Commons",
+  url: "https://commons.wikimedia.org/wiki/File:Gimbal_The_First_Official_UAP_Footage_from_the_USG_for_Public_Release.webm",
+};
+
+const commonsGoFast = {
+  label: "再生用ミラー: Wikimedia Commons",
+  url: "https://commons.wikimedia.org/wiki/File:Go_Fast_Official_USG_Footage_of_UAP_for_Public_Release.webm",
 };
 
 export const keanUapRecords: KeanUapRecord[] = [
@@ -54,6 +74,9 @@ export const keanUapRecords: KeanUapRecord[] = [
     ],
     videoLabel: "NAVAIR公開動画: 1 - FLIR.mp4",
     officialVideoUrl: "https://www.navair.navy.mil/foia/sites/g/files/jejdrs566/files/2020-04/1%20-%20FLIR.mp4",
+    playbackVideoUrl:
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/FLIR1_Official_UAP_Footage_from_the_USG_for_Public_Release.webm",
+    playbackSource: commonsFlir1,
     sourceLinks: [dodRelease, navairReadingRoom],
     model: {
       src: "/kean/models/tictac/tic_tac_uap_ufo_with_warp_bubble.glb",
@@ -83,6 +106,9 @@ export const keanUapRecords: KeanUapRecord[] = [
     ],
     videoLabel: "NAVAIR公開動画: 2 - GIMBAL.wmv",
     officialVideoUrl: "https://www.navair.navy.mil/foia/sites/g/files/jejdrs566/files/2020-04/2%20-%20GIMBAL.wmv",
+    playbackVideoUrl:
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Gimbal_The_First_Official_UAP_Footage_from_the_USG_for_Public_Release.webm",
+    playbackSource: commonsGimbal,
     sourceLinks: [dodRelease, navairReadingRoom],
   },
   {
@@ -108,6 +134,9 @@ export const keanUapRecords: KeanUapRecord[] = [
     ],
     videoLabel: "NAVAIR公開動画: 3 - GOFAST.wmv",
     officialVideoUrl: "https://www.navair.navy.mil/foia/sites/g/files/jejdrs566/files/2020-04/3%20-%20GOFAST.wmv",
+    playbackVideoUrl:
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Go_Fast_Official_USG_Footage_of_UAP_for_Public_Release.webm",
+    playbackSource: commonsGoFast,
     sourceLinks: [dodRelease, navairReadingRoom],
   },
 ];
