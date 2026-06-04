@@ -1,10 +1,12 @@
 import type { MetadataRoute } from "next";
+import { people } from "@/data/kean/people";
+import { keanUapRecords } from "@/data/kean/uap";
 import { absoluteLanguageAlternates, localizedHomeSeo, siteUrl } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
-  return [
+  const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: localizedHomeSeo.ja.url,
       lastModified,
@@ -42,6 +44,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.86,
     },
     {
+      url: `${siteUrl}/kean/about`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.84,
+    },
+    {
+      url: `${siteUrl}/kean/history`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.84,
+    },
+    {
+      url: `${siteUrl}/kean/uap`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.84,
+    },
+    {
+      url: `${siteUrl}/kean/people`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.84,
+    },
+    {
       url: `${siteUrl}/keyhoe`,
       lastModified,
       changeFrequency: "daily",
@@ -71,5 +97,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.78,
     },
+  ];
+
+  return [
+    ...staticRoutes,
+    ...people.map((person) => ({
+      url: `${siteUrl}/kean/people/${person.id}`,
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.72,
+    })),
+    ...keanUapRecords.map((record) => ({
+      url: `${siteUrl}/kean/uap/${record.id}`,
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.74,
+    })),
   ];
 }

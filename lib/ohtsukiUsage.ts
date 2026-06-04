@@ -57,7 +57,7 @@ function userKey(userId: string, dayKey = currentDayKey()) {
 
 async function readState(): Promise<StoreState> {
   try {
-    const raw = await fs.readFile(STORE_PATH, "utf-8");
+    const raw = await fs.readFile(/* turbopackIgnore: true */ STORE_PATH, "utf-8");
     const parsed = JSON.parse(raw) as Partial<StoreState>;
 
     return {
@@ -73,8 +73,8 @@ async function readState(): Promise<StoreState> {
 }
 
 async function writeState(state: StoreState) {
-  await fs.mkdir(path.dirname(STORE_PATH), { recursive: true });
-  await fs.writeFile(STORE_PATH, JSON.stringify(state, null, 2), "utf-8");
+  await fs.mkdir(path.dirname(/* turbopackIgnore: true */ STORE_PATH), { recursive: true });
+  await fs.writeFile(/* turbopackIgnore: true */ STORE_PATH, JSON.stringify(state, null, 2), "utf-8");
 }
 
 export function getOhtsukiUserId(request: Request) {

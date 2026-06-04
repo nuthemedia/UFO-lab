@@ -1,0 +1,482 @@
+import { makeKeanPortraitAsset } from "../../lib/keanPortrait";
+import type { Person } from "./types";
+
+const portraits = {
+  davidGrusch: {
+    src: "/kean/images/people/david-grusch.png",
+    alt: "2023年7月26日の米下院公聴会で証言するDavid Grusch",
+    caption: "米下院UAP公聴会で証言するDavid Grusch。",
+    credit: "U.S. House Oversight hearing video / Wikimedia Commons",
+    license: "Public domain / U.S. government work",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/Category:David_Grusch",
+    sourceName: "Wikimedia Commons",
+  },
+  marcoRubio: {
+    src: "/kean/images/people/marco-rubio.jpg",
+    alt: "Marco Rubioの公式ポートレート",
+    caption: "Marco Rubioの公式ポートレート。",
+    credit: "U.S. Department of State / Wikimedia Commons",
+    license: "Public domain / U.S. government work",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Marco-Rubio-1117x1536.jpg",
+    sourceName: "Wikimedia Commons",
+  },
+  kirstenGillibrand: {
+    src: "/kean/images/people/kirsten-gillibrand.jpg",
+    alt: "Kirsten Gillibrandの公式ポートレート",
+    caption: "Kirsten Gillibrandの公式ポートレート。",
+    credit: "United States Congress / Wikimedia Commons",
+    license: "Public domain / U.S. Congress",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Kirsten_Gillibrand,_official_photo,_116th_Congress.jpg",
+    sourceName: "Wikimedia Commons",
+  },
+  chuckSchumer: {
+    src: "/kean/images/people/chuck-schumer.jpg",
+    alt: "Chuck Schumerの公式ポートレート",
+    caption: "Chuck Schumerの公式ポートレート。",
+    credit: "U.S. Senate / Wikimedia Commons",
+    license: "Public domain / U.S. Congress",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Charles_Schumer_official_portrait.jpg",
+    sourceName: "Wikimedia Commons",
+  },
+  mikeRounds: {
+    src: "/kean/images/people/mike-rounds.jpg",
+    alt: "Mike Roundsの公式ポートレート",
+    caption: "Mike Roundsの公式ポートレート。",
+    credit: "United States Congress / Wikimedia Commons",
+    license: "Public domain / U.S. Congress",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Mike_Rounds_official_Senate_portrait.jpg",
+    sourceName: "Wikimedia Commons",
+  },
+  annaPaulinaLuna: {
+    src: "/kean/images/people/anna-paulina-luna.jpg",
+    alt: "Anna Paulina Lunaの写真",
+    caption: "Anna Paulina Lunaの写真。",
+    credit: "Gage Skidmore / Wikimedia Commons",
+    license: "CC BY-SA 3.0",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Anna_Paulina_Luna_by_Gage_Skidmore.jpg",
+    sourceName: "Wikimedia Commons",
+  },
+  timBurchett: {
+    src: "/kean/images/people/tim-burchett.jpg",
+    alt: "Tim Burchettの公式ポートレート",
+    caption: "Tim Burchettの公式ポートレート。",
+    credit: "United States Congress / Wikimedia Commons",
+    license: "Public domain / U.S. Congress",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Rep._Tim_Burchett_official_photo,_116th_congress_(cropped).jpg",
+    sourceName: "Wikimedia Commons",
+  },
+  shigeruIshiba: {
+    src: "/kean/images/people/shigeru-ishiba.jpg",
+    alt: "石破茂の公式ポートレート",
+    caption: "石破茂の公式ポートレート。",
+    credit: "Prime Minister's Office of Japan / Wikimedia Commons",
+    license: "CC BY 4.0",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Ishiba_Shigeru_20241001_(cropped_2).jpg",
+    sourceName: "Wikimedia Commons",
+  },
+  luisElizondo: {
+    src: "/kean/images/people/luis-elizondo.jpg",
+    alt: "Luis Elizondoの写真",
+    caption: "Luis Elizondoの写真。",
+    credit: "Max Moszkowicz / Wikimedia Commons",
+    license: "CC BY 3.0",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Luis_Elizondo.jpg",
+    sourceName: "Wikimedia Commons",
+  },
+  christopherMellon: {
+    src: "/kean/images/people/christopher-mellon.jpg",
+    alt: "Christopher Mellonの写真",
+    caption: "Christopher Mellonの写真。",
+    credit: "Max Moszkowicz / Wikimedia Commons",
+    license: "CC BY 3.0",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Christopher_Mellon,_2021.jpg",
+    sourceName: "Wikimedia Commons",
+  },
+  timGallaudet: {
+    src: "/kean/images/people/tim-gallaudet.jpg",
+    alt: "Tim Gallaudetの公式ポートレート",
+    caption: "Tim Gallaudetの公式ポートレート。",
+    credit: "United States Department of Commerce / Wikimedia Commons",
+    license: "Public domain / U.S. government work",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Timothy_Gallaudet_official_photo.jpg",
+    sourceName: "Wikimedia Commons",
+  },
+  alexDietrich: {
+    src: "/kean/images/people/alex-dietrich.jpg",
+    alt: "Alex Dietrichの写真",
+    caption: "Alex Dietrichの写真。",
+    credit: "U.S. Navy / Wikimedia Commons",
+    license: "Public domain / U.S. government work",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:US_Navy_070520-N-9760Z-022_Nimitz_Sailors_will_compete_virtually_in_the_event_by_running_the_marathon_utilizing_treadmills_aboard_the_ship.jpg",
+    sourceName: "Wikimedia Commons",
+  },
+  seanParnell: {
+    src: "/kean/images/people/sean-parnell.png",
+    alt: "Sean Parnellの公式写真",
+    caption: "Sean Parnellの公式写真。",
+    credit: "U.S. Army / Wikimedia Commons",
+    license: "Public domain / U.S. government work",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Sean_Parnell.png",
+    sourceName: "Wikimedia Commons",
+  },
+};
+
+const officialSources = {
+  dodVideos: {
+    label: "U.S. Department of Defense - 2020 Navy video release",
+    url: "https://www.defense.gov/News/Releases/release/article/2165713/statement-by-the-department-of-defense-on-the-release-of-historical-navy-videos/",
+  },
+  nytAatip: {
+    label: "Leslie Kean - NYT AATIP article archive",
+    url: "https://www.lesliekean.com/2017/12/16/new-york-times-glowing-auras-and-black-money-the-pentagons-mysterious-u-f-o-program-by-helene-cooper-ralph-blumenthal-and-leslie-kean/",
+  },
+  odni2021: {
+    label: "ODNI - Preliminary Assessment: UAP",
+    url: "https://www.odni.gov/index.php/newsroom/reports-publications/reports-publications-2021/3550-preliminary-assessment-unidentified-aerial-phenomena",
+  },
+  house2023: {
+    label: "House Oversight - UAP hearing, July 26, 2023",
+    url: "https://oversight.house.gov/hearing/unidentified-anomalous-phenomena-implications-on-national-security-public-safety-and-government-transparency/",
+  },
+  congress2023: {
+    label: "Congress.gov - UAP hearing record",
+    url: "https://www.congress.gov/event/118th-congress/house-event/116282",
+  },
+  aaroHistory: {
+    label: "AARO - Historical Record Report Volume I",
+    url: "https://media.defense.gov/2024/Mar/08/2003409233/-1/-1/0/AARO_Historical_Record_Report_Vol_1_2024.pdf",
+  },
+  uapDisclosureAct: {
+    label: "Senate Democrats - UAP Disclosure Act announcement",
+    url: "https://www.democrats.senate.gov/newsroom/press-releases/schumer-rounds-introduce-new-legislation-to-declassify-government-records-related-to-unidentified-anomalous-phenomena-and-ufos_modeled-after-jfk-assassination-records-collection-act--as-an-amendment-to-ndaa",
+  },
+  japanGiren: {
+    label: "浅川義治 - UAP議連設立総会",
+    url: "https://www.asakawayoshiharu.com/?report=%E5%AE%89%E5%85%A8%E3%81%8B%E3%82%89%E8%80%83%E3%81%88%E3%82%8B%E6%9C%AA%E7%A2%BA%E8%AA%8D%E7%95%B0%E5%B8%B8%E7%8F%BE%E8%B1%A1%E8%A7%A3%E6%98%8E%E8%AD%B0%E5%93%A1%E9%80%A3%E7%9B%9F",
+  },
+  ageOfDisclosure: {
+    label: "The Age of Disclosure - official site",
+    url: "https://theageofdisclosure.com/",
+  },
+  pursuePortal: {
+    label: "PURSUE / war.gov UFO portal",
+    url: "https://www.war.gov/UFO/",
+  },
+  bobLazarContext: {
+    label: "Mystery Wire - Bob Lazar / Area 51 context",
+    url: "https://www.mysterywire.com/ufo/bob-lazar-area-51-s4/",
+  },
+};
+
+const defaultRelatedEventsByCategory: Record<Person["category"], string[]> = {
+  journalist: ["2017-nyt-aatip"],
+  whistleblower: ["2023-grusch-house-hearing"],
+  pilot: ["2004-nimitz-tic-tac"],
+  government: ["2021-2022-odni-aaro"],
+  senator: ["2023-2024-uap-disclosure-act-aaro-report"],
+  researcher: ["2025-age-of-disclosure-network"],
+  skeptic: ["2020-dod-video-release"],
+  filmmaker: ["2025-age-of-disclosure-network"],
+  "japan-politics": ["2024-2026-japan-uap-giren"],
+  "public-figure": ["2026-pursue-release"],
+  "controversial-claimant": ["2025-age-of-disclosure-network"],
+};
+
+const defaultRelatedPeopleByCategory: Record<Person["category"], string[]> = {
+  journalist: ["leslie-kean", "ralph-blumenthal"],
+  whistleblower: ["david-grusch", "luis-elizondo"],
+  pilot: ["david-fravor", "ryan-graves"],
+  government: ["christopher-mellon", "sean-kirkpatrick"],
+  senator: ["marco-rubio", "chuck-schumer"],
+  researcher: ["steven-greer", "mick-west"],
+  skeptic: ["mick-west", "steven-greenstreet"],
+  filmmaker: ["dan-farah", "jesse-michels"],
+  "japan-politics": ["asakawa-yoshiharu", "ishiba-shigeru"],
+  "public-figure": ["sean-parnell", "dan-farah"],
+  "controversial-claimant": ["bob-lazar", "george-knapp"],
+};
+
+const defaultTagsByCategory: Record<Person["category"], string[]> = {
+  journalist: ["journalism"],
+  whistleblower: ["whistleblower", "claims"],
+  pilot: ["navy"],
+  government: ["government", "policy"],
+  senator: ["policy", "government"],
+  researcher: ["disclosure", "claims"],
+  skeptic: ["skeptic", "analysis"],
+  filmmaker: ["media"],
+  "japan-politics": ["policy", "government"],
+  "public-figure": ["public communication"],
+  "controversial-claimant": ["controversial", "claims"],
+};
+
+const defaultSourcesByCategory: Record<Person["category"], Person["sources"]> = {
+  journalist: [officialSources.nytAatip],
+  whistleblower: [officialSources.house2023],
+  pilot: [officialSources.house2023, officialSources.dodVideos],
+  government: [officialSources.aaroHistory],
+  senator: [officialSources.uapDisclosureAct],
+  researcher: [officialSources.ageOfDisclosure],
+  skeptic: [officialSources.dodVideos],
+  filmmaker: [officialSources.ageOfDisclosure],
+  "japan-politics": [officialSources.japanGiren],
+  "public-figure": [officialSources.pursuePortal],
+  "controversial-claimant": [officialSources.bobLazarContext],
+};
+
+function relatedPeopleFor(id: string, category: Person["category"]) {
+  return defaultRelatedPeopleByCategory[category].filter((personId) => personId !== id).slice(0, 2);
+}
+
+function person(
+  id: string,
+  name: string,
+  jaName: string,
+  category: Person["category"],
+  beginnerTier: Person["beginnerTier"],
+  oneLine: string,
+  overrides: Partial<Person> = {},
+): Person {
+  const defaultWhatTheyDid =
+    `${jaName}は、Keanでは「${oneLine}」という役割から現代UFO・UAPディスクロージャーを理解するための人物として整理します。`;
+
+  return {
+    id,
+    name,
+    jaName,
+    illustration: makeKeanPortraitAsset({ id, name, jaName, category }),
+    portrait: undefined,
+    aliases: [],
+    category,
+    beginnerTier,
+    oneLine,
+    whatTheyDid: [defaultWhatTheyDid],
+    whyImportant: oneLine,
+    verifiedFacts: ["Keanでは、公開資料・公的記録・信頼できる報道で確認できる範囲に限定して人物の役割を整理します。"],
+    claimsOrPositions: ["本人や関係者の主張は、確認済み事実とは分けて読む必要があります。"],
+    cautions: ["公開情報だけでは未確認の主張と確認済み事実を分けて読む必要があります。"],
+    relatedEvents: defaultRelatedEventsByCategory[category],
+    relatedPeople: relatedPeopleFor(id, category),
+    tags: defaultTagsByCategory[category],
+    searchQueries: [name, jaName],
+    sources: defaultSourcesByCategory[category],
+    ...overrides,
+  };
+}
+
+export const people: Person[] = [
+  person("david-grusch", "David Grusch", "デイヴィッド・グルーシュ", "whistleblower", "core", "2023年に米政府のUAP関連秘匿プログラムを議会で証言した元情報機関職員。", {
+    portrait: portraits.davidGrusch,
+    aliases: ["David Charles Grusch"],
+    whatTheyDid: ["The Debrief報道と2023年米下院公聴会で、UAP回収・リバースエンジニアリング計画に関する内部告発的主張を行った。"],
+    verifiedFacts: ["2023年7月26日の米下院UAP公聴会で証人として証言した。"],
+    claimsOrPositions: ["米政府が非人間由来技術に関わる回収計画を持つと主張している。"],
+    cautions: ["主要な主張の多くは機密や二次証言に関わり、公開資料だけでは検証できない。"],
+    relatedEvents: ["2023-grusch-house-hearing"],
+    relatedPeople: ["leslie-kean", "ralph-blumenthal", "ryan-graves", "david-fravor"],
+    tags: ["whistleblower", "hearing", "claims"],
+    sources: [officialSources.house2023, officialSources.congress2023],
+  }),
+  person("luis-elizondo", "Luis Elizondo", "ルイス・エリゾンド", "whistleblower", "core", "AATIP関係者として2017年以降のUAP公開議論を押し上げた人物。", {
+    portrait: portraits.luisElizondo,
+    aliases: ["Lue Elizondo"],
+    whatTheyDid: ["2017年のAATIP報道以降、軍・政府内のUAP調査の必要性を発信した。"],
+    verifiedFacts: ["AATIP報道の中心人物として複数メディアで扱われた。"],
+    claimsOrPositions: ["UAPは国家安全保障と航空安全の問題だと主張している。"],
+    relatedEvents: ["2017-nyt-aatip"],
+    relatedPeople: ["christopher-mellon", "leslie-kean"],
+    tags: ["AATIP", "media"],
+  }),
+  person("christopher-mellon", "Christopher Mellon", "クリストファー・メロン", "government", "core", "元国防・情報関係者としてUAP透明性を議会・メディアに橋渡しした人物。", {
+    portrait: portraits.christopherMellon,
+    aliases: ["Chris Mellon"],
+    whatTheyDid: ["軍用UAP映像や政府内証言を公開議論につなげたとされる。"],
+    verifiedFacts: ["元米国防次官補代理として公的経歴がある。"],
+    claimsOrPositions: ["軍・情報機関のUAPデータを体系的に扱うべきだと主張している。"],
+    relatedEvents: ["2017-nyt-aatip", "2020-dod-video-release"],
+    relatedPeople: ["luis-elizondo", "leslie-kean"],
+    tags: ["policy", "AATIP"],
+  }),
+  person("leslie-kean", "Leslie Kean", "レスリー・キーン", "journalist", "core", "2017年NYT報道と2023年デイヴィッド・グルーシュ報道に関わったUAPジャーナリスト。", {
+    whatTheyDid: ["2017年のAATIP報道、2023年のデイヴィッド・グルーシュ報道に関わった。"],
+    verifiedFacts: ["UAPを扱う著作と調査報道で知られる。"],
+    claimsOrPositions: ["UAPを事実・証言・未検証点に分けて扱う姿勢を強調してきた。"],
+    relatedEvents: ["2017-nyt-aatip", "2023-grusch-house-hearing"],
+    relatedPeople: ["ralph-blumenthal", "david-grusch"],
+    tags: ["journalism", "NYT", "The Debrief"],
+  }),
+  person("ralph-blumenthal", "Ralph Blumenthal", "ラルフ・ブルーメンソール", "journalist", "important", "レスリー・キーンとともに2017年・2023年の重要報道を担った記者。", {
+    whatTheyDid: ["AATIP報道とデイヴィッド・グルーシュ報道で共同執筆者となった。"],
+    verifiedFacts: ["元New York Times記者。"],
+    relatedEvents: ["2017-nyt-aatip", "2023-grusch-house-hearing"],
+    relatedPeople: ["leslie-kean", "david-grusch"],
+    tags: ["journalism"],
+  }),
+  person("david-fravor", "David Fravor", "デイヴィッド・フレーバー", "pilot", "core", "2004年Nimitz/Tic Tac遭遇を公に語った元米海軍パイロット。", {
+    aliases: ["Cmdr. David Fravor"],
+    whatTheyDid: ["2004年のTic Tac遭遇について、メディアと議会で証言した。"],
+    verifiedFacts: ["2023年米下院UAP公聴会の証人。"],
+    relatedEvents: ["2004-nimitz-tic-tac", "2023-grusch-house-hearing"],
+    relatedPeople: ["alex-dietrich", "ryan-graves"],
+    sources: [officialSources.house2023],
+  }),
+  person("alex-dietrich", "Alex Dietrich", "アレックス・ディートリッヒ", "pilot", "important", "2004年Nimitz/Tic Tac遭遇時の海軍パイロットの一人。", {
+    portrait: portraits.alexDietrich,
+    aliases: ["Alex Anne Dietrich"],
+    whatTheyDid: ["Nimitz遭遇の目撃者として後年、取材や公的な場で証言した。"],
+    relatedEvents: ["2004-nimitz-tic-tac"],
+    relatedPeople: ["david-fravor"],
+  }),
+  person("ryan-graves", "Ryan Graves", "ライアン・グレーブス", "pilot", "core", "東海岸でのUAP遭遇と航空安全問題を公にした元米海軍パイロット。", {
+    whatTheyDid: ["Americans for Safe Aerospaceを通じ、パイロット報告の制度化を訴えた。"],
+    verifiedFacts: ["2023年米下院UAP公聴会の証人。"],
+    relatedEvents: ["2023-grusch-house-hearing"],
+    relatedPeople: ["david-fravor", "david-grusch"],
+    sources: [officialSources.house2023],
+  }),
+  person("anna-paulina-luna", "Anna Paulina Luna", "アンナ・ポーリーナ・ルナ", "government", "important", "米下院でUAP公聴会や透明性要求に関わった議員。", {
+    portrait: portraits.annaPaulinaLuna,
+    relatedEvents: ["2023-grusch-house-hearing"],
+    relatedPeople: ["tim-burchett", "jared-moskowitz"],
+    sources: [officialSources.house2023],
+  }),
+  person("tim-burchett", "Tim Burchett", "ティム・バーチェット", "government", "important", "米下院でUAP透明性を求める発信を続けた議員。", {
+    portrait: portraits.timBurchett,
+    relatedEvents: ["2023-grusch-house-hearing"],
+    relatedPeople: ["anna-paulina-luna", "jared-moskowitz"],
+    sources: [officialSources.house2023],
+  }),
+  person("jared-moskowitz", "Jared Moskowitz", "ジャレッド・モスコウィッツ", "government", "important", "UAP公聴会で超党派の透明性要求に加わった米下院議員。", {
+    relatedEvents: ["2023-grusch-house-hearing"],
+    relatedPeople: ["anna-paulina-luna", "tim-burchett"],
+    sources: [officialSources.house2023],
+  }),
+  person("marco-rubio", "Marco Rubio", "マルコ・ルビオ", "senator", "core", "情報委員会側からUAP報告・開示政策に関わった上院議員。", {
+    portrait: portraits.marcoRubio,
+    relatedEvents: ["2021-2022-odni-aaro", "2023-2024-uap-disclosure-act-aaro-report"],
+    relatedPeople: ["kirsten-gillibrand", "chuck-schumer", "mike-rounds"],
+    sources: [officialSources.uapDisclosureAct],
+  }),
+  person("kirsten-gillibrand", "Kirsten Gillibrand", "カーステン・ギリブランド", "senator", "core", "AARO設立やUAP制度化に関わった上院議員。", {
+    portrait: portraits.kirstenGillibrand,
+    relatedEvents: ["2021-2022-odni-aaro", "2023-2024-uap-disclosure-act-aaro-report"],
+    relatedPeople: ["marco-rubio", "chuck-schumer", "mike-rounds"],
+    sources: [officialSources.uapDisclosureAct],
+  }),
+  person("chuck-schumer", "Chuck Schumer", "チャック・シューマー", "senator", "core", "UAP Disclosure Actを主導した上院民主党指導者。", {
+    portrait: portraits.chuckSchumer,
+    relatedEvents: ["2023-2024-uap-disclosure-act-aaro-report"],
+    relatedPeople: ["mike-rounds", "marco-rubio", "kirsten-gillibrand"],
+    sources: [officialSources.uapDisclosureAct],
+  }),
+  person("mike-rounds", "Mike Rounds", "マイク・ラウンズ", "senator", "core", "UAP Disclosure Actをチャック・シューマーとともに主導した上院議員。", {
+    portrait: portraits.mikeRounds,
+    relatedEvents: ["2023-2024-uap-disclosure-act-aaro-report"],
+    relatedPeople: ["chuck-schumer", "marco-rubio", "kirsten-gillibrand"],
+    sources: [officialSources.uapDisclosureAct],
+  }),
+  person("sean-kirkpatrick", "Sean Kirkpatrick", "ショーン・カークパトリック", "government", "important", "AARO初期の責任者として公式調査・歴史報告の文脈に登場する人物。", {
+    relatedEvents: ["2021-2022-odni-aaro", "2023-2024-uap-disclosure-act-aaro-report"],
+    sources: [officialSources.aaroHistory],
+  }),
+  person("jon-kosloski", "Jon Kosloski", "ジョン・コスロスキー", "government", "context", "AAROの後続リーダーとして、2024年以降の公式調査文脈に関わる人物。", {
+    relatedEvents: ["2023-2024-uap-disclosure-act-aaro-report"],
+    sources: [officialSources.aaroHistory],
+  }),
+  person("mick-west", "Mick West", "ミック・ウェスト", "skeptic", "important", "公開映像や主張を懐疑的・技術的に検討する発信者。", {
+    whatTheyDid: ["UAP映像や写真について、代替説明や分析手順を提示してきた。"],
+    claimsOrPositions: ["多くの映像は既知現象・センサー・視点の問題で説明可能だとする立場。"],
+    cautions: ["懐疑分析は重要だが、個別事例ごとにデータ品質を確認して読む必要があります。"],
+    relatedEvents: ["2020-dod-video-release", "2025-age-of-disclosure-network"],
+    tags: ["skeptic", "analysis"],
+  }),
+  person("steven-greenstreet", "Steven Greenstreet", "スティーヴン・グリーンストリート", "journalist", "context", "UAPコミュニティや政府関係者を批判的に追う映像ジャーナリスト。", {
+    relatedEvents: ["2025-age-of-disclosure-network"],
+    relatedPeople: ["mick-west"],
+    tags: ["journalism", "skeptic"],
+  }),
+  person("dan-farah", "Dan Farah", "ダン・ファラー", "filmmaker", "important", "映画『The Age of Disclosure』を通じてUAP開示論を大衆化した制作者。", {
+    relatedEvents: ["2025-age-of-disclosure-network"],
+    tags: ["documentary", "media"],
+  }),
+  person("jay-stratton", "Jay Stratton", "ジェイ・ストラットン", "government", "important", "UAP Task Forceや関連証言の文脈で名前が出る元政府関係者。", {
+    relatedEvents: ["2021-2022-odni-aaro", "2025-age-of-disclosure-network"],
+    tags: ["UAPTF", "government"],
+  }),
+  person("tim-gallaudet", "Tim Gallaudet", "ティム・ガローデット", "government", "important", "元海軍・NOAA関係者としてUAP透明性を訴える人物。", {
+    portrait: portraits.timGallaudet,
+    relatedEvents: ["2025-age-of-disclosure-network"],
+    tags: ["navy", "ocean"],
+  }),
+  person("jesse-michels", "Jesse Michels", "ジェシー・ミケルズ", "filmmaker", "context", "長尺インタビューやネット番組でUAP関係者を紹介する発信者。", {
+    relatedEvents: ["2025-age-of-disclosure-network"],
+    tags: ["internet", "interview"],
+  }),
+  person("steven-greer", "Steven Greer", "スティーヴン・グリア", "researcher", "context", "民間開示運動で長く活動してきた人物。", {
+    claimsOrPositions: ["政府の秘匿や非人間知性に関する強い主張を行っている。"],
+    cautions: ["主張の多くは公開資料だけでは検証が難しく、確認済み事実と分けて扱う。"],
+    relatedEvents: ["2025-age-of-disclosure-network"],
+    tags: ["disclosure", "claims"],
+  }),
+  person("george-knapp", "George Knapp", "ジョージ・ナップ", "journalist", "important", "UFO/UAP報道を長年追ってきた米国の調査報道記者。", {
+    relatedEvents: ["2017-nyt-aatip", "2025-age-of-disclosure-network"],
+    relatedPeople: ["jeremy-corbell", "bob-lazar"],
+    tags: ["journalism", "Las Vegas"],
+  }),
+  person("jeremy-corbell", "Jeremy Corbell", "ジェレミー・コーベル", "filmmaker", "context", "UAP映像や証言の公開で知られる映画制作者・発信者。", {
+    relatedEvents: ["2020-dod-video-release", "2025-age-of-disclosure-network"],
+    relatedPeople: ["george-knapp"],
+    tags: ["media", "video"],
+  }),
+  person("ross-coulthart", "Ross Coulthart", "ロス・コールサート", "journalist", "important", "デイヴィッド・グルーシュへのインタビューなどで現代UAP報道に影響を与えたジャーナリスト。", {
+    relatedEvents: ["2023-grusch-house-hearing", "2025-age-of-disclosure-network"],
+    relatedPeople: ["david-grusch"],
+    tags: ["journalism", "interview"],
+  }),
+  person("sean-parnell", "Sean Parnell", "ショーン・パーネル", "public-figure", "context", "2026年PURSUE公開の政治的発信文脈に登場する人物。", {
+    portrait: portraits.seanParnell,
+    relatedEvents: ["2026-pursue-release"],
+    tags: ["PURSUE", "public communication"],
+  }),
+  person("steven-spielberg", "Steven Spielberg", "スティーヴン・スピルバーグ", "filmmaker", "context", "UFO文化の大衆的イメージ形成に大きな影響を持つ映画監督。", {
+    relatedEvents: ["2025-age-of-disclosure-network"],
+    tags: ["culture", "film"],
+  }),
+  person("asakawa-yoshiharu", "Yoshiharu Asakawa", "浅川義治", "japan-politics", "core", "日本のUAP議連で事務局長を務めた国会議員。", {
+    aliases: ["浅川 義治"],
+    verifiedFacts: ["2024年6月のUAP議連設立総会について自身の公式サイトで告知している。"],
+    relatedEvents: ["2024-2026-japan-uap-giren"],
+    relatedPeople: ["hamada-yasukazu", "ishiba-shigeru", "maehara-seiji"],
+    sources: [officialSources.japanGiren],
+  }),
+  person("hamada-yasukazu", "Yasukazu Hamada", "浜田靖一", "japan-politics", "important", "日本のUAP議連で会長として報じられた元防衛相。", {
+    relatedEvents: ["2024-2026-japan-uap-giren"],
+    relatedPeople: ["asakawa-yoshiharu"],
+    sources: [officialSources.japanGiren],
+  }),
+  person("ishiba-shigeru", "Shigeru Ishiba", "石破茂", "japan-politics", "important", "安全保障の観点からUAP議論に関心を示した日本の政治家。", {
+    portrait: portraits.shigeruIshiba,
+    relatedEvents: ["2024-2026-japan-uap-giren"],
+    relatedPeople: ["asakawa-yoshiharu", "maehara-seiji"],
+  }),
+  person("maehara-seiji", "Seiji Maehara", "前原誠司", "japan-politics", "important", "日本のUAP議連関連番組・報道で名前が挙がる元外相。", {
+    relatedEvents: ["2024-2026-japan-uap-giren"],
+    relatedPeople: ["asakawa-yoshiharu", "ishiba-shigeru"],
+  }),
+  person("bob-lazar", "Bob Lazar", "ボブ・ラザー", "controversial-claimant", "context", "Area 51関連の主張でUFO文化に大きな影響を与えたが、検証上の注意が必要な人物。", {
+    whatTheyDid: ["1980年代末以降、Area 51近辺の施設で非人間由来技術に関わったという主張でUFO文化に大きな影響を与えた。"],
+    verifiedFacts: ["ボブ・ラザーの主張は、UFO文化・メディア・ネット発信の文脈で長く参照されてきた。"],
+    claimsOrPositions: ["米政府施設で非人間由来技術に関わったと主張している。"],
+    cautions: ["中心的な主張は公的資料で確認されておらず、現代開示議論では文化的文脈として扱う。"],
+    relatedEvents: ["2025-age-of-disclosure-network"],
+    relatedPeople: ["george-knapp"],
+    tags: ["Area 51", "controversial"],
+    sources: [officialSources.bobLazarContext],
+  }),
+];
+
+export const peopleById = new Map(people.map((item) => [item.id, item]));

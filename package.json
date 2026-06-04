@@ -8,6 +8,7 @@
     "start": "next start",
     "deploy:prod": "node scripts/deploy-prod.mjs",
     "verify:production-routes": "node scripts/verify-production-routes.mjs",
+    "kean:verify-portraits": "node scripts/verify-kean-portraits.mjs",
     "keyhoe:build": "node scripts/build-keyhoe-today.mjs",
     "keyhoe:build:dry": "node scripts/build-keyhoe-today.mjs --dry",
     "keyhoe:build:mock": "node scripts/build-keyhoe-today.mjs --mock"
@@ -21,12 +22,14 @@
     "postcss": "^8.5.15",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
-    "tailwindcss": "^4.3.0"
+    "tailwindcss": "^4.3.0",
+    "three": "^0.184.0"
   },
   "devDependencies": {
     "@types/node": "22.15.21",
     "@types/react": "19.1.5",
     "@types/react-dom": "19.1.5",
+    "@types/three": "^0.184.1",
     "typescript": "5.8.3"
   }
 }
