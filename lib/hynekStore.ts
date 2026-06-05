@@ -619,7 +619,8 @@ async function updateKvDashboardSubmission(submission: HynekSubmission) {
     return null;
   }
 
-  const views = (await readKvDashboardViews(kv)) || emptyHynekDashboardViews();
+  const existingViews = await readKvDashboardViews(kv);
+  const views = existingViews || aggregateHynekDashboardViews(Object.values((await readKvState(kv)).submissions));
   const updatedViews = addHynekSubmissionToDashboardViews(views, submission);
 
   await writeKvDashboardViews(kv, updatedViews);
