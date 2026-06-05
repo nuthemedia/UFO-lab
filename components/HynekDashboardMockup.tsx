@@ -2,8 +2,8 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { aggregateHynekSubmissions, filterHynekSubmissions, HYNEK_PREFECTURES, type HynekDashboardFilterMode } from "@/lib/hynekDashboardData";
-import type { HynekDashboardData, HynekSubmission } from "@/lib/hynekStore";
+import { HYNEK_PREFECTURES, type HynekDashboardFilterMode, type HynekDashboardViews } from "@/lib/hynekDashboardData";
+import type { HynekDashboardData } from "@/lib/hynekStore";
 
 type TabId = "overview" | "types" | "belief" | "sightings" | "contact" | "region";
 type FilterId = HynekDashboardFilterMode;
@@ -641,7 +641,7 @@ function TabPanel({ activeTab, data }: { activeTab: TabId; data: HynekDashboardD
   return <OverviewPanel data={data} />;
 }
 
-export function HynekDashboardMockup({ submissions }: { submissions: HynekSubmission[] }) {
+export function HynekDashboardMockup({ views }: { views: HynekDashboardViews }) {
   const [activeTab, setActiveTab] = useState<TabId>("overview");
   const [activeFilter, setActiveFilter] = useState<FilterId>("all");
   const [selectedAge, setSelectedAge] = useState("");
@@ -660,11 +660,21 @@ export function HynekDashboardMockup({ submissions }: { submissions: HynekSubmis
     return note;
   }, [activeFilter, selectedAge, selectedRegion]);
 
-  const filteredSubmissions = useMemo(
-    () => filterHynekSubmissions(submissions, { mode: activeFilter, age: selectedAge, region: selectedRegion }),
-    [activeFilter, selectedAge, selectedRegion, submissions],
-  );
-  const filteredData = useMemo(() => aggregateHynekSubmissions(filteredSubmissions), [filteredSubmissions]);
+  const filteredData = useMemo(() => {
+    if (activeFilter === "witness") {
+      return views.witness;
+    }
+
+    if (activeFilter === "age") {
+      return selectedAge ? views.byAge[selectedAge] || views.all : views.all;
+    }
+
+    if (activeFilter === "region") {
+      return selectedRegion ? views.byRegion[selectedRegion] || views.all : views.all;
+    }
+
+    return views.all;
+  }, [activeFilter, selectedAge, selectedRegion, views]);
 
   const ageOptions = useMemo(() => ageFilterOptions, []);
   const regionOptions = useMemo(() => regionFilterOptions, []);

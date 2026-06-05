@@ -3,7 +3,7 @@ import Link from "next/link";
 import { HynekDashboardMockup } from "@/components/HynekDashboardMockup";
 import { SiteFooter } from "@/components/SiteFooter";
 import { siteConfig } from "@/lib/site";
-import { getHynekDashboardSubmissions } from "@/lib/hynekStore";
+import { getHynekDashboardViews } from "@/lib/hynekStore";
 import { siteUrl } from "@/lib/seo";
 import { withHynekSocialImageVersion } from "@/lib/hynekShare";
 
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
 };
 
 export default async function HynekDashboardPage() {
-  const submissions = await getHynekDashboardSubmissions();
+  const views = await getHynekDashboardViews();
 
   return (
     <section className="checker-page ruppelt-page hynek-page hynek-dashboard-page">
@@ -71,7 +71,7 @@ export default async function HynekDashboardPage() {
           </Link>
         </div>
       </div>
-      <HynekDashboardMockup submissions={submissions} />
+      <HynekDashboardMockup views={views} />
       <section className="brand-feedback-card hynek-dashboard-update-card" aria-labelledby="hynek-dashboard-update-heading">
         <p className="brand-feedback-label" id="hynek-dashboard-update-heading">
           更新情報・フィードバック

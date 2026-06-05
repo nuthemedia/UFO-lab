@@ -114,7 +114,7 @@ Keyhoe の日次更新は GitHub Actions で毎朝7:00 JSTごろに `public/data
 
 Ohtsuki は `SIGHTENGINE_API_USER` と `SIGHTENGINE_API_SECRET` がある場合に外部判定APIを使い、未設定時は簡易判定で動作します。
 
-Hynek は匿名 cookie を使って初回回答のみ集計し、`/hynek/dashboard` で集計結果を表示します。
+Hynek は匿名 cookie を使って初回回答のみ集計し、`/hynek/dashboard` で集計結果を表示します。表示時は集計済みデータを優先して読み、個別回答の全件読み取りは管理復旧時や移行時に限定します。
 
 ## Docs And Codex Workflow
 
