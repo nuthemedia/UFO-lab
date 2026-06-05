@@ -7,7 +7,7 @@ import { getHynekDashboardSubmissions } from "@/lib/hynekStore";
 import { siteUrl } from "@/lib/seo";
 import { withHynekSocialImageVersion } from "@/lib/hynekShare";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 const title = "日本のUFO観ダッシュボード | UFO Lab Tokyo";
 const description = "UFOファンタイプ診断の匿名回答から、日本のUFO観の傾向を可視化するダッシュボードです。";
