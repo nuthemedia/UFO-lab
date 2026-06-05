@@ -124,10 +124,14 @@ const STORE_PATH = process.env.HYNEK_STORE_PATH || path.join(os.tmpdir(), "hynek
 const KV_LEGACY_SUBMISSIONS_KEY = "hynek:submissions";
 const KV_SUBMISSION_KEY_PREFIX = "hynek:submission:";
 const KV_SUBMISSION_INDEX_KEY = "hynek:submission-users";
+const KV_READ_CACHE_TTL_MS = 60_000;
+const KV_READ_ERROR_COOLDOWN_MS = 5 * 60_000;
 
 const fallbackState: StoreState = {
   submissions: {},
 };
+let cachedKvState: { state: StoreState; expiresAt: number } | null = null;
+let kvReadBlockedUntil = 0;
 
 function hasKvConfig() {
   return Boolean(process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN);
@@ -176,6 +180,37 @@ type KvClient = NonNullable<Awaited<ReturnType<typeof getKvClient>>>;
 function entriesToState(entries: Array<readonly [string, HynekSubmission]>): StoreState {
   return {
     submissions: Object.fromEntries(entries),
+  };
+}
+
+function cacheKvState(state: StoreState) {
+  cachedKvState = {
+    state,
+    expiresAt: Date.now() + KV_READ_CACHE_TTL_MS,
+  };
+}
+
+function getCachedKvState() {
+  if (!cachedKvState || cachedKvState.expiresAt <= Date.now()) {
+    return null;
+  }
+
+  return cachedKvState.state;
+}
+
+function addCachedKvSubmission(submission: HynekSubmission) {
+  if (!cachedKvState || cachedKvState.expiresAt <= Date.now()) {
+    return;
+  }
+
+  cachedKvState = {
+    state: {
+      submissions: {
+        ...cachedKvState.state.submissions,
+        [submission.userId]: submission,
+      },
+    },
+    expiresAt: cachedKvState.expiresAt,
   };
 }
 
@@ -435,10 +470,25 @@ async function readState(): Promise<StoreState> {
   const kv = await getKvClient();
 
   if (kv) {
+    const cachedState = getCachedKvState();
+
+    if (cachedState) {
+      return cachedState;
+    }
+
+    if (kvReadBlockedUntil > Date.now()) {
+      return fallbackState;
+    }
+
     try {
-      return await readKvState(kv);
+      const state = await readKvState(kv);
+      cacheKvState(state);
+      kvReadBlockedUntil = 0;
+
+      return state;
     } catch (error) {
       console.error("Hynek KV read failed", error);
+      kvReadBlockedUntil = Date.now() + KV_READ_ERROR_COOLDOWN_MS;
       return fallbackState;
     }
   }
@@ -489,6 +539,10 @@ export async function recordHynekSubmission(submission: HynekSubmission) {
   const recordedInKv = await writeKvSubmission(submission);
 
   if (typeof recordedInKv === "boolean") {
+    if (recordedInKv) {
+      addCachedKvSubmission(submission);
+    }
+
     const dashboard = await getHynekDashboardData();
 
     return {
