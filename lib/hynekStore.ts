@@ -84,6 +84,8 @@ type StoreState = {
 };
 
 const STORE_PATH = process.env.HYNEK_STORE_PATH || path.join(os.tmpdir(), "hynek-store.json");
+const KV_LEGACY_SUBMISSIONS_KEY = "hynek:submissions";
+const KV_SUBMISSION_KEY_PREFIX = "hynek:submission:";
 const KV_SUBMISSION_INDEX_KEY = "hynek:submission-users";
 
 const fallbackState: StoreState = {
@@ -131,6 +133,96 @@ function parseStoredSubmission(rawSubmission: unknown): HynekSubmission | null {
 
   return null;
 }
+
+type KvClient = NonNullable<Awaited<ReturnType<typeof getKvClient>>>;
+
+function entriesToState(entries: Array<readonly [string, HynekSubmission]>): StoreState {
+  return {
+    submissions: Object.fromEntries(entries),
+  };
+}
+
+async function readKvEntriesByUserId(kv: KvClient, userIds: string[]) {
+  const entries = await Promise.all(
+    userIds.map(async (userId) => {
+      const rawSubmission = await kv.get<unknown>(`${KV_SUBMISSION_KEY_PREFIX}${userId}`);
+      const submission = parseStoredSubmission(rawSubmission);
+
+      return submission ? ([userId, submission] as const) : null;
+    }),
+  );
+
+  return entries.filter((entry): entry is readonly [string, HynekSubmission] => Boolean(entry));
+}
+
+async function scanKvSubmissionEntries(kv: KvClient) {
+  const entries: Array<readonly [string, HynekSubmission]> = [];
+
+  for await (const key of kv.scanIterator({ match: `${KV_SUBMISSION_KEY_PREFIX}*`, count: 100 })) {
+    const rawSubmission = await kv.get<unknown>(key);
+    const submission = parseStoredSubmission(rawSubmission);
+
+    if (submission) {
+      entries.push([submission.userId || key.slice(KV_SUBMISSION_KEY_PREFIX.length), submission]);
+    }
+  }
+
+  return entries;
+}
+
+async function readLegacyKvSubmissionEntries(kv: KvClient) {
+  const rawSubmissions = (await kv.hgetall<Record<string, unknown>>(KV_LEGACY_SUBMISSIONS_KEY)) || {};
+
+  return Object.entries(rawSubmissions).flatMap(([userId, rawSubmission]) => {
+    const submission = parseStoredSubmission(rawSubmission);
+
+    return submission ? [[userId, submission] as const] : [];
+  });
+}
+
+async function repairKvSubmissionIndex(kv: KvClient, entries: Array<readonly [string, HynekSubmission]>) {
+  if (entries.length === 0) {
+    return;
+  }
+
+  const userIds = entries.map(([userId]) => userId);
+  await kv.sadd(KV_SUBMISSION_INDEX_KEY, userIds[0], ...userIds.slice(1));
+}
+
+async function migrateLegacyKvSubmissions(kv: KvClient, entries: Array<readonly [string, HynekSubmission]>) {
+  await Promise.all(
+    entries.map(async ([userId, submission]) => {
+      await kv.set(`${KV_SUBMISSION_KEY_PREFIX}${userId}`, JSON.stringify(submission), { nx: true });
+    }),
+  );
+  await repairKvSubmissionIndex(kv, entries);
+}
+
+async function readKvState(kv: KvClient): Promise<StoreState> {
+  const userIds = ((await kv.smembers(KV_SUBMISSION_INDEX_KEY)) || []) as string[];
+  const indexedEntries = await readKvEntriesByUserId(kv, userIds);
+
+  if (indexedEntries.length > 0) {
+    return entriesToState(indexedEntries);
+  }
+
+  const scannedEntries = await scanKvSubmissionEntries(kv);
+
+  if (scannedEntries.length > 0) {
+    await repairKvSubmissionIndex(kv, scannedEntries);
+    return entriesToState(scannedEntries);
+  }
+
+  const legacyEntries = await readLegacyKvSubmissionEntries(kv);
+
+  if (legacyEntries.length > 0) {
+    await migrateLegacyKvSubmissions(kv, legacyEntries);
+    return entriesToState(legacyEntries);
+  }
+
+  return fallbackState;
+}
+
 function countOf(map: Record<string, number>, key: string) {
   return map[key] || 0;
 }
@@ -154,21 +246,9 @@ async function readState(): Promise<StoreState> {
 
   if (kv) {
     try {
-      const userIds = (await kv.smembers<string[]>(KV_SUBMISSION_INDEX_KEY)) || [];
-      const entries = await Promise.all(
-        userIds.map(async (userId) => {
-          const rawSubmission = await kv.get<unknown>(`hynek:submission:${userId}`);
-          const submission = parseStoredSubmission(rawSubmission);
-
-          return submission ? ([userId, submission] as const) : null;
-        }),
-      );
-      const submissions = Object.fromEntries(
-        entries.filter((entry): entry is readonly [string, HynekSubmission] => Boolean(entry)),
-      );
-
-      return { submissions };
-    } catch {
+      return await readKvState(kv);
+    } catch (error) {
+      console.error("Hynek KV read failed", error);
       return fallbackState;
     }
   }
@@ -197,7 +277,7 @@ async function writeKvSubmission(submission: HynekSubmission) {
     return null;
   }
 
-  const submissionKey = `hynek:submission:${submission.userId}`;
+  const submissionKey = `${KV_SUBMISSION_KEY_PREFIX}${submission.userId}`;
   const inserted = await kv.set(submissionKey, JSON.stringify(submission), { nx: true });
 
   if (inserted) {
