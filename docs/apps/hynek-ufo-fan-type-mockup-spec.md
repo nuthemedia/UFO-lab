@@ -83,6 +83,7 @@ Q12 / Q13 は、Q11 で「はっきりある」または「たぶんある」を
 - 再診断は可能だが、同じ端末の再送信は初回のみ集計に反映する
 - `/hynek/dashboard` は匿名ライブ集計を表示する。Vercel 本番では KV を使って永続化し、ローカルでは一時ストアにフォールバックする
 - KV は現行の個別キー形式を優先して読み、旧 hash 形式 `hynek:submissions` に残る回答がある場合は互換読み取りして現行形式へ移行する
+- `/api/hynek/admin/diagnostics` と `/api/hynek/admin/repair` は `HYNEK_ADMIN_TOKEN` で保護する運用復旧用APIとし、KVの件数・復旧可能件数・エラー種別のみを返す。userId、回答本文、cookie、KV token、個人を識別できる値は返さない
 
 ## 9. ディスクレイマー
 

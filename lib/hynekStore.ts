@@ -83,6 +83,43 @@ type StoreState = {
   submissions: Record<string, HynekSubmission>;
 };
 
+export type HynekKvDiagnostics = {
+  checkedAt: string;
+  kvConfigured: boolean;
+  kvConnected: boolean;
+  index: {
+    members: number;
+    parsedSubmissions: number;
+    missingOrInvalidSubmissions: number;
+  };
+  individualKeys: {
+    keys: number;
+    parsedSubmissions: number;
+    invalidSubmissions: number;
+  };
+  legacyHash: {
+    fields: number;
+    parsedSubmissions: number;
+    invalidSubmissions: number;
+  };
+  recoverableSubmissions: number;
+  currentDashboardResponses: number;
+  errors: string[];
+};
+
+export type HynekKvRepairResult = {
+  checkedAt: string;
+  dryRun: boolean;
+  kvConfigured: boolean;
+  kvConnected: boolean;
+  recoverableSubmissions: number;
+  indexMembersToWrite: number;
+  currentKeysToWrite: number;
+  repaired: boolean;
+  message: string;
+  errors: string[];
+};
+
 const STORE_PATH = process.env.HYNEK_STORE_PATH || path.join(os.tmpdir(), "hynek-store.json");
 const KV_LEGACY_SUBMISSIONS_KEY = "hynek:submissions";
 const KV_SUBMISSION_KEY_PREFIX = "hynek:submission:";
@@ -142,6 +179,22 @@ function entriesToState(entries: Array<readonly [string, HynekSubmission]>): Sto
   };
 }
 
+function errorMessage(error: unknown) {
+  return error instanceof Error ? error.message : String(error);
+}
+
+function uniqueEntries(...entryGroups: Array<Array<readonly [string, HynekSubmission]>>) {
+  const submissions = new Map<string, HynekSubmission>();
+
+  for (const entries of entryGroups) {
+    for (const [userId, submission] of entries) {
+      submissions.set(userId, submission);
+    }
+  }
+
+  return Array.from(submissions.entries());
+}
+
 async function readKvEntriesByUserId(kv: KvClient, userIds: string[]) {
   const entries = await Promise.all(
     userIds.map(async (userId) => {
@@ -168,6 +221,16 @@ async function scanKvSubmissionEntries(kv: KvClient) {
   }
 
   return entries;
+}
+
+async function scanKvSubmissionKeys(kv: KvClient) {
+  const keys: string[] = [];
+
+  for await (const key of kv.scanIterator({ match: `${KV_SUBMISSION_KEY_PREFIX}*`, count: 100 })) {
+    keys.push(key);
+  }
+
+  return keys;
 }
 
 async function readLegacyKvSubmissionEntries(kv: KvClient) {
@@ -221,6 +284,133 @@ async function readKvState(kv: KvClient): Promise<StoreState> {
   }
 
   return fallbackState;
+}
+
+export async function getHynekKvDiagnostics(): Promise<HynekKvDiagnostics> {
+  const diagnostics: HynekKvDiagnostics = {
+    checkedAt: currentTimestamp(),
+    kvConfigured: hasKvConfig(),
+    kvConnected: false,
+    index: {
+      members: 0,
+      parsedSubmissions: 0,
+      missingOrInvalidSubmissions: 0,
+    },
+    individualKeys: {
+      keys: 0,
+      parsedSubmissions: 0,
+      invalidSubmissions: 0,
+    },
+    legacyHash: {
+      fields: 0,
+      parsedSubmissions: 0,
+      invalidSubmissions: 0,
+    },
+    recoverableSubmissions: 0,
+    currentDashboardResponses: 0,
+    errors: [],
+  };
+  const kv = await getKvClient();
+
+  if (!kv) {
+    diagnostics.errors.push("KV_REST_API_URL or KV_REST_API_TOKEN is not configured.");
+    return diagnostics;
+  }
+
+  diagnostics.kvConnected = true;
+
+  try {
+    const userIds = ((await kv.smembers(KV_SUBMISSION_INDEX_KEY)) || []) as string[];
+    const indexedEntries = await readKvEntriesByUserId(kv, userIds);
+
+    diagnostics.index.members = userIds.length;
+    diagnostics.index.parsedSubmissions = indexedEntries.length;
+    diagnostics.index.missingOrInvalidSubmissions = Math.max(0, userIds.length - indexedEntries.length);
+
+    const individualKeys = await scanKvSubmissionKeys(kv);
+    const individualEntries = await scanKvSubmissionEntries(kv);
+
+    diagnostics.individualKeys.keys = individualKeys.length;
+    diagnostics.individualKeys.parsedSubmissions = individualEntries.length;
+    diagnostics.individualKeys.invalidSubmissions = Math.max(0, individualKeys.length - individualEntries.length);
+
+    const rawLegacy = (await kv.hgetall<Record<string, unknown>>(KV_LEGACY_SUBMISSIONS_KEY)) || {};
+    const legacyEntries = await readLegacyKvSubmissionEntries(kv);
+    const legacyFieldCount = Object.keys(rawLegacy).length;
+
+    diagnostics.legacyHash.fields = legacyFieldCount;
+    diagnostics.legacyHash.parsedSubmissions = legacyEntries.length;
+    diagnostics.legacyHash.invalidSubmissions = Math.max(0, legacyFieldCount - legacyEntries.length);
+    diagnostics.recoverableSubmissions = uniqueEntries(indexedEntries, individualEntries, legacyEntries).length;
+    diagnostics.currentDashboardResponses = diagnostics.recoverableSubmissions;
+  } catch (error) {
+    diagnostics.errors.push(errorMessage(error));
+  }
+
+  return diagnostics;
+}
+
+export async function repairHynekKvSubmissions({ dryRun }: { dryRun: boolean }): Promise<HynekKvRepairResult> {
+  const result: HynekKvRepairResult = {
+    checkedAt: currentTimestamp(),
+    dryRun,
+    kvConfigured: hasKvConfig(),
+    kvConnected: false,
+    recoverableSubmissions: 0,
+    indexMembersToWrite: 0,
+    currentKeysToWrite: 0,
+    repaired: false,
+    message: "",
+    errors: [],
+  };
+  const kv = await getKvClient();
+
+  if (!kv) {
+    result.message = "KV is not configured. No repair was attempted.";
+    result.errors.push("KV_REST_API_URL or KV_REST_API_TOKEN is not configured.");
+    return result;
+  }
+
+  result.kvConnected = true;
+
+  try {
+    const userIds = ((await kv.smembers(KV_SUBMISSION_INDEX_KEY)) || []) as string[];
+    const indexedEntries = await readKvEntriesByUserId(kv, userIds);
+    const individualEntries = await scanKvSubmissionEntries(kv);
+    const legacyEntries = await readLegacyKvSubmissionEntries(kv);
+    const recoverableEntries = uniqueEntries(indexedEntries, individualEntries, legacyEntries);
+    const currentUserIds = new Set(userIds);
+    const currentKeyUserIds = new Set(individualEntries.map(([userId]) => userId));
+
+    result.recoverableSubmissions = recoverableEntries.length;
+    result.indexMembersToWrite = recoverableEntries.filter(([userId]) => !currentUserIds.has(userId)).length;
+    result.currentKeysToWrite = recoverableEntries.filter(([userId]) => !currentKeyUserIds.has(userId)).length;
+
+    if (recoverableEntries.length === 0) {
+      result.message = "No recoverable Hynek submissions were found in the connected KV store.";
+      return result;
+    }
+
+    if (dryRun) {
+      result.message = "Dry run complete. No KV writes were performed.";
+      return result;
+    }
+
+    await Promise.all(
+      recoverableEntries.map(async ([userId, submission]) => {
+        await kv.set(`${KV_SUBMISSION_KEY_PREFIX}${userId}`, JSON.stringify(submission), { nx: true });
+      }),
+    );
+    await repairKvSubmissionIndex(kv, recoverableEntries);
+
+    result.repaired = true;
+    result.message = "Hynek KV submissions were repaired.";
+  } catch (error) {
+    result.errors.push(errorMessage(error));
+    result.message = "Hynek KV repair failed.";
+  }
+
+  return result;
 }
 
 function countOf(map: Record<string, number>, key: string) {
