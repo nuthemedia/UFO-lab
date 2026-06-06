@@ -30,7 +30,11 @@ function isValidSubmissionPayload(value: unknown): value is HynekSubmitPayload {
 export async function GET() {
   const dashboard = await getHynekDashboardData();
 
-  return NextResponse.json(dashboard);
+  return NextResponse.json(dashboard, {
+    headers: {
+      "Cache-Control": "public, s-maxage=60, stale-while-revalidate=300",
+    },
+  });
 }
 
 export async function POST(request: Request) {

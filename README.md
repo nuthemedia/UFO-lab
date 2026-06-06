@@ -70,6 +70,7 @@ http://127.0.0.1:3000/
 SIGHTENGINE_API_USER=your_sightengine_user
 SIGHTENGINE_API_SECRET=your_sightengine_secret
 OHTSUKI_DEVELOPER_TOKEN=local-dev
+HYNEK_ADMIN_TOKEN=local-hynek-admin-token
 OPENAI_API_KEY=your_openai_api_key
 OPENAI_KEYHOE_MODEL=gpt-5-mini
 REDDIT_CLIENT_ID=your_reddit_client_id
@@ -88,8 +89,11 @@ Hynek の匿名ライブ集計を本番で永続化するには、Vercel 側で�
 
 - `KV_REST_API_URL`
 - `KV_REST_API_TOKEN`
+- `HYNEK_ADMIN_TOKEN`
 
 これらがない環境では、Hynek はローカル開発用の一時ストアにフォールバックします。
+
+`HYNEK_ADMIN_TOKEN` は `/api/hynek/admin/*` の診断・復旧APIを保護するための値です。APIは件数とエラー種別のみを返し、回答本文や個人を識別できる値は返しません。
 
 `SIGHTENGINE_API_USER` と `SIGHTENGINE_API_SECRET` がない場合、Ohtsuki は簡易判定にフォールバックします。
 
@@ -110,7 +114,7 @@ Keyhoe の日次更新は GitHub Actions で毎朝7:00 JSTごろに `public/data
 
 Ohtsuki は `SIGHTENGINE_API_USER` と `SIGHTENGINE_API_SECRET` がある場合に外部判定APIを使い、未設定時は簡易判定で動作します。
 
-Hynek は匿名 cookie を使って初回回答のみ集計し、`/hynek/dashboard` で集計結果を表示します。
+Hynek は匿名 cookie を使って初回回答のみ集計し、`/hynek/dashboard` で集計結果を表示します。表示時は集計済みデータを優先して読み、個別回答の全件読み取りは管理復旧時や移行時に限定します。
 
 ## Docs And Codex Workflow
 
@@ -131,3 +135,5 @@ Codex で実装する場合は、まずルートの `AGENTS.md` を読みます�
 
 - `/api/ohtsuki/analyze`: Ohtsuki の判定API
 - `/api/hynek`: Hynek の匿名集計API
+- `/api/hynek/admin/diagnostics`: Hynek KV の管理診断API。`x-hynek-admin-token` が必要
+- `/api/hynek/admin/repair`: Hynek KV の管理復旧API。`x-hynek-admin-token` が必要。既定では dry run

@@ -1,7 +1,13 @@
 import { promises as fs } from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import { aggregateHynekSubmissions } from "@/lib/hynekDashboardData";
+import {
+  addHynekSubmissionToDashboardViews,
+  aggregateHynekDashboardViews,
+  aggregateHynekSubmissions,
+  emptyHynekDashboardViews,
+  type HynekDashboardViews,
+} from "@/lib/hynekDashboardData";
 
 export type UfoTypeId =
   | "evidence"
@@ -83,12 +89,57 @@ type StoreState = {
   submissions: Record<string, HynekSubmission>;
 };
 
+export type HynekKvDiagnostics = {
+  checkedAt: string;
+  kvConfigured: boolean;
+  kvConnected: boolean;
+  index: {
+    members: number;
+    parsedSubmissions: number;
+    missingOrInvalidSubmissions: number;
+  };
+  individualKeys: {
+    keys: number;
+    parsedSubmissions: number;
+    invalidSubmissions: number;
+  };
+  legacyHash: {
+    fields: number;
+    parsedSubmissions: number;
+    invalidSubmissions: number;
+  };
+  recoverableSubmissions: number;
+  currentDashboardResponses: number;
+  errors: string[];
+};
+
+export type HynekKvRepairResult = {
+  checkedAt: string;
+  dryRun: boolean;
+  kvConfigured: boolean;
+  kvConnected: boolean;
+  recoverableSubmissions: number;
+  indexMembersToWrite: number;
+  currentKeysToWrite: number;
+  repaired: boolean;
+  message: string;
+  errors: string[];
+};
+
 const STORE_PATH = process.env.HYNEK_STORE_PATH || path.join(os.tmpdir(), "hynek-store.json");
+const KV_LEGACY_SUBMISSIONS_KEY = "hynek:submissions";
+const KV_SUBMISSION_KEY_PREFIX = "hynek:submission:";
 const KV_SUBMISSION_INDEX_KEY = "hynek:submission-users";
+const KV_DASHBOARD_KEY = "hynek:dashboard:v1";
+const KV_READ_CACHE_TTL_MS = 60_000;
+const KV_READ_ERROR_COOLDOWN_MS = 5 * 60_000;
 
 const fallbackState: StoreState = {
   submissions: {},
 };
+let cachedKvState: { state: StoreState; expiresAt: number } | null = null;
+let cachedKvDashboardViews: { views: HynekDashboardViews; expiresAt: number } | null = null;
+let kvReadBlockedUntil = 0;
 
 function hasKvConfig() {
   return Boolean(process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN);
@@ -131,6 +182,357 @@ function parseStoredSubmission(rawSubmission: unknown): HynekSubmission | null {
 
   return null;
 }
+
+function parseStoredDashboardViews(rawViews: unknown): HynekDashboardViews | null {
+  if (typeof rawViews === "string") {
+    try {
+      return JSON.parse(rawViews) as HynekDashboardViews;
+    } catch {
+      return null;
+    }
+  }
+
+  if (rawViews && typeof rawViews === "object") {
+    return rawViews as HynekDashboardViews;
+  }
+
+  return null;
+}
+
+type KvClient = NonNullable<Awaited<ReturnType<typeof getKvClient>>>;
+
+function entriesToState(entries: Array<readonly [string, HynekSubmission]>): StoreState {
+  return {
+    submissions: Object.fromEntries(entries),
+  };
+}
+
+function cacheKvState(state: StoreState) {
+  cachedKvState = {
+    state,
+    expiresAt: Date.now() + KV_READ_CACHE_TTL_MS,
+  };
+}
+
+function getCachedKvState() {
+  if (!cachedKvState || cachedKvState.expiresAt <= Date.now()) {
+    return null;
+  }
+
+  return cachedKvState.state;
+}
+
+function addCachedKvSubmission(submission: HynekSubmission) {
+  if (!cachedKvState || cachedKvState.expiresAt <= Date.now()) {
+    return;
+  }
+
+  cachedKvState = {
+    state: {
+      submissions: {
+        ...cachedKvState.state.submissions,
+        [submission.userId]: submission,
+      },
+    },
+    expiresAt: cachedKvState.expiresAt,
+  };
+}
+
+function cacheKvDashboardViews(views: HynekDashboardViews) {
+  cachedKvDashboardViews = {
+    views,
+    expiresAt: Date.now() + KV_READ_CACHE_TTL_MS,
+  };
+}
+
+function getCachedKvDashboardViews() {
+  if (!cachedKvDashboardViews || cachedKvDashboardViews.expiresAt <= Date.now()) {
+    return null;
+  }
+
+  return cachedKvDashboardViews.views;
+}
+
+function addCachedKvDashboardSubmission(submission: HynekSubmission) {
+  if (!cachedKvDashboardViews || cachedKvDashboardViews.expiresAt <= Date.now()) {
+    return;
+  }
+
+  cachedKvDashboardViews = {
+    views: addHynekSubmissionToDashboardViews(cachedKvDashboardViews.views, submission),
+    expiresAt: cachedKvDashboardViews.expiresAt,
+  };
+}
+
+function errorMessage(error: unknown) {
+  return error instanceof Error ? error.message : String(error);
+}
+
+function uniqueEntries(...entryGroups: Array<Array<readonly [string, HynekSubmission]>>) {
+  const submissions = new Map<string, HynekSubmission>();
+
+  for (const entries of entryGroups) {
+    for (const [userId, submission] of entries) {
+      submissions.set(userId, submission);
+    }
+  }
+
+  return Array.from(submissions.entries());
+}
+
+async function readKvEntriesByUserId(kv: KvClient, userIds: string[]) {
+  const entries = await Promise.all(
+    userIds.map(async (userId) => {
+      const rawSubmission = await kv.get<unknown>(`${KV_SUBMISSION_KEY_PREFIX}${userId}`);
+      const submission = parseStoredSubmission(rawSubmission);
+
+      return submission ? ([userId, submission] as const) : null;
+    }),
+  );
+
+  return entries.filter((entry): entry is readonly [string, HynekSubmission] => Boolean(entry));
+}
+
+async function scanKvSubmissionEntries(kv: KvClient) {
+  const entries: Array<readonly [string, HynekSubmission]> = [];
+
+  for await (const key of kv.scanIterator({ match: `${KV_SUBMISSION_KEY_PREFIX}*`, count: 100 })) {
+    const rawSubmission = await kv.get<unknown>(key);
+    const submission = parseStoredSubmission(rawSubmission);
+
+    if (submission) {
+      entries.push([submission.userId || key.slice(KV_SUBMISSION_KEY_PREFIX.length), submission]);
+    }
+  }
+
+  return entries;
+}
+
+async function scanKvSubmissionKeys(kv: KvClient) {
+  const keys: string[] = [];
+
+  for await (const key of kv.scanIterator({ match: `${KV_SUBMISSION_KEY_PREFIX}*`, count: 100 })) {
+    keys.push(key);
+  }
+
+  return keys;
+}
+
+async function readLegacyKvSubmissionEntries(kv: KvClient) {
+  const rawSubmissions = (await kv.hgetall<Record<string, unknown>>(KV_LEGACY_SUBMISSIONS_KEY)) || {};
+
+  return Object.entries(rawSubmissions).flatMap(([userId, rawSubmission]) => {
+    const submission = parseStoredSubmission(rawSubmission);
+
+    return submission ? [[userId, submission] as const] : [];
+  });
+}
+
+async function repairKvSubmissionIndex(kv: KvClient, entries: Array<readonly [string, HynekSubmission]>) {
+  if (entries.length === 0) {
+    return;
+  }
+
+  const userIds = entries.map(([userId]) => userId);
+  await kv.sadd(KV_SUBMISSION_INDEX_KEY, userIds[0], ...userIds.slice(1));
+}
+
+async function migrateLegacyKvSubmissions(kv: KvClient, entries: Array<readonly [string, HynekSubmission]>) {
+  await Promise.all(
+    entries.map(async ([userId, submission]) => {
+      await kv.set(`${KV_SUBMISSION_KEY_PREFIX}${userId}`, JSON.stringify(submission), { nx: true });
+    }),
+  );
+  await repairKvSubmissionIndex(kv, entries);
+}
+
+async function readKvDashboardViews(kv: KvClient) {
+  const rawViews = await kv.get<unknown>(KV_DASHBOARD_KEY);
+
+  return parseStoredDashboardViews(rawViews);
+}
+
+async function writeKvDashboardViews(kv: KvClient, views: HynekDashboardViews) {
+  await kv.set(KV_DASHBOARD_KEY, JSON.stringify(views));
+  cacheKvDashboardViews(views);
+}
+
+async function readKvState(kv: KvClient): Promise<StoreState> {
+  const userIds = ((await kv.smembers(KV_SUBMISSION_INDEX_KEY)) || []) as string[];
+  const indexedEntries = await readKvEntriesByUserId(kv, userIds);
+
+  if (indexedEntries.length > 0) {
+    return entriesToState(indexedEntries);
+  }
+
+  const scannedEntries = await scanKvSubmissionEntries(kv);
+
+  if (scannedEntries.length > 0) {
+    await repairKvSubmissionIndex(kv, scannedEntries);
+    return entriesToState(scannedEntries);
+  }
+
+  const legacyEntries = await readLegacyKvSubmissionEntries(kv);
+
+  if (legacyEntries.length > 0) {
+    await migrateLegacyKvSubmissions(kv, legacyEntries);
+    return entriesToState(legacyEntries);
+  }
+
+  return fallbackState;
+}
+
+async function readKvDashboardViewsWithFallback(kv: KvClient) {
+  const cachedViews = getCachedKvDashboardViews();
+
+  if (cachedViews) {
+    return cachedViews;
+  }
+
+  const views = await readKvDashboardViews(kv);
+
+  if (views) {
+    cacheKvDashboardViews(views);
+    return views;
+  }
+
+  const state = await readKvState(kv);
+  const rebuiltViews = aggregateHynekDashboardViews(Object.values(state.submissions));
+
+  await writeKvDashboardViews(kv, rebuiltViews);
+
+  return rebuiltViews;
+}
+
+export async function getHynekKvDiagnostics(): Promise<HynekKvDiagnostics> {
+  const diagnostics: HynekKvDiagnostics = {
+    checkedAt: currentTimestamp(),
+    kvConfigured: hasKvConfig(),
+    kvConnected: false,
+    index: {
+      members: 0,
+      parsedSubmissions: 0,
+      missingOrInvalidSubmissions: 0,
+    },
+    individualKeys: {
+      keys: 0,
+      parsedSubmissions: 0,
+      invalidSubmissions: 0,
+    },
+    legacyHash: {
+      fields: 0,
+      parsedSubmissions: 0,
+      invalidSubmissions: 0,
+    },
+    recoverableSubmissions: 0,
+    currentDashboardResponses: 0,
+    errors: [],
+  };
+  const kv = await getKvClient();
+
+  if (!kv) {
+    diagnostics.errors.push("KV_REST_API_URL or KV_REST_API_TOKEN is not configured.");
+    return diagnostics;
+  }
+
+  diagnostics.kvConnected = true;
+
+  try {
+    const userIds = ((await kv.smembers(KV_SUBMISSION_INDEX_KEY)) || []) as string[];
+    const indexedEntries = await readKvEntriesByUserId(kv, userIds);
+
+    diagnostics.index.members = userIds.length;
+    diagnostics.index.parsedSubmissions = indexedEntries.length;
+    diagnostics.index.missingOrInvalidSubmissions = Math.max(0, userIds.length - indexedEntries.length);
+
+    const individualKeys = await scanKvSubmissionKeys(kv);
+    const individualEntries = await scanKvSubmissionEntries(kv);
+
+    diagnostics.individualKeys.keys = individualKeys.length;
+    diagnostics.individualKeys.parsedSubmissions = individualEntries.length;
+    diagnostics.individualKeys.invalidSubmissions = Math.max(0, individualKeys.length - individualEntries.length);
+
+    const rawLegacy = (await kv.hgetall<Record<string, unknown>>(KV_LEGACY_SUBMISSIONS_KEY)) || {};
+    const legacyEntries = await readLegacyKvSubmissionEntries(kv);
+    const legacyFieldCount = Object.keys(rawLegacy).length;
+
+    diagnostics.legacyHash.fields = legacyFieldCount;
+    diagnostics.legacyHash.parsedSubmissions = legacyEntries.length;
+    diagnostics.legacyHash.invalidSubmissions = Math.max(0, legacyFieldCount - legacyEntries.length);
+    diagnostics.recoverableSubmissions = uniqueEntries(indexedEntries, individualEntries, legacyEntries).length;
+    diagnostics.currentDashboardResponses =
+      parseStoredDashboardViews(await kv.get<unknown>(KV_DASHBOARD_KEY))?.all.counts.totalResponses ?? diagnostics.recoverableSubmissions;
+  } catch (error) {
+    diagnostics.errors.push(errorMessage(error));
+  }
+
+  return diagnostics;
+}
+
+export async function repairHynekKvSubmissions({ dryRun }: { dryRun: boolean }): Promise<HynekKvRepairResult> {
+  const result: HynekKvRepairResult = {
+    checkedAt: currentTimestamp(),
+    dryRun,
+    kvConfigured: hasKvConfig(),
+    kvConnected: false,
+    recoverableSubmissions: 0,
+    indexMembersToWrite: 0,
+    currentKeysToWrite: 0,
+    repaired: false,
+    message: "",
+    errors: [],
+  };
+  const kv = await getKvClient();
+
+  if (!kv) {
+    result.message = "KV is not configured. No repair was attempted.";
+    result.errors.push("KV_REST_API_URL or KV_REST_API_TOKEN is not configured.");
+    return result;
+  }
+
+  result.kvConnected = true;
+
+  try {
+    const userIds = ((await kv.smembers(KV_SUBMISSION_INDEX_KEY)) || []) as string[];
+    const indexedEntries = await readKvEntriesByUserId(kv, userIds);
+    const individualEntries = await scanKvSubmissionEntries(kv);
+    const legacyEntries = await readLegacyKvSubmissionEntries(kv);
+    const recoverableEntries = uniqueEntries(indexedEntries, individualEntries, legacyEntries);
+    const currentUserIds = new Set(userIds);
+    const currentKeyUserIds = new Set(individualEntries.map(([userId]) => userId));
+
+    result.recoverableSubmissions = recoverableEntries.length;
+    result.indexMembersToWrite = recoverableEntries.filter(([userId]) => !currentUserIds.has(userId)).length;
+    result.currentKeysToWrite = recoverableEntries.filter(([userId]) => !currentKeyUserIds.has(userId)).length;
+
+    if (recoverableEntries.length === 0) {
+      result.message = "No recoverable Hynek submissions were found in the connected KV store.";
+      return result;
+    }
+
+    if (dryRun) {
+      result.message = "Dry run complete. No KV writes were performed.";
+      return result;
+    }
+
+    await Promise.all(
+      recoverableEntries.map(async ([userId, submission]) => {
+        await kv.set(`${KV_SUBMISSION_KEY_PREFIX}${userId}`, JSON.stringify(submission), { nx: true });
+      }),
+    );
+    await repairKvSubmissionIndex(kv, recoverableEntries);
+    await writeKvDashboardViews(kv, aggregateHynekDashboardViews(recoverableEntries.map(([, submission]) => submission)));
+
+    result.repaired = true;
+    result.message = "Hynek KV submissions were repaired.";
+  } catch (error) {
+    result.errors.push(errorMessage(error));
+    result.message = "Hynek KV repair failed.";
+  }
+
+  return result;
+}
+
 function countOf(map: Record<string, number>, key: string) {
   return map[key] || 0;
 }
@@ -153,22 +555,25 @@ async function readState(): Promise<StoreState> {
   const kv = await getKvClient();
 
   if (kv) {
+    const cachedState = getCachedKvState();
+
+    if (cachedState) {
+      return cachedState;
+    }
+
+    if (kvReadBlockedUntil > Date.now()) {
+      return fallbackState;
+    }
+
     try {
-      const userIds = (await kv.smembers<string[]>(KV_SUBMISSION_INDEX_KEY)) || [];
-      const entries = await Promise.all(
-        userIds.map(async (userId) => {
-          const rawSubmission = await kv.get<unknown>(`hynek:submission:${userId}`);
-          const submission = parseStoredSubmission(rawSubmission);
+      const state = await readKvState(kv);
+      cacheKvState(state);
+      kvReadBlockedUntil = 0;
 
-          return submission ? ([userId, submission] as const) : null;
-        }),
-      );
-      const submissions = Object.fromEntries(
-        entries.filter((entry): entry is readonly [string, HynekSubmission] => Boolean(entry)),
-      );
-
-      return { submissions };
-    } catch {
+      return state;
+    } catch (error) {
+      console.error("Hynek KV read failed", error);
+      kvReadBlockedUntil = Date.now() + KV_READ_ERROR_COOLDOWN_MS;
       return fallbackState;
     }
   }
@@ -197,7 +602,7 @@ async function writeKvSubmission(submission: HynekSubmission) {
     return null;
   }
 
-  const submissionKey = `hynek:submission:${submission.userId}`;
+  const submissionKey = `${KV_SUBMISSION_KEY_PREFIX}${submission.userId}`;
   const inserted = await kv.set(submissionKey, JSON.stringify(submission), { nx: true });
 
   if (inserted) {
@@ -205,6 +610,22 @@ async function writeKvSubmission(submission: HynekSubmission) {
   }
 
   return inserted !== null;
+}
+
+async function updateKvDashboardSubmission(submission: HynekSubmission) {
+  const kv = await getKvClient();
+
+  if (!kv) {
+    return null;
+  }
+
+  const existingViews = await readKvDashboardViews(kv);
+  const views = existingViews || aggregateHynekDashboardViews(Object.values((await readKvState(kv)).submissions));
+  const updatedViews = addHynekSubmissionToDashboardViews(views, submission);
+
+  await writeKvDashboardViews(kv, updatedViews);
+
+  return updatedViews;
 }
 
 function aggregateState(state: StoreState): HynekDashboardData {
@@ -219,7 +640,12 @@ export async function recordHynekSubmission(submission: HynekSubmission) {
   const recordedInKv = await writeKvSubmission(submission);
 
   if (typeof recordedInKv === "boolean") {
-    const dashboard = await getHynekDashboardData();
+    if (recordedInKv) {
+      addCachedKvSubmission(submission);
+      addCachedKvDashboardSubmission(submission);
+    }
+
+    const dashboard = recordedInKv ? (await updateKvDashboardSubmission(submission))?.all || (await getHynekDashboardData()) : await getHynekDashboardData();
 
     return {
       recorded: recordedInKv,
@@ -246,7 +672,34 @@ export async function recordHynekSubmission(submission: HynekSubmission) {
 }
 
 export async function getHynekDashboardData() {
-  return aggregateState(await readState());
+  const views = await getHynekDashboardViews();
+
+  return views.all;
+}
+
+export async function getHynekDashboardViews() {
+  const kv = await getKvClient();
+
+  if (kv) {
+    if (kvReadBlockedUntil > Date.now()) {
+      return getCachedKvDashboardViews() || emptyHynekDashboardViews();
+    }
+
+    try {
+      const views = await readKvDashboardViewsWithFallback(kv);
+      kvReadBlockedUntil = 0;
+
+      return views;
+    } catch (error) {
+      console.error("Hynek KV dashboard read failed", error);
+      kvReadBlockedUntil = Date.now() + KV_READ_ERROR_COOLDOWN_MS;
+      return getCachedKvDashboardViews() || emptyHynekDashboardViews();
+    }
+  }
+
+  const state = await readState();
+
+  return aggregateHynekDashboardViews(Object.values(state.submissions));
 }
 
 export async function getHynekDashboardSubmissions() {
