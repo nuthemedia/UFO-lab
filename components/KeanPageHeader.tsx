@@ -6,7 +6,7 @@ type KeanPageHeaderProps = {
   eyebrow?: string;
   title: string;
   subtitle: string;
-  description: string;
+  description?: string;
   variant?: "portal" | "page";
 };
 
@@ -44,7 +44,7 @@ export function KeanPageHeader({
         {variant === "page" ? <p className="eyebrow">{eyebrow}</p> : null}
         <h1>{title}</h1>
         <p className="tagline">{subtitle}</p>
-        <p className="lead">{description}</p>
+        {description ? <p className="lead">{description}</p> : null}
       </div>
       <nav className="kean-subnav" aria-label="Kean navigation">
         {navItems.map((item) => (

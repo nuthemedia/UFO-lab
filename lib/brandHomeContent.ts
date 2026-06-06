@@ -30,10 +30,11 @@ export const brandHomeContent = {
     },
     mission: "テクノロジーの魔法で、UFOコミュニティに貢献する",
     featuredApp: {
-      name: "Ruppelt",
-      description: "UFO米国政府機密解除情報の日本語リーダー",
-      note: "🔴 Ruppeltとは？",
-      noteHref: "/ruppelt/lp",
+      name: "Kean",
+      description: "UFO・UAPディスクロージャー入門",
+      href: "/kean",
+      note: "知っておきたいUAPを見る",
+      noteHref: "/kean/uap",
     },
     challengesHeading: "UFO Lab Tokyo が解決する課題",
     challenges: [
@@ -58,7 +59,7 @@ export const brandHomeContent = {
         description: "過去のUFO研究が、現代の議論につながりにくい。",
       },
     ],
-    update: "Keyhoe v0.5 - 海外UFO・UAPニュース日本語チェッカーを公開しました。",
+    update: "Kean - UFO・UAPディスクロージャー入門を公開しました。",
     updateFeedback: {
       heading: "更新情報・フィードバック",
       body: [
@@ -72,6 +73,13 @@ export const brandHomeContent = {
       href: "/experiments/biorhythm",
     },
     products: [
+      {
+        version: "New",
+        name: "Kean",
+        title: "Kean – UFO・UAPディスクロージャー入門",
+        href: "/kean",
+        cta: "Keanを開く",
+      },
       {
         version: "Version 0.5 Beta",
         name: "Keyhoe v0.5",
@@ -140,10 +148,11 @@ export const brandHomeContent = {
     },
     mission: "Contributing to the UFO community through the magic of technology.",
     featuredApp: {
-      name: "Ruppelt",
-      description: "A Japanese reader for declassified UFO records from the U.S. government.",
-      note: "🔴 What is Ruppelt?",
-      noteHref: "/ruppelt/lp",
+      name: "Kean",
+      description: "A Japanese guide to UFO and UAP disclosure.",
+      href: "/kean",
+      note: "Explore key UAP cases",
+      noteHref: "/kean/uap",
     },
     challengesHeading: "Challenges UFO Lab Tokyo Takes On",
     challenges: [
@@ -170,7 +179,7 @@ export const brandHomeContent = {
         description: "Past UFO research does not easily connect to today's discussion.",
       },
     ],
-    update: "Released Keyhoe v0.5, the Japanese checker for overseas UFO and UAP news.",
+    update: "Released Kean, a Japanese guide to UFO and UAP disclosure.",
     updateFeedback: {
       heading: "Updates & Feedback",
       body: [
@@ -184,6 +193,13 @@ export const brandHomeContent = {
       href: "/experiments/biorhythm",
     },
     products: [
+      {
+        version: "New",
+        name: "Kean",
+        title: "Kean – UFO and UAP Disclosure Guide",
+        href: "/kean",
+        cta: "Open Kean",
+      },
       {
         version: "Version 0.5 Beta",
         name: "Keyhoe v0.5",

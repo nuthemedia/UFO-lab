@@ -412,7 +412,7 @@ export const people: Person[] = [
     relatedEvents: ["2025-age-of-disclosure-network"],
     tags: ["navy", "ocean"],
   }),
-  person("jesse-michels", "Jesse Michels", "ジェシー・ミケルズ", "filmmaker", "context", "長尺インタビューやネット番組でUAP関係者を紹介する発信者。", {
+  person("jesse-michels", "Jesse Michels", "ジェシー・マイケルズ", "filmmaker", "context", "長尺インタビューやネット番組でUAP関係者を紹介する発信者。", {
     relatedEvents: ["2025-age-of-disclosure-network"],
     tags: ["internet", "interview"],
   }),

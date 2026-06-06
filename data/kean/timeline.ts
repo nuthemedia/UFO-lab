@@ -260,7 +260,7 @@ export const timelineEvents: TimelineEvent[] = [
     yearLabel: "2025",
     title: "The Age of Disclosure とネット発信",
     shortSummary: "ドキュメンタリー、長尺インタビュー、SNS発信が、UAP開示論を広い層へ届けた。",
-    whatHappened: "ダン・ファラーの『The Age of Disclosure』や、ジェシー・ミケルズらの長尺インタビュー、既存ジャーナリスト・懐疑派の発信が並行し、UAPは政策議論だけでなく文化・ネット議論としても広がった。",
+    whatHappened: "ダン・ファラーの『The Age of Disclosure』や、ジェシー・マイケルズらの長尺インタビュー、既存ジャーナリスト・懐疑派の発信が並行し、UAPは政策議論だけでなく文化・ネット議論としても広がった。",
     whyImportant: "初心者がUAPに入る入口が、公式資料だけでなく映画、YouTube、ポッドキャスト、SNSへ広がった。その一方で、確認済み情報と強い主張が混ざりやすくなった。",
     caution: "映像作品やネット発信は理解の入口として有用だが、演出、編集、未検証の主張を含む。一次資料に戻る姿勢が重要。",
     relatedPeople: [

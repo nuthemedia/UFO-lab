@@ -84,7 +84,7 @@ export function BrandHomePage({ locale }: BrandHomePageProps) {
             <article className="brand-featured-app-card">
               <Link
                 className="brand-featured-app-main"
-                href="/ruppelt"
+                href={content.featuredApp.href}
                 aria-labelledby="featured-app-heading"
               >
                 <p className="brand-featured-app-eyebrow" id="featured-app-heading">

@@ -7,14 +7,14 @@ import { getKeanTagLabel } from "@/data/kean/labels";
 import { keanEvidencePrinciples, keanReadingFlow } from "@/data/kean/guide";
 import { peopleById } from "@/data/kean/people";
 import { timelineEvents } from "@/data/kean/timeline";
-import { keanUapById } from "@/data/kean/uap";
+import { keanUapById, keanUapRecords } from "@/data/kean/uap";
 import { getKeanPersonIllustration } from "@/lib/keanPortrait";
 import { siteConfig } from "@/lib/site";
 
 const keanTitle = "Kean";
 const keanSubtitle = "UFO・UAPディスクロージャー入門";
 const keanDescription =
-  "近年話題のアメリカのUFO・UAP機密情報開示について、基本、歴史、人物、代表的なUAP動画を日本語で整理する入門ポータル。";
+  "2017年以降の米国UAP報道、議会証言、公的報告、人物の発言を日本語で確認。";
 const keanOgImage = "/kean/opengraph-image";
 const keanKeywords = [
   "UFOディスクロージャーとは",
@@ -30,6 +30,7 @@ const keanKeywords = [
   "Gimbal",
   "GoFast",
 ];
+const keanEvidenceLegend = ["公的資料", "報道", "証言", "未検証・注意"];
 
 export const metadata: Metadata = {
   title: `${keanTitle} | ${keanSubtitle}`,
@@ -79,6 +80,7 @@ export default function KeanPage() {
   );
   const featuredTags = ["journalism", "hearing", "AATIP", "skeptic"];
   const ticTac = keanUapById.get("tic-tac");
+  const featuredUap = keanUapRecords;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -163,22 +165,20 @@ export default function KeanPage() {
           activeHref="/kean"
           title={keanTitle}
           subtitle={keanSubtitle}
-          description={keanDescription}
           variant="portal"
         />
-
-        {ticTac?.model ? (
-          <section className="kean-home-uap-spotlight" aria-label="Tic Tac 3Dモデル">
-            <KeanTicTacModelViewer modelSrc={ticTac.model.src} variant="compact" />
-          </section>
-        ) : null}
       </section>
 
       <section className="kean-home-intro" aria-label="Kean入口">
         <div className="kean-home-intro-copy">
           <span>現代UAPディスクロージャー入門</span>
           <h2>事実・主張・未検証点を分けて読む。</h2>
-          <p>2017年以降の報道、議会証言、公的報告、人物の発言を知る日本語ガイドです。</p>
+          <p>2017年以降の米国UAP報道、議会証言、公的報告、人物の発言を日本語で確認</p>
+          <div className="kean-evidence-legend" aria-label="根拠の読み分け">
+            {keanEvidenceLegend.map((item) => (
+              <span key={item}>{item}</span>
+            ))}
+          </div>
           <div className="kean-home-actions" aria-label="主要導線">
             <Link href="/kean/about">基本を読む</Link>
             <Link href="/kean/history">歴史を追う</Link>
@@ -186,8 +186,8 @@ export default function KeanPage() {
           </div>
         </div>
 
-        <nav className="kean-home-read-order" aria-label="最初の3分で読む">
-          <h2>最初の3分で読む</h2>
+        <nav className="kean-home-read-order" aria-label="順番に読む">
+          <h2>順番に読む</h2>
           {keanReadingFlow.map((item) => (
             <Link
               href={item.label === "01" ? "/kean/about" : item.label === "02" ? "/kean/history" : "/kean/people"}
@@ -201,7 +201,33 @@ export default function KeanPage() {
         </nav>
       </section>
 
+      {ticTac?.model ? (
+        <section className="kean-home-uap-spotlight" aria-label="代表的なUAP映像">
+          <div className="kean-home-uap-copy">
+            <span>代表的な米海軍UAP映像から見る</span>
+            <p>Tic Tacは、現代UAPディスクロージャーで繰り返し参照される代表例のひとつです。</p>
+          </div>
+          <KeanTicTacModelViewer modelSrc={ticTac.model.src} variant="compact" />
+        </section>
+      ) : null}
+
       <section className="kean-home-grid" aria-label="資料索引">
+        <div className="kean-home-panel kean-home-panel--uap">
+          <div className="kean-home-panel-head">
+            <span>代表例で読む</span>
+            <h2>知っておきたいUAP</h2>
+          </div>
+          <div className="kean-home-uap-cases">
+            {featuredUap.map((record) => (
+              <Link href={`/kean/uap/${record.id}`} key={record.id}>
+                <span>{record.yearLabel}</span>
+                <strong>{record.jaName}</strong>
+                <p>{record.shortSummary}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+
         <div className="kean-home-panel kean-home-panel--history">
           <div className="kean-home-panel-head">
             <span>歴史で読む</span>
@@ -248,7 +274,7 @@ export default function KeanPage() {
         <div className="kean-home-panel kean-home-panel--tags">
           <div className="kean-home-panel-head">
             <span>関心から探す</span>
-            <h2>タグ索引</h2>
+            <h2>人物タグで探す</h2>
           </div>
           <div className="kean-home-tags">
             {featuredTags.map((tag) => (
@@ -262,7 +288,7 @@ export default function KeanPage() {
         <div className="kean-home-panel kean-home-panel--documents">
           <div className="kean-home-panel-head">
             <span>公開資料を読む</span>
-            <h2>機密開示資料</h2>
+            <h2>公開資料・翻訳資料</h2>
           </div>
           <div className="kean-home-tags">
             <Link href="/ruppelt">米国UFO機密開示情報を日本語で読む</Link>

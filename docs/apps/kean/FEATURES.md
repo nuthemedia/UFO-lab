@@ -6,7 +6,7 @@
 - Show the modern disclosure timeline from 2017 onward.
 - Present a "key UAP to know" index for Tic Tac, Gimbal, and GoFast.
 - Provide individual UAP pages with explanation, cautions, sources, and official video links.
-- Show a compact Tic Tac explanatory 3D model directly below the portal header as a small visual entry point.
+- Show a compact Tic Tac explanatory 3D model on the portal home as a small visual entry point; mobile can place it near the top, while desktop keeps it secondary to the reading guide.
 - Link from the portal home to Ruppelt with the label `米国UFO機密開示情報を日本語で読む`.
 - Present the main people involved by category.
 - Open people index cards in a detail modal; keep individual person pages as direct SEO URLs.
@@ -44,5 +44,5 @@
 - `/kean/uap` lists Tic Tac, Gimbal, and GoFast and links to their detail pages.
 - `/kean/uap/tic-tac` renders a nonblank interactive Three.js canvas when the model is available.
 - Tic Tac model views show a visible, surface-shaded object rather than an empty grid or wire-only rendering.
-- The portal-home Tic Tac model shows only a `Tic Tacページへ` link in its control area.
+- The portal-home Tic Tac model stays compact, does not push the reading guide too far down, and shows only a `Tic Tacページへ` link in its control area.
 - `/kean`, `/kean/people/[id]`, and `/kean/uap/[id]` expose search-oriented Japanese titles, descriptions, OG images, and structured data without presenting unverified claims as facts.

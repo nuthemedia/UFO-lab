@@ -29,5 +29,5 @@ Kean should feel like a calm disclosure guide, not a conspiracy fan site.
 - The Tic Tac model may use subtle horizontal scene rotation and a light wave/bubble animation, but it must read as an explanatory visual aid, not evidence footage.
 - Before user interaction, the Tic Tac scene can rotate as a whole; after tapping or dragging, whole-scene rotation stops and drag controls only the UAP body.
 - The sea should read as a continuous open-ocean backdrop, not a flat plate under the model.
-- The portal-home Tic Tac model should be a compact open-ocean eyecatch that does not push navigation or the reading guide out of view.
+- The portal-home Tic Tac model should be a compact open-ocean eyecatch; on mobile it can sit directly below the header, while desktop should keep the reading guide visually dominant.
 - Avoid heavy parallax, video backgrounds, or elaborate animated treatments.

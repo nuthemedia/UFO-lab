@@ -6683,8 +6683,8 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 32px;
-  padding: 0 10px;
+  min-height: 44px;
+  padding: 0 12px;
   border: 1px solid rgba(31, 36, 32, 0.14);
   border-radius: 999px;
   color: #303632;
@@ -7116,13 +7116,23 @@ h3 {
   margin-inline: auto;
 }
 
+.kean-portal-page {
+  display: grid;
+}
+
+.kean-portal-page > .site-footer {
+  order: 5;
+}
+
 .kean-home-hero {
+  order: 1;
   display: grid;
   gap: 10px;
   align-items: center;
 }
 
 .kean-home-intro {
+  order: 3;
   display: grid;
   gap: 14px;
   margin-top: 12px;
@@ -7164,6 +7174,26 @@ h3 {
   line-height: 1.75;
 }
 
+.kean-evidence-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 680px;
+}
+
+.kean-evidence-legend span {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
+  padding: 0 10px;
+  border: 1px solid rgba(36, 84, 71, 0.18);
+  border-radius: 999px;
+  color: #245447;
+  background: rgba(36, 84, 71, 0.07);
+  font-size: 0.76rem;
+  font-weight: 1000;
+}
+
 .kean-home-actions,
 .kean-home-tags {
   display: flex;
@@ -7175,7 +7205,7 @@ h3 {
 .kean-home-tags a {
   display: inline-flex;
   align-items: center;
-  min-height: 36px;
+  min-height: 44px;
   padding: 0 12px;
   border: 1px solid rgba(31, 36, 32, 0.16);
   border-radius: 999px;
@@ -7246,21 +7276,22 @@ h3 {
 }
 
 .kean-home-grid {
+  order: 4;
   display: grid;
   gap: 14px;
   margin-top: 14px;
 }
 
 .kean-home-uap-spotlight {
+  order: 2;
   display: grid;
   gap: 10px;
-  width: min(100%, 760px);
-  margin-top: 2px;
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-  box-shadow: none;
+  width: min(100%, 820px);
+  margin-top: 8px;
+  padding: 10px;
+  border: 1px solid rgba(31, 36, 32, 0.1);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.58);
 }
 
 .kean-home-uap-copy {
@@ -7276,20 +7307,13 @@ h3 {
   line-height: 1;
 }
 
-.kean-home-uap-copy h2 {
-  margin: 0;
-  color: #202822;
-  font-size: clamp(1.24rem, 4.8vw, 1.9rem);
-  font-weight: 1000;
-  line-height: 1.14;
-}
-
 .kean-home-uap-copy p {
+  display: none;
   margin: 0;
   color: #3d463f;
-  font-size: 0.92rem;
+  font-size: 0.86rem;
   font-weight: 800;
-  line-height: 1.72;
+  line-height: 1.55;
 }
 
 .kean-home-uap-links {
@@ -7300,7 +7324,7 @@ h3 {
 
 .kean-home-uap-links a {
   display: inline-flex;
-  min-height: 36px;
+  min-height: 44px;
   align-items: center;
   justify-content: center;
   padding: 0 12px;
@@ -7310,6 +7334,14 @@ h3 {
   background: rgba(255, 255, 255, 0.78);
   font-size: 0.84rem;
   font-weight: 900;
+}
+
+.kean-home-uap-spotlight .kean-model-viewer--compact .kean-model-canvas {
+  height: 140px;
+}
+
+.kean-home-uap-spotlight .kean-model-viewer--compact .kean-model-controls a {
+  min-height: 44px;
 }
 
 .kean-home-uap-links a:first-child {
@@ -7336,6 +7368,43 @@ h3 {
   font-size: 1.18rem;
   font-weight: 1000;
   line-height: 1.18;
+}
+
+.kean-home-uap-cases {
+  display: grid;
+  gap: 8px;
+}
+
+.kean-home-uap-cases a {
+  display: grid;
+  gap: 5px;
+  min-height: 44px;
+  padding: 12px;
+  border: 1px solid rgba(31, 36, 32, 0.12);
+  border-radius: var(--radius);
+  color: inherit;
+  background: rgba(255, 255, 255, 0.68);
+}
+
+.kean-home-uap-cases span {
+  color: #6b6049;
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.kean-home-uap-cases strong {
+  color: #202822;
+  font-size: 0.98rem;
+  font-weight: 1000;
+  line-height: 1.18;
+}
+
+.kean-home-uap-cases p {
+  margin: 0;
+  color: #4c554f;
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1.5;
 }
 
 .kean-home-history-list,
@@ -7383,7 +7452,6 @@ h3 {
 
 .kean-home-people {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 8px;
 }
 
@@ -7393,6 +7461,7 @@ h3 {
   align-items: center;
   gap: 8px;
   min-width: 0;
+  min-height: 44px;
   padding: 8px;
   border: 1px solid rgba(31, 36, 32, 0.12);
   border-radius: var(--radius);
@@ -7443,7 +7512,7 @@ h3 {
 }
 
 .kean-home-tags a {
-  min-height: 30px;
+  min-height: 44px;
   padding: 0 10px;
   color: #405f51;
   border-color: rgba(64, 95, 81, 0.18);
@@ -8920,9 +8989,15 @@ h3 {
   }
 
   .kean-home-hero .kean-subnav a {
-    min-height: 30px;
+    min-height: 34px;
     padding: 0 9px;
     font-size: 0.72rem;
+  }
+
+  .kean-home-actions a,
+  .kean-home-tags a,
+  .kean-home-uap-links a {
+    min-height: 36px;
   }
 
   .kean-portal-card-grid {
@@ -8950,18 +9025,30 @@ h3 {
   }
 
   .kean-home-intro {
+    order: 2;
     grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.95fr);
     gap: 24px;
     align-items: start;
   }
 
   .kean-home-uap-spotlight {
-    display: block;
+    order: 3;
+    grid-template-columns: minmax(0, 0.62fr) minmax(320px, 1fr);
+    align-items: center;
     width: min(100%, 780px);
     margin-top: 0;
   }
 
+  .kean-home-uap-spotlight .kean-model-viewer--compact .kean-model-canvas {
+    height: 180px;
+  }
+
+  .kean-home-uap-copy p {
+    display: block;
+  }
+
   .kean-home-grid {
+    order: 4;
     grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
     gap: 26px;
     align-items: start;
