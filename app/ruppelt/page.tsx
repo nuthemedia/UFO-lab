@@ -6,6 +6,7 @@ import pursueIndex from "@/data/pursue/pursue-records.json";
 import { RuppeltBrowser } from "@/components/RuppeltBrowser";
 import { SiteFooter } from "@/components/SiteFooter";
 import { siteConfig } from "@/lib/site";
+import { siteUrl } from "@/lib/seo";
 import { priorDisclosureLabels, type PriorDisclosureStatus, type PursueIndex } from "@/lib/pursue";
 
 const statusDashboardOrder: PriorDisclosureStatus[] = [
@@ -14,6 +15,7 @@ const statusDashboardOrder: PriorDisclosureStatus[] = [
   "previously_public",
   "unknown",
 ];
+const ruppeltOgpImage = `${siteUrl}/ogp-ruppelt-v2.jpg`;
 
 function getFullTextRecordIds() {
   try {
@@ -39,7 +41,7 @@ export const metadata: Metadata = {
     siteName: "UFO Lab Tokyo",
     images: [
       {
-        url: "/ogp-ruppelt-v2.jpg",
+        url: ruppeltOgpImage,
         width: 1200,
         height: 630,
         alt: "Ruppelt V2.0 - PURSUE日本語インデックス",
@@ -52,7 +54,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ruppelt V2.0 - PURSUE日本語インデックス",
     description: "アメリカ政府UAP公開資料をスマホでさくっと確認。",
-    images: ["/ogp-ruppelt-v2.jpg"],
+    images: [ruppeltOgpImage],
   },
   other: {
     "twitter:image:alt": "Ruppelt V2.0 - PURSUE日本語インデックス",
