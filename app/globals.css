@@ -5764,6 +5764,7 @@ h3 {
   grid-template-rows: auto auto auto minmax(0, 1fr);
   gap: 14px;
   width: min(760px, 100%);
+  max-width: 100%;
   max-height: min(820px, calc(100vh - 48px));
   overflow: hidden;
   padding: 20px;
@@ -11891,14 +11892,24 @@ h3 {
 
 .ruppelt-detail-body {
   min-height: 0;
+  max-width: 100%;
   overflow: auto;
   padding-right: 4px;
 }
 
 .ruppelt-detail-readable-text,
 .ruppelt-detail-fulltext {
+  max-width: 100%;
   max-height: 42vh;
   overflow: auto;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.ruppelt-detail-readable-text mark,
+.ruppelt-detail-fulltext mark {
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 @media (max-width: 760px) {
@@ -11913,10 +11924,12 @@ h3 {
     display: flex;
     flex-direction: column;
     width: 100%;
+    max-width: 100%;
     height: 100dvh;
     max-height: none;
     gap: 10px;
     overflow: hidden;
+    overflow-x: hidden;
     padding: max(12px, env(safe-area-inset-top)) 14px max(16px, env(safe-area-inset-bottom));
     border: 0;
     border-radius: 0;
@@ -11977,7 +11990,9 @@ h3 {
   .ruppelt-detail-body {
     flex: 1 1 auto;
     min-height: 0;
+    max-width: 100%;
     overflow: auto;
+    overflow-x: hidden;
     padding: 0 2px max(28px, env(safe-area-inset-bottom)) 0;
     -webkit-overflow-scrolling: touch;
   }
@@ -12001,12 +12016,16 @@ h3 {
 
   .ruppelt-detail-readable-text,
   .ruppelt-detail-fulltext {
+    max-width: 100%;
     max-height: none;
     overflow: visible;
+    overflow-x: hidden;
     padding: 0 2px 28px;
     border: 0;
     border-radius: 0;
     background: transparent;
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   .ruppelt-detail-readable-text {

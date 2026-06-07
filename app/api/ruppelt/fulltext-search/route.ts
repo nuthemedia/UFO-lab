@@ -4,6 +4,9 @@ import { NextResponse } from "next/server";
 import MiniSearch from "minisearch";
 
 const fulltextIndexPath = resolve(process.cwd(), "data/shared/search/fulltext-index.json");
+const bundlesPath = resolve(process.cwd(), "data/shared/pursue-document-bundles.json");
+const translationsDir = resolve(process.cwd(), "data/shared/translations/ja");
+const snippetHydrationLimit = 60;
 
 type FulltextIndexItem = {
   id?: string;
@@ -13,6 +16,7 @@ type FulltextIndexItem = {
   summaryText?: string;
   fullTextJa?: string;
   ocrTextEn?: string;
+  snippetText?: string;
 };
 
 type FulltextIndexPayload = {
@@ -24,6 +28,34 @@ type FulltextIndexPayload = {
 
 const fields = ["metadataText", "summaryText", "fullTextJa", "ocrTextEn"];
 const storeFields = ["recordId", "documentId"];
+
+type SearchResult = {
+  id: string;
+  score?: number;
+  match?: Record<string, string[]>;
+  recordId?: string;
+  documentId?: string;
+};
+
+type LoadedSearchIndex = {
+  documents: FulltextIndexItem[];
+  documentById: Map<string, FulltextIndexItem>;
+  miniSearch: MiniSearch | null;
+};
+
+type PursueDocumentBundle = {
+  ocr?: {
+    ocrTextEn?: string;
+  };
+};
+
+type TranslationDocument = {
+  fullTextJa?: string;
+};
+
+let cachedSearchIndexPromise: Promise<LoadedSearchIndex> | null = null;
+let cachedBundlesPromise: Promise<Record<string, PursueDocumentBundle>> | null = null;
+const cachedTranslationPromises = new Map<string, Promise<TranslationDocument>>();
 
 function normalizeSearchText(value: string) {
   return String(value || "")
@@ -84,6 +116,7 @@ function makeSnippet(text: string, query: string) {
 
 function makeBestSnippet(document: FulltextIndexItem, query: string) {
   const fieldsByPriority = [
+    document.snippetText || "",
     document.fullTextJa || "",
     document.ocrTextEn || "",
     document.summaryText || "",
@@ -101,6 +134,83 @@ function makeBestSnippet(document: FulltextIndexItem, query: string) {
   return "";
 }
 
+async function loadBundles() {
+  if (!cachedBundlesPromise) {
+    cachedBundlesPromise = readFile(bundlesPath, "utf8")
+      .then((content) => JSON.parse(content) as Record<string, PursueDocumentBundle>)
+      .catch(() => ({}));
+  }
+
+  return cachedBundlesPromise;
+}
+
+async function loadTranslation(recordId: string) {
+  if (!cachedTranslationPromises.has(recordId)) {
+    cachedTranslationPromises.set(
+      recordId,
+      readFile(resolve(translationsDir, `${recordId}.json`), "utf8")
+        .then((content) => JSON.parse(content) as TranslationDocument)
+        .catch(() => ({})),
+    );
+  }
+
+  return cachedTranslationPromises.get(recordId)!;
+}
+
+async function makeHydratedSnippet(document: FulltextIndexItem, query: string) {
+  const fastSnippet = makeBestSnippet(document, query);
+
+  if (fastSnippet) {
+    return fastSnippet;
+  }
+
+  const [translation, bundles] = await Promise.all([loadTranslation(document.recordId), loadBundles()]);
+  const bundle = bundles[document.recordId];
+  const hydratedFields = [
+    translation.fullTextJa || "",
+    bundle?.ocr?.ocrTextEn || "",
+  ];
+
+  for (const text of hydratedFields) {
+    const snippet = makeSnippet(text, query);
+
+    if (snippet) {
+      return snippet;
+    }
+  }
+
+  return "";
+}
+
+async function loadSearchIndex() {
+  if (!cachedSearchIndexPromise) {
+    cachedSearchIndexPromise = readFile(fulltextIndexPath, "utf8")
+      .then((content) => {
+        const payload = JSON.parse(content) as FulltextIndexPayload | FulltextIndexItem[];
+        const documents = Array.isArray(payload) ? payload : payload.documents || [];
+        const documentById = new Map(documents.map((item) => [item.recordId, item]));
+        let miniSearch: MiniSearch | null = null;
+
+        if (!Array.isArray(payload) && payload.engine === "minisearch" && payload.index) {
+          miniSearch = MiniSearch.loadJS(payload.index as Parameters<typeof MiniSearch.loadJS>[0], {
+            fields,
+            storeFields,
+            idField: "id",
+            tokenize: tokenizeForRuppeltSearch,
+          });
+        }
+
+        return { documents, documentById, miniSearch };
+      })
+      .catch((error) => {
+        cachedSearchIndexPromise = null;
+        throw error;
+      });
+  }
+
+  return cachedSearchIndexPromise;
+}
+
 export async function GET(request: Request) {
   const url = new URL(request.url);
   const query = (url.searchParams.get("q") || "").trim();
@@ -110,25 +220,10 @@ export async function GET(request: Request) {
   }
 
   try {
-    const payload = JSON.parse(await readFile(fulltextIndexPath, "utf8")) as FulltextIndexPayload | FulltextIndexItem[];
-    const documents = Array.isArray(payload) ? payload : payload.documents || [];
-    const documentById = new Map(documents.map((item) => [item.recordId, item]));
+    const { documents, documentById, miniSearch } = await loadSearchIndex();
+    let results: SearchResult[] = [];
 
-    let results: Array<{
-      id: string;
-      score?: number;
-      match?: Record<string, string[]>;
-      recordId?: string;
-      documentId?: string;
-    }> = [];
-
-    if (!Array.isArray(payload) && payload.engine === "minisearch" && payload.index) {
-      const miniSearch = MiniSearch.loadJSON(JSON.stringify(payload.index), {
-        fields,
-        storeFields,
-        idField: "id",
-        tokenize: tokenizeForRuppeltSearch,
-      });
+    if (miniSearch) {
       const searchOptions: {
         prefix: boolean;
         fuzzy?: number;
@@ -149,13 +244,13 @@ export async function GET(request: Request) {
         searchOptions.fuzzy = 0.12;
       }
 
-      results = miniSearch.search(query, searchOptions) as typeof results;
+      results = miniSearch.search(query, searchOptions) as SearchResult[];
     } else {
       const normalizedQuery = normalizeSearchText(query);
       results = documents
         .filter((item) =>
           normalizeSearchText(
-            `${item.metadataText || ""}\n${item.summaryText || ""}\n${item.fullTextJa || ""}\n${item.ocrTextEn || ""}`,
+            `${item.metadataText || ""}\n${item.summaryText || ""}\n${item.snippetText || ""}\n${item.fullTextJa || ""}\n${item.ocrTextEn || ""}`,
           ).includes(normalizedQuery),
         )
         .map((item) => ({
@@ -166,18 +261,26 @@ export async function GET(request: Request) {
         }));
     }
 
-    const matches = results.map((result) => {
-      const recordId = result.recordId || result.id;
-      const document = documentById.get(recordId);
+    const matches = await Promise.all(
+      results.map(async (result, index) => {
+        const recordId = result.recordId || result.id;
+        const document = documentById.get(recordId);
+        const snippet =
+          document && index < snippetHydrationLimit
+            ? await makeHydratedSnippet(document, query)
+            : document
+              ? makeBestSnippet(document, query)
+              : "";
 
-      return {
-        documentId: result.documentId || document?.documentId || recordId,
-        recordId,
-        score: result.score || 0,
-        matchedFields: result.match ? Array.from(new Set(Object.values(result.match).flat())) : [],
-        snippet: document ? makeBestSnippet(document, query) : "",
-      };
-    });
+        return {
+          documentId: result.documentId || document?.documentId || recordId,
+          recordId,
+          score: result.score || 0,
+          matchedFields: result.match ? Array.from(new Set(Object.values(result.match).flat())) : [],
+          snippet,
+        };
+      }),
+    );
 
     return NextResponse.json({ query, matches });
   } catch (error) {

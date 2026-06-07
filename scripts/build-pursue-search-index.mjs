@@ -12,6 +12,7 @@ const fulltextIndexPath = resolve(rootDir, "data/shared/search/fulltext-index.js
 
 const fields = ["metadataText", "summaryText", "fullTextJa", "ocrTextEn"];
 const storeFields = ["recordId", "documentId"];
+const snippetSourceMaxLength = 1600;
 
 function normalizeSearchText(value) {
   return String(value || "")
@@ -81,6 +82,15 @@ function joinValues(values) {
   return values.filter(Boolean).join("\n");
 }
 
+function makeSnippetSource(...values) {
+  return values
+    .filter(Boolean)
+    .join("\n")
+    .replace(/\s+/g, " ")
+    .trim()
+    .slice(0, snippetSourceMaxLength);
+}
+
 const recordsIndex = await readJson(recordsPath, { records: [] });
 const bundles = await readJson(bundlesPath, {});
 const translations = await loadTranslations();
@@ -135,12 +145,16 @@ const snippetDocuments = documents.map((document) => ({
   documentId: document.documentId,
   metadataText: document.metadataText,
   summaryText: document.summaryText,
-  fullTextJa: document.fullTextJa,
-  ocrTextEn: document.ocrTextEn,
+  snippetText: makeSnippetSource(
+    document.summaryText,
+    document.metadataText,
+    document.fullTextJa,
+    document.ocrTextEn,
+  ),
 }));
 
 const payload = {
-  version: 2,
+  version: 3,
   engine: "minisearch",
   generatedAt: new Date().toISOString(),
   fields,
