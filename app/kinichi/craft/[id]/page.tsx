@@ -5,8 +5,7 @@ import { cautionText, famousCraft, getCraftById, getShapeById, productLinks } fr
 import { siteConfig } from "@/lib/site";
 import { KinichiViewer, ShapeSilhouette } from "../../KinichiViewer";
 import styles from "../../kinichi.module.css";
-
-const kinichiOgImage = "/kinichi/opengraph-image";
+import { kinichiShareImage } from "../../metadata";
 
 type CraftPageProps = {
   params: Promise<{ id: string }> | { id: string };
@@ -72,7 +71,7 @@ export async function generateMetadata({ params }: CraftPageProps): Promise<Meta
       locale: "ja_JP",
       images: [
         {
-          url: kinichiOgImage,
+          url: kinichiShareImage,
           width: 1200,
           height: 630,
           alt: title,
@@ -85,7 +84,7 @@ export async function generateMetadata({ params }: CraftPageProps): Promise<Meta
       card: "summary_large_image",
       title,
       description,
-      images: [kinichiOgImage],
+      images: [kinichiShareImage],
     },
     other: {
       "twitter:image:alt": title,
