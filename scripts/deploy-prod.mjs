@@ -12,6 +12,7 @@ const requiredRoutes = [
   "/experiments/biorhythm",
   "/keyhoe",
   "/kean",
+  "/kinichi",
 ];
 const expectedProject = {
   projectId: "prj_ln4BNuLGgoCFlY6FAJgAyvcQnz5C",
