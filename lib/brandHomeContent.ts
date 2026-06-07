@@ -23,11 +23,17 @@ export const brandHomeContent = {
       secondaryDesktop: "UFOs are phenomena that remain unexplained, yet undeniably exist.",
       secondaryMobile: ["UFOs remain unexplained,", "yet undeniably exist."],
     },
+    aboutLink: {
+      label: "About",
+      text: "UFO Lab Tokyoについて",
+      href: "https://note.com/ufolabtokyo/n/n6b5144177134",
+    },
     mission: "テクノロジーの魔法で、UFOコミュニティに貢献する",
     featuredApp: {
-      name: "Ruppelt",
-      description: "UFO米国政府機密解除情報の日本語リーダー",
-      note: "🔴 Ruppeltとは？",
+      name: "Ruppelt V2.0",
+      description: "PURSUE資料の日本語全文訳と検索に対応した資料ブラウザ",
+      href: "/ruppelt",
+      note: "Ruppelt とは？",
       noteHref: "/ruppelt/lp",
     },
     challengesHeading: "UFO Lab Tokyo が解決する課題",
@@ -53,7 +59,7 @@ export const brandHomeContent = {
         description: "過去のUFO研究が、現代の議論につながりにくい。",
       },
     ],
-    update: "Keyhoe v0.5 - 海外UFO・UAPニュース日本語チェッカーを公開しました。",
+    update: "Ruppeltに資料の日本語全文と検索が追加されました。",
     updateFeedback: {
       heading: "更新情報・フィードバック",
       body: [
@@ -62,7 +68,40 @@ export const brandHomeContent = {
       ],
       cta: "Xをフォロー",
     },
+    experimentLink: {
+      text: "UFO Lab Tokyo 実験室：バイオリズムマシン",
+      href: "/experiments/biorhythm",
+    },
     products: [
+      {
+        version: "Version 2.0",
+        name: "Ruppelt V2.0",
+        title: "Ruppelt V2.0 – PURSUE日本語インデックス",
+        href: "/ruppelt",
+        cta: "Ruppeltを開く",
+      },
+      {
+        version: "Guide",
+        name: "Kean",
+        title: "Kean – UFO・UAPディスクロージャー入門",
+        href: "/kean",
+        cta: "Keanを開く",
+      },
+      {
+        version: "Atlas",
+        name: "Kinichi",
+        title: "Kinichi – UFO形体事典",
+        href: "/kinichi",
+        cta: "Kinichiを開く",
+      },
+      {
+        version: "Version 0.5",
+        name: "Jacques v0.5",
+        title: "Jacques v0.5 – 異なる怪異の同じ構造を可視化する",
+        href: "/jacques",
+        cta: "Jacquesを開く",
+        theme: "jacques",
+      },
       {
         version: "Version 0.5 Beta",
         name: "Keyhoe v0.5",
@@ -83,20 +122,6 @@ export const brandHomeContent = {
         title: "日本のUFO観ダッシュボード",
         href: "/hynek/dashboard",
         cta: "ダッシュボードを見る",
-      },
-      {
-        version: "Version 1.1",
-        name: "Ruppelt v1.1",
-        title: "Ruppelt v1.1 – PURSUE日本語インデックス",
-        href: "/ruppelt",
-        cta: "Ruppeltを開く",
-      },
-      {
-        version: "Atlas",
-        name: "Kinichi",
-        title: "Kinichi – UFO形体事典",
-        href: "/kinichi",
-        cta: "Kinichiを開く",
       },
       {
         version: "Version 0.5 Beta",
@@ -131,11 +156,17 @@ export const brandHomeContent = {
       secondaryDesktop: "",
       secondaryMobile: [],
     },
+    aboutLink: {
+      label: "About",
+      text: "About UFO Lab Tokyo",
+      href: "https://note.com/ufolabtokyo/n/n6b5144177134",
+    },
     mission: "Contributing to the UFO community through the magic of technology.",
     featuredApp: {
-      name: "Ruppelt",
-      description: "A Japanese reader for declassified UFO records from the U.S. government.",
-      note: "🔴 What is Ruppelt?",
+      name: "Ruppelt V2.0",
+      description: "A records browser with Japanese full-text translations and search for PURSUE documents.",
+      href: "/ruppelt",
+      note: "What is Ruppelt?",
       noteHref: "/ruppelt/lp",
     },
     challengesHeading: "Challenges UFO Lab Tokyo Takes On",
@@ -163,7 +194,7 @@ export const brandHomeContent = {
         description: "Past UFO research does not easily connect to today's discussion.",
       },
     ],
-    update: "Released Keyhoe v0.5, the Japanese checker for overseas UFO and UAP news.",
+    update: "Ruppelt now includes Japanese full-text translations and search.",
     updateFeedback: {
       heading: "Updates & Feedback",
       body: [
@@ -172,7 +203,40 @@ export const brandHomeContent = {
       ],
       cta: "Follow on X",
     },
+    experimentLink: {
+      text: "UFO Lab Tokyo Experiments: Biorhythm Machine",
+      href: "/experiments/biorhythm",
+    },
     products: [
+      {
+        version: "Version 2.0",
+        name: "Ruppelt V2.0",
+        title: "Ruppelt V2.0 – UAP Public Records Viewer",
+        href: "/ruppelt",
+        cta: "Open Ruppelt",
+      },
+      {
+        version: "Guide",
+        name: "Kean",
+        title: "Kean – UFO and UAP Disclosure Guide",
+        href: "/kean",
+        cta: "Open Kean",
+      },
+      {
+        version: "Atlas",
+        name: "Kinichi",
+        title: "Kinichi – UFO Shape Atlas",
+        href: "/kinichi",
+        cta: "Open Kinichi",
+      },
+      {
+        version: "Version 0.5",
+        name: "Jacques v0.5",
+        title: "Jacques v0.5 – Visualizing shared structures across anomalous folklore",
+        href: "/jacques",
+        cta: "Open Jacques",
+        theme: "jacques",
+      },
       {
         version: "Version 0.5 Beta",
         name: "Keyhoe v0.5",
@@ -193,20 +257,6 @@ export const brandHomeContent = {
         title: "Japan UFO View Dashboard",
         href: "/hynek/dashboard",
         cta: "View Dashboard",
-      },
-      {
-        version: "Version 1.1",
-        name: "Ruppelt v1.1",
-        title: "Ruppelt v1.1 – UAP Public Records Viewer",
-        href: "/ruppelt",
-        cta: "Open Ruppelt",
-      },
-      {
-        version: "Atlas",
-        name: "Kinichi",
-        title: "Kinichi – UFO Shape Atlas",
-        href: "/kinichi",
-        cta: "Open Kinichi",
       },
       {
         version: "Version 0.5 Beta",

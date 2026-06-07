@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root {
   --bg: #f6f7f3;
   --surface: #ffffff;
@@ -400,6 +402,38 @@ h3 {
 
 .tagline-mobile {
   display: none;
+}
+
+.brand-about-link {
+  display: grid;
+  gap: 2px;
+  justify-items: center;
+  margin-top: 2px;
+}
+
+.brand-about-link span {
+  color: var(--signal);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.brand-about-link a {
+  color: #2f5f52;
+  font-size: 0.93rem;
+  font-weight: 800;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-decoration-color: rgba(47, 95, 82, 0.28);
+  text-underline-offset: 0.16em;
+}
+
+.brand-about-link a:hover,
+.brand-about-link a:focus-visible {
+  color: #18221d;
+  text-decoration-color: rgba(24, 34, 29, 0.46);
 }
 
 .mission-block {
@@ -997,6 +1031,41 @@ h3 {
   line-height: 1;
 }
 
+.otsuki-card--jacques {
+  border-color: rgba(16, 185, 129, 0.28);
+  background:
+    radial-gradient(circle at 18% 0%, rgba(16, 185, 129, 0.2), transparent 34%),
+    radial-gradient(circle at 82% 12%, rgba(251, 191, 36, 0.16), transparent 30%),
+    linear-gradient(180deg, #07100d, #050706 58%, #030404);
+  box-shadow:
+    0 28px 70px rgba(3, 7, 7, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.otsuki-card--jacques .eyebrow {
+  color: #a7f3d0;
+}
+
+.otsuki-card--jacques h2 {
+  color: #f8fafc;
+}
+
+.otsuki-card--jacques .otsuki-title {
+  color: #cbd5e1;
+}
+
+.otsuki-card--jacques .primary-action {
+  color: #052e25;
+  border-color: rgba(167, 243, 208, 0.42);
+  background: #a7f3d0;
+}
+
+.otsuki-card--jacques .primary-action:hover,
+.otsuki-card--jacques .primary-action:focus-visible {
+  color: #041b16;
+  background: #fcd34d;
+}
+
 .otsuki-title,
 .otsuki-note {
   margin: 0;
@@ -1014,6 +1083,25 @@ h3 {
   justify-self: center;
   font-size: 0.95rem;
   text-align: center;
+}
+
+.brand-experiment-link {
+  justify-self: center;
+  width: fit-content;
+  margin-top: 2px;
+  color: #2f5f52;
+  font-size: 0.92rem;
+  font-weight: 800;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.brand-experiment-link:hover,
+.brand-experiment-link:focus-visible {
+  color: #18221d;
 }
 
 .site-footer {

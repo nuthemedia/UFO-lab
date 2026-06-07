@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { BrandChallenges } from "@/components/BrandChallenges";
-import { BrandVideo } from "@/components/BrandVideo";
 import { SiteFooter } from "@/components/SiteFooter";
 import { brandHomeContent, type BrandLocale } from "@/lib/brandHomeContent";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
@@ -67,6 +66,12 @@ export function BrandHomePage({ locale }: BrandHomePageProps) {
                 </p>
               ) : null}
             </div>
+            <div className="brand-about-link">
+              <span>{content.aboutLink.label}</span>
+              <Link href={content.aboutLink.href} target="_blank" rel="noreferrer noopener">
+                {content.aboutLink.text}
+              </Link>
+            </div>
           </div>
 
           <section className="mission-block" aria-labelledby="mission-heading">
@@ -80,7 +85,7 @@ export function BrandHomePage({ locale }: BrandHomePageProps) {
             <article className="brand-featured-app-card">
               <Link
                 className="brand-featured-app-main"
-                href="/ruppelt"
+                href={content.featuredApp.href}
                 aria-labelledby="featured-app-heading"
               >
                 <p className="brand-featured-app-eyebrow" id="featured-app-heading">
@@ -96,8 +101,6 @@ export function BrandHomePage({ locale }: BrandHomePageProps) {
               </Link>
             </article>
           </section>
-
-          <BrandVideo />
 
           <BrandChallenges heading={content.challengesHeading} challenges={content.challenges} />
 
@@ -133,7 +136,10 @@ export function BrandHomePage({ locale }: BrandHomePageProps) {
 
           <div className="otsuki-showcase">
             {content.products.map((product) => (
-              <article className="otsuki-card" key={product.name}>
+              <article
+                className={`otsuki-card${"theme" in product ? ` otsuki-card--${product.theme}` : ""}`}
+                key={product.name}
+              >
                 <p className="eyebrow">{product.version}</p>
                 <h2>{product.name}</h2>
                 <p className="otsuki-title">{product.title}</p>
@@ -143,6 +149,9 @@ export function BrandHomePage({ locale }: BrandHomePageProps) {
               </article>
             ))}
           </div>
+          <Link className="brand-experiment-link" href={content.experimentLink.href}>
+            {content.experimentLink.text}
+          </Link>
         </div>
       </section>
 
