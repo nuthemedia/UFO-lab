@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { readdirSync } from "node:fs";
+import { resolve } from "node:path";
 import pursueIndex from "@/data/pursue/pursue-records.json";
 import { RuppeltBrowser } from "@/components/RuppeltBrowser";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -12,23 +15,34 @@ const statusDashboardOrder: PriorDisclosureStatus[] = [
   "unknown",
 ];
 
+function getFullTextRecordIds() {
+  try {
+    return readdirSync(resolve(process.cwd(), "data/shared/translations/ja"))
+      .filter((fileName) => /^pursue-\d{4}\.json$/.test(fileName))
+      .map((fileName) => fileName.replace(/\.json$/, ""))
+      .sort();
+  } catch {
+    return [];
+  }
+}
+
 export const metadata: Metadata = {
-  title: "Ruppelt v1.1 | Ruppelt v1.1 - PURSUE日本語インデックス",
-  description: "米政府UAP公開資料を、日本語でさくっと確認できる資料ブラウザです。",
+  title: "Ruppelt V2.0 | Ruppelt V2.0 - PURSUE日本語インデックス",
+  description: "アメリカ政府UAP公開資料を、日本語でさくっと確認できる資料ブラウザです。",
   alternates: {
     canonical: "/ruppelt",
   },
   openGraph: {
-    title: "Ruppelt v1.1 - PURSUE日本語インデックス",
-    description: "米政府UAP公開資料をスマホでさくっと確認。",
+    title: "Ruppelt V2.0 - PURSUE日本語インデックス",
+    description: "アメリカ政府UAP公開資料をスマホでさくっと確認。",
     url: "/ruppelt",
     siteName: "UFO Lab Tokyo",
     images: [
       {
-        url: "/ogp-ruppelt.jpg",
+        url: "/ogp-ruppelt-v2.jpg",
         width: 1200,
         height: 630,
-        alt: "Ruppelt v1.1 - PURSUE日本語インデックス",
+        alt: "Ruppelt V2.0 - PURSUE日本語インデックス",
         type: "image/jpeg",
       },
     ],
@@ -36,17 +50,18 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ruppelt v1.1 - PURSUE日本語インデックス",
-    description: "米政府UAP公開資料をスマホでさくっと確認。",
-    images: ["/ogp-ruppelt.jpg"],
+    title: "Ruppelt V2.0 - PURSUE日本語インデックス",
+    description: "アメリカ政府UAP公開資料をスマホでさくっと確認。",
+    images: ["/ogp-ruppelt-v2.jpg"],
   },
   other: {
-    "twitter:image:alt": "Ruppelt v1.1 - PURSUE日本語インデックス",
+    "twitter:image:alt": "Ruppelt V2.0 - PURSUE日本語インデックス",
   },
 };
 
 export default function RuppeltPage() {
   const index = pursueIndex as PursueIndex;
+  const fullTextRecordIds = getFullTextRecordIds();
   const statusCounts = index.records.reduce<Record<PriorDisclosureStatus, number>>(
     (counts, record) => {
       const status = record.searchFacets?.priorDisclosureStatus;
@@ -81,9 +96,15 @@ export default function RuppeltPage() {
           </div>
           <span className="sr-only">{siteConfig.shortName}</span>
         </div>
-        <h1>Ruppelt v1.1</h1>
-        <p className="tagline">Ruppelt v1.1 - PURSUE日本語インデックス</p>
-        <p className="lead">米政府UAP公開資料をスマホでさくっと確認。</p>
+        <h1>Ruppelt V2.0</h1>
+        <p className="tagline">PURSUE日本語インデックス</p>
+        <p className="lead">アメリカ政府UAP公開資料をスマホでさくっと確認。</p>
+        <p className="ruppelt-kean-note">
+          はじめての方へ:{" "}
+          <Link className="ruppelt-kean-link" href="/kean">
+            KeanでUFO・UAPディスクロージャー入門を読む
+          </Link>
+        </p>
         <div className="ruppelt-status-dashboard" aria-label="公開状況の件数">
           {statusDashboardOrder.map((status) => (
             <div key={status} className={`ruppelt-status-stat ruppelt-status-stat--${status}`}>
@@ -92,9 +113,13 @@ export default function RuppeltPage() {
             </div>
           ))}
         </div>
+        <div className="ruppelt-translation-dashboard" aria-label="日本語化状況">
+          <strong>日本語全文訳 {fullTextRecordIds.length}件</strong>
+          <strong>日本語資料説明 {index.records.length}件</strong>
+        </div>
       </div>
 
-      <RuppeltBrowser index={index} />
+      <RuppeltBrowser index={index} fullTextRecordIds={fullTextRecordIds} />
 
       <section className="brand-feedback-card" aria-labelledby="ruppelt-update-heading">
         <p className="brand-feedback-label" id="ruppelt-update-heading">

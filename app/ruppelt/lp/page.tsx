@@ -9,8 +9,9 @@ const appHref = "/ruppelt";
 const brandHref = "/";
 const appUrl = `${siteUrl}${appHref}`;
 const lpUrl = `${siteUrl}/ruppelt/lp`;
+const ruppeltOgpImage = "/ogp-ruppelt-v2.jpg";
 
-const metaTitle = "Ruppelt｜アメリカ政府UAP・UFO機密解除資料を日本語で検索";
+const metaTitle = "Ruppelt V2.0｜アメリカ政府UAP・UFO機密解除資料を日本語で検索";
 const metaDescription =
   "PURSUEで公開されたアメリカ政府のUAP・UFO機密解除資料を、日本語要約・資料検索・公開ステータスで確認できるビューアー。FBI、NASA、国防総省、国務省などの一次資料にスマホですばやくアクセスできます。";
 
@@ -101,10 +102,10 @@ export const metadata: Metadata = {
     locale: "ja_JP",
     images: [
       {
-        url: "/ogp-ruppelt.jpg",
+        url: ruppeltOgpImage,
         width: 1200,
         height: 630,
-        alt: "Ruppelt",
+        alt: "Ruppelt V2.0 - PURSUE日本語インデックス",
         type: "image/jpeg",
       },
     ],
@@ -114,24 +115,24 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: metaTitle,
     description: metaDescription,
-    images: ["/ogp-ruppelt.jpg"],
+    images: [ruppeltOgpImage],
   },
   other: {
-    "twitter:image:alt": "Ruppelt",
+    "twitter:image:alt": "Ruppelt V2.0 - PURSUE日本語インデックス",
   },
 };
 
 const ruppeltLpJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  name: "Ruppelt",
-  alternateName: "Ruppelt - アメリカ政府UAP・UFO機密解除資料ビューアー",
+  name: "Ruppelt V2.0",
+  alternateName: "Ruppelt V2.0 - アメリカ政府UAP・UFO機密解除資料ビューアー",
   applicationCategory: "ReferenceApplication",
   operatingSystem: "Web",
   url: appUrl,
   inLanguage: "ja-JP",
   description: metaDescription,
-  image: `${siteUrl}/ogp-ruppelt.jpg`,
+  image: `${siteUrl}${ruppeltOgpImage}`,
   creator: {
     "@type": "Organization",
     name: siteName,

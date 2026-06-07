@@ -30,11 +30,11 @@ export const brandHomeContent = {
     },
     mission: "テクノロジーの魔法で、UFOコミュニティに貢献する",
     featuredApp: {
-      name: "Kean",
-      description: "UFO・UAPディスクロージャー入門",
-      href: "/kean",
-      note: "知っておきたいUAPを見る",
-      noteHref: "/kean/uap",
+      name: "Ruppelt V2.0",
+      description: "PURSUE資料の日本語全文訳と検索に対応した資料ブラウザ",
+      href: "/ruppelt",
+      note: "Ruppelt とは？",
+      noteHref: "/ruppelt/lp",
     },
     challengesHeading: "UFO Lab Tokyo が解決する課題",
     challenges: [
@@ -59,7 +59,7 @@ export const brandHomeContent = {
         description: "過去のUFO研究が、現代の議論につながりにくい。",
       },
     ],
-    update: "Kean - UFO・UAPディスクロージャー入門を公開しました。",
+    update: "Ruppeltに資料の日本語全文と検索が追加されました。",
     updateFeedback: {
       heading: "更新情報・フィードバック",
       body: [
@@ -74,11 +74,26 @@ export const brandHomeContent = {
     },
     products: [
       {
-        version: "New",
+        version: "Version 2.0",
+        name: "Ruppelt V2.0",
+        title: "Ruppelt V2.0 – PURSUE日本語インデックス",
+        href: "/ruppelt",
+        cta: "Ruppeltを開く",
+      },
+      {
+        version: "Guide",
         name: "Kean",
         title: "Kean – UFO・UAPディスクロージャー入門",
         href: "/kean",
         cta: "Keanを開く",
+      },
+      {
+        version: "Version 0.5",
+        name: "Jacques v0.5",
+        title: "Jacques v0.5 – 異なる怪異の同じ構造を可視化する",
+        href: "/jacques",
+        cta: "Jacquesを開く",
+        theme: "jacques",
       },
       {
         version: "Version 0.5 Beta",
@@ -100,13 +115,6 @@ export const brandHomeContent = {
         title: "日本のUFO観ダッシュボード",
         href: "/hynek/dashboard",
         cta: "ダッシュボードを見る",
-      },
-      {
-        version: "Version 1.1",
-        name: "Ruppelt v1.1",
-        title: "Ruppelt v1.1 – PURSUE日本語インデックス",
-        href: "/ruppelt",
-        cta: "Ruppeltを開く",
       },
       {
         version: "Version 0.5 Beta",
@@ -148,11 +156,11 @@ export const brandHomeContent = {
     },
     mission: "Contributing to the UFO community through the magic of technology.",
     featuredApp: {
-      name: "Kean",
-      description: "A Japanese guide to UFO and UAP disclosure.",
-      href: "/kean",
-      note: "Explore key UAP cases",
-      noteHref: "/kean/uap",
+      name: "Ruppelt V2.0",
+      description: "A records browser with Japanese full-text translations and search for PURSUE documents.",
+      href: "/ruppelt",
+      note: "What is Ruppelt?",
+      noteHref: "/ruppelt/lp",
     },
     challengesHeading: "Challenges UFO Lab Tokyo Takes On",
     challenges: [
@@ -179,7 +187,7 @@ export const brandHomeContent = {
         description: "Past UFO research does not easily connect to today's discussion.",
       },
     ],
-    update: "Released Kean, a Japanese guide to UFO and UAP disclosure.",
+    update: "Ruppelt now includes Japanese full-text translations and search.",
     updateFeedback: {
       heading: "Updates & Feedback",
       body: [
@@ -194,11 +202,26 @@ export const brandHomeContent = {
     },
     products: [
       {
-        version: "New",
+        version: "Version 2.0",
+        name: "Ruppelt V2.0",
+        title: "Ruppelt V2.0 – UAP Public Records Viewer",
+        href: "/ruppelt",
+        cta: "Open Ruppelt",
+      },
+      {
+        version: "Guide",
         name: "Kean",
         title: "Kean – UFO and UAP Disclosure Guide",
         href: "/kean",
         cta: "Open Kean",
+      },
+      {
+        version: "Version 0.5",
+        name: "Jacques v0.5",
+        title: "Jacques v0.5 – Visualizing shared structures across anomalous folklore",
+        href: "/jacques",
+        cta: "Open Jacques",
+        theme: "jacques",
       },
       {
         version: "Version 0.5 Beta",
@@ -220,13 +243,6 @@ export const brandHomeContent = {
         title: "Japan UFO View Dashboard",
         href: "/hynek/dashboard",
         cta: "View Dashboard",
-      },
-      {
-        version: "Version 1.1",
-        name: "Ruppelt v1.1",
-        title: "Ruppelt v1.1 – UAP Public Records Viewer",
-        href: "/ruppelt",
-        cta: "Open Ruppelt",
       },
       {
         version: "Version 0.5 Beta",

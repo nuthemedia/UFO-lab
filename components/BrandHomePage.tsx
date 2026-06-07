@@ -2,7 +2,7 @@ import Link from "next/link";
 import { BrandChallenges } from "@/components/BrandChallenges";
 import { SiteFooter } from "@/components/SiteFooter";
 import { brandHomeContent, type BrandLocale } from "@/lib/brandHomeContent";
-import { organizationJsonLd } from "@/lib/seo";
+import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 
 type BrandHomePageProps = {
   locale: BrandLocale;
@@ -30,7 +30,7 @@ export function BrandHomePage({ locale }: BrandHomePageProps) {
     <div lang={content.htmlLang}>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify([organizationJsonLd, websiteJsonLd]) }}
       />
       <nav className="brand-language-floating" aria-label="Language">
         <span aria-current="page">{content.currentLabel}</span>
@@ -48,6 +48,7 @@ export function BrandHomePage({ locale }: BrandHomePageProps) {
               <span className="orbit-dot orbit-dot-two" aria-hidden="true" />
               <span className="orbit-dot orbit-dot-three" aria-hidden="true" />
               <h1 className="brand-logo">{content.logo}</h1>
+              <p className="brand-formal-name">東京UFO研究室</p>
             </div>
             <div className="brand-taglines">
               <p>
@@ -135,7 +136,10 @@ export function BrandHomePage({ locale }: BrandHomePageProps) {
 
           <div className="otsuki-showcase">
             {content.products.map((product) => (
-              <article className="otsuki-card" key={product.name}>
+              <article
+                className={`otsuki-card${"theme" in product ? ` otsuki-card--${product.theme}` : ""}`}
+                key={product.name}
+              >
                 <p className="eyebrow">{product.version}</p>
                 <h2>{product.name}</h2>
                 <p className="otsuki-title">{product.title}</p>

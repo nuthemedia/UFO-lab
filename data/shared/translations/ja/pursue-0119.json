@@ -1,0 +1,13 @@
+{
+  "documentId": "pursue-0119",
+  "recordId": "pursue-0119",
+  "fullTextJa": "[Page 1] [[page 1 confidence: 62]]\n[REDACTED]\n\n[REDACTED]          [REDACTED]\n\n        3                    3\n\n[REDACTED]          [REDACTED]\n\n[REDACTED]          [REDACTED]\n\n12/31/99 18:20:41",
+  "summaryJa": "ページ1のOCR出力。本文は大部分が[REDACTED]で伏せられており、ページ表示と信頼度（page 1 confidence: 62）が記載されている。中央に「3                    3」との表記があり、末尾にタイムスタンプ「12/31/99 18:20:41」と「--- Japanese translation excerpt ---」の注記がある。内容の詳細は伏せられているため特定できない。",
+  "summaryEn": "OCR output of page 1. Most of the text is redacted ([REDACTED]); the file notes page information and confidence (page 1 confidence: 62). A line shows \"3                    3\", and the footer includes the timestamp \"12/31/99 18:20:41\" and the marker \"--- Japanese translation excerpt ---\". No substantive content is available due to redaction.",
+  "status": {
+    "translationJa": "machine_translation",
+    "summary": "summary_generated",
+    "humanReview": "unreviewed"
+  },
+  "noteJa": "機械翻訳です。公式PDFを正本とし、OCR誤読や翻訳誤りを含む可能性があります。"
+}

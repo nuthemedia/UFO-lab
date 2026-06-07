@@ -1,0 +1,13 @@
+{
+  "documentId": "pursue-0116",
+  "recordId": "pursue-0116",
+  "fullTextJa": "[Page 1] [[page 1 confidence: 72]]\n[REDACTED]\n\n[REDACTED]                                          [REDACTED]\n\n                    3                              3\n\n[REDACTED]                                          [REDACTED]\n\n[REDACTED]                                          [REDACTED]\n\n12/31/99 18:19:54",
+  "summaryJa": "本文は大部分が「REDACTED」で伏せられており、実質的な本文は確認できない。表示されている要素は「[Page 1] [[page 1 confidence: 72]]」「3　3」のような数字表記、タイムスタンプ「12/31/99 18:19:54」、および「--- Japanese translation excerpt ---」などの注記のみである。",
+  "summaryEn": "The page is almost entirely redacted (REDACTED), with no substantive content visible. Visible elements are page metadata ('[Page 1] [[page 1 confidence: 72]]'), the numeric text '3 3', the timestamp '12/31/99 18:19:54', and the note '--- Japanese translation excerpt ---'.",
+  "status": {
+    "translationJa": "machine_translation",
+    "summary": "summary_generated",
+    "humanReview": "unreviewed"
+  },
+  "noteJa": "機械翻訳です。公式PDFを正本とし、OCR誤読や翻訳誤りを含む可能性があります。"
+}

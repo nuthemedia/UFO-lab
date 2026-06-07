@@ -3,7 +3,16 @@ import { resolve } from "node:path";
 import { spawnSync } from "node:child_process";
 
 const rootDir = process.cwd();
-const requiredRoutes = ["/jacques", "/experiments/biorhythm", "/keyhoe"];
+const requiredRoutes = [
+  "/",
+  "/en",
+  "/ruppelt",
+  "/ruppelt/lp",
+  "/jacques",
+  "/experiments/biorhythm",
+  "/keyhoe",
+  "/kean",
+];
 const expectedProject = {
   projectId: "prj_ln4BNuLGgoCFlY6FAJgAyvcQnz5C",
   projectName: "ufo-lab",
@@ -50,19 +59,23 @@ function assertMainHead() {
 
 function assertVercelProject() {
   const projectPath = resolve(rootDir, ".vercel", "project.json");
+  const repoPath = resolve(rootDir, ".vercel", "repo.json");
 
-  if (!existsSync(projectPath)) {
+  if (!existsSync(projectPath) && !existsSync(repoPath)) {
     throw new Error("Missing .vercel/project.json. Link this checkout to the canonical ufo-lab project first.");
   }
 
-  const project = JSON.parse(readFileSync(projectPath, "utf8"));
+  const project = existsSync(projectPath) ? JSON.parse(readFileSync(projectPath, "utf8")) : {};
+  const repo = existsSync(repoPath) ? JSON.parse(readFileSync(repoPath, "utf8")) : {};
+  const repoProject = Array.isArray(repo.projects)
+    ? repo.projects.find((item) => item.directory === "." || item.name === expectedProject.projectName)
+    : null;
+  const projectName = project.projectName || repoProject?.name;
+  const projectId = project.projectId || repoProject?.id;
 
-  if (
-    project.projectName !== expectedProject.projectName ||
-    project.projectId !== expectedProject.projectId
-  ) {
+  if (projectName !== expectedProject.projectName || projectId !== expectedProject.projectId) {
     throw new Error(
-      `Wrong Vercel project link: ${project.projectName || "unknown"} (${project.projectId || "unknown"}). Expected ${expectedProject.projectName} (${expectedProject.projectId}).`,
+      `Wrong Vercel project link: ${projectName || "unknown"} (${projectId || "unknown"}). Expected ${expectedProject.projectName} (${expectedProject.projectId}).`,
     );
   }
 }

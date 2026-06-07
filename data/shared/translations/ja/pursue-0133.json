@@ -1,0 +1,13 @@
+{
+  "documentId": "pursue-0133",
+  "recordId": "pursue-0133",
+  "fullTextJa": "[Page 1] [[page 1 confidence: 82]]\n[REDACTED]\n\n[REDACTED]                                                                    [REDACTED]\n\n\n                              15    10    5         5    10    15\n\n[REDACTED]                                                                    [REDACTED]\n\n\n[REDACTED]                                                                    [REDACTED]\n\n\n12/31/99 18:10:02",
+  "summaryJa": "本文は大部分が「[REDACTED]」で伏せられている。ページ情報（Page 1、confidence: 82）があり、中央に「15 10 5    5 10 15」の数値列が表示される。末尾にタイムスタンプ「12/31/99 18:10:02」と「--- Japanese translation excerpt ---」といった表記がある。その他の本文は削除されており、内容は特定できない。",
+  "summaryEn": "The document is predominantly redacted. It shows page information (Page 1, confidence: 82) and a central numeric sequence \"15 10 5    5 10 15.\" A timestamp \"12/31/99 18:10:02\" and the label \"--- Japanese translation excerpt ---\" appear at the end. Other content is removed and cannot be determined.",
+  "status": {
+    "translationJa": "machine_translation",
+    "summary": "summary_generated",
+    "humanReview": "unreviewed"
+  },
+  "noteJa": "機械翻訳です。公式PDFを正本とし、OCR誤読や翻訳誤りを含む可能性があります。"
+}

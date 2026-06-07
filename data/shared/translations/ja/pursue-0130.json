@@ -1,0 +1,13 @@
+{
+  "documentId": "pursue-0130",
+  "recordId": "pursue-0130",
+  "fullTextJa": "[Page 1] [[page 1 confidence: 72]]\n[REDACTED]\n\n[REDACTED]                                        [REDACTED]\n\n[REDACTED]                                        [REDACTED]\n        15        10        5    |    5        10        15\n\n[REDACTED]                                        [REDACTED]\n\n[REDACTED]                                        [REDACTED]\n\n12/31/99 18:12:16",
+  "summaryJa": "本文は大部分が「REDACTED」で伏せられており、ページは「[Page 1] [[page 1 confidence: 72]]」と表示されている。中央に「15 10 5 | 5 10 15」と並んだ数字があり、タイムスタンプ「12/31/99 18:12:16」が記載されている。下部に「--- Japanese translation excerpt ---」の表記が繰り返されている。",
+  "summaryEn": "The OCR text is largely redacted, with the header showing \"[Page 1] [[page 1 confidence: 72]]\". A numeric scale \"15 10 5 | 5 10 15\" appears in the body, and a timestamp \"12/31/99 18:12:16\" is present. The phrase \"--- Japanese translation excerpt ---\" is repeated at the end.",
+  "status": {
+    "translationJa": "machine_translation",
+    "summary": "summary_generated",
+    "humanReview": "unreviewed"
+  },
+  "noteJa": "機械翻訳です。公式PDFを正本とし、OCR誤読や翻訳誤りを含む可能性があります。"
+}

@@ -1,0 +1,13 @@
+{
+  "documentId": "pursue-0131",
+  "recordId": "pursue-0131",
+  "fullTextJa": "[Page 1] [[page 1 confidence: 72]]\n15    10    5         5    10    15\n\n12/31/99 18:12:20",
+  "summaryJa": "ページ1のOCR本文は、スケール表示「15    10    5         5    10    15」とタイムスタンプ「12/31/99 18:12:20」、および「--- Japanese translation excerpt ---」という文言が繰り返し記載されている。ページ表記（[Page 1]）とOCR信頼度72%が含まれる。",
+  "summaryEn": "The OCR text for Page 1 shows scale markings \"15    10    5         5    10    15\", a timestamp \"12/31/99 18:12:20\", and the phrase \"--- Japanese translation excerpt ---\" repeated. It includes the page label ([Page 1]) and OCR confidence 72%.",
+  "status": {
+    "translationJa": "machine_translation",
+    "summary": "summary_generated",
+    "humanReview": "unreviewed"
+  },
+  "noteJa": "機械翻訳です。公式PDFを正本とし、OCR誤読や翻訳誤りを含む可能性があります。"
+}
