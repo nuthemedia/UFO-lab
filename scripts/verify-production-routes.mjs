@@ -1,9 +1,14 @@
-import { existsSync } from "node:fs";
+import { existsSync, readdirSync } from "node:fs";
 import { resolve } from "node:path";
 
 const rootDir = process.cwd();
 
 const requiredPaths = [
+  "app/page.tsx",
+  "app/en/page.tsx",
+  "components/BrandHomePage.tsx",
+  "lib/brandHomeContent.ts",
+  "public/ogp-brand.jpg",
   "app/jacques/page.tsx",
   "app/jacques/layout.tsx",
   "data/jacques/mockData.ts",
@@ -41,6 +46,31 @@ const requiredPaths = [
   "public/kean/images/people/illustrations/leslie-kean.png",
   "public/kean/models/tictac/tic_tac_uap_ufo_with_warp_bubble.glb",
   "scripts/verify-kean-portraits.mjs",
+  "app/keyhoe/page.tsx",
+  "app/keyhoe/about/page.tsx",
+  "app/keyhoe/opengraph-image.tsx",
+  "public/data/keyhoe-today.json",
+  "app/ruppelt/page.tsx",
+  "app/ruppelt/lp/page.tsx",
+  "app/api/ruppelt/fulltext-search/route.ts",
+  "app/api/ruppelt/document/[recordId]/route.ts",
+  "components/RuppeltBrowser.tsx",
+  "components/RuppeltLpMotion.tsx",
+  "lib/pursue.ts",
+  "data/pursue/pursue-records.json",
+  "data/shared/pursue-document-bundles.json",
+  "data/shared/search/fulltext-index.json",
+  "public/ogp-ruppelt-v2.jpg",
+  "docs/apps/ruppelt/AGENTS.md",
+  "docs/apps/ruppelt/PROJECT.md",
+  "docs/apps/ruppelt/DESIGN.md",
+  "docs/apps/ruppelt/FEATURES.md",
+  "docs/apps/ruppelt/DATA.md",
+];
+
+const requiredDirectoryMinimums = [
+  ["data/shared/translations/ja", 100],
+  ["data/shared/pursue-documents", 80],
 ];
 
 const missingPaths = requiredPaths.filter((path) => !existsSync(resolve(rootDir, path)));
@@ -49,6 +79,32 @@ if (missingPaths.length > 0) {
   console.error("Missing production route files. Refusing to continue:");
   for (const path of missingPaths) {
     console.error(`- ${path}`);
+  }
+  process.exit(1);
+}
+
+const missingDirectories = requiredDirectoryMinimums
+  .map(([path, minimum]) => {
+    const directoryPath = resolve(rootDir, path);
+
+    if (!existsSync(directoryPath)) {
+      return `${path} is missing`;
+    }
+
+    const fileCount = readdirSync(directoryPath).filter((fileName) => fileName.endsWith(".json")).length;
+
+    if (fileCount < minimum) {
+      return `${path} has ${fileCount} JSON files; expected at least ${minimum}`;
+    }
+
+    return "";
+  })
+  .filter(Boolean);
+
+if (missingDirectories.length > 0) {
+  console.error("Missing production data. Refusing to continue:");
+  for (const message of missingDirectories) {
+    console.error(`- ${message}`);
   }
   process.exit(1);
 }

@@ -1,0 +1,13 @@
+{
+  "documentId": "pursue-0134",
+  "recordId": "pursue-0134",
+  "fullTextJa": "[Page 1] [[page 1 confidence: 82]]\n15    10    5         5    10    15\n\n12/31/99 18:10:18",
+  "summaryJa": "ページ1のOCR本文。表示されている要素は「15    10    5         5    10    15」という数列、タイムスタンプ「12/31/99 18:10:18」、および「--- Japanese translation excerpt ---」という文言。ページ情報として「[Page 1] [[page 1 confidence: 82]]」が含まれる。",
+  "summaryEn": "OCR text of page 1. Visible elements are the sequence \"15    10    5         5    10    15\", the timestamp \"12/31/99 18:10:18\", and the phrase \"--- Japanese translation excerpt ---\". Page information \"[Page 1] [[page 1 confidence: 82]]\" is included.",
+  "status": {
+    "translationJa": "machine_translation",
+    "summary": "summary_generated",
+    "humanReview": "unreviewed"
+  },
+  "noteJa": "機械翻訳です。公式PDFを正本とし、OCR誤読や翻訳誤りを含む可能性があります。"
+}

@@ -1,0 +1,13 @@
+{
+  "documentId": "pursue-0117",
+  "recordId": "pursue-0117",
+  "fullTextJa": "[Page 1] [[page 1 confidence: 62]]\n[REDACTED]\n\n[REDACTED]                                    [REDACTED]\n\n         3                                    3\n\n[REDACTED]                                    [REDACTED]\n\n[REDACTED]                                    [REDACTED]\n\n12/31/99  18:20:08",
+  "summaryJa": "本文はほとんどが「[REDACTED]」で伏せられており、ページ上に「3」というページ番号が記載されています。ヘッダに「[Page 1] [[page 1 confidence: 62]]」が表示され、タイムスタンプ「12/31/99 18:20:08」が記録されています。文末に「--- Japanese translation excerpt ---」の注記があります。内容の具体的記述はOCR本文からは読み取れません。",
+  "summaryEn": "The text is largely redacted (marked “[REDACTED]”), with a page number shown as “3.” The header shows “[Page 1] [[page 1 confidence: 62]]” and a timestamp of “12/31/99 18:20:08.” There is a note labeled “--- Japanese translation excerpt ---.” No substantive content is readable from the OCR text.",
+  "status": {
+    "translationJa": "machine_translation",
+    "summary": "summary_generated",
+    "humanReview": "unreviewed"
+  },
+  "noteJa": "機械翻訳です。公式PDFを正本とし、OCR誤読や翻訳誤りを含む可能性があります。"
+}

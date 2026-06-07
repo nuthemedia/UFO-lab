@@ -37,6 +37,15 @@ jobs:
           REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
           REDDIT_USER_AGENT: ${{ secrets.REDDIT_USER_AGENT }}
 
+      - name: Refuse unexpected changes
+        run: |
+          unexpected="$(git status --porcelain | grep -v ' public/data/keyhoe-today.json' || true)"
+          if [ -n "$unexpected" ]; then
+            echo "Unexpected files changed during Keyhoe update:"
+            echo "$unexpected"
+            exit 1
+          fi
+
       - name: Commit updated data
         run: |
           if git diff --quiet -- public/data/keyhoe-today.json; then
