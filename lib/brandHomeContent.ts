@@ -92,6 +92,13 @@ export const brandHomeContent = {
         cta: "Ruppeltを開く",
       },
       {
+        version: "Atlas",
+        name: "Kinichi",
+        title: "Kinichi – UFO形体事典",
+        href: "/kinichi",
+        cta: "Kinichiを開く",
+      },
+      {
         version: "Version 0.5 Beta",
         name: ohtsukiConfig.name,
         title: `${ohtsukiConfig.name} – ${ohtsukiConfig.label}`,
@@ -193,6 +200,13 @@ export const brandHomeContent = {
         title: "Ruppelt v1.1 – UAP Public Records Viewer",
         href: "/ruppelt",
         cta: "Open Ruppelt",
+      },
+      {
+        version: "Atlas",
+        name: "Kinichi",
+        title: "Kinichi – UFO Shape Atlas",
+        href: "/kinichi",
+        cta: "Open Kinichi",
       },
       {
         version: "Version 0.5 Beta",
