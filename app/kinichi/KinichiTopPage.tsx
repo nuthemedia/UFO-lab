@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { famousCraft, filters, nuforcShapes, shapeEntries } from "@/data/kinichi/catalog";
 import type { ProceduralType, ViewerTarget } from "@/data/kinichi/catalog";
-import { KinichiViewer, ShapeSilhouette } from "./KinichiViewer";
+import { KinichiViewer, ShapeSilhouette, preloadKinichiGlbModel } from "./KinichiViewer";
 import styles from "./kinichi.module.css";
 
 type KinichiTab = "shapes" | "craft" | "nuforc";
@@ -25,6 +25,7 @@ type ModelCarouselItem = {
   href: string;
   fallbackType: ProceduralType | string;
   target: ViewerTarget;
+  preloadPath?: string;
 };
 
 const tabs: Array<{ id: KinichiTab; label: string; count: number }> = [
@@ -86,6 +87,7 @@ function getCarouselItems(activeTab: KinichiTab): ModelCarouselItem[] {
         label: craft.nameJa,
         href: `/kinichi/craft/${craft.id}?from=craft`,
         fallbackType: proceduralType,
+        preloadPath: craft.id === "tic-tac-craft" ? undefined : craft.modelPath,
         target: {
           id: craft.id,
           label: craft.nameJa,
@@ -292,7 +294,22 @@ export function KinichiTopPage() {
 
         <div className={styles.modelCarousel} aria-label={`${tabs.find((tab) => tab.id === activeTab)?.label ?? "モデル"}のプレビュー`}>
           {carouselItems.map((item) => (
-            <Link aria-label={`${item.label}の詳細を見る`} className={styles.modelCarouselItem} href={item.href} key={item.id}>
+            <Link
+              aria-label={`${item.label}の詳細を見る`}
+              className={styles.modelCarouselItem}
+              href={item.href}
+              key={item.id}
+              onFocus={() => {
+                if (item.preloadPath) {
+                  preloadKinichiGlbModel(item.preloadPath);
+                }
+              }}
+              onPointerEnter={() => {
+                if (item.preloadPath) {
+                  preloadKinichiGlbModel(item.preloadPath);
+                }
+              }}
+            >
               <KinichiCardPreview fallbackType={item.fallbackType} target={item.target} />
             </Link>
           ))}
@@ -350,8 +367,23 @@ export function KinichiTopPage() {
           <div className={styles.craftGallery} role="tabpanel">
             {famousCraft.map((craft) => {
               const relatedShape = shapeEntries.find((shape) => shape.id === craft.shapeId);
+              const preloadPath = craft.id === "tic-tac-craft" ? undefined : craft.modelPath;
               return (
-                <Link className={styles.craftCard} href={`/kinichi/craft/${craft.id}?from=craft`} key={craft.id}>
+                <Link
+                  className={styles.craftCard}
+                  href={`/kinichi/craft/${craft.id}?from=craft`}
+                  key={craft.id}
+                  onFocus={() => {
+                    if (preloadPath) {
+                      preloadKinichiGlbModel(preloadPath);
+                    }
+                  }}
+                  onPointerEnter={() => {
+                    if (preloadPath) {
+                      preloadKinichiGlbModel(preloadPath);
+                    }
+                  }}
+                >
                   <KinichiCardPreview
                     fallbackType={relatedShape?.proceduralType ?? "disk"}
                     target={{

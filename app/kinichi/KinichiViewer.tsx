@@ -7,6 +7,25 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import type { ProceduralType, ViewerTarget } from "@/data/kinichi/catalog";
 import styles from "./kinichi.module.css";
 
+const glbModelCache = new Map<string, Promise<THREE.Object3D>>();
+
+function loadKinichiGlbModel(modelPath: string) {
+  const cachedModel = glbModelCache.get(modelPath);
+  if (cachedModel) {
+    return cachedModel;
+  }
+
+  const loader = new GLTFLoader();
+  const modelPromise = loader.loadAsync(modelPath).then((gltf) => gltf.scene);
+  glbModelCache.set(modelPath, modelPromise);
+  modelPromise.catch(() => glbModelCache.delete(modelPath));
+  return modelPromise;
+}
+
+export function preloadKinichiGlbModel(modelPath: string) {
+  void loadKinichiGlbModel(modelPath);
+}
+
 export function ShapeSilhouette({ type, className }: { type: ProceduralType | string; className?: string }) {
   if (type === "sphere" || type === "egg") {
     return (
@@ -231,6 +250,16 @@ function disposeObject(object: THREE.Object3D) {
   });
 }
 
+function cloneCachedModel(model: THREE.Object3D) {
+  const clone = model.clone(true);
+  clone.traverse((object) => {
+    if (object instanceof THREE.Mesh) {
+      object.geometry = object.geometry.clone();
+    }
+  });
+  return clone;
+}
+
 function normalizeModel(model: THREE.Object3D, scaleTarget = 2.5) {
   model.updateMatrixWorld(true);
   const box = new THREE.Box3().setFromObject(model);
@@ -450,15 +479,23 @@ export function KinichiViewer({
     }
 
     if (target.modelKind === "glb" && target.modelPath) {
-      const loader = new GLTFLoader();
-      loader.load(
-        target.modelPath,
-        (gltf) => {
+      if (resolvedFallbackType) {
+        root.add(createProceduralModel(resolvedFallbackType as ProceduralType, material, night));
+        normalizeModel(root, preview ? 2.05 : compact ? 2.25 : 2.65);
+      }
+
+      loadKinichiGlbModel(target.modelPath)
+        .then((cachedModel) => {
           if (loadTokenRef.current !== loadToken) {
-            disposeObject(gltf.scene);
             return;
           }
-          const model = gltf.scene;
+          while (root.children.length) {
+            const child = root.children[0];
+            root.remove(child);
+            disposeObject(child);
+          }
+
+          const model = cloneCachedModel(cachedModel);
           model.traverse((object) => {
             if (!(object instanceof THREE.Mesh)) {
               return;
@@ -487,16 +524,14 @@ export function KinichiViewer({
           normalizeModel(model, preview ? 2.05 : compact ? 2.25 : 2.65);
           root.add(model);
           setStatus("ready");
-        },
-        undefined,
-        () => {
+        })
+        .catch(() => {
           if (loadTokenRef.current === loadToken) {
             setStatus("error");
           }
-        },
-      );
+        });
     }
-  }, [compact, night, preview, resetTick, silhouette, target, wireframe]);
+  }, [compact, night, preview, resetTick, resolvedFallbackType, silhouette, target, wireframe]);
 
   return (
     <section className={preview ? styles.viewerShellPreview : compact ? styles.viewerShellCompact : styles.viewerShell} aria-label={`${target.label} 3Dビューア`}>
