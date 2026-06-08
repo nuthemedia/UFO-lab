@@ -310,7 +310,9 @@ export function KinichiTopPage() {
                 }
               }}
             >
-              <KinichiCardPreview fallbackType={item.fallbackType} target={item.target} />
+              <div className={styles.cardPreviewPlaceholder} aria-hidden="true">
+                <ShapeSilhouette className={styles.cardPreviewSilhouette} type={item.fallbackType} />
+              </div>
             </Link>
           ))}
         </div>
