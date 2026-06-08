@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { resolve } from "node:path";
 
@@ -144,6 +145,39 @@ if (missingBrandHomeHrefs.length > 0) {
   for (const href of missingBrandHomeHrefs) {
     console.error(`- ${href}`);
   }
+  process.exit(1);
+}
+
+const requiredFileContents = [
+  ["app/ruppelt/page.tsx", "Ruppelt V2.0"],
+  ["app/ruppelt/page.tsx", "ogp-ruppelt-v2.jpg"],
+  ["app/ruppelt/lp/page.tsx", "Ruppelt V2.0"],
+  ["app/ruppelt/lp/page.tsx", "ogp-ruppelt-v2.jpg"],
+];
+
+const missingFileContents = requiredFileContents
+  .map(([path, expected]) => {
+    const contents = readFileSync(resolve(rootDir, path), "utf8");
+    return contents.includes(expected) ? "" : `${path} is missing ${expected}`;
+  })
+  .filter(Boolean);
+
+if (missingFileContents.length > 0) {
+  console.error("Missing production content markers. Refusing to continue:");
+  for (const message of missingFileContents) {
+    console.error(`- ${message}`);
+  }
+  process.exit(1);
+}
+
+const ogpImageHash = (path) =>
+  createHash("sha256").update(readFileSync(resolve(rootDir, path))).digest("hex");
+const legacyRuppeltOgpHash = ogpImageHash("public/ogp-ruppelt.jpg");
+const versionedRuppeltOgpHash = ogpImageHash("public/ogp-ruppelt-v2.jpg");
+
+if (legacyRuppeltOgpHash !== versionedRuppeltOgpHash) {
+  console.error("Ruppelt OGP images do not match. Refusing to continue:");
+  console.error("- public/ogp-ruppelt.jpg must match public/ogp-ruppelt-v2.jpg");
   process.exit(1);
 }
 
