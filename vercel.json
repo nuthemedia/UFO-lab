@@ -1,3 +1,3 @@
 {
-  "buildCommand": "npm run verify:production-routes && npm run build"
+  "buildCommand": "test -f public/ogp-ruppelt-v2.jpg && grep -q \"Ruppelt V2.0\" app/ruppelt/page.tsx && test -f public/kinichi/kinichi-x-card-v1.png && npm run verify:production-routes && npm run build"
 }
