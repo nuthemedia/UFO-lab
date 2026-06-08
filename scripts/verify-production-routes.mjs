@@ -1,4 +1,4 @@
-import { existsSync, readdirSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { resolve } from "node:path";
 
 const rootDir = process.cwd();
@@ -88,6 +88,16 @@ const requiredDirectoryMinimums = [
   ["data/shared/pursue-documents", 80],
 ];
 
+const requiredBrandHomeHrefs = [
+  "/kean",
+  "/kinichi",
+  "/keyhoe",
+  "/hynek",
+  "/hynek/dashboard",
+  "/ruppelt",
+  "/ohtsuki",
+];
+
 const missingPaths = requiredPaths.filter((path) => !existsSync(resolve(rootDir, path)));
 
 if (missingPaths.length > 0) {
@@ -120,6 +130,19 @@ if (missingDirectories.length > 0) {
   console.error("Missing production data. Refusing to continue:");
   for (const message of missingDirectories) {
     console.error(`- ${message}`);
+  }
+  process.exit(1);
+}
+
+const brandHomeContent = readFileSync(resolve(rootDir, "lib/brandHomeContent.ts"), "utf8");
+const missingBrandHomeHrefs = requiredBrandHomeHrefs.filter(
+  (href) => !brandHomeContent.includes(`href: "${href}"`),
+);
+
+if (missingBrandHomeHrefs.length > 0) {
+  console.error("Missing brand home product cards. Refusing to continue:");
+  for (const href of missingBrandHomeHrefs) {
+    console.error(`- ${href}`);
   }
   process.exit(1);
 }

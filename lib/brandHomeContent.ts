@@ -88,6 +88,13 @@ export const brandHomeContent = {
         cta: "Keanを開く",
       },
       {
+        version: "Atlas",
+        name: "Kinichi",
+        title: "Kinichi – UFO形体事典",
+        href: "/kinichi",
+        cta: "Kinichiを開く",
+      },
+      {
         version: "Version 0.5",
         name: "Jacques v0.5",
         title: "Jacques v0.5 – 異なる怪異の同じ構造を可視化する",
@@ -214,6 +221,13 @@ export const brandHomeContent = {
         title: "Kean – UFO and UAP Disclosure Guide",
         href: "/kean",
         cta: "Open Kean",
+      },
+      {
+        version: "Atlas",
+        name: "Kinichi",
+        title: "Kinichi – UFO Shape Atlas",
+        href: "/kinichi",
+        cta: "Open Kinichi",
       },
       {
         version: "Version 0.5",
