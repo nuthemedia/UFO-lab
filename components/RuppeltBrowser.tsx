@@ -233,44 +233,93 @@ function syncQuery(params: Record<string, string>) {
   window.history.replaceState(null, "", `${window.location.pathname}${search ? `?${search}` : ""}`);
 }
 
-function escapeRegExp(value: string) {
-  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-}
-
-function getHighlightTerms(query: string) {
-  const trimmed = query.trim();
-
-  if (!trimmed) {
-    return [];
-  }
-
-  const terms = [trimmed, ...trimmed.split(/\s+/)].filter((term) => term.length > 0);
-  return Array.from(new Set(terms)).sort((a, b) => b.length - a.length);
-}
-
 function renderHighlightedText(text: string, query: string): ReactNode {
-  const terms = getHighlightTerms(query);
+  const ranges = findInlineSearchRanges(text, query);
 
-  if (!text || terms.length === 0) {
+  if (!text || ranges.length === 0) {
     return text;
   }
 
-  const pattern = new RegExp(`(${terms.map(escapeRegExp).join("|")})`, "gi");
-  const parts = text.split(pattern);
+  const parts: ReactNode[] = [];
+  let cursor = 0;
 
-  return parts.map((part, indexValue) => {
-    const matched = terms.some((term) => part.toLowerCase() === term.toLowerCase());
-
-    if (!matched) {
-      return part;
+  ranges.forEach((range, indexValue) => {
+    if (range.start > cursor) {
+      parts.push(text.slice(cursor, range.start));
     }
 
-    return (
-      <mark className="ruppelt-search-highlight" key={`${part}-${indexValue}`}>
-        {part}
-      </mark>
+    parts.push(
+      <mark className="ruppelt-search-highlight" key={`${range.start}-${range.end}-${indexValue}`}>
+        {text.slice(range.start, range.end)}
+      </mark>,
     );
+    cursor = range.end;
   });
+
+  if (cursor < text.length) {
+    parts.push(text.slice(cursor));
+  }
+
+  return parts;
+}
+
+function normalizeInlineSearchValue(value: string) {
+  return value
+    .normalize("NFKC")
+    .toLowerCase()
+    .replace(/\s+/g, "");
+}
+
+function buildInlineSearchIndex(text: string) {
+  let normalized = "";
+  const sourceIndexes: number[] = [];
+  const sourceEndIndexes: number[] = [];
+  let sourceIndex = 0;
+
+  for (const char of text) {
+    const normalizedChar = normalizeInlineSearchValue(char);
+
+    Array.from(normalizedChar).forEach((searchChar) => {
+      normalized += searchChar;
+      sourceIndexes.push(sourceIndex);
+      sourceEndIndexes.push(sourceIndex + char.length);
+    });
+    sourceIndex += char.length;
+  }
+
+  return { normalized, sourceIndexes, sourceEndIndexes };
+}
+
+function findInlineSearchRanges(text: string, query: string) {
+  const normalizedQuery = normalizeInlineSearchValue(query);
+
+  if (!text || !normalizedQuery) {
+    return [];
+  }
+
+  const { normalized, sourceIndexes, sourceEndIndexes } = buildInlineSearchIndex(text);
+  const ranges: Array<{ start: number; end: number }> = [];
+  let searchIndex = normalized.indexOf(normalizedQuery);
+
+  while (searchIndex >= 0) {
+    const sourceStart = sourceIndexes[searchIndex];
+    const sourceEnd = sourceEndIndexes[searchIndex + normalizedQuery.length - 1];
+    const previous = ranges.at(-1);
+
+    if (previous && sourceStart <= previous.end) {
+      previous.end = Math.max(previous.end, sourceEnd);
+    } else {
+      ranges.push({ start: sourceStart, end: sourceEnd });
+    }
+
+    searchIndex = normalized.indexOf(normalizedQuery, searchIndex + normalizedQuery.length);
+  }
+
+  return ranges;
+}
+
+function countInlineSearchMatches(text: string, query: string) {
+  return findInlineSearchRanges(text, query).length;
 }
 
 function readSavedIds() {
@@ -563,7 +612,7 @@ function DocumentDetailPanel({
   const hasVideoPreview = Boolean(videoEmbedUrl) && !hasThumbnail;
   const viewerMatchCount =
     viewerQuery.trim() && activeText
-      ? activeText.toLowerCase().split(viewerQuery.trim().toLowerCase()).length - 1
+      ? countInlineSearchMatches(activeText, viewerQuery)
       : 0;
   const tabs: Array<[DetailTab, string]> = [
     ["info", "資料情報"],
