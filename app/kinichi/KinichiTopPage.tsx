@@ -329,6 +329,7 @@ export function KinichiTopPage() {
                     <strong>{shape.nameJa}</strong>
                   </div>
                   <p>{shape.shortDescription}</p>
+                  <span className={styles.cardAction}>詳細ページを見る</span>
                   <div className={styles.cardMeta}>
                     <span>3D表示</span>
                     <span>{shape.representativeCases.length}件の代表事件</span>
@@ -364,6 +365,7 @@ export function KinichiTopPage() {
                   <strong>{craft.nameJa}</strong>
                   <em>{craft.relatedPerson}</em>
                   <p>{craft.shortDescription}</p>
+                  <span className={styles.cardAction}>詳細ページを見る</span>
                 </Link>
               );
             })}

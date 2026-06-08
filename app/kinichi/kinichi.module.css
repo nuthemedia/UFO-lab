@@ -717,6 +717,12 @@
   gap: 6px;
 }
 
+.cardAction {
+  color: var(--kinichi-accent);
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
 .craftGallery {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
