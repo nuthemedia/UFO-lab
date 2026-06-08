@@ -11,6 +11,7 @@ import {
 } from "@/data/kinichi/catalog";
 import { siteConfig } from "@/lib/site";
 import { KinichiViewer, ShapeSilhouette } from "../../KinichiViewer";
+import { ShapeCaptureThumbnail } from "../../ShapeCaptureThumbnail";
 import styles from "../../kinichi.module.css";
 import { kinichiShareImage } from "../../metadata";
 
@@ -195,7 +196,7 @@ export default async function KinichiShapePage({ params, searchParams }: ShapePa
             <div className={styles.craftGallery}>
               {relatedCraft.map((craft) => (
                 <Link className={styles.craftCard} href={withFrom(`/kinichi/craft/${craft.id}`, from)} key={craft.id}>
-                  <ShapeSilhouette className={styles.craftSilhouette} type={shape.proceduralType} />
+                  <ShapeCaptureThumbnail label={craft.nameJa} type={shape.proceduralType} />
                   <span>{craft.year}</span>
                   <strong>{craft.nameJa}</strong>
                   <em>{craft.relatedPerson}</em>

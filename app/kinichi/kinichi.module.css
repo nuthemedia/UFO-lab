@@ -634,10 +634,121 @@
   border-radius: 0;
 }
 
+.captureThumbnail {
+  position: relative;
+  display: grid;
+  min-height: 96px;
+  place-items: center;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(232, 232, 220, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232, 232, 220, 0.045) 1px, transparent 1px),
+    radial-gradient(circle at 50% 34%, rgba(183, 255, 206, 0.1), transparent 34%),
+    #050505;
+  background-position: 0 68%, 50% 68%, center;
+  background-size: 28px 18px, 28px 18px, auto, auto;
+}
+
+.captureThumbnail::before {
+  position: absolute;
+  inset: 56% -10% -24%;
+  content: "";
+  background: linear-gradient(to bottom, rgba(232, 232, 220, 0.08), transparent 44%);
+  transform: perspective(180px) rotateX(64deg);
+  transform-origin: top;
+}
+
+.captureGlow {
+  position: absolute;
+  width: 58px;
+  height: 58px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(244, 244, 240, 0.22), rgba(183, 255, 206, 0.08) 42%, transparent 70%);
+  filter: blur(3px);
+}
+
+.captureSilhouette {
+  position: relative;
+  z-index: 2;
+  width: 78%;
+  max-height: 68px;
+  fill: rgba(244, 244, 240, 0.2);
+  stroke: rgba(244, 244, 240, 0.95);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter:
+    drop-shadow(0 12px 12px rgba(0, 0, 0, 0.72))
+    drop-shadow(0 -1px 8px rgba(244, 244, 240, 0.18));
+}
+
+.captureShadow {
+  position: absolute;
+  bottom: 18px;
+  z-index: 1;
+  width: 64%;
+  height: 13px;
+  border-radius: 999px;
+  background: radial-gradient(ellipse, rgba(244, 244, 240, 0.22), rgba(183, 255, 206, 0.07) 46%, transparent 72%);
+  filter: blur(5px);
+}
+
+.captureLabel {
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 3;
+  display: block;
+  min-width: 0;
+  padding: 18px 9px 7px;
+  overflow: hidden;
+  color: var(--kinichi-text);
+  background: linear-gradient(to top, rgba(5, 5, 5, 0.94), rgba(5, 5, 5, 0.72) 48%, transparent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  text-align: center;
+  text-overflow: ellipsis;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.82);
+  white-space: nowrap;
+}
+
+.captureThumbnail[data-shape="orb"] .captureSilhouette {
+  width: 48%;
+  fill: rgba(244, 244, 240, 0.72);
+  stroke: rgba(244, 244, 240, 0.92);
+}
+
+.captureThumbnail[data-shape="capsule"] .captureSilhouette {
+  width: 72%;
+  fill: rgba(244, 244, 240, 0.48);
+}
+
+.captureThumbnail[data-shape="triangle"] .captureSilhouette,
+.captureThumbnail[data-shape="v"] .captureSilhouette {
+  width: 82%;
+  fill: rgba(244, 244, 240, 0.16);
+  transform: translateY(1px) skewX(-8deg);
+}
+
+.captureThumbnail[data-shape="crescent"] .captureSilhouette {
+  width: 86%;
+  fill: rgba(244, 244, 240, 0.14);
+  transform: translateY(4px);
+}
+
+.captureThumbnail[data-shape="diamond"] .captureSilhouette,
+.captureThumbnail[data-shape="cone"] .captureSilhouette,
+.captureThumbnail[data-shape="bell_acorn"] .captureSilhouette {
+  width: 58%;
+  fill: rgba(244, 244, 240, 0.3);
+}
+
 .shapeGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(230px, 280px));
   gap: 12px;
+  justify-content: start;
 }
 
 .shapeCard,
@@ -725,6 +836,12 @@
 
 .craftCard {
   min-height: 270px;
+}
+
+.craftCard .captureThumbnail {
+  min-height: 150px;
+  border: 1px solid rgba(232, 232, 220, 0.12);
+  border-radius: 6px;
 }
 
 .craftCard span,
@@ -1016,7 +1133,8 @@
   }
 
   .modelCarouselItem .viewerShellPreview,
-  .modelCarouselItem .cardPreviewPlaceholder {
+  .modelCarouselItem .cardPreviewPlaceholder,
+  .modelCarouselItem .captureThumbnail {
     min-height: 86px;
   }
 

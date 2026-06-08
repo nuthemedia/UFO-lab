@@ -5,6 +5,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { famousCraft, filters, nuforcShapes, shapeEntries } from "@/data/kinichi/catalog";
 import type { ProceduralType, ViewerTarget } from "@/data/kinichi/catalog";
 import { KinichiViewer, ShapeSilhouette } from "./KinichiViewer";
+import { ShapeCaptureThumbnail } from "./ShapeCaptureThumbnail";
 import styles from "./kinichi.module.css";
 
 type KinichiTab = "shapes" | "craft" | "nuforc";
@@ -293,7 +294,7 @@ export function KinichiTopPage() {
         <div className={styles.modelCarousel} aria-label={`${tabs.find((tab) => tab.id === activeTab)?.label ?? "モデル"}のプレビュー`}>
           {carouselItems.map((item) => (
             <Link aria-label={`${item.label}の詳細を見る`} className={styles.modelCarouselItem} href={item.href} key={item.id}>
-              <KinichiCardPreview fallbackType={item.fallbackType} target={item.target} />
+              <ShapeCaptureThumbnail label={item.label} type={item.fallbackType} />
             </Link>
           ))}
         </div>

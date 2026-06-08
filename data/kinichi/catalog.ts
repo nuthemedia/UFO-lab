@@ -120,7 +120,7 @@ export const shapeEntries: ShapeEntry[] = [
     representativeCases: ["1896-1897 airship wave", "Adamski cigar-shaped UFO"],
     misidentifications: ["飛行船", "航空機の胴体", "雲", "ロケット", "望遠圧縮"],
     nuforcShapeIds: ["cigar", "cylinder"],
-    relatedCraftIds: [],
+    relatedCraftIds: ["kenneth-arnold"],
     tags: ["古典型", "葉巻・筒型", "3D"],
   },
   {
@@ -337,6 +337,17 @@ export const famousCraft: FamousCraft[] = [
     shapeId: "disk",
     modelPath: "/models/saucers/billy-meier.glb",
     shortDescription: "1970年代UFO写真文化と結びつく有名モデル。",
+  },
+  {
+    id: "kenneth-arnold",
+    nameJa: "ケネス・アーノルド型",
+    nameEn: "Kenneth Arnold",
+    relatedPerson: "Kenneth Arnold",
+    relatedCase: "Kenneth Arnold sighting",
+    year: "1947",
+    shapeId: "arnold-crescent",
+    modelPath: "/models/saucers/kenneth-arnold.glb",
+    shortDescription: "1947年の報告に結びつく、薄い翼状・三日月状の有名モデル。",
   },
 ];
 
