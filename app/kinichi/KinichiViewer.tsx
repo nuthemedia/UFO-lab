@@ -385,6 +385,7 @@ export function KinichiViewer({
     loadTokenRef.current += 1;
     const loadToken = loadTokenRef.current;
     setStatus(target.modelKind === "glb" ? "loading" : "ready");
+    const scaleTarget = preview ? 2.05 : compact ? 2.25 : 2.65;
 
     while (root.children.length) {
       const child = root.children[0];
@@ -444,12 +445,17 @@ export function KinichiViewer({
 
     if (target.modelKind === "procedural" && target.proceduralType) {
       root.add(createProceduralModel(target.proceduralType, material, night));
-      normalizeModel(root, preview ? 2.05 : compact ? 2.25 : 2.65);
+      normalizeModel(root, scaleTarget);
       setStatus("ready");
       return;
     }
 
     if (target.modelKind === "glb" && target.modelPath) {
+      const fallbackModel = createProceduralModel(resolvedFallbackType as ProceduralType, material, night);
+      normalizeModel(fallbackModel, scaleTarget);
+      root.add(fallbackModel);
+      setStatus("ready");
+
       const loader = new GLTFLoader();
       loader.load(
         target.modelPath,
@@ -484,14 +490,21 @@ export function KinichiViewer({
             object.receiveShadow = true;
             addEdges(object, night);
           });
-          normalizeModel(model, preview ? 2.05 : compact ? 2.25 : 2.65);
+
+          while (root.children.length) {
+            const child = root.children[0];
+            root.remove(child);
+            disposeObject(child);
+          }
+
+          normalizeModel(model, scaleTarget);
           root.add(model);
           setStatus("ready");
         },
         undefined,
         () => {
           if (loadTokenRef.current === loadToken) {
-            setStatus("error");
+            setStatus("ready");
           }
         },
       );
