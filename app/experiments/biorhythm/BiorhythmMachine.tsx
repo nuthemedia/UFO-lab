@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import styles from "./biorhythm.module.css";
 
@@ -769,9 +770,9 @@ export function BiorhythmMachine() {
         <p className={styles.disclaimer}>
           診断結果は娯楽目的です。医療・健康判断には使用できません。
         </p>
-        <a className={styles.labLink} href="/">
+        <Link className={styles.labLink} href="/">
           UFO Lab Tokyo Experiments
-        </a>
+        </Link>
       </div>
     </section>
   );

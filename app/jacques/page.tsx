@@ -1,6 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import Link from "next/link";
 import { useRef, useState } from "react";
 import {
   jacquesCards,
@@ -629,12 +630,12 @@ export default function JacquesPage() {
         </AnimatePresence>
 
         <footer className="border-t border-white/10 pt-7 text-center">
-          <a
+          <Link
             className="text-sm font-black tracking-[0.28em] text-emerald-100 transition hover:text-emerald-200"
             href="/"
           >
             UFO Lab Tokyo
-          </a>
+          </Link>
           <p className="mt-2 text-xs font-bold text-slate-600">© 2026 UFO Lab Tokyo</p>
         </footer>
       </div>

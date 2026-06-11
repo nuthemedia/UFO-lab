@@ -11,7 +11,8 @@
     "kean:verify-portraits": "node scripts/verify-kean-portraits.mjs",
     "keyhoe:build": "node scripts/build-keyhoe-today.mjs",
     "keyhoe:build:dry": "node scripts/build-keyhoe-today.mjs --dry",
-    "keyhoe:build:mock": "node scripts/build-keyhoe-today.mjs --mock"
+    "keyhoe:build:mock": "node scripts/build-keyhoe-today.mjs --mock",
+    "lint": "eslint ."
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.3.0",
@@ -31,7 +32,8 @@
     "@types/react": "19.1.5",
     "@types/react-dom": "19.1.5",
     "@types/three": "^0.184.1",
-    "playwright": "^1.60.0",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.2.9",
     "typescript": "5.8.3"
   }
 }

@@ -70,7 +70,21 @@ function toReadableJapaneseText(text: string) {
   return kept.join("\n").replace(/\n{3,}/g, "\n\n").trim();
 }
 
-function resolveOfficialUrl(bundle: any, record: any) {
+type BundleEntry = {
+  document?: { officialPdfUrl?: string; sourcePdfUrl?: string } | null;
+  ocr?: { ocrTextEn?: string; source?: string } | null;
+} | null;
+
+type IndexRecord = {
+  source?: {
+    id?: string;
+    downloadUrl?: string;
+    videoUrl?: string;
+    imageUrl?: string;
+  } | null;
+};
+
+function resolveOfficialUrl(bundle: BundleEntry, record: IndexRecord | null) {
   return (
     bundle?.document?.officialPdfUrl ||
     bundle?.document?.sourcePdfUrl ||
@@ -99,7 +113,7 @@ export async function GET(_request: Request, context: RouteContext) {
       readJson(recordsPath),
     ]);
     const bundle = bundles[recordId] || null;
-    const record = index.records?.find((item: any) => item?.source?.id === recordId) || null;
+    const record = index.records?.find((item: IndexRecord) => item?.source?.id === recordId) || null;
     const officialUrl = resolveOfficialUrl(bundle, record);
 
     return NextResponse.json({
