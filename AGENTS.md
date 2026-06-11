@@ -87,3 +87,13 @@ When making a new public site, app, route, or experiment live on Vercel:
 - `npm run deploy:prod` must pass from a clean, up-to-date `origin/main` checkout linked to the canonical `ufo-lab` Vercel project.
 - Do not deploy from an old feature worktree or temporary worktree if it is missing any public route that already exists on production.
 - If Keyhoe daily updates or any automated workflow can trigger production redeploys, verify that the workflow runs `npm run verify:production-routes` before committing/pushing generated data.
+
+## 7. Quality Gates
+
+CI (`.github/workflows/ci.yml`) runs on every push/PR to `main`: production route verification, search-index freshness check, `npm run lint`, and `next build`. All must pass.
+
+- Run `npm run lint` before committing. ESLint uses the flat config in `eslint.config.mjs`.
+- `react-hooks/set-state-in-effect` and `react-hooks/refs` are downgraded to warnings until the large client components (RuppeltBrowser, Kinichi viewers, OhtsukiChecker, Hynek mockups) are split. Do not add new violations.
+- `data/shared/search/fulltext-index.json` is generated from the pursue bundles and Japanese translations. After changing `data/shared/pursue-document-bundles.json`, `data/pursue/pursue-records.json`, or `data/shared/translations/ja/`, regenerate it with `node scripts/build-pursue-search-index.mjs` and commit the result — otherwise `npm run verify:search-index` fails CI.
+- Use `next/image` for local static images instead of `<img>`. Local image URLs with query strings must be allowed in `images.localPatterns` in `next.config.mjs`. Kean's `ImageAsset` carries optional `width`/`height` for intrinsic sizing.
+- Compress images before adding them to `public/`: photos as JPEG at display-appropriate resolution, illustrations as palette PNG. Nothing in `public/` should exceed roughly 1.5MB without a stated reason.
