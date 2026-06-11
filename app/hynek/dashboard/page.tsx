@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { HynekDashboardMockup } from "@/components/HynekDashboardMockup";
+import { HynekDashboardMockup } from "@/app/hynek/HynekDashboardMockup";
 import { SiteFooter } from "@/components/SiteFooter";
 import { siteConfig } from "@/lib/site";
 import { getHynekDashboardViews } from "@/lib/hynekStore";

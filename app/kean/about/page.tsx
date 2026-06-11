@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { KeanPageHeader } from "@/components/KeanPageHeader";
+import { KeanPageHeader } from "@/app/kean/KeanPageHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { keanGuideSections } from "@/data/kean/guide";
 import { siteConfig } from "@/lib/site";

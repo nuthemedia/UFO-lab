@@ -3,7 +3,7 @@ import Link from "next/link";
 import { readdirSync } from "node:fs";
 import { resolve } from "node:path";
 import pursueIndex from "@/data/pursue/pursue-records.json";
-import { RuppeltBrowser } from "@/components/RuppeltBrowser";
+import { RuppeltBrowser } from "@/app/ruppelt/RuppeltBrowser";
 import { SiteFooter } from "@/components/SiteFooter";
 import { siteConfig } from "@/lib/site";
 import { siteUrl } from "@/lib/seo";

@@ -11,7 +11,7 @@ import {
   SourceList,
   keanPersonCategoryLabels,
   usePersonDialogLock,
-} from "@/components/KeanPersonDetail";
+} from "@/app/kean/KeanPersonDetail";
 
 type ResolvedRelatedPerson = RelatedPersonRef & {
   person: Person;

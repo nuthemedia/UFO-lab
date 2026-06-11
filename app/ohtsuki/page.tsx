@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { OhtsukiChecker } from "@/components/OhtsukiChecker";
+import { OhtsukiChecker } from "@/app/ohtsuki/OhtsukiChecker";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ohtsukiConfig, siteConfig } from "@/lib/site";
 

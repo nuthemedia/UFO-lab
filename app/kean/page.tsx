@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { KeanPageHeader } from "@/components/KeanPageHeader";
-import { KeanTicTacModelViewer } from "@/components/KeanTicTacModelViewer";
+import { KeanPageHeader } from "@/app/kean/KeanPageHeader";
+import { KeanTicTacModelViewer } from "@/app/kean/KeanTicTacModelViewer";
 import { SiteFooter } from "@/components/SiteFooter";
 import { getKeanTagLabel } from "@/data/kean/labels";
 import { keanEvidencePrinciples, keanReadingFlow } from "@/data/kean/guide";

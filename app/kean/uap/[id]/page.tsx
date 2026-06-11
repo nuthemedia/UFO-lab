@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { KeanPageHeader } from "@/components/KeanPageHeader";
-import { KeanTicTacModelViewer } from "@/components/KeanTicTacModelViewer";
+import { KeanPageHeader } from "@/app/kean/KeanPageHeader";
+import { KeanTicTacModelViewer } from "@/app/kean/KeanTicTacModelViewer";
 import { SiteFooter } from "@/components/SiteFooter";
 import { keanUapById, keanUapRecords } from "@/data/kean/uap";
 import { siteConfig } from "@/lib/site";

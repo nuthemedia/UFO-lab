@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
-import { KeanPageHeader } from "@/components/KeanPageHeader";
+import { KeanPageHeader } from "@/app/kean/KeanPageHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import {
   getKeanTagLabel,

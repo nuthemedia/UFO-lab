@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { SiteFooter } from "@/components/SiteFooter";
-import { HynekFanTypeMockup } from "@/components/HynekFanTypeMockup";
+import { HynekFanTypeMockup } from "@/app/hynek/HynekFanTypeMockup";
 import { siteConfig } from "@/lib/site";
 import { siteUrl } from "@/lib/seo";
 import { getHynekShareImagePath, getHynekShareLabel, withHynekSocialImageVersion } from "@/lib/hynekShare";

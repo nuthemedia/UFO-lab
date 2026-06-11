@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
-import { RuppeltLpMotion } from "@/components/RuppeltLpMotion";
+import { RuppeltLpMotion } from "@/app/ruppelt/RuppeltLpMotion";
 import { SiteFooter } from "@/components/SiteFooter";
 import { siteName, siteUrl } from "@/lib/seo";
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { KeanHistory, type ResolvedTimelineEvent } from "@/components/KeanHistory";
-import { KeanPageHeader } from "@/components/KeanPageHeader";
+import { KeanHistory, type ResolvedTimelineEvent } from "@/app/kean/KeanHistory";
+import { KeanPageHeader } from "@/app/kean/KeanPageHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { peopleById } from "@/data/kean/people";
 import { timelineEvents } from "@/data/kean/timeline";
