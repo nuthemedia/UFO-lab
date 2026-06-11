@@ -1,13 +1,10 @@
 import { ImageResponse } from "next/og";
 import { notFound } from "next/navigation";
 import { keanUapById, keanUapRecords } from "@/data/kean/uap";
+import { OgFooter, OgFrame, ogContentType, ogSize } from "@/lib/og";
 
-export const size = {
-  width: 1200,
-  height: 630,
-};
-
-export const contentType = "image/png";
+export const size = ogSize;
+export const contentType = ogContentType;
 export const dynamicParams = false;
 
 type KeanUapOgProps = {
@@ -28,19 +25,7 @@ export default async function Image({ params }: KeanUapOgProps) {
 
   return new ImageResponse(
     (
-      <div
-        style={{
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          background: "#eef1ec",
-          color: "#171c19",
-          padding: "68px",
-          fontFamily: "Arial, Helvetica, sans-serif",
-        }}
-      >
+      <OgFrame background="#eef1ec" color="#171c19">
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <div style={{ display: "flex", color: "#245447", fontSize: 30, fontWeight: 900 }}>Kean 知っておきたいUAP</div>
           <div style={{ display: "flex", color: "#b46a2a", fontSize: 30, fontWeight: 900 }}>{record.yearLabel}</div>
@@ -79,22 +64,13 @@ export default async function Image({ params }: KeanUapOgProps) {
           </div>
         </div>
 
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            borderTop: "2px solid #c5cec3",
-            paddingTop: 24,
-            color: "#35403a",
-            fontSize: 26,
-            fontWeight: 900,
-          }}
-        >
-          <span>確認済み事実・議論点・注意点を分けて読む</span>
-          <span>ufolab.tokyo/kean/uap/{record.id}</span>
-        </div>
-      </div>
+        <OgFooter
+          borderColor="#c5cec3"
+          color="#35403a"
+          left="確認済み事実・議論点・注意点を分けて読む"
+          right={`ufolab.tokyo/kean/uap/${record.id}`}
+        />
+      </OgFrame>
     ),
     size,
   );

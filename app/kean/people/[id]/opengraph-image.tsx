@@ -4,16 +4,13 @@ import { notFound } from "next/navigation";
 import { keanBeginnerTierLabels, keanPersonCategoryLabels } from "@/data/kean/labels";
 import { people, peopleById } from "@/data/kean/people";
 import { getKeanPersonIllustration } from "@/lib/keanPortrait";
+import { ogContentType, ogSize } from "@/lib/og";
 
 export const runtime = "nodejs";
 export const dynamicParams = false;
 
-export const size = {
-  width: 1200,
-  height: 630,
-};
-
-export const contentType = "image/png";
+export const size = ogSize;
+export const contentType = ogContentType;
 
 type KeanPersonOgProps = {
   params: Promise<{ id: string }> | { id: string };

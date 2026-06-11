@@ -1,29 +1,13 @@
 import { ImageResponse } from "next/og";
+import { OgBrand, OgFooter, OgFrame, ogContentType, ogSize } from "@/lib/og";
 
-export const size = {
-  width: 1200,
-  height: 630,
-};
-
-export const contentType = "image/png";
+export const size = ogSize;
+export const contentType = ogContentType;
 
 export default function Image() {
   return new ImageResponse(
     (
-      <div
-        style={{
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          background: "#050505",
-          color: "#f4f4f0",
-          padding: "68px",
-          fontFamily: "Arial, Helvetica, sans-serif",
-          position: "relative",
-        }}
-      >
+      <OgFrame background="#050505" color="#f4f4f0" relative>
         <div
           style={{
             position: "absolute",
@@ -33,27 +17,7 @@ export default function Image() {
             backgroundSize: "100% 100%, 64px 64px, 64px 64px",
           }}
         />
-        <div style={{ position: "relative", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 18, color: "#b7ffce", fontSize: 28, fontWeight: 900 }}>
-            <div
-              style={{
-                width: 96,
-                height: 42,
-                border: "3px solid #b7ffce",
-                borderRadius: 999,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontSize: 18,
-                fontWeight: 900,
-              }}
-            >
-              UFO
-            </div>
-            UFO Lab Tokyo
-          </div>
-          <div style={{ color: "#a8a8a0", fontSize: 24, fontWeight: 900 }}>UFO SHAPE ATLAS</div>
-        </div>
+        <OgBrand color="#b7ffce" label="UFO SHAPE ATLAS" labelColor="#a8a8a0" relative />
 
         <div style={{ position: "relative", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 52 }}>
           <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
@@ -90,22 +54,14 @@ export default function Image() {
           </div>
         </div>
 
-        <div
-          style={{
-            position: "relative",
-            display: "flex",
-            justifyContent: "space-between",
-            borderTop: "2px solid rgba(232,232,220,0.24)",
-            paddingTop: 26,
-            color: "#a8a8a0",
-            fontSize: 25,
-            fontWeight: 800,
-          }}
-        >
-          <span>3Dモデル・線画シルエット・代表事件・目撃データ分類</span>
-          <span>ufolab.tokyo/kinichi</span>
-        </div>
-      </div>
+        <OgFooter
+          borderColor="rgba(232,232,220,0.24)"
+          color="#a8a8a0"
+          left="3Dモデル・線画シルエット・代表事件・目撃データ分類"
+          right="ufolab.tokyo/kinichi"
+          relative
+        />
+      </OgFrame>
     ),
     size,
   );

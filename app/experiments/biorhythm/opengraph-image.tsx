@@ -1,11 +1,8 @@
 import { ImageResponse } from "next/og";
+import { ogContentType, ogSize } from "@/lib/og";
 
-export const size = {
-  width: 1200,
-  height: 630,
-};
-
-export const contentType = "image/png";
+export const size = ogSize;
+export const contentType = ogContentType;
 
 const physicalPoints = "0,80 42,56 84,44 126,52 168,82 210,108 252,116 294,95 336,62 378,46 420,54";
 const emotionalPoints = "0,48 42,58 84,82 126,108 168,118 210,103 252,72 294,50 336,40 378,51 420,76";
