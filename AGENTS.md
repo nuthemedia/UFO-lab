@@ -72,6 +72,7 @@ Before implementing app-specific work, identify the target app slug.
 - If `docs/apps/{app-slug}/AGENTS.md` does not exist, stop and report that planning docs need to be created first.
 - Do not use `docs/apps/_template/` as an app specification. It is only a scaffold for planning docs.
 - During planning, create or update `PROJECT.md`, `DESIGN.md`, `FEATURES.md`, and `DATA.md` for the target app.
+- Lightweight tier: an app living under `app/experiments/` only needs `AGENTS.md` and `PROJECT.md` (purpose, scope, key decisions in one file). Create the remaining docs when the app graduates out of `app/experiments/`.
 - During mock or implementation work, follow the target app docs and avoid adding behavior that is not documented there.
 - If implementation requires a product, UI, feature, data, API, or operational decision not covered by the app docs, update the relevant doc first or ask for clarification.
 - Keep changes surgical: do not reorganize unrelated app docs, legacy specs, or shared data unless the current task explicitly requires it.
