@@ -20,6 +20,8 @@ export type SourceLink = {
 
 export type ImageAsset = {
   src: string;
+  width?: number;
+  height?: number;
   alt: string;
   caption: string;
   credit: string;

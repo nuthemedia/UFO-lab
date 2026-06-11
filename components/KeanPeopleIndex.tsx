@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { PersonDetailDialog, usePersonDialogLock } from "@/components/KeanPersonDetail";
 import { getKeanPersonIllustration } from "@/lib/keanPortrait";
@@ -52,7 +53,7 @@ function PersonIndexCard({
     >
       <span className="kean-index-person-photo" aria-hidden={!illustration}>
         {illustration ? (
-          <img src={illustration.src} alt={illustration.alt} loading="lazy" />
+          <Image src={illustration.src} alt={illustration.alt} width={illustration.width ?? 1024} height={illustration.height ?? 1024} />
         ) : (
           <span>{getPersonInitials(person)}</span>
         )}

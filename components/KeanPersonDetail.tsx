@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect } from "react";
 import { getKeanPersonIllustration } from "@/lib/keanPortrait";
 import {
@@ -34,7 +35,7 @@ export function PersonPortrait({
     <span className={`kean-person-avatar kean-person-avatar--${size}`}>
       {image ? (
         <>
-          <img src={image.src} alt={image.alt} loading="lazy" />
+          <Image src={image.src} alt={image.alt} width={image.width ?? 1024} height={image.height ?? 1024} />
           {showBadge ? <span className="kean-person-avatar-badge">図版</span> : null}
         </>
       ) : (

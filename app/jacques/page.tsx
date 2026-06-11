@@ -1,6 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from "react";
 import {
@@ -109,10 +110,12 @@ function CardPlaceholder({ card }: { card: JacquesCard }) {
       className={`relative flex aspect-[4/3] min-h-28 items-end overflow-hidden rounded-lg border border-white/10 bg-gradient-to-br p-3 ${categoryTone[card.category]}`}
     >
       {card.image ? (
-        <img
+        <Image
           alt=""
           aria-hidden="true"
-          className="absolute inset-0 h-full w-full object-cover"
+          fill
+          sizes="(max-width: 768px) 100vw, 360px"
+          className="object-cover"
           src={card.image}
         />
       ) : null}

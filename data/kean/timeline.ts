@@ -3,6 +3,8 @@ import type { TimelineEvent } from "./types";
 const eventImages = {
   ticTac: {
     src: "/kean/images/people/illustrations/david-fravor.png",
+    width: 1024,
+    height: 1024,
     alt: "ニミッツ号Tic Tac事件の文脈で語られるデイヴィッド・フレーバーの生成図版",
     caption: "デイヴィッド・フレーバーは、2004年の遭遇を公に語り、Tic Tac事件を現代UAP史の代表例として知られるきっかけを作った元海軍パイロット。",
     credit: "UFO Lab Tokyo generated illustration",
@@ -12,6 +14,8 @@ const eventImages = {
   },
   nytAatip: {
     src: "/kean/images/people/illustrations/leslie-kean.png",
+    width: 1024,
+    height: 1024,
     alt: "2017年NYT報道の共同執筆者レスリー・キーンの生成図版",
     caption: "レスリー・キーンは、2017年のNYT報道でAATIPと海軍UAP映像を一般読者に届けた共同執筆者の一人。",
     credit: "UFO Lab Tokyo generated illustration",
@@ -21,6 +25,8 @@ const eventImages = {
   },
   ageOfDisclosure: {
     src: "/kean/images/people/illustrations/dan-farah.png",
+    width: 1024,
+    height: 1024,
     alt: "The Age of Disclosureの制作者ダン・ファラーの生成図版",
     caption: "ダン・ファラーは、映画『The Age of Disclosure』を通じてUAP開示論を映像作品として広い層に届けた制作者。",
     credit: "UFO Lab Tokyo generated illustration",
@@ -30,6 +36,8 @@ const eventImages = {
   },
   dodVideoRelease: {
     src: "/kean/images/people/illustrations/christopher-mellon.png",
+    width: 1024,
+    height: 1024,
     alt: "米国防総省のUAP映像公開文脈で知られるクリストファー・メロンの生成図版",
     caption: "クリストファー・メロンは、海軍UAP映像をめぐる公開議論を安全保障と議会監督の文脈へつなげた元国防当局者。",
     credit: "UFO Lab Tokyo generated illustration",
@@ -39,6 +47,8 @@ const eventImages = {
   },
   houseHearing: {
     src: "/kean/images/people/david-grusch.png",
+    width: 1400,
+    height: 1121,
     alt: "米下院UAP公聴会で証言するデイヴィッド・グルーシュ",
     caption: "2023年米下院UAP公聴会の公開映像から。",
     credit: "U.S. House Oversight hearing video / Wikimedia Commons",
@@ -49,6 +59,8 @@ const eventImages = {
   },
   capitol: {
     src: "/kean/images/events/capitol.jpg",
+    width: 1920,
+    height: 823,
     alt: "米国議会議事堂",
     caption: "UAP開示法案・議会公聴会の舞台となる米国議会。",
     credit: "Wikimedia Commons",
@@ -58,6 +70,8 @@ const eventImages = {
   },
   nationalDiet: {
     src: "/kean/images/events/national-diet.jpg",
+    width: 1920,
+    height: 1280,
     alt: "東京の国会議事堂",
     caption: "日本のUAP議連文脈に関わる国会議事堂。",
     credit: "Wikimedia Commons",

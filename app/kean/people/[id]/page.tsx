@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
@@ -208,7 +209,7 @@ export default async function KeanPersonPage({ params }: KeanPersonPageProps) {
           <div className="kean-person-profile-media">
             <span className="kean-person-profile-image">
               {image ? (
-                <img src={image.src} alt={image.alt} />
+                <Image src={image.src} alt={image.alt} width={image.width ?? 1024} height={image.height ?? 1024} />
               ) : (
                 <span>{getPersonInitials(person)}</span>
               )}

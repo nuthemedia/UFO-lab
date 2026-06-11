@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import type { Person, RelatedPersonRef, TimelineEvent } from "@/data/kean/types";
@@ -70,7 +71,7 @@ function EventVisual({ event }: { event: ResolvedTimelineEvent }) {
     <span className="kean-event-visual" data-theme={event.visualTheme}>
       {event.image ? (
         <>
-          <img src={event.image.src} alt={event.image.alt} loading="lazy" />
+          <Image src={event.image.src} alt={event.image.alt} width={event.image.width ?? 1024} height={event.image.height ?? 1024} />
           <span className="kean-visual-caption">{event.image.caption}</span>
         </>
       ) : (

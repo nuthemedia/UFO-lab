@@ -5,6 +5,8 @@ export function makeKeanPortraitAsset(person: Pick<Person, "id" | "name" | "jaNa
 
   return {
     src: `${sourcePath}?v=4`,
+    width: 1024,
+    height: 1024,
     alt: `${person.name}のKean資料イラスト`,
     caption: `${person.jaName}のKean資料イラスト。`,
     credit: "Kean図版",

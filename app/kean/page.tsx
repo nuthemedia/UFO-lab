@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { KeanPageHeader } from "@/components/KeanPageHeader";
 import { KeanTicTacModelViewer } from "@/components/KeanTicTacModelViewer";
@@ -259,7 +260,9 @@ export default function KeanPage() {
               return (
                 <Link href={`/kean/people/${person.id}`} key={person.id}>
                   <span className="kean-home-person-image">
-                    {image ? <img src={image.src} alt={image.alt} loading="lazy" /> : null}
+                    {image ? (
+                      <Image src={image.src} alt={image.alt} width={image.width ?? 1024} height={image.height ?? 1024} />
+                    ) : null}
                   </span>
                   <span className="kean-home-person-copy">
                     <strong>{person.jaName}</strong>
