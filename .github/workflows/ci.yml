@@ -26,6 +26,9 @@ jobs:
       - name: Verify production routes
         run: npm run verify:production-routes
 
+      - name: Verify search index freshness
+        run: npm run verify:search-index
+
       - name: Lint
         run: npm run lint
 

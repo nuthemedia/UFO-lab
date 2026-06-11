@@ -12,7 +12,8 @@
     "keyhoe:build": "node scripts/build-keyhoe-today.mjs",
     "keyhoe:build:dry": "node scripts/build-keyhoe-today.mjs --dry",
     "keyhoe:build:mock": "node scripts/build-keyhoe-today.mjs --mock",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "verify:search-index": "node scripts/build-pursue-search-index.mjs --check"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.3.0",

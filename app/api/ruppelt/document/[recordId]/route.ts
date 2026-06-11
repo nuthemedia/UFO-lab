@@ -15,6 +15,32 @@ async function readJson(path: string) {
   return JSON.parse(await readFile(path, "utf8"));
 }
 
+const bundlePath = resolve(rootDir, "data/shared/pursue-document-bundles.json");
+const recordsPath = resolve(rootDir, "data/pursue/pursue-records.json");
+
+let cachedBundlesPromise: Promise<Record<string, BundleEntry>> | null = null;
+let cachedRecordsPromise: Promise<{ records?: IndexRecord[] }> | null = null;
+
+function loadBundles() {
+  if (!cachedBundlesPromise) {
+    cachedBundlesPromise = readJson(bundlePath).catch((error) => {
+      cachedBundlesPromise = null;
+      throw error;
+    });
+  }
+  return cachedBundlesPromise;
+}
+
+function loadRecordsIndex() {
+  if (!cachedRecordsPromise) {
+    cachedRecordsPromise = readJson(recordsPath).catch((error) => {
+      cachedRecordsPromise = null;
+      throw error;
+    });
+  }
+  return cachedRecordsPromise;
+}
+
 function toReadableJapaneseText(text: string) {
   const lines = text.split(/\r?\n/);
   const kept: string[] = [];
@@ -103,14 +129,12 @@ export async function GET(_request: Request, context: RouteContext) {
   }
 
   const translationPath = resolve(rootDir, "data/shared/translations/ja", `${recordId}.json`);
-  const bundlePath = resolve(rootDir, "data/shared/pursue-document-bundles.json");
-  const recordsPath = resolve(rootDir, "data/pursue/pursue-records.json");
 
   try {
     const [translation, bundles, index] = await Promise.all([
       readJson(translationPath).catch(() => null),
-      readJson(bundlePath),
-      readJson(recordsPath),
+      loadBundles(),
+      loadRecordsIndex(),
     ]);
     const bundle = bundles[recordId] || null;
     const record = index.records?.find((item: IndexRecord) => item?.source?.id === recordId) || null;

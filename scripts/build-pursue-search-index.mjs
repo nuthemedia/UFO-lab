@@ -163,7 +163,21 @@ const payload = {
   documents: snippetDocuments,
 };
 
-await writeFile(fulltextIndexPath, `${JSON.stringify(payload)}\n`);
+if (process.argv.includes("--check")) {
+  const committed = await readJson(fulltextIndexPath, null);
+  const withoutTimestamp = (value) => JSON.stringify({ ...value, generatedAt: null });
 
-console.log(`Built ${fulltextIndexPath}`);
-console.log(`Indexed ${documents.length} records, ${translations.size} Japanese full-text translations.`);
+  if (!committed || withoutTimestamp(committed) !== withoutTimestamp(payload)) {
+    console.error(
+      "fulltext-index.json does not match its sources. Run `node scripts/build-pursue-search-index.mjs` and commit the result.",
+    );
+    process.exit(1);
+  }
+
+  console.log(`fulltext-index.json is up to date (${documents.length} records).`);
+} else {
+  await writeFile(fulltextIndexPath, `${JSON.stringify(payload)}\n`);
+
+  console.log(`Built ${fulltextIndexPath}`);
+  console.log(`Indexed ${documents.length} records, ${translations.size} Japanese full-text translations.`);
+}
