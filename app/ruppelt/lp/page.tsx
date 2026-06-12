@@ -10,6 +10,7 @@ const brandHref = "/";
 const appUrl = `${siteUrl}${appHref}`;
 const lpUrl = `${siteUrl}/ruppelt/lp`;
 const ruppeltOgpImage = `${siteUrl}/ogp-ruppelt-v22.jpg`;
+const ruppeltLpSocialUrl = `${siteUrl}/ruppelt/lp?xcard=v22`;
 
 const metaTitle = "Ruppelt V2.2｜アメリカ政府UAP・UFO機密解除資料を日本語で検索";
 const metaDescription =
@@ -97,7 +98,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: metaTitle,
     description: metaDescription,
-    url: "/ruppelt/lp",
+    url: ruppeltLpSocialUrl,
     siteName,
     locale: "ja_JP",
     images: [

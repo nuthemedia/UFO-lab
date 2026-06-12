@@ -20,6 +20,7 @@ const statusDashboardOrder: StatusDashboardKey[] = [
 ];
 // Legacy Vercel build guard compatibility marker: Ruppelt V2.0.
 const ruppeltOgpImage = `${siteUrl}/ogp-ruppelt-v22.jpg`;
+const ruppeltSocialUrl = `${siteUrl}/ruppelt?xcard=v22`;
 
 function getStatusDashboardLabel(status: StatusDashboardKey) {
   return status === "unreviewed" ? "未判定" : priorDisclosureLabels[status];
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ruppelt V2.2 - PURSUE日本語インデックス",
     description: "アメリカ政府UAP公開資料をスマホでさくっと確認。",
-    url: "/ruppelt",
+    url: ruppeltSocialUrl,
     siteName: "UFO Lab Tokyo",
     images: [
       {
