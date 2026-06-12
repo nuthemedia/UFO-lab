@@ -110,12 +110,19 @@ type IndexRecord = {
   } | null;
 };
 
+function normalizeOfficialVideoUrl(url: string) {
+  const trimmed = url.trim();
+  const match = trimmed.match(/(?:dvidshub\.net\/video\/|\/UFO\/)(\d+)/i);
+
+  return match ? `https://www.dvidshub.net/video/${match[1]}` : trimmed;
+}
+
 function resolveOfficialUrl(bundle: BundleEntry, record: IndexRecord | null) {
   return (
     bundle?.document?.officialPdfUrl ||
     bundle?.document?.sourcePdfUrl ||
     record?.source?.downloadUrl ||
-    record?.source?.videoUrl ||
+    (record?.source?.videoUrl ? normalizeOfficialVideoUrl(record.source.videoUrl) : "") ||
     record?.source?.imageUrl ||
     ""
   );

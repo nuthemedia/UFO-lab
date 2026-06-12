@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "appName": "Ruppelt v2.0",
-    "displayName": "Ruppelt v2.0 - PURSUE日本語インデックス",
-    "sourcePageUrl": "https://www.war.gov/UFO/?releaseDate=Release+02",
-    "csvUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/uap-data.csv",
-    "fetchedAt": "2026-05-24T06:59:30.000Z",
-    "recordCount": 222,
+    "appName": "Ruppelt v2.2",
+    "displayName": "Ruppelt v2.2 - PURSUE日本語インデックス",
+    "sourcePageUrl": "https://www.war.gov/UFO/",
+    "csvUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/uap-data.csv?release=3",
+    "fetchedAt": "2026-06-12T14:49:37.634Z",
+    "recordCount": 294,
     "untranslatedCount": 0
   },
   "records": [
@@ -15995,6 +15995,2238 @@
           "nasa",
           "ruppelt"
         ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0223",
+        "assetFileName": "CIA-UAP-017, Placement on High Alert Due to Perceived Aggressive Foreign Posturing",
+        "release": "6/12/26",
+        "agency": "CIA",
+        "incidentDate": "July, 2008",
+        "incidentLocation": "Harare, Zimbabwe",
+        "documentType": "PDF",
+        "description": "A never before released July 2008 report on a UFO sighting at the Harare International Airport. Individuals debated if the sighting was an advanced reconnaissance device of a foreign government or of extraterrestrial origins.",
+        "virin": "260508-O-D0360-1094",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-017_Placement_on_High_Alert_Due_to_Perceived_Aggressive_Foreign_Posturing.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-017_Placement_on_High_Alert_Due_to_Perceived_Aggressive_Foreign_Posturing.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "CIA-UAP-017、外国の攻撃的な態度と思われるため、厳戒態勢が敷かれています",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "2008 年 7 月にハラレ国際空港での UFO 目撃に関するこれまでに発表されたことのない報告書。この目撃情報が外国政府の高度な偵察装置によるものなのか、それとも地球外起源のものなのか、人々は議論した。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0224",
+        "assetFileName": "DOW-UAP-D084, US Army-Flying-Saucer-Study_1949",
+        "release": "6/12/26",
+        "agency": "Department of War",
+        "incidentDate": "",
+        "incidentLocation": "",
+        "documentType": "PDF",
+        "description": "This file contains an Evaluation Study of the Phenomenon (Flying Saucers) prepared at the request of the Plans & Operations Divisions of the General Staff, U.S. Army (P&O, GSUSA) to determine if the origin could be traced to natural phenomena or the activities of a foreign power.",
+        "virin": "260508-D-D0360-1066",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/DOW-UAP-D084_USArmy-Flying-Saucer-Study_1949.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/DOW-UAP-D084_USArmy-Flying-Saucer-Study_1949.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-D084、アメリカ陸軍-空飛ぶ円盤-研究_1949",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "このファイルには、原因が自然現象または外国勢力の活動に起因するかどうかを判断するために、米陸軍参謀本部計画作戦部門 (P&O、GSUSA) の要請に基づいて作成された現象 (空飛ぶ円盤) の評価研究が含まれています。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0225",
+        "assetFileName": "FBI-UAP-D002, FD-1057, Unresolved UAP Report, Colorado Springs, 2022",
+        "release": "6/12/26",
+        "agency": "FBI",
+        "incidentDate": "2022",
+        "incidentLocation": "Colorado Springs, Colorado, U.S.",
+        "documentType": "PDF",
+        "description": "This document is an FBI FD-1057, a form the Federal Bureau of Investigation (FBI) uses to record investigative activity. This FD-1057 contains a first-hand narrative description of unidentified anomalous phenomena (UAP) reported near Colorado Springs, Colorado. The interviewee provided this statement to FBI special agents to aid in producing a digital artistic interpretation of the incident.",
+        "virin": "260508-O-D0360-1098",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D002_FD-1057_Unresolved-UAP-Report_ColoradoSprings_2022.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D002_FD-1057_Unresolved-UAP-Report_ColoradoSprings_2022.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "FBI-UAP-D002、FD-1057、未解決の UAP レポート、コロラドスプリングス、2022",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この文書は、連邦捜査局 (FBI) が捜査活動を記録するために使用する形式である FBI FD-1057 です。この FD-1057 には、コロラド州コロラドスプリングス近郊で報告された未確認異常現象 (UAP) についての直接の物語的記述が含まれています。インタビュー対象者は、事件のデジタル芸術的解釈の作成を支援するために、この声明を FBI 特別捜査官に提供しました。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0226",
+        "assetFileName": "FBI-UAP-D003, Digital Rendering, Unresolved UAP Report, Colorado Springs, 2022",
+        "release": "6/12/26",
+        "agency": "FBI",
+        "incidentDate": "2022",
+        "incidentLocation": "Colorado Springs, Colorado, U.S.",
+        "documentType": "PDF",
+        "description": "This image is an artistic interpretation of a 2022 incident potentially involving unidentified anomalous phenomena (UAP) reported near Colorado Springs, Colorado. This image is derived from the first-hand narrative description contained in “FBI-UAP-D002, FD-1057, Unresolved UAP Report, Colorado Springs, 2022”.",
+        "virin": "260508-O-D0360-1099",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D003_Digital-Rendering_Unresolved-UAP-Report_ColoradoSprings_2022.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D003_Digital-Rendering_Unresolved-UAP-Report_ColoradoSprings_2022.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "FBI-UAP-D003、デジタル レンダリング、未解決の UAP レポート、コロラドスプリングス、2022",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この画像は、コロラド州コロラドスプリングス近郊で報告された、未確認異常現象 (UAP) が関与している可能性がある 2022 年の事件を芸術的に解釈したものです。この画像は、「FBI-UAP-D002、FD-1057、未解決の UAP レポート、コロラドスプリングス、2022」に含まれる直接の説明に由来しています。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0227",
+        "assetFileName": "FBI-UAP-D009, FD-302-67, “Northeastern Orb Sighting,” 2026",
+        "release": "6/12/26",
+        "agency": "FBI",
+        "incidentDate": "2026",
+        "incidentLocation": "Northeastern United States",
+        "documentType": "PDF",
+        "description": "This document is an FBI FD-302, a form the Federal Bureau of Investigation uses to record interviews. This FD-302 records a February 2026 interview with a U.S. person, in which they described incidents potentially involving unidentified anomalous phenomena. The subject matter described in files FBI-UAP-D009 and FBI-UAP-D010 and depicted in the video footage FBI-UAP-PR004 corresponds to reports originating from the same general area in the northeastern United States.",
+        "virin": "260508-O-D0360-1105",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D009_FD-302-67_Northeastern-Orb-Sighting_2026.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D009_FD-302-67_Northeastern-Orb-Sighting_2026.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "FBI-UAP-D009、FD-302-67、「北東のオーブ目撃」、2026",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この文書は FBI FD-302 であり、連邦捜査局がインタビューを記録するために使用する形式です。この FD-302 は、2026 年 2 月に米国人へのインタビューを記録しており、その中で未確認の異常現象が関与する可能性のある事件について説明しています。ファイル FBI-UAP-D009 および FBI-UAP-D010 に記述され、ビデオ映像 FBI-UAP-PR004 に描かれている主題は、米国北東部の同じ一般地域から発信された報告に対応しています。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0228",
+        "assetFileName": "FBI-UAP-D010, FD-302-71, “Northeastern Orb Sighting,” 2026",
+        "release": "6/12/26",
+        "agency": "FBI",
+        "incidentDate": "2026",
+        "incidentLocation": "Northeastern United States",
+        "documentType": "PDF",
+        "description": "This document is an FBI FD-302, a form the Federal Bureau of Investigation uses to record interviews. This FD-302 records an interview with a U.S. person regarding their first-hand account of an incident potentially involving unidentified anomalous phenomena. The subject matter described in files FBI-UAP-D009 and FBI-UAP-D010 and depicted in the video footage FBI-UAP-PR004 corresponds to reports originating from the same general area in the northeastern United States.",
+        "virin": "260508-O-D0360-1106",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D010_FD-302-71_Northeastern-Orb-Sighting_2026.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D010_FD-302-71_Northeastern-Orb-Sighting_2026.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "FBI-UAP-D010、FD-302-71、「北東オーブ目撃」、2026",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この文書は FBI FD-302 であり、連邦捜査局がインタビューを記録するために使用する形式です。この FD-302 は、未確認の異常現象が関与している可能性がある事件の直接の説明に関する米国人へのインタビューを記録しています。ファイル FBI-UAP-D009 および FBI-UAP-D010 に記述され、ビデオ映像 FBI-UAP-PR004 に描かれている主題は、米国北東部の同じ一般地域から発信された報告に対応しています。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0229",
+        "assetFileName": "FBI-UAP-D011, D/FBI Correspondence Referral, 1949",
+        "release": "6/12/26",
+        "agency": "FBI",
+        "incidentDate": "1949",
+        "incidentLocation": "",
+        "documentType": "PDF",
+        "description": "This collection of documents contains correspondence between the Director of the Federal Bureau of Investigation (FBI), J. Edgar Hoover, and Rev. Charles Barnes concerning Barnes’ account of an incident potentially involving unidentified anomalous phenomena (UAP). Rev. Barnes described observing four beams of light “converging in the Cascade Mountains,” at an altitude of approximately 10,000 feet, with a “great explosion” visible at the convergence point of those beams for at least ten minutes. Director Hoover replied to Rev. Barnes thanking him for his letter and informing him that he had forwarded it to the Atomic Energy Commission (AEC). Director Hoover conveyed to the AEC that Rev. Barnes believed that the event may relate to a military or scientific experiment within the commission’s purview.",
+        "virin": "260508-O-D0360-1107",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D011_DFBI-Correspondence-Referral_1949.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D011_DFBI-Correspondence-Referral_1949.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "FBI-UAP-D011、D/FBI 通信照会、1949 年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この文書群には、未確認異常現象 (UAP) が関与する可能性のある事件に関するバーンズ氏の説明に関する、連邦捜査局 (FBI) 長官 J. エドガー フーバーとチャールズ バーンズ牧師との間の書簡が含まれています。バーンズ牧師は、高度約1万フィートの「カスケード山脈で収束する」4本の光線を観察し、それらの光線の収束点で「大爆発」が少なくとも10分間見られたと説明した。フーバー所長はバーンズ牧師に返信し、手紙に感謝し、それを原子力委員会（AEC）に転送したことを伝えた。フーバー長官は、バーンズ牧師がこの出来事が委員会の管轄範囲内の軍事または科学実験に関連している可能性があると信じていることをAECに伝えた。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0230",
+        "assetFileName": "FBI-UAP-PR003, “Orbs Over the Pond,” 2024",
+        "release": "6/12/26",
+        "agency": "FBI",
+        "incidentDate": "October, 2024",
+        "incidentLocation": "Northeastern United States",
+        "documentType": "VID",
+        "description": "In October 2024, at approximately 1851 local time in the northeastern United States, an eyewitness observed a light source below the horizon, hovering above a pond at an estimated distance of 2,700 feet. The luminous object resembled a “plasma-like sphere” intermittently changing shape and luminosity. At times, the primary light source appeared to separate into smaller luminous points. A luminous point below the primary source hovered just above the water and did not appear consistent with a surface reflection. The object remained generally stationary for approximately 45 minutes before disappearing. The eyewitness did not hear any sound from the objects. This video was captured by a private citizen on an iPhone and subsequently analyzed and authenticated by the U.S. Government. To protect the individual’s privacy, the footage has been cropped. Apart from this privacy-protective measure, no edits, enhancements, or alterations have been made to the visual content. The description above is derived from statements provided to the Federal Bureau of Investigation (FBI) by an eyewitness to the event. The FBI assesses the individual who reported this event as highly credible. The subject matter described in files FBI-UAP-D004 through FBI-UAP-D008 and depicted in the video footage FBI-UAP-PR001 through FBI-UAP-PR003 corresponds to reports originating from the same general area in the northeastern United States.",
+        "virin": "",
+        "downloadUrl": "",
+        "imageUrl": "",
+        "videoUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1010267"
+      },
+      "ja": {
+        "assetFileNameJa": "FBI-UAP-PR003、「池の上のオーブ」、2024",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "2024年10月、米国北東部の現地時間約1851年に、目撃者は地平線の下、推定距離2,700フィートの池の上に浮かぶ光源を観察した。この発光物体は、形状と明るさが断続的に変化する「プラズマのような球体」に似ていました。時々、一次光源がより小さな発光点に分離しているように見えました。主光源の下の発光点は水面の真上に浮かんでおり、表面の反射と一致していないように見えました。物体はほぼ45分間静止したままでしたが、その後消滅しました。目撃者は物体から何も音を聞きませんでした。このビデオは民間人が iPhone で撮影したもので、その後米国政府によって分析および認証されました。個人のプライバシーを保護するため、映像はトリミングされています。このプライバシー保護措置以外には、ビジュアル コンテンツに対して編集、強化、または変更は行われていません。上記の説明は、事件の目撃者が連邦捜査局 (FBI) に提供した陳述に基づいています。 FBI は、この事件を報告した人物の信頼性が高いと評価しています。ファイル FBI-UAP-D004 から FBI-UAP-D008 に記述され、ビデオ映像 FBI-UAP-PR001 から FBI-UAP-PR003 に描かれている主題は、米国北東部の同じ一般地域から発信された報告に対応しています。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0231",
+        "assetFileName": "FBI-UAP-PR004, “Northeastern Orb Sighting,” 2025",
+        "release": "6/12/26",
+        "agency": "FBI",
+        "incidentDate": "July, 2025",
+        "incidentLocation": "Northeastern United States",
+        "documentType": "VID",
+        "description": "In July 2025, at approximately 2100 local time in the northeastern United States, an eyewitness observed an intense bright light in their backyard as they parked their car upon returning home from work. The light was hovering approximately 25 feet off the ground, below a tree line near the center of their backyard, at an estimated distance of 90 feet. The eyewitness exited their vehicle briefly before retrieving their phone to record the event. The spouse of the eyewitness came outside to assess the situation. The spouse also witnessed the light, describing it as a “brilliant red sphere” about one meter in diameter. The center of the red sphere appeared to be a white plasma “sun” about the size of a basketball. The orb slowly rose and moved to the left, and both eyewitnesses observed a second, identical orb, hovering above the other orb. The eyewitness then began recording the event using an iPhone 14 Pro Max, capturing the footage depicted in this video. As the eyewitness began recording, the orbs moved westward together above a nearby tree line. The witnesses described the orbs’ motion as silent and smooth, and as moving in tandem as though they were flying in formation or tethered together. As the orbs moved out of sight, both eyewitnesses saw them appear to merge. The eyewitnesses estimated that the orbs moved from their initial position before disappearing from view at an estimated distance of 75 yards. This observation occurred within 25 miles of the “Triangle Orbs,” “Red Orb Rotation,” and “Orbs Over the Pond,” sightings at a location well known to them, which is sparsely populated. The description above is derived from statements provided to the Federal Bureau of Investigation (FBI) by eyewitnesses to the event. The FBI assesses the individuals who reported this event as credible. The subject matter described in files FBI-UAP-D009 through FBI-UAP-D010 and depicted in the video footage FBI-UAP-PR004 corresponds to reports originating from the same general area in the northeastern United States.",
+        "virin": "",
+        "downloadUrl": "",
+        "imageUrl": "",
+        "videoUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1010269"
+      },
+      "ja": {
+        "assetFileNameJa": "FBI-UAP-PR004、「北東のオーブ目撃」、2025 年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "2025年7月、米国北東部の現地時間約21時、目撃者は仕事から帰宅して車を駐車した際、裏庭で強烈な明るい光を目撃した。光は地面から約25フィート、裏庭の中心近くの樹木限界の下、推定距離90フィートのところで浮かんでいた。目撃者は車から少し降りてから、携帯電話を取り出して出来事を記録しました。目撃者の配偶者が状況を確認するために外に出た。配偶者もその光を目撃し、それを直径約1メートルの「鮮やかな赤い球体」だったと説明した。赤い球体の中心は、バスケットボールほどの大きさの白いプラズマ「太陽」のように見えました。球体はゆっくりと上昇して左に移動し、両方の目撃者は、2 番目の同一の球体がもう一方の球体の上に浮かんでいるのを観察しました。その後、目撃者はiPhone 14 Pro Maxを使用してイベントの録画を開始し、このビデオに描かれている映像をキャプチャしました。目撃者が記録を開始すると、球体は近くの森林限界の上を西に向かって一斉に移動した。目撃者らは、球体の動きは静かで滑らかで、まるで編隊を組んで飛んでいるか、つながれているかのように連動して動いていたと述べた。球体が見えなくなると、両方の目撃者はそれらが合体しているように見えるのを目撃しました。目撃者らは、球体が最初の位置から移動し、推定距離75ヤードで視界から消えたと推定した。この観察は「トライアングルオーブ」、「レッドオーブローテーション」、「池の上のオーブ」から40マイル以内で発生しており、彼らにとってはよく知られている人口の少ない場所での目撃である。上記の説明は、事件の目撃者によって連邦捜査局 (FBI) に提供された陳述に基づいています。 FBI は、この事件を報告した個人を信頼できると評価しています。ファイル FBI-UAP-D009 から FBI-UAP-D010 に記述され、ビデオ映像 FBI-UAP-PR004 に描かれている主題は、米国北東部の同じ一般地域から発信された報告に対応しています。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0232",
+        "assetFileName": "ICA-UAP-D001, Analysis: Colorado Springs UAP Incident, 2022",
+        "release": "6/12/26",
+        "agency": "Intelligence Community Agency",
+        "incidentDate": "2022",
+        "incidentLocation": "Colorado Springs, Colorado, U.S.",
+        "documentType": "PDF",
+        "description": "This document contains analysis by an All-domain Anomaly Resolution Office (AARO) Intelligence Community (IC) partner to account for a 2022 incident involving an airborne object near Colorado Springs, Colorado. U.S. military service members reported the incident to AARO in 2023. AARO’s IC partner assessed, with low confidence, that the reported phenomenon, which observers characterized as resembling an “angular, non-symmetrical potato,” was attributable to sunlight backscattering, where sunlight reflecting from mountain snow cover illuminated the underside of low-altitude clouds. This low-confidence assessment contributes to AARO’s consideration of the incident, which remains unresolved as of June 2026.",
+        "virin": "260508-O-D0360-1119",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/ICA-UAP-D001_Analysis_Colorado-Springs-UAP-Incident.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/ICA-UAP-D001_Analysis_Colorado-Springs-UAP-Incident.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "ICA-UAP-D001、分析: コロラドスプリングス UAP インシデント、2022 年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この文書には、コロラド州コロラドスプリングス近郊で発生した空中物体に関する 2022 年の事件を説明するための、全ドメイン異常解決局 (AARO) インテリジェンス コミュニティ (IC) パートナーによる分析が含まれています。米軍関係者は2023年にこの事件をAAROに報告した。AAROのICパートナーは、観測者が「角張った非対称のジャガイモ」に似ていると特徴付けた報告された現象は、山の積雪から反射した太陽光が低高度の雲の下面を照らす太陽光後方散乱に起因すると低い信頼性で評価した。この信頼度の低い評価は、2026 年 6 月の時点でも未解決のままであるこの事件についての AARO の検討に貢献します。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0233",
+        "assetFileName": "CIA-UAP-002, Scientific Advisory Panel on Unidentified Flying Objects, Report, 1952-1953",
+        "release": "6/12/26",
+        "agency": "CIA",
+        "incidentDate": "1952-1953",
+        "incidentLocation": "",
+        "documentType": "PDF",
+        "description": "This file contains correspondence and reports dated 1952–1953 from the Scientific Advisory Panel on Unidentified Flying Objects, convened by the CIA’s Office of Scientific Intelligence. The panel’s primary conclusion was that “flying saucers” did not pose a direct physical threat to the national security of the United States. The panel found no evidence that these phenomena were attributable to hostile foreign artifacts or indicated a need to revise existing scientific concepts. However, the panel identified a significant indirect threat stemming from the public’s fascination with the subject. The panel concluded that the high volume of reports, encouraged by a \"sensationalist press,\" could overwhelm and clog vital intelligence and communication channels, potentially distracting from genuine threats. Furthermore, they warned that a “morbid national psychology” could be exploited by adversaries to incite “hysterical behavior and harmful distrust of duly constituted authority.” To mitigate these risks, the panel recommended an official policy of “debunking” to “strip the UFO subject of its mystery,” alongside a training initiative for military personnel to better recognize and filter out misidentified objects, thereby reducing communication “noise” and allowing the national security apparatus to focus on more \"legitimate defense concerns.\"",
+        "virin": "260508-O-D0360-1079",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-002_Scientific-Advisory-Panel-on-Unidentified-Flying-Objects_Report_1952-1953.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-002_Scientific-Advisory-Panel-on-Unidentified-Flying-Objects_Report_1952-1953.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "CIA-UAP-002、未確認飛行物体に関する科学諮問委員会、報告書、1952-1953",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "このファイルには、CIA 科学情報局が招集した未確認飛行物体に関する科学諮問委員会からの 1952 年から 1953 年の日付の通信と報告書が含まれています。パネルの主な結論は、「空飛ぶ円盤」は米国の国家安全保障に直接の物理的脅威をもたらさないというものだった。委員会は、これらの現象が敵対的な外国の人工物に起因するという証拠は見つからず、既存の科学的概念を修正する必要性を示していませんでした。しかし、委員会は、この主題に対する国民の関心から生じる重大な間接的な脅威を特定しました。委員会は、「センセーショナリズム的な報道機関」によって奨励された大量の報道は、重要な情報とコミュニケーションチャネルを圧倒し、詰まり、真の脅威から目をそらす可能性があると結論付けた。さらに、「病的な国民心理」が敵対者によって悪用され、「ヒステリックな行動や、正当に構成された権威に対する有害な不信感」を煽る可能性があると警告した。これらのリスクを軽減するために、委員会は、「UFOという主題からその謎を取り除く」ための「誤りを暴く」公式政策と、誤認された物体をよりよく認識して除外するための軍関係者向けの訓練イニシアチブを推奨し、それによって通信の「ノイズ」を減らし、国家安全保障機関がより「正当な防衛上の懸念」に集中できるようにした。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0234",
+        "assetFileName": "CIA-UAP-003, The Central Intelligence Agency and Overhead Reconnaissance; The U-2 and OXCART Programs, 1954-1974",
+        "release": "6/12/26",
+        "agency": "CIA",
+        "incidentDate": "1954-1974",
+        "incidentLocation": "",
+        "documentType": "PDF",
+        "description": "This CIA History Staff document chronicles the complete history of the U-2 and OXCART (A-12) high-altitude reconnaissance aircraft programs from 1954 to 1974, detailing their development, operations over the Soviet Union and other targets worldwide, the famous downing of Francis Gary Powers in 1960, organizational reforms following that incident, and the eventual transfer of operations from CIA to Air Force control. A more redacted version of this document has been available on CIA's public website.",
+        "virin": "260508-O-D0360-1080",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-003-THE_CENTRAL_INTELLIGENCE_AGENCY_AND_OVERHEAD_RECONNAISSANCE-THE_U-2_AND_OXCART_PROGRAMS_1954-1974.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-003-THE_CENTRAL_INTELLIGENCE_AGENCY_AND_OVERHEAD_RECONNAISSANCE-THE_U-2_AND_OXCART_PROGRAMS_1954-1974.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "CIA-UAP-003、中央情報局と上空偵察。 U-2 および OXCART プログラム、1954 ～ 1974 年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この CIA 歴史スタッフ文書は、1954 年から 1974 年までの U-2 および OXCART (A-12) 高高度偵察機プログラムの完全な歴史を記録しており、その開発、ソ連および世界中の他の目標上での作戦、1960 年の有名なフランシス・ゲイリー・パワーズ撃墜、その事件後の組織改革、そして最終的には CIA から空軍管理への作戦の移管を詳述している。この文書のさらに編集されたバージョンが CIA の公開 Web サイトで入手可能です。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0235",
+        "assetFileName": "CIA-UAP-004, CASE 17708 (CLOSED) and DR. Leon Davidson",
+        "release": "6/12/26",
+        "agency": "CIA",
+        "incidentDate": "1958",
+        "incidentLocation": "",
+        "documentType": "PDF",
+        "description": "This 1958 CIA memorandum discussing a phone conversation with Dr. Leon Davidson regarding concerns about a destroyed \"space message and its transmitter.\" A redacted version of this memorandum has been available on CIA's public website.",
+        "virin": "260508-O-D0360-1081",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-004-CASE_17708_CLOSED_AND_DR_LEON_DAVIDSON.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-004-CASE_17708_CLOSED_AND_DR_LEON_DAVIDSON.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "CIA-UAP-004、ケース 17708 (終了) および DR.レオン・デヴィッドソン",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この 1958 年の CIA 覚書は、破壊された「宇宙メッセージとその送信機」に関する懸念に関して、レオン・デイビッドソン博士との電話での会話について論じています。この覚書の編集版は、CIA の公開 Web サイトで入手できます。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0236",
+        "assetFileName": "CIA-UAP-005, German Scientist's Article on 'Flying Discs'",
+        "release": "6/12/26",
+        "agency": "CIA",
+        "incidentDate": "1950",
+        "incidentLocation": "",
+        "documentType": "PDF",
+        "description": "This 1950 CIA Information Report from Chile discusses a German scientist's article theorizing that \"Flying Discs\" could be explained as a new type of aircraft based on aerodynamic principles developed in German research facilities during and after WWI, using rotating cylinders or gas-turbines to create lift through boundary layer manipulation, rather than conventional wings. A redacted version of this report has been available on CIA's public website.",
+        "virin": "260508-O-D0360-1082",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-005-GERMAN_SCIENTISTS_ ARTICLE_ON_FLYING_DISCS.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-005-GERMAN_SCIENTISTS_ ARTICLE_ON_FLYING_DISCS.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "CIA-UAP-005、「フライングディスク」に関するドイツの科学者の記事",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "このチリからの1950年のCIA情報報告書では、「フライングディスク」は、第一次世界大戦中および戦後にドイツの研究施設で開発された空気力学的原理に基づいた、従来の翼ではなく境界層の操作によって揚力を生み出すために回転シリンダーまたはガスタービンを使用する新しいタイプの航空機として説明できると理論化したドイツの科学者の論文について議論しています。この報告書の編集版は CIA の公開 Web サイトで入手できます。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0237",
+        "assetFileName": "CIA-UAP-006, Sighting Of Unconventional Aircraft",
+        "release": "6/12/26",
+        "agency": "CIA",
+        "incidentDate": "November, 1955",
+        "incidentLocation": "Baku, Azerbaijan",
+        "documentType": "PDF",
+        "description": "This CIA information report from November 1955 describes a US national's eyewitness account of triangular aircraft with wing lights launch at a steep angle from an airfield near Baku, Azerbaijan on October 4, 1955. A redacted version of this report has been available on CIA's public website.",
+        "virin": "260508-O-D0360-1083",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-006_Sighting_of_Unconventional_Aircraft.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-006_Sighting_of_Unconventional_Aircraft.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "CIA-UAP-006、型破りな航空機の目撃",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この 1955 年 11 月の CIA 情報報告書には、1955 年 10 月 4 日にアゼルバイジャンのバクー近郊の飛行場から翼灯を備えた三角形の航空機が急な角度で離陸した米国人の目撃証言が記載されています。この報告書の編集版は CIA の公開ウェブサイトで入手可能です。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0238",
+        "assetFileName": "CIA-UAP-007, Current Status Of Unidentified Flying Objects (UFO) Project.",
+        "release": "6/12/26",
+        "agency": "CIA",
+        "incidentDate": "December, 1953",
+        "incidentLocation": "",
+        "documentType": "PDF",
+        "description": "This December 1953 memorandum provides a status update on the Air Force's UFO project activities, including ongoing intelligence operations, equipment procurement for photographing UFOs, and Canada’s establishment of a \"laboratory\" for recording observable phenomena. A more redacted version of this memorandum has been available on CIA's public website.",
+        "virin": "260508-O-D0360-1084",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-007_Current_Status_of_Unidentified_Flying_Objects_UFO_Project.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-007_Current_Status_of_Unidentified_Flying_Objects_UFO_Project.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "CIA-UAP-007、未確認飛行物体 (UFO) プロジェクトの現状。",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この 1953 年 12 月の覚書には、進行中の諜報活動、UFO を撮影するための機材調達、観察可能な現象を記録するためのカナダの「研究所」の設立など、空軍の UFO プロジェクト活動に関する最新の状況が記載されています。この覚書のさらに編集されたバージョンは、CIA の公開 Web サイトで入手できます。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0239",
+        "assetFileName": "CIA-UAP-008, Speculative Paper By N Kardashev and A Sakharov on Charged Mass in Space at Conference on Origins Of Life, Armenia, 6-8 September 1971/Low Scientific Level Of Other Soviet Papers",
+        "release": "6/12/26",
+        "agency": "CIA",
+        "incidentDate": "1972",
+        "incidentLocation": "",
+        "documentType": "PDF",
+        "description": "This 1972 CIA Intelligence Information Report summarizes a US attendee's observations of a speculative paper regarding charged mass behavior in space presented by Soviet scientists N.S. Kardashev and A. Sakharov at a conference in Armenia. A more redacted version of this report has been available on CIA's public website.",
+        "virin": "260508-O-D0360-1085",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-008_SPECULATIVE_PAPER_BY_N_KARDASHEV_AND_A_SAKHAROV.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-008_SPECULATIVE_PAPER_BY_N_KARDASHEV_AND_A_SAKHAROV.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "CIA-UAP-008、アルメニアの生命の起源に関する会議での宇宙の荷電質量に関するN・カルダシェフとA・サハロフによる推測論文、1971年9月6～8日/他のソビエト論文の科学レベルは低い",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この 1972 年の CIA 諜報情報報告書は、ソ連の科学者 N.S. が提出した宇宙における帯電集団の行動に関する推測論文に対する米国出席者の観察を要約したものです。アルメニアでの会議に出席したカルダシェフ氏とA.サハロフ氏。この報告書のさらに編集されたバージョンは、CIA の公開 Web サイトで入手できます。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0240",
+        "assetFileName": "CIA-UAP-009, Unknown Flying Objects Observed Over Budapest",
+        "release": "6/12/26",
+        "agency": "CIA",
+        "incidentDate": "1957",
+        "incidentLocation": "Budapest, Hungary",
+        "documentType": "PDF",
+        "description": "This is a 1957 CIA Information Report regarding UFO sightings over Budapest. A more redacted version of this report has been available on CIA's public website.",
+        "virin": "260508-O-D0360-1086",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-009-UNKNOWN-FLYING_OBJECTS_OBERVED_OVER_BUDAPEST.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-009-UNKNOWN-FLYING_OBJECTS_OBERVED_OVER_BUDAPEST.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "CIA-UAP-009、ブダペスト上空で未知の飛行物体を観測",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "これはブダペスト上空でのUFO目撃に関する1957年のCIA情報報告書です。この報告書のさらに編集されたバージョンは、CIA の公開 Web サイトで入手できます。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0241",
+        "assetFileName": "CIA-UAP-010, Report on Conversations with Soviet Scientists on Subject of Unidentified Flying Objects in the USSR",
+        "release": "6/12/26",
+        "agency": "CIA",
+        "incidentDate": "August, 1967",
+        "incidentLocation": "USSR",
+        "documentType": "PDF",
+        "description": "This CIA document from August 1967 reports on conversations about UFO sightings with Soviet scientists during a US astrophysicist's trip to the USSR.",
+        "virin": "260508-O-D0360-1087",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-010_REPORT_ON_CONVERSATIONS_WITH_SOVIET_SCIENTISTS_ON_SUBJECT_OF_UNIDENTIFIED_FLYING_OBJECTS_IS_THE_USSR.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-010_REPORT_ON_CONVERSATIONS_WITH_SOVIET_SCIENTISTS_ON_SUBJECT_OF_UNIDENTIFIED_FLYING_OBJECTS_IS_THE_USSR.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "CIA-UAP-010、ソ連の未確認飛行物体をテーマとしたソ連の科学者との会話に関する報告書",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "1967年8月のこのCIA文書は、米国の天体物理学者のソ連訪問中にソ連の科学者とUFO目撃についての会話を報告している。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0242",
+        "assetFileName": "CIA-UAP-011, The Sary Shagan Weapons Testing Range",
+        "release": "6/12/26",
+        "agency": "CIA",
+        "incidentDate": "December, 1973",
+        "incidentLocation": "USSR",
+        "documentType": "PDF",
+        "description": "This CIA Intelligence Information Report from December 1973 provides information on the Soviet Sary Shagan Weapons Testing Range, including details about its facilities, weapons systems (System-75 SA-2 and System-300/Aldan warheads), rumored laser weapon research, and unidentified aerial phenomenon observed at the site. A more redacted version of this report has been available on CIA's public website.",
+        "virin": "260508-O-D0360-1088",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-011-The_Sary_Shagan_Weapons_Testing_Range.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-011-The_Sary_Shagan_Weapons_Testing_Range.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "CIA-UAP-011、サリー・シャガン兵器実験場",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "1973 年 12 月のこの CIA 諜報情報報告書には、ソビエトのサリー・シャガン兵器実験場に関する情報が記載されており、その施設、兵器システム (システム-75 SA-2 およびシステム-300/アルダン弾頭)、噂のレーザー兵器研究、および現場で観察された未確認の航空現象に関する詳細が含まれています。この報告書のさらに編集されたバージョンは、CIA の公開 Web サイトで入手できます。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0243",
+        "assetFileName": "CIA-UAP-012, Combating Fatigue In Crewmembers",
+        "release": "6/12/26",
+        "agency": "CIA",
+        "incidentDate": "November, 1976",
+        "incidentLocation": "",
+        "documentType": "PDF",
+        "description": "This November 1976 CIA Foreign Intelligence Information Report summarizes Soviet Aeroflot's involvement in aerospace medical research, including their methods for combating crew fatigue through physical conditioning, automated biological testing equipment that measures vital signs in 1-3 minutes, and discussions about UFO phenomena with a Soviet radiation biologist. A more redacted version of this report has been available on CIA's public website.",
+        "virin": "260508-O-D0360-1089",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-012-Combatting_Fatigue_in_Crewmembers.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-012-Combatting_Fatigue_in_Crewmembers.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "CIA-UAP-012、乗組員の疲労との戦い",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この1976年11月のCIA対外諜報情報報告書は、体調調整を通じて乗組員の疲労に対処する方法、バイタルサインを1～3分で測定する自動生物学的検査装置、ソ連の放射線生物学者とのUFO現象についての議論など、航空宇宙医学研究に対するソ連のアエロフロート社の関与を要約している。この報告書のさらに編集されたバージョンは、CIA の公開 Web サイトで入手できます。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0244",
+        "assetFileName": "CIA-UAP-013, Report of Unusual Flying Object Sightings and Attendant Scientific Activity",
+        "release": "6/12/26",
+        "agency": "CIA",
+        "incidentDate": "1956",
+        "incidentLocation": "Budapest, Hungary",
+        "documentType": "PDF",
+        "description": "This 1956 CIA Information Report describes flying object sightings reported by a Budapest-based sub-source, including a sketch showing the objects' suspected formation and flight path between Budapest and Moscow. A more redacted version of this report has been available on CIA's public website.",
+        "virin": "260508-O-D0360-1090",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-013-Report_of_Unusual_Flying_Object_Sightings_and_Attendant_Scientific_Activity.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-013-Report_of_Unusual_Flying_Object_Sightings_and_Attendant_Scientific_Activity.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "CIA-UAP-013、異常飛行物体の目撃とそれに伴う科学活動の報告",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この 1956 年の CIA 情報報告書は、ブダペストを拠点とするサブ情報源によって報告された飛行物体の目撃情報について説明しており、物体の疑わしい形成とブダペストとモスクワ間の飛行経路を示すスケッチも含まれています。この報告書のさらに編集されたバージョンは、CIA の公開 Web サイトで入手できます。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0245",
+        "assetFileName": "CIA-UAP-014, British activity in the Field of \"Unidentified Flying Objects\"",
+        "release": "6/12/26",
+        "agency": "CIA",
+        "incidentDate": "December, 1952",
+        "incidentLocation": "",
+        "documentType": "PDF",
+        "description": "A December 1952 Memo on the activities the British are taking to identify UFOs. The memo references a UFO sighting at an RAF field seen by high officials and RAF pilots. A more redacted version of the memo has been available on CIA's public website.",
+        "virin": "260508-O-D0360-1091",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-014_British_Activity_in_the_Field_of_Unidentified_Flying_Objects.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-014_British_Activity_in_the_Field_of_Unidentified_Flying_Objects.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "CIA-UAP-014、「未確認飛行物体」分野におけるイギリスの活動",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "イギリスがUFOを識別するために行っている活動に関する1952年12月のメモ。このメモは、高官とイギリス空軍のパイロットが目撃したイギリス空軍の飛行場でのUFO目撃に言及している。このメモのさらに編集されたバージョンは、CIA の公開 Web サイトで入手可能です。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0246",
+        "assetFileName": "CIA-UAP-015, Project Blue Book Special Report No. 14 (Analysis of Reports of Unidentified Aerial Objects)",
+        "release": "6/12/26",
+        "agency": "CIA",
+        "incidentDate": "",
+        "incidentLocation": "",
+        "documentType": "PDF",
+        "description": "This is the USAF Project Blue Book with a CIA cover sheet stating the document is \"Official Record Copy.\" With the exception of the handwritten note on the first page, the content of this document has been available on CIA's public website.",
+        "virin": "260508-O-D0360-1092",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-015-Project_Blue_Book_Special_Report_No_14.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-015-Project_Blue_Book_Special_Report_No_14.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "CIA-UAP-015、プロジェクト ブルーブック特別レポート No. 14 (未確認飛行物体に関するレポートの分析)",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "これは USAF プロジェクト ブルー ブックで、この文書は「公式記録コピー」であると記載された CIA の表紙が付いています。最初のページの手書きのメモを除いて、この文書の内容は CIA の公開 Web サイトで入手できます。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0247",
+        "assetFileName": "CIA-UAP-016, Sightings of Unidentified Flying Objects in Ladakh, Nepal, Sikkim and Bhutan",
+        "release": "6/12/26",
+        "agency": "CIA",
+        "incidentDate": "1968",
+        "incidentLocation": "Ladakh, Nepal | Sikkim, India | Bhutam",
+        "documentType": "PDF",
+        "description": "A 1968 report about UFO sightings in Ladakh, Nepal, Sikkim and Bhutan. Seven UFO sightings are listed that took place between 19 Feb. to 25 Mar. 1968. A more redacted version of the report has been available on CIA's public website.",
+        "virin": "260508-O-D0360-1093",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-016-Sightings_of_Unidentified_Flying_Ojbects_in_Ladakh_Nepal_Sikkim_and_Bhutan.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-016-Sightings_of_Unidentified_Flying_Ojbects_in_Ladakh_Nepal_Sikkim_and_Bhutan.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "CIA-UAP-016、ラダック、ネパール、シッキム、ブータンでの未確認飛行物体の目撃情報",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "ラダック、ネパール、シッキム、ブータンでのUFO目撃に関する1968年の報告書。 1968 年 2 月 19 日から 3 月 25 日までの間に起きた 7 件の UFO 目撃情報がリストされています。報告書のより編集されたバージョンは、CIA の公開 Web サイトで入手できます。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0248",
+        "assetFileName": "CIA-UAP-018, Report of Unusual Flying Object Sightings and Attendant Scientific Activity",
+        "release": "6/12/26",
+        "agency": "CIA",
+        "incidentDate": "1955",
+        "incidentLocation": "Hungary",
+        "documentType": "PDF",
+        "description": "A 1955 report on a UFO sighting in Hungary. The information came from a letter between Hungarian relatives, living in the USA and Budapest. A more redacted version of the report has been available on CIA's public website.",
+        "virin": "260508-O-D0360-1095",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-018_Report_of_Unusual_Flying_Object_Sightings_and_Attendant_Scientific_Activity.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-018_Report_of_Unusual_Flying_Object_Sightings_and_Attendant_Scientific_Activity.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "CIA-UAP-018、異常飛行物体の目撃とそれに伴う科学活動の報告",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "ハンガリーでのUFO目撃に関する1955年の報告。この情報は、米国とブダペストに住むハンガリー人の親戚との間の手紙から得られた。この報告書のさらに編集されたバージョンは、CIA の公開 Web サイトで入手可能です。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0249",
+        "assetFileName": "CIA-UAP-019, Australian Dept of Defense Scientific and Intel Aspects of the UFO Problem",
+        "release": "6/12/26",
+        "agency": "CIA",
+        "incidentDate": "1971",
+        "incidentLocation": "Australia",
+        "documentType": "PDF",
+        "description": "Dated to 1971, an Australian review of the USAF Project Blue Book. This document was released by the National Archives of Australia.",
+        "virin": "260508-O-D0360-1096",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-019-Australian_Dept_of_Defense_Scientific_and_Intel_Aspects_of_the_UFO_Problem.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-019-Australian_Dept_of_Defense_Scientific_and_Intel_Aspects_of_the_UFO_Problem.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "CIA-UAP-019、オーストラリア国防総省、UFO 問題の科学的およびインテルの側面",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "1971 年のオーストラリア空軍プロジェクト ブルーブックのレビュー。この文書はオーストラリア国立公文書館によって公開されました。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0250",
+        "assetFileName": "DOW-UAP-D077, AARO Unresolved Case Analysis Update: Western United States Event",
+        "release": "6/12/26",
+        "agency": "Department of War",
+        "incidentDate": "2023",
+        "incidentLocation": "Western United States",
+        "documentType": "PDF",
+        "description": "This memorandum summarizes the All-domain Anomaly Resolution Office’s (AARO) ongoing analysis of a reported incident near a sensitive national security site in the western United States involving unidentified anomalous phenomena (UAP) over a period of two days in 2023. As of June 2026, the case remains unresolved.",
+        "virin": "260508-D-D0360-1059",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/DOW-UAP-D077_Unresolved-Case-Analysis-Update_Western-United-States-Event.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/DOW-UAP-D077_Unresolved-Case-Analysis-Update_Western-United-States-Event.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-D077、AARO 未解決事件分析の最新情報: 米国西部のイベント",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この覚書は、2023 年の 2 日間に未確認の異常現象 (UAP) を伴う、米国西部の国家安全保障上の重要な拠点付近で報告された事件について、全ドメイン異常解決局 (AARO) が継続的に行っている分析を要約したものです。2026 年 6 月の時点で、この事件は未解決のままです。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0251",
+        "assetFileName": "DOW-UAP-D078, Notional Map: Western United States Event",
+        "release": "6/12/26",
+        "agency": "Department of War",
+        "incidentDate": "October, 2023",
+        "incidentLocation": "Westen United States",
+        "documentType": "PDF",
+        "description": "This image is a notional representation of four incidents reportedly involving unidentified anomalous phenomena in the western United States, as seen from above. This illustration depicts multiple incidents reported by U.S. federal law enforcement special agents over a period of several days in October 2023.",
+        "virin": "260508-D-D0360-1060",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/DOW-UAP-D078_Notional-Map_Western-United-States-Event.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/DOW-UAP-D078_Notional-Map_Western-United-States-Event.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-D078、概念地図: 米国西部イベント",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この画像は、米国西部で未確認の異常現象が関与していると伝えられている 4 件の事件を上から見た概念的な表現です。この図は、2023 年 10 月の数日間に米国連邦法執行特別捜査官によって報告された複数の事件を示しています。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0252",
+        "assetFileName": "DOW-UAP-D079, Narrative Statement 1, Western United States Event, 2023",
+        "release": "6/12/26",
+        "agency": "Department of War",
+        "incidentDate": "October, 2023",
+        "incidentLocation": "Westen United States",
+        "documentType": "PDF",
+        "description": "This memorandum presents the first-hand narrative from Witness 1 provided to the All-domain Anomaly Resolution Office (AARO). Witness 1 was one of several United States (U.S.) federal law enforcement special agents who reported observing unidentified anomalous phenomena (UAP) over a period of two days in October 2023 in the western United States.",
+        "virin": "260508-D-D0360-1061",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/DoW-UAP-D079_Narrative-1_Western-US-Event.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/DoW-UAP-D079_Narrative-1_Western-US-Event.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-D079、ナラティブ ステートメント 1、米国西部イベント、2023 年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この覚書は、全ドメイン異常解決局 (AARO) に提供された証人 1 からの直接の話を示しています。目撃者 1 は、2023 年 10 月に米国西部で 2 日間にわたって未確認の異常現象 (UAP) を観察したと報告した数人の米国連邦法執行特別捜査員のうちの 1 人でした。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0253",
+        "assetFileName": "DOW-UAP-D080, Narrative Statement 2, Western United States Event, 2023",
+        "release": "6/12/26",
+        "agency": "Department of War",
+        "incidentDate": "October, 2023",
+        "incidentLocation": "Westen United States",
+        "documentType": "PDF",
+        "description": "This memorandum presents the first-hand narrative from Witness 2 provided to the All-domain Anomaly Resolution Office (AARO). Witness 2 was one of several United States (U.S.) federal law enforcement special agents who reported observing unidentified anomalous phenomena (UAP) over a period of two days in October 2023 in the western United States.",
+        "virin": "260508-D-D0360-1062",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/DoW-UAP-D080_Narrative-2_Western-US-Event.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/DoW-UAP-D080_Narrative-2_Western-US-Event.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-D080、ナラティブ ステートメント 2、米国西部イベント、2023 年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この覚書は、全ドメイン異常解決局 (AARO) に提供された証人 2 からの直接の話を示しています。証人 2 は、2023 年 10 月に米国西部で 2 日間にわたって未確認の異常現象 (UAP) を観察したと報告した数人の米国連邦法執行特別捜査官のうちの 1 人でした。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0254",
+        "assetFileName": "DOW-UAP-D081, Narrative Statement 3, Western United States Event, 2023",
+        "release": "6/12/26",
+        "agency": "Department of War",
+        "incidentDate": "October, 2023",
+        "incidentLocation": "Westen United States",
+        "documentType": "PDF",
+        "description": "This memorandum presents the first-hand narrative from Witness 3 provided to the All-domain Anomaly Resolution Office (AARO). Witness 3 was one of several United States (U.S.) federal law enforcement special agents who reported observing unidentified anomalous phenomena (UAP) over a period of two days in October 2023 in the western United States.",
+        "virin": "260508-D-D0360-1063",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/DoW-UAP-D081_Narrative-3_Western-US-Event.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/DoW-UAP-D081_Narrative-3_Western-US-Event.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-D081、ナラティブ ステートメント 3、米国西部イベント、2023 年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この覚書は、全ドメイン異常解決局 (AARO) に提供された証人 3 からの直接の話を紹介します。目撃者 3 は、2023 年 10 月に米国西部で 2 日間にわたって未確認の異常現象 (UAP) を観察したと報告した数人の米国連邦法執行特別捜査員のうちの 1 人でした。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0255",
+        "assetFileName": "DOW-UAP-D082, Narrative Statement 4, Western United States Event, 2023",
+        "release": "6/12/26",
+        "agency": "Department of War",
+        "incidentDate": "October, 2023",
+        "incidentLocation": "Westen United States",
+        "documentType": "PDF",
+        "description": "This memorandum presents the first-hand narrative from Witness 4 provided to the All-domain Anomaly Resolution Office (AARO). Witness 4 was one of several United States (U.S.) federal law enforcement special agents who reported observing unidentified anomalous phenomena (UAP) over a period of two days in October 2023 in the western United States.",
+        "virin": "260508-D-D0360-1064",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/DoW-UAP-D082_Narrative-4_Western-US-Event.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/DoW-UAP-D082_Narrative-4_Western-US-Event.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-D082、ナラティブ ステートメント 4、米国西部イベント、2023 年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この覚書は、全ドメイン異常解決局 (AARO) に提供された証人 4 からの直接の話を紹介します。目撃者 4 は、2023 年 10 月に米国西部で 2 日間にわたって未確認の異常現象 (UAP) を観察したと報告した数人の米国連邦法執行特別捜査官のうちの 1 人でした。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0256",
+        "assetFileName": "DOW-UAP-D083, Narrative Statement 5, Western United States Event, 2023",
+        "release": "6/12/26",
+        "agency": "Department of War",
+        "incidentDate": "October, 2023",
+        "incidentLocation": "Westen United States",
+        "documentType": "PDF",
+        "description": "This memorandum presents the first-hand narrative from Witness 5 provided to the All-domain Anomaly Resolution Office (AARO). Witness 5 was one of several United States (U.S.) federal law enforcement special agents who reported observing unidentified anomalous phenomena (UAP) over a period of two days in October 2023 in the western United States.",
+        "virin": "260508-D-D0360-1065",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/DoW-UAP-D083_Narrative-5_Western-US-Event.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/DoW-UAP-D083_Narrative-5_Western-US-Event.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-D083、ナラティブ ステートメント 5、米国西部イベント、2023 年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この覚書は、全ドメイン異常解決局 (AARO) に提供された証人 5 からの直接の話を紹介します。目撃者 5 は、2023 年 10 月に米国西部で 2 日間にわたって未確認の異常現象 (UAP) を観察したと報告した数人の米国連邦法執行特別捜査官のうちの 1 人でした。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0257",
+        "assetFileName": "DOW-UAP-D085_Transmission-of-CIA-Scientific-Advisory-Panel-Rept_1953",
+        "release": "6/12/26",
+        "agency": "Department of War",
+        "incidentDate": "1953",
+        "incidentLocation": "",
+        "documentType": "PDF",
+        "description": "This file contains a copy of the CIA's 1953 \"Report of the Scientific Panel on Unidentified Flying Objects\" that was sent to the Secretary of Defense.",
+        "virin": "260508-D-D0360-1067",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/DOW-UAP-D085_Transmission-of-CIA-Scientific-Advisory-Panel-Rept_1953.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/DOW-UAP-D085_Transmission-of-CIA-Scientific-Advisory-Panel-Rept_1953.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-D085_CIA 科学諮問パネル Rept_1953 の送信",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "このファイルには、国防長官に送信された CIA の 1953 年の「未確認飛行物体に関する科学パネル報告書」のコピーが含まれています。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0258",
+        "assetFileName": "DOW-UAP-D086, USNavy-Report-of-Flying-Discs_1948",
+        "release": "6/12/26",
+        "agency": "Department of War",
+        "incidentDate": "",
+        "incidentLocation": "",
+        "documentType": "PDF",
+        "description": "This document is a memorandum from the Commandant of the 5th Naval District, and it cites a memorandum related to \"flying discs\" from the Chief of Naval Operations. The memorandum requests that naval stations report incidents to the nearest Air Force command and to the Naval District Intelligence Office.",
+        "virin": "260508-D-D0360-1068",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/DOW-UAP-D086_USNavy-Report-of-Flying-Discs_1948.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/DOW-UAP-D086_USNavy-Report-of-Flying-Discs_1948.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-D086、USNavy-Report-of-Flying-Discs_1948",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この文書は第5海軍管区司令官からの覚書であり、海軍作戦部長からの「フライングディスク」に関する覚書が引用されている。この覚書は、海軍基地に対し、最寄りの空軍司令部と海軍地方情報局に事件を報告するよう求めている。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0259",
+        "assetFileName": "DOW-UAP-D087, U.S. Air Force Analysis of Flying Objects in the United States, 1-100",
+        "release": "6/12/26",
+        "agency": "Department of War",
+        "incidentDate": "",
+        "incidentLocation": "United States",
+        "documentType": "PDF",
+        "description": "Includes a \"Check-List - Unidentified Flying Objects\" that contains details about the incident. Many summaries also include witness lists or statements and other narrative reports or descriptions.",
+        "virin": "260508-D-D0360-1069",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/DOW-UAP-D087_US-AirForce_Analysis-of-Flying-Objects-in-the-US_1-100.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/DOW-UAP-D087_US-AirForce_Analysis-of-Flying-Objects-in-the-US_1-100.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-D087、米国における飛行物体の米空軍分析、1-100",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "事件の詳細を記載した「チェックリスト 未確認飛行物体」も収録。多くの概要には、証人のリストや証言、その他の物語の報告や説明も含まれています。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0260",
+        "assetFileName": "DOW-UAP-D088, U.S. Air Force Analysis of Flying Objects in the United States, 101-172",
+        "release": "6/12/26",
+        "agency": "Department of War",
+        "incidentDate": "",
+        "incidentLocation": "",
+        "documentType": "PDF",
+        "description": "Includes a \"Check-List - Unidentified Flying Objects\" that contains details about the incident. Many summaries also include witness lists or statements and other narrative reports or descriptions.",
+        "virin": "260508-D-D0360-1070",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/DOW-UAP-D088_US-AirForce_Analysis-of-Flying-Objects-in-the-US_101-172.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/DOW-UAP-D088_US-AirForce_Analysis-of-Flying-Objects-in-the-US_101-172.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-D088、米国における飛行物体の米空軍分析、101-172",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "事件の詳細を記載した「チェックリスト 未確認飛行物体」も収録。多くの概要には、証人のリストや証言、その他の物語の報告や説明も含まれています。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0261",
+        "assetFileName": "FBI-UAP-D001, FD-302, Unresolved UAP Report, Colorado Springs, 2022",
+        "release": "6/12/26",
+        "agency": "FBI",
+        "incidentDate": "February, 2022",
+        "incidentLocation": "Colorado Springs, Colorado, U.S.",
+        "documentType": "PDF",
+        "description": "This document is a Federal Bureau of Investigation (FBI) FD-302, a form the FBI uses to record interviews. This FD-302 contains a summary of an interview with a U.S. military service member in March 2025 regarding a February 2022 incident potentially involving unidentified anomalous phenomena (UAP). The individual described the phenomenon as being “bean shaped,” “matte white” or “off-white” in color, with a surface covered in “intersecting lines or ridges which formed an abstract polygon pattern.” The individual described the phenomenon as “motionless” and that “no sound could be heard coming from it.” FBI Note: AARO has since been in contact with the interviewee to conduct subsequent interviews to inform its analysis of this incident.",
+        "virin": "260508-O-D0360-1097",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D001_FD-302_Unresolved-UAP-Report_ColoradoSprings_2022.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D001_FD-302_Unresolved-UAP-Report_ColoradoSprings_2022.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "FBI-UAP-D001、FD-302、未解決の UAP レポート、コロラドスプリングス、2022",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この文書は連邦捜査局 (FBI) FD-302 であり、FBI がインタビューを記録するために使用する形式です。この FD-302 には、未確認異常現象 (UAP) が関与した可能性がある 2022 年 2 月の事件に関する、2025 年 3 月の米軍関係者へのインタビューの概要が含まれています。この人物は、この現象を「豆の形」、「マットな白」または「オフホワイト」の色で、表面は「抽象的な多角形パターンを形成する交差する線または隆起」で覆われていたと説明しました。この人物はその現象を「動かず」、「そこからは何も音が聞こえなかった」と述べた。 FBI 注: AARO はその後、この事件の分析を知らせるためにその後のインタビューを実施するためにインタビュー対象者と連絡をとりました。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0262",
+        "assetFileName": "FBI-UAP-D004, FD-1057-02, Northeastern United States, 2024",
+        "release": "6/12/26",
+        "agency": "FBI",
+        "incidentDate": "October, 2024",
+        "incidentLocation": "Northeastern United States",
+        "documentType": "PDF",
+        "description": "This document is an FBI FD-1057, a form the Federal Bureau of Investigation (FBI) uses to record investigative activity. This FD-1057 documents the FBI’s contact with a U.S. person in October 2024, during which FBI special agents collected video footage and gathered information regarding the circumstances surrounding its capture. The U.S. person captured the video footage in the same general location as the incidents described in documents. The subject matter described in files FBI-UAP-D004 through FBI-UAP-D008 and depicted in the video footage FBI-UAP-PR001 through FBI-UAP-PR003 corresponds to reports originating from the same general area in the northeastern United States.",
+        "virin": "260508-O-D0360-1100",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D004_FD-1057-02_Northeastern-US_2024.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D004_FD-1057-02_Northeastern-US_2024.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "FBI-UAP-D004、FD-1057-02、米国北東部、2024",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この文書は、連邦捜査局 (FBI) が捜査活動を記録するために使用する形式である FBI FD-1057 です。この FD-1057 は、2024 年 10 月に FBI が米国人と接触した際の記録を記録しており、その間に FBI 特別捜査官はビデオ映像を収集し、その人物の捕獲をめぐる状況に関する情報を収集しました。米国人は、文書に記載されている事件とほぼ同じ場所でビデオ映像を撮影した。ファイル FBI-UAP-D004 から FBI-UAP-D008 に記述され、ビデオ映像 FBI-UAP-PR001 から FBI-UAP-PR003 に描かれている主題は、米国北東部の同じ一般地域から発信された報告に対応しています。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0263",
+        "assetFileName": "FBI-UAP-D005, FD-1057-04, Northeastern United States, 2024",
+        "release": "6/12/26",
+        "agency": "FBI",
+        "incidentDate": "October, 2024",
+        "incidentLocation": "Northeastern United States",
+        "documentType": "PDF",
+        "description": "This document is an FBI FD-1057, a form the Federal Bureau of Investigation (FBI) uses to record investigative activity. This FD-1057 documents an October 2024 interview with a US person regarding several incidents potentially involving unidentified anomalous phenomena in the northeastern United States over the previous three years. The subject matter described in files FBI-UAP-D004 through FBI-UAP-D008 and depicted in the video footage FBI-UAP-PR001 through FBI-UAP-PR003 corresponds to reports originating from the same general area in the northeastern United States.",
+        "virin": "260508-O-D0360-1101",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D005_FD-1057-04_Northeastern-US_2024.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D005_FD-1057-04_Northeastern-US_2024.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "FBI-UAP-D005、FD-1057-04、米国北東部、2024",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この文書は、連邦捜査局 (FBI) が捜査活動を記録するために使用する形式である FBI FD-1057 です。このFD-1057は、過去3年間に米国北東部で発生した未確認の異常現象に関与した可能性のあるいくつかの事件に関する、2024年10月の米国人へのインタビューを記録したものです。ファイル FBI-UAP-D004 から FBI-UAP-D008 に記述され、ビデオ映像 FBI-UAP-PR001 から FBI-UAP-PR003 に描かれている主題は、米国北東部の同じ一般地域から発信された報告に対応しています。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0264",
+        "assetFileName": "FBI-UAP-D006, FD-1057-05, Northeastern United States, 2024",
+        "release": "6/12/26",
+        "agency": "FBI",
+        "incidentDate": "November, 2024",
+        "incidentLocation": "Northeastern United States",
+        "documentType": "PDF",
+        "description": "This document is an FBI FD-1057, a form the Federal Bureau of Investigation (FBI) uses to record investigative activity. This FD-1057 documents a November 2024 site survey of a location where a U.S. person reported observing unidentified anomalous phenomena multiple times over the previous three years. The subject matter described in files FBI-UAP-D004 through FBI-UAP-D008 and depicted in the video footage FBI-UAP-PR001 through FBI-UAP-PR003 corresponds to reports originating from the same general area in the northeastern United States.",
+        "virin": "260508-O-D0360-1102",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D006_FD-1057-05_Northeastern-US_2024.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D006_FD-1057-05_Northeastern-US_2024.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "FBI-UAP-D006、FD-1057-05、米国北東部、2024",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この文書は、連邦捜査局 (FBI) が捜査活動を記録するために使用する形式である FBI FD-1057 です。このFD-1057は、米国人が過去3年間に未確認の異常現象を複数回観察したと報告した場所の2024年11月の現地調査を記録したものである。ファイル FBI-UAP-D004 から FBI-UAP-D008 に記述され、ビデオ映像 FBI-UAP-PR001 から FBI-UAP-PR003 に描かれている主題は、米国北東部の同じ一般地域から発信された報告に対応しています。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0265",
+        "assetFileName": "FBI-UAP-D007, FD-1057-06, Northeastern United States, 2024",
+        "release": "6/12/26",
+        "agency": "FBI",
+        "incidentDate": "November, 2024",
+        "incidentLocation": "Northeastern United States",
+        "documentType": "PDF",
+        "description": "This document is an FBI FD-1057, a form the Federal Bureau of Investigation (FBI) uses to record investigative activity. This FBI FD-1057 documents first-hand observations made by two FBI special agents’ during the course of an ongoing investigation in November 2024. The subject matter described in files FBI-UAP-D004 through FBI-UAP-D008 and depicted in the video footage FBI-UAP-PR001 through FBI-UAP-PR003 corresponds to reports originating from the same general area in the northeastern United States.",
+        "virin": "260508-O-D0360-1103",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D007_FD-1057-06_Northeastern-US_2024.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D007_FD-1057-06_Northeastern-US_2024.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "FBI-UAP-D007、FD-1057-06、米国北東部、2024",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この文書は、連邦捜査局 (FBI) が捜査活動を記録するために使用する形式である FBI FD-1057 です。この FBI FD-1057 は、2024 年 11 月に進行中の捜査中に 2 人の FBI 特別捜査官が行った直接​​の観察を文書化したものです。ファイル FBI-UAP-D004 から FBI-UAP-D008 に記述され、ビデオ映像 FBI-UAP-PR001 から FBI-UAP-PR003 に描かれている主題は、米国北東部の同じ一般地域から発信された報告書に対応しています。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0266",
+        "assetFileName": "FBI-UAP-D008, FD-1057-07, Northeastern United States, 2024",
+        "release": "6/12/26",
+        "agency": "FBI",
+        "incidentDate": "December, 2024",
+        "incidentLocation": "Northeastern United States",
+        "documentType": "PDF",
+        "description": "This document is an FBI FD-1057, a form the Federal Bureau of Investigation (FBI) uses to record investigative activity. This FBI FD-1057 documents a December 2024 site survey of a location where two FBI special agents had previously observed unidentified anomalous phenomena. The subject matter described in files FBI-UAP-D004 through FBI-UAP-D008 and depicted in the video footage FBI-UAP-PR001 through FBI-UAP-PR003 corresponds to reports originating from the same general area in the northeastern United States.",
+        "virin": "260508-O-D0360-1104",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D008_FD-1057-07_Northeastern-US_2024.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D008_FD-1057-07_Northeastern-US_2024.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "FBI-UAP-D008、FD-1057-07、米国北東部、2024",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この文書は、連邦捜査局 (FBI) が捜査活動を記録するために使用する形式である FBI FD-1057 です。この FBI FD-1057 は、2 人の FBI 特別捜査官が以前に未確認の異常現象を観察した場所の 2024 年 12 月の現場調査を記録したものです。ファイル FBI-UAP-D004 から FBI-UAP-D008 に記述され、ビデオ映像 FBI-UAP-PR001 から FBI-UAP-PR003 に描かれている主題は、米国北東部の同じ一般地域から発信された報告に対応しています。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0267",
+        "assetFileName": "FBI-UAP-D012, Newark Field Office, 1952-1967",
+        "release": "6/12/26",
+        "agency": "FBI",
+        "incidentDate": "August 1952-1967",
+        "incidentLocation": "New Jersey, United States",
+        "documentType": "PDF",
+        "description": "This file details a special inquiry by the Federal Bureau of Investigation’s Newark Field Office of various reported sightings of unidentified flying objects (UFOs) in and near New Jersey between August 1952 and January 1967. These files include memoranda and correspondence between the FBI and the U.S. Air Force regarding UFO sightings, as well as public correspondence concerning various UFO-focused groups.",
+        "virin": "260508-O-D0360-1109",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D012_Newark-Field-Office_1952-1967.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D012_Newark-Field-Office_1952-1967.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "FBI-UAP-D012、ニューアーク現地事務所、1952 ～ 1967 年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "このファイルには、1952年8月から1967年1月の間にニュージャージー州内およびその近郊で報告されたさまざまな未確認飛行物体（UFO）の目撃情報に対する連邦捜査局ニューアーク現地事務所による特別調査の詳細が記載されている。これらのファイルには、UFO目撃に関するFBIとアメリカ空軍の間の覚書や書簡、UFOに焦点を当てたさまざまなグループに関する公開文書が含まれている。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0268",
+        "assetFileName": "FBI-UAP-D013, Washington State ‘UFO’ Investigation, 1952-1960",
+        "release": "6/12/26",
+        "agency": "FBI",
+        "incidentDate": "July 1952-1960",
+        "incidentLocation": "Washington State, United States",
+        "documentType": "PDF",
+        "description": "This file details an investigation of various sightings of Unidentified Flying Objects (UFOs) in Washington state between July 1952 and August 1960. This file includes memoranda and correspondence between the Federal Bureau of Investigation and the U.S. Air Force regarding UFO sightings.",
+        "virin": "260508-O-D0360-1108",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D013_WA-UFO-Investigation_1952-1960.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D013_WA-UFO-Investigation_1952-1960.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "FBI-UAP-D013、ワシントン州「UFO」捜査、1952～1960年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "このファイルには、1952 年 7 月から 1960 年 8 月までのワシントン州における未確認飛行物体 (UFO) のさまざまな目撃に関する調査が詳しく記載されています。このファイルには、UFO 目撃に関する連邦捜査局とアメリカ空軍との間のメモと通信が含まれています。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0269",
+        "assetFileName": "FBI-UAP-D014, Digital Rendering, Narrative Statement 1-1, Western United States Event, 2023",
+        "release": "6/12/26",
+        "agency": "FBI",
+        "incidentDate": "October, 2023",
+        "incidentLocation": "Westen United States",
+        "documentType": "IMG",
+        "description": "This image is an artistic interpretation of a reported incident near a sensitive national security site in the western United States involving unidentified anomalous phenomena (UAP) over a period of two days in October 2023. This image is based upon a first-hand description provided by a federal law enforcement special agent, as described in DOW-UAP-D079. The Federal Bureau of Investigation prepared this digital rendering at the request of the Department of War in 2026.",
+        "virin": "260508-O-D0360-1110",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D014_Digital-Rendering_Incident-1-1_Western-US-Event_2023.jpg",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D014_Digital-Rendering_Incident-1-1_Western-US-Event_2023.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "FBI-UAP-D014、デジタル レンダリング、ナラティブ ステートメント 1-1、米国西部イベント、2023 年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この画像は、2023 年 10 月の 2 日間にわたって未確認の異常現象 (UAP) が発生した米国西部の国家安全保障上の重要な場所付近で報告された事件を芸術的に解釈したものです。この画像は、DOW-UAP-D079 に記載されている、連邦法執行特別捜査官によって提供された直接の説明に基づいています。連邦捜査局は、2026 年に陸軍省の要請に応じてこのデジタル レンダリングを作成しました。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0270",
+        "assetFileName": "FBI-UAP-D015, Digital Rendering, Narrative Statement 1-2, Western United States Event, 2023",
+        "release": "6/12/26",
+        "agency": "FBI",
+        "incidentDate": "October, 2023",
+        "incidentLocation": "Western United States",
+        "documentType": "IMG",
+        "description": "This image is an artistic interpretation of a reported incident near a sensitive national security site in the western United States involving unidentified anomalous phenomena (UAP) over a period of two days in October 2023. This image is based upon a first-hand description provided by a federal law enforcement special agent, as described in DOW-UAP-D079. The Federal Bureau of Investigation prepared this digital rendering at the request of the Department of War in 2026.",
+        "virin": "260508-O-D0360-1111",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D015_Digital-Rendering_Incident-1-2_Western-US-Event_2023.jpg",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D015_Digital-Rendering_Incident-1-2_Western-US-Event_2023.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "FBI-UAP-D015、デジタル レンダリング、ナラティブ ステートメント 1-2、米国西部イベント、2023 年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この画像は、2023 年 10 月の 2 日間にわたって未確認の異常現象 (UAP) が発生した米国西部の国家安全保障上の重要な場所付近で報告された事件を芸術的に解釈したものです。この画像は、DOW-UAP-D079 に記載されている、連邦法執行特別捜査官によって提供された直接の説明に基づいています。連邦捜査局は、2026 年に陸軍省の要請に応じてこのデジタル レンダリングを作成しました。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0271",
+        "assetFileName": "FBI-UAP-D016, Digital Rendering, Narrative Statement 2-1, Western United States Event, 2023",
+        "release": "6/12/26",
+        "agency": "FBI",
+        "incidentDate": "October, 2023",
+        "incidentLocation": "Western United States",
+        "documentType": "IMG",
+        "description": "This image is an artistic interpretation of a reported incident near a sensitive national security site in the western United States involving unidentified anomalous phenomena (UAP) over a period of two days in October 2023. This image is based upon a first-hand description provided by a federal law enforcement special agent, as described in DOW-UAP-D080. The Federal Bureau of Investigation prepared this digital rendering at the request of the Department of War in 2026.",
+        "virin": "260508-O-D0360-1112",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D016_Digital-Rendering_Incident-2-1_Western-US-Event_2023.jpg",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D016_Digital-Rendering_Incident-2-1_Western-US-Event_2023.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "FBI-UAP-D016、デジタル レンダリング、ナラティブ ステートメント 2-1、米国西部イベント、2023 年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この画像は、2023 年 10 月に 2 日間にわたって未確認の異常現象 (UAP) が発生した、米国西部の国家安全保障上の重要な場所付近で報告された事件を芸術的に解釈したものです。この画像は、DOW-UAP-D080 に記載されている、連邦法執行特別捜査官によって提供された直接の説明に基づいています。連邦捜査局は、2026 年に陸軍省の要請に応じてこのデジタル レンダリングを作成しました。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0272",
+        "assetFileName": "FBI-UAP-D017, Digital Rendering, Narrative Statement 2-2, Western United States Event, 2023",
+        "release": "6/12/26",
+        "agency": "FBI",
+        "incidentDate": "October, 2023",
+        "incidentLocation": "Western United States",
+        "documentType": "IMG",
+        "description": "This image is an artistic interpretation of a reported incident near a sensitive national security site in the western United States involving unidentified anomalous phenomena (UAP) over a period of two days in October 2023. This image is based upon a first-hand description provided by a federal law enforcement special agent, as described in DOW-UAP-D080. The Federal Bureau of Investigation prepared this digital rendering at the request of the Department of War in 2026.",
+        "virin": "260508-O-D0360-1113",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D017_Digital-Rendering_Incident-2-2_Western-US-Event_2023.jpg",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D017_Digital-Rendering_Incident-2-2_Western-US-Event_2023.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "FBI-UAP-D017、デジタル レンダリング、ナラティブ ステートメント 2-2、米国西部イベント、2023 年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この画像は、2023 年 10 月に 2 日間にわたって未確認の異常現象 (UAP) が発生した、米国西部の国家安全保障上の重要な場所付近で報告された事件を芸術的に解釈したものです。この画像は、DOW-UAP-D080 に記載されている、連邦法執行特別捜査官によって提供された直接の説明に基づいています。連邦捜査局は、2026 年に陸軍省の要請に応じてこのデジタル レンダリングを作成しました。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0273",
+        "assetFileName": "FBI-UAP-D018, Digital Rendering, Narrative Statement 2-3, Western United States Event, 2023",
+        "release": "6/12/26",
+        "agency": "FBI",
+        "incidentDate": "October, 2023",
+        "incidentLocation": "Western United States",
+        "documentType": "IMG",
+        "description": "This image is an artistic interpretation of a reported incident near a sensitive national security site in the western United States involving unidentified anomalous phenomena (UAP) over a period of two days in October 2023. This image is based upon a first-hand description provided by a federal law enforcement special agent, as described in DOW-UAP-D080. The Federal Bureau of Investigation prepared this digital rendering at the request of the Department of War in 2026.",
+        "virin": "260508-O-D0360-1114",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D018_Digital-Rendering_Incident-2-3_Western-US-Event_2023.jpg",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D018_Digital-Rendering_Incident-2-3_Western-US-Event_2023.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "FBI-UAP-D018、デジタル レンダリング、ナラティブ ステートメント 2-3、米国西部イベント、2023 年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この画像は、2023 年 10 月に 2 日間にわたって未確認の異常現象 (UAP) が発生した、米国西部の国家安全保障上の重要な場所付近で報告された事件を芸術的に解釈したものです。この画像は、DOW-UAP-D080 に記載されている、連邦法執行特別捜査官によって提供された直接の説明に基づいています。連邦捜査局は、2026 年に陸軍省の要請に応じてこのデジタル レンダリングを作成しました。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0274",
+        "assetFileName": "FBI-UAP-D019, Digital Rendering, Narrative Statement 2-4, Western United States Event, 2023",
+        "release": "6/12/26",
+        "agency": "FBI",
+        "incidentDate": "October, 2023",
+        "incidentLocation": "Western United States",
+        "documentType": "IMG",
+        "description": "This image is an artistic interpretation of a reported incident near a sensitive national security site in the western United States involving unidentified anomalous phenomena (UAP) over a period of two days in October 2023. This image is based upon a first-hand description provided by a federal law enforcement special agent, as described in DOW-UAP-D080. The Federal Bureau of Investigation prepared this digital rendering at the request of the Department of War in 2026.",
+        "virin": "260508-O-D0360-1115",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D019_Digital-Rendering_Incident-2-4_Western-US-Event_2023.jpg",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D019_Digital-Rendering_Incident-2-4_Western-US-Event_2023.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "FBI-UAP-D019、デジタル レンダリング、ナラティブ ステートメント 2-4、米国西部イベント、2023 年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この画像は、2023 年 10 月に 2 日間にわたって未確認の異常現象 (UAP) が発生した、米国西部の国家安全保障上の重要な場所付近で報告された事件を芸術的に解釈したものです。この画像は、DOW-UAP-D080 に記載されている、連邦法執行特別捜査官によって提供された直接の説明に基づいています。連邦捜査局は、2026 年に陸軍省の要請に応じてこのデジタル レンダリングを作成しました。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0275",
+        "assetFileName": "FBI-UAP-D020, Digital Rendering, Narrative Statement 2-5, Western United States Event, 2023",
+        "release": "6/12/26",
+        "agency": "FBI",
+        "incidentDate": "October, 2023",
+        "incidentLocation": "Western United States",
+        "documentType": "IMG",
+        "description": "This image is an artistic interpretation of a reported incident near a sensitive national security site in the western United States involving unidentified anomalous phenomena (UAP) over a period of two days in October 2023. This image is based upon a first-hand description provided by a federal law enforcement special agent, as described in DOW-UAP-D080. The Federal Bureau of Investigation prepared this digital rendering at the request of the Department of War in 2026.",
+        "virin": "260508-O-D0360-1116",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D020_Digital-Rendering_Incident-2-5_Western-US-Event_2023.jpg",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D020_Digital-Rendering_Incident-2-5_Western-US-Event_2023.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "FBI-UAP-D020、デジタル レンダリング、ナラティブ ステートメント 2-5、米国西部イベント、2023 年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この画像は、2023 年 10 月に 2 日間にわたって未確認の異常現象 (UAP) が発生した、米国西部の国家安全保障上の重要な場所付近で報告された事件を芸術的に解釈したものです。この画像は、DOW-UAP-D080 に記載されている、連邦法執行特別捜査官によって提供された直接の説明に基づいています。連邦捜査局は、2026 年に陸軍省の要請に応じてこのデジタル レンダリングを作成しました。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0276",
+        "assetFileName": "FBI-UAP-D021, Digital Rendering, Narrative Statement 1-3, Western United States Event, 2023",
+        "release": "6/12/26",
+        "agency": "FBI",
+        "incidentDate": "October, 2023",
+        "incidentLocation": "Western United States",
+        "documentType": "IMG",
+        "description": "This image is an artistic interpretation of a reported incident near a sensitive national security site in the western United States involving unidentified anomalous phenomena (UAP) over a period of two days in October 2023. This image is based upon a first-hand description provided by a federal law enforcement special agent, as described in DOW-UAP-D079. The Federal Bureau of Investigation prepared this digital rendering at the request of the Department of War in 2026.",
+        "virin": "260508-O-D0360-1117",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D021_Digital-Rendering_Incident-1-3_Western-US-Event_2023.jpg",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D021_Digital-Rendering_Incident-1-3_Western-US-Event_2023.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "FBI-UAP-D021、デジタル レンダリング、ナラティブ ステートメント 1-3、米国西部イベント、2023 年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この画像は、2023 年 10 月の 2 日間にわたって未確認の異常現象 (UAP) が発生した米国西部の国家安全保障上の重要な場所付近で報告された事件を芸術的に解釈したものです。この画像は、DOW-UAP-D079 に記載されている、連邦法執行特別捜査官によって提供された直接の説明に基づいています。連邦捜査局は、2026 年に陸軍省の要請に応じてこのデジタル レンダリングを作成しました。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0277",
+        "assetFileName": "FBI-UAP-D022, Digital Rendering, Narrative Statement 2-6, Western United States Event, 2026",
+        "release": "6/12/26",
+        "agency": "FBI",
+        "incidentDate": "October, 2023",
+        "incidentLocation": "Western United States",
+        "documentType": "IMG",
+        "description": "This image is an artistic interpretation of a reported incident near a sensitive national security site in the western United States involving unidentified anomalous phenomena (UAP) over a period of two days in October 2023. This image is based upon a first-hand description provided by a federal law enforcement special agent, as described in DOW-UAP-D080. The Federal Bureau of Investigation prepared this digital rendering at the request of the Department of War in 2026.",
+        "virin": "260508-O-D0360-1118",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D022_Digital-Rendering_Incident-2-6_Western-US-Event_2023.jpg",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D022_Digital-Rendering_Incident-2-6_Western-US-Event_2023.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "FBI-UAP-D022、デジタル レンダリング、ナラティブ ステートメント 2-6、米国西部イベント、2026 年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この画像は、2023 年 10 月に 2 日間にわたって未確認の異常現象 (UAP) が発生した、米国西部の国家安全保障上の重要な場所付近で報告された事件を芸術的に解釈したものです。この画像は、DOW-UAP-D080 に記載されている、連邦法執行特別捜査官によって提供された直接の説明に基づいています。連邦捜査局は、2026 年に陸軍省の要請に応じてこのデジタル レンダリングを作成しました。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0278",
+        "assetFileName": "FBI-UAP-D023, Digital Rendering, Narrative Statement 2-7, Western United States Event, 2023",
+        "release": "6/12/26",
+        "agency": "FBI",
+        "incidentDate": "October, 2023",
+        "incidentLocation": "Western United States",
+        "documentType": "IMG",
+        "description": "This image is an artistic interpretation of a reported incident near a sensitive national security site in the western United States involving unidentified anomalous phenomena (UAP) over a period of two days in October 2023. This image is based upon a first-hand description provided by a federal law enforcement special agent, as described in DOW-UAP-D080. The Federal Bureau of Investigation prepared this digital rendering at the request of the Department of War in 2026.",
+        "virin": "260508-O-D0360-1118",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D023_Digital-Rendering_Incident-2-7_Western-US-Event_2023.jpg",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D023_Digital-Rendering_Incident-2-7_Western-US-Event_2023.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "FBI-UAP-D023、デジタル レンダリング、ナラティブ ステートメント 2-7、米国西部イベント、2023 年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この画像は、2023 年 10 月に 2 日間にわたって未確認の異常現象 (UAP) が発生した、米国西部の国家安全保障上の重要な場所付近で報告された事件を芸術的に解釈したものです。この画像は、DOW-UAP-D080 に記載されている、連邦法執行特別捜査官によって提供された直接の説明に基づいています。連邦捜査局は、2026 年に陸軍省の要請に応じてこのデジタル レンダリングを作成しました。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0279",
+        "assetFileName": "FBI-UAP-PR001, “Triangle Orbs,” Northeastern United States, 2021",
+        "release": "6/12/26",
+        "agency": "FBI",
+        "incidentDate": "November, 2021",
+        "incidentLocation": "Northeastern United States",
+        "documentType": "VID",
+        "description": "In November 2021, at approximately 0500 local time in the northeastern United States, an eyewitness observed a bright light source near the horizon at an estimated distance of 2,000 feet. The light source initially appeared as a single intense luminous object before resolving into multiple lights exhibiting erratic rotational motion relative to one another. The object slowly moved laterally from left to right during the encounter. The eyewitness captured the video with a hand-held iPhone 12 Pro, resulting in unintended camera movement. The location was well known to the eyewitness and is sparsely populated. The description above is derived from statements provided to the Federal Bureau of Investigation (FBI) by the eyewitness to the event. The FBI assesses the individual who reported this event as highly credible. The subject matter described in files FBI-UAP-D004 through FBI-UAP-D008 and depicted in the video footage FBI-UAP-PR001 through FBI-UAP-PR003 corresponds to reports originating from the same general area in the northeastern United States.",
+        "virin": "",
+        "downloadUrl": "",
+        "imageUrl": "",
+        "videoUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1010263"
+      },
+      "ja": {
+        "assetFileNameJa": "FBI-UAP-PR001、「Triangle Orbs」、米国北東部、2021",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "2021年11月、米国北東部の現地時間午前5時頃、目撃者は推定距離2,000フィートの地平線近くで明るい光源を観察した。光源は最初は単一の強力な発光物体として見えましたが、その後、相互に不規則な回転運動を示す複数の光に分解されました。物体は遭遇中に左から右へゆっくりと横方向に移動しました。目撃者は手持ちのiPhone 12 Proでビデオを撮影したが、その結果、意図しないカメラの動きが生じた。この場所は目撃者にはよく知られており、人口もまばらです。上記の説明は、事件の目撃者が連邦捜査局 (FBI) に提供した陳述に基づいています。 FBI は、この事件を報告した人物の信頼性が高いと評価しています。ファイル FBI-UAP-D004 から FBI-UAP-D008 に記述され、ビデオ映像 FBI-UAP-PR001 から FBI-UAP-PR003 に描かれている主題は、米国北東部の同じ一般地域から発信された報告に対応しています。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0280",
+        "assetFileName": "FBI-UAP-PR002, “Red Orb Rotation,” Northeastern United States, 2022",
+        "release": "6/12/26",
+        "agency": "FBI",
+        "incidentDate": "March, 2022",
+        "incidentLocation": "Northeastern United States",
+        "documentType": "VID",
+        "description": "In March 2022, at approximately 1920 local time in the northeastern United States, an eyewitness observed two bright red luminous light sources hovering near the horizon at an estimated distance of 2,500 feet. Both luminous objects maintained generally stationary positions throughout the encounter. The lower light source appeared to rotate slowly relative to the upper light source, moving from an apparent 6 o’clock position to slightly beyond the apparent 9 o’clock position. The eyewitness did not hear any sounds from the light sources. The eyewitness captured this video using an iPhone 12 Pro at a location well known to them, which is sparsely populated. The description above is derived from statements provided to the Federal Bureau of Investigation (FBI) by an eyewitness to the event. The FBI assesses the individual who reported this event as highly credible. The subject matter described in files FBI-UAP-D004 through FBI-UAP-D008 and depicted in the video footage FBI-UAP-PR001 through FBI-UAP-PR003 corresponds to reports originating from the same general area in the northeastern United States.",
+        "virin": "",
+        "downloadUrl": "",
+        "imageUrl": "",
+        "videoUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1010264"
+      },
+      "ja": {
+        "assetFileNameJa": "FBI-UAP-PR002、「レッド オーブ ローテーション」、米国北東部、2022 年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "2022年3月、現地時間約1920年頃、米国北東部で、推定距離2,500フィートの地平線近くに2つの真っ赤な発光光源が浮かんでいるのを目撃者が観察した。両方の発光物体は、遭遇中全体的にほぼ静止した位置を維持しました。下の光源は上の光源に対してゆっくりと回転し、見かけの 6 時の位置から見かけの 9 時の位置をわずかに超えたところまで移動しているように見えました。目撃者には光源からの音は聞こえませんでした。目撃者は、人口の少ないよく知られた場所で、iPhone 12 Proを使用してこのビデオを撮影しました。上記の説明は、事件の目撃者が連邦捜査局 (FBI) に提供した陳述に基づいています。 FBI は、この事件を報告した人物の信頼性が高いと評価しています。ファイル FBI-UAP-D004 から FBI-UAP-D008 に記述され、ビデオ映像 FBI-UAP-PR001 から FBI-UAP-PR003 に描かれている主題は、米国北東部の同じ一般地域から発信された報告に対応しています。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0281",
+        "assetFileName": "FBI-UAP-PR005, Digital Recreation, Narrative Statement 3-1, Western United States Event, 2023",
+        "release": "6/12/26",
+        "agency": "FBI",
+        "incidentDate": "October, 2023",
+        "incidentLocation": "Western United States",
+        "documentType": "VID",
+        "description": "This video is an artistic interpretation of a reported incident near a sensitive national security site in the western United States involving unidentified anomalous phenomena (UAP) over a period of two days in October 2023. This digital recreation is based upon a first-hand description provided by a federal law enforcement special agent, as described in DOW-UAP-D081. The Federal Bureau of Investigation prepared this digital recreation at the request of the Department of War in 2026",
+        "virin": "",
+        "downloadUrl": "",
+        "imageUrl": "",
+        "videoUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1010272"
+      },
+      "ja": {
+        "assetFileNameJa": "FBI-UAP-PR005、デジタル レクリエーション、ナラティブ ステートメント 3-1、米国西部イベント、2023 年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "このビデオは、2023 年 10 月に 2 日間にわたって未確認の異常現象 (UAP) が発生した米国西部の国家安全保障上の重要な場所付近で報告された事件を芸術的に解釈したものです。このデジタル再現は、DOW-UAP-D081 で説明されているように、連邦法執行特別捜査官によって提供された直接の説明に基づいています。連邦捜査局は、2026 年に陸軍省の要請に応じてこのデジタル レクリエーションを作成しました。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0282",
+        "assetFileName": "FBI-UAP-PR006, Digital Recreation, Narrative Statement 3-2, Western United States Event, 2023",
+        "release": "6/12/26",
+        "agency": "FBI",
+        "incidentDate": "October, 2023",
+        "incidentLocation": "Western United States",
+        "documentType": "VID",
+        "description": "This video is an artistic interpretation of a reported incident near a sensitive national security site in the western United States involving unidentified anomalous phenomena (UAP) over a period of two days in October 2023. This digital recreation is based upon a first-hand description provided by a federal law enforcement special agent, as described in DOW-UAP-D081. The Federal Bureau of Investigation prepared this digital recreation at the request of the Department of War in 2026",
+        "virin": "",
+        "downloadUrl": "",
+        "imageUrl": "",
+        "videoUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1010276"
+      },
+      "ja": {
+        "assetFileNameJa": "FBI-UAP-PR006、デジタル レクリエーション、ナラティブ ステートメント 3-2、米国西部イベント、2023 年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "このビデオは、2023 年 10 月に 2 日間にわたって未確認の異常現象 (UAP) が発生した米国西部の国家安全保障上の重要な場所付近で報告された事件を芸術的に解釈したものです。このデジタル再現は、DOW-UAP-D081 で説明されているように、連邦法執行特別捜査官によって提供された直接の説明に基づいています。連邦捜査局は、2026 年に陸軍省の要請に応じてこのデジタル レクリエーションを作成しました。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0283",
+        "assetFileName": "NASA-UAP-D015, Astronaut Scientific Debriefings, 1962-1963",
+        "release": "6/12/26",
+        "agency": "NASA",
+        "incidentDate": "1962-1963",
+        "incidentLocation": "",
+        "documentType": "PDF",
+        "description": "This file contains memoranda, correspondence, reports, and other materials relating to contemporary scientific interest in investigating the nature of luminous phenomena reported by astronauts John Glenn and Walter Schirra during spaceflight. This collection includes transcripts from NASA interviews and debriefings with both astronauts regarding those observations. It also contains details relating to scientific observations of atmospheric phenomena, including brief descriptions of luminous particles, experiences while aboard spacecraft, and circa 1955 theoretical analysis of meteoric particles entering the atmosphere. Pages 34-35, 55-56, 57-63, 64-113, and 122-127 feature content relevant to the PURSUE initiative.",
+        "virin": "260508-O-D0360-1120",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/NASA-UAP-D015_Astronaut-Scientific-Debriefings_1962-1963.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/NASA-UAP-D015_Astronaut-Scientific-Debriefings_1962-1963.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "NASA-UAP-D015、宇宙飛行士の科学的報告会、1962 ～ 1963 年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "このファイルには、宇宙飛行中にジョン・グレン宇宙飛行士とウォルター・シラー宇宙飛行士によって報告された発光現象の性質を調査するという現代の科学的関心に関連するメモ、通信、報告書、その他の資料が含まれています。このコレクションには、NASA のインタビューと、これらの観察に関する両宇宙飛行士との報告会の記録が含まれています。また、発光粒子の簡単な説明、宇宙船搭乗中の経験、大気圏に突入する流星粒子の 1955 年頃の理論分析など、大気現象の科学的観測に関する詳細も含まれています。ページ 34 ～ 35、55 ～ 56、57 ～ 63、64 ～ 113、および 122 ～ 127 には、PURSUE イニシアチブに関連するコンテンツが掲載されています。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0284",
+        "assetFileName": "NASA-UAP-D016, Preliminary Gemini 4 Crew Debriefing, Part I, 1965",
+        "release": "6/12/26",
+        "agency": "NASA",
+        "incidentDate": "6/9/65",
+        "incidentLocation": "North Atlantic Ocean",
+        "documentType": "PDF",
+        "description": "This document is a preliminary transcript (Part I) derived from voice recordings of the Gemini 4 flight crew debriefing taken aboard the recovery ship, USS Wasp, on June 9, 1965. Astronaut Ed White recounts seeing “sparkles” during the flight.",
+        "virin": "260508-O-D0360-1121",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/NASA-UAP-D016_Preliminary-Gemini-4-Crew-Debriefing_Part1_1965.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/NASA-UAP-D016_Preliminary-Gemini-4-Crew-Debriefing_Part1_1965.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "NASA-UAP-D016、ジェミニ 4 乗組員の予備報告会、パート I、1965 年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この文書は、1965 年 6 月 9 日に回収船 USS ワスプ上で撮影された、ジェミニ 4 号の飛行乗組員の報告報告の音声記録から派生した予備転写 (パート I) です。宇宙飛行士のエド・ホワイトは、飛行中に「輝き」を見たについて語ります。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0285",
+        "assetFileName": "NASA-UAP-D017, Preliminary Gemini 4 Crew Debriefing, Part II, 1965",
+        "release": "6/12/26",
+        "agency": "NASA",
+        "incidentDate": "6/9/65",
+        "incidentLocation": "North Atlantic Ocean",
+        "documentType": "PDF",
+        "description": "This document is a preliminary transcript (Part II) derived from voice recordings of the Gemini 4 flight crew debriefing taken aboard the recovery ship, USS Wasp, on June 9, 1965. Part II of this document contains the “Visual Sightings” section of the debriefing (pages 196-224), where astronauts James McDivitt and Edward White describe their observations while aboard the spacecraft.",
+        "virin": "260508-O-D0360-1122",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/NASA-UAP-D017_Preliminary-Gemini-4-Crew-Debriefing_Part2_1965.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/NASA-UAP-D017_Preliminary-Gemini-4-Crew-Debriefing_Part2_1965.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "NASA-UAP-D017、ジェミニ 4 乗組員の予備報告会、パート II、1965 年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この文書は、1965 年 6 月 9 日に回収船 USS ワスプ上で行われたジェミニ 4 号の飛行乗組員の報告会の音声録音から得られた予備転写 (パート II) です。この文書のパート II には報告会の「視覚的目撃」セクション (196 ～ 224 ページ) が含まれており、そこでは宇宙飛行士のジェームズ・マクディビットとエドワード・ホワイトが宇宙船に搭乗中の観察について説明しています。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0286",
+        "assetFileName": "NASA-UAP-D018, Gemini 4 Experiment Debriefing, 1967",
+        "release": "6/12/26",
+        "agency": "NASA",
+        "incidentDate": "June 3-7, 1965",
+        "incidentLocation": "Low Earth Orbit",
+        "documentType": "PDF",
+        "description": "Gemini IV was the second crewed mission of the Gemini series. Astronauts James McDivitt and Edward White successfully completed the four-day flight between June 3 and June 7, 1965. The mission included the first American spacewalk. This collection of documents contains a transcription of the astronauts recounting their observations of bright particles outside the spacecraft, dated circa June 25, 1967, on pages 78-81, and page 101.",
+        "virin": "260508-O-D0360-1123",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/NASA-UAP-D018_Gemini-4_Experiment-Debriefing_1967.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/NASA-UAP-D018_Gemini-4_Experiment-Debriefing_1967.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "NASA-UAP-D018、ジェミニ 4 号実験報告会、1967 年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "ジェミニ IV は、ジェミニ シリーズの 2 番目の有人ミッションでした。宇宙飛行士のジェームズ・マクディビットとエドワード・ホワイトは、1965 年 6 月 3 日から 6 月 7 日までの 4 日間の飛行に成功しました。このミッションには、アメリカ初の船外活動も含まれていました。この文書コレクションには、1967 年 6 月 25 日頃の日付の、78 ～ 81 ページと 101 ページに、宇宙飛行士が宇宙船の外での明るい粒子の観察を詳しく記録した転写が含まれています。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0287",
+        "assetFileName": "NASA-UAP-D019, Gemini 5 Technical Debriefing, Part I, 1965",
+        "release": "6/12/26",
+        "agency": "NASA",
+        "incidentDate": "August 2 - September 2, 1965",
+        "incidentLocation": "Cape Kennedy, Florida",
+        "documentType": "PDF",
+        "description": "This document is a preliminary transcript (Part I) derived from voice recordings of the Gemini 5 flight crew technical debriefing. NASA conducted this debriefing between August 30, 1965, and September 2, 1965, at the Crew Quarters, Cape Kennedy, Florida.",
+        "virin": "260508-O-D0360-1124",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/NASA-UAP-D019_Gemini-5-Technical-Debriefing_Part1_1965.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/NASA-UAP-D019_Gemini-5-Technical-Debriefing_Part1_1965.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "NASA-UAP-D019、ジェミニ 5 号技術報告会、パート I、1965 年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この文書は、ジェミニ 5 号の飛行乗組員の技術報告会の音声録音から派生した暫定的な書き起こし (パート I) です。 NASA は、この報告会を 1965 年 8 月 30 日から 9 月 2 日まで、フロリダ州ケープ ケネディの乗組員宿舎で実施しました。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0288",
+        "assetFileName": "NASA-UAP-D020, Gemini 5 Technical Debriefing, Part II, 1965",
+        "release": "6/12/26",
+        "agency": "NASA",
+        "incidentDate": "August 30 - September 2, 1965",
+        "incidentLocation": "Cape Kennedy, Florida",
+        "documentType": "PDF",
+        "description": "This document is a preliminary transcript (Part II) derived from voice recordings of the Gemini 5 flight crew technical debriefing. NASA conducted this debriefing between August 30, 1965, and September 2, 1965, at the Crew Quarters, Cape Kennedy, Florida. Astronauts L. Gordon Cooper and Charles “Pete” Conrad described observing debris and “snow” and “all sorts of glittering pieces of this, that and the other thing” in the “Visual Sightings” section of the document (pages 157-220).",
+        "virin": "260508-O-D0360-1125",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/NASA-UAP-D020_Gemini-5-Technical-Debriefing_Part2_1965.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/NASA-UAP-D020_Gemini-5-Technical-Debriefing_Part2_1965.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "NASA-UAP-D020、ジェミニ 5 号技術報告会、パート II、1965 年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この文書は、ジェミニ 5 号の飛行乗組員の技術報告会の音声録音から派生した暫定的な書き起こし (パート II) です。 NASA は、この報告会を 1965 年 8 月 30 日から 9 月 2 日まで、フロリダ州ケープ ケネディの乗組員宿舎で実施しました。宇宙飛行士のL・ゴードン・クーパーとチャールズ・“ピート”・コンラッドは、文書の「視覚的目撃」セクション（157～220ページ）で、破片や「雪」、そして「あれやこれやのあらゆる種類のきらびやかな破片」を観察したと述べている。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0289",
+        "assetFileName": "NASA-UAP-D021, Gemini 7 Technical Debriefing, 1965",
+        "release": "6/12/26",
+        "agency": "NASA",
+        "incidentDate": "December 19-21, 1965",
+        "incidentLocation": "Cape Kennedy, Florida",
+        "documentType": "PDF",
+        "description": "This document is a preliminary transcript derived from voice recordings of the Gemini 7 flight crew debriefing conducted December 19-21, 1965, at the Crew Quarters, Cape Kennedy, Florida. Lights and flashes are mentioned and there is discussion about having proper illumination for vehicle docking. Borman and Lovell discuss celestial and terrestrial observational anomalies and note sightings of Mercury, meteors, aurora, and lightning. They also discuss not being able to see any stars once the Sun comes up.",
+        "virin": "260508-O-D0360-1126",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/NASA-UAP-D021_Gemini-7-Technical-Debriefing_1965.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/NASA-UAP-D021_Gemini-7-Technical-Debriefing_1965.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "NASA-UAP-D021、ジェミニ 7 号技術報告会、1965 年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この文書は、1965 年 12 月 19 日から 21 日にかけてフロリダ州ケープ ケネディの乗務員宿舎で行われたジェミニ 7 号の乗組員報告会の音声録音から派生した暫定的な記録です。ライトとフラッシュについても触れられており、車両のドッキングに適切な照明を設けることについても議論されています。ボーマンとラベルは天体と地球の観測異常について話し合い、水星、流星、オーロラ、稲妻の目撃例について言及します。彼らはまた、太陽が昇ると星が見えなくなることについても話し合っています。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0290",
+        "assetFileName": "NASA-UAP-D022, Gemini 9 Debriefing, 1966",
+        "release": "6/12/26",
+        "agency": "NASA",
+        "incidentDate": "June 3-6, 1966",
+        "incidentLocation": "Low Earth Orbit",
+        "documentType": "PDF",
+        "description": "Gemini IX (renamed Gemini IX-A) was the seventh crewed flight of the Gemini series, launched on June 3, 1966. The mission’s primary objectives included a spacewalk and multiple scientific and medical experiments. This document, dated June 16, 1966, is a transcript of a NASA debriefing of astronauts Thomas Stafford and Eugene Cernan. Pages 2-5 of this document contain the astronauts’ accounts of their observations of “flashing lights” and “sparkles” during the mission.",
+        "virin": "260508-O-D0360-1127",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/NASA-UAP-D022_Gemini-9-Debriefing_1966.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/NASA-UAP-D022_Gemini-9-Debriefing_1966.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "NASA-UAP-D022、ジェミニ 9 号報告会、1966 年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "ジェミニ IX (ジェミニ IX-A に改名) は、ジェミニ シリーズの 7 番目の有人飛行で、1966 年 6 月 3 日に打ち上げられました。このミッションの主な目的には、船外活動と複数の科学的および医学的実験が含まれていました。この文書は 1966 年 6 月 16 日付けで、宇宙飛行士トーマス・スタッフォードとユージン・サーナンの NASA 報告会の記録です。この文書の 2 ページから 5 ページには、ミッション中に「点滅する光」と「輝き」を観察した宇宙飛行士の説明が含まれています。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0291",
+        "assetFileName": "NASA-UAP-D023, Interview Excerpt with Astronaut Gordon Cooper, 1962",
+        "release": "6/12/26",
+        "agency": "NASA",
+        "incidentDate": "November, 1962",
+        "incidentLocation": "",
+        "documentType": "AUD",
+        "description": "In November 1962, journalist Walter Cronkite interviewed astronaut Gordon Cooper. In this excerpt from that interview, Cronkite asks Cooper about his views regarding the nature of unidentified flying objects, having previously expressed an interest in the subject. Cooper opines that “a large number of exceptionally well-qualified people have seen objects” without a “logical explanation” and speculates on the existence of other planets with “a livable atmosphere” and that maybe there are “some type of human life” out there. Interview was conducted in November 1962.",
+        "virin": "",
+        "downloadUrl": "",
+        "imageUrl": "",
+        "videoUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1010337"
+      },
+      "ja": {
+        "assetFileNameJa": "NASA-UAP-D023、宇宙飛行士ゴードン・クーパーのインタビュー抜粋、1962年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "1962年11月、ジャーナリストのウォルター・クロンカイトは宇宙飛行士ゴードン・クーパーにインタビューした。このインタビューからの抜粋で、クロンカイトは以前にもこの問題に興味を示していたクーパーに、未確認飛行物体の性質に関する見解を尋ねています。クーパーは、「論理的説明」なしに「非常に優れた能力を持つ多数の人々が物体を見た」と意見し、「住みやすい大気」を持つ他の惑星の存在と、おそらくそこには「ある種の人間の生命」が存在するのではないかと推測している。インタビューは1962年11月に行われました。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0292",
+        "assetFileName": "NASA-UAP-D024, “Apollo 16 Scientific Debriefing”",
+        "release": "6/12/26",
+        "agency": "NASA",
+        "incidentDate": "",
+        "incidentLocation": "Houston, Texas",
+        "documentType": "AUD",
+        "description": "This debriefing includes presentations from principal investigators of various Apollo experiments. The principal investigators describe preliminary results of their work to educate the Apollo crews about what they’ve obtained from Apollo 16 to help prepare for Apollo 17. They also describe anomalies, such as a “flash” that was observed that had not yet been reported. The flash is mentioned beginning at 25:15.",
+        "virin": "",
+        "downloadUrl": "",
+        "imageUrl": "",
+        "videoUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1010319"
+      },
+      "ja": {
+        "assetFileNameJa": "NASA-UAP-D024、「アポロ 16 号の科学報告会」",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この報告会には、さまざまなアポロ実験の主任研究者によるプレゼンテーションが含まれます。主任研究者らは、アポロ 17 号の準備に役立てるために、アポロ 16 号から得たものについてアポロ乗組員に教育するための作業の予備的な結果について説明します。また、まだ報告されていない観察された「フラッシュ」などの異常についても説明します。フラッシュについては25:15から言及されています。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0293",
+        "assetFileName": "NASA-UAP-D025, “Apollo 16 Scientific Debriefing”",
+        "release": "6/12/26",
+        "agency": "NASA",
+        "incidentDate": "",
+        "incidentLocation": "Houston, Texas",
+        "documentType": "AUD",
+        "description": "At 32:41, the speaker makes an off-handed comment, “Could be an alien starbase or something, I don’t know” when discussing correlations between experimental data sets.",
+        "virin": "",
+        "downloadUrl": "",
+        "imageUrl": "",
+        "videoUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1010336"
+      },
+      "ja": {
+        "assetFileNameJa": "NASA-UAP-D025、「アポロ 16 号の科学報告会」",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "32:41で、講演者は実験データセット間の相関関係について議論する際に、「エイリアンの宇宙基地か何かかもしれないが、私には分からない」と当たり障りのないコメントをしている。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0294",
+        "assetFileName": "USG-UAP-D001, Congressional, White House, UFO-related Constituent Correspondence, 1998",
+        "release": "6/12/26",
+        "agency": "U.S. Government",
+        "incidentDate": "1998",
+        "incidentLocation": "",
+        "documentType": "PDF",
+        "description": "This collection of documents, primarily from 1998, contains draft and final correspondence from the White House and the offices of members of Congress responding to constituent inquiries about Unidentified Flying Objects, or “UFOs.” These inquiries cover a diverse range of topics, including alleged UFO sightings by NASA astronauts, questions regarding the authenticity of photos collected during U.S. missions to Mars, alleged improper withholding of information by the U.S. Government, questions regarding the appropriateness of “UFO-related” governmental spending, and calls for congressional hearings regarding the nature and existence of “UFOs.” The official responses consistently state that, circa 1998, the U.S. Government is not aware of evidence supporting the existence of extraterrestrial technology, and that NASA does not actively investigate “UFOs.” The collection includes references to materials of both confirmed and unconfirmed authenticity, as provided by constituents, as well as references to historical, scientific literature addressing specific “UFO” sighting claims.",
+        "virin": "260508-O-D0360-1128",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/061226/release_03/documents/USG-UAP-D001_Congress-WhiteHouse-UFO-Correspondence_1998.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/061226/release_03/thumbnails/USG-UAP-D001_Congress-WhiteHouse-UFO-Correspondence_1998.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "USG-UAP-D001、議会、ホワイトハウス、UFO 関連の有権者通信、1998 年",
+        "releaseJa": "",
+        "agencyJa": "",
+        "incidentLocationJa": "",
+        "documentTypeJa": "",
+        "descriptionJa": "この文書コレクションは主に 1998 年に作成されたもので、未確認飛行物体 (「UFO」) に関する有権者の質問に応じたホワイトハウスと議員事務所からの文書草案と最終文書が含まれています。これらの調査は、NASAの宇宙飛行士によるUFO目撃疑惑、米国の火星探査中に収集された写真の信憑性に関する疑問、米国政府による不適切な情報保留疑惑、「UFO関連」政府支出の適切性に関する疑問、「UFO」の性質と存在に関する議会公聴会の要請など、多岐にわたる話題を網羅している。公式回答は一貫して、1998年頃、米国政府は地球外テクノロジーの存在を裏付ける証拠を認識しておらず、NASAは「UFO」を積極的に調査していないと述べている。このコレクションには、特定の「UFO」目撃主張に関する歴史的科学文献への参照だけでなく、有権者によって提供された真正性が確認されている資料と未確認の資料への参照も含まれています。"
+      },
+      "searchFacets": {
+        "releaseId": "release_03",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": false,
+        "attributionSources": []
       }
     }
   ]

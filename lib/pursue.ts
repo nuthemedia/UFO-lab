@@ -103,7 +103,7 @@ export type PriorDisclosure = {
 };
 
 export type PursueSearchFacets = {
-  releaseId: "release_01" | "release_02";
+  releaseId: "release_01" | "release_02" | "release_03";
   priorDisclosureStatus?: PriorDisclosureStatus;
   priorDisclosureConfidence?: PriorDisclosureConfidence;
   ruppeltVerified: boolean;
@@ -164,7 +164,17 @@ export function displayValue(primary: string, fallback: string) {
 }
 
 export function getReleaseId(record: PursueRecord): PursueSearchFacets["releaseId"] {
-  return record.source.release.includes("5/22") ? "release_02" : "release_01";
+  const release = record.source.release.toLowerCase();
+
+  if (release.includes("6/12") || release.includes("june 12")) {
+    return "release_03";
+  }
+
+  if (release.includes("5/22") || release.includes("may 22")) {
+    return "release_02";
+  }
+
+  return "release_01";
 }
 
 export function getDefaultPriorDisclosure(record: PursueRecord): PriorDisclosure {
@@ -184,8 +194,8 @@ export function getDefaultPriorDisclosure(record: PursueRecord): PriorDisclosure
     ruppeltVerified: false,
     manualReviewRequired: true,
     reviewerNoteJa:
-      getReleaseId(record) === "release_02"
-        ? "Release 02 はRuppelt側での公開状況照合が未完了です。"
+      getReleaseId(record) === "release_02" || getReleaseId(record) === "release_03"
+        ? `${getReleaseId(record) === "release_03" ? "Release 03" : "Release 02"} はRuppelt側での公開状況照合が未完了です。`
         : "公開状況の照合データがまだ登録されていません。",
   };
 }

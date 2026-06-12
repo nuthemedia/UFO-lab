@@ -4788,6 +4788,12 @@ h3 {
   background: rgba(168, 85, 247, 0.1);
 }
 
+.ruppelt-status-stat--unreviewed {
+  color: #69736d;
+  border-color: rgba(105, 115, 109, 0.22);
+  background: rgba(255, 255, 255, 0.7);
+}
+
 .ruppelt-controls {
   position: sticky;
   top: 0;

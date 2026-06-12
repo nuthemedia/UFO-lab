@@ -149,9 +149,9 @@ if (missingBrandHomeHrefs.length > 0) {
 }
 
 const requiredFileContents = [
-  ["app/ruppelt/page.tsx", "Ruppelt V2.0"],
+  ["app/ruppelt/page.tsx", "Ruppelt V2.2"],
   ["app/ruppelt/page.tsx", "ogp-ruppelt-v2.jpg"],
-  ["app/ruppelt/lp/page.tsx", "Ruppelt V2.0"],
+  ["app/ruppelt/lp/page.tsx", "Ruppelt V2.2"],
   ["app/ruppelt/lp/page.tsx", "ogp-ruppelt-v2.jpg"],
 ];
 

@@ -44,9 +44,11 @@ export function RecordCard({
   const [thumbnailBroken, setThumbnailBroken] = useState(false);
   const [descriptionExpanded, setDescriptionExpanded] = useState(false);
   const saveLabel = saved ? "後で見るを解除" : "後で見るに追加";
+  const primaryFileLabel = record.source.documentType === "IMG" ? "画像" : "PDF";
+  const previewFileLabel = record.source.documentType === "IMG" ? "プレビュー" : "画像";
   const links = [
-    ["PDF", record.source.downloadUrl],
-    ["画像", record.source.imageUrl],
+    [primaryFileLabel, record.source.downloadUrl],
+    [previewFileLabel, record.source.imageUrl],
     ["動画", getVideoUrl(record)],
   ].filter(([, url]) => url);
   const hasThumbnail = Boolean(record.source.imageUrl) && !thumbnailBroken;
@@ -55,7 +57,7 @@ export function RecordCard({
   const description = getDescriptionByLanguage(record, language);
   const japaneseTitle = getJapaneseTitle(record);
   const priorDisclosure = getPriorDisclosure(record);
-  const disclosureLabel = hasPriorDisclosureData(record) ? priorDisclosure.labelJa : "未照合";
+  const disclosureLabel = hasPriorDisclosureData(record) ? priorDisclosure.labelJa : "未判定";
   const disclosureStatusClass = record.priorDisclosure?.status || "unreviewed";
 
   return (

@@ -1,0 +1,191 @@
+import { readFile, writeFile } from "node:fs/promises";
+import { resolve } from "node:path";
+
+const rootDir = resolve(process.cwd());
+const recordsPath = resolve(rootDir, "data/pursue/pursue-records.json");
+const defaultCsvUrl = "https://www.war.gov/Portals/1/Interactive/2026/UFO/uap-data.csv?release=3";
+
+function readArg(name, fallback = "") {
+  const prefix = `${name}=`;
+  const inline = process.argv.find((arg) => arg.startsWith(prefix));
+
+  if (inline) {
+    return inline.slice(prefix.length);
+  }
+
+  const index = process.argv.indexOf(name);
+  return index >= 0 ? process.argv[index + 1] || fallback : fallback;
+}
+
+function parseCSV(csvText) {
+  const rows = [];
+  let row = [];
+  let cell = "";
+  let insideQuotes = false;
+
+  for (let index = 0; index < csvText.length; index += 1) {
+    const char = csvText[index];
+    const nextChar = csvText[index + 1];
+
+    if (char === '"' && insideQuotes && nextChar === '"') {
+      cell += '"';
+      index += 1;
+    } else if (char === '"') {
+      insideQuotes = !insideQuotes;
+    } else if (char === "," && !insideQuotes) {
+      row.push(cell.trim());
+      cell = "";
+    } else if ((char === "\n" || char === "\r") && !insideQuotes) {
+      if (cell || row.length) {
+        row.push(cell.trim());
+        rows.push(row);
+        row = [];
+        cell = "";
+      }
+      if (char === "\r" && nextChar === "\n") {
+        index += 1;
+      }
+    } else {
+      cell += char;
+    }
+  }
+
+  if (cell || row.length) {
+    row.push(cell.trim());
+    rows.push(row);
+  }
+
+  return rows;
+}
+
+function cleanValue(value) {
+  return String(value || "")
+    .replace(/^\uFEFF/, "")
+    .replace(/\u00a0/g, " ")
+    .replace(/&nbsp;/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function makeHeaderLookup(headers) {
+  return new Map(headers.map((header, index) => [cleanValue(header), index]));
+}
+
+function getCell(row, headers, name) {
+  const index = headers.get(name);
+  return index === undefined ? "" : cleanValue(row[index]);
+}
+
+function getReleaseId(release) {
+  const value = release.toLowerCase();
+
+  if (value.includes("6/12") || value.includes("june 12")) {
+    return "release_03";
+  }
+
+  if (value.includes("5/22") || value.includes("may 22")) {
+    return "release_02";
+  }
+
+  return "release_01";
+}
+
+function makeRecord(row, headers, id) {
+  const documentType = getCell(row, headers, "Type");
+  const dvidsVideoId = getCell(row, headers, "DVIDS Video ID");
+  const fileUrl = getCell(row, headers, "PDF | Image Link");
+  const thumbnailUrl = getCell(row, headers, "Modal Image");
+  const videoUrl = dvidsVideoId
+    ? `https://www.war.gov/Portals/1/Interactive/2026/UFO/${dvidsVideoId}`
+    : "";
+
+  return {
+    source: {
+      id,
+      assetFileName: getCell(row, headers, "Title"),
+      release: getCell(row, headers, "Release Date"),
+      agency: getCell(row, headers, "Agency"),
+      incidentDate: getCell(row, headers, "Incident Date"),
+      incidentLocation: getCell(row, headers, "Incident Location"),
+      documentType,
+      description: getCell(row, headers, "Description Blurb"),
+      virin: getCell(row, headers, "Image VIRIN"),
+      downloadUrl: documentType === "PDF" || documentType === "IMG" ? fileUrl : "",
+      imageUrl: thumbnailUrl,
+      videoUrl,
+    },
+    ja: {
+      assetFileNameJa: "",
+      releaseJa: "",
+      agencyJa: "",
+      incidentLocationJa: "",
+      documentTypeJa: "",
+      descriptionJa: "",
+    },
+  };
+}
+
+async function loadCsvText() {
+  const inputPath = readArg("--input");
+
+  if (inputPath) {
+    return readFile(resolve(rootDir, inputPath), "utf8");
+  }
+
+  const csvUrl = readArg("--url", defaultCsvUrl);
+  const response = await fetch(csvUrl, {
+    headers: {
+      accept: "text/csv,*/*;q=0.8",
+      referer: "https://www.war.gov/UFO/",
+      "user-agent":
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15",
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error(
+      `Failed to fetch official PURSUE CSV (${response.status}). If war.gov blocks CLI access, download the CSV in a browser and rerun with --input /path/to/uap-data.csv.`,
+    );
+  }
+
+  return response.text();
+}
+
+const releaseDate = cleanValue(readArg("--release-date", "6/12/26"));
+const csvText = (await loadCsvText()).replace(/^\uFEFF/, "");
+const rows = parseCSV(csvText).filter((row) => row.some((cell) => cleanValue(cell)));
+const headers = makeHeaderLookup(rows[0] || []);
+const sourceRows = rows.slice(1).filter((row) => getCell(row, headers, "Release Date") === releaseDate);
+
+if (!sourceRows.length) {
+  throw new Error(`No PURSUE records found for Release Date ${releaseDate}.`);
+}
+
+const index = JSON.parse(await readFile(recordsPath, "utf8"));
+const releaseId = getReleaseId(releaseDate);
+const preservedRecords = index.records.filter((record) => record.searchFacets?.releaseId !== releaseId);
+const nextNumber =
+  Math.max(
+    0,
+    ...preservedRecords.map((record) => Number(record.source.id.match(/^pursue-(\d+)$/)?.[1] || 0)),
+  ) + 1;
+const importedRecords = sourceRows.map((row, indexValue) =>
+  makeRecord(row, headers, `pursue-${String(nextNumber + indexValue).padStart(4, "0")}`),
+);
+
+const nextIndex = {
+  ...index,
+  metadata: {
+    ...index.metadata,
+    sourcePageUrl: "https://www.war.gov/UFO/",
+    csvUrl: defaultCsvUrl,
+    fetchedAt: new Date().toISOString(),
+    recordCount: preservedRecords.length + importedRecords.length,
+  },
+  records: [...preservedRecords, ...importedRecords],
+};
+
+await writeFile(recordsPath, `${JSON.stringify(nextIndex, null, 2)}\n`, "utf8");
+
+console.log(`Imported ${importedRecords.length} ${releaseId} records from ${releaseDate}.`);
+console.log(`Wrote ${recordsPath}`);

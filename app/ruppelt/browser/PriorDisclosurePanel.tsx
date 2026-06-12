@@ -36,7 +36,7 @@ export function PriorDisclosurePanel({
   onClose: () => void;
 }) {
   const priorDisclosure = getPriorDisclosure(record);
-  const disclosureLabel = hasPriorDisclosureData(record) ? priorDisclosure.labelJa : "未照合";
+  const disclosureLabel = hasPriorDisclosureData(record) ? priorDisclosure.labelJa : "未判定";
   const confidenceLabel = priorDisclosureConfidenceLabels[priorDisclosure.confidence];
   const visibleAttribution = priorDisclosure.attribution.filter((item) => item.visible !== "hidden");
   const evidenceNotes = Array.from(

@@ -9,13 +9,20 @@ import { siteConfig } from "@/lib/site";
 import { siteUrl } from "@/lib/seo";
 import { priorDisclosureLabels, type PriorDisclosureStatus, type PursueIndex } from "@/lib/pursue";
 
-const statusDashboardOrder: PriorDisclosureStatus[] = [
+type StatusDashboardKey = PriorDisclosureStatus | "unreviewed";
+
+const statusDashboardOrder: StatusDashboardKey[] = [
   "first_time_public",
   "partial",
   "previously_public",
   "unknown",
+  "unreviewed",
 ];
 const ruppeltOgpImage = `${siteUrl}/ogp-ruppelt-v2.jpg`;
+
+function getStatusDashboardLabel(status: StatusDashboardKey) {
+  return status === "unreviewed" ? "未判定" : priorDisclosureLabels[status];
+}
 
 function getFullTextRecordIds() {
   try {
@@ -29,13 +36,13 @@ function getFullTextRecordIds() {
 }
 
 export const metadata: Metadata = {
-  title: "Ruppelt V2.0 | Ruppelt V2.0 - PURSUE日本語インデックス",
+  title: "Ruppelt V2.2 | Ruppelt V2.2 - PURSUE日本語インデックス",
   description: "アメリカ政府UAP公開資料を、日本語でさくっと確認できる資料ブラウザです。",
   alternates: {
     canonical: "/ruppelt",
   },
   openGraph: {
-    title: "Ruppelt V2.0 - PURSUE日本語インデックス",
+    title: "Ruppelt V2.2 - PURSUE日本語インデックス",
     description: "アメリカ政府UAP公開資料をスマホでさくっと確認。",
     url: "/ruppelt",
     siteName: "UFO Lab Tokyo",
@@ -44,7 +51,7 @@ export const metadata: Metadata = {
         url: ruppeltOgpImage,
         width: 1200,
         height: 630,
-        alt: "Ruppelt V2.0 - PURSUE日本語インデックス",
+        alt: "Ruppelt V2.2 - PURSUE日本語インデックス",
         type: "image/jpeg",
       },
     ],
@@ -52,24 +59,26 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ruppelt V2.0 - PURSUE日本語インデックス",
+    title: "Ruppelt V2.2 - PURSUE日本語インデックス",
     description: "アメリカ政府UAP公開資料をスマホでさくっと確認。",
     images: [ruppeltOgpImage],
   },
   other: {
-    "twitter:image:alt": "Ruppelt V2.0 - PURSUE日本語インデックス",
+    "twitter:image:alt": "Ruppelt V2.2 - PURSUE日本語インデックス",
   },
 };
 
 export default function RuppeltPage() {
   const index = pursueIndex as PursueIndex;
   const fullTextRecordIds = getFullTextRecordIds();
-  const statusCounts = index.records.reduce<Record<PriorDisclosureStatus, number>>(
+  const statusCounts = index.records.reduce<Record<StatusDashboardKey, number>>(
     (counts, record) => {
       const status = record.searchFacets?.priorDisclosureStatus;
 
       if (status && statusDashboardOrder.includes(status)) {
         counts[status] += 1;
+      } else if (!record.priorDisclosure) {
+        counts.unreviewed += 1;
       }
 
       return counts;
@@ -80,6 +89,7 @@ export default function RuppeltPage() {
       partial: 0,
       known_case_new_file: 0,
       unknown: 0,
+      unreviewed: 0,
     },
   );
 
@@ -98,7 +108,7 @@ export default function RuppeltPage() {
           </div>
           <span className="sr-only">{siteConfig.shortName}</span>
         </div>
-        <h1>Ruppelt V2.0</h1>
+        <h1>Ruppelt V2.2</h1>
         <p className="tagline">PURSUE日本語インデックス</p>
         <p className="lead">アメリカ政府UAP公開資料をスマホでさくっと確認。</p>
         <p className="ruppelt-kean-note">
@@ -110,7 +120,7 @@ export default function RuppeltPage() {
         <div className="ruppelt-status-dashboard" aria-label="公開状況の件数">
           {statusDashboardOrder.map((status) => (
             <div key={status} className={`ruppelt-status-stat ruppelt-status-stat--${status}`}>
-              <span>{priorDisclosureLabels[status]}</span>
+              <span>{getStatusDashboardLabel(status)}</span>
               <strong>{statusCounts[status]}</strong>
             </div>
           ))}

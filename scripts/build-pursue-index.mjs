@@ -8,7 +8,9 @@ const priorDisclosuresPath = resolve(rootDir, "data/pursue/prior-disclosures.jso
 
 const raw = JSON.parse(await readFile(recordsPath, "utf8"));
 const translations = JSON.parse(await readFile(translationsPath, "utf8"));
-const priorDisclosures = JSON.parse(await readFile(priorDisclosuresPath, "utf8"));
+const priorDisclosures = await readFile(priorDisclosuresPath, "utf8")
+  .then((content) => JSON.parse(content))
+  .catch(() => ({}));
 
 const priorDisclosureLabels = {
   first_time_public: "初公開",
@@ -19,7 +21,17 @@ const priorDisclosureLabels = {
 };
 
 function getReleaseId(record) {
-  return record.source.release.includes("5/22") ? "release_02" : "release_01";
+  const release = record.source.release.toLowerCase();
+
+  if (release.includes("6/12") || release.includes("june 12")) {
+    return "release_03";
+  }
+
+  if (release.includes("5/22") || release.includes("may 22")) {
+    return "release_02";
+  }
+
+  return "release_01";
 }
 
 function makeDefaultPriorDisclosure(record) {
@@ -39,14 +51,14 @@ function makeDefaultPriorDisclosure(record) {
     ruppeltVerified: false,
     manualReviewRequired: true,
     reviewerNoteJa:
-      getReleaseId(record) === "release_02"
-        ? "Release 02 はRuppelt側での公開状況照合が未完了です。"
+      getReleaseId(record) === "release_02" || getReleaseId(record) === "release_03"
+        ? `${getReleaseId(record) === "release_03" ? "Release 03" : "Release 02"} はRuppelt側での公開状況照合が未完了です。`
         : "公開状況の照合データがまだ登録されていません。",
   };
 }
 
 function normalizePriorDisclosure(record) {
-  const disclosure = priorDisclosures[record.source.id];
+  const disclosure = priorDisclosures[record.source.id] || record.priorDisclosure;
 
   if (!disclosure) {
     return null;
@@ -91,7 +103,9 @@ function makeSearchFacets(record, priorDisclosure) {
 const mergedRecords = raw.records.map((record) => {
   const translation = translations[record.source.id] || {};
   const priorDisclosure = normalizePriorDisclosure(record);
-  const { priorDisclosure: _oldPriorDisclosure, searchFacets: _oldSearchFacets, ...baseRecord } = record;
+  const baseRecord = { ...record };
+  delete baseRecord.priorDisclosure;
+  delete baseRecord.searchFacets;
 
   return {
     ...baseRecord,

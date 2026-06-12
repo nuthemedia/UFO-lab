@@ -96,7 +96,7 @@ export function DocumentDetailPanel({
   const activeHighlightQuery = viewerQuery.trim() || highlightQuery;
   const detailDescription = getDescriptionByLanguage(record, "ja");
   const priorDisclosure = getPriorDisclosure(record);
-  const disclosureLabel = hasPriorDisclosureData(record) ? priorDisclosure.labelJa : "未照合";
+  const disclosureLabel = hasPriorDisclosureData(record) ? priorDisclosure.labelJa : "未判定";
   const hasThumbnail = Boolean(record.source.imageUrl) && !thumbnailBroken;
   const videoEmbedUrl = getVideoEmbedUrl(record);
   const hasVideoPreview = Boolean(videoEmbedUrl) && !hasThumbnail;

@@ -6,6 +6,9 @@ const recordsPath = resolve(rootDir, "data/pursue/pursue-records.json");
 const translationsPath = resolve(rootDir, "data/pursue/pursue-translations.ja.json");
 
 const records = JSON.parse(await readFile(recordsPath, "utf8"));
+const existingTranslations = await readFile(translationsPath, "utf8")
+  .then((content) => JSON.parse(content))
+  .catch(() => ({}));
 
 const titleCache = new Map();
 const descriptionCache = new Map();
@@ -52,7 +55,7 @@ async function getTranslation(cache, text) {
     const translated = await translateText(normalized);
     cache.set(normalized, translated);
     return translated;
-  } catch (error) {
+  } catch {
     console.warn(`Translation fallback for: ${normalized}`);
     cache.set(normalized, normalized);
     return normalized;
@@ -63,15 +66,18 @@ const output = {};
 let processed = 0;
 
 for (const record of records.records) {
-  const assetFileNameJa = await getTranslation(titleCache, record.source.assetFileName);
-  const descriptionJa = await getTranslation(descriptionCache, record.source.description);
+  const existing = existingTranslations[record.source.id] || {};
+  const assetFileNameJa =
+    existing.assetFileNameJa || (await getTranslation(titleCache, record.source.assetFileName));
+  const descriptionJa =
+    existing.descriptionJa || (await getTranslation(descriptionCache, record.source.description));
 
   output[record.source.id] = {
     assetFileNameJa,
-    releaseJa: "",
-    agencyJa: "",
-    incidentLocationJa: "",
-    documentTypeJa: "",
+    releaseJa: existing.releaseJa || "",
+    agencyJa: existing.agencyJa || "",
+    incidentLocationJa: existing.incidentLocationJa || "",
+    documentTypeJa: existing.documentTypeJa || "",
     descriptionJa,
   };
 

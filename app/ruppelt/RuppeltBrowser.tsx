@@ -215,7 +215,7 @@ export function RuppeltBrowser({ index, fullTextRecordIds }: RuppeltBrowserProps
     `種別: ${type || "すべて"}`,
     `公開状況: ${
       priorDisclosureStatus === "unreviewed"
-        ? "未照合"
+        ? "未判定"
         : priorDisclosureStatus
           ? priorDisclosureLabels[priorDisclosureStatus]
           : "すべて"
@@ -653,7 +653,7 @@ export function RuppeltBrowser({ index, fullTextRecordIds }: RuppeltBrowserProps
             >
               <option value="">すべての公開状況</option>
               <option value="unreviewed" disabled={unreviewedCount === 0}>
-                未照合（{unreviewedCount}）
+                未判定（{unreviewedCount}）
               </option>
               {priorDisclosureStatusOptions.map((value) => (
                 <option key={value} value={value} disabled={priorDisclosureCounts[value] === 0}>
