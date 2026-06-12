@@ -77,6 +77,7 @@ const requiredPaths = [
   "data/shared/pursue-document-bundles.json",
   "data/shared/search/fulltext-index.json",
   "public/ogp-ruppelt-v2.jpg",
+  "public/ogp-ruppelt-v22.jpg",
   "docs/apps/ruppelt/AGENTS.md",
   "docs/apps/ruppelt/PROJECT.md",
   "docs/apps/ruppelt/DESIGN.md",
@@ -150,9 +151,9 @@ if (missingBrandHomeHrefs.length > 0) {
 
 const requiredFileContents = [
   ["app/ruppelt/page.tsx", "Ruppelt V2.2"],
-  ["app/ruppelt/page.tsx", "ogp-ruppelt-v2.jpg"],
+  ["app/ruppelt/page.tsx", "ogp-ruppelt-v22.jpg"],
   ["app/ruppelt/lp/page.tsx", "Ruppelt V2.2"],
-  ["app/ruppelt/lp/page.tsx", "ogp-ruppelt-v2.jpg"],
+  ["app/ruppelt/lp/page.tsx", "ogp-ruppelt-v22.jpg"],
 ];
 
 const missingFileContents = requiredFileContents
@@ -174,10 +175,14 @@ const ogpImageHash = (path) =>
   createHash("sha256").update(readFileSync(resolve(rootDir, path))).digest("hex");
 const legacyRuppeltOgpHash = ogpImageHash("public/ogp-ruppelt.jpg");
 const versionedRuppeltOgpHash = ogpImageHash("public/ogp-ruppelt-v2.jpg");
+const cacheBustedRuppeltOgpHash = ogpImageHash("public/ogp-ruppelt-v22.jpg");
 
-if (legacyRuppeltOgpHash !== versionedRuppeltOgpHash) {
+if (
+  legacyRuppeltOgpHash !== versionedRuppeltOgpHash ||
+  versionedRuppeltOgpHash !== cacheBustedRuppeltOgpHash
+) {
   console.error("Ruppelt OGP images do not match. Refusing to continue:");
-  console.error("- public/ogp-ruppelt.jpg must match public/ogp-ruppelt-v2.jpg");
+  console.error("- public/ogp-ruppelt.jpg, public/ogp-ruppelt-v2.jpg, and public/ogp-ruppelt-v22.jpg must match");
   process.exit(1);
 }
 

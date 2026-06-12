@@ -9,7 +9,7 @@ const appHref = "/ruppelt";
 const brandHref = "/";
 const appUrl = `${siteUrl}${appHref}`;
 const lpUrl = `${siteUrl}/ruppelt/lp`;
-const ruppeltOgpImage = `${siteUrl}/ogp-ruppelt-v2.jpg`;
+const ruppeltOgpImage = `${siteUrl}/ogp-ruppelt-v22.jpg`;
 
 const metaTitle = "Ruppelt V2.2｜アメリカ政府UAP・UFO機密解除資料を日本語で検索";
 const metaDescription =

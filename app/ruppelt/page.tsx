@@ -19,7 +19,7 @@ const statusDashboardOrder: StatusDashboardKey[] = [
   "unreviewed",
 ];
 // Legacy Vercel build guard compatibility marker: Ruppelt V2.0.
-const ruppeltOgpImage = `${siteUrl}/ogp-ruppelt-v2.jpg`;
+const ruppeltOgpImage = `${siteUrl}/ogp-ruppelt-v22.jpg`;
 
 function getStatusDashboardLabel(status: StatusDashboardKey) {
   return status === "unreviewed" ? "未判定" : priorDisclosureLabels[status];
