@@ -1,0 +1,3674 @@
+{
+  "pursue-0223": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "CIA Reading Room / CREST系の既公開資料または広く既公開のCIA史料として照合しました。",
+      "PURSUE版ではUAP文脈の資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-017_Placement_on_High_Alert_Due_to_Perceived_Aggressive_Foreign_Posturing.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "archive_match",
+        "label": "CIA Reading Room search",
+        "url": "https://www.cia.gov/readingroom/search/site/Placement%20on%20High%20Alert%20Due%20to%20Perceived%20Aggressive%20Foreign%20Posturing",
+        "noteJa": "タイトル・文書名でCIA Reading Room側の既公開資料を照合する候補があります。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "cia_crest",
+        "sourceUrl": "https://www.cia.gov/readingroom/search/site/Placement%20on%20High%20Alert%20Due%20to%20Perceived%20Aggressive%20Foreign%20Posturing",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0224": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "1949年の米陸軍系飛行円盤研究として既公開アーカイブ照合候補があります。",
+      "同一PURSUEパッケージ全体の過去公開までは確認していません。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/DOW-UAP-D084_USArmy-Flying-Saucer-Study_1949.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "catalog_match",
+        "label": "NARA / Internet Archive search",
+        "url": "https://archive.org/search?query=US%20Army%20Flying%20Saucer%20Study%201949",
+        "noteJa": "1949年の米陸軍系飛行円盤研究として既公開アーカイブ照合候補があります。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "internet_archive",
+        "sourceUrl": "https://archive.org/search?query=US%20Army%20Flying%20Saucer%20Study%201949",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0225": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "2022年Colorado Springs UAP関連のFBI報告・レンダリング資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D002_FD-1057_Unresolved-UAP-Report_ColoradoSprings_2022.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "metadata_match",
+        "label": "Archive search",
+        "url": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D002%2C%20FD-1057%2C%20Unresolved%20UAP%20Report%2C%20Colorado%20Springs%2C%202022",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D002%2C%20FD-1057%2C%20Unresolved%20UAP%20Report%2C%20Colorado%20Springs%2C%202022",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0226": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "2022年Colorado Springs UAP関連のFBI報告・レンダリング資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D003_Digital-Rendering_Unresolved-UAP-Report_ColoradoSprings_2022.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "metadata_match",
+        "label": "Archive search",
+        "url": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D003%2C%20Digital%20Rendering%2C%20Unresolved%20UAP%20Report%2C%20Colorado%20Springs%2C%202022",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D003%2C%20Digital%20Rendering%2C%20Unresolved%20UAP%20Report%2C%20Colorado%20Springs%2C%202022",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0227": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "2024-2026年のNortheastern Orb関連FBI報告資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D009_FD-302-67_Northeastern-Orb-Sighting_2026.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "metadata_match",
+        "label": "Archive search",
+        "url": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D009%2C%20FD-302-67%2C%20%E2%80%9CNortheastern%20Orb%20Sighting%2C%E2%80%9D%202026",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D009%2C%20FD-302-67%2C%20%E2%80%9CNortheastern%20Orb%20Sighting%2C%E2%80%9D%202026",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0228": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "2024-2026年のNortheastern Orb関連FBI報告資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D010_FD-302-71_Northeastern-Orb-Sighting_2026.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "metadata_match",
+        "label": "Archive search",
+        "url": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D010%2C%20FD-302-71%2C%20%E2%80%9CNortheastern%20Orb%20Sighting%2C%E2%80%9D%202026",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D010%2C%20FD-302-71%2C%20%E2%80%9CNortheastern%20Orb%20Sighting%2C%E2%80%9D%202026",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0229": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "1950年代から1960年代のFBI UFO関連ファイルとして既公開照合候補があります。",
+      "同一PURSUEパッケージ全体の過去公開までは確認していません。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D011_DFBI-Correspondence-Referral_1949.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "catalog_match",
+        "label": "FBI Vault search",
+        "url": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D011%2C%20D%2FFBI%20Correspondence%20Referral%2C%201949",
+        "noteJa": "1950年代から1960年代のFBI UFO関連ファイルとして既公開照合候補があります。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "fbi_vault",
+        "sourceUrl": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D011%2C%20D%2FFBI%20Correspondence%20Referral%2C%201949",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0230": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "Northeastern Orb関連のPURSUE動画資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1010267",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS / archive search",
+        "url": "https://www.dvidshub.net/search/?q=FBI-UAP-PR003%2C%20%E2%80%9COrbs%20Over%20the%20Pond%2C%E2%80%9D%202024",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/search/?q=FBI-UAP-PR003%2C%20%E2%80%9COrbs%20Over%20the%20Pond%2C%E2%80%9D%202024",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0231": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "Northeastern Orb関連のPURSUE動画資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1010269",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS / archive search",
+        "url": "https://www.dvidshub.net/search/?q=FBI-UAP-PR004%2C%20%E2%80%9CNortheastern%20Orb%20Sighting%2C%E2%80%9D%202025",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/search/?q=FBI-UAP-PR004%2C%20%E2%80%9CNortheastern%20Orb%20Sighting%2C%E2%80%9D%202025",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0232": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "Colorado Springs UAP Incidentの分析資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/ICA-UAP-D001_Analysis_Colorado-Springs-UAP-Incident.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "metadata_match",
+        "label": "Archive search",
+        "url": "https://www.war.gov/UFO/",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.war.gov/UFO/",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0233": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "Robertson Panel / CIA Scientific Advisory Panel関連資料として過去公開情報が確認できる資料群です。",
+      "PURSUE版ではUAP文脈の資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-002_Scientific-Advisory-Panel-on-Unidentified-Flying-Objects_Report_1952-1953.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "archive_match",
+        "label": "CIA / Robertson Panel public references",
+        "url": "https://www.cia.gov/readingroom/search/site/Scientific%20Advisory%20Panel%20on%20Unidentified%20Flying%20Objects%20Robertson%20Panel",
+        "noteJa": "Robertson Panel / CIA Scientific Advisory Panel関連資料として過去公開情報が確認できる資料群です。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "internet_archive",
+        "sourceUrl": "https://www.cia.gov/readingroom/search/site/Scientific%20Advisory%20Panel%20on%20Unidentified%20Flying%20Objects%20Robertson%20Panel",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0234": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "CIA史料『The U-2 and OXCART Programs, 1954-1974』として既公開の出版・公開情報があります。",
+      "PURSUE版ではUAP文脈の資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-003-THE_CENTRAL_INTELLIGENCE_AGENCY_AND_OVERHEAD_RECONNAISSANCE-THE_U-2_AND_OXCART_PROGRAMS_1954-1974.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "archive_match",
+        "label": "CIA History Staff publication",
+        "url": "https://www.cia.gov/readingroom/search/site/Central%20Intelligence%20Agency%20and%20Overhead%20Reconnaissance%20U-2%20OXCART%20Programs%201954%201974",
+        "noteJa": "CIA史料『The U-2 and OXCART Programs, 1954-1974』として既公開の出版・公開情報があります。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "internet_archive",
+        "sourceUrl": "https://www.cia.gov/readingroom/search/site/Central%20Intelligence%20Agency%20and%20Overhead%20Reconnaissance%20U-2%20OXCART%20Programs%201954%201974",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0235": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "CIA Reading Room / CREST系の既公開資料または広く既公開のCIA史料として照合しました。",
+      "PURSUE版ではUAP文脈の資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-004-CASE_17708_CLOSED_AND_DR_LEON_DAVIDSON.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "archive_match",
+        "label": "CIA Reading Room search",
+        "url": "https://www.cia.gov/readingroom/search/site/CASE%2017708%20(CLOSED)%20and%20DR.%20Leon%20Davidson",
+        "noteJa": "タイトル・文書名でCIA Reading Room側の既公開資料を照合する候補があります。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "cia_crest",
+        "sourceUrl": "https://www.cia.gov/readingroom/search/site/CASE%2017708%20(CLOSED)%20and%20DR.%20Leon%20Davidson",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0236": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "CIA Reading Room / CREST系の既公開資料または広く既公開のCIA史料として照合しました。",
+      "PURSUE版ではUAP文脈の資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-005-GERMAN_SCIENTISTS_ ARTICLE_ON_FLYING_DISCS.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "archive_match",
+        "label": "CIA Reading Room search",
+        "url": "https://www.cia.gov/readingroom/search/site/German%20Scientist's%20Article%20on%20'Flying%20Discs'",
+        "noteJa": "タイトル・文書名でCIA Reading Room側の既公開資料を照合する候補があります。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "cia_crest",
+        "sourceUrl": "https://www.cia.gov/readingroom/search/site/German%20Scientist's%20Article%20on%20'Flying%20Discs'",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0237": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "CIA Reading Room / CREST系の既公開資料または広く既公開のCIA史料として照合しました。",
+      "PURSUE版ではUAP文脈の資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-006_Sighting_of_Unconventional_Aircraft.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "archive_match",
+        "label": "CIA Reading Room search",
+        "url": "https://www.cia.gov/readingroom/search/site/Sighting%20Of%20Unconventional%20Aircraft",
+        "noteJa": "タイトル・文書名でCIA Reading Room側の既公開資料を照合する候補があります。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "cia_crest",
+        "sourceUrl": "https://www.cia.gov/readingroom/search/site/Sighting%20Of%20Unconventional%20Aircraft",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0238": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "CIA Reading Room / CREST系の既公開資料または広く既公開のCIA史料として照合しました。",
+      "PURSUE版ではUAP文脈の資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-007_Current_Status_of_Unidentified_Flying_Objects_UFO_Project.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "archive_match",
+        "label": "CIA Reading Room search",
+        "url": "https://www.cia.gov/readingroom/search/site/Current%20Status%20Of%20Unidentified%20Flying%20Objects%20(UFO)%20Project.",
+        "noteJa": "タイトル・文書名でCIA Reading Room側の既公開資料を照合する候補があります。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "cia_crest",
+        "sourceUrl": "https://www.cia.gov/readingroom/search/site/Current%20Status%20Of%20Unidentified%20Flying%20Objects%20(UFO)%20Project.",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0239": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "CIA Reading Room / CREST系の既公開資料または広く既公開のCIA史料として照合しました。",
+      "PURSUE版ではUAP文脈の資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-008_SPECULATIVE_PAPER_BY_N_KARDASHEV_AND_A_SAKHAROV.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "archive_match",
+        "label": "CIA Reading Room search",
+        "url": "https://www.cia.gov/readingroom/search/site/Speculative%20Paper%20By%20N%20Kardashev%20and%20A%20Sakharov%20on%20Charged%20Mass%20in%20Space%20at%20Conference%20on%20Origins%20Of%20Life%2C%20Armenia%2C%206-8%20September%201971%2FLow%20Scientific%20Level%20Of%20Other%20Soviet%20Papers",
+        "noteJa": "タイトル・文書名でCIA Reading Room側の既公開資料を照合する候補があります。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "cia_crest",
+        "sourceUrl": "https://www.cia.gov/readingroom/search/site/Speculative%20Paper%20By%20N%20Kardashev%20and%20A%20Sakharov%20on%20Charged%20Mass%20in%20Space%20at%20Conference%20on%20Origins%20Of%20Life%2C%20Armenia%2C%206-8%20September%201971%2FLow%20Scientific%20Level%20Of%20Other%20Soviet%20Papers",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0240": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "CIA Reading Room / CREST系の既公開資料または広く既公開のCIA史料として照合しました。",
+      "PURSUE版ではUAP文脈の資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-009-UNKNOWN-FLYING_OBJECTS_OBERVED_OVER_BUDAPEST.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "archive_match",
+        "label": "CIA Reading Room search",
+        "url": "https://www.cia.gov/readingroom/search/site/Unknown%20Flying%20Objects%20Observed%20Over%20Budapest",
+        "noteJa": "タイトル・文書名でCIA Reading Room側の既公開資料を照合する候補があります。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "cia_crest",
+        "sourceUrl": "https://www.cia.gov/readingroom/search/site/Unknown%20Flying%20Objects%20Observed%20Over%20Budapest",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0241": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "CIA Reading Room / CREST系の既公開資料または広く既公開のCIA史料として照合しました。",
+      "PURSUE版ではUAP文脈の資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-010_REPORT_ON_CONVERSATIONS_WITH_SOVIET_SCIENTISTS_ON_SUBJECT_OF_UNIDENTIFIED_FLYING_OBJECTS_IS_THE_USSR.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "archive_match",
+        "label": "CIA Reading Room search",
+        "url": "https://www.cia.gov/readingroom/search/site/Report%20on%20Conversations%20with%20Soviet%20Scientists%20on%20Subject%20of%20Unidentified%20Flying%20Objects%20in%20the%20USSR",
+        "noteJa": "タイトル・文書名でCIA Reading Room側の既公開資料を照合する候補があります。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "cia_crest",
+        "sourceUrl": "https://www.cia.gov/readingroom/search/site/Report%20on%20Conversations%20with%20Soviet%20Scientists%20on%20Subject%20of%20Unidentified%20Flying%20Objects%20in%20the%20USSR",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0242": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "CIA Reading Room / CREST系の既公開資料または広く既公開のCIA史料として照合しました。",
+      "PURSUE版ではUAP文脈の資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-011-The_Sary_Shagan_Weapons_Testing_Range.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "archive_match",
+        "label": "CIA Reading Room search",
+        "url": "https://www.cia.gov/readingroom/search/site/The%20Sary%20Shagan%20Weapons%20Testing%20Range",
+        "noteJa": "タイトル・文書名でCIA Reading Room側の既公開資料を照合する候補があります。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "cia_crest",
+        "sourceUrl": "https://www.cia.gov/readingroom/search/site/The%20Sary%20Shagan%20Weapons%20Testing%20Range",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0243": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "CIA Reading Room / CREST系の既公開資料または広く既公開のCIA史料として照合しました。",
+      "PURSUE版ではUAP文脈の資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-012-Combatting_Fatigue_in_Crewmembers.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "archive_match",
+        "label": "CIA Reading Room search",
+        "url": "https://www.cia.gov/readingroom/search/site/Combating%20Fatigue%20In%20Crewmembers",
+        "noteJa": "タイトル・文書名でCIA Reading Room側の既公開資料を照合する候補があります。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "cia_crest",
+        "sourceUrl": "https://www.cia.gov/readingroom/search/site/Combating%20Fatigue%20In%20Crewmembers",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0244": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "CIA Reading Room / CREST系の既公開資料または広く既公開のCIA史料として照合しました。",
+      "PURSUE版ではUAP文脈の資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-013-Report_of_Unusual_Flying_Object_Sightings_and_Attendant_Scientific_Activity.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "archive_match",
+        "label": "CIA Reading Room search",
+        "url": "https://www.cia.gov/readingroom/search/site/Report%20of%20Unusual%20Flying%20Object%20Sightings%20and%20Attendant%20Scientific%20Activity",
+        "noteJa": "タイトル・文書名でCIA Reading Room側の既公開資料を照合する候補があります。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "cia_crest",
+        "sourceUrl": "https://www.cia.gov/readingroom/search/site/Report%20of%20Unusual%20Flying%20Object%20Sightings%20and%20Attendant%20Scientific%20Activity",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0245": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "CIA Reading Room / CREST系の既公開資料または広く既公開のCIA史料として照合しました。",
+      "PURSUE版ではUAP文脈の資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-014_British_Activity_in_the_Field_of_Unidentified_Flying_Objects.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "archive_match",
+        "label": "CIA Reading Room search",
+        "url": "https://www.cia.gov/readingroom/search/site/British%20activity%20in%20the%20Field%20of%20%22Unidentified%20Flying%20Objects%22",
+        "noteJa": "タイトル・文書名でCIA Reading Room側の既公開資料を照合する候補があります。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "cia_crest",
+        "sourceUrl": "https://www.cia.gov/readingroom/search/site/British%20activity%20in%20the%20Field%20of%20%22Unidentified%20Flying%20Objects%22",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0246": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "Project Blue Book Special Report No. 14は過去公開済みの代表的なUFO調査報告です。",
+      "PURSUE版ではUAP文脈の資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-015-Project_Blue_Book_Special_Report_No_14.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "archive_match",
+        "label": "Project Blue Book / Internet Archive",
+        "url": "https://archive.org/search?query=Project%20Blue%20Book%20Special%20Report%20No.%2014%20Analysis%20of%20Reports%20of%20Unidentified%20Aerial%20Objects",
+        "noteJa": "Project Blue Book Special Report No. 14は過去公開済みの代表的なUFO調査報告です。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "internet_archive",
+        "sourceUrl": "https://archive.org/search?query=Project%20Blue%20Book%20Special%20Report%20No.%2014%20Analysis%20of%20Reports%20of%20Unidentified%20Aerial%20Objects",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0247": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "CIA Reading Room / CREST系の既公開資料または広く既公開のCIA史料として照合しました。",
+      "PURSUE版ではUAP文脈の資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-016-Sightings_of_Unidentified_Flying_Ojbects_in_Ladakh_Nepal_Sikkim_and_Bhutan.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "archive_match",
+        "label": "CIA Reading Room search",
+        "url": "https://www.cia.gov/readingroom/search/site/Sightings%20of%20Unidentified%20Flying%20Objects%20in%20Ladakh%2C%20Nepal%2C%20Sikkim%20and%20Bhutan",
+        "noteJa": "タイトル・文書名でCIA Reading Room側の既公開資料を照合する候補があります。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "cia_crest",
+        "sourceUrl": "https://www.cia.gov/readingroom/search/site/Sightings%20of%20Unidentified%20Flying%20Objects%20in%20Ladakh%2C%20Nepal%2C%20Sikkim%20and%20Bhutan",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0248": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "CIA Reading Room / CREST系の既公開資料または広く既公開のCIA史料として照合しました。",
+      "PURSUE版ではUAP文脈の資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-018_Report_of_Unusual_Flying_Object_Sightings_and_Attendant_Scientific_Activity.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "archive_match",
+        "label": "CIA Reading Room search",
+        "url": "https://www.cia.gov/readingroom/search/site/Report%20of%20Unusual%20Flying%20Object%20Sightings%20and%20Attendant%20Scientific%20Activity",
+        "noteJa": "タイトル・文書名でCIA Reading Room側の既公開資料を照合する候補があります。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "cia_crest",
+        "sourceUrl": "https://www.cia.gov/readingroom/search/site/Report%20of%20Unusual%20Flying%20Object%20Sightings%20and%20Attendant%20Scientific%20Activity",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0249": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "CIA Reading Room / CREST系の既公開資料または広く既公開のCIA史料として照合しました。",
+      "PURSUE版ではUAP文脈の資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-019-Australian_Dept_of_Defense_Scientific_and_Intel_Aspects_of_the_UFO_Problem.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "archive_match",
+        "label": "CIA Reading Room search",
+        "url": "https://www.cia.gov/readingroom/search/site/Australian%20Dept%20of%20Defense%20Scientific%20and%20Intel%20Aspects%20of%20the%20UFO%20Problem",
+        "noteJa": "タイトル・文書名でCIA Reading Room側の既公開資料を照合する候補があります。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "cia_crest",
+        "sourceUrl": "https://www.cia.gov/readingroom/search/site/Australian%20Dept%20of%20Defense%20Scientific%20and%20Intel%20Aspects%20of%20the%20UFO%20Problem",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0250": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "Western United States Event関連のAARO/FBI資料またはデジタル再現資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/DOW-UAP-D077_Unresolved-Case-Analysis-Update_Western-United-States-Event.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "metadata_match",
+        "label": "Archive search",
+        "url": "https://www.aaro.mil/",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.aaro.mil/",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0251": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "Western United States Event関連のAARO/FBI資料またはデジタル再現資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/DOW-UAP-D078_Notional-Map_Western-United-States-Event.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "metadata_match",
+        "label": "Archive search",
+        "url": "https://www.aaro.mil/",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.aaro.mil/",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0252": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "Western United States Event関連のAARO/FBI資料またはデジタル再現資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/DoW-UAP-D079_Narrative-1_Western-US-Event.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "metadata_match",
+        "label": "Archive search",
+        "url": "https://www.aaro.mil/",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.aaro.mil/",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0253": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "Western United States Event関連のAARO/FBI資料またはデジタル再現資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/DoW-UAP-D080_Narrative-2_Western-US-Event.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "metadata_match",
+        "label": "Archive search",
+        "url": "https://www.aaro.mil/",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.aaro.mil/",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0254": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "Western United States Event関連のAARO/FBI資料またはデジタル再現資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/DoW-UAP-D081_Narrative-3_Western-US-Event.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "metadata_match",
+        "label": "Archive search",
+        "url": "https://www.aaro.mil/",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.aaro.mil/",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0255": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "Western United States Event関連のAARO/FBI資料またはデジタル再現資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/DoW-UAP-D082_Narrative-4_Western-US-Event.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "metadata_match",
+        "label": "Archive search",
+        "url": "https://www.aaro.mil/",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.aaro.mil/",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0256": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "Western United States Event関連のAARO/FBI資料またはデジタル再現資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/DoW-UAP-D083_Narrative-5_Western-US-Event.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "metadata_match",
+        "label": "Archive search",
+        "url": "https://www.aaro.mil/",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.aaro.mil/",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0257": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "Robertson Panel / CIA Scientific Advisory Panel関連資料として過去公開情報が確認できる資料群です。",
+      "PURSUE版ではUAP文脈の資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/DOW-UAP-D085_Transmission-of-CIA-Scientific-Advisory-Panel-Rept_1953.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "archive_match",
+        "label": "CIA / Robertson Panel public references",
+        "url": "https://www.cia.gov/readingroom/search/site/Scientific%20Advisory%20Panel%20on%20Unidentified%20Flying%20Objects%20Robertson%20Panel",
+        "noteJa": "Robertson Panel / CIA Scientific Advisory Panel関連資料として過去公開情報が確認できる資料群です。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "internet_archive",
+        "sourceUrl": "https://www.cia.gov/readingroom/search/site/Scientific%20Advisory%20Panel%20on%20Unidentified%20Flying%20Objects%20Robertson%20Panel",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0258": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "1948年の米海軍飛行円盤報告として既公開アーカイブ照合候補があります。",
+      "同一PURSUEパッケージ全体の過去公開までは確認していません。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/DOW-UAP-D086_USNavy-Report-of-Flying-Discs_1948.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "catalog_match",
+        "label": "NARA / Internet Archive search",
+        "url": "https://archive.org/search?query=US%20Navy%20Report%20of%20Flying%20Discs%201948",
+        "noteJa": "1948年の米海軍飛行円盤報告として既公開アーカイブ照合候補があります。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "internet_archive",
+        "sourceUrl": "https://archive.org/search?query=US%20Navy%20Report%20of%20Flying%20Discs%201948",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0259": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "Project Blue Book / USAF系ケース資料として元資料群の既公開照合候補があります。",
+      "同一PURSUEパッケージ全体の過去公開までは確認していません。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/DOW-UAP-D087_US-AirForce_Analysis-of-Flying-Objects-in-the-US_1-100.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "catalog_match",
+        "label": "Project Blue Book archive search",
+        "url": "https://archive.org/search?query=DOW-UAP-D087%2C%20U.S.%20Air%20Force%20Analysis%20of%20Flying%20Objects%20in%20the%20United%20States%2C%201-100",
+        "noteJa": "Project Blue Book / USAF系ケース資料として元資料群の既公開照合候補があります。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "internet_archive",
+        "sourceUrl": "https://archive.org/search?query=DOW-UAP-D087%2C%20U.S.%20Air%20Force%20Analysis%20of%20Flying%20Objects%20in%20the%20United%20States%2C%201-100",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0260": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "Project Blue Book / USAF系ケース資料として元資料群の既公開照合候補があります。",
+      "同一PURSUEパッケージ全体の過去公開までは確認していません。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/DOW-UAP-D088_US-AirForce_Analysis-of-Flying-Objects-in-the-US_101-172.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "catalog_match",
+        "label": "Project Blue Book archive search",
+        "url": "https://archive.org/search?query=DOW-UAP-D088%2C%20U.S.%20Air%20Force%20Analysis%20of%20Flying%20Objects%20in%20the%20United%20States%2C%20101-172",
+        "noteJa": "Project Blue Book / USAF系ケース資料として元資料群の既公開照合候補があります。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "internet_archive",
+        "sourceUrl": "https://archive.org/search?query=DOW-UAP-D088%2C%20U.S.%20Air%20Force%20Analysis%20of%20Flying%20Objects%20in%20the%20United%20States%2C%20101-172",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0261": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "2022年Colorado Springs UAP関連のFBI報告・レンダリング資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D001_FD-302_Unresolved-UAP-Report_ColoradoSprings_2022.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "metadata_match",
+        "label": "Archive search",
+        "url": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D001%2C%20FD-302%2C%20Unresolved%20UAP%20Report%2C%20Colorado%20Springs%2C%202022",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D001%2C%20FD-302%2C%20Unresolved%20UAP%20Report%2C%20Colorado%20Springs%2C%202022",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0262": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "2024-2026年のNortheastern Orb関連FBI報告資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D004_FD-1057-02_Northeastern-US_2024.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "metadata_match",
+        "label": "Archive search",
+        "url": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D004%2C%20FD-1057-02%2C%20Northeastern%20United%20States%2C%202024",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D004%2C%20FD-1057-02%2C%20Northeastern%20United%20States%2C%202024",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0263": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "2024-2026年のNortheastern Orb関連FBI報告資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D005_FD-1057-04_Northeastern-US_2024.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "metadata_match",
+        "label": "Archive search",
+        "url": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D005%2C%20FD-1057-04%2C%20Northeastern%20United%20States%2C%202024",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D005%2C%20FD-1057-04%2C%20Northeastern%20United%20States%2C%202024",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0264": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "2024-2026年のNortheastern Orb関連FBI報告資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D006_FD-1057-05_Northeastern-US_2024.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "metadata_match",
+        "label": "Archive search",
+        "url": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D006%2C%20FD-1057-05%2C%20Northeastern%20United%20States%2C%202024",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D006%2C%20FD-1057-05%2C%20Northeastern%20United%20States%2C%202024",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0265": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "2024-2026年のNortheastern Orb関連FBI報告資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D007_FD-1057-06_Northeastern-US_2024.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "metadata_match",
+        "label": "Archive search",
+        "url": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D007%2C%20FD-1057-06%2C%20Northeastern%20United%20States%2C%202024",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D007%2C%20FD-1057-06%2C%20Northeastern%20United%20States%2C%202024",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0266": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "2024-2026年のNortheastern Orb関連FBI報告資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D008_FD-1057-07_Northeastern-US_2024.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "metadata_match",
+        "label": "Archive search",
+        "url": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D008%2C%20FD-1057-07%2C%20Northeastern%20United%20States%2C%202024",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D008%2C%20FD-1057-07%2C%20Northeastern%20United%20States%2C%202024",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0267": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "1950年代から1960年代のFBI UFO関連ファイルとして既公開照合候補があります。",
+      "同一PURSUEパッケージ全体の過去公開までは確認していません。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D012_Newark-Field-Office_1952-1967.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "catalog_match",
+        "label": "FBI Vault search",
+        "url": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D012%2C%20Newark%20Field%20Office%2C%201952-1967",
+        "noteJa": "1950年代から1960年代のFBI UFO関連ファイルとして既公開照合候補があります。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "fbi_vault",
+        "sourceUrl": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D012%2C%20Newark%20Field%20Office%2C%201952-1967",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0268": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "1950年代から1960年代のFBI UFO関連ファイルとして既公開照合候補があります。",
+      "同一PURSUEパッケージ全体の過去公開までは確認していません。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D013_WA-UFO-Investigation_1952-1960.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "catalog_match",
+        "label": "FBI Vault search",
+        "url": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D013%2C%20Washington%20State%20%E2%80%98UFO%E2%80%99%20Investigation%2C%201952-1960",
+        "noteJa": "1950年代から1960年代のFBI UFO関連ファイルとして既公開照合候補があります。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "fbi_vault",
+        "sourceUrl": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D013%2C%20Washington%20State%20%E2%80%98UFO%E2%80%99%20Investigation%2C%201952-1960",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0269": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "Western United States Event関連のAARO/FBI資料またはデジタル再現資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D014_Digital-Rendering_Incident-1-1_Western-US-Event_2023.jpg",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "image_match",
+        "label": "Archive search",
+        "url": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D014%2C%20Digital%20Rendering%2C%20Narrative%20Statement%201-1%2C%20Western%20United%20States%20Event%2C%202023",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D014%2C%20Digital%20Rendering%2C%20Narrative%20Statement%201-1%2C%20Western%20United%20States%20Event%2C%202023",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0270": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "Western United States Event関連のAARO/FBI資料またはデジタル再現資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D015_Digital-Rendering_Incident-1-2_Western-US-Event_2023.jpg",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "image_match",
+        "label": "Archive search",
+        "url": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D015%2C%20Digital%20Rendering%2C%20Narrative%20Statement%201-2%2C%20Western%20United%20States%20Event%2C%202023",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D015%2C%20Digital%20Rendering%2C%20Narrative%20Statement%201-2%2C%20Western%20United%20States%20Event%2C%202023",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0271": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "Western United States Event関連のAARO/FBI資料またはデジタル再現資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D016_Digital-Rendering_Incident-2-1_Western-US-Event_2023.jpg",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "image_match",
+        "label": "Archive search",
+        "url": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D016%2C%20Digital%20Rendering%2C%20Narrative%20Statement%202-1%2C%20Western%20United%20States%20Event%2C%202023",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D016%2C%20Digital%20Rendering%2C%20Narrative%20Statement%202-1%2C%20Western%20United%20States%20Event%2C%202023",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0272": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "Western United States Event関連のAARO/FBI資料またはデジタル再現資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D017_Digital-Rendering_Incident-2-2_Western-US-Event_2023.jpg",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "image_match",
+        "label": "Archive search",
+        "url": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D017%2C%20Digital%20Rendering%2C%20Narrative%20Statement%202-2%2C%20Western%20United%20States%20Event%2C%202023",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D017%2C%20Digital%20Rendering%2C%20Narrative%20Statement%202-2%2C%20Western%20United%20States%20Event%2C%202023",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0273": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "Western United States Event関連のAARO/FBI資料またはデジタル再現資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D018_Digital-Rendering_Incident-2-3_Western-US-Event_2023.jpg",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "image_match",
+        "label": "Archive search",
+        "url": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D018%2C%20Digital%20Rendering%2C%20Narrative%20Statement%202-3%2C%20Western%20United%20States%20Event%2C%202023",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D018%2C%20Digital%20Rendering%2C%20Narrative%20Statement%202-3%2C%20Western%20United%20States%20Event%2C%202023",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0274": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "Western United States Event関連のAARO/FBI資料またはデジタル再現資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D019_Digital-Rendering_Incident-2-4_Western-US-Event_2023.jpg",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "image_match",
+        "label": "Archive search",
+        "url": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D019%2C%20Digital%20Rendering%2C%20Narrative%20Statement%202-4%2C%20Western%20United%20States%20Event%2C%202023",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D019%2C%20Digital%20Rendering%2C%20Narrative%20Statement%202-4%2C%20Western%20United%20States%20Event%2C%202023",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0275": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "Western United States Event関連のAARO/FBI資料またはデジタル再現資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D020_Digital-Rendering_Incident-2-5_Western-US-Event_2023.jpg",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "image_match",
+        "label": "Archive search",
+        "url": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D020%2C%20Digital%20Rendering%2C%20Narrative%20Statement%202-5%2C%20Western%20United%20States%20Event%2C%202023",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D020%2C%20Digital%20Rendering%2C%20Narrative%20Statement%202-5%2C%20Western%20United%20States%20Event%2C%202023",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0276": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "Western United States Event関連のAARO/FBI資料またはデジタル再現資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D021_Digital-Rendering_Incident-1-3_Western-US-Event_2023.jpg",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "image_match",
+        "label": "Archive search",
+        "url": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D021%2C%20Digital%20Rendering%2C%20Narrative%20Statement%201-3%2C%20Western%20United%20States%20Event%2C%202023",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D021%2C%20Digital%20Rendering%2C%20Narrative%20Statement%201-3%2C%20Western%20United%20States%20Event%2C%202023",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0277": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "Western United States Event関連のAARO/FBI資料またはデジタル再現資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D022_Digital-Rendering_Incident-2-6_Western-US-Event_2023.jpg",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "image_match",
+        "label": "Archive search",
+        "url": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D022%2C%20Digital%20Rendering%2C%20Narrative%20Statement%202-6%2C%20Western%20United%20States%20Event%2C%202026",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D022%2C%20Digital%20Rendering%2C%20Narrative%20Statement%202-6%2C%20Western%20United%20States%20Event%2C%202026",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0278": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "Western United States Event関連のAARO/FBI資料またはデジタル再現資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D023_Digital-Rendering_Incident-2-7_Western-US-Event_2023.jpg",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "image_match",
+        "label": "Archive search",
+        "url": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D023%2C%20Digital%20Rendering%2C%20Narrative%20Statement%202-7%2C%20Western%20United%20States%20Event%2C%202023",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D023%2C%20Digital%20Rendering%2C%20Narrative%20Statement%202-7%2C%20Western%20United%20States%20Event%2C%202023",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0279": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "Northeastern Orb関連のPURSUE動画資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1010263",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS / archive search",
+        "url": "https://www.dvidshub.net/search/?q=FBI-UAP-PR001%2C%20%E2%80%9CTriangle%20Orbs%2C%E2%80%9D%20Northeastern%20United%20States%2C%202021",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/search/?q=FBI-UAP-PR001%2C%20%E2%80%9CTriangle%20Orbs%2C%E2%80%9D%20Northeastern%20United%20States%2C%202021",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0280": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "Northeastern Orb関連のPURSUE動画資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1010264",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS / archive search",
+        "url": "https://www.dvidshub.net/search/?q=FBI-UAP-PR002%2C%20%E2%80%9CRed%20Orb%20Rotation%2C%E2%80%9D%20Northeastern%20United%20States%2C%202022",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/search/?q=FBI-UAP-PR002%2C%20%E2%80%9CRed%20Orb%20Rotation%2C%E2%80%9D%20Northeastern%20United%20States%2C%202022",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0281": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "Western United States Event関連のAARO/FBI資料またはデジタル再現資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1010272",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS / archive search",
+        "url": "https://www.dvidshub.net/search/?q=FBI-UAP-PR005%2C%20Digital%20Recreation%2C%20Narrative%20Statement%203-1%2C%20Western%20United%20States%20Event%2C%202023",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/search/?q=FBI-UAP-PR005%2C%20Digital%20Recreation%2C%20Narrative%20Statement%203-1%2C%20Western%20United%20States%20Event%2C%202023",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0282": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "Western United States Event関連のAARO/FBI資料またはデジタル再現資料です。",
+      "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1010276",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS / archive search",
+        "url": "https://www.dvidshub.net/search/?q=FBI-UAP-PR006%2C%20Digital%20Recreation%2C%20Narrative%20Statement%203-2%2C%20Western%20United%20States%20Event%2C%202023",
+        "noteJa": "同一資料の過去公開確認に使った検索候補です。明確な既公開一致は確認できませんでした。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/search/?q=FBI-UAP-PR006%2C%20Digital%20Recreation%2C%20Narrative%20Statement%203-2%2C%20Western%20United%20States%20Event%2C%202023",
+        "role": "auxiliary_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。 初公開の断定は避けるため信頼度は低にしています。"
+  },
+  "pursue-0283": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "NASAの有人宇宙飛行ミッション・デブリーフィングとして過去公開済みの資料群です。",
+      "PURSUE版ではUAP文脈の資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/NASA-UAP-D015_Astronaut-Scientific-Debriefings_1962-1963.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "archive_match",
+        "label": "NASA History / mission debriefing search",
+        "url": "https://www.nasa.gov/history/",
+        "noteJa": "NASAの有人宇宙飛行ミッション・デブリーフィングとして過去公開済みの資料群です。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nasa",
+        "sourceUrl": "https://www.nasa.gov/history/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0284": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "NASAの有人宇宙飛行ミッション・デブリーフィングとして過去公開済みの資料群です。",
+      "PURSUE版ではUAP文脈の資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/NASA-UAP-D016_Preliminary-Gemini-4-Crew-Debriefing_Part1_1965.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "archive_match",
+        "label": "NASA History / mission debriefing search",
+        "url": "https://www.nasa.gov/history/",
+        "noteJa": "NASAの有人宇宙飛行ミッション・デブリーフィングとして過去公開済みの資料群です。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nasa",
+        "sourceUrl": "https://www.nasa.gov/history/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0285": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "NASAの有人宇宙飛行ミッション・デブリーフィングとして過去公開済みの資料群です。",
+      "PURSUE版ではUAP文脈の資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/NASA-UAP-D017_Preliminary-Gemini-4-Crew-Debriefing_Part2_1965.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "archive_match",
+        "label": "NASA History / mission debriefing search",
+        "url": "https://www.nasa.gov/history/",
+        "noteJa": "NASAの有人宇宙飛行ミッション・デブリーフィングとして過去公開済みの資料群です。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nasa",
+        "sourceUrl": "https://www.nasa.gov/history/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0286": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "NASAの有人宇宙飛行ミッション・デブリーフィングとして過去公開済みの資料群です。",
+      "PURSUE版ではUAP文脈の資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/NASA-UAP-D018_Gemini-4_Experiment-Debriefing_1967.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "archive_match",
+        "label": "NASA History / mission debriefing search",
+        "url": "https://www.nasa.gov/history/",
+        "noteJa": "NASAの有人宇宙飛行ミッション・デブリーフィングとして過去公開済みの資料群です。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nasa",
+        "sourceUrl": "https://www.nasa.gov/history/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0287": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "NASAの有人宇宙飛行ミッション・デブリーフィングとして過去公開済みの資料群です。",
+      "PURSUE版ではUAP文脈の資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/NASA-UAP-D019_Gemini-5-Technical-Debriefing_Part1_1965.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "archive_match",
+        "label": "NASA History / mission debriefing search",
+        "url": "https://www.nasa.gov/history/",
+        "noteJa": "NASAの有人宇宙飛行ミッション・デブリーフィングとして過去公開済みの資料群です。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nasa",
+        "sourceUrl": "https://www.nasa.gov/history/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0288": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "NASAの有人宇宙飛行ミッション・デブリーフィングとして過去公開済みの資料群です。",
+      "PURSUE版ではUAP文脈の資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/NASA-UAP-D020_Gemini-5-Technical-Debriefing_Part2_1965.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "archive_match",
+        "label": "NASA History / mission debriefing search",
+        "url": "https://www.nasa.gov/history/",
+        "noteJa": "NASAの有人宇宙飛行ミッション・デブリーフィングとして過去公開済みの資料群です。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nasa",
+        "sourceUrl": "https://www.nasa.gov/history/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0289": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "NASAの有人宇宙飛行ミッション・デブリーフィングとして過去公開済みの資料群です。",
+      "PURSUE版ではUAP文脈の資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/NASA-UAP-D021_Gemini-7-Technical-Debriefing_1965.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "archive_match",
+        "label": "NASA History / mission debriefing search",
+        "url": "https://www.nasa.gov/history/",
+        "noteJa": "NASAの有人宇宙飛行ミッション・デブリーフィングとして過去公開済みの資料群です。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nasa",
+        "sourceUrl": "https://www.nasa.gov/history/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0290": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "NASAの有人宇宙飛行ミッション・デブリーフィングとして過去公開済みの資料群です。",
+      "PURSUE版ではUAP文脈の資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/NASA-UAP-D022_Gemini-9-Debriefing_1966.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "archive_match",
+        "label": "NASA History / mission debriefing search",
+        "url": "https://www.nasa.gov/history/",
+        "noteJa": "NASAの有人宇宙飛行ミッション・デブリーフィングとして過去公開済みの資料群です。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nasa",
+        "sourceUrl": "https://www.nasa.gov/history/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0291": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "Gordon Cooper関連の発言・音声は既知ですが、PURSUE版の抜粋音声そのものの過去公開は未確認です。",
+      "同一PURSUEパッケージ全体の過去公開までは確認していません。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1010337",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "catalog_match",
+        "label": "NASA History / audio archive search",
+        "url": "https://www.nasa.gov/history/",
+        "noteJa": "Gordon Cooper関連の発言・音声は既知ですが、PURSUE版の抜粋音声そのものの過去公開は未確認です。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nasa",
+        "sourceUrl": "https://www.nasa.gov/history/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0292": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "Apollo 16科学デブリーフィング関連の音声・記録として過去公開済みの資料群です。",
+      "PURSUE版ではUAP文脈の資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1010319",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "archive_match",
+        "label": "NASA History / Apollo 16 audio",
+        "url": "https://www.nasa.gov/history/",
+        "noteJa": "Apollo 16科学デブリーフィング関連の音声・記録として過去公開済みの資料群です。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nasa",
+        "sourceUrl": "https://www.nasa.gov/history/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0293": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "Apollo 16科学デブリーフィング関連の音声・記録として過去公開済みの資料群です。",
+      "PURSUE版ではUAP文脈の資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1010336",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "archive_match",
+        "label": "NASA History / Apollo 16 audio",
+        "url": "https://www.nasa.gov/history/",
+        "noteJa": "Apollo 16科学デブリーフィング関連の音声・記録として過去公開済みの資料群です。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nasa",
+        "sourceUrl": "https://www.nasa.gov/history/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0294": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "1998年の議会・ホワイトハウス宛UFO関連書簡として既公開照合候補があります。",
+      "同一PURSUEパッケージ全体の過去公開までは確認していません。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/061226/release_03/documents/USG-UAP-D001_Congress-WhiteHouse-UFO-Correspondence_1998.pdf",
+        "noteJa": "PURSUE Release 03の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "downloadUrl",
+          "videoUrl",
+          "imageUrl"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "type": "catalog_match",
+        "label": "Government correspondence archive search",
+        "url": "https://archive.org/search?query=USG-UAP-D001%2C%20Congressional%2C%20White%20House%2C%20UFO-related%20Constituent%20Correspondence%2C%201998",
+        "noteJa": "1998年の議会・ホワイトハウス宛UFO関連書簡として既公開照合候補があります。",
+        "matchedFields": [
+          "assetFileName"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "internet_archive",
+        "sourceUrl": "https://archive.org/search?query=USG-UAP-D001%2C%20Congressional%2C%20White%20House%2C%20UFO-related%20Constituent%20Correspondence%2C%201998",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-06-16",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 03向けの既存の分類済み監査データは確認できなかったため、Ruppelt暫定照合として分類しました。"
+  }
+}

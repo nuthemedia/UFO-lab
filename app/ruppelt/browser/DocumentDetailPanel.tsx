@@ -92,6 +92,9 @@ export function DocumentDetailPanel({
     }
   };
   const readableFullTextJa = detail?.readableFullTextJa || detail?.fullTextJa || "";
+  const fullTextJaFallback = detail?.hasOcrTextEn
+    ? "日本語全文訳は未対応です。英語OCR原文と全文検索は利用できます。"
+    : "未翻訳";
   const activeText = tab === "ocrTextEn" ? detail?.ocrTextEn || "" : readableFullTextJa;
   const activeHighlightQuery = viewerQuery.trim() || highlightQuery;
   const detailDescription = getDescriptionByLanguage(record, "ja");
@@ -250,7 +253,7 @@ export function DocumentDetailPanel({
                     <span>{viewerQuery.trim() ? `${viewerMatchCount} 件` : " "}</span>
                   </div>
                   <div className="ruppelt-detail-readable-text">
-                    {renderHighlightedText(readableFullTextJa || "未翻訳", activeHighlightQuery)}
+                    {renderHighlightedText(readableFullTextJa || fullTextJaFallback, activeHighlightQuery)}
                   </div>
                 </section>
               ) : null}
