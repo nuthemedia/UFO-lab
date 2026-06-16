@@ -19,7 +19,7 @@ const statusDashboardOrder: StatusDashboardKey[] = [
   "unreviewed",
 ];
 // Legacy Vercel build guard compatibility marker: Ruppelt V2.0.
-const ruppeltOgpImage = `${siteUrl}/ogp-ruppelt-v22.jpg`;
+const ruppeltOgpImage = `${siteUrl}/ogp-ruppelt-v25.jpg`;
 const ruppeltSocialUrl = `${siteUrl}/ruppelt?xcard=v22`;
 
 function getStatusDashboardLabel(status: StatusDashboardKey) {
@@ -38,13 +38,13 @@ function getFullTextRecordIds() {
 }
 
 export const metadata: Metadata = {
-  title: "Ruppelt V2.2 | Ruppelt V2.2 - PURSUE日本語インデックス",
+  title: "Ruppelt V2.5 | Ruppelt V2.5 - PURSUE日本語インデックス",
   description: "アメリカ政府UAP公開資料を、日本語でさくっと確認できる資料ブラウザです。",
   alternates: {
     canonical: "/ruppelt",
   },
   openGraph: {
-    title: "Ruppelt V2.2 - PURSUE日本語インデックス",
+    title: "Ruppelt V2.5 - PURSUE日本語インデックス",
     description: "アメリカ政府UAP公開資料をスマホでさくっと確認。",
     url: ruppeltSocialUrl,
     siteName: "UFO Lab Tokyo",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
         url: ruppeltOgpImage,
         width: 1200,
         height: 630,
-        alt: "Ruppelt V2.2 - PURSUE日本語インデックス",
+        alt: "Ruppelt V2.5 - PURSUE日本語インデックス",
         type: "image/jpeg",
       },
     ],
@@ -61,12 +61,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ruppelt V2.2 - PURSUE日本語インデックス",
+    title: "Ruppelt V2.5 - PURSUE日本語インデックス",
     description: "アメリカ政府UAP公開資料をスマホでさくっと確認。",
     images: [ruppeltOgpImage],
   },
   other: {
-    "twitter:image:alt": "Ruppelt V2.2 - PURSUE日本語インデックス",
+    "twitter:image:alt": "Ruppelt V2.5 - PURSUE日本語インデックス",
   },
 };
 
@@ -110,7 +110,7 @@ export default function RuppeltPage() {
           </div>
           <span className="sr-only">{siteConfig.shortName}</span>
         </div>
-        <h1>Ruppelt V2.2</h1>
+        <h1>Ruppelt V2.5</h1>
         <p className="tagline">PURSUE日本語インデックス</p>
         <p className="lead">アメリカ政府UAP公開資料をスマホでさくっと確認。</p>
         <p className="ruppelt-kean-note">

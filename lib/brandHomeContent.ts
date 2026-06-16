@@ -30,7 +30,7 @@ export const brandHomeContent = {
     },
     mission: "テクノロジーの魔法で、UFOコミュニティに貢献する",
     featuredApp: {
-      name: "Ruppelt V2.2",
+      name: "Ruppelt V2.5",
       description: "PURSUE資料の日本語全文訳と検索に対応した資料ブラウザ",
       href: "/ruppelt",
       note: "Ruppelt とは？",
@@ -75,8 +75,8 @@ export const brandHomeContent = {
     products: [
       {
         version: "Version 2.2",
-        name: "Ruppelt V2.2",
-        title: "Ruppelt V2.2 – PURSUE日本語インデックス",
+        name: "Ruppelt V2.5",
+        title: "Ruppelt V2.5 – PURSUE日本語インデックス",
         href: "/ruppelt",
         cta: "Ruppeltを開く",
       },
@@ -163,7 +163,7 @@ export const brandHomeContent = {
     },
     mission: "Contributing to the UFO community through the magic of technology.",
     featuredApp: {
-      name: "Ruppelt V2.2",
+      name: "Ruppelt V2.5",
       description: "A records browser with Japanese full-text translations and search for PURSUE documents.",
       href: "/ruppelt",
       note: "What is Ruppelt?",
@@ -210,8 +210,8 @@ export const brandHomeContent = {
     products: [
       {
         version: "Version 2.2",
-        name: "Ruppelt V2.2",
-        title: "Ruppelt V2.2 – UAP Public Records Viewer",
+        name: "Ruppelt V2.5",
+        title: "Ruppelt V2.5 – UAP Public Records Viewer",
         href: "/ruppelt",
         cta: "Open Ruppelt",
       },

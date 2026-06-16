@@ -78,6 +78,7 @@ const requiredPaths = [
   "data/shared/search/fulltext-index.json",
   "public/ogp-ruppelt-v2.jpg",
   "public/ogp-ruppelt-v22.jpg",
+  "public/ogp-ruppelt-v25.jpg",
   "docs/apps/ruppelt/AGENTS.md",
   "docs/apps/ruppelt/PROJECT.md",
   "docs/apps/ruppelt/DESIGN.md",
@@ -150,10 +151,10 @@ if (missingBrandHomeHrefs.length > 0) {
 }
 
 const requiredFileContents = [
-  ["app/ruppelt/page.tsx", "Ruppelt V2.2"],
-  ["app/ruppelt/page.tsx", "ogp-ruppelt-v22.jpg"],
-  ["app/ruppelt/lp/page.tsx", "Ruppelt V2.2"],
-  ["app/ruppelt/lp/page.tsx", "ogp-ruppelt-v22.jpg"],
+  ["app/ruppelt/page.tsx", "Ruppelt V2.5"],
+  ["app/ruppelt/page.tsx", "ogp-ruppelt-v25.jpg"],
+  ["app/ruppelt/lp/page.tsx", "Ruppelt V2.5"],
+  ["app/ruppelt/lp/page.tsx", "ogp-ruppelt-v25.jpg"],
 ];
 
 const missingFileContents = requiredFileContents
@@ -176,13 +177,17 @@ const ogpImageHash = (path) =>
 const legacyRuppeltOgpHash = ogpImageHash("public/ogp-ruppelt.jpg");
 const versionedRuppeltOgpHash = ogpImageHash("public/ogp-ruppelt-v2.jpg");
 const cacheBustedRuppeltOgpHash = ogpImageHash("public/ogp-ruppelt-v22.jpg");
+const v25RuppeltOgpHash = ogpImageHash("public/ogp-ruppelt-v25.jpg");
 
 if (
   legacyRuppeltOgpHash !== versionedRuppeltOgpHash ||
-  versionedRuppeltOgpHash !== cacheBustedRuppeltOgpHash
+  versionedRuppeltOgpHash !== cacheBustedRuppeltOgpHash ||
+  cacheBustedRuppeltOgpHash !== v25RuppeltOgpHash
 ) {
   console.error("Ruppelt OGP images do not match. Refusing to continue:");
-  console.error("- public/ogp-ruppelt.jpg, public/ogp-ruppelt-v2.jpg, and public/ogp-ruppelt-v22.jpg must match");
+  console.error(
+    "- public/ogp-ruppelt.jpg, public/ogp-ruppelt-v2.jpg, public/ogp-ruppelt-v22.jpg, and public/ogp-ruppelt-v25.jpg must match",
+  );
   process.exit(1);
 }
 
