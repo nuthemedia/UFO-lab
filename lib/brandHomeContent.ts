@@ -59,7 +59,7 @@ export const brandHomeContent = {
         description: "過去のUFO研究が、現代の議論につながりにくい。",
       },
     ],
-    update: "Ruppeltに資料の日本語全文と検索が追加されました。",
+    update: "Drakeを公開しました。ドレイクの方程式とベイズ推論で、宇宙人の存在・地球来訪・UFO証拠を分けて考える思考実験アプリです。",
     updateFeedback: {
       heading: "更新情報・フィードバック",
       body: [
@@ -79,6 +79,13 @@ export const brandHomeContent = {
         title: "Ruppelt V2.5 – PURSUE日本語インデックス",
         href: "/ruppelt",
         cta: "Ruppeltを開く",
+      },
+      {
+        version: "Thought Experiment",
+        name: "Drake",
+        title: "Drake – ドレイクの方程式とベイズ推論で考える宇宙人・来訪・UFO証拠",
+        href: "/drake",
+        cta: "Drakeを開く",
       },
       {
         version: "Guide",
@@ -194,7 +201,7 @@ export const brandHomeContent = {
         description: "Past UFO research does not easily connect to today's discussion.",
       },
     ],
-    update: "Ruppelt now includes Japanese full-text translations and search.",
+    update: "Drake is now live: an interactive thought experiment using the Drake equation and Bayesian reasoning to separate extraterrestrial life, visitation, and UFO evidence.",
     updateFeedback: {
       heading: "Updates & Feedback",
       body: [
@@ -214,6 +221,13 @@ export const brandHomeContent = {
         title: "Ruppelt V2.5 – UAP Public Records Viewer",
         href: "/ruppelt",
         cta: "Open Ruppelt",
+      },
+      {
+        version: "Thought Experiment",
+        name: "Drake",
+        title: "Drake – Thinking through extraterrestrial life, visitation, and UFO evidence",
+        href: "/drake",
+        cta: "Open Drake",
       },
       {
         version: "Guide",

@@ -13,9 +13,11 @@
     "keyhoe:build:dry": "node scripts/build-keyhoe-today.mjs --dry",
     "keyhoe:build:mock": "node scripts/build-keyhoe-today.mjs --mock",
     "lint": "eslint .",
+    "test:drake": "vitest run lib/drakeMath.test.ts",
     "verify:search-index": "node scripts/build-pursue-search-index.mjs --check"
   },
   "dependencies": {
+    "@react-three/fiber": "^9.6.1",
     "@tailwindcss/postcss": "^4.3.0",
     "@vercel/analytics": "^2.0.1",
     "@vercel/kv": "^3.0.0",
@@ -35,6 +37,7 @@
     "@types/three": "^0.184.1",
     "eslint": "^9.39.4",
     "eslint-config-next": "^16.2.9",
-    "typescript": "5.8.3"
+    "typescript": "5.8.3",
+    "vitest": "^4.1.9"
   }
 }
