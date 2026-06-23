@@ -88,6 +88,13 @@ export const brandHomeContent = {
         cta: "Drakeを開く",
       },
       {
+        version: "Digital Museum",
+        name: "Clark",
+        title: "Clark – UFO事件と人物をテキスト・映像・3D展示でたどる",
+        href: "/clark",
+        cta: "Clarkを開く",
+      },
+      {
         version: "Timeline",
         name: "中国UFO史年表",
         title: "中国UFO史年表 – 研究会、重大事件、カルチャーを時系列で読む",
@@ -235,6 +242,13 @@ export const brandHomeContent = {
         title: "Drake – Thinking through extraterrestrial life, visitation, and UFO evidence",
         href: "/drake",
         cta: "Open Drake",
+      },
+      {
+        version: "Digital Museum",
+        name: "Clark",
+        title: "Clark – A digital museum for UFO cases and figures",
+        href: "/clark",
+        cta: "Open Clark",
       },
       {
         version: "Timeline",

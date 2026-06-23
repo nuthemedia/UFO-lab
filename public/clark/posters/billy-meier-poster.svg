@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500" fill="none">
+  <rect width="1200" height="1500" fill="#04070D"/>
+  <path d="M0 900C172 858 318 850 455 866C621 885 786 946 1200 900V1500H0V900Z" fill="#0A1019"/>
+  <path d="M0 776C134 684 264 642 392 652C565 666 684 764 858 760C964 758 1078 724 1200 658V790C1036 870 890 900 761 878C612 852 521 776 398 774C292 772 160 820 0 940V776Z" fill="#1C2A40" fill-opacity=".72"/>
+  <path d="M0 1088C222 1022 404 1008 548 1018C752 1032 924 1068 1200 1020V1500H0V1088Z" fill="#101A29"/>
+  <circle cx="1002" cy="168" r="1.5" fill="white" fill-opacity=".52"/>
+  <circle cx="194" cy="208" r="2" fill="white" fill-opacity=".48"/>
+  <rect x="392" y="492" width="472" height="250" rx="18" fill="#0A0E16" stroke="#27354C" stroke-width="5"/>
+  <rect x="417" y="520" width="422" height="176" fill="#111A27"/>
+  <ellipse cx="628" cy="604" rx="205" ry="58" fill="#EDF2FF" fill-opacity=".72"/>
+  <path d="M439 603C520 550 731 550 818 603C718 638 538 638 439 603Z" fill="#AEBFDE"/>
+  <path d="M498 596C566 557 696 557 758 596" stroke="#F8FAFF" stroke-width="7" stroke-linecap="round"/>
+  <ellipse cx="628" cy="574" rx="70" ry="28" fill="#F9FBFF"/>
+  <ellipse cx="628" cy="576" rx="38" ry="15" fill="#B7C8E8"/>
+  <path d="M456 652C558 684 702 684 807 652" stroke="#F4F8FF" stroke-opacity=".48" stroke-width="4" stroke-linecap="round"/>
+  <path d="M432 718H566" stroke="#9FB4D4" stroke-width="5" stroke-linecap="round"/>
+  <path d="M612 718H822" stroke="#9FB4D4" stroke-width="5" stroke-linecap="round"/>
+  <path d="M402 502L472 446H858L864 492" stroke="#41536E" stroke-width="5" stroke-linecap="round"/>
+  <text x="94" y="1268" fill="#F3F7FF" font-family="Helvetica, Arial, sans-serif" font-size="108" font-weight="700">Billy Meier</text>
+  <text x="96" y="1348" fill="#C6D8F6" font-family="Helvetica, Arial, sans-serif" font-size="34" letter-spacing="7">1970s / PHOTO &amp; DISPUTE</text>
+</svg>
