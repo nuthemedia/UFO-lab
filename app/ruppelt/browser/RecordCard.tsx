@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { memo, useState } from "react";
 import {
   getAgency,
   getDescriptionByLanguage,
@@ -19,7 +19,7 @@ import { isInteractiveElement } from "./helpers";
 import { renderHighlightedText } from "./search";
 import type { CardLanguage, DetailTab, RuppeltViewMode } from "./types";
 
-export function RecordCard({
+function RecordCardComponent({
   record,
   saved,
   hasFullText,
@@ -188,3 +188,5 @@ export function RecordCard({
     </article>
   );
 }
+
+export const RecordCard = memo(RecordCardComponent);

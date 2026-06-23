@@ -17,7 +17,6 @@ export type RuppeltFulltextMatch = {
 export type FulltextStatus = "idle" | "loading" | "success" | "error";
 
 export type SearchState = {
-  draftQuery: string;
   committedQuery: string;
   searchMode: SearchMode;
   fulltextStatus: FulltextStatus;
@@ -28,8 +27,7 @@ export type SearchState = {
 
 export type SearchAction =
   | { type: "hydrate"; query: string; searchMode: SearchMode }
-  | { type: "editQuery"; query: string }
-  | { type: "commitSearch" }
+  | { type: "commitSearch"; query: string }
   | { type: "applyExampleSearch"; query: string }
   | { type: "clearSearch" }
   | { type: "changeSearchMode"; searchMode: SearchMode }

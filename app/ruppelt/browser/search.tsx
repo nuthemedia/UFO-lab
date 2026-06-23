@@ -9,7 +9,6 @@ import {
 import type { PriorDisclosureFilter, SearchAction, SearchMode, SearchState } from "./types";
 
 export const initialSearchState: SearchState = {
-  draftQuery: "",
   committedQuery: "",
   searchMode: "description",
   fulltextStatus: "idle",
@@ -23,14 +22,11 @@ export function searchReducer(state: SearchState, action: SearchAction): SearchS
     case "hydrate":
       return {
         ...state,
-        draftQuery: action.query,
         committedQuery: action.query,
         searchMode: action.searchMode,
       };
-    case "editQuery":
-      return { ...state, draftQuery: action.query };
     case "commitSearch": {
-      const nextQuery = state.draftQuery.trim();
+      const nextQuery = action.query.trim();
 
       if (nextQuery === state.committedQuery) {
         return state;
@@ -48,7 +44,6 @@ export function searchReducer(state: SearchState, action: SearchAction): SearchS
 
       return {
         ...state,
-        draftQuery: nextQuery,
         committedQuery: nextQuery,
         searchMode: "fulltext",
         fulltextStatus: nextQuery ? "loading" : "idle",
@@ -58,7 +53,6 @@ export function searchReducer(state: SearchState, action: SearchAction): SearchS
     case "clearSearch":
       return {
         ...state,
-        draftQuery: "",
         committedQuery: "",
         fulltextStatus: "idle",
         fulltextMatches: [],
