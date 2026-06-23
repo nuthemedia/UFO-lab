@@ -1653,19 +1653,20 @@
 }
 
 .kennethSceneTopPanel {
-  top: calc(env(safe-area-inset-top) + 104px);
-  bottom: auto;
-  max-height: min(46svh, 360px);
+  top: auto;
+  bottom: calc(env(safe-area-inset-bottom) + 72px);
+  max-height: min(30svh, 280px);
   overflow: auto;
 }
 
 .kennethSceneReportPanel {
-  max-height: min(52svh, 440px);
+  max-height: min(38svh, 360px);
 }
 
 .kennethChartTitlePanel.kennethSceneTopPanel {
   right: auto;
   width: min(calc(100% - 84px), 520px);
+  max-height: min(28svh, 240px);
 }
 
 .kennethTriviaPanel {
@@ -2202,14 +2203,14 @@
   .kennethSceneTopPanel {
     left: 8vw;
     right: auto;
-    top: 14vh;
-    bottom: auto;
+    top: auto;
+    bottom: 10vh;
     width: min(620px, 42vw);
-    max-height: 52vh;
+    max-height: 34vh;
   }
 
   .kennethSceneReportPanel {
-    max-height: 58vh;
+    max-height: 42vh;
   }
 
   .kennethModelPanel {
