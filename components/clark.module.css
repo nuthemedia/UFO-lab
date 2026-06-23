@@ -1197,7 +1197,7 @@
     radial-gradient(circle at 18% 54%, rgba(255, 255, 255, 0.08), transparent 16%),
     linear-gradient(180deg, #020409 0%, #070a11 52%, #020409 100%);
   color: #f6f8fc;
-  touch-action: pan-y;
+  touch-action: none;
 }
 
 .kennethMobileTopBar {

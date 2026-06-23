@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
-import type { CSSProperties, KeyboardEvent, PointerEvent, ReactNode, WheelEvent } from "react";
+import type { CSSProperties, KeyboardEvent, PointerEvent, ReactNode, TouchEvent, WheelEvent } from "react";
 import type { ClarkCaseRecord } from "@/data/clark/cases";
 import { ClarkAmbientVideo } from "./ClarkAmbientVideo";
 import { ClarkArnoldMotionScene } from "./ClarkArnoldMotionScene";
@@ -28,6 +28,12 @@ type KennethTriviaSnippet = {
   detailImageSrc?: string;
   detailImageAlt?: string;
   detailImageCaption?: string;
+};
+
+type SwipeStart = {
+  x: number;
+  y: number;
+  time: number;
 };
 
 const kennethIntro =
@@ -87,6 +93,32 @@ function shouldIgnoreSwipe(target: EventTarget | null) {
   );
 }
 
+function shouldIgnoreTriviaSwipe(target: EventTarget | null) {
+  return target instanceof Element && Boolean(target.closest("input, button, a, textarea, select, [role='button']"));
+}
+
+function getVerticalSwipeDirection(start: SwipeStart, x: number, y: number) {
+  const dx = x - start.x;
+  const dy = y - start.y;
+  const age = Date.now() - start.time;
+  if (age > 900 || Math.abs(dy) < 70 || Math.abs(dy) < Math.abs(dx) * 1.15) {
+    return null;
+  }
+
+  return dy < 0 ? 1 : -1;
+}
+
+function getHorizontalSwipeDirection(start: SwipeStart, x: number, y: number) {
+  const dx = x - start.x;
+  const dy = y - start.y;
+  const age = Date.now() - start.time;
+  if (age > 900 || Math.abs(dx) < 52 || Math.abs(dx) < Math.abs(dy) * 1.18) {
+    return null;
+  }
+
+  return dx < 0 ? 1 : -1;
+}
+
 function GlassPanel({
   eyebrow,
   title,
@@ -116,8 +148,10 @@ export function ClarkKennethMobileExperience({ record }: { record: ClarkCaseReco
   const [videoPlaying, setVideoPlaying] = useState(false);
   const shellRef = useRef<HTMLElement | null>(null);
   const videoRef = useRef<FullscreenVideoElement | null>(null);
-  const pointerStartRef = useRef<{ x: number; y: number; time: number } | null>(null);
-  const triviaPointerStartRef = useRef<{ x: number; y: number; time: number } | null>(null);
+  const pointerStartRef = useRef<SwipeStart | null>(null);
+  const touchStartRef = useRef<SwipeStart | null>(null);
+  const triviaPointerStartRef = useRef<SwipeStart | null>(null);
+  const triviaTouchStartRef = useRef<SwipeStart | null>(null);
   const lastStepChangeRef = useRef(0);
   const [motionScene, reportScene, waveScene] = record.scrollScenes;
 
@@ -167,42 +201,90 @@ export function ClarkKennethMobileExperience({ record }: { record: ClarkCaseReco
   };
 
   const handleTriviaPointerDown = (event: PointerEvent<HTMLDivElement>) => {
+    if (event.pointerType === "touch") {
+      triviaPointerStartRef.current = null;
+      return;
+    }
+
+    if (shouldIgnoreTriviaSwipe(event.target)) {
+      triviaPointerStartRef.current = null;
+      return;
+    }
+
     triviaPointerStartRef.current = { x: event.clientX, y: event.clientY, time: Date.now() };
   };
 
-  const handleTriviaPointerUp = (event: PointerEvent<HTMLDivElement>) => {
-    const start = triviaPointerStartRef.current;
-    triviaPointerStartRef.current = null;
+  const handleTriviaSwipeEnd = (start: SwipeStart | null, x: number, y: number) => {
     if (!start) {
       return;
     }
 
-    const dx = event.clientX - start.x;
-    const dy = event.clientY - start.y;
-    const age = Date.now() - start.time;
     const lastTriviaIndex = kennethArnoldTriviaSnippets.length - 1;
-    if (age <= 900 && Math.abs(dy) >= 70 && Math.abs(dy) > Math.abs(dx) * 1.15) {
-      if (dy < 0 && activeTriviaIndex === lastTriviaIndex) {
+    const verticalDirection = getVerticalSwipeDirection(start, x, y);
+    if (verticalDirection) {
+      if (verticalDirection === 1 && activeTriviaIndex === lastTriviaIndex) {
         setActiveStepIndex((index) => Math.min(index + 1, 8));
       }
 
-      if (dy > 0 && activeTriviaIndex === 0) {
+      if (verticalDirection === -1 && activeTriviaIndex === 0) {
         setActiveStepIndex((index) => Math.max(index - 1, 0));
       }
 
       return;
     }
 
-    if (age > 900 || Math.abs(dx) < 52 || Math.abs(dx) < Math.abs(dy) * 1.18) {
+    const horizontalDirection = getHorizontalSwipeDirection(start, x, y);
+    if (horizontalDirection) {
+      changeTrivia(horizontalDirection);
+    }
+  };
+
+  const handleTriviaPointerUp = (event: PointerEvent<HTMLDivElement>) => {
+    if (event.pointerType === "touch") {
+      triviaPointerStartRef.current = null;
       return;
     }
 
-    if (dx < 0) {
-      changeTrivia(1);
+    const start = triviaPointerStartRef.current;
+    triviaPointerStartRef.current = null;
+    if (shouldIgnoreTriviaSwipe(event.target)) {
       return;
     }
 
-    changeTrivia(-1);
+    handleTriviaSwipeEnd(start, event.clientX, event.clientY);
+  };
+
+  const handleTriviaTouchStart = (event: TouchEvent<HTMLDivElement>) => {
+    if (shouldIgnoreTriviaSwipe(event.target)) {
+      triviaTouchStartRef.current = null;
+      return;
+    }
+
+    const touch = event.touches[0];
+    if (!touch) {
+      return;
+    }
+
+    triviaTouchStartRef.current = { x: touch.clientX, y: touch.clientY, time: Date.now() };
+  };
+
+  const handleTriviaTouchEnd = (event: TouchEvent<HTMLDivElement>) => {
+    const start = triviaTouchStartRef.current;
+    triviaTouchStartRef.current = null;
+    if (shouldIgnoreTriviaSwipe(event.target)) {
+      return;
+    }
+
+    const touch = event.changedTouches[0];
+    if (!touch) {
+      return;
+    }
+
+    handleTriviaSwipeEnd(start, touch.clientX, touch.clientY);
+  };
+
+  const handleTriviaTouchCancel = () => {
+    triviaTouchStartRef.current = null;
   };
 
   const steps = useMemo<KennethMobileStep[]>(
@@ -386,6 +468,9 @@ export function ClarkKennethMobileExperience({ record }: { record: ClarkCaseReco
               data-swipe-ignore="true"
               onPointerDown={handleTriviaPointerDown}
               onPointerUp={handleTriviaPointerUp}
+              onTouchCancel={handleTriviaTouchCancel}
+              onTouchEnd={handleTriviaTouchEnd}
+              onTouchStart={handleTriviaTouchStart}
             >
               <button aria-label="前のトリビア" type="button" onClick={() => changeTrivia(-1)} disabled={activeTriviaIndex === 0}>
                 ←
@@ -512,6 +597,11 @@ export function ClarkKennethMobileExperience({ record }: { record: ClarkCaseReco
   const goPrevious = (throttle = false) => changeStep(-1, throttle);
 
   const handlePointerDown = (event: PointerEvent<HTMLElement>) => {
+    if (event.pointerType === "touch") {
+      pointerStartRef.current = null;
+      return;
+    }
+
     if (shouldIgnoreSwipe(event.target)) {
       pointerStartRef.current = null;
       return;
@@ -521,25 +611,71 @@ export function ClarkKennethMobileExperience({ record }: { record: ClarkCaseReco
   };
 
   const handlePointerUp = (event: PointerEvent<HTMLElement>) => {
+    if (event.pointerType === "touch") {
+      pointerStartRef.current = null;
+      return;
+    }
+
     const start = pointerStartRef.current;
     pointerStartRef.current = null;
     if (!start || shouldIgnoreSwipe(event.target)) {
       return;
     }
 
-    const dy = event.clientY - start.y;
-    const dx = event.clientX - start.x;
-    const age = Date.now() - start.time;
-    if (age > 900 || Math.abs(dy) < 70 || Math.abs(dy) < Math.abs(dx) * 1.15) {
+    const direction = getVerticalSwipeDirection(start, event.clientX, event.clientY);
+    if (!direction) {
       return;
     }
 
-    if (dy < 0) {
+    if (direction === 1) {
       goNext();
       return;
     }
 
     goPrevious();
+  };
+
+  const handleTouchStart = (event: TouchEvent<HTMLElement>) => {
+    if (shouldIgnoreSwipe(event.target)) {
+      touchStartRef.current = null;
+      return;
+    }
+
+    const touch = event.touches[0];
+    if (!touch) {
+      return;
+    }
+
+    touchStartRef.current = { x: touch.clientX, y: touch.clientY, time: Date.now() };
+  };
+
+  const handleTouchEnd = (event: TouchEvent<HTMLElement>) => {
+    const start = touchStartRef.current;
+    touchStartRef.current = null;
+    if (!start || shouldIgnoreSwipe(event.target)) {
+      return;
+    }
+
+    const touch = event.changedTouches[0];
+    if (!touch) {
+      return;
+    }
+
+    const direction = getVerticalSwipeDirection(start, touch.clientX, touch.clientY);
+    if (!direction) {
+      return;
+    }
+
+    if (direction === 1) {
+      goNext();
+      return;
+    }
+
+    goPrevious();
+  };
+
+  const handleTouchCancel = () => {
+    touchStartRef.current = null;
   };
 
   const handleWheel = (event: WheelEvent<HTMLElement>) => {
@@ -585,6 +721,9 @@ export function ClarkKennethMobileExperience({ record }: { record: ClarkCaseReco
       onKeyDown={handleKeyDown}
       onPointerDown={handlePointerDown}
       onPointerUp={handlePointerUp}
+      onTouchCancel={handleTouchCancel}
+      onTouchEnd={handleTouchEnd}
+      onTouchStart={handleTouchStart}
       onWheel={handleWheel}
     >
       <header className={styles.kennethMobileTopBar}>
