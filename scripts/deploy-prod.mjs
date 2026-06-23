@@ -10,6 +10,7 @@ const requiredRoutes = [
   "/ruppelt/lp",
   "/drake",
   "/drake/opengraph-image",
+  "/cnufohistory",
   "/jacques",
   "/experiments/biorhythm",
   "/keyhoe",

@@ -1,0 +1,688 @@
+.page {
+  min-height: 100svh;
+  background:
+    radial-gradient(circle at 20% 6%, rgba(120, 45, 35, 0.14), transparent 26rem),
+    linear-gradient(180deg, #2a211b 0%, #16110e 58%, #0d0a08 100%);
+  color: #2a211b;
+  font-family:
+    "Hiragino Mincho ProN",
+    "Yu Mincho",
+    "YuMincho",
+    Georgia,
+    serif;
+}
+
+.cover {
+  position: relative;
+  display: grid;
+  min-height: 100svh;
+  grid-template-rows: 1fr auto;
+  overflow: hidden;
+  padding: 28px 18px max(18px, env(safe-area-inset-bottom));
+  background:
+    url("/cnufohistory/cover.png") center 58% / cover no-repeat,
+    radial-gradient(circle at 48% 15%, rgba(255, 255, 255, 0.42), transparent 20rem),
+    linear-gradient(90deg, rgba(84, 61, 38, 0.05), transparent 18%, rgba(255, 255, 255, 0.14) 50%, transparent 82%, rgba(84, 61, 38, 0.05)),
+    linear-gradient(180deg, #f1e7cb 0%, #e5d4ad 58%, #b89c78 100%);
+  touch-action: pan-y;
+}
+
+.cover::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    radial-gradient(ellipse 78% 25% at 34% 20%, rgba(241, 231, 203, 0.92), rgba(241, 231, 203, 0.58) 58%, transparent 100%),
+    linear-gradient(180deg, rgba(255, 250, 236, 0.3) 0%, rgba(255, 250, 236, 0.12) 22%, transparent 42%, rgba(20, 14, 10, 0.22) 100%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08), transparent 16%, rgba(0, 0, 0, 0.08) 17%, transparent 18%);
+  pointer-events: none;
+}
+
+.coverInner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  align-self: start;
+  width: max-content;
+  max-width: calc(100vw - 36px);
+  gap: 16px;
+  padding-top: clamp(26px, 8svh, 82px);
+  text-shadow:
+    0 1px 0 rgba(255, 250, 236, 0.76),
+    0 10px 24px rgba(255, 250, 236, 0.82),
+    0 0 1px rgba(35, 25, 20, 0.24);
+}
+
+.period {
+  width: fit-content;
+  margin: 0;
+  border-bottom: 1px solid rgba(119, 40, 31, 0.44);
+  color: #79362c;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.cover h1 {
+  margin: 0;
+  color: #231914;
+  font-size: clamp(2.62rem, 11.4vw, 4.35rem);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.lead {
+  margin: 0;
+  color: rgba(33, 23, 19, 0.9);
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.82;
+  text-shadow:
+    0 1px 0 rgba(255, 250, 236, 0.72),
+    0 8px 18px rgba(255, 250, 236, 0.7);
+}
+
+.coverArrow {
+  position: absolute;
+  bottom: max(58px, calc(env(safe-area-inset-bottom) + 58px));
+  left: 50%;
+  z-index: 2;
+  display: inline-grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border: 1px solid rgba(35, 25, 20, 0.2);
+  border-radius: 50%;
+  padding: 0;
+  background: rgba(255, 250, 236, 0.22);
+  color: rgba(35, 25, 20, 0.54);
+  cursor: pointer;
+  transform: translateX(-50%);
+  backdrop-filter: blur(5px);
+}
+
+.coverArrow svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.coverBrand {
+  position: relative;
+  z-index: 2;
+  justify-self: center;
+  color: rgba(247, 233, 199, 0.82);
+  font-family:
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    system-ui,
+    sans-serif;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-decoration-color: rgba(247, 233, 199, 0.36);
+  text-underline-offset: 4px;
+}
+
+.timelineShell {
+  min-height: 100svh;
+  padding: 0 12px 40px;
+  background:
+    linear-gradient(90deg, rgba(34, 24, 18, 0.22), transparent 13%, transparent 87%, rgba(34, 24, 18, 0.24)),
+    #2b211a;
+  animation: timelineRise 360ms ease-out both;
+}
+
+.stickyBar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: grid;
+  width: min(100%, 430px);
+  margin: 0 auto;
+  gap: 7px;
+  padding: 9px 8px 8px;
+  background: rgba(43, 33, 26, 0.88);
+  backdrop-filter: blur(16px);
+}
+
+.timelineTop {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: center;
+}
+
+.timelineTop p {
+  margin: 0;
+  color: #f2e4c3;
+  font-size: 0.86rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.timelineTop button {
+  min-height: 28px;
+  border: 1px solid rgba(242, 228, 195, 0.22);
+  border-radius: 4px;
+  padding: 0 9px;
+  background: rgba(242, 228, 195, 0.08);
+  color: rgba(242, 228, 195, 0.8);
+  font-family:
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    system-ui,
+    sans-serif;
+  font-size: 0.69rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.decadeNav,
+.filterRow {
+  display: flex;
+  gap: 7px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.decadeNav::-webkit-scrollbar,
+.filterRow::-webkit-scrollbar {
+  display: none;
+}
+
+.decadeNav a,
+.filterButton,
+.activeFilter {
+  flex: 0 0 auto;
+  min-height: 30px;
+  border: 1px solid rgba(242, 228, 195, 0.24);
+  border-radius: 4px;
+  padding: 0 10px;
+  background: rgba(242, 228, 195, 0.08);
+  color: rgba(242, 228, 195, 0.78);
+  font-family:
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    system-ui,
+    sans-serif;
+  font-size: 0.71rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.decadeNav a.activeDecade {
+  border-color: rgba(242, 228, 195, 0.7);
+  background: rgba(242, 228, 195, 0.2);
+  color: #f7e9c7;
+}
+
+.filterRow {
+  position: sticky;
+  top: 74px;
+  z-index: 4;
+  width: min(100%, 430px);
+  margin: 0 auto;
+  padding: 6px 8px 9px;
+  background: transparent;
+}
+
+.filterButton,
+.activeFilter {
+  cursor: pointer;
+}
+
+.activeFilter {
+  border-color: rgba(242, 228, 195, 0.74);
+  background: #f0dfb6;
+  color: #34231a;
+}
+
+.paper {
+  position: relative;
+  isolation: isolate;
+  width: min(100%, 430px);
+  margin: 0 auto;
+  border: 1px solid rgba(105, 76, 48, 0.38);
+  background:
+    repeating-linear-gradient(180deg, transparent 0 150px, rgba(102, 74, 48, 0.12) 151px, transparent 153px),
+    linear-gradient(90deg, rgba(75, 55, 35, 0.1), transparent 8%, transparent 92%, rgba(75, 55, 35, 0.1)),
+    #efe0bb;
+  box-shadow:
+    0 28px 70px rgba(0, 0, 0, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.48);
+}
+
+.paper::before {
+  position: absolute;
+  inset: 0 50% 0 auto;
+  z-index: 0;
+  width: 1px;
+  content: "";
+  background: rgba(93, 65, 42, 0.08);
+  pointer-events: none;
+}
+
+.paper::after {
+  position: absolute;
+  top: 22px;
+  bottom: 22px;
+  left: 30px;
+  z-index: 0;
+  width: 1px;
+  content: "";
+  background: linear-gradient(180deg, transparent, rgba(93, 65, 42, 0.18) 6%, rgba(93, 65, 42, 0.18) 94%, transparent);
+  pointer-events: none;
+}
+
+.era {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 18px;
+  padding: 28px 18px 34px;
+  border-bottom: 1px solid rgba(99, 70, 45, 0.22);
+  scroll-margin-top: 118px;
+}
+
+.eraHeader {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 8px;
+}
+
+.eraHeader span {
+  color: #78382e;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.74rem;
+  font-weight: 900;
+}
+
+.eraHeader h2 {
+  margin: 0;
+  color: #211713;
+  font-size: 1.42rem;
+  font-weight: 800;
+  line-height: 1.28;
+  letter-spacing: 0;
+}
+
+.eraHeader p,
+.empty {
+  margin: 0;
+  color: rgba(42, 33, 27, 0.74);
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.78;
+}
+
+.items {
+  display: grid;
+  gap: 10px;
+}
+
+.item {
+  position: relative;
+  z-index: 1;
+  border: 1px solid rgba(92, 66, 44, 0.24);
+  background: #f7edcf;
+  box-shadow:
+    0 3px 8px rgba(77, 48, 29, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.42);
+}
+
+.itemButton {
+  position: relative;
+  display: grid;
+  width: 100%;
+  min-height: 76px;
+  grid-template-columns: 78px 1fr;
+  gap: 10px;
+  align-items: center;
+  border: 0;
+  padding: 12px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+
+.itemButtonWithVisual {
+  grid-template-columns: 78px minmax(0, 1fr) 54px;
+}
+
+.itemButton::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 18px;
+  height: 18px;
+  border-bottom: 1px solid rgba(92, 66, 44, 0.1);
+  border-left: 1px solid rgba(92, 66, 44, 0.1);
+  background:
+    linear-gradient(135deg, rgba(116, 83, 54, 0.08), rgba(255, 250, 236, 0.38) 54%, rgba(255, 250, 236, 0));
+  content: "";
+  opacity: 0.62;
+  pointer-events: none;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    opacity 180ms ease;
+}
+
+.itemButton:active {
+  transform: translateY(1px);
+}
+
+.itemDate {
+  color: #78382e;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.72rem;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.itemMain {
+  display: grid;
+  gap: 6px;
+}
+
+.category {
+  width: fit-content;
+  border-bottom: 1px solid rgba(39, 63, 75, 0.28);
+  color: #385b68;
+  font-family:
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    system-ui,
+    sans-serif;
+  font-size: 0.66rem;
+  font-weight: 900;
+}
+
+.itemMain strong {
+  color: #211713;
+  font-size: 1rem;
+  line-height: 1.42;
+}
+
+.itemVisual {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  align-self: center;
+  justify-self: end;
+  opacity: 0.84;
+}
+
+.itemVisual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.empty {
+  padding: 30px 18px;
+}
+
+.sheetOverlay {
+  position: fixed;
+  z-index: 20;
+  inset: 0;
+  display: grid;
+  align-items: end;
+  padding: 18px 12px max(18px, env(safe-area-inset-bottom));
+  background: rgba(15, 10, 8, 0.58);
+  backdrop-filter: blur(5px);
+}
+
+.detailSheet {
+  position: relative;
+  display: grid;
+  width: min(100%, 520px);
+  max-height: min(78svh, 720px);
+  margin: 0 auto;
+  gap: 14px;
+  overflow-y: auto;
+  border: 1px solid rgba(105, 76, 48, 0.44);
+  padding: 24px 22px 28px;
+  background:
+    linear-gradient(90deg, rgba(75, 55, 35, 0.08), transparent 10%, transparent 90%, rgba(75, 55, 35, 0.08)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.44), rgba(245, 229, 190, 0.16)),
+    #efe0bb;
+  box-shadow:
+    0 -20px 70px rgba(0, 0, 0, 0.46),
+    inset 0 1px 0 rgba(255, 255, 255, 0.48);
+  animation: sheetRise 220ms ease-out both;
+}
+
+.detailSheet h2 {
+  margin: 0;
+  color: #211713;
+  font-size: clamp(1.8rem, 9vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.22;
+  letter-spacing: 0;
+}
+
+.detailSheet p {
+  margin: 0;
+  color: rgba(42, 33, 27, 0.76);
+  font-size: 1.05rem;
+  font-weight: 650;
+  line-height: 1.86;
+}
+
+.sheetVisual {
+  margin: 0;
+  border-top: 1px solid rgba(105, 76, 48, 0.18);
+  border-bottom: 1px solid rgba(105, 76, 48, 0.18);
+  padding: 8px 0;
+}
+
+.sheetVisual img {
+  display: block;
+  width: 100%;
+  max-height: min(30svh, 220px);
+  object-fit: contain;
+}
+
+.sheetMeta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding-right: 72px;
+}
+
+.sheetMeta span {
+  width: fit-content;
+  border-bottom: 1px solid rgba(119, 40, 31, 0.28);
+  color: #78382e;
+  font-family:
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    system-ui,
+    sans-serif;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.sheetSources {
+  display: grid;
+  gap: 10px;
+  border-top: 1px solid rgba(105, 76, 48, 0.28);
+  padding-top: 14px;
+  color: rgba(42, 33, 27, 0.58) !important;
+  font-family:
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    system-ui,
+    sans-serif;
+  font-size: 0.78rem !important;
+  line-height: 1.66 !important;
+}
+
+.sheetSources h3 {
+  margin: 0;
+  color: #33221a;
+  font-size: 0.86rem;
+  font-weight: 900;
+}
+
+.sheetSources ul {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.sheetSources li {
+  padding-left: 2px;
+}
+
+.sheetSources a {
+  color: #385b68;
+  font-weight: 900;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.sheetSources span {
+  display: inline-block;
+  margin-left: 8px;
+  color: rgba(42, 33, 27, 0.5);
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+
+.sheetSources p {
+  margin-top: 3px;
+  color: rgba(42, 33, 27, 0.58) !important;
+  font-size: 0.76rem !important;
+  line-height: 1.6 !important;
+}
+
+.sheetClose {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  min-height: 34px;
+  border: 1px solid rgba(55, 30, 23, 0.42);
+  border-radius: 4px;
+  padding: 0 12px;
+  background: rgba(255, 250, 236, 0.46);
+  color: #33221a;
+  font-family:
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    system-ui,
+    sans-serif;
+  font-size: 0.74rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+@media (min-width: 760px) {
+  .cover {
+    padding-top: 40px;
+    background-position: center 60%;
+  }
+
+  .coverInner,
+  .paper,
+  .stickyBar,
+  .filterRow {
+    width: min(100%, 520px);
+  }
+
+  .cover h1 {
+    font-size: 5.1rem;
+  }
+
+  .itemButtonWithVisual {
+    grid-template-columns: 78px minmax(0, 1fr) 64px;
+  }
+
+  .itemVisual {
+    width: 64px;
+    height: 64px;
+  }
+
+  .sheetVisual img {
+    max-height: 260px;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .coverArrow,
+  .item,
+  .itemButton,
+  .filterButton,
+  .activeFilter,
+  .timelineTop button,
+  .decadeNav a {
+    transition:
+      transform 180ms ease,
+      border-color 180ms ease,
+      background 180ms ease,
+      opacity 180ms ease;
+  }
+
+  .coverArrow:hover,
+  .item:hover,
+  .item:focus-within {
+    transform: translateY(-2px);
+  }
+
+  .item:hover .itemButton::after,
+  .item:focus-within .itemButton::after {
+    border-color: rgba(92, 66, 44, 0.2);
+    background:
+      linear-gradient(135deg, rgba(116, 83, 54, 0.14), rgba(255, 250, 236, 0.56) 54%, rgba(255, 250, 236, 0));
+    opacity: 1;
+  }
+
+  .coverArrow:hover {
+    transform: translate(-50%, -2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timelineShell,
+  .detailSheet {
+    animation: none;
+  }
+}
+
+@keyframes timelineRise {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sheetRise {
+  from {
+    transform: translateY(34px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}

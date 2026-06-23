@@ -88,6 +88,13 @@ export const brandHomeContent = {
         cta: "Drakeを開く",
       },
       {
+        version: "Timeline",
+        name: "中国UFO史年表",
+        title: "中国UFO史年表 – 研究会、重大事件、カルチャーを時系列で読む",
+        href: "/cnufohistory",
+        cta: "年表を開く",
+      },
+      {
         version: "Guide",
         name: "Kean",
         title: "Kean – UFO・UAPディスクロージャー入門",
@@ -228,6 +235,13 @@ export const brandHomeContent = {
         title: "Drake – Thinking through extraterrestrial life, visitation, and UFO evidence",
         href: "/drake",
         cta: "Open Drake",
+      },
+      {
+        version: "Timeline",
+        name: "China UFO History Timeline",
+        title: "China UFO History Timeline – Societies, major cases, and culture in sequence",
+        href: "/cnufohistory",
+        cta: "Open Timeline",
       },
       {
         version: "Guide",
