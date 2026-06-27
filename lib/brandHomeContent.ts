@@ -59,7 +59,7 @@ export const brandHomeContent = {
         description: "過去のUFO研究が、現代の議論につながりにくい。",
       },
     ],
-    update: "Drakeを公開しました。ドレイクの方程式とベイズ推論で、宇宙人の存在・地球来訪・UFO証拠を分けて考える思考実験アプリです。",
+    update: "空飛ぶ円盤辞典を公開しました。UFO / UAPの用語・人物・事件・資料を、ジャンル別カードと関連リンクで調べられる入口辞典です。",
     updateFeedback: {
       heading: "更新情報・フィードバック",
       body: [
@@ -86,6 +86,13 @@ export const brandHomeContent = {
         title: "Drake – ドレイクの方程式とベイズ推論で考える宇宙人・来訪・UFO証拠",
         href: "/drake",
         cta: "Drakeを開く",
+      },
+      {
+        version: "Encyclopedia",
+        name: "Saucerpedia",
+        title: "Saucerpedia – 空飛ぶ円盤辞典",
+        href: "/saucerpedia",
+        cta: "空飛ぶ円盤辞典を開く",
       },
       {
         version: "Digital Museum",
@@ -215,7 +222,7 @@ export const brandHomeContent = {
         description: "Past UFO research does not easily connect to today's discussion.",
       },
     ],
-    update: "Drake is now live: an interactive thought experiment using the Drake equation and Bayesian reasoning to separate extraterrestrial life, visitation, and UFO evidence.",
+    update: "Saucerpedia is now live: a UFO Encyclopedia for exploring UFO/UAP terms, people, cases, records, and related cards by category.",
     updateFeedback: {
       heading: "Updates & Feedback",
       body: [
@@ -242,6 +249,13 @@ export const brandHomeContent = {
         title: "Drake – Thinking through extraterrestrial life, visitation, and UFO evidence",
         href: "/drake",
         cta: "Open Drake",
+      },
+      {
+        version: "Encyclopedia",
+        name: "Saucerpedia",
+        title: "Saucerpedia – UFO Encyclopedia",
+        href: "/saucerpedia",
+        cta: "Open Saucerpedia",
       },
       {
         version: "Digital Museum",

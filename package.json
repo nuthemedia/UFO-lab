@@ -8,6 +8,7 @@
     "start": "next start",
     "deploy:prod": "node scripts/deploy-prod.mjs",
     "verify:production-routes": "node scripts/verify-production-routes.mjs",
+    "verify:saucerpedia-knowledge": "node scripts/verify-saucerpedia-knowledge.mjs",
     "kean:verify-portraits": "node scripts/verify-kean-portraits.mjs",
     "keyhoe:build": "node scripts/build-keyhoe-today.mjs",
     "keyhoe:build:dry": "node scripts/build-keyhoe-today.mjs --dry",
@@ -37,6 +38,7 @@
     "@types/three": "^0.184.1",
     "eslint": "^9.39.4",
     "eslint-config-next": "^16.2.9",
+    "jiti": "^2.7.0",
     "typescript": "5.8.3",
     "vitest": "^4.1.9"
   }

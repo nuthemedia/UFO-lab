@@ -14,6 +14,17 @@ const requiredRoutes = [
   "/clark/kenneth-arnold",
   "/clark/opengraph-image",
   "/cnufohistory",
+  "/saucerpedia",
+  "/saucerpedia/terms",
+  "/saucerpedia/people",
+  "/saucerpedia/events",
+  "/saucerpedia/history",
+  "/saucerpedia/misidentifications",
+  "/saucerpedia/fakes",
+  "/saucerpedia/resources",
+  "/saucerpedia/motifs",
+  "/saucerpedia/search",
+  "/saucerpedia/opengraph-image",
   "/jacques",
   "/experiments/biorhythm",
   "/keyhoe",
@@ -56,8 +67,13 @@ function assertCleanWorktree() {
 function assertMainHead() {
   run("git", ["fetch", "origin", "main"]);
 
+  const branch = output("git", ["branch", "--show-current"]);
   const head = output("git", ["rev-parse", "HEAD"]);
   const originMain = output("git", ["rev-parse", "origin/main"]);
+
+  if (branch !== "main") {
+    throw new Error(`Production deploy must run from the main branch, not ${branch || "detached HEAD"}.`);
+  }
 
   if (head !== originMain) {
     throw new Error("Production deploy must run from the current origin/main HEAD.");
