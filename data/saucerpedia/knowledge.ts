@@ -111,15 +111,6 @@ export const saucerpediaProducts: EntityRecord[] = [
     summary: "公開資料や政府文書を日本語で探す入口。",
     aliases: ["Ruppelt"],
   },
-  {
-    type: "product",
-    id: "yusuke",
-    title: "Yusuke",
-    eyebrow: typeLabels.product,
-    href: "/yusuke",
-    summary: "日本UFO史と資料整理への入口。",
-    aliases: ["Yusuke"],
-  },
 ];
 
 function relationHref(type: Exclude<SaucerpediaEntityType, "product">, id: string) {
@@ -251,7 +242,6 @@ const manualAliases: Array<[string, SaucerpediaRelation]> = [
   ["Kean", { type: "product", id: "kean" }],
   ["Ruppelt", { type: "product", id: "ruppelt" }],
   ["Clark", { type: "product", id: "clark" }],
-  ["Yusuke", { type: "product", id: "yusuke" }],
   ["UFO形状辞典（KINICHI）", { type: "product", id: "kinichi" }],
   ["現代UFO・UAPディスクロージャー入門（Kean）", { type: "product", id: "kean" }],
 ];

@@ -742,7 +742,6 @@ export const saucerpediaTerms: SaucerpediaTerm[] = [
     tags: ["日本UFO史", "民間団体", "コンタクティ"],
     relatedTerms: ["日本UFO史", "コンタクティ", "スペースブラザーズ"],
     relatedPeople: ["松村雄亮", "荒井欣一"],
-    relatedProducts: [{ name: "Yusuke", href: "/yusuke", note: "日本UFO史と資料整理へ" }],
   },
   {
     id: "japanese-ufo-history",

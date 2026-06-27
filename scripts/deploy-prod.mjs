@@ -125,7 +125,11 @@ function restoreNextEnvIfGenerated() {
 }
 
 function vercelCommand() {
-  return process.env.VERCEL_CLI || "vercel";
+  return process.env.VERCEL_CLI || "npx";
+}
+
+function vercelArgs(args) {
+  return process.env.VERCEL_CLI ? args : ["--yes", "vercel", ...args];
 }
 
 try {
@@ -134,7 +138,7 @@ try {
   assertVercelProject();
   run("npm", ["run", "verify:production-routes"]);
   runBuildAndAssertRoutes();
-  run(vercelCommand(), ["deploy", "--prod", "--yes"]);
+  run(vercelCommand(), vercelArgs(["deploy", "--prod", "--yes"]));
 } catch (error) {
   console.error(error instanceof Error ? error.message : error);
   process.exit(1);

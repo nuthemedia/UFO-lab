@@ -927,7 +927,10 @@ function SourcePanel({
     .filter((relation) => relation.type === "resource")
     .map(resolveSaucerpediaRelation)
     .filter(isResolvedRelation);
-  const products = (productItems ?? [])
+  const products = [
+    ...(items ?? []).filter((relation) => relation.type === "product"),
+    ...(productItems ?? []),
+  ]
     .map(resolveSaucerpediaRelation)
     .filter(isResolvedRelation);
   const panelItems = [...resourceItems, ...products].slice(0, 5);
