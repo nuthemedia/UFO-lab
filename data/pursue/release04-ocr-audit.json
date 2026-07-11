@@ -1,0 +1,286 @@
+{
+  "generatedAt": "2026-07-11T03:41:27.476Z",
+  "releaseId": "release_04",
+  "sourceRepo": "abigailhaddad/ufo-releases",
+  "licenseStatus": "unverified_accepted",
+  "importedCount": 12,
+  "skippedCount": 28,
+  "imported": [
+    {
+      "recordId": "pursue-0295",
+      "githubId": 304,
+      "textChars": 82360,
+      "title": "DOE-UAP-D004, Los Alamos Conference on Aerial Phenomena, 1949"
+    },
+    {
+      "recordId": "pursue-0296",
+      "githubId": 305,
+      "textChars": 57225,
+      "title": "DOW-UAP-D094, Analysis of Flying Object Incidents in the United States, 1949"
+    },
+    {
+      "recordId": "pursue-0297",
+      "githubId": 306,
+      "textChars": 211018,
+      "title": "DOW-UAP-D097, Project Sign Progress Report, 1948"
+    },
+    {
+      "recordId": "pursue-0305",
+      "githubId": 315,
+      "textChars": 9117,
+      "title": "CIA-UAP-D020, Memorandum on Unconventional Aircraft Sightings, 1955"
+    },
+    {
+      "recordId": "pursue-0306",
+      "githubId": 316,
+      "textChars": 13589,
+      "title": "CIA-UAP-D021, Analysis of Unconventional Aircraft Sightings, 1955"
+    },
+    {
+      "recordId": "pursue-0307",
+      "githubId": 317,
+      "textChars": 9092,
+      "title": "DOE-UAP-D005, Pantex Unidentified Object Incident Report, 2015"
+    },
+    {
+      "recordId": "pursue-0308",
+      "githubId": 318,
+      "textChars": 5501,
+      "title": "DOW-UAP-D089, Range Fouler Debrief, Eastern United States, 2020"
+    },
+    {
+      "recordId": "pursue-0309",
+      "githubId": 319,
+      "textChars": 6297,
+      "title": "DOW-UAP-D090, Range Fouler Debrief, Eastern United States, 2019"
+    },
+    {
+      "recordId": "pursue-0310",
+      "githubId": 320,
+      "textChars": 5153,
+      "title": "DOW-UAP-D091, Range Fouler Debrief, Atlantic Ocean, 2020"
+    },
+    {
+      "recordId": "pursue-0311",
+      "githubId": 321,
+      "textChars": 158354,
+      "title": "DOW-UAP-D092, Department of the Air Force Committee to Review Project Bluebook, 1966-1967"
+    },
+    {
+      "recordId": "pursue-0312",
+      "githubId": 322,
+      "textChars": 64379,
+      "title": "DOW-UAP-D093, Analysis of Flying Object Incidents in the United States, 1948"
+    },
+    {
+      "recordId": "pursue-0330",
+      "githubId": 340,
+      "textChars": 23693,
+      "title": "FBI-UAP-D014, Correspondence Relating to UFO Sightings, 1967, 1974"
+    }
+  ],
+  "skipped": [
+    {
+      "recordId": "pursue-0298",
+      "githubId": 307,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR104, Unresolved UAP Report, Yellow Sea, 2025"
+    },
+    {
+      "recordId": "pursue-0299",
+      "githubId": 308,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR105, Unresolved UAP Report, East China Sea, 2025"
+    },
+    {
+      "recordId": "pursue-0300",
+      "githubId": 309,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR113, Unresolved UAP Report, Western United States, 1996"
+    },
+    {
+      "recordId": "pursue-0301",
+      "githubId": 310,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR115, Unresolved UAP Report, Gulf of America, 2019"
+    },
+    {
+      "recordId": "pursue-0302",
+      "githubId": 311,
+      "type": "IMG",
+      "reason": "no_upstream_text",
+      "title": "NASA-UAP-D030, STS-80 Unidentified Object Image 1, 1996"
+    },
+    {
+      "recordId": "pursue-0303",
+      "githubId": 312,
+      "type": "IMG",
+      "reason": "no_upstream_text",
+      "title": "NASA-UAP-D031, STS-80 Unidentified Object Image 2, 1996"
+    },
+    {
+      "recordId": "pursue-0304",
+      "githubId": 313,
+      "type": "IMG",
+      "reason": "no_upstream_text",
+      "title": "NASA-UAP-D032, STS-80 Unidentified Object Image 3, 1996"
+    },
+    {
+      "recordId": "pursue-0313",
+      "githubId": 323,
+      "type": "PDF",
+      "reason": "no_upstream_text",
+      "fallbackOcrStatus": "official_cli_download_blocked_403_browser_download_required",
+      "title": "DOW-UAP-D095, Joint U.S.-Canadian Aviation Projects and UFO Sighting Reports, 1954-1955"
+    },
+    {
+      "recordId": "pursue-0314",
+      "githubId": 324,
+      "type": "PDF",
+      "reason": "no_upstream_text",
+      "fallbackOcrStatus": "official_cli_download_blocked_403_browser_download_required",
+      "title": "DOW-UAP-D096, Correspondence Relating to Project Blue Book, 1955"
+    },
+    {
+      "recordId": "pursue-0315",
+      "githubId": 325,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR024, Unresolved UAP Report, Middle East, 2023"
+    },
+    {
+      "recordId": "pursue-0316",
+      "githubId": 326,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR030, Unresolved UAP Report, Middle East, 2023"
+    },
+    {
+      "recordId": "pursue-0317",
+      "githubId": 327,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR100, Unresolved UAP Report, Yellow Sea, 2023"
+    },
+    {
+      "recordId": "pursue-0318",
+      "githubId": 328,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR101, Unresolved UAP Report, South China Sea, 2024"
+    },
+    {
+      "recordId": "pursue-0319",
+      "githubId": 329,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR102, Unresolved UAP Report, East China Sea, 2024"
+    },
+    {
+      "recordId": "pursue-0320",
+      "githubId": 330,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR103, Unresolved UAP Report, East China Sea, 2024"
+    },
+    {
+      "recordId": "pursue-0321",
+      "githubId": 331,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR106, Unresolved UAP Report, Eastern United States, 2020"
+    },
+    {
+      "recordId": "pursue-0322",
+      "githubId": 332,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR107, Unresolved UAP Report, Eastern United States, 2020"
+    },
+    {
+      "recordId": "pursue-0323",
+      "githubId": 333,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR108, Unresolved UAP Report, Western United States, 2020"
+    },
+    {
+      "recordId": "pursue-0324",
+      "githubId": 334,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR109, Unresolved UAP Report, Eastern United States, 2015"
+    },
+    {
+      "recordId": "pursue-0325",
+      "githubId": 335,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR110, Unresolved UAP Report, Eastern United States, 2020"
+    },
+    {
+      "recordId": "pursue-0326",
+      "githubId": 336,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR111, Unresolved UAP Report, Eastern United States, 2020"
+    },
+    {
+      "recordId": "pursue-0327",
+      "githubId": 337,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR112, Unresolved UAP Report, Eastern United States, 2019"
+    },
+    {
+      "recordId": "pursue-0328",
+      "githubId": 338,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR114, Unresolved UAP Report, Atlantic Ocean, 2016"
+    },
+    {
+      "recordId": "pursue-0329",
+      "githubId": 339,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR116, Unresolved UAP Report, Atlantic Ocean, 2020"
+    },
+    {
+      "recordId": "pursue-0331",
+      "githubId": 341,
+      "type": "AUD",
+      "reason": "no_upstream_text",
+      "transcriptStatus": "no_trustworthy_existing_transcript_found",
+      "title": "NASA-UAP-D026, Apollo 14 Debriefing, 1971"
+    },
+    {
+      "recordId": "pursue-0332",
+      "githubId": 342,
+      "type": "AUD",
+      "reason": "no_upstream_text",
+      "transcriptStatus": "no_trustworthy_existing_transcript_found",
+      "title": "NASA-UAP-D027, Apollo 14 Debriefing (Continued), 1971"
+    },
+    {
+      "recordId": "pursue-0333",
+      "githubId": 343,
+      "type": "AUD",
+      "reason": "no_upstream_text",
+      "transcriptStatus": "no_trustworthy_existing_transcript_found",
+      "title": "NASA-UAP-D028, Apollo 17 Crew Medical Debriefing, 1972"
+    },
+    {
+      "recordId": "pursue-0334",
+      "githubId": 344,
+      "type": "AUD",
+      "reason": "no_upstream_text",
+      "transcriptStatus": "no_trustworthy_existing_transcript_found",
+      "title": "NASA-UAP-D029, Apollo 17 Crew Medical Debriefing (Continued), 1972"
+    }
+  ]
+}

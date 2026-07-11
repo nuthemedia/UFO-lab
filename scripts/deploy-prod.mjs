@@ -8,6 +8,7 @@ const requiredRoutes = [
   "/en",
   "/ruppelt",
   "/ruppelt/lp",
+  "/ruppelt/videos",
   "/drake",
   "/drake/opengraph-image",
   "/clark",

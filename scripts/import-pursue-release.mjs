@@ -3,7 +3,32 @@ import { resolve } from "node:path";
 
 const rootDir = resolve(process.cwd());
 const recordsPath = resolve(rootDir, "data/pursue/pursue-records.json");
-const defaultCsvUrl = "https://www.war.gov/Portals/1/Interactive/2026/UFO/uap-data.csv?release=3";
+const releaseDefinitions = [
+  {
+    id: "release_04",
+    date: "7/10/26",
+    number: "4",
+    matchers: ["7/10", "july 10"],
+  },
+  {
+    id: "release_03",
+    date: "6/12/26",
+    number: "3",
+    matchers: ["6/12", "june 12"],
+  },
+  {
+    id: "release_02",
+    date: "5/22/26",
+    number: "2",
+    matchers: ["5/22", "may 22"],
+  },
+  {
+    id: "release_01",
+    date: "5/8/26",
+    number: "1",
+    matchers: ["5/8", "may 8"],
+  },
+];
 
 function readArg(name, fallback = "") {
   const prefix = `${name}=`;
@@ -78,16 +103,15 @@ function getCell(row, headers, name) {
 
 function getReleaseId(release) {
   const value = release.toLowerCase();
+  return releaseDefinitions.find((item) => item.matchers.some((matcher) => value.includes(matcher)))?.id || "";
+}
 
-  if (value.includes("6/12") || value.includes("june 12")) {
-    return "release_03";
-  }
+function getPrimaryUrl(record) {
+  return record.source.downloadUrl || record.source.videoUrl || record.source.imageUrl || "";
+}
 
-  if (value.includes("5/22") || value.includes("may 22")) {
-    return "release_02";
-  }
-
-  return "release_01";
+function getRecordKey(record) {
+  return `${record.source.assetFileName.toLowerCase()}|${getPrimaryUrl(record).toLowerCase()}`;
 }
 
 function makeRecord(row, headers, id) {
@@ -125,14 +149,13 @@ function makeRecord(row, headers, id) {
   };
 }
 
-async function loadCsvText() {
+async function loadCsvText(csvUrl) {
   const inputPath = readArg("--input");
 
   if (inputPath) {
     return readFile(resolve(rootDir, inputPath), "utf8");
   }
 
-  const csvUrl = readArg("--url", defaultCsvUrl);
   const response = await fetch(csvUrl, {
     headers: {
       accept: "text/csv,*/*;q=0.8",
@@ -148,11 +171,29 @@ async function loadCsvText() {
     );
   }
 
-  return response.text();
+  const csvText = await response.text();
+  const contentType = response.headers.get("content-type") || "";
+
+  if (/^\s*</.test(csvText) || /text\/html/i.test(contentType)) {
+    throw new Error(
+      "Official PURSUE CSV request returned HTML instead of CSV. Download the CSV in a browser and rerun with --input /path/to/uap-data.csv.",
+    );
+  }
+
+  return csvText;
 }
 
-const releaseDate = cleanValue(readArg("--release-date", "6/12/26"));
-const csvText = (await loadCsvText()).replace(/^\uFEFF/, "");
+const requestedReleaseId = cleanValue(readArg("--release-id", "release_04"));
+const releaseDefinition = releaseDefinitions.find((item) => item.id === requestedReleaseId);
+
+if (!releaseDefinition) {
+  throw new Error(`Unsupported PURSUE release id: ${requestedReleaseId}.`);
+}
+
+const releaseDate = cleanValue(readArg("--release-date", releaseDefinition.date));
+const defaultCsvUrl = `https://www.war.gov/Portals/1/Interactive/2026/UFO/uap-data.csv?release=${releaseDefinition.number}`;
+const csvUrl = readArg("--url", defaultCsvUrl);
+const csvText = (await loadCsvText(csvUrl)).replace(/^\uFEFF/, "");
 const rows = parseCSV(csvText).filter((row) => row.some((cell) => cleanValue(cell)));
 const headers = makeHeaderLookup(rows[0] || []);
 const sourceRows = rows.slice(1).filter((row) => getCell(row, headers, "Release Date") === releaseDate);
@@ -163,6 +204,13 @@ if (!sourceRows.length) {
 
 const index = JSON.parse(await readFile(recordsPath, "utf8"));
 const releaseId = getReleaseId(releaseDate);
+
+if (releaseId !== requestedReleaseId) {
+  throw new Error(
+    `Release date ${releaseDate} resolves to ${releaseId || "no known release"}, not ${requestedReleaseId}.`,
+  );
+}
+
 const preservedRecords = index.records.filter((record) => record.searchFacets?.releaseId !== releaseId);
 const nextNumber =
   Math.max(
@@ -172,13 +220,25 @@ const nextNumber =
 const importedRecords = sourceRows.map((row, indexValue) =>
   makeRecord(row, headers, `pursue-${String(nextNumber + indexValue).padStart(4, "0")}`),
 );
+const existingKeys = new Set(preservedRecords.map(getRecordKey));
+const importedKeys = new Set();
+
+for (const record of importedRecords) {
+  const key = getRecordKey(record);
+
+  if (existingKeys.has(key) || importedKeys.has(key)) {
+    throw new Error(`Duplicate PURSUE record detected: ${record.source.assetFileName}`);
+  }
+
+  importedKeys.add(key);
+}
 
 const nextIndex = {
   ...index,
   metadata: {
     ...index.metadata,
     sourcePageUrl: "https://www.war.gov/UFO/",
-    csvUrl: defaultCsvUrl,
+    csvUrl,
     fetchedAt: new Date().toISOString(),
     recordCount: preservedRecords.length + importedRecords.length,
   },

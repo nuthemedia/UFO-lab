@@ -170,6 +170,8 @@ const requiredPaths = [
   "docs/apps/kinichi/DATA.md",
   "public/kinichi/kinichi-x-card-v1.png",
   "app/ruppelt/page.tsx",
+  "app/ruppelt/videos/page.tsx",
+  "app/ruppelt/videos/RuppeltVideoViewer.tsx",
   "app/ruppelt/lp/page.tsx",
   "app/api/ruppelt/fulltext-search/route.ts",
   "app/api/ruppelt/document/[recordId]/route.ts",
@@ -182,6 +184,7 @@ const requiredPaths = [
   "public/ogp-ruppelt-v2.jpg",
   "public/ogp-ruppelt-v22.jpg",
   "public/ogp-ruppelt-v25.jpg",
+  "public/ogp-ruppelt-v30.jpg",
   "docs/apps/ruppelt/AGENTS.md",
   "docs/apps/ruppelt/PROJECT.md",
   "docs/apps/ruppelt/DESIGN.md",
@@ -258,10 +261,10 @@ if (missingBrandHomeHrefs.length > 0) {
 }
 
 const requiredFileContents = [
-  ["app/ruppelt/page.tsx", "Ruppelt V2.5"],
-  ["app/ruppelt/page.tsx", "ogp-ruppelt-v25.jpg"],
-  ["app/ruppelt/lp/page.tsx", "Ruppelt V2.5"],
-  ["app/ruppelt/lp/page.tsx", "ogp-ruppelt-v25.jpg"],
+  ["app/ruppelt/page.tsx", "Ruppelt V3.0"],
+  ["app/ruppelt/page.tsx", "ogp-ruppelt-v30.jpg"],
+  ["app/ruppelt/lp/page.tsx", "Ruppelt V3.0"],
+  ["app/ruppelt/lp/page.tsx", "ogp-ruppelt-v30.jpg"],
 ];
 
 const missingFileContents = requiredFileContents
@@ -285,15 +288,17 @@ const legacyRuppeltOgpHash = ogpImageHash("public/ogp-ruppelt.jpg");
 const versionedRuppeltOgpHash = ogpImageHash("public/ogp-ruppelt-v2.jpg");
 const cacheBustedRuppeltOgpHash = ogpImageHash("public/ogp-ruppelt-v22.jpg");
 const v25RuppeltOgpHash = ogpImageHash("public/ogp-ruppelt-v25.jpg");
+const v30RuppeltOgpHash = ogpImageHash("public/ogp-ruppelt-v30.jpg");
 
 if (
   legacyRuppeltOgpHash !== versionedRuppeltOgpHash ||
   versionedRuppeltOgpHash !== cacheBustedRuppeltOgpHash ||
-  cacheBustedRuppeltOgpHash !== v25RuppeltOgpHash
+  cacheBustedRuppeltOgpHash !== v25RuppeltOgpHash ||
+  v25RuppeltOgpHash !== v30RuppeltOgpHash
 ) {
   console.error("Ruppelt OGP images do not match. Refusing to continue:");
   console.error(
-    "- public/ogp-ruppelt.jpg, public/ogp-ruppelt-v2.jpg, public/ogp-ruppelt-v22.jpg, and public/ogp-ruppelt-v25.jpg must match",
+    "- public/ogp-ruppelt.jpg, public/ogp-ruppelt-v2.jpg, public/ogp-ruppelt-v22.jpg, public/ogp-ruppelt-v25.jpg, and public/ogp-ruppelt-v30.jpg must match",
   );
   process.exit(1);
 }

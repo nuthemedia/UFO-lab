@@ -19,8 +19,8 @@ const statusDashboardOrder: StatusDashboardKey[] = [
   "unreviewed",
 ];
 // Legacy Vercel build guard compatibility marker: Ruppelt V2.0.
-const ruppeltOgpImage = `${siteUrl}/ogp-ruppelt-v25.jpg`;
-const ruppeltSocialUrl = `${siteUrl}/ruppelt?xcard=v22`;
+const ruppeltOgpImage = `${siteUrl}/ogp-ruppelt-v30.jpg`;
+const ruppeltSocialUrl = `${siteUrl}/ruppelt?xcard=v30`;
 
 function getStatusDashboardLabel(status: StatusDashboardKey) {
   return status === "unreviewed" ? "未判定" : priorDisclosureLabels[status];
@@ -38,13 +38,13 @@ function getFullTextRecordIds() {
 }
 
 export const metadata: Metadata = {
-  title: "Ruppelt V2.5 | Ruppelt V2.5 - PURSUE日本語インデックス",
+  title: "Ruppelt V3.0 | Ruppelt V3.0 - PURSUE日本語インデックス",
   description: "アメリカ政府UAP公開資料を、日本語でさくっと確認できる資料ブラウザです。",
   alternates: {
     canonical: "/ruppelt",
   },
   openGraph: {
-    title: "Ruppelt V2.5 - PURSUE日本語インデックス",
+    title: "Ruppelt V3.0 - PURSUE日本語インデックス",
     description: "アメリカ政府UAP公開資料をスマホでさくっと確認。",
     url: ruppeltSocialUrl,
     siteName: "UFO Lab Tokyo",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
         url: ruppeltOgpImage,
         width: 1200,
         height: 630,
-        alt: "Ruppelt V2.5 - PURSUE日本語インデックス",
+        alt: "Ruppelt V3.0 - PURSUE日本語インデックス",
         type: "image/jpeg",
       },
     ],
@@ -61,18 +61,19 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ruppelt V2.5 - PURSUE日本語インデックス",
+    title: "Ruppelt V3.0 - PURSUE日本語インデックス",
     description: "アメリカ政府UAP公開資料をスマホでさくっと確認。",
     images: [ruppeltOgpImage],
   },
   other: {
-    "twitter:image:alt": "Ruppelt V2.5 - PURSUE日本語インデックス",
+    "twitter:image:alt": "Ruppelt V3.0 - PURSUE日本語インデックス",
   },
 };
 
 export default function RuppeltPage() {
   const index = pursueIndex as PursueIndex;
   const fullTextRecordIds = getFullTextRecordIds();
+  const videoCount = index.records.filter((record) => record.source.documentType === "VID").length;
   const statusCounts = index.records.reduce<Record<StatusDashboardKey, number>>(
     (counts, record) => {
       const status = record.searchFacets?.priorDisclosureStatus;
@@ -110,7 +111,7 @@ export default function RuppeltPage() {
           </div>
           <span className="sr-only">{siteConfig.shortName}</span>
         </div>
-        <h1>Ruppelt V2.5</h1>
+        <h1>Ruppelt V3.0</h1>
         <p className="tagline">PURSUE日本語インデックス</p>
         <p className="lead">アメリカ政府UAP公開資料をスマホでさくっと確認。</p>
         <p className="ruppelt-kean-note">
@@ -131,6 +132,10 @@ export default function RuppeltPage() {
           <strong>日本語全文訳 {fullTextRecordIds.length}件</strong>
           <strong>日本語資料説明 {index.records.length}件</strong>
         </div>
+        <Link className="ruppelt-video-entry" href="/ruppelt/videos">
+          <span aria-hidden="true">▶</span>
+          PURSUE動画を見る {videoCount}件
+        </Link>
       </div>
 
       <RuppeltBrowser index={index} fullTextRecordIds={fullTextRecordIds} />

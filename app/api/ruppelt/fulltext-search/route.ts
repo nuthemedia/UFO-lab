@@ -120,7 +120,6 @@ function makeBestSnippet(document: FulltextIndexItem, query: string) {
     document.fullTextJa || "",
     document.ocrTextEn || "",
     document.summaryText || "",
-    document.metadataText || "",
   ];
 
   for (const text of fieldsByPriority) {

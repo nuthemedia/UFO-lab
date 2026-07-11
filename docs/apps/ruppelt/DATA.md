@@ -13,7 +13,7 @@ Data rules:
 
 Current translation state:
 
-- Japanese full-text translations are available for 174 records, including 41 Release 03 records.
+- Japanese full-text translations are available for 186 records, including 41 Release 03 records and 12 Release 04 records.
 - Release 03 records are included in the lightweight index with Japanese source-field translations.
 - Release 03 includes Japanese full-text translations for 41 OCR-backed records. The remaining 11 OCR-backed giant records are intentionally kept as OCR-search-only / summary-first records rather than full Japanese translations.
 - Records without full-text data should be described as `全文OCR未取得`, not as missing official source data.
@@ -45,3 +45,38 @@ Release 03 public-disclosure review:
 - Historical CIA/NASA/FBI/Project Blue Book style records should use archive/catalog evidence with medium confidence unless an exact prior file match is confirmed.
 - Recent FBI/AARO/DOW event packages should avoid overclaiming: use low confidence when no prior same-file publication is found.
 - Keep `known_case_new_file` out of Release 03 UI data unless the product spec explicitly brings that label back.
+
+Release 04 metadata:
+
+- Release 04 was published on July 10, 2026 and adds 40 records: 14 PDFs, 19 videos, 3 images, and 4 audio records.
+- The official source is `https://www.war.gov/Portals/1/Interactive/2026/UFO/uap-data.csv?release=4` and the official release page is `https://www.war.gov/UFO/release/04/`.
+- war.gov may return an HTML access-denied page to command-line clients. `scripts/import-pursue-release.mjs` rejects HTML responses; use a browser-downloaded CSV with `--input` when needed.
+- Release 04 source metadata was checked against all 40 records shown by the official release page. The machine-readable mirror at `abigailhaddad/ufo-releases` was used only to transport matching CSV fields when direct CLI download was blocked.
+- Release 04 includes Japanese translations of the official title, release, agency, location, type, and description fields.
+- Release 04 initially shipped without full text. It now adds OCR, Japanese full-text translations, summaries, and shared document bundles for 12 PDF records; 28 media/OCR-missing records remain metadata-search-only.
+- Release 04 public-disclosure status is initially unreviewed and is shown as `未判定`.
+
+Release 04 OCR and translation:
+
+- `abigailhaddad/ufo-releases` maps all 40 Release 04 records and currently provides OCR/extracted text for 12 of the 14 PDF records (about 650,000 source characters).
+- Use `scripts/audit-release04-ocr-source.mjs` to verify coverage and `scripts/import-release04-ocr-from-abigail.mjs` to import accepted OCR with provenance.
+- The repository license is not declared. Release 04 OCR is stored only under the user's existing explicit acceptance, with `unverified_accepted` provenance; the official war.gov file remains the source of truth.
+- DOW-UAP-D095 and DOW-UAP-D096 currently have no upstream OCR text. Attempt extraction from browser-downloaded official PDFs; otherwise retain `全文OCR未取得`.
+- Images and videos remain metadata-search-only. Audio is added to full-text search only when a trustworthy existing transcript is found; this workflow does not create new AI transcriptions.
+- OCR-backed Release 04 documents may receive machine-generated Japanese full-text translations and summaries. Run `scripts/generate-release03-ja-translations.mjs --release-id release_04`; the legacy filename is retained for compatibility, but the script now accepts an explicit release id.
+- For large OCR documents, `--chunk-chars 24000` may be used to reduce API round trips while keeping each source/translation pair within the model context.
+- Keep translations marked machine-generated and unreviewed.
+
+Release 04 public-disclosure review:
+
+- Search existing classification datasets before applying Ruppelt review. No Release 04 equivalent of the Release 01 external audit was found in the checked sources.
+- Generate the provisional review with `scripts/build-release04-prior-disclosures.mjs`; the audit trail is stored in `data/pursue/release04-prior-disclosure-audit.json`.
+- Historical documents use archive/catalog matches with medium confidence. NASA images and audio use `partial` when the source mission material is public but the exact PURSUE package is not fully matched.
+- Recent DOW sensor videos and recent incident reports use `first_time_public` only with low confidence when no prior same-file publication is found.
+- All Release 04 classifications remain `manualReviewRequired: true` and must expose evidence links in the detail panel.
+
+Future release import:
+
+- Add the release definition to `scripts/import-pursue-release.mjs`, `scripts/build-pursue-index.mjs`, and `lib/pursue.ts` before importing a new release.
+- Run the importer with explicit `--release-id`, `--release-date`, and either the official `--url` or a browser-downloaded `--input` file.
+- Rebuild the lightweight index and search index, then verify that older record ids and shared full-text assets are unchanged.

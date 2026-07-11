@@ -25,6 +25,16 @@ const limit =
 const recordArgIndex = process.argv.indexOf("--record");
 const selectedRecordId =
   recordArgIndex >= 0 && process.argv[recordArgIndex + 1] ? process.argv[recordArgIndex + 1] : "";
+const releaseArgIndex = process.argv.indexOf("--release-id");
+const selectedReleaseId =
+  releaseArgIndex >= 0 && process.argv[releaseArgIndex + 1]
+    ? process.argv[releaseArgIndex + 1]
+    : "release_03";
+const chunkCharsArgIndex = process.argv.indexOf("--chunk-chars");
+const chunkChars =
+  chunkCharsArgIndex >= 0 && process.argv[chunkCharsArgIndex + 1]
+    ? Number.parseInt(process.argv[chunkCharsArgIndex + 1], 10)
+    : 12000;
 
 async function readJson(path, fallback = null) {
   try {
@@ -144,14 +154,14 @@ await mkdir(documentsDir, { recursive: true });
 
 const recordsIndex = await readJson(recordsPath, { records: [] });
 const bundles = await readJson(bundlesPath, {});
-const release03Ids = new Set(
+const selectedReleaseIds = new Set(
   recordsIndex.records
-    .filter((record) => record.source.release === "6/12/26")
+    .filter((record) => record.searchFacets?.releaseId === selectedReleaseId)
     .map((record) => record.source.id),
 );
 const targets = Object.entries(bundles)
   .filter(([recordId, bundle]) => {
-    if (!release03Ids.has(recordId)) {
+    if (!selectedReleaseIds.has(recordId)) {
       return false;
     }
 
@@ -186,7 +196,7 @@ let generated = 0;
 
 for (const target of limitedTargets) {
   const ocrTextEn = target.bundle.ocr.ocrTextEn;
-  const chunks = chunkText(ocrTextEn);
+  const chunks = chunkText(ocrTextEn, chunkChars);
   const translatedChunks = [];
 
   for (const [index, chunk] of chunks.entries()) {
@@ -244,7 +254,7 @@ for (const target of limitedTargets) {
   await writeFile(target.documentPath, `${JSON.stringify(document, null, 2)}\n`, "utf8");
   await writeFile(bundlesPath, `${JSON.stringify(bundles, null, 2)}\n`, "utf8");
   generated += 1;
-  console.log(`Generated Release 03 Japanese translation for ${target.recordId} (${generated}/${limitedTargets.length}).`);
+    console.log(`Generated ${selectedReleaseId} Japanese translation for ${target.recordId} (${generated}/${limitedTargets.length}).`);
 }
 
-console.log(`Generated Release 03 Japanese translations for ${generated} document(s).`);
+console.log(`Generated ${selectedReleaseId} Japanese translations for ${generated} document(s).`);

@@ -44,12 +44,13 @@ function RecordCardComponent({
   const [thumbnailBroken, setThumbnailBroken] = useState(false);
   const [descriptionExpanded, setDescriptionExpanded] = useState(false);
   const saveLabel = saved ? "後で見るを解除" : "後で見るに追加";
+  const isAudio = record.source.documentType === "AUD";
   const primaryFileLabel = record.source.documentType === "IMG" ? "画像" : "PDF";
   const previewFileLabel = record.source.documentType === "IMG" ? "プレビュー" : "画像";
   const links = [
     [primaryFileLabel, record.source.downloadUrl],
     [previewFileLabel, record.source.imageUrl],
-    ["動画", getVideoUrl(record)],
+    [isAudio ? "音声" : "動画", getVideoUrl(record)],
   ].filter(([, url]) => url);
   const hasThumbnail = Boolean(record.source.imageUrl) && !thumbnailBroken;
   const videoEmbedUrl = getVideoEmbedUrl(record);

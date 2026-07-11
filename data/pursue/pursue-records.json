@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "appName": "Ruppelt v2.5",
-    "displayName": "Ruppelt v2.5 - PURSUE日本語インデックス",
+    "appName": "Ruppelt v3.0",
+    "displayName": "Ruppelt v3.0 - PURSUE日本語インデックス",
     "sourcePageUrl": "https://www.war.gov/UFO/",
-    "csvUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/uap-data.csv?release=3",
-    "fetchedAt": "2026-06-12T14:49:37.634Z",
-    "recordCount": 294,
+    "csvUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/uap-data.csv?release=4",
+    "fetchedAt": "2026-07-11T01:32:37.297Z",
+    "recordCount": 334,
     "untranslatedCount": 0
   },
   "records": [
@@ -22257,6 +22257,3606 @@
         "hasPriorDisclosureEvidence": true,
         "attributionSources": [
           "internet_archive",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0295",
+        "assetFileName": "DOE-UAP-D004, Los Alamos Conference on Aerial Phenomena, 1949",
+        "release": "7/10/26",
+        "agency": "Department of Energy",
+        "incidentDate": "3/22/49",
+        "incidentLocation": "New Mexico",
+        "documentType": "PDF",
+        "description": "This document is a transcript of a 1949 conference held at Los Alamos Scientific Laboratory (now Los Alamos National Laboratory), Los Alamos, New Mexico. Attendees included several eminent scientists and physicists, many of whom had contributed to the development of the first nuclear weapons during the Manhattan Project. The purpose of the conference was to discuss and gather hypotheses to account for the nature and origin of a phenomenon involving “green fireballs” that had been reported over a period of several months in the vicinity of the laboratory. The group did not come to a consensus on a likely attribution for the phenomenon, though a leading hypothesis was that the observations may have been related to meteors entering the atmosphere at a shallow angle and high altitude. Dr. Edward Teller suggested that if not a “material body,” an “electron phenomenon” might be the cause, while Dr. Lincoln LaPaz, an expert specializing in meteorics, expressed that “nothing like this, to [his] knowledge, has ever been observed in the case of meteorite drops.”",
+        "virin": "260710-O-D0360-1132",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/DOE-UAP-D004_Los-Alamos-Conference-on-Aerial-Phenomena_1949.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/071026/release_04/thumbnails/DOE-UAP-D004_Los-Alamos-Conference-on-Aerial-Phenomena_1949.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "DOE-UAP-D004、航空現象に関するロスアラモス会議、1949 年",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "米国エネルギー省",
+        "incidentLocationJa": "ニューメキシコ州",
+        "documentTypeJa": "PDF",
+        "descriptionJa": "この文書は、ニューメキシコ州ロスアラモスのロスアラモス科学研究所（現在のロスアラモス国立研究所）で開催された1949年の会議の記録です。出席者には著名な科学者や物理学者も含まれており、その多くはマンハッタン計画中に最初の核兵器の開発に貢献しました。この会議の目的は、研究所の近くで数ヶ月にわたって報告された「緑色の火の玉」に関連する現象の性質と起源を説明するための仮説を議論し、収集することでした。研究グループは、この現象の可能性の高い原因について意見の一致には至らなかったが、有力な仮説は、この観測が浅い角度と高高度で大気圏に突入する流星に関連している可能性があるというものだった。エドワード・テラー博士は、「物質体」ではないとしても、「電子現象」が原因である可能性があると示唆し、一方、隕石を専門とする専門家であるリンカーン・ラパス博士は、「隕石落下の場合には、[彼の]知る限り、このようなことはこれまで観察されたことがない」と述べた。"
+      },
+      "priorDisclosure": {
+        "status": "previously_public",
+        "labelJa": "既に公開済み",
+        "confidence": "medium",
+        "evidenceSummaryJa": [
+          "同名または同等の歴史資料が公的・補助アーカイブで既公開の資料群として照合できます。",
+          "PURSUE版ではUAP文脈の資料として再掲されています。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/medialink/ufo/071026/release_04/documents/DOE-UAP-D004_Los-Alamos-Conference-on-Aerial-Phenomena_1949.pdf",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "archive_match",
+            "label": "Public archive search",
+            "url": "https://archive.org/search?query=DOE-UAP-D004%2C%20Los%20Alamos%20Conference%20on%20Aerial%20Phenomena%2C%201949",
+            "noteJa": "文書名と資料群を用いた既公開アーカイブ照合候補です。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "internet_archive",
+            "sourceUrl": "https://archive.org/search?query=DOE-UAP-D004%2C%20Los%20Alamos%20Conference%20on%20Aerial%20Phenomena%2C%201949",
+            "role": "official_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "previously_public",
+        "priorDisclosureConfidence": "medium",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "internet_archive",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0296",
+        "assetFileName": "DOW-UAP-D094, Analysis of Flying Object Incidents in the United States, 1949",
+        "release": "7/10/26",
+        "agency": "Department of War",
+        "incidentDate": "4/28/49",
+        "incidentLocation": "Virginia",
+        "documentType": "PDF",
+        "description": "This file contains a U.S. Air Force (USAF) Air Intelligence Division study, “Analysis of Flying Object Incidents in the United States,” Study No. 203, dated 04/28/1949. The analysis includes an assessment of various reported unidentified flying object (UFO) incidents and theories to account for their nature and origin. Overall, the study assesses that “it appears that some object has been seen; however, the identification of that object cannot be readily accomplished.” The study offers that two “reasonable” origins might account for the phenomena: technologies of a domestic or foreign origin. It also suggests that, if foreign, it is prudent for the United States to assume that UFO observations are attributable to scientific, military, or intelligence activities of the Soviet Union, and, in that case, to take seriously the threat such objects may pose. The file also contains selected contemporary UFO reports and examples of experimental “flying wing” type aircraft planforms that might account for certain commonly reported UFO characteristics. AARO Comment: This file appears to be a later revision of the file contained in DOW-UAP-D093, whose content is substantively similar.",
+        "virin": "260710-D-D0360-1079",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D094_Analysis-of-Flying-Object-Incidents-in-the-US_1949.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/071026/release_04/thumbnails/DOW-UAP-D094_Analysis-of-Flying-Object-Incidents-in-the-US_1949.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-D094、米国における飛行物体事件の分析、1949 年",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "米国戦争省",
+        "incidentLocationJa": "バージニア州",
+        "documentTypeJa": "PDF",
+        "descriptionJa": "このファイルには、米国空軍 (USAF) 航空情報部門の調査「米国における飛行物体事件の分析」、調査番号 203、1949 年 4 月 28 日が含まれています。この分析には、報告されているさまざまな未確認飛行物体（UFO）事件の評価と、その性質と起源を説明するための理論が含まれています。全体として、この研究は「何らかの物体が見られたようだが、その物体の特定は容易には達成できない」と評価している。この研究は、国内起源または外国起源の技術という 2 つの「合理的な」起源が現象を説明している可能性があることを示唆しています。また、外国のものであれば、米国にとってUFO観測はソ連の科学活動、軍事活動、または諜報活動によるものであると想定し、その場合、そのような物体がもたらす可能性のある脅威を真剣に受け止めることが賢明であることも示唆している。このファイルには、選択された現代の UFO レポートと、一般的に報告されている特定の UFO の特徴を説明できるかもしれない実験的な「全翼型」タイプの航空機の平面図の例も含まれています。 AARO コメント: このファイルは、DOW-UAP-D093 に含まれるファイルの新しいリビジョンであるようで、その内容は実質的に類似しています。"
+      },
+      "priorDisclosure": {
+        "status": "previously_public",
+        "labelJa": "既に公開済み",
+        "confidence": "medium",
+        "evidenceSummaryJa": [
+          "同名または同等の歴史資料が公的・補助アーカイブで既公開の資料群として照合できます。",
+          "PURSUE版ではUAP文脈の資料として再掲されています。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D094_Analysis-of-Flying-Object-Incidents-in-the-US_1949.pdf",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "archive_match",
+            "label": "Public archive search",
+            "url": "https://archive.org/search?query=DOW-UAP-D094%2C%20Analysis%20of%20Flying%20Object%20Incidents%20in%20the%20United%20States%2C%201949",
+            "noteJa": "文書名と資料群を用いた既公開アーカイブ照合候補です。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "internet_archive",
+            "sourceUrl": "https://archive.org/search?query=DOW-UAP-D094%2C%20Analysis%20of%20Flying%20Object%20Incidents%20in%20the%20United%20States%2C%201949",
+            "role": "official_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "previously_public",
+        "priorDisclosureConfidence": "medium",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "internet_archive",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0297",
+        "assetFileName": "DOW-UAP-D097, Project Sign Progress Report, 1948",
+        "release": "7/10/26",
+        "agency": "Department of War",
+        "incidentDate": "1948",
+        "incidentLocation": "Various",
+        "documentType": "PDF",
+        "description": "This file contains an initial report from the Air Materiel Command regarding Project Sign. Project Sign was a 1948-1949 U.S. Air Force program to investigate the nature and origin of unidentified flying objects (UFO). The report details 100 UFO sightings from 1947-1948. The file also contains an article excerpted from “The Aeroplane,” an aviation-focused periodical magazine published between 1911 and 1968, titled “The Biology of the Flying Saucer.”",
+        "virin": "260710-D-D0360-1082",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D097_Project-Sign-Progress-Report_1948.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/071026/release_04/thumbnails/DOW-UAP-D097_Project-Sign-Progress-Report_1948.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-D097、プロジェクト・サイン進捗報告書、1948年",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "米国戦争省",
+        "incidentLocationJa": "複数地域",
+        "documentTypeJa": "PDF",
+        "descriptionJa": "このファイルには、プロジェクト・サインに関する航空資材軍団からの最初の報告書が含まれています。プロジェクト・サインは、未確認飛行物体 (UFO) の性質と起源を調査するための 1948 年から 1949 年のアメリカ空軍プログラムでした。この報告書は、1947年から1948年にかけて100件のUFO目撃情報を詳述している。このファイルには、1911 年から 1968 年にかけて発行された航空専門の定期雑誌「The Aeroplane」から抜粋された「空飛ぶ円盤の生物学」というタイトルの記事も含まれています。"
+      },
+      "priorDisclosure": {
+        "status": "previously_public",
+        "labelJa": "既に公開済み",
+        "confidence": "medium",
+        "evidenceSummaryJa": [
+          "同名または同等の歴史資料が公的・補助アーカイブで既公開の資料群として照合できます。",
+          "PURSUE版ではUAP文脈の資料として再掲されています。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D097_Project-Sign-Progress-Report_1948.pdf",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "archive_match",
+            "label": "Public archive search",
+            "url": "https://archive.org/search?query=DOW-UAP-D097%2C%20Project%20Sign%20Progress%20Report%2C%201948",
+            "noteJa": "文書名と資料群を用いた既公開アーカイブ照合候補です。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "internet_archive",
+            "sourceUrl": "https://archive.org/search?query=DOW-UAP-D097%2C%20Project%20Sign%20Progress%20Report%2C%201948",
+            "role": "official_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "previously_public",
+        "priorDisclosureConfidence": "medium",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "internet_archive",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0298",
+        "assetFileName": "DOW-UAP-PR104, Unresolved UAP Report, Yellow Sea, 2025",
+        "release": "7/10/26",
+        "agency": "Department of War",
+        "incidentDate": "2025",
+        "incidentLocation": "Yellow Sea",
+        "documentType": "VID",
+        "description": "The United States Indo-Pacific Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of 18 seconds of video footage from an infrared sensor aboard a U.S. military platform in 2025. Video Description: 00:01-00:15: The sensor pans to track an area of contrast resembling a six-pointed star, keeping it generally centered within the center of the screen. This video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
+        "virin": "",
+        "downloadUrl": "",
+        "imageUrl": "",
+        "videoUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014101"
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-PR104、未解決の UAP レポート、黄海、2025",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "米国戦争省",
+        "incidentLocationJa": "黄海",
+        "documentTypeJa": "動画",
+        "descriptionJa": "米国インド太平洋軍は、2025年に米軍プラットフォームに搭載された赤外線センサーからの18秒間のビデオ映像からなる未確認の異常現象に関する報告書を全領域異常解決局（AARO）に提出​​した。ビデオの説明: 00:01-00:15: センサーはパンして六芒星に似たコントラストの領域を追跡し、通常は画面の中央に位置を保ちます。このビデオの説明は情報提供のみを目的として提供されています。読者は、この記述のいかなる部分も、記述された出来事の有効性、性質、または重要性に関する分析的判断、調査の結論、または事実の判断を反映していると解釈してはなりません。"
+      },
+      "priorDisclosure": {
+        "status": "first_time_public",
+        "labelJa": "初公開",
+        "confidence": "low",
+        "evidenceSummaryJa": [
+          "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。",
+          "初公開の断定を避けるため、信頼度は低としています。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014101",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "video_match",
+            "label": "DVIDS / archive search",
+            "url": "https://www.dvidshub.net/search/?q=DOW-UAP-PR104%2C%20Unresolved%20UAP%20Report%2C%20Yellow%20Sea%2C%202025",
+            "noteJa": "同一資料の過去公開確認に使った検索候補で、明確な先行公開一致は確認できませんでした。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "low"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "dvids",
+            "sourceUrl": "https://www.dvidshub.net/search/?q=DOW-UAP-PR104%2C%20Unresolved%20UAP%20Report%2C%20Yellow%20Sea%2C%202025",
+            "role": "auxiliary_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "first_time_public",
+        "priorDisclosureConfidence": "low",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "dvids",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0299",
+        "assetFileName": "DOW-UAP-PR105, Unresolved UAP Report, East China Sea, 2025",
+        "release": "7/10/26",
+        "agency": "Department of War",
+        "incidentDate": "2025",
+        "incidentLocation": "East China Sea",
+        "documentType": "VID",
+        "description": "The United States Indo-Pacific Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of 5 minutes of video footage from an infrared sensor aboard a U.S. military platform in 2025. Video Description: 00:01-00:14: The sensor pans to track an area of contrast, keeping it generally centered within the center of the frame. 00:15-00:19: The sensor adjusts, and the image is momentarily overlaid with black rectangular areas. 00:20-1:34: The sensor pans to track an area of contrast, keeping it generally centered within the center of the frame. Portions of the area of contrast intermittently lose distinctiveness against the background throughout this segment. 01:35-02:05: The sensor zooms in, panning from right to left to track the area of contrast. The area of contrast exits the scene from the right edge of the frame several times. 02:06-04:59: The sensor zooms out and in several times, and pans the field-of-view against the background. No content. This video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
+        "virin": "",
+        "downloadUrl": "",
+        "imageUrl": "",
+        "videoUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014103"
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-PR105、未解決の UAP レポート、東シナ海、2025",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "米国戦争省",
+        "incidentLocationJa": "東シナ海",
+        "documentTypeJa": "動画",
+        "descriptionJa": "米国インド太平洋軍は、2025年に米軍プラットフォームに搭載された赤外線センサーからの5分間のビデオ映像からなる未確認の異常現象に関する報告書を全領域異常解決局（AARO）に提出​​した。ビデオの説明: 00:01-00:14: センサーはパンしてコントラストの領域を追跡し、通常はフレームの中央に位置を保ちます。 00:15-00:19: センサーが調整され、画像に黒い長方形の領域が一時的に重ねられます。 00:20-1:34: センサーはパンしてコントラストの領域を追跡し、通常はフレームの中央に位置を保ちます。このセグメント全体を通じて、コントラスト領域の一部が背景に対して断続的に識別性を失います。 01:35-02:05: センサーがズームインし、右から左にパンしてコントラストの領域を追跡します。コントラストの領域がフレームの右端からシーンから数回出てきます。 02:06-04:59: センサーはズームアウトとズームインを数回繰り返し、背景に対して視野をパンします。内容がありません。このビデオの説明は情報提供のみを目的として提供されています。読者は、この記述のいかなる部分も、記述された出来事の有効性、性質、または重要性に関する分析的判断、調査の結論、または事実の判断を反映していると解釈してはなりません。"
+      },
+      "priorDisclosure": {
+        "status": "first_time_public",
+        "labelJa": "初公開",
+        "confidence": "low",
+        "evidenceSummaryJa": [
+          "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。",
+          "初公開の断定を避けるため、信頼度は低としています。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014103",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "video_match",
+            "label": "DVIDS / archive search",
+            "url": "https://www.dvidshub.net/search/?q=DOW-UAP-PR105%2C%20Unresolved%20UAP%20Report%2C%20East%20China%20Sea%2C%202025",
+            "noteJa": "同一資料の過去公開確認に使った検索候補で、明確な先行公開一致は確認できませんでした。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "low"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "dvids",
+            "sourceUrl": "https://www.dvidshub.net/search/?q=DOW-UAP-PR105%2C%20Unresolved%20UAP%20Report%2C%20East%20China%20Sea%2C%202025",
+            "role": "auxiliary_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "first_time_public",
+        "priorDisclosureConfidence": "low",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "dvids",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0300",
+        "assetFileName": "DOW-UAP-PR113, Unresolved UAP Report, Western United States, 1996",
+        "release": "7/10/26",
+        "agency": "Department of War",
+        "incidentDate": "1996",
+        "incidentLocation": "Western United States",
+        "documentType": "VID",
+        "description": "The United States Navy Unidentified Anomalous Phenomena Task Force (UAPTF) transferred this media to the All-domain Anomaly Resolution Office (AARO) in 2022. The video contains 2 minutes and 57 seconds of footage likely captured by an infrared sensor aboard a U.S. military platform in 1996. Video Description: No formal data handling practices for UAP-related records existed at the time this media was reported to the UAPTF. This media was digitally altered before being reported to the UAPTF, and is presented as it was received by AARO. 00:01-00:13: No content. 00:14-00:17: An area of contrast transits the sensor field-of-view, entering near the upper right corner and exiting near the lower left corner of the frame. 00:18-01:21: The footage repeats frame-by-frame. 01:22-02:13: The footage repeats at a slower playback speed. 02:14-02:56: The footage holds on a frame extracted from the first 17 seconds of the video. This video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
+        "virin": "",
+        "downloadUrl": "",
+        "imageUrl": "",
+        "videoUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014119"
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-PR113、未解決の UAP レポート、米国西部、1996 年",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "米国戦争省",
+        "incidentLocationJa": "米国西部",
+        "documentTypeJa": "動画",
+        "descriptionJa": "米国海軍未確認異常現象対策本部 (UAPTF) は、2022 年にこのメディアを全領域異常解決局 (AARO) に移管しました。ビデオには、1996 年に米軍プラットフォーム上の赤外線センサーによって撮影されたと思われる 2 分 57 秒の映像が含まれています。ビデオの説明: このメディアが UAPTF に報告された時点では、UAP 関連の記録に対する正式なデータ処理慣行は存在していませんでした。このメディアは UAPTF に報告される前にデジタル的に変更されており、AARO が受け取ったものをそのまま掲載しています。 00:01-00:13: コンテンツはありません。 00:14-00:17: コントラストの領域がセンサーの視野を通過し、フレームの右上隅近くに入り、フレームの左下隅近くから出ます。 00:18-01:21: 映像はフレームごとに繰り返されます。 01:22-02:13: 映像は遅い再生速度で繰り返されます。 02:14-02:56: 映像は、ビデオの最初の 17 秒から抽出されたフレームに保持されます。このビデオの説明は情報提供のみを目的として提供されています。読者は、この記述のいかなる部分も、記述された出来事の有効性、性質、または重要性に関する分析的判断、調査の結論、または事実の判断を反映していると解釈してはなりません。"
+      },
+      "priorDisclosure": {
+        "status": "first_time_public",
+        "labelJa": "初公開",
+        "confidence": "low",
+        "evidenceSummaryJa": [
+          "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。",
+          "初公開の断定を避けるため、信頼度は低としています。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014119",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "video_match",
+            "label": "DVIDS / archive search",
+            "url": "https://www.dvidshub.net/search/?q=DOW-UAP-PR113%2C%20Unresolved%20UAP%20Report%2C%20Western%20United%20States%2C%201996",
+            "noteJa": "同一資料の過去公開確認に使った検索候補で、明確な先行公開一致は確認できませんでした。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "low"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "dvids",
+            "sourceUrl": "https://www.dvidshub.net/search/?q=DOW-UAP-PR113%2C%20Unresolved%20UAP%20Report%2C%20Western%20United%20States%2C%201996",
+            "role": "auxiliary_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "first_time_public",
+        "priorDisclosureConfidence": "low",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "dvids",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0301",
+        "assetFileName": "DOW-UAP-PR115, Unresolved UAP Report, Gulf of America, 2019",
+        "release": "7/10/26",
+        "agency": "Department of War",
+        "incidentDate": "2019",
+        "incidentLocation": "Gulf of America",
+        "documentType": "VID",
+        "description": "The United States Air Force submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of 8 seconds of video footage from an infrared sensor aboard a U.S. military platform in 2019. 00:01-00:02: An area of contrast is visible near the center of the sensor field-of-view, partially obscured by visual elements of the heads-up display. 00:03-00:06: The sensor zooms and pans to track the area of contrast, which visually flickers in the display. 00:07-00:08: No content. This video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance. AARO Comment: Infrared sensor systems capture information within a specific range of electromagnetic wavelengths. When a tracked source’s temperature is similar to that of the surrounding environment, it can visually blend into the background or appear to flicker due to dynamic contrast adjustments applied by the system’s auto-gain control filters.",
+        "virin": "",
+        "downloadUrl": "",
+        "imageUrl": "",
+        "videoUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014123"
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-PR115、未解決の UAP レポート、アメリカ湾、2019",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "米国戦争省",
+        "incidentLocationJa": "アメリカ湾",
+        "documentTypeJa": "動画",
+        "descriptionJa": "アメリカ空軍は、2019年に米軍プラットフォームに搭載された赤外線センサーからの8秒間のビデオ映像からなる未確認の異常現象に関する報告書を全領域異常解決局（AARO）に提出​​した。00:01-00:02: センサーの視野の中心付近にコントラストの領域が見え、ヘッドアップディスプレイの視覚要素によって部分的に隠されている。 00:03-00:06: センサーはズームおよびパンして、ディスプレイ内で視覚的にちらつくコントラストの領域を追跡します。 00:07-00:08: コンテンツはありません。このビデオの説明は情報提供のみを目的として提供されています。読者は、この記述のいかなる部分も、記述された出来事の有効性、性質、または重要性に関する分析的判断、調査の結論、または事実の判断を反映していると解釈してはなりません。 AARO コメント: 赤外線センサー システムは、特定の範囲の電磁波長内の情報を捕捉します。追跡対象の光源の温度が周囲環境の温度と類似している場合、システムの自動ゲイン制御フィルターによって適用される動的なコントラスト調整により、視覚的に背景に溶け込んだり、ちらついて見えることがあります。"
+      },
+      "priorDisclosure": {
+        "status": "first_time_public",
+        "labelJa": "初公開",
+        "confidence": "low",
+        "evidenceSummaryJa": [
+          "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。",
+          "初公開の断定を避けるため、信頼度は低としています。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014123",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "video_match",
+            "label": "DVIDS / archive search",
+            "url": "https://www.dvidshub.net/search/?q=DOW-UAP-PR115%2C%20Unresolved%20UAP%20Report%2C%20Gulf%20of%20America%2C%202019",
+            "noteJa": "同一資料の過去公開確認に使った検索候補で、明確な先行公開一致は確認できませんでした。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "low"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "dvids",
+            "sourceUrl": "https://www.dvidshub.net/search/?q=DOW-UAP-PR115%2C%20Unresolved%20UAP%20Report%2C%20Gulf%20of%20America%2C%202019",
+            "role": "auxiliary_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "first_time_public",
+        "priorDisclosureConfidence": "low",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "dvids",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0302",
+        "assetFileName": "NASA-UAP-D030, STS-80 Unidentified Object Image 1, 1996",
+        "release": "7/10/26",
+        "agency": "NASA",
+        "incidentDate": "1996",
+        "incidentLocation": "Low-Earth Orbit",
+        "documentType": "IMG",
+        "description": "During STS-80, between November 19 and December 7, 1996, astronauts aboard Space Shuttle Columbia captured a series of three images of an unidentified object in low-Earth orbit. In the first photograph, the object is visible near the center of the frame, to the right of the limb of the Earth.",
+        "virin": "260710-O-D0360-1134",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/NASA-UAP-D030_STS-80-Unidentified-Object-Image1_1996.jpg",
+        "imageUrl": "https://www.war.gov/medialink/ufo/071026/release_04/thumbnails/NASA-UAP-D030_STS-80-Unidentified-Object-Image1_1996.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "NASA-UAP-D030、STS-80 未確認物体画像 1、1996 年",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "NASA",
+        "incidentLocationJa": "地球低軌道",
+        "documentTypeJa": "画像",
+        "descriptionJa": "1996 年 11 月 19 日から 12 月 7 日までの STS-80 の間、スペースシャトル コロンビアに搭乗した宇宙飛行士は、地球低軌道にある未確認物体の一連の 3 枚の画像を撮影しました。最初の写真では、地球の縁の右側、フレームの中央付近に物体が見えています。"
+      },
+      "priorDisclosure": {
+        "status": "partial",
+        "labelJa": "一部公開済み",
+        "confidence": "medium",
+        "evidenceSummaryJa": [
+          "STS-80ミッション画像の元記録・関連資料は既公開ですが、PURSUE版ファイル全体の同一公開までは確認していません。",
+          "PURSUE版には抜粋、編集、静止画化またはUAP文脈での再掲が含まれます。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/medialink/ufo/071026/release_04/documents/NASA-UAP-D030_STS-80-Unidentified-Object-Image1_1996.jpg",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "catalog_match",
+            "label": "NASA History / mission archive",
+            "url": "https://www.nasa.gov/history/",
+            "noteJa": "元ミッション記録または関連する歴史資料の既公開照合候補です。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "nasa",
+            "sourceUrl": "https://www.nasa.gov/history/",
+            "role": "official_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "partial",
+        "priorDisclosureConfidence": "medium",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "nasa",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0303",
+        "assetFileName": "NASA-UAP-D031, STS-80 Unidentified Object Image 2, 1996",
+        "release": "7/10/26",
+        "agency": "NASA",
+        "incidentDate": "1996",
+        "incidentLocation": "Low-Earth Orbit",
+        "documentType": "IMG",
+        "description": "During STS-80, between November 19 and December 7, 1996, astronauts aboard Space Shuttle Columbia captured a series of three images of an unidentified object in low-Earth orbit. In the second photograph, the object is visible near the center of the frame, to the right of the limb of the Earth. It appears to have rotated or tumbled about its major axis, which is consistent with the behavior of a free-floating object.",
+        "virin": "260710-O-D0360-1135",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/NASA-UAP-D031_STS-80-Unidentified-Object-Image2_1996.jpg",
+        "imageUrl": "https://www.war.gov/medialink/ufo/071026/release_04/thumbnails/NASA-UAP-D031_STS-80-Unidentified-Object-Image2_1996.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "NASA-UAP-D031、STS-80 未確認物体画像 2、1996 年",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "NASA",
+        "incidentLocationJa": "地球低軌道",
+        "documentTypeJa": "画像",
+        "descriptionJa": "1996 年 11 月 19 日から 12 月 7 日までの STS-80 の間、スペースシャトル コロンビアに搭乗した宇宙飛行士は、地球低軌道にある未確認物体の一連の 3 枚の画像を撮影しました。 2 番目の写真では、地球の縁の右側、フレームの中央近くに物体が見えます。それは主軸を中心に回転または転倒しているように見えますが、これは自由浮遊物体の挙動と一致しています。"
+      },
+      "priorDisclosure": {
+        "status": "partial",
+        "labelJa": "一部公開済み",
+        "confidence": "medium",
+        "evidenceSummaryJa": [
+          "STS-80ミッション画像の元記録・関連資料は既公開ですが、PURSUE版ファイル全体の同一公開までは確認していません。",
+          "PURSUE版には抜粋、編集、静止画化またはUAP文脈での再掲が含まれます。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/medialink/ufo/071026/release_04/documents/NASA-UAP-D031_STS-80-Unidentified-Object-Image2_1996.jpg",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "catalog_match",
+            "label": "NASA History / mission archive",
+            "url": "https://www.nasa.gov/history/",
+            "noteJa": "元ミッション記録または関連する歴史資料の既公開照合候補です。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "nasa",
+            "sourceUrl": "https://www.nasa.gov/history/",
+            "role": "official_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "partial",
+        "priorDisclosureConfidence": "medium",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "nasa",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0304",
+        "assetFileName": "NASA-UAP-D032, STS-80 Unidentified Object Image 3, 1996",
+        "release": "7/10/26",
+        "agency": "NASA",
+        "incidentDate": "1996",
+        "incidentLocation": "Low-Earth Orbit",
+        "documentType": "IMG",
+        "description": "During STS-80, between November 19 and December 7, 1996, astronauts aboard Space Shuttle Columbia captured a series of three images of an unidentified object in low-Earth orbit. In the third photograph, the object is visible near the center of the frame, superimposed against the Earth. It appears to have continued along a trajectory passing between Columbia and the Earth.",
+        "virin": "260710-O-D0360-1136",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/NASA-UAP-D032_STS-80-Unidentified-Object-Image3_1996.jpg",
+        "imageUrl": "https://www.war.gov/medialink/ufo/071026/release_04/thumbnails/NASA-UAP-D032_STS-80-Unidentified-Object-Image3_1996.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "NASA-UAP-D032、STS-80 未確認物体画像 3、1996 年",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "NASA",
+        "incidentLocationJa": "地球低軌道",
+        "documentTypeJa": "画像",
+        "descriptionJa": "1996 年 11 月 19 日から 12 月 7 日までの STS-80 の間、スペースシャトル コロンビアに搭乗した宇宙飛行士は、地球低軌道にある未確認物体の一連の 3 枚の画像を撮影しました。 3 番目の写真では、オブジェクトがフレームの中央近くに地球に重ねて表示されています。コロンビアと地球の間を通過する軌道に沿って続いたと考えられます。"
+      },
+      "priorDisclosure": {
+        "status": "partial",
+        "labelJa": "一部公開済み",
+        "confidence": "medium",
+        "evidenceSummaryJa": [
+          "STS-80ミッション画像の元記録・関連資料は既公開ですが、PURSUE版ファイル全体の同一公開までは確認していません。",
+          "PURSUE版には抜粋、編集、静止画化またはUAP文脈での再掲が含まれます。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/medialink/ufo/071026/release_04/documents/NASA-UAP-D032_STS-80-Unidentified-Object-Image3_1996.jpg",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "catalog_match",
+            "label": "NASA History / mission archive",
+            "url": "https://www.nasa.gov/history/",
+            "noteJa": "元ミッション記録または関連する歴史資料の既公開照合候補です。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "nasa",
+            "sourceUrl": "https://www.nasa.gov/history/",
+            "role": "official_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "partial",
+        "priorDisclosureConfidence": "medium",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "nasa",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0305",
+        "assetFileName": "CIA-UAP-D020, Memorandum on Unconventional Aircraft Sightings, 1955",
+        "release": "7/10/26",
+        "agency": "CIA",
+        "incidentDate": "1955",
+        "incidentLocation": "Azerbaijan",
+        "documentType": "PDF",
+        "description": "This memorandum summarizes a Central Intelligence Agency (CIA) debriefing of a group of four individuals who reported observing a “flying saucer” or “unconventional aircraft” in 1955. The group, which included U.S. Senator Richard Russell, a U.S. military service member, and two U.S. Government officials, reported observing a luminescent “greenish-yellow” phenomenon, as seen from aboard a train while traveling within the Soviet Union, in present-day Azerbaijan, between Baku and Tiflis (Tbilisi, Georgia). The document concludes by stating that the observation can “probably be explained as steep climbing aircraft or missiles,” and that “the evidence does not appear sufficiently firm to warrant the conclusion that the Soviets have developed […] a radically new type of aircraft.” The document “CIA-UAP-D021” contains a contemporary analysis of the incident.",
+        "virin": "260710-O-D0360-1137",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/CIA-UAP-D020_Memorandum-on-Unconventional-Aircraft-Sightings_1955.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/071026/release_04/thumbnails/CIA-UAP-D020_Memorandum-on-Unconventional-Aircraft-Sightings_1955.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "CIA-UAP-D020、非従来型航空機目撃に関する覚書、1955 年",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "CIA",
+        "incidentLocationJa": "アゼルバイジャン",
+        "documentTypeJa": "PDF",
+        "descriptionJa": "この覚書は、1955年に「空飛ぶ円盤」または「非従来型航空機」を観察したと報告した4人からなるグループの中央情報局（CIA）の報告書を要約したものである。このグループには、米国上院議員リチャード・ラッセル、米軍人、および2人の米国政府高官が含まれており、ソ連国内を旅行中の列車に乗って見られたように、発光する「緑がかった黄色」の現象を観察したと報告した。現在のアゼルバイジャン、バクーとティフリス（ジョージア州トビリシ）の間。この文書は、この観察は「おそらく急登航空機またはミサイルとして説明できる」と述べ、「ソ連が[…]根本的に新しいタイプの航空機を開発したという結論を保証するほど十分に確固たる証拠はないようだ」と結論付けている。文書「CIA-UAP-D021」には、この事件の最新の分析が含まれています。"
+      },
+      "priorDisclosure": {
+        "status": "previously_public",
+        "labelJa": "既に公開済み",
+        "confidence": "medium",
+        "evidenceSummaryJa": [
+          "同名または同等の歴史資料が公的・補助アーカイブで既公開の資料群として照合できます。",
+          "PURSUE版ではUAP文脈の資料として再掲されています。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/medialink/ufo/071026/release_04/documents/CIA-UAP-D020_Memorandum-on-Unconventional-Aircraft-Sightings_1955.pdf",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "archive_match",
+            "label": "CIA Reading Room search",
+            "url": "https://www.cia.gov/readingroom/search/site/CIA-UAP-D020%2C%20Memorandum%20on%20Unconventional%20Aircraft%20Sightings%2C%201955",
+            "noteJa": "文書名と資料群を用いた既公開アーカイブ照合候補です。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "cia_crest",
+            "sourceUrl": "https://www.cia.gov/readingroom/search/site/CIA-UAP-D020%2C%20Memorandum%20on%20Unconventional%20Aircraft%20Sightings%2C%201955",
+            "role": "official_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "previously_public",
+        "priorDisclosureConfidence": "medium",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "cia_crest",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0306",
+        "assetFileName": "CIA-UAP-D021, Analysis of Unconventional Aircraft Sightings, 1955",
+        "release": "7/10/26",
+        "agency": "CIA",
+        "incidentDate": "1955",
+        "incidentLocation": "N/A",
+        "documentType": "PDF",
+        "description": "Sections 1 and 2 of this memorandum document a 1955 analysis of reports of “flying saucers” or “unconventional aircraft,” referencing the incident described in observer debriefings contained within CIA-UAP-D020. The memo summarizes the incident as consisting of two lights rising vertically, then passing above the observers. The memo contains caveating language that suggests the author concluded that the reports, as described, did not indicate the presence of an “unconventional aircraft.” Section 3 cites a previous finding by Dr. [Howard] Robertson (of the 1953 Robertson Panel) that “almost all the sightings […] represented no threat to the U.S.” Section 4 discusses the state of then-current research into “saucer-like aircraft” under Project “Y,” a contemporary joint U.S.-Canadian aerospace development program.",
+        "virin": "260710-O-D0360-1138",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/CIA-UAP-D021_Analysis-of-Unconventional-Aircraft-Sightings_1955.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/071026/release_04/thumbnails/CIA-UAP-D021_Analysis-of-Unconventional-Aircraft-Sightings_1955.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "CIA-UAP-D021、非従来型航空機目撃の分析、1955年",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "CIA",
+        "incidentLocationJa": "不明",
+        "documentTypeJa": "PDF",
+        "descriptionJa": "この覚書のセクション 1 と 2 は、CIA-UAP-D020 に含まれる観察者による報告に記載された事件に言及した、「空飛ぶ円盤」または「非従来型航空機」に関する報告の 1955 年の分析を文書化したものです。メモでは、この事件は2つの光が垂直に上昇し、観察者の頭上を通過したものであると要約されている。このメモには、記載されているような報告書は「非従来型航空機」の存在を示していないと著者が結論づけたことを示唆する警告的な文言が含まれている。セクション3では、「ほぼすべての目撃情報は[…]米国にとって脅威ではなかった」という[ハワード]ロバートソン博士(1953年のロバートソンパネル)による以前の発見を引用している。セクション 4 では、現代の米国とカナダの共同航空宇宙開発プログラムであるプロジェクト「Y」における「円盤型航空機」の当時の研究状況について説明します。"
+      },
+      "priorDisclosure": {
+        "status": "previously_public",
+        "labelJa": "既に公開済み",
+        "confidence": "medium",
+        "evidenceSummaryJa": [
+          "同名または同等の歴史資料が公的・補助アーカイブで既公開の資料群として照合できます。",
+          "PURSUE版ではUAP文脈の資料として再掲されています。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/medialink/ufo/071026/release_04/documents/CIA-UAP-D021_Analysis-of-Unconventional-Aircraft-Sightings_1955.pdf",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "archive_match",
+            "label": "CIA Reading Room search",
+            "url": "https://www.cia.gov/readingroom/search/site/CIA-UAP-D021%2C%20Analysis%20of%20Unconventional%20Aircraft%20Sightings%2C%201955",
+            "noteJa": "文書名と資料群を用いた既公開アーカイブ照合候補です。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "cia_crest",
+            "sourceUrl": "https://www.cia.gov/readingroom/search/site/CIA-UAP-D021%2C%20Analysis%20of%20Unconventional%20Aircraft%20Sightings%2C%201955",
+            "role": "official_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "previously_public",
+        "priorDisclosureConfidence": "medium",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "cia_crest",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0307",
+        "assetFileName": "DOE-UAP-D005, Pantex Unidentified Object Incident Report, 2015",
+        "release": "7/10/26",
+        "agency": "Department of Energy",
+        "incidentDate": "9/1/15",
+        "incidentLocation": "Texas",
+        "documentType": "PDF",
+        "description": "This file contains imagery and a report documenting the circumstances surrounding a September 1, 2015, incident involving an unidentified object intruding the airspace above the Pantex Plant near Amarillo, Texas. The Pantex Plant is a sensitive national security site that contains the primary facility for the assembly, disassembly, maintenance, and life-extension of nuclear weapons. Pages 5 and 6 of this report were originally released under the PURSUE initiative in a more redacted form on May 22, 2026. (See: DOE-UAP-D001, Enhanced Pantex Imagery)",
+        "virin": "260710-O-D0360-1131",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/DOE-UAP-D005_Pantex-Unidentified-Object-Incident-Report_2015.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/071026/release_04/thumbnails/DOE-UAP-D005_Pantex-Unidentified-Object-Incident-Report_2015.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "DOE-UAP-D005、パンテックス未確認物体事件報告書、2015年",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "米国エネルギー省",
+        "incidentLocationJa": "テキサス州",
+        "documentTypeJa": "PDF",
+        "descriptionJa": "このファイルには、2015 年 9 月 1 日、テキサス州アマリロ近郊のパンテックス工場上空に未確認物体が侵入した事件の周囲の状況を文書化した画像と報告書が含まれています。パンテックス工場は、核兵器の組立、分解、保守、延命のための主要施設を含む国家安全保障上の機密拠点です。このレポートの 5 ページと 6 ページは、もともと PURSUE イニシアチブの下で、より編集された形式で 2026 年 5 月 22 日にリリースされました。 (参照: DOE-UAP-D001、拡張された Pantex 画像)"
+      },
+      "priorDisclosure": {
+        "status": "first_time_public",
+        "labelJa": "初公開",
+        "confidence": "low",
+        "evidenceSummaryJa": [
+          "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。",
+          "初公開の断定を避けるため、信頼度は低としています。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/medialink/ufo/071026/release_04/documents/DOE-UAP-D005_Pantex-Unidentified-Object-Incident-Report_2015.pdf",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "metadata_match",
+            "label": "Archive search",
+            "url": "https://archive.org/search?query=DOE-UAP-D005%2C%20Pantex%20Unidentified%20Object%20Incident%20Report%2C%202015",
+            "noteJa": "同一資料の過去公開確認に使った検索候補で、明確な先行公開一致は確認できませんでした。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "low"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://archive.org/search?query=DOE-UAP-D005%2C%20Pantex%20Unidentified%20Object%20Incident%20Report%2C%202015",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "first_time_public",
+        "priorDisclosureConfidence": "low",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "ruppelt",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0308",
+        "assetFileName": "DOW-UAP-D089, Range Fouler Debrief, Eastern United States, 2020",
+        "release": "7/10/26",
+        "agency": "Department of War",
+        "incidentDate": "2020",
+        "incidentLocation": "Eastern United States",
+        "documentType": "PDF",
+        "description": "This document is a Range Fouler Debrief, a standardized reporting form the U.S. Navy uses to record the circumstances surrounding an unauthorized intrusion into controlled airspace during active military operations or training. These reports contain a narrative description of the observer’s experiences. This report accompanies the video titled “DOW-UAP-PR106.” A U.S. military operator reported observing an object, describing it as “quite small” and as “continu[ing] in a constant direction.” The report characterizes the shape of the phenomenon as “indistinguishable,” with a metallic appearance and reflective underside. All descriptive and estimative language contained in this report reflects the reporter’s subjective interpretation at the time of the event. Such characterizations should not be interpreted as a conclusive indication of the presence or absence of any intrinsic object features or performance characteristics.",
+        "virin": "260710-D-D0360-1074",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D089_Range-Fouler-Debrief_Eastern-US_2020.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/071026/release_04/thumbnails/DOW-UAP-D089_Range-Fouler-Debrief_Eastern-US_2020.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-D089、レンジファウラー報告書、米国東部、2020",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "米国戦争省",
+        "incidentLocationJa": "米国東部",
+        "documentTypeJa": "PDF",
+        "descriptionJa": "この文書はレンジファウラー報告書であり、米海軍が活動中の軍事作戦や訓練中に管制空域への不正侵入に関する状況を記録するために使用する標準化された報告書である。これらのレポートには、観察者の体験の物語的な説明が含まれています。このレポートは、「DOW-UAP-PR106」というタイトルのビデオに付属しています。米軍オペレーターは物体を観察したと報告し、それが「非常に小さく」、「一定の方向に進み続けている」と述べた。報告書は、金属的な外観と反射する下面を備えた現象の形状を「区別できない」と特徴付けています。このレポートに含まれるすべての説明的および推定的な表現は、イベント発生時の記者の主観的な解釈を反映しています。このような特徴付けは、オブジェクト固有の機能やパフォーマンス特性の有無を決定的に示すものとして解釈されるべきではありません。"
+      },
+      "priorDisclosure": {
+        "status": "first_time_public",
+        "labelJa": "初公開",
+        "confidence": "low",
+        "evidenceSummaryJa": [
+          "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。",
+          "初公開の断定を避けるため、信頼度は低としています。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D089_Range-Fouler-Debrief_Eastern-US_2020.pdf",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "metadata_match",
+            "label": "Archive search",
+            "url": "https://archive.org/search?query=DOW-UAP-D089%2C%20Range%20Fouler%20Debrief%2C%20Eastern%20United%20States%2C%202020",
+            "noteJa": "同一資料の過去公開確認に使った検索候補で、明確な先行公開一致は確認できませんでした。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "low"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://archive.org/search?query=DOW-UAP-D089%2C%20Range%20Fouler%20Debrief%2C%20Eastern%20United%20States%2C%202020",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "first_time_public",
+        "priorDisclosureConfidence": "low",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "ruppelt",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0309",
+        "assetFileName": "DOW-UAP-D090, Range Fouler Debrief, Eastern United States, 2019",
+        "release": "7/10/26",
+        "agency": "Department of War",
+        "incidentDate": "2019",
+        "incidentLocation": "Eastern United States",
+        "documentType": "PDF",
+        "description": "This document is a Range Fouler Debrief, a standardized reporting form the U.S. Navy uses to record the circumstances surrounding an unauthorized intrusion into controlled airspace during active military operations or training. These reports contain a narrative description of the observer’s experiences. This report accompanies the video titled “DOW-UAP-PR112.” Five U.S. military-affiliated personnel reported observing an object “with flight characteristics unlike anything [the observer] had seen in 28 years [of service] for the U.S. Air Force and U.S. Navy. The report characterizes the phenomenon as “small” and “travelling in a straight line opposite [the platform’s] direction at high speed.” The reporter added that, “others with equal or more experience were also unsure as to what the object might be.” All descriptive and estimative language contained in this report reflects the reporter’s subjective interpretation at the time of the event. Such characterizations should not be interpreted as a conclusive indication of the presence or absence of any intrinsic object features or performance characteristics.",
+        "virin": "260710-D-D0360-1075",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D090_Range-Fouler-Debrief_Eastern-US_2019.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/071026/release_04/thumbnails/DOW-UAP-D090_Range-Fouler-Debrief_Eastern-US_2019.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-D090、レンジファウラー報告書、米国東部、2019",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "米国戦争省",
+        "incidentLocationJa": "米国東部",
+        "documentTypeJa": "PDF",
+        "descriptionJa": "この文書はレンジファウラー報告書であり、米海軍が活動中の軍事作戦や訓練中に管制空域への不正侵入に関する状況を記録するために使用する標準化された報告書である。これらのレポートには、観察者の体験の物語的な説明が含まれています。このレポートは、「DOW-UAP-PR112」というタイトルのビデオに付属しています。 5人の米軍関係者は、「（観察者が）28年間の米空軍と米海軍の勤務で見たものとは異なる飛行特性を持つ物体を観察した」と報告した。報告書は、この現象を「小さく」、「高速で（プラットフォームの）方向と反対の直線を移動する」と特徴付けている。同記者は、「同等かそれ以上の経験を持つ他の人たちも、その物体が何なのか確信が持てなかった」と付け加えた。このレポートに含まれるすべての説明的および推定的な表現は、イベント発生時の記者の主観的な解釈を反映しています。このような特徴付けは、オブジェクト固有の機能やパフォーマンス特性の有無を決定的に示すものとして解釈されるべきではありません。"
+      },
+      "priorDisclosure": {
+        "status": "first_time_public",
+        "labelJa": "初公開",
+        "confidence": "low",
+        "evidenceSummaryJa": [
+          "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。",
+          "初公開の断定を避けるため、信頼度は低としています。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D090_Range-Fouler-Debrief_Eastern-US_2019.pdf",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "metadata_match",
+            "label": "Archive search",
+            "url": "https://archive.org/search?query=DOW-UAP-D090%2C%20Range%20Fouler%20Debrief%2C%20Eastern%20United%20States%2C%202019",
+            "noteJa": "同一資料の過去公開確認に使った検索候補で、明確な先行公開一致は確認できませんでした。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "low"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://archive.org/search?query=DOW-UAP-D090%2C%20Range%20Fouler%20Debrief%2C%20Eastern%20United%20States%2C%202019",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "first_time_public",
+        "priorDisclosureConfidence": "low",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "ruppelt",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0310",
+        "assetFileName": "DOW-UAP-D091, Range Fouler Debrief, Atlantic Ocean, 2020",
+        "release": "7/10/26",
+        "agency": "Department of War",
+        "incidentDate": "2020",
+        "incidentLocation": "Atlantic Ocean",
+        "documentType": "PDF",
+        "description": "This document is a Range Fouler Debrief, a standardized reporting form the U.S. Navy uses to record the circumstances surrounding an unauthorized intrusion into controlled airspace during active military operations or training. These reports contain a narrative description of the observer’s experiences. This report accompanies the video titled “DOW-UAP-PR116.” A U.S. military operator reported observing an object, describing the phenomenon as “darker, maroonish color, approximately 12-15 feet in height.” The report describes the phenomenon “travel[ing] with the wind” and noted that it did not “maneuver or change direction.” It also describes the phenomenon as appearing as a “large, somewhat deformed balloon.” All descriptive and estimative language contained in this report reflects the reporter’s subjective interpretation at the time of the event. Such characterizations should not be interpreted as a conclusive indication of the presence or absence of any intrinsic object features or performance characteristics.",
+        "virin": "260710-D-D0360-1076",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D091_Range-Fouler-Debrief_Atlantic-Ocean_2020.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/071026/release_04/thumbnails/DOW-UAP-D091_Range-Fouler-Debrief_Atlantic-Ocean_2020.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-D091、レンジファウラー報告書、大西洋、2020",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "米国戦争省",
+        "incidentLocationJa": "大西洋",
+        "documentTypeJa": "PDF",
+        "descriptionJa": "この文書はレンジファウラー報告書であり、米海軍が活動中の軍事作戦や訓練中に管制空域への不正侵入に関する状況を記録するために使用する標準化された報告書である。これらのレポートには、観察者の体験の物語的な説明が含まれています。このレポートは、「DOW-UAP-PR116」というタイトルのビデオに付属しています。米軍オペレーターは物体を観察したと報告し、その現象を「より暗く、栗色がかった色で、高さは約12〜15フィート」と説明した。報告書はこの現象を「風に乗って移動する」と説明し、「操縦したり方向を変えたりする」ものではないと述べた。また、この現象は「大きくてやや変形した風船」のように見えるとも説明されています。このレポートに含まれるすべての説明的および推定的な表現は、イベント発生時の記者の主観的な解釈を反映しています。このような特徴付けは、オブジェクト固有の機能やパフォーマンス特性の有無を決定的に示すものとして解釈されるべきではありません。"
+      },
+      "priorDisclosure": {
+        "status": "first_time_public",
+        "labelJa": "初公開",
+        "confidence": "low",
+        "evidenceSummaryJa": [
+          "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。",
+          "初公開の断定を避けるため、信頼度は低としています。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D091_Range-Fouler-Debrief_Atlantic-Ocean_2020.pdf",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "metadata_match",
+            "label": "Archive search",
+            "url": "https://archive.org/search?query=DOW-UAP-D091%2C%20Range%20Fouler%20Debrief%2C%20Atlantic%20Ocean%2C%202020",
+            "noteJa": "同一資料の過去公開確認に使った検索候補で、明確な先行公開一致は確認できませんでした。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "low"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://archive.org/search?query=DOW-UAP-D091%2C%20Range%20Fouler%20Debrief%2C%20Atlantic%20Ocean%2C%202020",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "first_time_public",
+        "priorDisclosureConfidence": "low",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "ruppelt",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0311",
+        "assetFileName": "DOW-UAP-D092, Department of the Air Force Committee to Review Project Bluebook, 1966-1967",
+        "release": "7/10/26",
+        "agency": "Department of War",
+        "incidentDate": "4/17/67",
+        "incidentLocation": "Various",
+        "documentType": "PDF",
+        "description": "This file documents the 1966-1967 deliberations and recommendations of the U.S. Air Force (USAF) Scientific Advisory Board’s Ad Hoc Committee to Review Project Blue Book. Project Blue Book was a 1952-1969 USAF program to investigate the nature and origin of unidentified flying objects (UFO). The Committee recommended that the USAF contract a scientific team composed of university-affiliated representatives to investigate selected UFO sightings. The USAF subsequently adopted the Committee’s recommendation.",
+        "virin": "260710-D-D0360-1077",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D092_DAF-Committee-to-Review-Project-Bluebook_1966-1967.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/071026/release_04/thumbnails/DOW-UAP-D092_DAF-Committee-to-Review-Project-Bluebook_1966-1967.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-D092、プロジェクト ブルーブックを検討する空軍委員会、1966 ～ 1967 年",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "米国戦争省",
+        "incidentLocationJa": "複数地域",
+        "documentTypeJa": "PDF",
+        "descriptionJa": "このファイルは、1966 年から 1967 年にかけて、アメリカ空軍 (USAF) 科学諮問委員会のプロジェクト ブルーブックを検討する特別委員会の審議と勧告を文書化したものです。プロジェクト ブルー ブックは、未確認飛行物体 (UFO) の性質と起源を調査するための 1952 年から 1969 年のアメリカ空軍のプログラムでした。委員会は、アメリカ空軍に対し、選択されたUFO目撃情報を調査するために大学関連の代表者で構成される科学チームと契約するよう勧告した。その後、アメリカ空軍は委員会の勧告を採用しました。"
+      },
+      "priorDisclosure": {
+        "status": "previously_public",
+        "labelJa": "既に公開済み",
+        "confidence": "medium",
+        "evidenceSummaryJa": [
+          "同名または同等の歴史資料が公的・補助アーカイブで既公開の資料群として照合できます。",
+          "PURSUE版ではUAP文脈の資料として再掲されています。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D092_DAF-Committee-to-Review-Project-Bluebook_1966-1967.pdf",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "archive_match",
+            "label": "Public archive search",
+            "url": "https://archive.org/search?query=DOW-UAP-D092%2C%20Department%20of%20the%20Air%20Force%20Committee%20to%20Review%20Project%20Bluebook%2C%201966-1967",
+            "noteJa": "文書名と資料群を用いた既公開アーカイブ照合候補です。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "internet_archive",
+            "sourceUrl": "https://archive.org/search?query=DOW-UAP-D092%2C%20Department%20of%20the%20Air%20Force%20Committee%20to%20Review%20Project%20Bluebook%2C%201966-1967",
+            "role": "official_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "previously_public",
+        "priorDisclosureConfidence": "medium",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "internet_archive",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0312",
+        "assetFileName": "DOW-UAP-D093, Analysis of Flying Object Incidents in the United States, 1948",
+        "release": "7/10/26",
+        "agency": "Department of War",
+        "incidentDate": "12/10/48",
+        "incidentLocation": "Virginia",
+        "documentType": "PDF",
+        "description": "This file contains a U.S. Air Force (USAF) Air Intelligence Division study, “Analysis of Flying Object Incidents in the United States,” Study No. 203, dated 12/10/1948. The analysis includes an assessment of various reported unidentified flying object (UFO) incidents and theories to account for their nature and origin. Overall, the study assesses that “it appears that some object has been seen; however, the identification of that object cannot be readily accomplished.” The study offers that two “reasonable” origins might account for the phenomena: technologies of a domestic or foreign origin. It also suggests that, if foreign, it is prudent for the United States to assume that UFO observations are attributable to scientific, military, or intelligence activities of the Soviet Union, and, in that case, to take seriously the threat such objects may pose. The file also contains contemporary UFO reports and examples of experimental “flying wing” type aircraft planforms that might account for certain commonly reported UFO characteristics. AARO Comment: This file appears to be an earlier draft version of the file contained in DOW-UAP-D094, whose content is substantively similar.",
+        "virin": "260710-D-D0360-1078",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D093_Analysis-of-Flying-Object-Incidents-in-the-US_1948.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/071026/release_04/thumbnails/DOW-UAP-D093_Analysis-of-Flying-Object-Incidents-in-the-US_1948.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-D093、米国における飛行物体事件の分析、1948 年",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "米国戦争省",
+        "incidentLocationJa": "バージニア州",
+        "documentTypeJa": "PDF",
+        "descriptionJa": "このファイルには、米国空軍 (USAF) 航空情報部門の調査「米国における飛行物体事件の分析」、調査番号 203 (1948 年 12 月 10 日付け) が含まれています。この分析には、報告されているさまざまな未確認飛行物体（UFO）事件の評価と、その性質と起源を説明するための理論が含まれています。全体として、この研究は「何らかの物体が見られたようだが、その物体の特定は容易には達成できない」と評価している。この研究は、国内起源または外国起源の技術という 2 つの「合理的な」起源が現象を説明している可能性があることを示唆しています。また、外国のものであれば、米国にとってUFO観測はソ連の科学活動、軍事活動、または諜報活動によるものであると想定し、その場合、そのような物体がもたらす可能性のある脅威を真剣に受け止めることが賢明であることも示唆している。このファイルには、現代の UFO レポートと、一般的に報告されている特定の UFO の特徴を説明できるかもしれない実験的な「全翼型」航空機の平面図の例も含まれています。 AARO コメント: このファイルは、DOW-UAP-D094 に含まれるファイルの初期のドラフト版であると思われ、その内容は実質的に類似しています。"
+      },
+      "priorDisclosure": {
+        "status": "previously_public",
+        "labelJa": "既に公開済み",
+        "confidence": "medium",
+        "evidenceSummaryJa": [
+          "同名または同等の歴史資料が公的・補助アーカイブで既公開の資料群として照合できます。",
+          "PURSUE版ではUAP文脈の資料として再掲されています。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D093_Analysis-of-Flying-Object-Incidents-in-the-US_1948.pdf",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "archive_match",
+            "label": "Public archive search",
+            "url": "https://archive.org/search?query=DOW-UAP-D093%2C%20Analysis%20of%20Flying%20Object%20Incidents%20in%20the%20United%20States%2C%201948",
+            "noteJa": "文書名と資料群を用いた既公開アーカイブ照合候補です。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "internet_archive",
+            "sourceUrl": "https://archive.org/search?query=DOW-UAP-D093%2C%20Analysis%20of%20Flying%20Object%20Incidents%20in%20the%20United%20States%2C%201948",
+            "role": "official_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "previously_public",
+        "priorDisclosureConfidence": "medium",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "internet_archive",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0313",
+        "assetFileName": "DOW-UAP-D095, Joint U.S.-Canadian Aviation Projects and UFO Sighting Reports, 1954-1955",
+        "release": "7/10/26",
+        "agency": "Department of War",
+        "incidentDate": "1955",
+        "incidentLocation": "Various",
+        "documentType": "PDF",
+        "description": "This file contains reports, memoranda, and correspondence concerning various then-developmental vertical take-off and landing (VTOL) aircraft. The file includes assessments of the experimental potential of the “Avro Project Y2,” a joint U.S.-Canadian near-circular VTOL aircraft that is similar in appearance to contemporary popular descriptions of unidentified flying objects (UFO). A 1954 memorandum opines that VTOL aircraft with a circular planform may be mistaken for UFOs to observers unfamiliar with such technologies. It also recommends that UFO reports in the vicinity of Soviet military operations or assets be re-examined to assess whether they may be attributable to previously unknown advanced VTOL aircraft of foreign design. The file also contains correspondence relating to a UFO incident involving a U.S. Air Force (USAF) KC-97 flying near Newfoundland, Canada in July 1955. A USAF committee found that the characteristics described in the report were inconsistent with those of known Soviet, American, or Canadian military systems. The committee was also “unable to explain the simultaneous ground radar returns and aircrew visual sightings.” It also contains correspondence relating to the potential value of data from incidental radar collection of meteors entering the atmosphere. USAF Air Research and Development Command recommended using that data to improve the performance of the AN/FPS-17 radar system. Finally, the file contains correspondence indicating support for the Communications Instructions for Reporting Vital Intelligence Sightings (CIRVIS) program, a joint U.S.-Canadian civil-military program to standardize reporting methods for unusual or unidentified airborne and maritime hazards and threats.",
+        "virin": "260710-D-D0360-1080",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D095_Joint-US-Canadian-Aviation-Projects-and-UFO-Sighting-Reports_1954-1955.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/071026/release_04/thumbnails/DOW-UAP-D095_Joint-US-Canadian-Aviation-Projects-and-UFO-Sighting-Reports_1954-1955.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-D095、米国とカナダの共同航空プロジェクトとUFO目撃報告、1954～1955年",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "米国戦争省",
+        "incidentLocationJa": "複数地域",
+        "documentTypeJa": "PDF",
+        "descriptionJa": "このファイルには、当時開発中のさまざまな垂直離着陸 (VTOL) 航空機に関する報告書、メモ、および通信が含まれています。このファイルには、米国とカナダの共同開発の近円形垂直離着陸機「アブロ プロジェクト Y2」の実験的可能性の評価が含まれています。この飛行機は、外観が現代の一般的な未確認飛行物体 (UFO) の説明に似ています。 1954年の覚書では、平面形状が円形のVTOL航空機は、そのような技術に慣れていない観察者にとってはUFOと間違われる可能性があると述べられている。また、ソ連の軍事作戦や資産付近でのUFO報告を再調査し、これまで知られていなかった外国設計の先進的VTOL航空機によるものである可能性があるかどうかを評価することも勧告している。このファイルには、1955 年 7 月にカナダのニューファンドランド付近を飛行したアメリカ空軍 (USAF) KC-97 が関与した UFO 事件に関する通信も含まれています。USAF 委員会は、報告書に記載されている特徴が既知のソ連、アメリカ、またはカナダの軍事システムの特徴と一致しないことを発見しました。委員会はまた、「地上レーダーの帰還と航空乗組員の視認が同時に行われたことも説明できなかった」としている。また、大気圏に突入する流星の偶発的なレーダー収集からのデータの潜在的価値に関する対応も含まれています。アメリカ空軍航空研究開発司令部は、AN/FPS-17 レーダー システムの性能を向上させるためにそのデータを使用することを推奨しました。最後に、このファイルには、異常または未確認の空輸および海上の危険および脅威の報告方法を標準化する米国とカナダの民軍共同プログラムである重要情報目撃情報報告のための通信指示書 (CIRVIS) プログラムへの支持を示す通信が含まれています。"
+      },
+      "priorDisclosure": {
+        "status": "partial",
+        "labelJa": "一部公開済み",
+        "confidence": "medium",
+        "evidenceSummaryJa": [
+          "米加航空計画・UFO目撃資料の元記録・関連資料は既公開ですが、PURSUE版ファイル全体の同一公開までは確認していません。",
+          "PURSUE版には抜粋、編集、静止画化またはUAP文脈での再掲が含まれます。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D095_Joint-US-Canadian-Aviation-Projects-and-UFO-Sighting-Reports_1954-1955.pdf",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "archive_match",
+            "label": "Public archive search",
+            "url": "https://archive.org/search?query=DOW-UAP-D095%2C%20Joint%20U.S.-Canadian%20Aviation%20Projects%20and%20UFO%20Sighting%20Reports%2C%201954-1955",
+            "noteJa": "元ミッション記録または関連する歴史資料の既公開照合候補です。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "internet_archive",
+            "sourceUrl": "https://archive.org/search?query=DOW-UAP-D095%2C%20Joint%20U.S.-Canadian%20Aviation%20Projects%20and%20UFO%20Sighting%20Reports%2C%201954-1955",
+            "role": "official_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "partial",
+        "priorDisclosureConfidence": "medium",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "internet_archive",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0314",
+        "assetFileName": "DOW-UAP-D096, Correspondence Relating to Project Blue Book, 1955",
+        "release": "7/10/26",
+        "agency": "Department of War",
+        "incidentDate": "1955",
+        "incidentLocation": "Various",
+        "documentType": "PDF",
+        "description": "This file contains correspondence relating to Project Blue Book, a 1952-1969 U.S. Air Force program to investigate the nature and origin of unidentified flying objects (UFO). The correspondence includes letters and memoranda sent between various departments and agencies of the U.S. Government, the Legislative Branch, and private citizens concerning UFO sightings and the research and findings of Project Blue Book.",
+        "virin": "260710-D-D0360-1081",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D096_Correspondence-Relating-to-Project-Blue-Book_1955.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/071026/release_04/thumbnails/DOW-UAP-D096_Correspondence-Relating-to-Project-Blue-Book_1955.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-D096、プロジェクト ブルー ブックに関する通信、1955 年",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "米国戦争省",
+        "incidentLocationJa": "複数地域",
+        "documentTypeJa": "PDF",
+        "descriptionJa": "このファイルには、未確認飛行物体 (UFO) の性質と起源を調査するための 1952 年から 1969 年の米国空軍プログラム、プロジェクト ブルー ブックに関連する通信が含まれています。この通信には、UFOの目撃情報やプロジェクト・ブルーブックの研究と成果に関して、米国政府のさまざまな省庁、立法府、民間人の間で送られた手紙や覚書が含まれている。"
+      },
+      "priorDisclosure": {
+        "status": "partial",
+        "labelJa": "一部公開済み",
+        "confidence": "medium",
+        "evidenceSummaryJa": [
+          "Project Blue Book関連通信の元記録・関連資料は既公開ですが、PURSUE版ファイル全体の同一公開までは確認していません。",
+          "PURSUE版には抜粋、編集、静止画化またはUAP文脈での再掲が含まれます。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D096_Correspondence-Relating-to-Project-Blue-Book_1955.pdf",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "archive_match",
+            "label": "Public archive search",
+            "url": "https://archive.org/search?query=DOW-UAP-D096%2C%20Correspondence%20Relating%20to%20Project%20Blue%20Book%2C%201955",
+            "noteJa": "元ミッション記録または関連する歴史資料の既公開照合候補です。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "internet_archive",
+            "sourceUrl": "https://archive.org/search?query=DOW-UAP-D096%2C%20Correspondence%20Relating%20to%20Project%20Blue%20Book%2C%201955",
+            "role": "official_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "partial",
+        "priorDisclosureConfidence": "medium",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "internet_archive",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0315",
+        "assetFileName": "DOW-UAP-PR024, Unresolved UAP Report, Middle East, 2023",
+        "release": "7/10/26",
+        "agency": "Department of War",
+        "incidentDate": "2023",
+        "incidentLocation": "Middle East",
+        "documentType": "VID",
+        "description": "The United States Central Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of 18 seconds of video footage from an infrared sensor aboard a U.S. military platform in 2023. Video Description: 00:01: The sensor focuses on a dark area of contrast, narrowing the field of view to zoom in. 00:02: Two bright areas of contrast transit the frame from left to right. 00:03: The sensor zooms out, keeping the bright areas of contrast within the frame. 00:05: The bright areas of contrast exit the right side of the frame. 00:07: The sensor refocuses on the dark area of contrast, keeping it generally within the center of the frame. 00:10: A reticle surrounds the dark area of contrast, which continues to remain generally within the center of the frame. 00:17: The sensor changes contrast and zoom settings, causing the frame to flash white. This video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
+        "virin": "",
+        "downloadUrl": "",
+        "imageUrl": "",
+        "videoUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014100"
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-PR024、未解決の UAP レポート、中東、2023",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "米国戦争省",
+        "incidentLocationJa": "中東",
+        "documentTypeJa": "動画",
+        "descriptionJa": "米国中央軍は、2023年に米軍プラットフォームに搭載された赤外線センサーからの18秒間のビデオ映像からなる未確認の異常現象に関する報告書を全領域異常解決局（AARO）に提出​​した。ビデオの説明: 00:01: センサーはコントラストの暗い領域に焦点を合わせ、ズームインする視野を狭めます。00:02: コントラストの2つの明るい領域がフレームを左から右に通過します。 00:03: センサーがズームアウトし、コントラストの明るい領域がフレーム内に維持されます。 00:05: コントラストの明るい領域がフレームの右側から出てきます。 00:07: センサーはコントラストの暗い領域に再度焦点を合わせ、フレームのほぼ中央内に維持します。 00:10: レティクルがコントラストの暗い領域を囲み、この領域はフレームのほぼ中央に残り続けます。 00:17: センサーがコントラストとズームの設定を変更し、フレームが白く点滅します。このビデオの説明は情報提供のみを目的として提供されています。読者は、この記述のいかなる部分も、記述された出来事の有効性、性質、または重要性に関する分析的判断、調査の結論、または事実の判断を反映していると解釈してはなりません。"
+      },
+      "priorDisclosure": {
+        "status": "first_time_public",
+        "labelJa": "初公開",
+        "confidence": "low",
+        "evidenceSummaryJa": [
+          "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。",
+          "初公開の断定を避けるため、信頼度は低としています。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014100",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "video_match",
+            "label": "DVIDS / archive search",
+            "url": "https://www.dvidshub.net/search/?q=DOW-UAP-PR024%2C%20Unresolved%20UAP%20Report%2C%20Middle%20East%2C%202023",
+            "noteJa": "同一資料の過去公開確認に使った検索候補で、明確な先行公開一致は確認できませんでした。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "low"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "dvids",
+            "sourceUrl": "https://www.dvidshub.net/search/?q=DOW-UAP-PR024%2C%20Unresolved%20UAP%20Report%2C%20Middle%20East%2C%202023",
+            "role": "auxiliary_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "first_time_public",
+        "priorDisclosureConfidence": "low",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "dvids",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0316",
+        "assetFileName": "DOW-UAP-PR030, Unresolved UAP Report, Middle East, 2023",
+        "release": "7/10/26",
+        "agency": "Department of War",
+        "incidentDate": "2023",
+        "incidentLocation": "Middle East",
+        "documentType": "VID",
+        "description": "The United States Central Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of 10 seconds of video footage from an infrared sensor aboard a U.S. military platform in 2023. Video Description: 00:01-00:05: No content. 00:06-00:07: Two areas of contrast transit the sensor field-of-view. The first enters the field-of-view from the bottom right and exits from the top edge of the frame. The second, relatively smaller area of contrast enters from the top and exits the bottom of the frame. 00:08-00:10: No content. This video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
+        "virin": "",
+        "downloadUrl": "",
+        "imageUrl": "",
+        "videoUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014102"
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-PR030、未解決の UAP レポート、中東、2023",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "米国戦争省",
+        "incidentLocationJa": "中東",
+        "documentTypeJa": "動画",
+        "descriptionJa": "米国中央軍は、2023 年に米軍プラットフォームに搭載された赤外線センサーからの 10 秒間のビデオ映像からなる未確認の異常現象に関する報告書を全領域異常解決局 (AARO) に提出しました。ビデオの説明: 00:01-00:05: コンテンツはありません。 00:06-00:07: コントラストの 2 つの領域がセンサーの視野を通過します。 1 つ目は右下から視野に入り、フレームの上端から出ます。 2 番目の比較的小さなコントラスト領域は、フレームの上部から入って下部から出ます。 00:08-00:10: コンテンツはありません。このビデオの説明は情報提供のみを目的として提供されています。読者は、この記述のいかなる部分も、記述された出来事の有効性、性質、または重要性に関する分析的判断、調査の結論、または事実の判断を反映していると解釈してはなりません。"
+      },
+      "priorDisclosure": {
+        "status": "first_time_public",
+        "labelJa": "初公開",
+        "confidence": "low",
+        "evidenceSummaryJa": [
+          "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。",
+          "初公開の断定を避けるため、信頼度は低としています。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014102",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "video_match",
+            "label": "DVIDS / archive search",
+            "url": "https://www.dvidshub.net/search/?q=DOW-UAP-PR030%2C%20Unresolved%20UAP%20Report%2C%20Middle%20East%2C%202023",
+            "noteJa": "同一資料の過去公開確認に使った検索候補で、明確な先行公開一致は確認できませんでした。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "low"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "dvids",
+            "sourceUrl": "https://www.dvidshub.net/search/?q=DOW-UAP-PR030%2C%20Unresolved%20UAP%20Report%2C%20Middle%20East%2C%202023",
+            "role": "auxiliary_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "first_time_public",
+        "priorDisclosureConfidence": "low",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "dvids",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0317",
+        "assetFileName": "DOW-UAP-PR100, Unresolved UAP Report, Yellow Sea, 2023",
+        "release": "7/10/26",
+        "agency": "Department of War",
+        "incidentDate": "2023",
+        "incidentLocation": "Yellow Sea",
+        "documentType": "VID",
+        "description": "The United States Indo-Pacific Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of 4 minutes and 57 seconds of video footage from an electro-optical and infrared sensor system aboard a U.S. military platform in 2023. Video Description: The overall quality of this video footage progressively degrades over its runtime. 00:01-00:08: In infrared mode, the sensor tracks an area of contrast, keeping it generally within the center of the frame. 00:09-01:03: The sensor zooms in and tracks the area of contrast, holding it generally within the center of the frame. 01:04-01:10: The sensor display switches modes to an electro-optical day time television camera feed (a collection mode that displays visible and near infrared signatures). The video features a dark object superimposed against a blue background. 01:11-01:13: The sensor display changes modes to infrared. The area of contrast is no longer visible within the frame. 01:14-02:16: The sensor zooms in and changes contrast settings. An area of contrast is visible near the center of the frame. 02:17-02:22: The area of contrast repeatedly leaves and enters the sensor field-of-view. 02:23-02:46: The sensor reacquires and tracks the area of contrast, keeping it generally within the center of the frame. 02:47-03:27: The sensor zooms in, tracking the area of contrast. 03:28-03:32: The footage appears to “skip,” or lose coherence. 03:33-03:46: The footage returns to its previous state, and the sensor continues to track the area of contrast generally within the center of the frame. 03:47-04:32: The sensor zooms out. 04:33-04:40: The area of contrast repeatedly leaves and enters the sensor field-of-view. 04:41-04:45: No content. This video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
+        "virin": "",
+        "downloadUrl": "",
+        "imageUrl": "",
+        "videoUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014096"
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-PR100、未解決の UAP レポート、黄海、2023",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "米国戦争省",
+        "incidentLocationJa": "黄海",
+        "documentTypeJa": "動画",
+        "descriptionJa": "米国インド太平洋軍は、2023年に米軍プラットフォームに搭載された電気光学および赤外線センサーシステムからの4分57秒のビデオ映像からなる未確認の異常現象に関する報告書を全領域異常解決局（AARO）に提出​​した。ビデオの説明: このビデオ映像の全体的な品質は、実行時間の経過とともに徐々に低下します。 00:01-00:08: 赤外線モードでは、センサーはコントラストの領域を追跡し、通常はフレームの中心内に維持します。 00:09-01:03: センサーはズームインしてコントラストの領域を追跡し、通常はフレームの中心内に保持します。 01:04-01:10: センサー ディスプレイは、電気光学式昼間テレビ カメラ フィード (可視および近赤外線のシグネチャを表示する収集モード) にモードを切り替えます。このビデオでは、青い背景に暗いオブジェクトが重ねられています。 01:11-01:13: センサーディスプレイのモードが赤外線に変わります。コントラストの領域がフレーム内で見えなくなります。 01:14-02:16: センサーがズームインし、コントラスト設定を変更します。フレームの中央付近にコントラストの領域が表示されます。 02:17-02:22: コントラストの領域がセンサーの視野から出たり入ったりを繰り返します。 02:23-02:46: センサーはコントラストの領域を再取得して追跡し、通常はフレームの中心内に保ちます。 02:47-03:27: センサーがズームインして、コントラストの領域を追跡します。 03:28-03:32: 映像が「スキップ」しているか、一貫性が失われているように見えます。 03:33-03:46: 映像は前の状態に戻り、センサーはフレームのほぼ中央にあるコントラストの領域を追跡し続けます。 03:47-04:32: センサーがズームアウトします。 04:33-04:40: コントラストの領域がセンサーの視野から出たり入ったりを繰り返します。 04:41-04:45: コンテンツはありません。このビデオの説明は情報提供のみを目的として提供されています。読者は、この記述のいかなる部分も、記述された出来事の有効性、性質、または重要性に関する分析的判断、調査の結論、または事実の判断を反映していると解釈してはなりません。"
+      },
+      "priorDisclosure": {
+        "status": "first_time_public",
+        "labelJa": "初公開",
+        "confidence": "low",
+        "evidenceSummaryJa": [
+          "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。",
+          "初公開の断定を避けるため、信頼度は低としています。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014096",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "video_match",
+            "label": "DVIDS / archive search",
+            "url": "https://www.dvidshub.net/search/?q=DOW-UAP-PR100%2C%20Unresolved%20UAP%20Report%2C%20Yellow%20Sea%2C%202023",
+            "noteJa": "同一資料の過去公開確認に使った検索候補で、明確な先行公開一致は確認できませんでした。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "low"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "dvids",
+            "sourceUrl": "https://www.dvidshub.net/search/?q=DOW-UAP-PR100%2C%20Unresolved%20UAP%20Report%2C%20Yellow%20Sea%2C%202023",
+            "role": "auxiliary_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "first_time_public",
+        "priorDisclosureConfidence": "low",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "dvids",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0318",
+        "assetFileName": "DOW-UAP-PR101, Unresolved UAP Report, South China Sea, 2024",
+        "release": "7/10/26",
+        "agency": "Department of War",
+        "incidentDate": "2024",
+        "incidentLocation": "South China Sea",
+        "documentType": "VID",
+        "description": "The United States Indo-Pacific Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of 1 minute and 46 seconds of video footage from an infrared sensor aboard a U.S. military platform in 2024. Video Description: 00:01-00:12: The sensor tracks an area of contrast, keeping it generally within the center of the frame. 00:13-00:28: The sensor zooms in and tracks an elongated area of contrast, keeping it generally to the left of the center of the frame. 00:29-00:33: The sensor zooms in again. The area of contrast appears as a “line” of several areas of contrast moving across the sensor field-of-view from the bottom right to the top left. 00:34-01:44: The sensor pans to track the areas of contrast for approximately 1 minute. They become less distinct over time as their distance from the sensor increases. This video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
+        "virin": "",
+        "downloadUrl": "",
+        "imageUrl": "",
+        "videoUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014097"
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-PR101、未解決の UAP レポート、南シナ海、2024",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "米国戦争省",
+        "incidentLocationJa": "南シナ海",
+        "documentTypeJa": "動画",
+        "descriptionJa": "米国インド太平洋軍は、2024年に米軍プラットフォームに搭載された赤外線センサーからの1分46秒のビデオ映像からなる未確認の異常現象に関する報告書を全領域異常解決局（AARO）に提出​​した。ビデオの説明: 00:01-00:12: センサーはコントラストの領域を追跡し、通常はフレームの中心内に維持します。 00:13-00:28: センサーはズームインしてコントラストの細長い領域を追跡し、通常はフレームの中心の左側に保ちます。 00:29-00:33: センサーが再びズームインします。コントラスト領域は、センサーの視野内を右下から左上に移動するいくつかのコントラスト領域の「線」として表示されます。 00:34-01:44: センサーはパンしてコントラストの領域を約 1 分間追跡します。センサーからの距離が離れるにつれて、それらは時間の経過とともに区別できなくなります。このビデオの説明は情報提供のみを目的として提供されています。読者は、この記述のいかなる部分も、記述された出来事の有効性、性質、または重要性に関する分析的判断、調査の結論、または事実の判断を反映していると解釈してはなりません。"
+      },
+      "priorDisclosure": {
+        "status": "first_time_public",
+        "labelJa": "初公開",
+        "confidence": "low",
+        "evidenceSummaryJa": [
+          "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。",
+          "初公開の断定を避けるため、信頼度は低としています。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014097",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "video_match",
+            "label": "DVIDS / archive search",
+            "url": "https://www.dvidshub.net/search/?q=DOW-UAP-PR101%2C%20Unresolved%20UAP%20Report%2C%20South%20China%20Sea%2C%202024",
+            "noteJa": "同一資料の過去公開確認に使った検索候補で、明確な先行公開一致は確認できませんでした。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "low"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "dvids",
+            "sourceUrl": "https://www.dvidshub.net/search/?q=DOW-UAP-PR101%2C%20Unresolved%20UAP%20Report%2C%20South%20China%20Sea%2C%202024",
+            "role": "auxiliary_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "first_time_public",
+        "priorDisclosureConfidence": "low",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "dvids",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0319",
+        "assetFileName": "DOW-UAP-PR102, Unresolved UAP Report, East China Sea, 2024",
+        "release": "7/10/26",
+        "agency": "Department of War",
+        "incidentDate": "2024",
+        "incidentLocation": "East China Sea",
+        "documentType": "VID",
+        "description": "The United States Indo-Pacific Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of 36 seconds of video footage from an infrared sensor aboard a U.S. military platform in 2024. Video Description: 00:01-00:20: The sensor tracks an area of contrast, keeping it generally within the center of the frame. 00:21-00:29: The area of contrast exits the sensor field-of-view at the top of the frame. 00:30-00:36: The sensor zooms out and in several times. No content This video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
+        "virin": "",
+        "downloadUrl": "",
+        "imageUrl": "",
+        "videoUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014098"
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-PR102、未解決の UAP レポート、東シナ海、2024",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "米国戦争省",
+        "incidentLocationJa": "東シナ海",
+        "documentTypeJa": "動画",
+        "descriptionJa": "米国インド太平洋軍は、2024年に米軍プラットフォームに搭載された赤外線センサーからの36秒間のビデオ映像からなる未確認の異常現象に関する報告書を全領域異常解決局（AARO）に提出​​した。 ビデオの説明: 00:01-00:20: センサーはコントラストの領域を追跡し、それをほぼフレームの中心内に保ちます。 00:21-00:29: コントラストの領域がフレームの上部でセンサーの視野から出ます。 00:30-00:36: センサーはズームアウトとズームインを数回繰り返します。コンテンツはありません このビデオの説明は情報提供のみを目的としています。読者は、この記述のいかなる部分も、記述された出来事の有効性、性質、または重要性に関する分析的判断、調査の結論、または事実の判断を反映していると解釈してはなりません。"
+      },
+      "priorDisclosure": {
+        "status": "first_time_public",
+        "labelJa": "初公開",
+        "confidence": "low",
+        "evidenceSummaryJa": [
+          "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。",
+          "初公開の断定を避けるため、信頼度は低としています。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014098",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "video_match",
+            "label": "DVIDS / archive search",
+            "url": "https://www.dvidshub.net/search/?q=DOW-UAP-PR102%2C%20Unresolved%20UAP%20Report%2C%20East%20China%20Sea%2C%202024",
+            "noteJa": "同一資料の過去公開確認に使った検索候補で、明確な先行公開一致は確認できませんでした。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "low"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "dvids",
+            "sourceUrl": "https://www.dvidshub.net/search/?q=DOW-UAP-PR102%2C%20Unresolved%20UAP%20Report%2C%20East%20China%20Sea%2C%202024",
+            "role": "auxiliary_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "first_time_public",
+        "priorDisclosureConfidence": "low",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "dvids",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0320",
+        "assetFileName": "DOW-UAP-PR103, Unresolved UAP Report, East China Sea, 2024",
+        "release": "7/10/26",
+        "agency": "Department of War",
+        "incidentDate": "2024",
+        "incidentLocation": "East China Sea",
+        "documentType": "VID",
+        "description": "The United States Indo-Pacific Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of 1 minute and 16 seconds of video footage from an infrared sensor aboard a U.S. military platform in 2024. Video Description: 00:01-01:16: The sensor pans to track an area of contrast, keeping it generally within the center of the frame. 00:12-01:16: An auto-tracking reticle surrounds the area of contrast. The sensor tracks the area of contrast, keeping it generally within the center of the frame. This video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
+        "virin": "",
+        "downloadUrl": "",
+        "imageUrl": "",
+        "videoUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014099"
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-PR103、未解決の UAP レポート、東シナ海、2024",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "米国戦争省",
+        "incidentLocationJa": "東シナ海",
+        "documentTypeJa": "動画",
+        "descriptionJa": "米国インド太平洋軍は、2024年に米軍プラットフォームに搭載された赤外線センサーからの1分16秒のビデオ映像からなる未確認の異常現象に関する報告書を全領域異常解決局（AARO）に提出​​した。ビデオ説明: 00:01-01:16: センサーはパンしてコントラストの領域を追跡し、通常はフレームの中心内に維持します。 00:12-01:16: 自動追跡レティクルがコントラストの領域を囲みます。センサーはコントラストの領域を追跡し、通常はフレームの中心内に維持します。このビデオの説明は情報提供のみを目的として提供されています。読者は、この記述のいかなる部分も、記述された出来事の有効性、性質、または重要性に関する分析的判断、調査の結論、または事実の判断を反映していると解釈してはなりません。"
+      },
+      "priorDisclosure": {
+        "status": "first_time_public",
+        "labelJa": "初公開",
+        "confidence": "low",
+        "evidenceSummaryJa": [
+          "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。",
+          "初公開の断定を避けるため、信頼度は低としています。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014099",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "video_match",
+            "label": "DVIDS / archive search",
+            "url": "https://www.dvidshub.net/search/?q=DOW-UAP-PR103%2C%20Unresolved%20UAP%20Report%2C%20East%20China%20Sea%2C%202024",
+            "noteJa": "同一資料の過去公開確認に使った検索候補で、明確な先行公開一致は確認できませんでした。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "low"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "dvids",
+            "sourceUrl": "https://www.dvidshub.net/search/?q=DOW-UAP-PR103%2C%20Unresolved%20UAP%20Report%2C%20East%20China%20Sea%2C%202024",
+            "role": "auxiliary_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "first_time_public",
+        "priorDisclosureConfidence": "low",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "dvids",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0321",
+        "assetFileName": "DOW-UAP-PR106, Unresolved UAP Report, Eastern United States, 2020",
+        "release": "7/10/26",
+        "agency": "Department of War",
+        "incidentDate": "2020",
+        "incidentLocation": "Eastern United States",
+        "documentType": "VID",
+        "description": "The United States Northern Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of 11 seconds of video footage from an infrared sensor aboard a U.S. military platform in 2020. An accompanying Range Fouler Debrief, DOW-UAP-D089, describes the phenomenon as “quite small” and as “continu[ing] in a constant direction.” The report characterizes the shape of the phenomenon as “indistinguishable,” with a metallic appearance and reflective underside. Video Description: This media was digitally altered before being reported to AARO, and is presented as received. 00:01-00:01: An area of contrast is visible above the center of the frame. 00:02-00:04: The sensor switches modes, causing the area of contrast to rapidly move about within the field-of-view. The area of contrast leaves the sensor field-of-view from the top of the frame. This video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
+        "virin": "",
+        "downloadUrl": "",
+        "imageUrl": "",
+        "videoUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014104"
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-PR106、未解決の UAP レポート、米国東部、2020",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "米国戦争省",
+        "incidentLocationJa": "米国東部",
+        "documentTypeJa": "動画",
+        "descriptionJa": "米国北方軍は、2020年に米軍プラットフォームに搭載された赤外線センサーからの11秒間のビデオ映像からなる未確認の異常現象に関する報告書を全領域異常解決局（AARO）に提出​​した。付属のレンジ・ファウラー報告書DOW-UAP-D089では、この現象は「非常に小規模」で「一定の方向に続いている」と説明されている。報告書は、金属的な外観と反射する下面を備えた現象の形状を「区別できない」と特徴付けています。ビデオの説明: このメディアは AARO に報告される前にデジタル的に変更されており、受け取ったままの状態で表示されています。 00:01-00:01: フレームの中心の上にコントラストの領域が表示されます。 00:02-00:04: センサーがモードを切り替え、コントラスト領域が視野内で急速に移動します。コントラストの領域は、フレームの上部からセンサーの視野を離れます。このビデオの説明は情報提供のみを目的として提供されています。読者は、この記述のいかなる部分も、記述された出来事の有効性、性質、または重要性に関する分析的判断、調査の結論、または事実の判断を反映していると解釈してはなりません。"
+      },
+      "priorDisclosure": {
+        "status": "first_time_public",
+        "labelJa": "初公開",
+        "confidence": "low",
+        "evidenceSummaryJa": [
+          "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。",
+          "初公開の断定を避けるため、信頼度は低としています。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014104",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "video_match",
+            "label": "DVIDS / archive search",
+            "url": "https://www.dvidshub.net/search/?q=DOW-UAP-PR106%2C%20Unresolved%20UAP%20Report%2C%20Eastern%20United%20States%2C%202020",
+            "noteJa": "同一資料の過去公開確認に使った検索候補で、明確な先行公開一致は確認できませんでした。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "low"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "dvids",
+            "sourceUrl": "https://www.dvidshub.net/search/?q=DOW-UAP-PR106%2C%20Unresolved%20UAP%20Report%2C%20Eastern%20United%20States%2C%202020",
+            "role": "auxiliary_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "first_time_public",
+        "priorDisclosureConfidence": "low",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "dvids",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0322",
+        "assetFileName": "DOW-UAP-PR107, Unresolved UAP Report, Eastern United States, 2020",
+        "release": "7/10/26",
+        "agency": "Department of War",
+        "incidentDate": "2020",
+        "incidentLocation": "Eastern United States",
+        "documentType": "VID",
+        "description": "The United States Northern Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of 28 seconds of video footage from an infrared sensor aboard a U.S. military platform in 2020. Video Description: 00:01-00:02: No content. 00:03-00:11: An area on contrast enters the sensor field-of-view from the top right of the frame. The sensor pans to track the area of contrast, which repeatedly leaves and re-enters the sensor field-of-view. 00:12-00:16: The sensor zooms out and in. 00:17-00:23: The sensor pans to track the area of contrast, which repeatedly leaves and re-enters the sensor field-of-view. This video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
+        "virin": "",
+        "downloadUrl": "",
+        "imageUrl": "",
+        "videoUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014105"
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-PR107、未解決の UAP レポート、米国東部、2020",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "米国戦争省",
+        "incidentLocationJa": "米国東部",
+        "documentTypeJa": "動画",
+        "descriptionJa": "米国北方軍は、2020年に米軍プラットフォームに搭載された赤外線センサーからの28秒間のビデオ映像からなる未確認の異常現象に関する報告書を全領域異常解決局（AARO）に提出​​した。ビデオの説明: 00:01-00:02: コンテンツなし。 00:03-00:11: コントラストのある領域がフレームの右上からセンサーの視野に入ります。センサーはパンしてコントラストの領域を追跡し、センサーの視野から出たり入ったりを繰り返します。 00:12-00:16: センサーはズームアウトおよびズームインします。 00:17-00:23: センサーはコントラストの領域を追跡するためにパンし、センサーの視野から出たり入ったりを繰り返します。このビデオの説明は情報提供のみを目的として提供されています。読者は、この記述のいかなる部分も、記述された出来事の有効性、性質、または重要性に関する分析的判断、調査の結論、または事実の判断を反映していると解釈してはなりません。"
+      },
+      "priorDisclosure": {
+        "status": "first_time_public",
+        "labelJa": "初公開",
+        "confidence": "low",
+        "evidenceSummaryJa": [
+          "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。",
+          "初公開の断定を避けるため、信頼度は低としています。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014105",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "video_match",
+            "label": "DVIDS / archive search",
+            "url": "https://www.dvidshub.net/search/?q=DOW-UAP-PR107%2C%20Unresolved%20UAP%20Report%2C%20Eastern%20United%20States%2C%202020",
+            "noteJa": "同一資料の過去公開確認に使った検索候補で、明確な先行公開一致は確認できませんでした。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "low"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "dvids",
+            "sourceUrl": "https://www.dvidshub.net/search/?q=DOW-UAP-PR107%2C%20Unresolved%20UAP%20Report%2C%20Eastern%20United%20States%2C%202020",
+            "role": "auxiliary_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "first_time_public",
+        "priorDisclosureConfidence": "low",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "dvids",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0323",
+        "assetFileName": "DOW-UAP-PR108, Unresolved UAP Report, Western United States, 2020",
+        "release": "7/10/26",
+        "agency": "Department of War",
+        "incidentDate": "2020",
+        "incidentLocation": "Western United States",
+        "documentType": "VID",
+        "description": "The United States Northern Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of 2 minutes and 16 seconds of video footage from an infrared sensor aboard a U.S. military platform in 2020. Video Description: 00:01-00:15: No content. 00:16-00:19: The footage flashes between normal operation and a black screen several times as the sensor changes display modes. 00:20-00:27: No content. 00:28-00:33: The sensor zooms in and pans to track an area of contrast, keeping it generally within the center of the frame. 00:34-00:57: An auto-tracking reticle surrounds the area of contrast as the sensor continues to track it against the background. 00:58-01:10: The sensor adjusts its zoom level and contrast settings several times. 01:11-01:34: The area of contrast leaves the sensor field-of-view to the left of the frame. The sensor adjusts its zoom level and contrast settings several times. No content. This video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
+        "virin": "",
+        "downloadUrl": "",
+        "imageUrl": "",
+        "videoUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014106"
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-PR108、未解決の UAP レポート、米国西部、2020",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "米国戦争省",
+        "incidentLocationJa": "米国西部",
+        "documentTypeJa": "動画",
+        "descriptionJa": "米国北方軍は、2020年に米軍プラットフォームに搭載された赤外線センサーからの2分16秒のビデオ映像からなる未確認の異常現象に関する報告書を全領域異常解決局（AARO）に提出​​した。ビデオの説明: 00:01-00:15: コンテンツなし。 00:16-00:19: センサーが表示モードを変更すると、映像は通常の動作と黒い画面の間で数回点滅します。 00:20-00:27: コンテンツはありません。 00:28-00:33: センサーはズームインおよびパンしてコントラストの領域を追跡し、通常はフレームの中心内に保ちます。 00:34-00:57: センサーが背景に対してコントラスト領域を追跡し続けると、自動追跡レチクルがコントラスト領域を囲みます。 00:58-01:10: センサーはズーム レベルとコントラストの設定を数回調整します。 01:11-01:34: コントラストの領域がフレームの左側のセンサーの視野から外れます。センサーはズーム レベルとコントラストの設定を数回調整します。内容がありません。このビデオの説明は情報提供のみを目的として提供されています。読者は、この記述のいかなる部分も、記述された出来事の有効性、性質、または重要性に関する分析的判断、調査の結論、または事実の判断を反映していると解釈してはなりません。"
+      },
+      "priorDisclosure": {
+        "status": "first_time_public",
+        "labelJa": "初公開",
+        "confidence": "low",
+        "evidenceSummaryJa": [
+          "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。",
+          "初公開の断定を避けるため、信頼度は低としています。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014106",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "video_match",
+            "label": "DVIDS / archive search",
+            "url": "https://www.dvidshub.net/search/?q=DOW-UAP-PR108%2C%20Unresolved%20UAP%20Report%2C%20Western%20United%20States%2C%202020",
+            "noteJa": "同一資料の過去公開確認に使った検索候補で、明確な先行公開一致は確認できませんでした。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "low"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "dvids",
+            "sourceUrl": "https://www.dvidshub.net/search/?q=DOW-UAP-PR108%2C%20Unresolved%20UAP%20Report%2C%20Western%20United%20States%2C%202020",
+            "role": "auxiliary_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "first_time_public",
+        "priorDisclosureConfidence": "low",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "dvids",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0324",
+        "assetFileName": "DOW-UAP-PR109, Unresolved UAP Report, Eastern United States, 2015",
+        "release": "7/10/26",
+        "agency": "Department of War",
+        "incidentDate": "2015",
+        "incidentLocation": "Eastern United States",
+        "documentType": "VID",
+        "description": "The United States Navy Unidentified Anomalous Phenomena Task Force (UAPTF) transferred this media to the All-domain Anomaly Resolution Office (AARO) in 2022. The video contains 21 seconds of footage likely captured by an infrared sensor aboard a U.S. military platform in 2015. Video Description: No formal data handling practices for UAP-related records existed at the time this media was reported to the UAPTF. This media was digitally altered before being reported to the UAPTF, and is presented as it was received by AARO. 00:01-00:08: No content. 00:09-00:11: An area of contrast becomes visible near the center of the screen, The area of contrast transits the sensor field-of-view, moving from right to left before exiting from upper left corner of the frame. 00:12-00:21: The footage repeats at a slower playback speed. This video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
+        "virin": "",
+        "downloadUrl": "",
+        "imageUrl": "",
+        "videoUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014108"
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-PR109、未解決の UAP レポート、米国東部、2015 年",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "米国戦争省",
+        "incidentLocationJa": "米国東部",
+        "documentTypeJa": "動画",
+        "descriptionJa": "米国海軍未確認異常現象対策本部 (UAPTF) は、2022 年にこのメディアを全領域異常解決局 (AARO) に移管しました。ビデオには、2015 年に米軍プラットフォーム上の赤外線センサーによって捕捉されたと思われる 21 秒間の映像が含まれています。ビデオの説明: このメディアが UAPTF に報告された時点では、UAP 関連の記録に対する正式なデータ処理慣行は存在していませんでした。このメディアは UAPTF に報告される前にデジタル的に変更されており、AARO が受け取ったものをそのまま掲載しています。 00:01-00:08: コンテンツはありません。 00:09-00:11: 画面の中央付近にコントラストの領域が表示されます。コントラストの領域はセンサーの視野を通過し、右から左に移動してからフレームの左上隅から出ます。 00:12-00:21: 映像は遅い再生速度で繰り返されます。このビデオの説明は情報提供のみを目的として提供されています。読者は、この記述のいかなる部分も、記述された出来事の有効性、性質、または重要性に関する分析的判断、調査の結論、または事実の判断を反映していると解釈してはなりません。"
+      },
+      "priorDisclosure": {
+        "status": "first_time_public",
+        "labelJa": "初公開",
+        "confidence": "low",
+        "evidenceSummaryJa": [
+          "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。",
+          "初公開の断定を避けるため、信頼度は低としています。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014108",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "video_match",
+            "label": "DVIDS / archive search",
+            "url": "https://www.dvidshub.net/search/?q=DOW-UAP-PR109%2C%20Unresolved%20UAP%20Report%2C%20Eastern%20United%20States%2C%202015",
+            "noteJa": "同一資料の過去公開確認に使った検索候補で、明確な先行公開一致は確認できませんでした。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "low"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "dvids",
+            "sourceUrl": "https://www.dvidshub.net/search/?q=DOW-UAP-PR109%2C%20Unresolved%20UAP%20Report%2C%20Eastern%20United%20States%2C%202015",
+            "role": "auxiliary_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "first_time_public",
+        "priorDisclosureConfidence": "low",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "dvids",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0325",
+        "assetFileName": "DOW-UAP-PR110, Unresolved UAP Report, Eastern United States, 2020",
+        "release": "7/10/26",
+        "agency": "Department of War",
+        "incidentDate": "2020",
+        "incidentLocation": "Eastern United States",
+        "documentType": "VID",
+        "description": "The United States Northern Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of 27 seconds of video footage from an infrared sensor aboard a U.S. military platform in 2020. Video Description: 00:01-00:02: No content. 00:03-00:10: An area of contrast become visible to the right of the center of the frame. The sensor pans to track the area of contrast, causing it to appear to move about the field-of-view. 00:11-00:19: An auto-tracking reticle surrounds the area of contrast. The area of contrast gradually increases in angular size. 00:20-00:22: The area of contrast exits the sensor field-of-view to the right side of the frame. This video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
+        "virin": "",
+        "downloadUrl": "",
+        "imageUrl": "",
+        "videoUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014112"
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-PR110、未解決の UAP レポート、米国東部、2020",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "米国戦争省",
+        "incidentLocationJa": "米国東部",
+        "documentTypeJa": "動画",
+        "descriptionJa": "米国北方軍は、2020年に米軍プラットフォームに搭載された赤外線センサーからの27秒間のビデオ映像からなる未確認の異常現象に関する報告書を全領域異常解決局（AARO）に提出​​した。ビデオの説明: 00:01-00:02: コンテンツなし。 00:03-00:10: フレームの中央の右側にコントラストの領域が表示されます。センサーはコントラストの領域を追跡するためにパンし、視野内でセンサーが動いているように見えます。 00:11-00:19: 自動追跡レティクルがコントラストの領域を囲みます。コントラストの領域の角度サイズは徐々に増加します。 00:20-00:22: コントラストの領域がセンサーの視野からフレームの右側に出ます。このビデオの説明は情報提供のみを目的として提供されています。読者は、この記述のいかなる部分も、記述された出来事の有効性、性質、または重要性に関する分析的判断、調査の結論、または事実の判断を反映していると解釈してはなりません。"
+      },
+      "priorDisclosure": {
+        "status": "first_time_public",
+        "labelJa": "初公開",
+        "confidence": "low",
+        "evidenceSummaryJa": [
+          "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。",
+          "初公開の断定を避けるため、信頼度は低としています。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014112",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "video_match",
+            "label": "DVIDS / archive search",
+            "url": "https://www.dvidshub.net/search/?q=DOW-UAP-PR110%2C%20Unresolved%20UAP%20Report%2C%20Eastern%20United%20States%2C%202020",
+            "noteJa": "同一資料の過去公開確認に使った検索候補で、明確な先行公開一致は確認できませんでした。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "low"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "dvids",
+            "sourceUrl": "https://www.dvidshub.net/search/?q=DOW-UAP-PR110%2C%20Unresolved%20UAP%20Report%2C%20Eastern%20United%20States%2C%202020",
+            "role": "auxiliary_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "first_time_public",
+        "priorDisclosureConfidence": "low",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "dvids",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0326",
+        "assetFileName": "DOW-UAP-PR111, Unresolved UAP Report, Eastern United States, 2020",
+        "release": "7/10/26",
+        "agency": "Department of War",
+        "incidentDate": "2020",
+        "incidentLocation": "Eastern United States",
+        "documentType": "VID",
+        "description": "The United States Northern Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of 1 minute of video footage from an infrared sensor aboard a U.S. military platform in 2020. Video Description: 00:01-00:21: Several small areas of contrast enter and leave the sensor field-of-view as the sensor pans across the background scene. 00:22-00:41: An auto-tracking reticle surrounds an area of contrast, and the sensor pans to keep it generally within the center of the frame. Several other areas of contrast periodically enter and exit the frame. 00:42-00:49: The sensor zooms out. 00:50-01:00: The area of contrast is no longer visible within the frame. The sensor display flickers between a black screen and normal function as it cycles contrast modes. No content. This video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
+        "virin": "",
+        "downloadUrl": "",
+        "imageUrl": "",
+        "videoUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014114"
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-PR111、未解決の UAP レポート、米国東部、2020",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "米国戦争省",
+        "incidentLocationJa": "米国東部",
+        "documentTypeJa": "動画",
+        "descriptionJa": "米国北方軍は、2020年に米軍プラットフォームに搭載された赤外線センサーからの1分間のビデオ映像からなる未確認の異常現象に関する報告書を全領域異常解決局（AARO）に提出​​した。ビデオの説明: 00:01-00:21: センサーが背景シーンをパンするにつれて、いくつかの小さなコントラスト領域がセンサーの視野に入ったり出たりする。 00:22-00:41: 自動追跡レティクルがコントラストの領域を囲み、センサーがパンしてフレームのほぼ中央に収まるように保ちます。他のいくつかのコントラスト領域が周期的にフレームに入ったり出たりします。 00:42-00:49: センサーがズームアウトします。 00:50-01:00: コントラストの領域がフレーム内で見えなくなります。コントラスト モードを切り替えると、センサー ディスプレイが黒い画面と通常の機能の間で点滅します。内容がありません。このビデオの説明は情報提供のみを目的として提供されています。読者は、この記述のいかなる部分も、記述された出来事の有効性、性質、または重要性に関する分析的判断、調査の結論、または事実の判断を反映していると解釈してはなりません。"
+      },
+      "priorDisclosure": {
+        "status": "first_time_public",
+        "labelJa": "初公開",
+        "confidence": "low",
+        "evidenceSummaryJa": [
+          "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。",
+          "初公開の断定を避けるため、信頼度は低としています。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014114",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "video_match",
+            "label": "DVIDS / archive search",
+            "url": "https://www.dvidshub.net/search/?q=DOW-UAP-PR111%2C%20Unresolved%20UAP%20Report%2C%20Eastern%20United%20States%2C%202020",
+            "noteJa": "同一資料の過去公開確認に使った検索候補で、明確な先行公開一致は確認できませんでした。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "low"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "dvids",
+            "sourceUrl": "https://www.dvidshub.net/search/?q=DOW-UAP-PR111%2C%20Unresolved%20UAP%20Report%2C%20Eastern%20United%20States%2C%202020",
+            "role": "auxiliary_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "first_time_public",
+        "priorDisclosureConfidence": "low",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "dvids",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0327",
+        "assetFileName": "DOW-UAP-PR112, Unresolved UAP Report, Eastern United States, 2019",
+        "release": "7/10/26",
+        "agency": "Department of War",
+        "incidentDate": "2019",
+        "incidentLocation": "Eastern United States",
+        "documentType": "VID",
+        "description": "The United States Navy submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of 20 seconds of video footage from an infrared sensor aboard a civilian aircraft in 2019. An accompanying Range Fouler Debrief, DOW-UAP-D090, describes the phenomenon as exhibiting “flight characteristics unlike anything [the observer] had seen in 28 years [of service] for the U.S. Air Force and U.S. Navy. The report characterizes the phenomenon as “small” and “travelling in a straight line [in the] opposite direction at high speed.” Video Description: 00:01-00:011: An area of contrast is visible near the center of the screen. 00:12-00:014: The sensor changes its level of zoom and display mode, flashing white before returning to normal function. The area of contrast exits the sensor field-of-view to the left side of the frame. 00:15-00:20: The sensor changes settings, causing the screen to flash white. No content. This video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
+        "virin": "",
+        "downloadUrl": "",
+        "imageUrl": "",
+        "videoUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014128"
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-PR112、未解決の UAP レポート、米国東部、2019 年",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "米国戦争省",
+        "incidentLocationJa": "米国東部",
+        "documentTypeJa": "動画",
+        "descriptionJa": "アメリカ海軍は、2019年に民間航空機に搭載された赤外線センサーからの20秒間のビデオ映像からなる未確認の異常現象に関する報告書を全領域異常解決局（AARO）に提出した。添付のレンジ・ファウラー報告書DOW-UAP-D090では、この現象について「28年間のアメリカ空軍で（観測者が）見たことのない飛行特性」を示していると説明している。報告書は、この現象を「小さい」ものであり、「高速で反対方向に直線的に移動している」と特徴付けている。ビデオの説明: 00:01-00:011: 画面の中央付近にコントラストの領域が表示されます。 00:12-00:014: センサーはズームのレベルと表示モードを変更し、通常の機能に戻る前に白く点滅します。コントラストの領域はセンサーの視野からフレームの左側に出ます。 00:15-00:20: センサーが設定を変更し、画面が白く点滅します。内容がありません。このビデオの説明は情報提供のみを目的として提供されています。読者は、この記述のいかなる部分も、記述された出来事の有効性、性質、または重要性に関する分析的判断、調査の結論、または事実の判断を反映していると解釈してはなりません。"
+      },
+      "priorDisclosure": {
+        "status": "first_time_public",
+        "labelJa": "初公開",
+        "confidence": "low",
+        "evidenceSummaryJa": [
+          "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。",
+          "初公開の断定を避けるため、信頼度は低としています。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014128",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "video_match",
+            "label": "DVIDS / archive search",
+            "url": "https://www.dvidshub.net/search/?q=DOW-UAP-PR112%2C%20Unresolved%20UAP%20Report%2C%20Eastern%20United%20States%2C%202019",
+            "noteJa": "同一資料の過去公開確認に使った検索候補で、明確な先行公開一致は確認できませんでした。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "low"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "dvids",
+            "sourceUrl": "https://www.dvidshub.net/search/?q=DOW-UAP-PR112%2C%20Unresolved%20UAP%20Report%2C%20Eastern%20United%20States%2C%202019",
+            "role": "auxiliary_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "first_time_public",
+        "priorDisclosureConfidence": "low",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "dvids",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0328",
+        "assetFileName": "DOW-UAP-PR114, Unresolved UAP Report, Atlantic Ocean, 2016",
+        "release": "7/10/26",
+        "agency": "Department of War",
+        "incidentDate": "2016",
+        "incidentLocation": "Atlantic Ocean",
+        "documentType": "VID",
+        "description": "The United States Northern Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of 39 seconds of video footage from an infrared sensor aboard a U.S. military platform in 2016. Video Description: 00:01-00:11: The sensor zooms in and out to track on an area of contrast, panning to keep it generally within the center of the frame. 00:12-00:29: The sensor switches modes. A white reticle surrounds the area of contrast. 00:30-00:36: The sensor stops tracking the object, causing it to exit the right side of the frame. 00:37-00:38: An area of contrast enters the sensor field-of-view from the right side of the frame. This video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
+        "virin": "",
+        "downloadUrl": "",
+        "imageUrl": "",
+        "videoUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014121"
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-PR114、未解決の UAP レポート、大西洋、2016 年",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "米国戦争省",
+        "incidentLocationJa": "大西洋",
+        "documentTypeJa": "動画",
+        "descriptionJa": "米国北方軍は、2016年に米軍プラットフォームに搭載された赤外線センサーからの39秒間のビデオ映像からなる未確認の異常現象に関する報告書を全領域異常解決局（AARO）に提出​​した。ビデオの説明: 00:01-00:11: センサーは、コントラストの領域を追跡するためにズームインおよびズームアウトし、フレームの中心内に収まるようにパンします。 00:12-00:29: センサーがモードを切り替えます。白いレティクルがコントラストの領域を囲みます。 00:30-00:36: センサーがオブジェクトの追跡を停止し、オブジェクトがフレームの右側から出てしまいます。 00:37-00:38: コントラストの領域がフレームの右側からセンサーの視野に入ります。このビデオの説明は情報提供のみを目的として提供されています。読者は、この記述のいかなる部分も、記述された出来事の有効性、性質、または重要性に関する分析的判断、調査の結論、または事実の判断を反映していると解釈してはなりません。"
+      },
+      "priorDisclosure": {
+        "status": "first_time_public",
+        "labelJa": "初公開",
+        "confidence": "low",
+        "evidenceSummaryJa": [
+          "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。",
+          "初公開の断定を避けるため、信頼度は低としています。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014121",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "video_match",
+            "label": "DVIDS / archive search",
+            "url": "https://www.dvidshub.net/search/?q=DOW-UAP-PR114%2C%20Unresolved%20UAP%20Report%2C%20Atlantic%20Ocean%2C%202016",
+            "noteJa": "同一資料の過去公開確認に使った検索候補で、明確な先行公開一致は確認できませんでした。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "low"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "dvids",
+            "sourceUrl": "https://www.dvidshub.net/search/?q=DOW-UAP-PR114%2C%20Unresolved%20UAP%20Report%2C%20Atlantic%20Ocean%2C%202016",
+            "role": "auxiliary_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "first_time_public",
+        "priorDisclosureConfidence": "low",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "dvids",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0329",
+        "assetFileName": "DOW-UAP-PR116, Unresolved UAP Report, Atlantic Ocean, 2020",
+        "release": "7/10/26",
+        "agency": "Department of War",
+        "incidentDate": "2020",
+        "incidentLocation": "Atlantic Ocean",
+        "documentType": "VID",
+        "description": "The United States Northern Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of 32 seconds of video footage from an infrared sensor aboard a U.S. military platform in 2020. An accompanying Range Fouler Debrief, DOW-UAP-D091, describes the phenomenon as “darker, maroonish color, approximately 12-15 feet in height.” The report describes the phenomenon “travel[ing] with the wind” and noted that it did not “maneuver or change direction.” It also describes the phenomenon as appearing similar to a “large, somewhat deformed balloon.” Video Description: 00:01-00:32: The sensor zooms and pans to keep an area of contrast generally within the center of the frame. This video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
+        "virin": "",
+        "downloadUrl": "",
+        "imageUrl": "",
+        "videoUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014124"
+      },
+      "ja": {
+        "assetFileNameJa": "DOW-UAP-PR116、未解決の UAP レポート、大西洋、2020",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "米国戦争省",
+        "incidentLocationJa": "大西洋",
+        "documentTypeJa": "動画",
+        "descriptionJa": "米国北方軍は、2020年に米軍プラットフォームに搭載された赤外線センサーからの32秒間のビデオ映像からなる未確認の異常現象に関する報告書を全領域異常解決局（AARO）に提出​​した。付属のレンジ・ファウラー報告書DOW-UAP-D091では、この現象を「より暗く、栗色がかった色、高さ約12～15フィート」と説明している。報告書はこの現象を「風に乗って移動する」と説明し、「操縦したり方向を変えたりする」ものではないと述べた。また、この現象は「大きくてやや変形した風船」に似ていると説明されています。ビデオの説明: 00:01-00:32: センサーはズームとパンを行い、コントラストの領域をフレームのほぼ中央に保ちます。このビデオの説明は情報提供のみを目的として提供されています。読者は、この記述のいかなる部分も、記述された出来事の有効性、性質、または重要性に関する分析的判断、調査の結論、または事実の判断を反映していると解釈してはなりません。"
+      },
+      "priorDisclosure": {
+        "status": "first_time_public",
+        "labelJa": "初公開",
+        "confidence": "low",
+        "evidenceSummaryJa": [
+          "既存の分類済み監査データやPURSUE以前の同一ファイル公開は確認できませんでした。",
+          "初公開の断定を避けるため、信頼度は低としています。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014124",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "video_match",
+            "label": "DVIDS / archive search",
+            "url": "https://www.dvidshub.net/search/?q=DOW-UAP-PR116%2C%20Unresolved%20UAP%20Report%2C%20Atlantic%20Ocean%2C%202020",
+            "noteJa": "同一資料の過去公開確認に使った検索候補で、明確な先行公開一致は確認できませんでした。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "low"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "dvids",
+            "sourceUrl": "https://www.dvidshub.net/search/?q=DOW-UAP-PR116%2C%20Unresolved%20UAP%20Report%2C%20Atlantic%20Ocean%2C%202020",
+            "role": "auxiliary_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "first_time_public",
+        "priorDisclosureConfidence": "low",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "dvids",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0330",
+        "assetFileName": "FBI-UAP-D014, Correspondence Relating to UFO Sightings, 1967, 1974",
+        "release": "7/10/26",
+        "agency": "FBI",
+        "incidentDate": "10/10/74",
+        "incidentLocation": "Various",
+        "documentType": "PDF",
+        "description": "This file contains two pieces of correspondence. The first, dated 9/22/1967, relays a description of an incident provided by an eleven-year-old child in which they heard a “weird” noise and saw a “flash of light.” The second, dated 9/30/1974 and 10/10/1974, is an exchange of letters between the Federal Bureau of Investigation (FBI) and Mr. Larry Bryant regarding an “alleged April 8, 1954 sighting of an occupied unidentified flying object (UFO).” The FBI’s response to Mr. Bryant’s inquiry indicated that it maintained no record of such an event, and that, circa 1974, the Bureau does not collect information regarding UFO sightings.",
+        "virin": "260710-O-D0360-1133",
+        "downloadUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/FBI-UAP-D014_Correspondence-Relating-to-UFO-Sightings_1967_1974.pdf",
+        "imageUrl": "https://www.war.gov/medialink/ufo/071026/release_04/thumbnails/FBI-UAP-D014_Correspondence-Relating-to-UFO-Sightings_1967_1974.jpg",
+        "videoUrl": ""
+      },
+      "ja": {
+        "assetFileNameJa": "FBI-UAP-D014、UFO目撃に関する通信、1967年、1974年",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "FBI",
+        "incidentLocationJa": "複数地域",
+        "documentTypeJa": "PDF",
+        "descriptionJa": "このファイルには 2 つの通信が含まれています。最初の記事は 1967 年 9 月 22 日付けで、11 歳の子供が「奇妙な」音を聞いて「閃光」を見たという出来事の説明を伝えています。 2つ目は1974年9月30日と1974年10月10日付けで、「1954年4月8日の占拠された未確認飛行物体（UFO）の目撃疑惑」に関する連邦捜査局（FBI）とラリー・ブライアント氏との間の書簡のやりとりである。ブライアント氏の調査に対するFBIの回答は、そのような出来事の記録は保持しておらず、1974年頃、FBIはUFO目撃に関する情報を収集していないことを示した。"
+      },
+      "priorDisclosure": {
+        "status": "previously_public",
+        "labelJa": "既に公開済み",
+        "confidence": "medium",
+        "evidenceSummaryJa": [
+          "同名または同等の歴史資料が公的・補助アーカイブで既公開の資料群として照合できます。",
+          "PURSUE版ではUAP文脈の資料として再掲されています。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/medialink/ufo/071026/release_04/documents/FBI-UAP-D014_Correspondence-Relating-to-UFO-Sightings_1967_1974.pdf",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "archive_match",
+            "label": "FBI Vault search",
+            "url": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D014%2C%20Correspondence%20Relating%20to%20UFO%20Sightings%2C%201967%2C%201974",
+            "noteJa": "文書名と資料群を用いた既公開アーカイブ照合候補です。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "fbi_vault",
+            "sourceUrl": "https://vault.fbi.gov/search?SearchableText=FBI-UAP-D014%2C%20Correspondence%20Relating%20to%20UFO%20Sightings%2C%201967%2C%201974",
+            "role": "official_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "previously_public",
+        "priorDisclosureConfidence": "medium",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "fbi_vault",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0331",
+        "assetFileName": "NASA-UAP-D026, Apollo 14 Debriefing, 1971",
+        "release": "7/10/26",
+        "agency": "NASA",
+        "incidentDate": "2/18/71",
+        "incidentLocation": "Texas",
+        "documentType": "AUD",
+        "description": "This file contains segment 1 of 2 of the Apollo 14 post-mission crew debriefing at the Manned Spacecraft Center (now Johnson Space Center), Houston, Texas. In the recording, crew members and debriefers discuss the “light flash phenomena,” a then novel, now well-documented biological effect where high-energy cosmic rays pass through the eye and strike the retina, causing the perception of light streaks or flashes. The questioners attempt to distinguish the characteristics of the observed phenomena. The debriefing continues in the next file (NASA-UAP-D027), which contains some overlapping audio content.",
+        "virin": "",
+        "downloadUrl": "",
+        "imageUrl": "",
+        "videoUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014107"
+      },
+      "ja": {
+        "assetFileNameJa": "NASA-UAP-D026、アポロ 14 号の報告会、1971 年",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "NASA",
+        "incidentLocationJa": "テキサス州",
+        "documentTypeJa": "音声",
+        "descriptionJa": "このファイルには、テキサス州ヒューストンの有人宇宙船センター (現在のジョンソン宇宙センター) で行われたアポロ 14 号のミッション後の乗組員の報告会のセグメント 1/2 が含まれています。記録では、乗組員と報告者が「光フラッシュ現象」について議論しています。これは、高エネルギーの宇宙線が目を通過して網膜に当たり、光の縞やフラッシュの知覚を引き起こす、当時は斬新で現在では十分に立証されている生物学的効果です。質問者は観察された現象の特徴を区別しようとします。デブリーフィングは次のファイル (NASA-UAP-D027) に続きます。このファイルには、重複する音声コンテンツが含まれています。"
+      },
+      "priorDisclosure": {
+        "status": "partial",
+        "labelJa": "一部公開済み",
+        "confidence": "medium",
+        "evidenceSummaryJa": [
+          "Apollo 14ミッション・デブリーフィングの元記録・関連資料は既公開ですが、PURSUE版ファイル全体の同一公開までは確認していません。",
+          "PURSUE版には抜粋、編集、静止画化またはUAP文脈での再掲が含まれます。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014107",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "catalog_match",
+            "label": "NASA History / mission archive",
+            "url": "https://www.nasa.gov/history/",
+            "noteJa": "元ミッション記録または関連する歴史資料の既公開照合候補です。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "nasa",
+            "sourceUrl": "https://www.nasa.gov/history/",
+            "role": "official_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "partial",
+        "priorDisclosureConfidence": "medium",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "nasa",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0332",
+        "assetFileName": "NASA-UAP-D027, Apollo 14 Debriefing (Continued), 1971",
+        "release": "7/10/26",
+        "agency": "NASA",
+        "incidentDate": "2/18/71",
+        "incidentLocation": "Texas",
+        "documentType": "AUD",
+        "description": "This file contains segment 2 of 2 of the Apollo 14 post-mission crew debriefing at the Manned Spacecraft Center (now Johnson Space Center), Houston, Texas. In this continued segment, crew members and debriefers further discuss the “light flash phenomena,” a then novel, now well-documented biological effect where high-energy cosmic rays pass through the eye and strike the retina, causing the perception of light streaks or flashes.",
+        "virin": "",
+        "downloadUrl": "",
+        "imageUrl": "",
+        "videoUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014110"
+      },
+      "ja": {
+        "assetFileNameJa": "NASA-UAP-D027、アポロ 14 号の報告会 (続き)、1971 年",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "NASA",
+        "incidentLocationJa": "テキサス州",
+        "documentTypeJa": "音声",
+        "descriptionJa": "このファイルには、テキサス州ヒューストンの有人宇宙船センター (現在のジョンソン宇宙センター) で行われたアポロ 14 号のミッション後の乗組員の報告会のセグメント 2 が含まれています。この継続的な部分では、乗組員と報告者が「光フラッシュ現象」についてさらに議論します。これは、高エネルギーの宇宙線が目を通過して網膜に当たり、光の縞や閃光の知覚を引き起こす、当時は斬新で現在では十分に立証されている生物学的効果です。"
+      },
+      "priorDisclosure": {
+        "status": "partial",
+        "labelJa": "一部公開済み",
+        "confidence": "medium",
+        "evidenceSummaryJa": [
+          "Apollo 14ミッション・デブリーフィングの元記録・関連資料は既公開ですが、PURSUE版ファイル全体の同一公開までは確認していません。",
+          "PURSUE版には抜粋、編集、静止画化またはUAP文脈での再掲が含まれます。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014110",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "catalog_match",
+            "label": "NASA History / mission archive",
+            "url": "https://www.nasa.gov/history/",
+            "noteJa": "元ミッション記録または関連する歴史資料の既公開照合候補です。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "nasa",
+            "sourceUrl": "https://www.nasa.gov/history/",
+            "role": "official_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "partial",
+        "priorDisclosureConfidence": "medium",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "nasa",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0333",
+        "assetFileName": "NASA-UAP-D028, Apollo 17 Crew Medical Debriefing, 1972",
+        "release": "7/10/26",
+        "agency": "NASA",
+        "incidentDate": "12/21/72",
+        "incidentLocation": "Texas",
+        "documentType": "AUD",
+        "description": "This file contains segment 1 of 2 of the Apollo 17 post-mission medical debriefing at the Manned Spacecraft Center (now Johnson Space Center), Houston, Texas. In the recording, crew members discuss the “light flash phenomena,” a then novel, now well-documented biological effect where high-energy cosmic rays pass through the eye and strike the retina, causing the perception of light streaks or flashes. Two of the three crew members reported observing these flashes at various points during the mission, including in lunar orbit and while on the lunar surface. The debriefing continues in the next file (NASA-UAP-D029).",
+        "virin": "",
+        "downloadUrl": "",
+        "imageUrl": "",
+        "videoUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014116"
+      },
+      "ja": {
+        "assetFileNameJa": "NASA-UAP-D028、アポロ 17 号乗組員の医療報告会、1972 年",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "NASA",
+        "incidentLocationJa": "テキサス州",
+        "documentTypeJa": "音声",
+        "descriptionJa": "このファイルには、テキサス州ヒューストンの有人宇宙船センター (現在のジョンソン宇宙センター) で行われたアポロ 17 号のミッション後の医療報告会のセグメント 1/2 が含まれています。記録の中で、乗組員は「光フラッシュ現象」について議論しています。これは、高エネルギーの宇宙線が目を通過して網膜に当たり、光の縞やフラッシュの知覚を引き起こす、当時は斬新で現在では十分に立証されている生物学的効果です。 3人の乗組員のうち2人は、月軌道上や月面上を含むミッション中のさまざまな時点でこれらの閃光を観察したと報告した。報告会は次のファイル (NASA-UAP-D029) に続きます。"
+      },
+      "priorDisclosure": {
+        "status": "partial",
+        "labelJa": "一部公開済み",
+        "confidence": "medium",
+        "evidenceSummaryJa": [
+          "Apollo 17ミッション・デブリーフィングの元記録・関連資料は既公開ですが、PURSUE版ファイル全体の同一公開までは確認していません。",
+          "PURSUE版には抜粋、編集、静止画化またはUAP文脈での再掲が含まれます。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014116",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "catalog_match",
+            "label": "NASA History / mission archive",
+            "url": "https://www.nasa.gov/history/",
+            "noteJa": "元ミッション記録または関連する歴史資料の既公開照合候補です。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "nasa",
+            "sourceUrl": "https://www.nasa.gov/history/",
+            "role": "official_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "partial",
+        "priorDisclosureConfidence": "medium",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "nasa",
+          "ruppelt"
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pursue-0334",
+        "assetFileName": "NASA-UAP-D029, Apollo 17 Crew Medical Debriefing (Continued), 1972",
+        "release": "7/10/26",
+        "agency": "NASA",
+        "incidentDate": "12/21/72",
+        "incidentLocation": "Texas",
+        "documentType": "AUD",
+        "description": "This file contains segment 2 of 2 of the Apollo 17 post-mission medical debriefing at the Manned Spacecraft Center (now Johnson Space Center), Houston, Texas. In this continued segment, crew members and debriefers further discuss the “light flash phenomena,” a then novel, now well-documented biological effect where high-energy cosmic rays pass through the eye and strike the retina, causing the perception of light streaks or flashes. Two of the three crew members reported observing these flashes at various points during the mission, including in lunar orbit and while on the lunar surface.",
+        "virin": "",
+        "downloadUrl": "",
+        "imageUrl": "",
+        "videoUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014117"
+      },
+      "ja": {
+        "assetFileNameJa": "NASA-UAP-D029、アポロ 17 号乗組員の医療報告（続き）、1972 年",
+        "releaseJa": "2026年7月10日（Release 04）",
+        "agencyJa": "NASA",
+        "incidentLocationJa": "テキサス州",
+        "documentTypeJa": "音声",
+        "descriptionJa": "このファイルには、テキサス州ヒューストンの有人宇宙船センター (現在のジョンソン宇宙センター) で行われたアポロ 17 号のミッション後の医療報告会のセグメント 2/2 が含まれています。この継続的な部分では、乗組員と報告者が「光フラッシュ現象」についてさらに議論します。これは、高エネルギーの宇宙線が目を通過して網膜に当たり、光の縞や閃光の知覚を引き起こす、当時は斬新で現在では十分に立証されている生物学的効果です。 3人の乗組員のうち2人は、月軌道上や月面上を含むミッション中のさまざまな時点でこれらの閃光を観察したと報告した。"
+      },
+      "priorDisclosure": {
+        "status": "partial",
+        "labelJa": "一部公開済み",
+        "confidence": "medium",
+        "evidenceSummaryJa": [
+          "Apollo 17ミッション・デブリーフィングの元記録・関連資料は既公開ですが、PURSUE版ファイル全体の同一公開までは確認していません。",
+          "PURSUE版には抜粋、編集、静止画化またはUAP文脈での再掲が含まれます。"
+        ],
+        "evidence": [
+          {
+            "type": "official_source",
+            "label": "PURSUE official",
+            "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014117",
+            "noteJa": "PURSUE Release 04の公式掲載資料として確認しました。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "high"
+          },
+          {
+            "type": "catalog_match",
+            "label": "NASA History / mission archive",
+            "url": "https://www.nasa.gov/history/",
+            "noteJa": "元ミッション記録または関連する歴史資料の既公開照合候補です。",
+            "matchedFields": [
+              "assetFileName",
+              "agency",
+              "documentType"
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "attribution": [
+          {
+            "source": "nasa",
+            "sourceUrl": "https://www.nasa.gov/history/",
+            "role": "official_archive",
+            "visible": "secondary"
+          },
+          {
+            "source": "ruppelt",
+            "sourceUrl": "https://ufolab.tokyo/ruppelt",
+            "role": "ruppelt_review",
+            "visible": "secondary"
+          }
+        ],
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。",
+        "checkedAt": "2026-07-11",
+        "checkedBy": "ruppelt"
+      },
+      "searchFacets": {
+        "releaseId": "release_04",
+        "priorDisclosureStatus": "partial",
+        "priorDisclosureConfidence": "medium",
+        "ruppeltVerified": false,
+        "manualReviewRequired": true,
+        "hasPriorDisclosureEvidence": true,
+        "attributionSources": [
+          "nasa",
           "ruppelt"
         ]
       }

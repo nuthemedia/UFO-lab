@@ -1,0 +1,722 @@
+{
+  "generatedAt": "2026-07-11",
+  "release": "7/10/26",
+  "releaseId": "release_04",
+  "recordCount": 40,
+  "existingAuditSources": [
+    {
+      "source": "they_are_here",
+      "label": "they-are-here.com",
+      "result": "no_release_04_classification_dataset_found",
+      "noteJa": "Release 04の個別監査ページまたは分類表は確認できませんでした。"
+    },
+    {
+      "source": "abigailhaddad_ufo_releases",
+      "label": "abigailhaddad/ufo-releases",
+      "url": "https://github.com/abigailhaddad/ufo-releases",
+      "result": "metadata_and_ocr_only",
+      "noteJa": "Release 04のメタデータと一部OCRはありますが、既出・初出分類は含まれていません。"
+    },
+    {
+      "source": "public_archive_search",
+      "label": "NASA / CIA / FBI / DVIDS / Internet Archive",
+      "result": "used_for_record_level_provisional_review",
+      "noteJa": "公的アーカイブと補助アーカイブを個別資料の照合候補として利用しました。"
+    }
+  ],
+  "summary": {
+    "existingClassificationDatasetFound": 0,
+    "ruppeltTemporaryReviewCount": 40,
+    "statusCounts": {
+      "previously_public": 8,
+      "first_time_public": 23,
+      "partial": 9
+    }
+  },
+  "policy": {
+    "sourceOfTruth": "PURSUE / war.gov official metadata and official file links",
+    "release04Result": "No Release 04 classification dataset equivalent to the Release 01 external audit was found. All classifications are provisional and require manual review."
+  },
+  "records": [
+    {
+      "recordId": "pursue-0295",
+      "title": "DOE-UAP-D004, Los Alamos Conference on Aerial Phenomena, 1949",
+      "officialUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/DOE-UAP-D004_Los-Alamos-Conference-on-Aerial-Phenomena_1949.pdf",
+      "status": "previously_public",
+      "confidence": "medium",
+      "method": "historical_archive_or_catalog_match",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "Public archive search"
+      ],
+      "attributionSources": [
+        "internet_archive",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0296",
+      "title": "DOW-UAP-D094, Analysis of Flying Object Incidents in the United States, 1949",
+      "officialUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D094_Analysis-of-Flying-Object-Incidents-in-the-US_1949.pdf",
+      "status": "previously_public",
+      "confidence": "medium",
+      "method": "historical_archive_or_catalog_match",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "Public archive search"
+      ],
+      "attributionSources": [
+        "internet_archive",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0297",
+      "title": "DOW-UAP-D097, Project Sign Progress Report, 1948",
+      "officialUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D097_Project-Sign-Progress-Report_1948.pdf",
+      "status": "previously_public",
+      "confidence": "medium",
+      "method": "historical_archive_or_catalog_match",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "Public archive search"
+      ],
+      "attributionSources": [
+        "internet_archive",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0298",
+      "title": "DOW-UAP-PR104, Unresolved UAP Report, Yellow Sea, 2025",
+      "officialUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014101",
+      "status": "first_time_public",
+      "confidence": "low",
+      "method": "no_prior_same_file_publication_found",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "DVIDS / archive search"
+      ],
+      "attributionSources": [
+        "dvids",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0299",
+      "title": "DOW-UAP-PR105, Unresolved UAP Report, East China Sea, 2025",
+      "officialUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014103",
+      "status": "first_time_public",
+      "confidence": "low",
+      "method": "no_prior_same_file_publication_found",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "DVIDS / archive search"
+      ],
+      "attributionSources": [
+        "dvids",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0300",
+      "title": "DOW-UAP-PR113, Unresolved UAP Report, Western United States, 1996",
+      "officialUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014119",
+      "status": "first_time_public",
+      "confidence": "low",
+      "method": "no_prior_same_file_publication_found",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "DVIDS / archive search"
+      ],
+      "attributionSources": [
+        "dvids",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0301",
+      "title": "DOW-UAP-PR115, Unresolved UAP Report, Gulf of America, 2019",
+      "officialUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014123",
+      "status": "first_time_public",
+      "confidence": "low",
+      "method": "no_prior_same_file_publication_found",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "DVIDS / archive search"
+      ],
+      "attributionSources": [
+        "dvids",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0302",
+      "title": "NASA-UAP-D030, STS-80 Unidentified Object Image 1, 1996",
+      "officialUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/NASA-UAP-D030_STS-80-Unidentified-Object-Image1_1996.jpg",
+      "status": "partial",
+      "confidence": "medium",
+      "method": "source_material_public_pursue_package_not_fully_matched",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "NASA History / mission archive"
+      ],
+      "attributionSources": [
+        "nasa",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0303",
+      "title": "NASA-UAP-D031, STS-80 Unidentified Object Image 2, 1996",
+      "officialUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/NASA-UAP-D031_STS-80-Unidentified-Object-Image2_1996.jpg",
+      "status": "partial",
+      "confidence": "medium",
+      "method": "source_material_public_pursue_package_not_fully_matched",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "NASA History / mission archive"
+      ],
+      "attributionSources": [
+        "nasa",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0304",
+      "title": "NASA-UAP-D032, STS-80 Unidentified Object Image 3, 1996",
+      "officialUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/NASA-UAP-D032_STS-80-Unidentified-Object-Image3_1996.jpg",
+      "status": "partial",
+      "confidence": "medium",
+      "method": "source_material_public_pursue_package_not_fully_matched",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "NASA History / mission archive"
+      ],
+      "attributionSources": [
+        "nasa",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0305",
+      "title": "CIA-UAP-D020, Memorandum on Unconventional Aircraft Sightings, 1955",
+      "officialUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/CIA-UAP-D020_Memorandum-on-Unconventional-Aircraft-Sightings_1955.pdf",
+      "status": "previously_public",
+      "confidence": "medium",
+      "method": "historical_archive_or_catalog_match",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "CIA Reading Room search"
+      ],
+      "attributionSources": [
+        "cia_crest",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0306",
+      "title": "CIA-UAP-D021, Analysis of Unconventional Aircraft Sightings, 1955",
+      "officialUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/CIA-UAP-D021_Analysis-of-Unconventional-Aircraft-Sightings_1955.pdf",
+      "status": "previously_public",
+      "confidence": "medium",
+      "method": "historical_archive_or_catalog_match",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "CIA Reading Room search"
+      ],
+      "attributionSources": [
+        "cia_crest",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0307",
+      "title": "DOE-UAP-D005, Pantex Unidentified Object Incident Report, 2015",
+      "officialUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/DOE-UAP-D005_Pantex-Unidentified-Object-Incident-Report_2015.pdf",
+      "status": "first_time_public",
+      "confidence": "low",
+      "method": "no_prior_same_file_publication_found",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "Archive search"
+      ],
+      "attributionSources": [
+        "ruppelt",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0308",
+      "title": "DOW-UAP-D089, Range Fouler Debrief, Eastern United States, 2020",
+      "officialUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D089_Range-Fouler-Debrief_Eastern-US_2020.pdf",
+      "status": "first_time_public",
+      "confidence": "low",
+      "method": "no_prior_same_file_publication_found",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "Archive search"
+      ],
+      "attributionSources": [
+        "ruppelt",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0309",
+      "title": "DOW-UAP-D090, Range Fouler Debrief, Eastern United States, 2019",
+      "officialUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D090_Range-Fouler-Debrief_Eastern-US_2019.pdf",
+      "status": "first_time_public",
+      "confidence": "low",
+      "method": "no_prior_same_file_publication_found",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "Archive search"
+      ],
+      "attributionSources": [
+        "ruppelt",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0310",
+      "title": "DOW-UAP-D091, Range Fouler Debrief, Atlantic Ocean, 2020",
+      "officialUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D091_Range-Fouler-Debrief_Atlantic-Ocean_2020.pdf",
+      "status": "first_time_public",
+      "confidence": "low",
+      "method": "no_prior_same_file_publication_found",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "Archive search"
+      ],
+      "attributionSources": [
+        "ruppelt",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0311",
+      "title": "DOW-UAP-D092, Department of the Air Force Committee to Review Project Bluebook, 1966-1967",
+      "officialUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D092_DAF-Committee-to-Review-Project-Bluebook_1966-1967.pdf",
+      "status": "previously_public",
+      "confidence": "medium",
+      "method": "historical_archive_or_catalog_match",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "Public archive search"
+      ],
+      "attributionSources": [
+        "internet_archive",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0312",
+      "title": "DOW-UAP-D093, Analysis of Flying Object Incidents in the United States, 1948",
+      "officialUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D093_Analysis-of-Flying-Object-Incidents-in-the-US_1948.pdf",
+      "status": "previously_public",
+      "confidence": "medium",
+      "method": "historical_archive_or_catalog_match",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "Public archive search"
+      ],
+      "attributionSources": [
+        "internet_archive",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0313",
+      "title": "DOW-UAP-D095, Joint U.S.-Canadian Aviation Projects and UFO Sighting Reports, 1954-1955",
+      "officialUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D095_Joint-US-Canadian-Aviation-Projects-and-UFO-Sighting-Reports_1954-1955.pdf",
+      "status": "partial",
+      "confidence": "medium",
+      "method": "source_material_public_pursue_package_not_fully_matched",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "Public archive search"
+      ],
+      "attributionSources": [
+        "internet_archive",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0314",
+      "title": "DOW-UAP-D096, Correspondence Relating to Project Blue Book, 1955",
+      "officialUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/DOW-UAP-D096_Correspondence-Relating-to-Project-Blue-Book_1955.pdf",
+      "status": "partial",
+      "confidence": "medium",
+      "method": "source_material_public_pursue_package_not_fully_matched",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "Public archive search"
+      ],
+      "attributionSources": [
+        "internet_archive",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0315",
+      "title": "DOW-UAP-PR024, Unresolved UAP Report, Middle East, 2023",
+      "officialUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014100",
+      "status": "first_time_public",
+      "confidence": "low",
+      "method": "no_prior_same_file_publication_found",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "DVIDS / archive search"
+      ],
+      "attributionSources": [
+        "dvids",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0316",
+      "title": "DOW-UAP-PR030, Unresolved UAP Report, Middle East, 2023",
+      "officialUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014102",
+      "status": "first_time_public",
+      "confidence": "low",
+      "method": "no_prior_same_file_publication_found",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "DVIDS / archive search"
+      ],
+      "attributionSources": [
+        "dvids",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0317",
+      "title": "DOW-UAP-PR100, Unresolved UAP Report, Yellow Sea, 2023",
+      "officialUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014096",
+      "status": "first_time_public",
+      "confidence": "low",
+      "method": "no_prior_same_file_publication_found",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "DVIDS / archive search"
+      ],
+      "attributionSources": [
+        "dvids",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0318",
+      "title": "DOW-UAP-PR101, Unresolved UAP Report, South China Sea, 2024",
+      "officialUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014097",
+      "status": "first_time_public",
+      "confidence": "low",
+      "method": "no_prior_same_file_publication_found",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "DVIDS / archive search"
+      ],
+      "attributionSources": [
+        "dvids",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0319",
+      "title": "DOW-UAP-PR102, Unresolved UAP Report, East China Sea, 2024",
+      "officialUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014098",
+      "status": "first_time_public",
+      "confidence": "low",
+      "method": "no_prior_same_file_publication_found",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "DVIDS / archive search"
+      ],
+      "attributionSources": [
+        "dvids",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0320",
+      "title": "DOW-UAP-PR103, Unresolved UAP Report, East China Sea, 2024",
+      "officialUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014099",
+      "status": "first_time_public",
+      "confidence": "low",
+      "method": "no_prior_same_file_publication_found",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "DVIDS / archive search"
+      ],
+      "attributionSources": [
+        "dvids",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0321",
+      "title": "DOW-UAP-PR106, Unresolved UAP Report, Eastern United States, 2020",
+      "officialUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014104",
+      "status": "first_time_public",
+      "confidence": "low",
+      "method": "no_prior_same_file_publication_found",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "DVIDS / archive search"
+      ],
+      "attributionSources": [
+        "dvids",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0322",
+      "title": "DOW-UAP-PR107, Unresolved UAP Report, Eastern United States, 2020",
+      "officialUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014105",
+      "status": "first_time_public",
+      "confidence": "low",
+      "method": "no_prior_same_file_publication_found",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "DVIDS / archive search"
+      ],
+      "attributionSources": [
+        "dvids",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0323",
+      "title": "DOW-UAP-PR108, Unresolved UAP Report, Western United States, 2020",
+      "officialUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014106",
+      "status": "first_time_public",
+      "confidence": "low",
+      "method": "no_prior_same_file_publication_found",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "DVIDS / archive search"
+      ],
+      "attributionSources": [
+        "dvids",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0324",
+      "title": "DOW-UAP-PR109, Unresolved UAP Report, Eastern United States, 2015",
+      "officialUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014108",
+      "status": "first_time_public",
+      "confidence": "low",
+      "method": "no_prior_same_file_publication_found",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "DVIDS / archive search"
+      ],
+      "attributionSources": [
+        "dvids",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0325",
+      "title": "DOW-UAP-PR110, Unresolved UAP Report, Eastern United States, 2020",
+      "officialUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014112",
+      "status": "first_time_public",
+      "confidence": "low",
+      "method": "no_prior_same_file_publication_found",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "DVIDS / archive search"
+      ],
+      "attributionSources": [
+        "dvids",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0326",
+      "title": "DOW-UAP-PR111, Unresolved UAP Report, Eastern United States, 2020",
+      "officialUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014114",
+      "status": "first_time_public",
+      "confidence": "low",
+      "method": "no_prior_same_file_publication_found",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "DVIDS / archive search"
+      ],
+      "attributionSources": [
+        "dvids",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0327",
+      "title": "DOW-UAP-PR112, Unresolved UAP Report, Eastern United States, 2019",
+      "officialUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014128",
+      "status": "first_time_public",
+      "confidence": "low",
+      "method": "no_prior_same_file_publication_found",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "DVIDS / archive search"
+      ],
+      "attributionSources": [
+        "dvids",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0328",
+      "title": "DOW-UAP-PR114, Unresolved UAP Report, Atlantic Ocean, 2016",
+      "officialUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014121",
+      "status": "first_time_public",
+      "confidence": "low",
+      "method": "no_prior_same_file_publication_found",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "DVIDS / archive search"
+      ],
+      "attributionSources": [
+        "dvids",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0329",
+      "title": "DOW-UAP-PR116, Unresolved UAP Report, Atlantic Ocean, 2020",
+      "officialUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014124",
+      "status": "first_time_public",
+      "confidence": "low",
+      "method": "no_prior_same_file_publication_found",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "DVIDS / archive search"
+      ],
+      "attributionSources": [
+        "dvids",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0330",
+      "title": "FBI-UAP-D014, Correspondence Relating to UFO Sightings, 1967, 1974",
+      "officialUrl": "https://www.war.gov/medialink/ufo/071026/release_04/documents/FBI-UAP-D014_Correspondence-Relating-to-UFO-Sightings_1967_1974.pdf",
+      "status": "previously_public",
+      "confidence": "medium",
+      "method": "historical_archive_or_catalog_match",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "FBI Vault search"
+      ],
+      "attributionSources": [
+        "fbi_vault",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0331",
+      "title": "NASA-UAP-D026, Apollo 14 Debriefing, 1971",
+      "officialUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014107",
+      "status": "partial",
+      "confidence": "medium",
+      "method": "source_material_public_pursue_package_not_fully_matched",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "NASA History / mission archive"
+      ],
+      "attributionSources": [
+        "nasa",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0332",
+      "title": "NASA-UAP-D027, Apollo 14 Debriefing (Continued), 1971",
+      "officialUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014110",
+      "status": "partial",
+      "confidence": "medium",
+      "method": "source_material_public_pursue_package_not_fully_matched",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "NASA History / mission archive"
+      ],
+      "attributionSources": [
+        "nasa",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0333",
+      "title": "NASA-UAP-D028, Apollo 17 Crew Medical Debriefing, 1972",
+      "officialUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014116",
+      "status": "partial",
+      "confidence": "medium",
+      "method": "source_material_public_pursue_package_not_fully_matched",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "NASA History / mission archive"
+      ],
+      "attributionSources": [
+        "nasa",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0334",
+      "title": "NASA-UAP-D029, Apollo 17 Crew Medical Debriefing (Continued), 1972",
+      "officialUrl": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1014117",
+      "status": "partial",
+      "confidence": "medium",
+      "method": "source_material_public_pursue_package_not_fully_matched",
+      "existingClassificationDataset": "not_found",
+      "evidenceLabels": [
+        "PURSUE official",
+        "NASA History / mission archive"
+      ],
+      "attributionSources": [
+        "nasa",
+        "ruppelt"
+      ]
+    }
+  ]
+}

@@ -147,7 +147,6 @@ const snippetDocuments = documents.map((document) => ({
   summaryText: document.summaryText,
   snippetText: makeSnippetSource(
     document.summaryText,
-    document.metadataText,
     document.fullTextJa,
     document.ocrTextEn,
   ),

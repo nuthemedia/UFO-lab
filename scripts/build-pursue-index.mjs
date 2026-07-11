@@ -23,6 +23,10 @@ const priorDisclosureLabels = {
 function getReleaseId(record) {
   const release = record.source.release.toLowerCase();
 
+  if (release.includes("7/10") || release.includes("july 10")) {
+    return "release_04";
+  }
+
   if (release.includes("6/12") || release.includes("june 12")) {
     return "release_03";
   }
@@ -35,6 +39,13 @@ function getReleaseId(record) {
 }
 
 function makeDefaultPriorDisclosure(record) {
+  const releaseId = getReleaseId(record);
+  const releaseLabel = {
+    release_02: "Release 02",
+    release_03: "Release 03",
+    release_04: "Release 04",
+  }[releaseId];
+
   return {
     status: "unknown",
     labelJa: priorDisclosureLabels.unknown,
@@ -50,10 +61,9 @@ function makeDefaultPriorDisclosure(record) {
     ],
     ruppeltVerified: false,
     manualReviewRequired: true,
-    reviewerNoteJa:
-      getReleaseId(record) === "release_02" || getReleaseId(record) === "release_03"
-        ? `${getReleaseId(record) === "release_03" ? "Release 03" : "Release 02"} はRuppelt側での公開状況照合が未完了です。`
-        : "公開状況の照合データがまだ登録されていません。",
+    reviewerNoteJa: releaseLabel
+      ? `${releaseLabel} はRuppelt側での公開状況照合が未完了です。`
+      : "公開状況の照合データがまだ登録されていません。",
   };
 }
 
