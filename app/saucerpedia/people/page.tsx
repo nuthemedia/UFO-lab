@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { redirect } from "next/navigation";
 import { SaucerpediaHome } from "../SaucerpediaHome";
 import { createSaucerpediaMetadata } from "../seo";
 
@@ -11,6 +12,15 @@ export const metadata: Metadata = createSaucerpediaMetadata({
   canonical: "/saucerpedia/people",
 });
 
-export default function SaucerpediaPeoplePage() {
+type PageProps = {
+  searchParams?: Promise<{ item?: string }>;
+};
+
+export default async function SaucerpediaPeoplePage({ searchParams }: PageProps) {
+  const item = (await searchParams)?.item;
+  if (item) {
+    redirect(`/saucerpedia/people/${encodeURIComponent(item)}`);
+  }
+
   return <SaucerpediaHome view="people" />;
 }

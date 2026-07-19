@@ -1,3 +1,5 @@
+import type { SaucerpediaSource } from "./types";
+
 export type SaucerpediaMotif = {
   id: string;
   name: string;
@@ -15,6 +17,7 @@ export type SaucerpediaMotif = {
   relatedEvents?: string[];
   relatedPeople?: string[];
   relatedTerms: string[];
+  sources?: SaucerpediaSource[];
 };
 
 export const motifCategories = [

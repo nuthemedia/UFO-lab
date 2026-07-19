@@ -1,3 +1,5 @@
+import type { SaucerpediaSource } from "./types";
+
 export type SaucerpediaResource = {
   id: string;
   name: string;
@@ -10,6 +12,7 @@ export type SaucerpediaResource = {
   whatItDid: string;
   relatedPeople?: string[];
   relatedTerms: string[];
+  sources?: SaucerpediaSource[];
 };
 
 export const resourceKinds = [
@@ -63,6 +66,14 @@ export const saucerpediaResources: SaucerpediaResource[] = [
       "多数のUFO報告を収集し、説明済みと未確認に分類しました。最終的にはコンドン委員会の結論などを受けて終了しましたが、公開資料として現在もUFO研究の基本参照点になっています。",
     relatedPeople: ["J・アレン・ハイネック", "エドワード・J・ルッペルト"],
     relatedTerms: ["UFO", "IFO", "公開文書", "コンドン委員会"],
+    sources: [
+      {
+        label: "Air Force UFOs (Project BLUE BOOK) | National Archives",
+        url: "https://www.archives.gov/research/military/air-force/ufos",
+        publisher: "米国立公文書館",
+        note: "プロジェクト・ブルーブック記録の公式案内ページ",
+      },
+    ],
   },
   {
     id: "condon-committee",
@@ -120,6 +131,14 @@ export const saucerpediaResources: SaucerpediaResource[] = [
       "空中、海中、宇宙など複数領域の異常報告を受け、分析や報告を行う役割を持ちます。2022年の設立以降、毎年議会向けの年次報告書を公表し、収集した報告の大半は気球・ドローン・誤認などで説明可能としつつ、一部を未解明として残しています。現代UAPの制度的な窓口になっています。",
     relatedPeople: ["ショーン・カークパトリック", "ジョン・コスロスキー"],
     relatedTerms: ["UAP", "現代UAP", "政府・軍", "ディスクロージャー"],
+    sources: [
+      {
+        label: "All-domain Anomaly Resolution Office (AARO)",
+        url: "https://www.aaro.mil/",
+        publisher: "米国防総省",
+        note: "AAROの公式サイト",
+      },
+    ],
   },
   {
     id: "nasa-uap-independent-study-team",
@@ -134,6 +153,14 @@ export const saucerpediaResources: SaucerpediaResource[] = [
       "UAPの真偽を個別に判定するよりも、信頼できるデータ収集、透明性、科学的分析の枠組みを提案しました。現代UAPを研究対象として整える動きとして重要です。",
     relatedPeople: ["デイヴィッド・スペルゲル"],
     relatedTerms: ["UAP", "NASA", "検証", "公開文書"],
+    sources: [
+      {
+        label: "NASA: Unidentified Anomalous Phenomena (UAP)",
+        url: "https://science.nasa.gov/uap/",
+        publisher: "NASA",
+        note: "NASAのUAP研究に関する公式ページ",
+      },
+    ],
   },
   {
     id: "foia",
@@ -149,6 +176,14 @@ export const saucerpediaResources: SaucerpediaResource[] = [
       "研究者やジャーナリスト、市民が政府文書の公開を請求できる制度を提供しました。UFO資料の調査では、公開文書や機密解除資料と並んで基礎的な用語です。",
     relatedPeople: ["ジョン・グリーンウォルド・Jr."],
     relatedTerms: ["公開文書", "機密解除", "Black Vault", "Ruppelt"],
+    sources: [
+      {
+        label: "FOIA.gov",
+        url: "https://www.foia.gov/",
+        publisher: "米司法省",
+        note: "情報自由法（FOIA）の公式ポータル",
+      },
+    ],
   },
   {
     id: "public-documents",
@@ -187,6 +222,14 @@ export const saucerpediaResources: SaucerpediaResource[] = [
       "UFO関連を含む膨大な政府文書を収集・公開し、研究者や一般ユーザーが資料へアクセスしやすい状態を作りました。",
     relatedPeople: ["ジョン・グリーンウォルド・Jr."],
     relatedTerms: ["FOIA", "公開文書", "機密解除", "Ruppelt"],
+    sources: [
+      {
+        label: "The Black Vault",
+        url: "https://www.theblackvault.com/",
+        publisher: "The Black Vault",
+        note: "FOIA取得文書を公開する民間アーカイブ",
+      },
+    ],
   },
   {
     id: "nicap",
@@ -229,6 +272,14 @@ export const saucerpediaResources: SaucerpediaResource[] = [
       "目撃報告の収集、調査、研究資料の保存を行いました。ハイネックの近接遭遇分類や科学的UFO研究の文脈と深く関係します。",
     relatedPeople: ["J・アレン・ハイネック"],
     relatedTerms: ["近接遭遇", "UFO研究", "プロジェクト・ブルーブック"],
+    sources: [
+      {
+        label: "Center for UFO Studies (CUFOS)",
+        url: "https://cufos.org/",
+        publisher: "CUFOS",
+        note: "ハイネックが設立したUFO研究センターの公式サイト",
+      },
+    ],
   },
   {
     id: "mufon",
@@ -242,6 +293,14 @@ export const saucerpediaResources: SaucerpediaResource[] = [
     whatItDid:
       "目撃報告の受付、調査、データベース化、研究会や公開イベントを行いました。現代の民間UFO調査団体としてよく名前が挙がります。",
     relatedTerms: ["UFO研究", "目撃報告", "民間団体", "検証"],
+    sources: [
+      {
+        label: "Mutual UFO Network (MUFON)",
+        url: "https://mufon.com/",
+        publisher: "MUFON",
+        note: "MUFONの公式サイト",
+      },
+    ],
   },
   {
     id: "nuforc",
@@ -255,6 +314,14 @@ export const saucerpediaResources: SaucerpediaResource[] = [
     whatItDid:
       "目撃日時、場所、形状、説明などを集め、研究者や一般ユーザーが参照できる形で公開してきました。目撃報告の入口として重要です。",
     relatedTerms: ["目撃報告", "UFOウェーブ", "検証", "公開資料"],
+    sources: [
+      {
+        label: "National UFO Reporting Center (NUFORC)",
+        url: "https://nuforc.org/",
+        publisher: "NUFORC",
+        note: "米国の目撃報告データベースの公式サイト",
+      },
+    ],
   },
   {
     id: "narcap",

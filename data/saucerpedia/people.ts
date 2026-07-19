@@ -1,3 +1,5 @@
+import type { SaucerpediaSource } from "./types";
+
 export type SaucerpediaPerson = {
   id: string;
   name: string;
@@ -11,6 +13,7 @@ export type SaucerpediaPerson = {
   relatedTerms?: string[];
   relatedEvents?: string[];
   relatedPeople?: string[];
+  sources?: SaucerpediaSource[];
 };
 
 export type SaucerpediaFeatureCard = {

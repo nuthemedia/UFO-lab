@@ -1,3 +1,5 @@
+import type { SaucerpediaSource } from "./types";
+
 export type SaucerpediaHistoryCard = {
   id: string;
   eraLabel: string;
@@ -8,6 +10,7 @@ export type SaucerpediaHistoryCard = {
   milestones: string[];
   relatedTerms: string[];
   relatedEvents: string[];
+  sources?: SaucerpediaSource[];
 };
 
 export const saucerpediaHistoryCards: SaucerpediaHistoryCard[] = [

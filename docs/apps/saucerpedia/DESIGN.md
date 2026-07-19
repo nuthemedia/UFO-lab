@@ -125,7 +125,7 @@ saucerpedia は初心者向け入口なので、「はじめての人へ」の�
 
 ## 10. 他プロダクトへの導線
 
-saucerpedia は UFO Lab Tokyo 内の入口として機能します。そのため、Kinichi、Kean、Clark、Ruppelt、Yusuke への導線を自然に表示します。
+saucerpedia は UFO Lab Tokyo 内の入口として機能します。そのため、Kinichi、Kean、Clark、Ruppelt への導線を自然に表示します。
 
 これらは単なるリンク一覧ではなく、関連する文脈の中でカードとして表示します。
 
@@ -133,7 +133,6 @@ saucerpedia は UFO Lab Tokyo 内の入口として機能します。そのた�
 - 現代UAPに関係する項目では Kean へのカード
 - 代表事件では Clark へのカード
 - 政府資料や公開文書では Ruppelt へのカード
-- 日本UFO史やCBA関連では Yusuke へのカード
 
 ## 11. スマホ優先の閲覧体験
 

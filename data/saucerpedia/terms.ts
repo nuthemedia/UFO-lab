@@ -1,3 +1,5 @@
+import type { SaucerpediaSource } from "./types";
+
 export type SaucerpediaTerm = {
   id: string;
   order: number;
@@ -19,6 +21,7 @@ export type SaucerpediaTerm = {
     href: string;
     note: string;
   }>;
+  sources?: SaucerpediaSource[];
 };
 
 export const termCategories = [

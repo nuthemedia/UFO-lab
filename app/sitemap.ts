@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { people } from "@/data/kean/people";
 import { keanUapRecords } from "@/data/kean/uap";
+import { saucerpediaEntities } from "@/data/saucerpedia/knowledge";
 import { absoluteLanguageAlternates, localizedHomeSeo, siteUrl } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -103,6 +104,60 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.78,
     },
+    {
+      url: `${siteUrl}/saucerpedia`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.84,
+    },
+    {
+      url: `${siteUrl}/saucerpedia/terms`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.78,
+    },
+    {
+      url: `${siteUrl}/saucerpedia/people`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.78,
+    },
+    {
+      url: `${siteUrl}/saucerpedia/events`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.78,
+    },
+    {
+      url: `${siteUrl}/saucerpedia/history`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.74,
+    },
+    {
+      url: `${siteUrl}/saucerpedia/misidentifications`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.74,
+    },
+    {
+      url: `${siteUrl}/saucerpedia/fakes`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.74,
+    },
+    {
+      url: `${siteUrl}/saucerpedia/resources`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.74,
+    },
+    {
+      url: `${siteUrl}/saucerpedia/motifs`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.74,
+    },
   ];
 
   return [
@@ -119,5 +174,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.74,
     })),
+    ...saucerpediaEntities
+      .filter((entity) => entity.type !== "product" && entity.type !== "history")
+      .map((entity) => ({
+        url: `${siteUrl}${entity.href}`,
+        lastModified,
+        changeFrequency: "monthly" as const,
+        priority: 0.72,
+      })),
   ];
 }

@@ -7,22 +7,9 @@ import { saucerpediaPeople } from "./people";
 import { saucerpediaResources } from "./resources";
 import { saucerpediaTerms } from "./terms";
 
-export type SaucerpediaEntityType =
-  | "term"
-  | "person"
-  | "event"
-  | "history"
-  | "misidentification"
-  | "fake"
-  | "resource"
-  | "motif"
-  | "product";
+import type { SaucerpediaEntityType, SaucerpediaRelation, SaucerpediaRelationInput } from "./types";
 
-export type SaucerpediaRelation = {
-  type: SaucerpediaEntityType;
-  id: string;
-  label?: string;
-};
+export type { SaucerpediaEntityType, SaucerpediaRelation } from "./types";
 
 export type ResolvedSaucerpediaRelation = SaucerpediaRelation & {
   title: string;
@@ -114,7 +101,10 @@ export const saucerpediaProducts: EntityRecord[] = [
 ];
 
 function relationHref(type: Exclude<SaucerpediaEntityType, "product">, id: string) {
-  return `${routeByType[type]}?item=${encodeURIComponent(id)}`;
+  if (type === "history") {
+    return `${routeByType.history}?item=${encodeURIComponent(id)}`;
+  }
+  return `${routeByType[type]}/${encodeURIComponent(id)}`;
 }
 
 function makeRecords(
@@ -204,34 +194,10 @@ const manualAliases: Array<[string, SaucerpediaRelation]> = [
   ["恐怖感", { type: "term", id: "high-strangeness" }],
   ["UFO神話", { type: "term", id: "high-strangeness" }],
   ["民間伝承", { type: "term", id: "high-strangeness" }],
-  ["遠近感", { type: "term", id: "verification" }],
   ["三角形UFO", { type: "event", id: "belgian-wave" }],
-  ["火球", { type: "misidentification", id: "fireball" }],
-  ["流星", { type: "misidentification", id: "meteor" }],
-  ["スターリンク衛星", { type: "misidentification", id: "starlink" }],
   ["人工衛星", { type: "misidentification", id: "satellite" }],
-  ["鳥", { type: "misidentification", id: "bird" }],
-  ["虫", { type: "misidentification", id: "insect" }],
-  ["ボケ / Bokeh", { type: "misidentification", id: "bokeh" }],
   ["レンズフレア", { type: "misidentification", id: "lens-flare" }],
-  ["反射", { type: "misidentification", id: "reflection" }],
-  ["窓ガラスの映り込み", { type: "misidentification", id: "window-reflection" }],
   ["パララックス", { type: "misidentification", id: "parallax" }],
-  ["模型UFO", { type: "fake", id: "model-ufo" }],
-  ["吊り糸", { type: "fake", id: "string-suspension" }],
-  ["ミニチュア撮影", { type: "fake", id: "miniature-photography" }],
-  ["合成写真", { type: "fake", id: "composite-photo" }],
-  ["初出確認", { type: "fake", id: "source-check" }],
-  ["トリック写真", { type: "fake", id: "trick-photo" }],
-  ["画像加工", { type: "fake", id: "image-editing" }],
-  ["動画加工", { type: "fake", id: "video-editing" }],
-  ["CGI / CG映像", { type: "fake", id: "cgi" }],
-  ["切り抜き動画", { type: "fake", id: "clipped-video" }],
-  ["AI生成動画", { type: "fake", id: "ai-video" }],
-  ["AI生成画像", { type: "fake", id: "ai-image" }],
-  ["逆画像検索", { type: "fake", id: "reverse-image-search" }],
-  ["EXIF情報", { type: "fake", id: "exif" }],
-  ["二重露光", { type: "fake", id: "double-exposure" }],
   ["記憶の断片", { type: "motif", id: "memory-fragments" }],
   ["身体が動かない", { type: "motif", id: "paralysis" }],
   ["浮遊感", { type: "motif", id: "floating-sensation" }],
@@ -241,9 +207,6 @@ const manualAliases: Array<[string, SaucerpediaRelation]> = [
   ["現代UAP", { type: "term", id: "uap" }],
   ["Kean", { type: "product", id: "kean" }],
   ["Ruppelt", { type: "product", id: "ruppelt" }],
-  ["Clark", { type: "product", id: "clark" }],
-  ["UFO形状辞典（KINICHI）", { type: "product", id: "kinichi" }],
-  ["現代UFO・UAPディスクロージャー入門（Kean）", { type: "product", id: "kean" }],
 ];
 
 for (const [label, relation] of manualAliases) {
@@ -291,8 +254,13 @@ function compactRelations(relations: SaucerpediaRelation[]) {
   });
 }
 
-function fromLabels(labels: string[] | undefined, preferredTypes: SaucerpediaEntityType[]) {
-  return (labels ?? []).map((label) => resolveLegacyLabel(label, preferredTypes) ?? { type: "term" as const, id: label, label });
+function fromLabels(labels: SaucerpediaRelationInput[] | undefined, preferredTypes: SaucerpediaEntityType[]) {
+  return (labels ?? []).map((entry) => {
+    if (typeof entry !== "string") {
+      return entry;
+    }
+    return resolveLegacyLabel(entry, preferredTypes) ?? { type: "term" as const, id: entry, label: entry };
+  });
 }
 
 export function getRelationsForEntity(type: SaucerpediaEntityType, id: string): SaucerpediaRelation[] {
@@ -381,6 +349,10 @@ export function resolveSaucerpediaRelation(
   };
 }
 
+export function getSaucerpediaRelationLabel(relation: SaucerpediaRelation) {
+  return relation.label ?? saucerpediaEntityByKey.get(`${relation.type}:${relation.id}`)?.title ?? relation.id;
+}
+
 export function validateSaucerpediaKnowledge() {
   const errors: string[] = [];
 
@@ -388,6 +360,45 @@ export function validateSaucerpediaKnowledge() {
     for (const relation of getRelationsForEntity(entity.type, entity.id)) {
       if (!resolveSaucerpediaRelation(relation)) {
         errors.push(`${entity.type}:${entity.id} -> ${relation.type}:${relation.id}${relation.label ? ` (${relation.label})` : ""}`);
+      }
+    }
+  }
+
+  // ID移行済みファイルは文字列レガシー表記へ戻さない。
+  const migratedSets: Array<[SaucerpediaEntityType, Array<{ id: string; relatedTerms: unknown[] }>]> = [
+    ["misidentification", saucerpediaMisidentifications],
+    ["fake", saucerpediaFakes],
+  ];
+  for (const [type, items] of migratedSets) {
+    for (const item of items) {
+      for (const relation of item.relatedTerms) {
+        if (typeof relation === "string") {
+          errors.push(`${type}:${item.id} uses legacy string relation "${relation}" (use { type, id })`);
+        }
+      }
+    }
+  }
+
+  // 出典URLは実在確認済みの https のみ許可する。
+  const sourcedSets: Array<[SaucerpediaEntityType, Array<{ id: string; sources?: Array<{ label?: string; url?: string }> }>]> = [
+    ["term", saucerpediaTerms],
+    ["person", saucerpediaPeople],
+    ["event", saucerpediaEvents],
+    ["history", saucerpediaHistoryCards],
+    ["misidentification", saucerpediaMisidentifications],
+    ["fake", saucerpediaFakes],
+    ["resource", saucerpediaResources],
+    ["motif", saucerpediaMotifs],
+  ];
+  for (const [type, items] of sourcedSets) {
+    for (const item of items) {
+      for (const source of item.sources ?? []) {
+        if (!source.label) {
+          errors.push(`${type}:${item.id} source is missing label`);
+        }
+        if (!source.url?.startsWith("https://")) {
+          errors.push(`${type}:${item.id} source url must be https: ${source.url}`);
+        }
       }
     }
   }

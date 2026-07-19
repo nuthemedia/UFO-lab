@@ -1,3 +1,5 @@
+import type { SaucerpediaRelation, SaucerpediaSource } from "./types";
+
 export type SaucerpediaFake = {
   id: string;
   name: string;
@@ -9,7 +11,8 @@ export type SaucerpediaFake = {
   quickRead: string;
   whyBelievable?: string;
   howToCheck: string[];
-  relatedTerms: string[];
+  relatedTerms: SaucerpediaRelation[];
+  sources?: SaucerpediaSource[];
 };
 
 export const fakeKinds = ["物理トリック", "撮影トリック", "デジタル加工", "AI生成", "確認方法"];
@@ -27,7 +30,12 @@ export const saucerpediaFakes: SaucerpediaFake[] = [
     whyBelievable:
       "写真だけでは、物体の大きさや距離がわかりにくいためです。空を背景に撮ると、数センチの模型でも遠くの巨大物体のように見えることがあります。",
     howToCheck: ["影や光源の向きを見る", "ピントと背景との距離感を確認する", "吊り糸や支えの痕跡を探す", "連続写真や撮影者の説明を確認する"],
-    relatedTerms: ["吊り糸", "ミニチュア撮影", "合成写真", "初出確認"],
+    relatedTerms: [
+      { type: "fake", id: "string-suspension" },
+      { type: "fake", id: "miniature-photography" },
+      { type: "fake", id: "composite-photo" },
+      { type: "fake", id: "source-check" },
+    ],
   },
   {
     id: "string-suspension",
@@ -42,7 +50,11 @@ export const saucerpediaFakes: SaucerpediaFake[] = [
     whyBelievable:
       "細い糸は背景や空の明るさに溶け込みやすく、古い写真や低画質のコピーでは痕跡が消えやすいためです。",
     howToCheck: ["物体の上部に不自然な線がないか見る", "影や揺れ方が吊られた物体に見えないか確認する", "高解像度版や初出画像を探す"],
-    relatedTerms: ["模型UFO", "トリック写真", "初出確認"],
+    relatedTerms: [
+      { type: "fake", id: "model-ufo" },
+      { type: "fake", id: "trick-photo" },
+      { type: "fake", id: "source-check" },
+    ],
   },
   {
     id: "miniature-photography",
@@ -56,7 +68,11 @@ export const saucerpediaFakes: SaucerpediaFake[] = [
     whyBelievable:
       "単一の写真では、対象の実際の距離、サイズ、撮影位置が読み取りにくく、背景との関係だけで巨大物体に見えてしまうためです。",
     howToCheck: ["ピントが背景と同じ距離に見えるか確認する", "影や照明のスケール感を見る", "撮影場所や別角度の写真を確認する"],
-    relatedTerms: ["模型UFO", "遠近感", "トリック写真"],
+    relatedTerms: [
+      { type: "fake", id: "model-ufo" },
+      { type: "term", id: "verification", label: "遠近感" },
+      { type: "fake", id: "trick-photo" },
+    ],
   },
   {
     id: "thrown-object",
@@ -71,7 +87,11 @@ export const saucerpediaFakes: SaucerpediaFake[] = [
     whyBelievable:
       "空を背景にした一枚写真では、投げた物体の大きさや距離がわかりにくく、飛行軌跡も読み取りにくいためです。",
     howToCheck: ["物体に回転ブレや投げ物らしい傾きがないか見る", "連続写真があるか確認する", "撮影者に近すぎるピントや影を確認する"],
-    relatedTerms: ["模型UFO", "トリック写真", "空飛ぶ円盤"],
+    relatedTerms: [
+      { type: "fake", id: "model-ufo" },
+      { type: "fake", id: "trick-photo" },
+      { type: "term", id: "flying-saucer" },
+    ],
   },
   {
     id: "through-glass",
@@ -85,7 +105,11 @@ export const saucerpediaFakes: SaucerpediaFake[] = [
     whyBelievable:
       "写真ではガラス面の存在が見えにくく、反射した室内物が外の空に浮いているように見えるためです。",
     howToCheck: ["窓枠や室内反射の痕跡を見る", "撮影場所が車内・機内・室内か確認する", "カメラ位置の変化と光の動きが連動するか見る"],
-    relatedTerms: ["窓ガラスの映り込み", "反射", "トリック写真"],
+    relatedTerms: [
+      { type: "misidentification", id: "window-reflection" },
+      { type: "misidentification", id: "reflection" },
+      { type: "fake", id: "trick-photo" },
+    ],
   },
   {
     id: "double-exposure",
@@ -99,7 +123,11 @@ export const saucerpediaFakes: SaucerpediaFake[] = [
     whyBelievable:
       "重なった像が写真の中に自然に溶け込むと、撮影時に実際に空にあったもののように見えるためです。",
     howToCheck: ["重なった輪郭や透けを確認する", "粒子感やコントラストの違いを見る", "フィルムや元画像の来歴を確認する"],
-    relatedTerms: ["合成写真", "トリック写真", "初出確認"],
+    relatedTerms: [
+      { type: "fake", id: "composite-photo" },
+      { type: "fake", id: "trick-photo" },
+      { type: "fake", id: "source-check" },
+    ],
   },
   {
     id: "composite-photo",
@@ -113,7 +141,11 @@ export const saucerpediaFakes: SaucerpediaFake[] = [
     whyBelievable:
       "光や色、ノイズを合わせると、別素材でも一枚の写真として自然に見えることがあるためです。",
     howToCheck: ["光源と影が一致するか見る", "境界のにじみや切り抜き痕を確認する", "逆画像検索で素材や初出を探す"],
-    relatedTerms: ["画像加工", "逆画像検索", "初出確認"],
+    relatedTerms: [
+      { type: "fake", id: "image-editing" },
+      { type: "fake", id: "reverse-image-search" },
+      { type: "fake", id: "source-check" },
+    ],
   },
   {
     id: "trick-photo",
@@ -127,7 +159,12 @@ export const saucerpediaFakes: SaucerpediaFake[] = [
     whyBelievable:
       "写真は一見すると客観的な記録に見えるため、撮影条件や仕掛けが隠れると説得力を持ちやすいためです。",
     howToCheck: ["撮影状況の説明を確認する", "同じ場所・同じ時間の別写真を探す", "物体と背景のピントや光を比べる"],
-    relatedTerms: ["模型UFO", "吊り糸", "二重露光", "検証"],
+    relatedTerms: [
+      { type: "fake", id: "model-ufo" },
+      { type: "fake", id: "string-suspension" },
+      { type: "fake", id: "double-exposure" },
+      { type: "term", id: "verification" },
+    ],
   },
   {
     id: "cgi",
@@ -142,7 +179,11 @@ export const saucerpediaFakes: SaucerpediaFake[] = [
     whyBelievable:
       "現代のCGは光、影、ブレ、ノイズをかなり自然に再現でき、短い動画では不自然さを見抜きにくいためです。",
     howToCheck: ["影や反射が環境と一致するか見る", "カメラ揺れと物体の動きが自然か確認する", "初出アカウントや制作文脈を確認する"],
-    relatedTerms: ["動画加工", "AI生成動画", "初出確認"],
+    relatedTerms: [
+      { type: "fake", id: "video-editing" },
+      { type: "fake", id: "ai-video" },
+      { type: "fake", id: "source-check" },
+    ],
   },
   {
     id: "image-editing",
@@ -156,7 +197,11 @@ export const saucerpediaFakes: SaucerpediaFake[] = [
     whyBelievable:
       "加工後の画像だけが共有されると、元写真との差分や編集履歴が見えなくなるためです。",
     howToCheck: ["不自然な境界やノイズ差を見る", "EXIF情報や元画像を確認する", "逆画像検索で元写真を探す"],
-    relatedTerms: ["合成写真", "EXIF情報", "逆画像検索"],
+    relatedTerms: [
+      { type: "fake", id: "composite-photo" },
+      { type: "fake", id: "exif" },
+      { type: "fake", id: "reverse-image-search" },
+    ],
   },
   {
     id: "video-editing",
@@ -170,7 +215,11 @@ export const saucerpediaFakes: SaucerpediaFake[] = [
     whyBelievable:
       "動きがある映像は写真よりも本物らしく感じられますが、編集ソフトで揺れやブレに合わせた合成も可能なためです。",
     howToCheck: ["物体の動きとカメラ揺れの関係を見る", "フレームごとの境界やブレを確認する", "長い未編集版や初出を探す"],
-    relatedTerms: ["CGI / CG映像", "切り抜き動画", "初出確認"],
+    relatedTerms: [
+      { type: "fake", id: "cgi" },
+      { type: "fake", id: "clipped-video" },
+      { type: "fake", id: "source-check" },
+    ],
   },
   {
     id: "clipped-video",
@@ -185,7 +234,11 @@ export const saucerpediaFakes: SaucerpediaFake[] = [
     whyBelievable:
       "短い動画では、対象がどこから来てどこへ消えたのか、撮影者が何を見ていたのかを判断しにくいためです。",
     howToCheck: ["元動画や長尺版を探す", "投稿日時と初出を確認する", "切り抜かれた前後に説明がないか見る"],
-    relatedTerms: ["初出確認", "動画加工", "検証"],
+    relatedTerms: [
+      { type: "fake", id: "source-check" },
+      { type: "fake", id: "video-editing" },
+      { type: "term", id: "verification" },
+    ],
   },
   {
     id: "ai-image",
@@ -199,7 +252,11 @@ export const saucerpediaFakes: SaucerpediaFake[] = [
     whyBelievable:
       "AIは写真らしいノイズ、構図、空気感を再現でき、見る人が期待するUFO写真の雰囲気を作りやすいためです。",
     howToCheck: ["細部の破綻や文字の不自然さを見る", "初出と生成文脈を確認する", "逆画像検索で出どころを探す"],
-    relatedTerms: ["画像加工", "逆画像検索", "初出確認"],
+    relatedTerms: [
+      { type: "fake", id: "image-editing" },
+      { type: "fake", id: "reverse-image-search" },
+      { type: "fake", id: "source-check" },
+    ],
   },
   {
     id: "ai-video",
@@ -213,7 +270,11 @@ export const saucerpediaFakes: SaucerpediaFake[] = [
     whyBelievable:
       "短尺動画では、形の崩れや物理的な不自然さに気づく前に印象だけが残りやすいためです。",
     howToCheck: ["物体や雲の形が時間で破綻しないか見る", "光や影の一貫性を確認する", "初出、制作意図、生成AI表記を探す"],
-    relatedTerms: ["CGI / CG映像", "動画加工", "初出確認"],
+    relatedTerms: [
+      { type: "fake", id: "cgi" },
+      { type: "fake", id: "video-editing" },
+      { type: "fake", id: "source-check" },
+    ],
   },
   {
     id: "source-check",
@@ -226,7 +287,11 @@ export const saucerpediaFakes: SaucerpediaFake[] = [
     quickRead:
       "初出確認は、UFO画像や動画が最初に投稿・公開された場所を探す検証方法です。再投稿や切り抜きでは説明が失われるため、最初の文脈を確認することが重要です。",
     howToCheck: ["最古の投稿日時を探す", "投稿者の説明や返信を見る", "ニュース化される前の原文脈を確認する"],
-    relatedTerms: ["逆画像検索", "EXIF情報", "切り抜き動画"],
+    relatedTerms: [
+      { type: "fake", id: "reverse-image-search" },
+      { type: "fake", id: "exif" },
+      { type: "fake", id: "clipped-video" },
+    ],
   },
   {
     id: "reverse-image-search",
@@ -238,7 +303,11 @@ export const saucerpediaFakes: SaucerpediaFake[] = [
     quickRead:
       "逆画像検索は、画像をもとに同じ画像や似た画像の過去の掲載例を探す方法です。UFO写真として拡散された画像が、実は古い素材、映画、アート、別事件の写真だったとわかることがあります。",
     howToCheck: ["画像検索サービスで同一画像を探す", "古い掲載日時を比較する", "トリミング前の画像や素材サイトを確認する"],
-    relatedTerms: ["初出確認", "合成写真", "画像加工"],
+    relatedTerms: [
+      { type: "fake", id: "source-check" },
+      { type: "fake", id: "composite-photo" },
+      { type: "fake", id: "image-editing" },
+    ],
   },
   {
     id: "exif",
@@ -251,6 +320,10 @@ export const saucerpediaFakes: SaucerpediaFake[] = [
     quickRead:
       "EXIF情報は、写真ファイルに含まれる撮影日時、機種、レンズ、位置情報、編集ソフトなどのメタデータです。残っていれば撮影条件の手がかりになりますが、削除や改変も可能です。",
     howToCheck: ["撮影日時や機種が説明と合うか確認する", "編集ソフトの痕跡を見る", "EXIFがない場合も断定せず他の情報と合わせる"],
-    relatedTerms: ["画像加工", "初出確認", "検証"],
+    relatedTerms: [
+      { type: "fake", id: "image-editing" },
+      { type: "fake", id: "source-check" },
+      { type: "term", id: "verification" },
+    ],
   },
 ];

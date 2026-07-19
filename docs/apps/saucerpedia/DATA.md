@@ -39,11 +39,11 @@
 - `data/saucerpedia/knowledge.ts` が全カテゴリを `{ type, id }` で索引化する。
 - `SaucerpediaEntityType`: `term`, `person`, `event`, `history`, `misidentification`, `fake`, `resource`, `motif`, `product`。
 - `SaucerpediaRelation`: `{ type, id, label? }`。表示名、カテゴリ、URL、概要は `resolveSaucerpediaRelation` で解決する。
-- 既存の `relatedTerms`, `relatedPeople`, `relatedEvents`, `relatedProducts` は、UIでは `getRelationsForEntity` を通じてIDベース関連へ正規化する。
-- URLは個別詳細ページではなく、カテゴリページ上の選択状態へ接続する。例: `/saucerpedia/terms?item=uap`。
+- 既存の `relatedTerms`, `relatedPeople`, `relatedEvents`, `relatedProducts` は、UIでは `getRelationsForEntity` を通じてIDベース関連へ正規化する。`misidentifications.ts` と `fakes.ts` は `relatedTerms` をIDベースの `SaucerpediaRelation[]` へ移行済み（文字列表記へ戻すと `verify:saucerpedia-knowledge` が失敗する）。残りのファイルも段階的に移行する。
+- 各項目は静的生成される個別詳細ページを持つ。例: `/saucerpedia/terms/uap`（`history` はカテゴリページ内のカードのみ）。旧 `?item=` 形式のURLは `next.config.mjs` の redirects で個別ページへ307リダイレクトされる。カテゴリページ内の選択状態は引き続き `?item=` を `history.replaceState` で反映する。
 - 外部プロダクトは `product` relation として `kinichi`, `kean`, `clark`, `ruppelt`, `yusuke` を定義する。
 - 検索結果と詳細内の関連カードは、このIDベース索引から表示名、カテゴリ、URL、概要を解決する。
-- 「出典・参考資料」パネルは、初期版では関連 `resource` と `product` を表示する。正式な外部出典URLは今後 `sources` フィールドを追加して扱う。
+- 「出典・参考資料」パネルは、`sources` フィールド（`{ label, url, publisher?, note? }`、`data/saucerpedia/types.ts`）の外部リンクを優先表示し、関連 `resource` と `product` を続けて表示する。`sources` のURLは実在確認済みの https のみ許可し、`verify:saucerpedia-knowledge` で検証される。
 - 形状はまだ Saucerpedia 内の独立カテゴリにしない。横断検索では `円盤型`, `球形`, `三角形` など最小限のローカル候補を表示し、詳細分類は Kinichi へ誘導する。
 - ハイネック分類系の用語カード（NL、DD、RV、CE1〜CE3、S-P表）は、略称を `aliases` に持つ正式な `term` として管理する。J・アレン・ハイネック、近接遭遇、代表事件とは相互参照させ、表示名文字列は `knowledge.ts` の索引でIDへ解決する。
 

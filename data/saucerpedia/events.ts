@@ -1,3 +1,5 @@
+import type { SaucerpediaSource } from "./types";
+
 export type SaucerpediaEvent = {
   id: string;
   name: string;
@@ -13,6 +15,7 @@ export type SaucerpediaEvent = {
   relatedPeople?: string[];
   relatedTerms?: string[];
   relatedShapes?: string[];
+  sources?: SaucerpediaSource[];
 };
 
 export const eventCategories = [

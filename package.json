@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "npm run verify:saucerpedia-knowledge",
     "build": "next build",
     "start": "next start",
     "deploy:prod": "node scripts/deploy-prod.mjs",
