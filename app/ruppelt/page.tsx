@@ -19,8 +19,10 @@ const statusDashboardOrder: StatusDashboardKey[] = [
   "unreviewed",
 ];
 // Legacy Vercel build guard compatibility marker: Ruppelt V2.0.
-const ruppeltOgpImage = `${siteUrl}/ogp-ruppelt-v30.jpg`;
-const ruppeltSocialUrl = `${siteUrl}/ruppelt?xcard=v30`;
+const ruppeltOgpImage = `${siteUrl}/ogp-ruppelt-v40.jpg`;
+const ruppeltSocialUrl = `${siteUrl}/ruppelt?xcard=v40`;
+const ruppeltDescription =
+  "PURSUE Release 01〜05の米政府UAP・UFO公開資料375件を日本語で検索。日本語資料説明375件、全文訳203件、動画120件、公開状況、公式資料リンクに対応。";
 
 function getStatusDashboardLabel(status: StatusDashboardKey) {
   return status === "unreviewed" ? "未判定" : priorDisclosureLabels[status];
@@ -38,14 +40,14 @@ function getFullTextRecordIds() {
 }
 
 export const metadata: Metadata = {
-  title: "Ruppelt V3.0 | Ruppelt V3.0 - PURSUE日本語インデックス",
-  description: "アメリカ政府UAP公開資料を、日本語でさくっと確認できる資料ブラウザです。",
+  title: "Ruppelt V4.0 | PURSUE日本語インデックス",
+  description: ruppeltDescription,
   alternates: {
     canonical: "/ruppelt",
   },
   openGraph: {
-    title: "Ruppelt V3.0 - PURSUE日本語インデックス",
-    description: "アメリカ政府UAP公開資料をスマホでさくっと確認。",
+    title: "Ruppelt V4.0 - PURSUE日本語インデックス",
+    description: ruppeltDescription,
     url: ruppeltSocialUrl,
     siteName: "UFO Lab Tokyo",
     images: [
@@ -53,7 +55,7 @@ export const metadata: Metadata = {
         url: ruppeltOgpImage,
         width: 1200,
         height: 630,
-        alt: "Ruppelt V3.0 - PURSUE日本語インデックス",
+        alt: "Ruppelt V4.0 - PURSUE日本語インデックス",
         type: "image/jpeg",
       },
     ],
@@ -61,12 +63,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ruppelt V3.0 - PURSUE日本語インデックス",
-    description: "アメリカ政府UAP公開資料をスマホでさくっと確認。",
+    title: "Ruppelt V4.0 - PURSUE日本語インデックス",
+    description: ruppeltDescription,
     images: [ruppeltOgpImage],
   },
   other: {
-    "twitter:image:alt": "Ruppelt V3.0 - PURSUE日本語インデックス",
+    "twitter:image:alt": "Ruppelt V4.0 - PURSUE日本語インデックス",
   },
 };
 
@@ -111,7 +113,7 @@ export default function RuppeltPage() {
           </div>
           <span className="sr-only">{siteConfig.shortName}</span>
         </div>
-        <h1>Ruppelt V3.0</h1>
+        <h1>Ruppelt V4.0</h1>
         <p className="tagline">PURSUE日本語インデックス</p>
         <p className="lead">アメリカ政府UAP公開資料をスマホでさくっと確認。</p>
         <p className="ruppelt-kean-note">

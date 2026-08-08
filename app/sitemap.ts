@@ -39,6 +39,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.88,
     },
     {
+      url: `${siteUrl}/ruppelt/videos`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.84,
+    },
+    {
       url: `${siteUrl}/kean`,
       lastModified,
       changeFrequency: "weekly",

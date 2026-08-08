@@ -28,6 +28,7 @@ function RecordCardComponent({
   onToggleSaved,
   onOpenDetail,
   onOpenPriorDisclosure,
+  videoPreviewEnabled = false,
   variant = "list",
 }: {
   record: PursueRecord;
@@ -38,6 +39,7 @@ function RecordCardComponent({
   onToggleSaved: (id: string) => void;
   onOpenDetail: (record: PursueRecord, initialTab?: DetailTab) => void;
   onOpenPriorDisclosure: (record: PursueRecord) => void;
+  videoPreviewEnabled?: boolean;
   variant?: RuppeltViewMode;
 }) {
   const [language, setLanguage] = useState<CardLanguage>("ja");
@@ -127,7 +129,7 @@ function RecordCardComponent({
             loading="lazy"
             onError={() => setThumbnailBroken(true)}
           />
-        ) : hasVideoPreview ? (
+        ) : hasVideoPreview && videoPreviewEnabled ? (
           <iframe
             src={videoEmbedUrl}
             title={`${getTitle(record)} 動画プレビュー`}
@@ -135,6 +137,10 @@ function RecordCardComponent({
             allow="fullscreen; picture-in-picture"
             allowFullScreen
           />
+        ) : hasVideoPreview ? (
+          <div className="ruppelt-card-thumbnail-fallback">
+            <span>▶ 動画プレビュー</span>
+          </div>
         ) : (
           <div className="ruppelt-card-thumbnail-fallback">
             <span>Preview not available</span>

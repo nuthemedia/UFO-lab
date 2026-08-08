@@ -1,0 +1,299 @@
+{
+  "generatedAt": "2026-08-08T00:20:38.617Z",
+  "releaseId": "release_05",
+  "sourceRepo": "abigailhaddad/ufo-releases",
+  "licenseStatus": "unverified_accepted",
+  "importedCount": 17,
+  "skippedCount": 24,
+  "imported": [
+    {
+      "recordId": "pursue-0335",
+      "githubId": 345,
+      "rawTextChars": 4114021,
+      "normalizedTextChars": 79934,
+      "title": "DOW-UAP-D098, Film Analysis of Unidentified Objects, 1953"
+    },
+    {
+      "recordId": "pursue-0344",
+      "githubId": 354,
+      "rawTextChars": 12842,
+      "normalizedTextChars": 7668,
+      "title": "CIA-UAP-D022, Unidentified Flying Object Reported near Puerto Rico, 1965"
+    },
+    {
+      "recordId": "pursue-0345",
+      "githubId": 355,
+      "rawTextChars": 1850,
+      "normalizedTextChars": 1312,
+      "title": "CIA-UAP-D023, Briefing Notes for Mr. Walter Elder"
+    },
+    {
+      "recordId": "pursue-0346",
+      "githubId": 356,
+      "rawTextChars": 4767,
+      "normalizedTextChars": 1539,
+      "title": "DOS-UAP-D001, Diplomatic Cable, Brazil, November 14, 1963"
+    },
+    {
+      "recordId": "pursue-0347",
+      "githubId": 357,
+      "rawTextChars": 4283,
+      "normalizedTextChars": 2136,
+      "title": "DOS-UAP-D002, Diplomatic Cable, Brazil, November 20, 1963"
+    },
+    {
+      "recordId": "pursue-0348",
+      "githubId": 358,
+      "rawTextChars": 12738,
+      "normalizedTextChars": 11392,
+      "title": "DOW-UAP-D099, Intelligence Review of “Ghost Rocket” Incidents, 1947"
+    },
+    {
+      "recordId": "pursue-0349",
+      "githubId": 359,
+      "rawTextChars": 412198,
+      "normalizedTextChars": 177355,
+      "title": "DOW-UAP-D100, Air Materiel Command Report on Unidentified Flying Objects, 1947-1948"
+    },
+    {
+      "recordId": "pursue-0350",
+      "githubId": 360,
+      "rawTextChars": 40206,
+      "normalizedTextChars": 14697,
+      "title": "DOW-UAP-D101, Intelligence Information Report, Unresolved UAP Report, Gulf of Oman, 2021"
+    },
+    {
+      "recordId": "pursue-0366",
+      "githubId": 376,
+      "rawTextChars": 736,
+      "normalizedTextChars": 545,
+      "title": "EOP-UAP-D001, NASC Inquiry into Bahia, Brazil Incident, November 13, 1963"
+    },
+    {
+      "recordId": "pursue-0367",
+      "githubId": 377,
+      "rawTextChars": 7163,
+      "normalizedTextChars": 5272,
+      "title": "FBI-UAP-D024, FD-302, “Airborne Lights and Triangle,” 2002, 2023-2024"
+    },
+    {
+      "recordId": "pursue-0368",
+      "githubId": 378,
+      "rawTextChars": 6378,
+      "normalizedTextChars": 4562,
+      "title": "FBI-UAP-D026, FD-302, “Dark Translucent Triangle,” 2023"
+    },
+    {
+      "recordId": "pursue-0369",
+      "githubId": 379,
+      "rawTextChars": 4521,
+      "normalizedTextChars": 3382,
+      "title": "FBI-UAP-D028, FD-302, “Dark Triangle with Lights,” 2011"
+    },
+    {
+      "recordId": "pursue-0370",
+      "githubId": 380,
+      "rawTextChars": 5502,
+      "normalizedTextChars": 3965,
+      "title": "FBI-UAP-D030, FD-302, “Large Triangle with Red Lights,” 2023"
+    },
+    {
+      "recordId": "pursue-0371",
+      "githubId": 381,
+      "rawTextChars": 3592,
+      "normalizedTextChars": 2353,
+      "title": "FBI-UAP-D032, FD-302, “Slow-moving Objects,” 2026"
+    },
+    {
+      "recordId": "pursue-0372",
+      "githubId": 382,
+      "rawTextChars": 3283,
+      "normalizedTextChars": 2618,
+      "title": "FBI-UAP-D033, FD-302, “Thermally Elevated Aerial Object,” 2026"
+    },
+    {
+      "recordId": "pursue-0373",
+      "githubId": 383,
+      "rawTextChars": 8339,
+      "normalizedTextChars": 6349,
+      "title": "FBI-UAP-D037, FD-302, “Multiple Red Lights,” 2026"
+    },
+    {
+      "recordId": "pursue-0374",
+      "githubId": 384,
+      "rawTextChars": 3337,
+      "normalizedTextChars": 2194,
+      "title": "FBI-UAP-D040, FD-302, “Multiple Red Lights,” 2026"
+    }
+  ],
+  "skipped": [
+    {
+      "recordId": "pursue-0336",
+      "githubId": 346,
+      "type": "IMG",
+      "reason": "no_upstream_text",
+      "title": "FBI-UAP-D025, Digital Rendering, “Airborne Triangle,” 2002"
+    },
+    {
+      "recordId": "pursue-0337",
+      "githubId": 347,
+      "type": "PDF",
+      "reason": "no_upstream_text",
+      "title": "FBI-UAP-D027, Digital Rendering, “Dark Translucent Triangle,” 2023"
+    },
+    {
+      "recordId": "pursue-0338",
+      "githubId": 348,
+      "type": "IMG",
+      "reason": "no_upstream_text",
+      "title": "FBI-UAP-D029, Digital Rendering, “Dark Triangle with Lights,” 2011"
+    },
+    {
+      "recordId": "pursue-0339",
+      "githubId": 349,
+      "type": "IMG",
+      "reason": "no_upstream_text",
+      "title": "FBI-UAP-D031, Digital Rendering, “Large Triangle with Red Lights,” 2023"
+    },
+    {
+      "recordId": "pursue-0340",
+      "githubId": 350,
+      "type": "PDF",
+      "reason": "no_upstream_text",
+      "title": "FBI-UAP-D038, Digital Rendering 1, “Multiple Red Lights,” 2026"
+    },
+    {
+      "recordId": "pursue-0341",
+      "githubId": 351,
+      "type": "PDF",
+      "reason": "no_upstream_text",
+      "title": "FBI-UAP-D039, Digital Rendering 2, “Multiple Red Lights,” 2026"
+    },
+    {
+      "recordId": "pursue-0342",
+      "githubId": 352,
+      "type": "PDF",
+      "reason": "no_upstream_text",
+      "title": "FBI-UAP-D041, Digital Rendering 1, “Multiple Red Lights,” 2026"
+    },
+    {
+      "recordId": "pursue-0343",
+      "githubId": 353,
+      "type": "PDF",
+      "reason": "no_upstream_text",
+      "title": "FBI-UAP-D042, Digital Rendering 2, “Multiple Red Lights,” 2026"
+    },
+    {
+      "recordId": "pursue-0351",
+      "githubId": 361,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR117, Unresolved UAP Report, Gulf of Oman, 2021"
+    },
+    {
+      "recordId": "pursue-0352",
+      "githubId": 362,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR118, Unresolved UAP Report, Gulf of Oman, 2021"
+    },
+    {
+      "recordId": "pursue-0353",
+      "githubId": 363,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR119, Unresolved UAP Report, Gulf of Oman, 2021"
+    },
+    {
+      "recordId": "pursue-0354",
+      "githubId": 364,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR120, Unresolved UAP Report, Gulf of Oman, 2021"
+    },
+    {
+      "recordId": "pursue-0355",
+      "githubId": 365,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR121, Unresolved UAP Report, Gulf of Oman, 2021"
+    },
+    {
+      "recordId": "pursue-0356",
+      "githubId": 366,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR122, Unresolved UAP Report, Gulf of Oman, 2021"
+    },
+    {
+      "recordId": "pursue-0357",
+      "githubId": 367,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR123, Unresolved UAP Report, Pacific Ocean, 2019"
+    },
+    {
+      "recordId": "pursue-0358",
+      "githubId": 368,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR124, Unresolved UAP Report, Pacific Ocean, 2019"
+    },
+    {
+      "recordId": "pursue-0359",
+      "githubId": 369,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR125, Unresolved UAP Report, Pacific Ocean, 2019"
+    },
+    {
+      "recordId": "pursue-0360",
+      "githubId": 370,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR126, Unresolved UAP Report, Pacific Ocean, 2019"
+    },
+    {
+      "recordId": "pursue-0361",
+      "githubId": 371,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR127, Unresolved UAP Report, Pacific Ocean, 2019"
+    },
+    {
+      "recordId": "pursue-0362",
+      "githubId": 372,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR134, Unresolved UAP Report, Middle East, 2025"
+    },
+    {
+      "recordId": "pursue-0363",
+      "githubId": 373,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR136, Unresolved UAP Report, Middle East, 2023"
+    },
+    {
+      "recordId": "pursue-0364",
+      "githubId": 374,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR142, Unresolved UAP Report, Middle East, 2025"
+    },
+    {
+      "recordId": "pursue-0365",
+      "githubId": 375,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR149, Unresolved UAP Report, Middle East, 2023"
+    },
+    {
+      "recordId": "pursue-0375",
+      "githubId": 385,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "FBI-UAP-PR007, “Slow-moving Objects,” 2026"
+    }
+  ]
+}

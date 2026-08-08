@@ -75,6 +75,21 @@ function toReadableJapaneseText(text: string) {
       return "";
     }
 
+    if (
+      /^[-—\s]*分割\s*\d+\/\d+(?:\s*です[。.]?|\s*[-—]\s*翻訳(?:（全文）)?)?\s*[-—\s]*$/.test(
+        trimmed,
+      ) ||
+      /^[-—\s]*日本語(?:翻訳|訳)\s*[（(][^）)]*(?:原文|ページ|OCR|黒塗り|ヘッダ|保持)[^）)]*[）)]\s*[:：]?\s*[-—\s]*$/.test(
+        trimmed,
+      ) ||
+      /OCR本文.{0,80}(?:見当たりません|含まれていない|貼り付けてください|貼ってください|送ってください)/.test(
+        trimmed,
+      ) ||
+      /受け取り次第.{0,80}翻訳/.test(trimmed)
+    ) {
+      return "";
+    }
+
     if (/^https?:\/\/\S+$/i.test(trimmed)) {
       return "";
     }

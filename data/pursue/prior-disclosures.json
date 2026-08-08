@@ -5830,5 +5830,2219 @@
     "ruppeltVerified": false,
     "manualReviewRequired": true,
     "reviewerNoteJa": "Release 04向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0335": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同一資料または同題・同内容の資料がPURSUE以前からアーカイブや研究資料で参照可能です。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-D098_Film-Analysis-of-Unidentified-Objects_1953.pdf",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "National Archives UAP record groups",
+        "url": "https://www.archives.gov/research/topics/uaps/rg-collections",
+        "noteJa": "Montana（1950年）とUtah（1952年）のフィルムおよびProject Blue Book関連資料は、NARAのUAP資料群として以前から案内されています。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nara",
+        "sourceUrl": "https://www.archives.gov/research/topics/uaps/rg-collections",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0336": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "公式資料説明では、PURSUEを支援する視覚資料として2026年に作成されたデジタルレンダリングです。",
+      "PURSUE以前の同一画像または同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D025_Digital-Rendering_Airborne-Triangle_2002.jpg",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "manual_review",
+        "label": "PURSUE file review",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D025_Digital-Rendering_Airborne-Triangle_2002.jpg",
+        "noteJa": "公式資料名・文書種別・事件情報を照合し、PURSUE以前の同一ファイル公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D025_Digital-Rendering_Airborne-Triangle_2002.jpg",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0337": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "公式資料説明では、PURSUEを支援する視覚資料として2026年に作成されたデジタルレンダリングです。",
+      "PURSUE以前の同一画像または同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D027_Digital-Rendering_Dark-Translucent-Triangle_2023.pdf",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "manual_review",
+        "label": "PURSUE file review",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D027_Digital-Rendering_Dark-Translucent-Triangle_2023.pdf",
+        "noteJa": "公式資料名・文書種別・事件情報を照合し、PURSUE以前の同一ファイル公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D027_Digital-Rendering_Dark-Translucent-Triangle_2023.pdf",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0338": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "公式資料説明では、PURSUEを支援する視覚資料として2026年に作成されたデジタルレンダリングです。",
+      "PURSUE以前の同一画像または同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D029_Digital-Rendering_Dark-Triangle-with-Lights_2011.jpg",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "manual_review",
+        "label": "PURSUE file review",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D029_Digital-Rendering_Dark-Triangle-with-Lights_2011.jpg",
+        "noteJa": "公式資料名・文書種別・事件情報を照合し、PURSUE以前の同一ファイル公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D029_Digital-Rendering_Dark-Triangle-with-Lights_2011.jpg",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0339": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "公式資料説明では、PURSUEを支援する視覚資料として2026年に作成されたデジタルレンダリングです。",
+      "PURSUE以前の同一画像または同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D031_Digital-Rendering_Large-Triangle-with-Red-Lights_2023.jpg",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "manual_review",
+        "label": "PURSUE file review",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D031_Digital-Rendering_Large-Triangle-with-Red-Lights_2023.jpg",
+        "noteJa": "公式資料名・文書種別・事件情報を照合し、PURSUE以前の同一ファイル公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D031_Digital-Rendering_Large-Triangle-with-Red-Lights_2023.jpg",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0340": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "公式資料説明では、PURSUEを支援する視覚資料として2026年に作成されたデジタルレンダリングです。",
+      "PURSUE以前の同一画像または同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D038_Digital-Rendering-1_Multiple-Red-Lights_2026.pdf",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "manual_review",
+        "label": "PURSUE file review",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D038_Digital-Rendering-1_Multiple-Red-Lights_2026.pdf",
+        "noteJa": "公式資料名・文書種別・事件情報を照合し、PURSUE以前の同一ファイル公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D038_Digital-Rendering-1_Multiple-Red-Lights_2026.pdf",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0341": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "公式資料説明では、PURSUEを支援する視覚資料として2026年に作成されたデジタルレンダリングです。",
+      "PURSUE以前の同一画像または同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D039_Digital-Rendering-2_Multiple-Red-Lights_2026.pdf",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "manual_review",
+        "label": "PURSUE file review",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D039_Digital-Rendering-2_Multiple-Red-Lights_2026.pdf",
+        "noteJa": "公式資料名・文書種別・事件情報を照合し、PURSUE以前の同一ファイル公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D039_Digital-Rendering-2_Multiple-Red-Lights_2026.pdf",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0342": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "公式資料説明では、PURSUEを支援する視覚資料として2026年に作成されたデジタルレンダリングです。",
+      "PURSUE以前の同一画像または同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D041_Digital-Rendering-1_Multiple-Red-Lights_2026.pdf",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "manual_review",
+        "label": "PURSUE file review",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D041_Digital-Rendering-1_Multiple-Red-Lights_2026.pdf",
+        "noteJa": "公式資料名・文書種別・事件情報を照合し、PURSUE以前の同一ファイル公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D041_Digital-Rendering-1_Multiple-Red-Lights_2026.pdf",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0343": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "公式資料説明では、PURSUEを支援する視覚資料として2026年に作成されたデジタルレンダリングです。",
+      "PURSUE以前の同一画像または同一ファイル公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D042_Digital-Rendering-2_Multiple-Red-Lights_2026.pdf",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "manual_review",
+        "label": "PURSUE file review",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D042_Digital-Rendering-2_Multiple-Red-Lights_2026.pdf",
+        "noteJa": "公式資料名・文書種別・事件情報を照合し、PURSUE以前の同一ファイル公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D042_Digital-Rendering-2_Multiple-Red-Lights_2026.pdf",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0344": {
+    "status": "unknown",
+    "labelJa": "判定不能",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "関連する歴史資料群は公開されていますが、PURSUE版と同一のファイルが以前から公開されていたか確認できませんでした。",
+      "直接一致を確認できないため、初公開・既公開の断定を避けています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/CIA-UAP-D022_Unidentified-Flying-Object-Reported-near-Puerto-Rico_1965.pdf",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "manual_review",
+        "label": "CIA Reading Room UFO collection",
+        "url": "https://www.cia.gov/readingroom/collection/ufos-fact-or-fiction",
+        "noteJa": "関連資料群を照合しましたが、同一ファイルへの直接リンクは確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "cia_crest",
+        "sourceUrl": "https://www.cia.gov/readingroom/collection/ufos-fact-or-fiction",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0345": {
+    "status": "unknown",
+    "labelJa": "判定不能",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "関連する歴史資料群は公開されていますが、PURSUE版と同一のファイルが以前から公開されていたか確認できませんでした。",
+      "直接一致を確認できないため、初公開・既公開の断定を避けています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/CIA-UAP-D023_Briefing-Notes-for-Mr-Walter-Elder.pdf",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "manual_review",
+        "label": "CIA Reading Room UFO collection",
+        "url": "https://www.cia.gov/readingroom/collection/ufos-fact-or-fiction",
+        "noteJa": "関連資料群を照合しましたが、同一ファイルへの直接リンクは確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "cia_crest",
+        "sourceUrl": "https://www.cia.gov/readingroom/collection/ufos-fact-or-fiction",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0346": {
+    "status": "unknown",
+    "labelJa": "判定不能",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "関連する歴史資料群は公開されていますが、PURSUE版と同一のファイルが以前から公開されていたか確認できませんでした。",
+      "直接一致を確認できないため、初公開・既公開の断定を避けています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOS-UAP-D001_Diplomatic-Cable_Brazil_November-14-1963.pdf",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "manual_review",
+        "label": "National Archives UAP record groups",
+        "url": "https://www.archives.gov/research/topics/uaps/rg-collections",
+        "noteJa": "関連資料群を照合しましたが、同一ファイルへの直接リンクは確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nara",
+        "sourceUrl": "https://www.archives.gov/research/topics/uaps/rg-collections",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0347": {
+    "status": "unknown",
+    "labelJa": "判定不能",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "関連する歴史資料群は公開されていますが、PURSUE版と同一のファイルが以前から公開されていたか確認できませんでした。",
+      "直接一致を確認できないため、初公開・既公開の断定を避けています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOS-UAP-D002_Diplomatic-Cable_Brazil_November-20-1963.pdf",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "manual_review",
+        "label": "National Archives UAP record groups",
+        "url": "https://www.archives.gov/research/topics/uaps/rg-collections",
+        "noteJa": "関連資料群を照合しましたが、同一ファイルへの直接リンクは確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nara",
+        "sourceUrl": "https://www.archives.gov/research/topics/uaps/rg-collections",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0348": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同一資料または同題・同内容の資料がPURSUE以前からアーカイブや研究資料で参照可能です。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-D099_Intelligence-Review-of-Ghost-Rocket-Incidents_1947.pdf",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "Project 1947 Ghost Rocket chronology",
+        "url": "https://www.project1947.com/gr/grchron3.htm",
+        "noteJa": "1947年1月のIntelligence Review掲載「Ghost Rockets Over Scandinavia」は、PURSUE以前から同題・同内容で参照可能でした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "research_site",
+        "sourceUrl": "https://www.project1947.com/gr/grchron3.htm",
+        "role": "research_analysis",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0349": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同一資料または同題・同内容の資料がPURSUE以前からアーカイブや研究資料で参照可能です。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-D100_Air-Materiel-Command-Report-on-UFOs_1947-1948.pdf",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "National Archives UAP record groups",
+        "url": "https://www.archives.gov/research/topics/uaps/rg-collections",
+        "noteJa": "Project SignとAir Materiel Commandの1947〜1948年資料は、NARAのUAP・Project Blue Book関連資料群として既公開です。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nara",
+        "sourceUrl": "https://www.archives.gov/research/topics/uaps/rg-collections",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0350": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-D101_IIR_Unresolved-UAP-Report-Gulf-of-Oman_2021.pdf",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "manual_review",
+        "label": "PURSUE file review",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-D101_IIR_Unresolved-UAP-Report-Gulf-of-Oman_2021.pdf",
+        "noteJa": "公式資料名・文書種別・事件情報を照合し、PURSUE以前の同一ファイル公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-D101_IIR_Unresolved-UAP-Report-Gulf-of-Oman_2021.pdf",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0351": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1017793",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS official video",
+        "url": "https://www.dvidshub.net/video/1017793",
+        "noteJa": "DVIDSの公式動画ページと公開資料名を照合し、PURSUE以前の同一動画公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/video/1017793",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0352": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1017795",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS official video",
+        "url": "https://www.dvidshub.net/video/1017795",
+        "noteJa": "DVIDSの公式動画ページと公開資料名を照合し、PURSUE以前の同一動画公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/video/1017795",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0353": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1017798",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS official video",
+        "url": "https://www.dvidshub.net/video/1017798",
+        "noteJa": "DVIDSの公式動画ページと公開資料名を照合し、PURSUE以前の同一動画公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/video/1017798",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0354": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1017800",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS official video",
+        "url": "https://www.dvidshub.net/video/1017800",
+        "noteJa": "DVIDSの公式動画ページと公開資料名を照合し、PURSUE以前の同一動画公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/video/1017800",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0355": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1017802",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS official video",
+        "url": "https://www.dvidshub.net/video/1017802",
+        "noteJa": "DVIDSの公式動画ページと公開資料名を照合し、PURSUE以前の同一動画公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/video/1017802",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0356": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1017803",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS official video",
+        "url": "https://www.dvidshub.net/video/1017803",
+        "noteJa": "DVIDSの公式動画ページと公開資料名を照合し、PURSUE以前の同一動画公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/video/1017803",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0357": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1017805",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS official video",
+        "url": "https://www.dvidshub.net/video/1017805",
+        "noteJa": "DVIDSの公式動画ページと公開資料名を照合し、PURSUE以前の同一動画公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/video/1017805",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0358": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1017806",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS official video",
+        "url": "https://www.dvidshub.net/video/1017806",
+        "noteJa": "DVIDSの公式動画ページと公開資料名を照合し、PURSUE以前の同一動画公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/video/1017806",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0359": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1017788",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS official video",
+        "url": "https://www.dvidshub.net/video/1017788",
+        "noteJa": "DVIDSの公式動画ページと公開資料名を照合し、PURSUE以前の同一動画公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/video/1017788",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0360": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1017790",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS official video",
+        "url": "https://www.dvidshub.net/video/1017790",
+        "noteJa": "DVIDSの公式動画ページと公開資料名を照合し、PURSUE以前の同一動画公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/video/1017790",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0361": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1017791",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS official video",
+        "url": "https://www.dvidshub.net/video/1017791",
+        "noteJa": "DVIDSの公式動画ページと公開資料名を照合し、PURSUE以前の同一動画公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/video/1017791",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0362": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1017792",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS official video",
+        "url": "https://www.dvidshub.net/video/1017792",
+        "noteJa": "DVIDSの公式動画ページと公開資料名を照合し、PURSUE以前の同一動画公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/video/1017792",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0363": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1017796",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS official video",
+        "url": "https://www.dvidshub.net/video/1017796",
+        "noteJa": "DVIDSの公式動画ページと公開資料名を照合し、PURSUE以前の同一動画公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/video/1017796",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0364": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1017797",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS official video",
+        "url": "https://www.dvidshub.net/video/1017797",
+        "noteJa": "DVIDSの公式動画ページと公開資料名を照合し、PURSUE以前の同一動画公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/video/1017797",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0365": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1017799",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS official video",
+        "url": "https://www.dvidshub.net/video/1017799",
+        "noteJa": "DVIDSの公式動画ページと公開資料名を照合し、PURSUE以前の同一動画公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/video/1017799",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0366": {
+    "status": "unknown",
+    "labelJa": "判定不能",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "関連する歴史資料群は公開されていますが、PURSUE版と同一のファイルが以前から公開されていたか確認できませんでした。",
+      "直接一致を確認できないため、初公開・既公開の断定を避けています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/EOP-UAP-D001_NASC-Inquiry-into-Bahia-Brazil-Incident_November-13-1963.pdf",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "manual_review",
+        "label": "National Archives UAP record groups",
+        "url": "https://www.archives.gov/research/topics/uaps/rg-collections",
+        "noteJa": "関連資料群を照合しましたが、同一ファイルへの直接リンクは確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nara",
+        "sourceUrl": "https://www.archives.gov/research/topics/uaps/rg-collections",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0367": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D024_FD-302_Airborne-Lights-and-Triangle_2002_2023-2024.pdf",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "manual_review",
+        "label": "PURSUE file review",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D024_FD-302_Airborne-Lights-and-Triangle_2002_2023-2024.pdf",
+        "noteJa": "公式資料名・文書種別・事件情報を照合し、PURSUE以前の同一ファイル公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D024_FD-302_Airborne-Lights-and-Triangle_2002_2023-2024.pdf",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0368": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D026_FD-302_Dark-Translucent-Triangle_2023.pdf",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "manual_review",
+        "label": "PURSUE file review",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D026_FD-302_Dark-Translucent-Triangle_2023.pdf",
+        "noteJa": "公式資料名・文書種別・事件情報を照合し、PURSUE以前の同一ファイル公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D026_FD-302_Dark-Translucent-Triangle_2023.pdf",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0369": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D028_FD-302_Dark-Triangle-with-Lights_2011.pdf",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "manual_review",
+        "label": "PURSUE file review",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D028_FD-302_Dark-Triangle-with-Lights_2011.pdf",
+        "noteJa": "公式資料名・文書種別・事件情報を照合し、PURSUE以前の同一ファイル公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D028_FD-302_Dark-Triangle-with-Lights_2011.pdf",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0370": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D030_FD-302_Large-Triangle-with-Red-Lights_2023.pdf",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "manual_review",
+        "label": "PURSUE file review",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D030_FD-302_Large-Triangle-with-Red-Lights_2023.pdf",
+        "noteJa": "公式資料名・文書種別・事件情報を照合し、PURSUE以前の同一ファイル公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D030_FD-302_Large-Triangle-with-Red-Lights_2023.pdf",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0371": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D032_FD-302_Slow-moving-Objects_2026.pdf",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "manual_review",
+        "label": "PURSUE file review",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D032_FD-302_Slow-moving-Objects_2026.pdf",
+        "noteJa": "公式資料名・文書種別・事件情報を照合し、PURSUE以前の同一ファイル公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D032_FD-302_Slow-moving-Objects_2026.pdf",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0372": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D033_FD-302_Thermally-Elevated-Aerial-Object_2026.pdf",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "manual_review",
+        "label": "PURSUE file review",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D033_FD-302_Thermally-Elevated-Aerial-Object_2026.pdf",
+        "noteJa": "公式資料名・文書種別・事件情報を照合し、PURSUE以前の同一ファイル公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D033_FD-302_Thermally-Elevated-Aerial-Object_2026.pdf",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0373": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D037_FD-302_Multiple-Red-Lights_2026.pdf",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "manual_review",
+        "label": "PURSUE file review",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D037_FD-302_Multiple-Red-Lights_2026.pdf",
+        "noteJa": "公式資料名・文書種別・事件情報を照合し、PURSUE以前の同一ファイル公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D037_FD-302_Multiple-Red-Lights_2026.pdf",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0374": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D040_FD-302_Multiple-Red-Lights_2026.pdf",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "manual_review",
+        "label": "PURSUE file review",
+        "url": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D040_FD-302_Multiple-Red-Lights_2026.pdf",
+        "noteJa": "公式資料名・文書種別・事件情報を照合し、PURSUE以前の同一ファイル公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D040_FD-302_Multiple-Red-Lights_2026.pdf",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0375": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1017801",
+        "noteJa": "PURSUE Release 05の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS official video",
+        "url": "https://www.dvidshub.net/video/1017801",
+        "noteJa": "DVIDSの公式動画ページと公開資料名を照合し、PURSUE以前の同一動画公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/video/1017801",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-08-08",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
   }
 }

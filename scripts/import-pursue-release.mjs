@@ -5,6 +5,12 @@ const rootDir = resolve(process.cwd());
 const recordsPath = resolve(rootDir, "data/pursue/pursue-records.json");
 const releaseDefinitions = [
   {
+    id: "release_05",
+    date: "8/7/26",
+    number: "5",
+    matchers: ["8/7", "august 7"],
+  },
+  {
     id: "release_04",
     date: "7/10/26",
     number: "4",
@@ -149,7 +155,52 @@ function makeRecord(row, headers, id) {
   };
 }
 
-async function loadCsvText(csvUrl) {
+function escapeCsvCell(value) {
+  const text = cleanValue(value);
+  return /[",\n\r]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text;
+}
+
+function mirrorJsonToCsv(records, releaseDate) {
+  const headers = [
+    "Title",
+    "Release Date",
+    "Agency",
+    "Incident Date",
+    "Incident Location",
+    "Type",
+    "Description Blurb",
+    "Image VIRIN",
+    "DVIDS Video ID",
+    "PDF | Image Link",
+    "Modal Image",
+  ];
+  const rows = records
+    .filter((record) => cleanValue(record.releaseDate) === releaseDate)
+    .map((record) => [
+      record.title,
+      record.releaseDate,
+      record.agency,
+      record.incidentDate,
+      record.incidentLocation,
+      record.type,
+      record.description,
+      "",
+      record.dvidsVideoId,
+      record.fileUrl,
+      record.thumbnailUrl,
+    ]);
+
+  return [headers, ...rows].map((row) => row.map(escapeCsvCell).join(",")).join("\n");
+}
+
+async function loadCsvText(csvUrl, releaseDate) {
+  const mirrorInputPath = readArg("--mirror-input");
+
+  if (mirrorInputPath) {
+    const mirrorRecords = JSON.parse(await readFile(resolve(rootDir, mirrorInputPath), "utf8"));
+    return mirrorJsonToCsv(mirrorRecords, releaseDate);
+  }
+
   const inputPath = readArg("--input");
 
   if (inputPath) {
@@ -183,7 +234,7 @@ async function loadCsvText(csvUrl) {
   return csvText;
 }
 
-const requestedReleaseId = cleanValue(readArg("--release-id", "release_04"));
+const requestedReleaseId = cleanValue(readArg("--release-id", "release_05"));
 const releaseDefinition = releaseDefinitions.find((item) => item.id === requestedReleaseId);
 
 if (!releaseDefinition) {
@@ -193,7 +244,7 @@ if (!releaseDefinition) {
 const releaseDate = cleanValue(readArg("--release-date", releaseDefinition.date));
 const defaultCsvUrl = `https://www.war.gov/Portals/1/Interactive/2026/UFO/uap-data.csv?release=${releaseDefinition.number}`;
 const csvUrl = readArg("--url", defaultCsvUrl);
-const csvText = (await loadCsvText(csvUrl)).replace(/^\uFEFF/, "");
+const csvText = (await loadCsvText(csvUrl, releaseDate)).replace(/^\uFEFF/, "");
 const rows = parseCSV(csvText).filter((row) => row.some((cell) => cleanValue(cell)));
 const headers = makeHeaderLookup(rows[0] || []);
 const sourceRows = rows.slice(1).filter((row) => getCell(row, headers, "Release Date") === releaseDate);

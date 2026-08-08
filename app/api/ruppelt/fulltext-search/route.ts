@@ -227,7 +227,7 @@ export async function GET(request: Request) {
         prefix: boolean;
         fuzzy?: number;
         boost: Record<string, number>;
-        combineWith: "OR";
+        combineWith: "AND";
       } = {
         prefix: true,
         boost: {
@@ -236,7 +236,7 @@ export async function GET(request: Request) {
           fullTextJa: 1.5,
           ocrTextEn: 1.2,
         },
-        combineWith: "OR",
+        combineWith: "AND",
       };
 
       if (query.length >= 5) {

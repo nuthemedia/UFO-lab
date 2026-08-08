@@ -11,3 +11,7 @@ The app helps users:
 - Read available Japanese full-text translations without treating machine translation as an official source.
 
 The official PURSUE metadata and files remain the source of truth.
+
+## Current Release
+
+Ruppelt V4.0 covers PURSUE Releases 01–05: 375 records, 203 Japanese full-text translations, and 120 official videos.

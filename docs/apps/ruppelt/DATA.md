@@ -13,11 +13,14 @@ Data rules:
 
 Current translation state:
 
-- Japanese full-text translations are available for 186 records, including 41 Release 03 records and 12 Release 04 records.
+- Japanese full-text translations are available for 203 records, including 41 Release 03 records, 12 Release 04 records, and 17 Release 05 records.
 - Release 03 records are included in the lightweight index with Japanese source-field translations.
 - Release 03 includes Japanese full-text translations for 41 OCR-backed records. The remaining 11 OCR-backed giant records are intentionally kept as OCR-search-only / summary-first records rather than full Japanese translations.
 - Records without full-text data should be described as `全文OCR未取得`, not as missing official source data.
 - Machine translations must be labeled as machine translated and unreviewed unless review status says otherwise.
+- Japanese full-text assets must contain document text only. Do not store model preambles, translation instructions, requests for missing input, or standalone labels such as `日本語訳` in `fullTextJa`.
+- Preserve document structure that belongs to the source, including page markers, redaction markers, classification labels, names, dates, file numbers, and explicit OCR uncertainty.
+- Audit translation completeness against the source OCR. A record with fewer than 8 Japanese characters per 100 source Latin letters is a conservative retranslation candidate and must not be treated as a completed Japanese full-text translation without review.
 
 Release 03 OCR candidate source:
 
@@ -74,6 +77,34 @@ Release 04 public-disclosure review:
 - Historical documents use archive/catalog matches with medium confidence. NASA images and audio use `partial` when the source mission material is public but the exact PURSUE package is not fully matched.
 - Recent DOW sensor videos and recent incident reports use `first_time_public` only with low confidence when no prior same-file publication is found.
 - All Release 04 classifications remain `manualReviewRequired: true` and must expose evidence links in the detail panel.
+
+Release 05 metadata:
+
+- Release 05 was published on August 7, 2026 and adds 41 records: 22 PDFs, 16 videos, and 3 images. The complete index grows from 334 to 375 records and the video viewer grows from 104 to 120 records.
+- The official source is `https://www.war.gov/Portals/1/Interactive/2026/UFO/uap-data.csv?release=5`; the official page is `https://www.war.gov/UFO/?releaseDate=Release+05&release=05`.
+- When war.gov blocks command-line CSV downloads, the machine-readable mirror at `abigailhaddad/ufo-releases` may transport the matching official fields only after all 41 titles and official URLs are checked against the official page.
+- Release 05 includes Japanese translations of the official title, release, agency, location, type, and description fields. It does not add independent tags, summaries, or interpretive metadata to the card index.
+
+Release 05 OCR and translation:
+
+- `abigailhaddad/ufo-releases` maps all 41 Release 05 records and provides OCR/extracted text for 17 PDF records. The remaining 24 image/video/OCR-missing records stay metadata-search-only.
+- Release 05 OCR is stored under the user's existing acceptance of the undeclared upstream license, with `unverified_accepted` provenance and the official war.gov file retained as the source of truth.
+- Use `scripts/audit-pursue-release-ocr-source.mjs --release-id release_05` for coverage checks and `scripts/import-pursue-release-ocr-from-abigail.mjs --release-id release_05 --accept-unverified-license` for the accepted import.
+- Normalize pathological horizontal whitespace before search indexing and machine translation. Preserve page markers, redaction markers, names, dates, document numbers, and OCR uncertainty.
+- The 17 normalized OCR texts have machine-generated Japanese full-text translations and Japanese/English summaries under the existing 250,000-character processing limit. They remain marked machine-generated and unreviewed.
+- Do not place OCR or Japanese full text in `data/pursue/pursue-records.json`; read it through shared bundles and document APIs.
+- Audit all Japanese full-text translations against their source OCR. A Japanese-character count below 8% of the source Latin-character count, or an AI input request/process response, requires retranslation.
+- Save retranslation output only after it passes the quality check; otherwise preserve the existing file and report the failure.
+- Remove translation headings and model process notes from the readable body while preserving page markers, redactions, classification labels, `REDACTED`, `ILLEGIBLE`, and explicit OCR uncertainty.
+- Store the reproducible audit in `data/pursue/pursue-translation-quality-audit.json`.
+
+Release 05 public-disclosure review:
+
+- Search for an existing Release 05 classification dataset before applying Ruppelt review. If no equivalent of the Release 01 external audit exists, classify all 41 records as provisional Ruppelt review data.
+- Use direct archive or catalog links when available. A generic search page alone is not sufficient evidence for `previously_public` or `partial`.
+- Use low confidence for `first_time_public` and choose `unknown` when a same-file publication history cannot be assessed reliably.
+- Keep every Release 05 provisional classification `manualReviewRequired: true` and expose its evidence links in the detail panel.
+- Generate the provisional review with `scripts/build-release05-prior-disclosures.mjs`; keep the audit trail in `data/pursue/release05-prior-disclosure-audit.json`.
 
 Future release import:
 

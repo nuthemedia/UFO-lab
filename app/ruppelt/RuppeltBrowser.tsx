@@ -897,6 +897,7 @@ export function RuppeltBrowser({ index, fullTextRecordIds }: RuppeltBrowserProps
                       onToggleSaved={toggleSaved}
                       onOpenDetail={openDetail}
                       onOpenPriorDisclosure={setSelectedDisclosureRecord}
+                      videoPreviewEnabled={itemIndex === activeCarouselIndex}
                       variant="carousel"
                     />
                   </div>

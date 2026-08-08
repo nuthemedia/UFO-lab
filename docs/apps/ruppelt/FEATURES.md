@@ -2,6 +2,10 @@
 
 Current core features:
 
+- Ruppelt V4.0 covers 375 records across PURSUE Releases 01–05.
+- Japanese descriptions are available for all 375 records; Japanese full-text translations are available for 203 records.
+- The video viewer covers 120 official videos.
+
 - Record search.
 - Release, agency, type, and public-status filtering.
 - Carousel and list views.

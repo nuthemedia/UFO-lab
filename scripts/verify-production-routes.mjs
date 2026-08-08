@@ -198,6 +198,7 @@ const requiredPaths = [
   "public/ogp-ruppelt-v22.jpg",
   "public/ogp-ruppelt-v25.jpg",
   "public/ogp-ruppelt-v30.jpg",
+  "public/ogp-ruppelt-v40.jpg",
   "docs/apps/ruppelt/AGENTS.md",
   "docs/apps/ruppelt/PROJECT.md",
   "docs/apps/ruppelt/DESIGN.md",
@@ -274,10 +275,12 @@ if (missingBrandHomeHrefs.length > 0) {
 }
 
 const requiredFileContents = [
-  ["app/ruppelt/page.tsx", "Ruppelt V3.0"],
-  ["app/ruppelt/page.tsx", "ogp-ruppelt-v30.jpg"],
-  ["app/ruppelt/lp/page.tsx", "Ruppelt V3.0"],
-  ["app/ruppelt/lp/page.tsx", "ogp-ruppelt-v30.jpg"],
+  ["app/ruppelt/page.tsx", "Ruppelt V4.0"],
+  ["app/ruppelt/page.tsx", "ogp-ruppelt-v40.jpg"],
+  ["app/ruppelt/lp/page.tsx", "Ruppelt V4.0"],
+  ["app/ruppelt/lp/page.tsx", "ogp-ruppelt-v40.jpg"],
+  ["app/ruppelt/videos/page.tsx", "Ruppelt V4.0"],
+  ["app/sitemap.ts", "/ruppelt/videos"],
 ];
 
 const missingFileContents = requiredFileContents
@@ -302,16 +305,18 @@ const versionedRuppeltOgpHash = ogpImageHash("public/ogp-ruppelt-v2.jpg");
 const cacheBustedRuppeltOgpHash = ogpImageHash("public/ogp-ruppelt-v22.jpg");
 const v25RuppeltOgpHash = ogpImageHash("public/ogp-ruppelt-v25.jpg");
 const v30RuppeltOgpHash = ogpImageHash("public/ogp-ruppelt-v30.jpg");
+const v40RuppeltOgpHash = ogpImageHash("public/ogp-ruppelt-v40.jpg");
 
 if (
   legacyRuppeltOgpHash !== versionedRuppeltOgpHash ||
   versionedRuppeltOgpHash !== cacheBustedRuppeltOgpHash ||
   cacheBustedRuppeltOgpHash !== v25RuppeltOgpHash ||
-  v25RuppeltOgpHash !== v30RuppeltOgpHash
+  v25RuppeltOgpHash !== v30RuppeltOgpHash ||
+  v30RuppeltOgpHash !== v40RuppeltOgpHash
 ) {
   console.error("Ruppelt OGP images do not match. Refusing to continue:");
   console.error(
-    "- public/ogp-ruppelt.jpg, public/ogp-ruppelt-v2.jpg, public/ogp-ruppelt-v22.jpg, public/ogp-ruppelt-v25.jpg, and public/ogp-ruppelt-v30.jpg must match",
+    "- public/ogp-ruppelt.jpg, public/ogp-ruppelt-v2.jpg, public/ogp-ruppelt-v22.jpg, public/ogp-ruppelt-v25.jpg, public/ogp-ruppelt-v30.jpg, and public/ogp-ruppelt-v40.jpg must match",
   );
   process.exit(1);
 }

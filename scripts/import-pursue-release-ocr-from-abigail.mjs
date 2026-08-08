@@ -1,0 +1,193 @@
+import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { resolve } from "node:path";
+
+const rootDir = resolve(process.cwd());
+const recordsPath = resolve(rootDir, "data/pursue/pursue-records.json");
+const bundlesPath = resolve(rootDir, "data/shared/pursue-document-bundles.json");
+const documentsDir = resolve(rootDir, "data/shared/pursue-documents");
+const githubRecordsUrl =
+  "https://raw.githubusercontent.com/abigailhaddad/ufo-releases/main/data/records.json";
+const githubTextBaseUrl =
+  "https://raw.githubusercontent.com/abigailhaddad/ufo-releases/main/data/text";
+const allowUnverifiedLicense = process.argv.includes("--accept-unverified-license");
+const dryRun = process.argv.includes("--dry-run");
+
+function readArg(name, fallback = "") {
+  const index = process.argv.indexOf(name);
+  return index >= 0 ? process.argv[index + 1] || fallback : fallback;
+}
+
+function normalizeKey(value) {
+  return String(value || "")
+    .normalize("NFKC")
+    .toLowerCase()
+    .replace(/[\s_\-–—“”"'.,()]+/g, "")
+    .replace(/&/g, "and");
+}
+
+function normalizeOcrText(value) {
+  return String(value || "")
+    .replace(/\r\n?/g, "\n")
+    .split("\n")
+    .map((line) => line.replace(/[\t ]+/g, " ").trimEnd())
+    .join("\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
+async function fetchText(url) {
+  const response = await fetch(url, {
+    headers: { "User-Agent": "ufo-lab-ruppelt-ocr-import" },
+  });
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch ${url}: ${response.status} ${response.statusText}`);
+  }
+
+  return response.text();
+}
+
+function officialUrl(record) {
+  return record.source.downloadUrl || record.source.videoUrl || record.source.imageUrl || "";
+}
+
+if (!allowUnverifiedLicense && !dryRun) {
+  throw new Error(
+    "Use --dry-run or confirm the accepted unverified license with --accept-unverified-license.",
+  );
+}
+
+const releaseId = readArg("--release-id", "release_05");
+const auditPath = resolve(
+  rootDir,
+  readArg("--audit-output", `data/pursue/${releaseId.replace("_", "")}-ocr-audit.json`),
+);
+const localIndex = JSON.parse(await readFile(recordsPath, "utf8"));
+const bundles = JSON.parse(await readFile(bundlesPath, "utf8").catch(() => "{}"));
+const githubRecords = JSON.parse(await fetchText(githubRecordsUrl));
+const releaseRecords = localIndex.records.filter(
+  (record) => record.searchFacets?.releaseId === releaseId,
+);
+const githubByTitle = new Map(githubRecords.map((record) => [normalizeKey(record.title), record]));
+const githubByUrl = new Map(
+  githubRecords
+    .filter((record) => record.fileUrl)
+    .map((record) => [normalizeKey(record.fileUrl), record]),
+);
+const now = new Date().toISOString();
+const imported = [];
+const skipped = [];
+
+await mkdir(documentsDir, { recursive: true });
+
+for (const record of releaseRecords) {
+  const githubRecord =
+    githubByTitle.get(normalizeKey(record.source.assetFileName)) ||
+    githubByUrl.get(normalizeKey(officialUrl(record)));
+
+  if (!githubRecord) {
+    skipped.push({ recordId: record.source.id, reason: "no_github_record" });
+    continue;
+  }
+
+  if (!githubRecord.textChars || Number(githubRecord.textChars) <= 0) {
+    skipped.push({
+      recordId: record.source.id,
+      githubId: githubRecord.id,
+      type: record.source.documentType,
+      reason: "no_upstream_text",
+      title: record.source.assetFileName,
+    });
+    continue;
+  }
+
+  const rawUrl = `${githubTextBaseUrl}/${githubRecord.id}.txt`;
+  const rawOcrTextEn = await fetchText(rawUrl);
+  const ocrTextEn = normalizeOcrText(rawOcrTextEn);
+  const sourceUrl = officialUrl(record);
+  const existingBundle = bundles[record.source.id] || {};
+  const document = {
+    ...(existingBundle.document || {}),
+    documentId: record.source.id,
+    recordId: record.source.id,
+    assetFileName: record.source.assetFileName,
+    release: record.source.release,
+    agency: record.source.agency,
+    officialPdfUrl: record.source.downloadUrl || sourceUrl,
+    sourcePdfUrl: record.source.downloadUrl || sourceUrl,
+    documentStatus: {
+      ocr: "ocr_imported_unverified",
+      translationJa: existingBundle.document?.documentStatus?.translationJa || "missing",
+      summary: existingBundle.document?.documentStatus?.summary || "missing",
+      humanReview: existingBundle.document?.documentStatus?.humanReview || "unreviewed",
+    },
+  };
+
+  bundles[record.source.id] = {
+    ...existingBundle,
+    document,
+    ocr: {
+      documentId: record.source.id,
+      recordId: record.source.id,
+      officialPdfUrl: record.source.downloadUrl || sourceUrl,
+      sourcePdfUrl: record.source.downloadUrl || sourceUrl,
+      ocrTextEn,
+      ocrQuality: ocrTextEn.length < 80 ? "low" : "medium",
+      normalization: "horizontal_whitespace_collapsed",
+      source: {
+        repo: "abigailhaddad/ufo-releases",
+        repoUrl: "https://github.com/abigailhaddad/ufo-releases",
+        filePath: `data/text/${githubRecord.id}.txt`,
+        githubUrl: `https://github.com/abigailhaddad/ufo-releases/blob/main/data/text/${githubRecord.id}.txt`,
+        rawUrl,
+        fetchedAt: now,
+        license:
+          "Repository license is not declared; imported after explicit user acceptance as an OCR transcription of public U.S. government source material.",
+        licenseUrl: "",
+        licenseStatus: "unverified_accepted",
+        upstreamRecordId: String(githubRecord.id),
+        upstreamRecordUrl:
+          "https://github.com/abigailhaddad/ufo-releases/blob/main/data/records.json",
+        sourceAssetUrl: sourceUrl,
+      },
+      status: { ocr: "ocr_imported_unverified", humanReview: "unreviewed" },
+    },
+  };
+
+  imported.push({
+    recordId: record.source.id,
+    githubId: githubRecord.id,
+    rawTextChars: rawOcrTextEn.length,
+    normalizedTextChars: ocrTextEn.length,
+    title: record.source.assetFileName,
+  });
+
+  if (!dryRun) {
+    await writeFile(
+      resolve(documentsDir, `${record.source.id}.json`),
+      `${JSON.stringify(document, null, 2)}\n`,
+    );
+  }
+}
+
+const audit = {
+  generatedAt: now,
+  releaseId,
+  sourceRepo: "abigailhaddad/ufo-releases",
+  licenseStatus: "unverified_accepted",
+  importedCount: imported.length,
+  skippedCount: skipped.length,
+  imported,
+  skipped,
+};
+
+if (!dryRun) {
+  await writeFile(bundlesPath, `${JSON.stringify(bundles, null, 2)}\n`);
+  await writeFile(auditPath, `${JSON.stringify(audit, null, 2)}\n`);
+}
+
+console.log(JSON.stringify({ dryRun, ...audit }, null, 2));
+
+if (!releaseRecords.length || imported.length + skipped.length !== releaseRecords.length) {
+  process.exit(1);
+}
