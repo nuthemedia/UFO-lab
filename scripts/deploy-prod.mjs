@@ -26,7 +26,7 @@ const requiredRoutes = [
   "/saucerpedia/misidentifications",
   "/saucerpedia/misidentifications/venus",
   "/saucerpedia/fakes",
-  "/saucerpedia/fakes/ai-image",
+  "/saucerpedia/fakes/model-ufo",
   "/saucerpedia/resources",
   "/saucerpedia/resources/project-blue-book",
   "/saucerpedia/motifs",
