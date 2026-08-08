@@ -115,8 +115,19 @@ function runBuildAndAssertRoutes() {
   const buildOutput = run("npm", ["run", "build"], { capture: true });
   process.stdout.write(buildOutput);
 
+  const appPaths = JSON.parse(
+    readFileSync(resolve(rootDir, ".next/server/app-paths-manifest.json"), "utf8"),
+  );
+  const prerenderManifest = JSON.parse(
+    readFileSync(resolve(rootDir, ".next/prerender-manifest.json"), "utf8"),
+  );
+  const builtRoutes = new Set([
+    ...Object.keys(prerenderManifest.routes),
+    ...Object.keys(appPaths).map((path) => path.replace(/\/(page|route)$/, "") || "/"),
+  ]);
+
   for (const route of requiredRoutes) {
-    if (!buildOutput.includes(route)) {
+    if (!builtRoutes.has(route)) {
       throw new Error(`Build output is missing public route: ${route}`);
     }
   }
