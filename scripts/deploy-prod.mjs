@@ -38,6 +38,13 @@ const requiredRoutes = [
   "/keyhoe",
   "/kean",
   "/kinichi",
+  "/hynek",
+  "/hynek/dashboard",
+  "/ohtsuki",
+  "/ufo-image-checker",
+  "/jenny",
+  "/jenny/opengraph-image",
+  "/api/jenny/analyze",
 ];
 const expectedProject = {
   projectId: "prj_ln4BNuLGgoCFlY6FAJgAyvcQnz5C",

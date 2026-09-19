@@ -16,6 +16,7 @@
     "keyhoe:build:mock": "node scripts/build-keyhoe-today.mjs --mock",
     "lint": "eslint .",
     "test:drake": "vitest run lib/drakeMath.test.ts",
+    "test:jenny": "vitest run --config vitest.jenny.config.ts data/jenny/questions.test.ts lib/jenny/transform.test.ts lib/jenny/quota.test.ts app/api/jenny/analyze/route.test.ts",
     "verify:search-index": "node scripts/build-pursue-search-index.mjs --check"
   },
   "dependencies": {
@@ -23,6 +24,7 @@
     "@tailwindcss/postcss": "^4.3.0",
     "@vercel/analytics": "^2.0.1",
     "@vercel/kv": "^3.0.0",
+    "ai": "7.0.107",
     "minisearch": "^7.2.0",
     "motion": "^12.40.0",
     "next": "^16.2.6",
