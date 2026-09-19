@@ -105,11 +105,15 @@ export function cleanPursueTranslationText(value) {
   };
 }
 
-export function validateTranslatedChunk(sourceText, translatedText) {
+export function validateTranslatedChunk(
+  sourceText,
+  translatedText,
+  minimumCoverage = minimumJapaneseCoverage,
+) {
   const cleaned = cleanPursueTranslationText(translatedText);
   const quality = getJapaneseCoverage(cleaned.text, sourceText);
   const hasEnoughSourceText = quality.sourceLatinCharacters >= 300;
-  const validCoverage = !hasEnoughSourceText || quality.coverage >= minimumJapaneseCoverage;
+  const validCoverage = !hasEnoughSourceText || quality.coverage >= minimumCoverage;
 
   return {
     ...cleaned,

@@ -3,6 +3,8 @@ import { existsSync } from "node:fs";
 import { resolve } from "node:path";
 import {
   cleanPursueTranslationText,
+  getJapaneseCoverage,
+  minimumJapaneseCoverage,
   validateTranslatedChunk,
 } from "./pursue-translation-quality.mjs";
 
@@ -16,6 +18,7 @@ const openAiModel = process.env.OPENAI_TRANSLATION_MODEL || "gpt-5-mini";
 const force = process.argv.includes("--force");
 const smallFirst = process.argv.includes("--small-first");
 const includeLarge = process.argv.includes("--include-large");
+const summaryOnlyLarge = process.argv.includes("--summary-only-large");
 const maxCharsArgIndex = process.argv.indexOf("--max-chars");
 const maxChars =
   maxCharsArgIndex >= 0 && process.argv[maxCharsArgIndex + 1]
@@ -48,6 +51,16 @@ const chunkChars =
   chunkCharsArgIndex >= 0 && process.argv[chunkCharsArgIndex + 1]
     ? Number.parseInt(process.argv[chunkCharsArgIndex + 1], 10)
     : 12000;
+const concurrencyArgIndex = process.argv.indexOf("--concurrency");
+const concurrency =
+  concurrencyArgIndex >= 0 && process.argv[concurrencyArgIndex + 1]
+    ? Math.max(1, Number.parseInt(process.argv[concurrencyArgIndex + 1], 10))
+    : 1;
+const chunkCoverageArgIndex = process.argv.indexOf("--chunk-min-coverage");
+const chunkMinimumCoverage =
+  chunkCoverageArgIndex >= 0 && process.argv[chunkCoverageArgIndex + 1]
+    ? Number.parseFloat(process.argv[chunkCoverageArgIndex + 1])
+    : minimumJapaneseCoverage;
 
 async function readJson(path, fallback = null) {
   try {
@@ -165,7 +178,7 @@ async function translateChunk(text, index, total) {
         content: `次のOCR本文を省略せず日本語に全文翻訳してください。翻訳本文だけを返してください。分割 ${index + 1}/${total} です。${retryInstruction}\n\n${text}`,
       },
     ]);
-    const validation = validateTranslatedChunk(text, translated);
+    const validation = validateTranslatedChunk(text, translated, chunkMinimumCoverage);
 
     if (validation.valid) {
       return validation.text;
@@ -235,7 +248,11 @@ const targets = Object.entries(bundles)
       return false;
     }
 
-    if (!includeLarge && bundle.ocr.ocrTextEn.length > maxChars) {
+    if (summaryOnlyLarge && bundle.ocr.ocrTextEn.length <= maxChars) {
+      return false;
+    }
+
+    if (!includeLarge && !summaryOnlyLarge && bundle.ocr.ocrTextEn.length > maxChars) {
       return false;
     }
 
@@ -257,9 +274,45 @@ const limitedTargets = limit > 0 ? targets.slice(0, limit) : targets;
 let generated = 0;
 const failures = [];
 
-for (const target of limitedTargets) {
+async function processTarget(target) {
   try {
     const ocrTextEn = target.bundle.ocr.ocrTextEn;
+    if (summaryOnlyLarge) {
+      const summaryRaw = await summarizeDocument(ocrTextEn, "");
+      const summary = JSON.parse(summaryRaw);
+      const translation = {
+        documentId: target.recordId,
+        recordId: target.recordId,
+        fullTextJa: "",
+        summaryJa: summary.summaryJa || "未作成",
+        summaryEn: summary.summaryEn || "Not created.",
+        status: {
+          translationJa: "not_translated_large_document",
+          summary: "summary_generated",
+          humanReview: "unreviewed",
+        },
+        noteJa:
+          "長大資料のため日本語全文訳は未作成です。公式資料を正本とし、英語OCR検索と機械生成要約を利用できます。",
+      };
+      const document = {
+        ...(target.bundle.document || {}),
+        documentStatus: {
+          ...(target.bundle.document?.documentStatus || {}),
+          ocr: "ocr_imported_unverified",
+          translationJa: "not_translated_large_document",
+          summary: "summary_generated",
+          humanReview: target.bundle.document?.documentStatus?.humanReview || "unreviewed",
+        },
+      };
+
+      bundles[target.recordId] = { ...target.bundle, document };
+      await writeFile(target.translationPath, `${JSON.stringify(translation, null, 2)}\n`, "utf8");
+      await writeFile(target.documentPath, `${JSON.stringify(document, null, 2)}\n`, "utf8");
+      generated += 1;
+      console.log(`Generated ${selectedReleaseId} summary for large document ${target.recordId} (${generated}/${limitedTargets.length}).`);
+      return;
+    }
+
     const chunks = chunkText(ocrTextEn, chunkChars);
     const translatedChunks = [];
 
@@ -271,6 +324,14 @@ for (const target of limitedTargets) {
     }
 
     const fullTextJa = cleanPursueTranslationText(translatedChunks.join("\n\n")).text;
+    const documentQuality = getJapaneseCoverage(fullTextJa, ocrTextEn);
+
+    if (documentQuality.coverage < minimumJapaneseCoverage) {
+      throw new Error(
+        `Document translation coverage ${documentQuality.coverage.toFixed(4)} is below ` +
+          `${minimumJapaneseCoverage.toFixed(4)}.`,
+      );
+    }
     let summaryJa = "未作成";
     let summaryEn = "Not created.";
 
@@ -316,7 +377,6 @@ for (const target of limitedTargets) {
 
     await writeFile(target.translationPath, `${JSON.stringify(translation, null, 2)}\n`, "utf8");
     await writeFile(target.documentPath, `${JSON.stringify(document, null, 2)}\n`, "utf8");
-    await writeFile(bundlesPath, `${JSON.stringify(bundles, null, 2)}\n`, "utf8");
     generated += 1;
     console.log(`Generated ${selectedReleaseId} Japanese translation for ${target.recordId} (${generated}/${limitedTargets.length}).`);
   } catch (error) {
@@ -324,6 +384,20 @@ for (const target of limitedTargets) {
     console.error(`Translation failed for ${target.recordId}; existing file was preserved:`, error);
   }
 }
+
+let nextTargetIndex = 0;
+async function runWorker() {
+  while (nextTargetIndex < limitedTargets.length) {
+    const target = limitedTargets[nextTargetIndex];
+    nextTargetIndex += 1;
+    await processTarget(target);
+  }
+}
+
+await Promise.all(
+  Array.from({ length: Math.min(concurrency, limitedTargets.length || 1) }, () => runWorker()),
+);
+await writeFile(bundlesPath, `${JSON.stringify(bundles, null, 2)}\n`, "utf8");
 
 console.log(`Generated ${selectedReleaseId} Japanese translations for ${generated} document(s).`);
 

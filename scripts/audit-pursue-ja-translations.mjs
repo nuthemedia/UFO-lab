@@ -63,12 +63,14 @@ async function createSnapshot({ cleanFiles = false } = {}) {
 
     const recordId = fileName.replace(/\.json$/, "");
     const originalText = translation.fullTextJa || "";
+    const summaryOnly = translation.status?.translationJa === "not_translated_large_document";
     const correctedText = applyKnownTranslationCorrections(recordId, originalText);
     const cleaned = cleanPursueTranslationText(correctedText);
     const ocrTextEn = bundles[recordId]?.ocr?.ocrTextEn || "";
     const quality = getJapaneseCoverage(cleaned.text, ocrTextEn);
     const failureDetected = isGenerationFailureText(originalText);
-    const lowCoverage = quality.sourceLatinCharacters >= 300 && quality.coverage < minimumJapaneseCoverage;
+    const lowCoverage =
+      !summaryOnly && quality.sourceLatinCharacters >= 300 && quality.coverage < minimumJapaneseCoverage;
 
     if (cleanFiles && cleaned.text !== originalText) {
       await writeFile(
@@ -80,6 +82,8 @@ async function createSnapshot({ cleanFiles = false } = {}) {
 
     records.push({
       recordId,
+      fullTextAvailable: Boolean(cleaned.text.trim()),
+      summaryOnly,
       japaneseCharacters: quality.japaneseCharacters,
       sourceLatinCharacters: quality.sourceLatinCharacters,
       japaneseCoverage: Number(quality.coverage.toFixed(4)),
@@ -92,7 +96,8 @@ async function createSnapshot({ cleanFiles = false } = {}) {
   }
 
   return {
-    translationCount: records.length,
+    translationCount: records.filter((record) => record.fullTextAvailable).length,
+    summaryOnlyCount: records.filter((record) => record.summaryOnly).length,
     lowCoverageCount: records.filter((record) => record.lowCoverage).length,
     failureCount: records.filter((record) => record.failureDetected).length,
     noiseFileCount: records.filter(
@@ -122,6 +127,7 @@ console.log(
     {
       apply,
       translationCount: current.translationCount,
+      summaryOnlyCount: current.summaryOnlyCount,
       lowCoverageCount: current.lowCoverageCount,
       failureCount: current.failureCount,
       noiseFileCount: current.noiseFileCount,

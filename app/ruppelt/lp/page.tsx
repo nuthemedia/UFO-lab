@@ -9,12 +9,12 @@ const appHref = "/ruppelt";
 const brandHref = "/";
 const appUrl = `${siteUrl}${appHref}`;
 const lpUrl = `${siteUrl}/ruppelt/lp`;
-const ruppeltOgpImage = `${siteUrl}/ogp-ruppelt-v40.jpg`;
-const ruppeltLpSocialUrl = `${siteUrl}/ruppelt/lp?xcard=v40`;
+const ruppeltOgpImage = `${siteUrl}/ogp-ruppelt-v45.jpg`;
+const ruppeltLpSocialUrl = `${siteUrl}/ruppelt/lp?xcard=v45`;
 
-const metaTitle = "Ruppelt V4.0｜アメリカ政府UAP・UFO公開資料375件を日本語で検索";
+const metaTitle = "Ruppelt V4.5｜アメリカ政府UAP・UFO公開資料446件を日本語で検索";
 const metaDescription =
-  "PURSUE Release 01〜05の米政府UAP・UFO公開資料375件を日本語で検索。日本語資料説明375件、全文訳203件、動画120件、公開状況、公式資料リンクに対応。";
+  "PURSUE Release 01〜06の米政府UAP・UFO公開資料446件を日本語で検索。日本語資料説明446件、全文訳253件、動画135件、公開状況、公式資料リンクに対応。";
 
 const problemItems = [
   { label: "英語", body: "原文を読む負担が大きい" },
@@ -106,7 +106,7 @@ export const metadata: Metadata = {
         url: ruppeltOgpImage,
         width: 1200,
         height: 630,
-        alt: "Ruppelt V4.0 - PURSUE日本語インデックス",
+        alt: "Ruppelt V4.5 - PURSUE日本語インデックス",
         type: "image/jpeg",
       },
     ],
@@ -119,15 +119,15 @@ export const metadata: Metadata = {
     images: [ruppeltOgpImage],
   },
   other: {
-    "twitter:image:alt": "Ruppelt V4.0 - PURSUE日本語インデックス",
+    "twitter:image:alt": "Ruppelt V4.5 - PURSUE日本語インデックス",
   },
 };
 
 const ruppeltLpJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  name: "Ruppelt V4.0",
-  alternateName: "Ruppelt V4.0 - アメリカ政府UAP・UFO公開資料ビューアー",
+  name: "Ruppelt V4.5",
+  alternateName: "Ruppelt V4.5 - アメリカ政府UAP・UFO公開資料ビューアー",
   applicationCategory: "ReferenceApplication",
   operatingSystem: "Web",
   url: appUrl,

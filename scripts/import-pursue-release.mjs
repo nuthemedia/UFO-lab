@@ -5,6 +5,12 @@ const rootDir = resolve(process.cwd());
 const recordsPath = resolve(rootDir, "data/pursue/pursue-records.json");
 const releaseDefinitions = [
   {
+    id: "release_06",
+    date: "9/18/26",
+    number: "6",
+    matchers: ["9/18", "september 18"],
+  },
+  {
     id: "release_05",
     date: "8/7/26",
     number: "5",
@@ -234,7 +240,7 @@ async function loadCsvText(csvUrl, releaseDate) {
   return csvText;
 }
 
-const requestedReleaseId = cleanValue(readArg("--release-id", "release_05"));
+const requestedReleaseId = cleanValue(readArg("--release-id", "release_06"));
 const releaseDefinition = releaseDefinitions.find((item) => item.id === requestedReleaseId);
 
 if (!releaseDefinition) {

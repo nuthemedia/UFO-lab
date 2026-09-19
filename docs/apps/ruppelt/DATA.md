@@ -13,7 +13,7 @@ Data rules:
 
 Current translation state:
 
-- Japanese full-text translations are available for 203 records, including 41 Release 03 records, 12 Release 04 records, and 17 Release 05 records.
+- Japanese full-text translations are available for 253 records, including 41 Release 03 records, 12 Release 04 records, 17 Release 05 records, and 50 Release 06 records.
 - Release 03 records are included in the lightweight index with Japanese source-field translations.
 - Release 03 includes Japanese full-text translations for 41 OCR-backed records. The remaining 11 OCR-backed giant records are intentionally kept as OCR-search-only / summary-first records rather than full Japanese translations.
 - Records without full-text data should be described as `全文OCR未取得`, not as missing official source data.
@@ -105,6 +105,28 @@ Release 05 public-disclosure review:
 - Use low confidence for `first_time_public` and choose `unknown` when a same-file publication history cannot be assessed reliably.
 - Keep every Release 05 provisional classification `manualReviewRequired: true` and expose its evidence links in the detail panel.
 - Generate the provisional review with `scripts/build-release05-prior-disclosures.mjs`; keep the audit trail in `data/pursue/release05-prior-disclosure-audit.json`.
+
+Release 06 metadata:
+
+- Release 06 was published on September 18, 2026 and adds 71 unique records: 55 PDFs, 15 videos, and 1 audio record. The complete deduplicated index grows from 375 to 446 records and the video viewer grows from 120 to 135 records.
+- The official source is `https://www.war.gov/Portals/1/Interactive/2026/UFO/uap-data.csv?release=6`; the official page is `https://www.war.gov/UFO/`.
+- The upstream manifest contains three duplicate rows in earlier releases. Ruppelt preserves its existing deduplicated IDs and adds only the 71 Release 06 records; the excluded rows are recorded in `data/pursue/release06-import-audit.json`.
+- Release 06 includes Japanese translations of the official title, release, agency, location, type, and description fields.
+
+Release 06 OCR and translation:
+
+- `abigailhaddad/ufo-releases` maps all 71 Release 06 records and provides OCR/extracted text for 52 PDF records. The remaining 19 records stay metadata-search-only unless a trustworthy transcript or official extraction is added later.
+- Release 06 OCR is stored under the user's existing acceptance of the undeclared upstream license, with `unverified_accepted` provenance and the official war.gov file retained as the source of truth.
+- Normalize pathological whitespace before indexing and translation. Fifty normalized OCR texts are within the 250,000-character translation limit and receive machine-generated Japanese full-text translations and summaries.
+- DOW-UAP-D111 and DOW-UAP-D104 remain English-OCR-search and summary-first records because their normalized OCR exceeds 250,000 characters.
+- DOW-UAP-D103, DOW-UAP-PR130, and DOW-UAP-PR131 have no upstream OCR. Official-file extraction was attempted where command-line access allowed; unresolved files remain `全文OCR未取得`.
+
+Release 06 public-disclosure review:
+
+- No equivalent of the Release 01 external classification dataset was found for Release 06, so all 71 records use provisional Ruppelt review data.
+- The provisional counts are `既に公開済み 48`, `一部公開済み 3`, and `初公開 20`.
+- AAWSAP/DIRD and historical Project Blue Book/Tremonton material use DIA or NARA archive evidence. Modern incident reports and media use low-confidence `first_time_public` only when no earlier same-file publication was found.
+- Keep every Release 06 classification `manualReviewRequired: true`; the audit trail is stored in `data/pursue/release06-prior-disclosure-audit.json`.
 
 Future release import:
 

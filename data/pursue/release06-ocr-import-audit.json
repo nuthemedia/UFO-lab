@@ -1,0 +1,526 @@
+{
+  "generatedAt": "2026-09-19T01:06:09.770Z",
+  "releaseId": "release_06",
+  "sourceRepo": "abigailhaddad/ufo-releases",
+  "licenseStatus": "unverified_accepted",
+  "importedCount": 52,
+  "skippedCount": 19,
+  "imported": [
+    {
+      "recordId": "pursue-0376",
+      "githubId": 386,
+      "rawTextChars": 253410,
+      "normalizedTextChars": 144107,
+      "title": "DOW-UAP-D102, Project Blue Book File on Tremonton Film, Utah, 1952"
+    },
+    {
+      "recordId": "pursue-0377",
+      "githubId": 387,
+      "rawTextChars": 10385,
+      "normalizedTextChars": 9817,
+      "title": "DOW-UAP-D110, AAWSAP Statement of Objectives, July 2008"
+    },
+    {
+      "recordId": "pursue-0378",
+      "githubId": 388,
+      "rawTextChars": 291610,
+      "normalizedTextChars": 262537,
+      "title": "DOW-UAP-D111, AAWSAP Solicitation and Original Order, September 2008"
+    },
+    {
+      "recordId": "pursue-0379",
+      "githubId": 389,
+      "rawTextChars": 84301,
+      "normalizedTextChars": 72686,
+      "title": "DOW-UAP-D117, AAWSAP DIRD, Metallic Glasses for Aerospace Applications, December 2009"
+    },
+    {
+      "recordId": "pursue-0380",
+      "githubId": 390,
+      "rawTextChars": 81776,
+      "normalizedTextChars": 73550,
+      "title": "DOW-UAP-D129, AAWSAP DIRD, Metallic Spintronics, March 2010"
+    },
+    {
+      "recordId": "pursue-0381",
+      "githubId": 391,
+      "rawTextChars": 67153,
+      "normalizedTextChars": 63764,
+      "title": "DOW-UAP-D154, Transcript of a Presentation by Captain Edward J. Ruppelt, 1952"
+    },
+    {
+      "recordId": "pursue-0387",
+      "githubId": 397,
+      "rawTextChars": 2896821,
+      "normalizedTextChars": 1156662,
+      "title": "DOW-UAP-D104, Final Personnel Record for Newhouse, Delbert C., U.S. Navy, 1957"
+    },
+    {
+      "recordId": "pursue-0388",
+      "githubId": 398,
+      "rawTextChars": 432867,
+      "normalizedTextChars": 244032,
+      "title": "DOW-UAP-D105, U.S. Air Force Flying Discs File, 1952"
+    },
+    {
+      "recordId": "pursue-0389",
+      "githubId": 399,
+      "rawTextChars": 10863,
+      "normalizedTextChars": 7502,
+      "title": "DOW-UAP-D106, Mission Report, Iraq, 2022"
+    },
+    {
+      "recordId": "pursue-0390",
+      "githubId": 400,
+      "rawTextChars": 14887,
+      "normalizedTextChars": 10428,
+      "title": "DOW-UAP-D107, Mission Report, Middle East, 2025"
+    },
+    {
+      "recordId": "pursue-0391",
+      "githubId": 401,
+      "rawTextChars": 15043,
+      "normalizedTextChars": 10216,
+      "title": "DOW-UAP-D108, Mission Report, Middle East, 2025"
+    },
+    {
+      "recordId": "pursue-0392",
+      "githubId": 402,
+      "rawTextChars": 11648,
+      "normalizedTextChars": 7439,
+      "title": "DOW-UAP-D109, Mission Report, Middle East, 2022"
+    },
+    {
+      "recordId": "pursue-0393",
+      "githubId": 403,
+      "rawTextChars": 12278,
+      "normalizedTextChars": 6607,
+      "title": "DOW-UAP-D112, AAWSAP Contract Modification P00001, September 2009"
+    },
+    {
+      "recordId": "pursue-0394",
+      "githubId": 404,
+      "rawTextChars": 21953,
+      "normalizedTextChars": 12250,
+      "title": "DOW-UAP-D113, AAWSAP Contract Modification P00002, February 2010"
+    },
+    {
+      "recordId": "pursue-0395",
+      "githubId": 405,
+      "rawTextChars": 10312,
+      "normalizedTextChars": 5431,
+      "title": "DOW-UAP-D114, AAWSAP Contract Modification P00003, May 2010"
+    },
+    {
+      "recordId": "pursue-0396",
+      "githubId": 406,
+      "rawTextChars": 2298,
+      "normalizedTextChars": 936,
+      "title": "DOW-UAP-D115, AAWSAP Contract Modification P00004, May 2010"
+    },
+    {
+      "recordId": "pursue-0397",
+      "githubId": 407,
+      "rawTextChars": 15819,
+      "normalizedTextChars": 7557,
+      "title": "DOW-UAP-D116, AAWSAP Contract Modification P00005, September 2010"
+    },
+    {
+      "recordId": "pursue-0398",
+      "githubId": 408,
+      "rawTextChars": 53274,
+      "normalizedTextChars": 50327,
+      "title": "DOW-UAP-D118, AAWSAP DIRD, Aerospace Applications of Programmable Matter, December 2009"
+    },
+    {
+      "recordId": "pursue-0399",
+      "githubId": 409,
+      "rawTextChars": 71576,
+      "normalizedTextChars": 66880,
+      "title": "DOW-UAP-D119, AAWSAP DIRD, Biomaterials, January 2010"
+    },
+    {
+      "recordId": "pursue-0400",
+      "githubId": 410,
+      "rawTextChars": 84228,
+      "normalizedTextChars": 80925,
+      "title": "DOW-UAP-D120, AAWSAP DIRD, Materials for Advanced Aerospace Platforms, January 2010"
+    },
+    {
+      "recordId": "pursue-0401",
+      "githubId": 411,
+      "rawTextChars": 115184,
+      "normalizedTextChars": 103478,
+      "title": "DOW-UAP-D121, AAWSAP DIRD, Pulsed High-Power Microwave Source Technology, January 2010"
+    },
+    {
+      "recordId": "pursue-0402",
+      "githubId": 412,
+      "rawTextChars": 65968,
+      "normalizedTextChars": 55756,
+      "title": "DOW-UAP-D122, AAWSAP DIRD, Invisibility Cloaking Theory and Experiments, March 2010"
+    },
+    {
+      "recordId": "pursue-0403",
+      "githubId": 413,
+      "rawTextChars": 79711,
+      "normalizedTextChars": 67687,
+      "title": "DOW-UAP-D123, AAWSAP DIRD, Positron Aerospace Propulsion, March 2010"
+    },
+    {
+      "recordId": "pursue-0404",
+      "githubId": 414,
+      "rawTextChars": 157103,
+      "normalizedTextChars": 132944,
+      "title": "DOW-UAP-D124, AAWSAP DIRD, Space Access: Where We’ve Been and Where We Could Go, March 2010"
+    },
+    {
+      "recordId": "pursue-0405",
+      "githubId": 415,
+      "rawTextChars": 212791,
+      "normalizedTextChars": 193657,
+      "title": "DOW-UAP-D125, AAWSAP DIRD, Inertial Electrostatic Confinement Fusion, March 2010"
+    },
+    {
+      "recordId": "pursue-0406",
+      "githubId": 416,
+      "rawTextChars": 97508,
+      "normalizedTextChars": 82806,
+      "title": "DOW-UAP-D126, AAWSAP DIRD, Advanced Nuclear Propulsion for Manned Deep Space Missions, March 2010"
+    },
+    {
+      "recordId": "pursue-0407",
+      "githubId": 417,
+      "rawTextChars": 199948,
+      "normalizedTextChars": 122835,
+      "title": "DOW-UAP-D127, AAWSAP DIRD, An Introduction to the Statistical Drake Equation, March 2010"
+    },
+    {
+      "recordId": "pursue-0408",
+      "githubId": 418,
+      "rawTextChars": 122155,
+      "normalizedTextChars": 90245,
+      "title": "DOW-UAP-D128, AAWSAP DIRD, Anomalous Acute and Subacute Field Effects on Human Biological Tissues, March 2010"
+    },
+    {
+      "recordId": "pursue-0409",
+      "githubId": 419,
+      "rawTextChars": 114779,
+      "normalizedTextChars": 107782,
+      "title": "DOW-UAP-D130, AAWSAP DIRD, Technological Approaches to Controlling External Devices, March 2010"
+    },
+    {
+      "recordId": "pursue-0410",
+      "githubId": 420,
+      "rawTextChars": 52516,
+      "normalizedTextChars": 51841,
+      "title": "DOW-UAP-D131, AAWSAP DIRD, The Role of Superconductors in Gravity Research, March 2010"
+    },
+    {
+      "recordId": "pursue-0411",
+      "githubId": 421,
+      "rawTextChars": 44086,
+      "normalizedTextChars": 40693,
+      "title": "DOW-UAP-D132, AAWSAP DIRD, Advanced Space Propulsion Based on Vacuum (Spacetime Metric) Engineering, March 2010"
+    },
+    {
+      "recordId": "pursue-0412",
+      "githubId": 422,
+      "rawTextChars": 92066,
+      "normalizedTextChars": 82295,
+      "title": "DOW-UAP-D133, AAWSAP DIRD, The Space Communication Implications of Quantum Entanglement and Nonlocality, March 2010"
+    },
+    {
+      "recordId": "pursue-0413",
+      "githubId": 423,
+      "rawTextChars": 54387,
+      "normalizedTextChars": 51902,
+      "title": "DOW-UAP-D134, AAWSAP DIRD, Maverick Inventor Versus Corporate Inventor: Where Will the Next Major Innovations Arise, March 2010"
+    },
+    {
+      "recordId": "pursue-0414",
+      "githubId": 424,
+      "rawTextChars": 128885,
+      "normalizedTextChars": 122501,
+      "title": "DOW-UAP-D135, AAWSAP DIRD, Antigravity for Aerospace Applications, March 2010"
+    },
+    {
+      "recordId": "pursue-0415",
+      "githubId": 425,
+      "rawTextChars": 96583,
+      "normalizedTextChars": 90540,
+      "title": "DOW-UAP-D136, AAWSAP DIRD, Biosensors and BioMEMS: A Survey of the Present Field, March 2010"
+    },
+    {
+      "recordId": "pursue-0416",
+      "githubId": 426,
+      "rawTextChars": 73974,
+      "normalizedTextChars": 66101,
+      "title": "DOW-UAP-D137, AAWSAP DIRD, State of the Art and Evolution of High-Energy Lasers, March 2010"
+    },
+    {
+      "recordId": "pursue-0417",
+      "githubId": 427,
+      "rawTextChars": 96386,
+      "normalizedTextChars": 88410,
+      "title": "DOW-UAP-D138, AAWSAP DIRD, Warp Drive, Dark Energy, and the Manipulation of Extra Dimensions, April 2010"
+    },
+    {
+      "recordId": "pursue-0418",
+      "githubId": 428,
+      "rawTextChars": 114681,
+      "normalizedTextChars": 109144,
+      "title": "DOW-UAP-D139, AAWSAP DIRD, Traversable Wormholes, Stargates, and Negative Energy, April 2010"
+    },
+    {
+      "recordId": "pursue-0419",
+      "githubId": 429,
+      "rawTextChars": 173339,
+      "normalizedTextChars": 144628,
+      "title": "DOW-UAP-D140, AAWSAP DIRD, High-Frequency Gravitational Wave Communications, April 2010"
+    },
+    {
+      "recordId": "pursue-0420",
+      "githubId": 430,
+      "rawTextChars": 110986,
+      "normalizedTextChars": 91268,
+      "title": "DOW-UAP-D141, AAWSAP DIRD, Metamaterials for Aerospace Applications, April 2010"
+    },
+    {
+      "recordId": "pursue-0421",
+      "githubId": 431,
+      "rawTextChars": 161959,
+      "normalizedTextChars": 155738,
+      "title": "DOW-UAP-D142, AAWSAP DIRD, Concepts for Extracting Energy from the Quantum Vacuum, April 2010"
+    },
+    {
+      "recordId": "pursue-0422",
+      "githubId": 432,
+      "rawTextChars": 193907,
+      "normalizedTextChars": 162988,
+      "title": "DOW-UAP-D143, AAWSAP DIRD, Laser Lightcraft Nanosatellites, November 2010"
+    },
+    {
+      "recordId": "pursue-0423",
+      "githubId": 433,
+      "rawTextChars": 151868,
+      "normalizedTextChars": 142260,
+      "title": "DOW-UAP-D144, AAWSAP DIRD, Cockpits in the Era of Breakthrough Flight, November 2010"
+    },
+    {
+      "recordId": "pursue-0424",
+      "githubId": 434,
+      "rawTextChars": 127531,
+      "normalizedTextChars": 99849,
+      "title": "DOW-UAP-D145, AAWSAP DIRD, Aneutronic Fusion Propulsion I, November 2010"
+    },
+    {
+      "recordId": "pursue-0425",
+      "githubId": 435,
+      "rawTextChars": 91538,
+      "normalizedTextChars": 74637,
+      "title": "DOW-UAP-D146, AAWSAP DIRD, Aneutronic Fusion Propulsion II, November 2010"
+    },
+    {
+      "recordId": "pursue-0426",
+      "githubId": 436,
+      "rawTextChars": 104380,
+      "normalizedTextChars": 83131,
+      "title": "DOW-UAP-D147, AAWSAP DIRD, Ultracapacitors as Energy and Power Storage Devices, November 2010"
+    },
+    {
+      "recordId": "pursue-0427",
+      "githubId": 437,
+      "rawTextChars": 117305,
+      "normalizedTextChars": 93809,
+      "title": "DOW-UAP-D148, AAWSAP DIRD, Detection and High-Resolution Tracking of Vehicles at Hypersonic Velocities, November 2010"
+    },
+    {
+      "recordId": "pursue-0428",
+      "githubId": 438,
+      "rawTextChars": 89985,
+      "normalizedTextChars": 82352,
+      "title": "DOW-UAP-D149, AAWSAP DIRD, MHD Air Breathing Propulsion and Power for Aerospace Applications, November 2010"
+    },
+    {
+      "recordId": "pursue-0429",
+      "githubId": 439,
+      "rawTextChars": 153049,
+      "normalizedTextChars": 130105,
+      "title": "DOW-UAP-D150, AAWSAP DIRD, Quantum Computing and Utilizing Organic Molecules in Automation Technology, December 2010"
+    },
+    {
+      "recordId": "pursue-0430",
+      "githubId": 440,
+      "rawTextChars": 79893,
+      "normalizedTextChars": 74526,
+      "title": "DOW-UAP-D151, AAWSAP DIRD, Cognitive Limits on Simultaneous Control of Multiple Unmanned Spacecraft, December 2010"
+    },
+    {
+      "recordId": "pursue-0431",
+      "githubId": 441,
+      "rawTextChars": 76057,
+      "normalizedTextChars": 59732,
+      "title": "DOW-UAP-D152, AAWSAP DIRD, Negative Mass Propulsion, January 2011"
+    },
+    {
+      "recordId": "pursue-0432",
+      "githubId": 442,
+      "rawTextChars": 134454,
+      "normalizedTextChars": 121644,
+      "title": "DOW-UAP-D153, AAWSAP DIRD, Quantum Tomography of Negative Energy States in the Vacuum, January 2011"
+    }
+  ],
+  "skipped": [
+    {
+      "recordId": "pursue-0382",
+      "githubId": 392,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR159, Historical Film of Reported UFOs, Utah, 1952"
+    },
+    {
+      "recordId": "pursue-0383",
+      "githubId": 393,
+      "type": "AUD",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR160, Presentation by Captain Edward J. Ruppelt, 1952"
+    },
+    {
+      "recordId": "pursue-0384",
+      "githubId": 394,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "LLE-UAP-PR001, Unresolved UAP Report, Colorado, 2023"
+    },
+    {
+      "recordId": "pursue-0385",
+      "githubId": 395,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "LLE-UAP-PR002, Unresolved UAP Report, Colorado, October 2023"
+    },
+    {
+      "recordId": "pursue-0386",
+      "githubId": 396,
+      "type": "PDF",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-D103, Project Blue Book Photo File Relating to Tremonton Film, Utah, 1952"
+    },
+    {
+      "recordId": "pursue-0433",
+      "githubId": 443,
+      "type": "PDF",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR130, Unresolved UAP Report, Iraq, 2022"
+    },
+    {
+      "recordId": "pursue-0434",
+      "githubId": 444,
+      "type": "PDF",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR131, Unresolved UAP Report, Iraq, 2022"
+    },
+    {
+      "recordId": "pursue-0435",
+      "githubId": 445,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR133, Unresolved UAP Report, Middle East, 2025"
+    },
+    {
+      "recordId": "pursue-0436",
+      "githubId": 446,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR135, Unresolved UAP Report, Middle East, 2025"
+    },
+    {
+      "recordId": "pursue-0437",
+      "githubId": 447,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR140, Unresolved UAP Report, Middle East, 2022"
+    },
+    {
+      "recordId": "pursue-0438",
+      "githubId": 448,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR141, Unresolved UAP Report, Middle East, 2022"
+    },
+    {
+      "recordId": "pursue-0439",
+      "githubId": 449,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR143, Unresolved UAP Report, Yellow Sea, 2023"
+    },
+    {
+      "recordId": "pursue-0440",
+      "githubId": 450,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR144, Unresolved UAP Report, Yellow Sea, 2023"
+    },
+    {
+      "recordId": "pursue-0441",
+      "githubId": 451,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR148, Unresolved UAP Report, East China Sea, 2023"
+    },
+    {
+      "recordId": "pursue-0442",
+      "githubId": 452,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR150, Unresolved UAP Report, Yellow Sea, 2023"
+    },
+    {
+      "recordId": "pursue-0443",
+      "githubId": 453,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR151, Unresolved UAP Report, Yellow Sea, 2023"
+    },
+    {
+      "recordId": "pursue-0444",
+      "githubId": 454,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR152, Unresolved UAP Report, Yellow Sea, 2023"
+    },
+    {
+      "recordId": "pursue-0445",
+      "githubId": 455,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "LLE-UAP-PR003, Unresolved UAP Report, Colorado, October 2023"
+    },
+    {
+      "recordId": "pursue-0446",
+      "githubId": 456,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "LLE-UAP-PR004, Unresolved UAP Report, Colorado, October 2023"
+    }
+  ],
+  "officialExtractionAttempts": [
+    {
+      "recordId": "pursue-0386",
+      "result": "blocked_by_official_host",
+      "note": "The official PDF remains the source of truth, but command-line retrieval returned an access-denied response."
+    },
+    {
+      "recordId": "pursue-0433",
+      "result": "blocked_by_official_host",
+      "note": "The official PDF remains the source of truth, but command-line retrieval returned an access-denied response."
+    },
+    {
+      "recordId": "pursue-0434",
+      "result": "blocked_by_official_host",
+      "note": "The official PDF remains the source of truth, but command-line retrieval returned an access-denied response."
+    }
+  ]
+}

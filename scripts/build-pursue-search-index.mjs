@@ -9,6 +9,7 @@ const recordsPath = resolve(rootDir, "data/pursue/pursue-records.json");
 const bundlesPath = resolve(rootDir, "data/shared/pursue-document-bundles.json");
 const translationsDir = resolve(rootDir, "data/shared/translations/ja");
 const fulltextIndexPath = resolve(rootDir, "data/shared/search/fulltext-index.json");
+const fulltextIndexDir = dirname(fulltextIndexPath);
 
 const fields = ["metadataText", "summaryText", "fullTextJa", "ocrTextEn"];
 const storeFields = ["recordId", "documentId"];
@@ -34,14 +35,10 @@ function getJapaneseGrams(value) {
       grams.push(sequence);
     }
 
-    for (let size = 2; size <= 3; size += 1) {
-      if (sequence.length < size) {
-        continue;
-      }
+    const size = 2;
 
-      for (let index = 0; index <= sequence.length - size; index += 1) {
-        grams.push(sequence.slice(index, index + size));
-      }
+    for (let index = 0; index <= sequence.length - size; index += 1) {
+      grams.push(sequence.slice(index, index + size));
     }
   }
 
@@ -51,7 +48,9 @@ function getJapaneseGrams(value) {
 function tokenizeForRuppeltSearch(value) {
   const normalized = normalizeSearchText(value);
   const latinTokens = normalized.match(/[a-z0-9]+/g) || [];
-  return [...latinTokens, ...getJapaneseGrams(normalized)].filter((token) => token.length > 1);
+  return Array.from(
+    new Set([...latinTokens, ...getJapaneseGrams(normalized)].filter((token) => token.length > 1)),
+  );
 }
 
 function readJson(path, fallback) {
@@ -82,6 +81,31 @@ function joinValues(values) {
   return values.filter(Boolean).join("\n");
 }
 
+function normalizeFullTextForIndex(value) {
+  const seen = new Set();
+
+  return String(value || "")
+    .split(/\r?\n/)
+    .map((line) => line.replace(/[\t ]+/g, " ").trim())
+    .filter((line) => {
+      if (!line) {
+        return false;
+      }
+
+      const duplicateKey = normalizeSearchText(line);
+      if (duplicateKey.length >= 24 && seen.has(duplicateKey)) {
+        return false;
+      }
+
+      if (duplicateKey.length >= 24) {
+        seen.add(duplicateKey);
+      }
+
+      return true;
+    })
+    .join("\n");
+}
+
 function makeSnippetSource(...values) {
   return values
     .filter(Boolean)
@@ -99,8 +123,8 @@ const documents = recordsIndex.records.map((record) => {
   const recordId = record.source.id;
   const translation = translations.get(recordId) || {};
   const bundle = bundles[recordId] || {};
-  const ocrTextEn = bundle.ocr?.ocrTextEn || "";
-  const fullTextJa = translation.fullTextJa || "";
+  const ocrTextEn = normalizeFullTextForIndex(bundle.ocr?.ocrTextEn || "");
+  const fullTextJa = normalizeFullTextForIndex(translation.fullTextJa || "");
   const summaryJa = translation.summaryJa || "";
   const summaryEn = translation.summaryEn || "";
 
@@ -108,6 +132,7 @@ const documents = recordsIndex.records.map((record) => {
     id: recordId,
     recordId,
     documentId: translation.documentId || bundle.document?.documentId || recordId,
+    releaseId: record.searchFacets?.releaseId || "release_01",
     metadataText: joinValues([
       record.source.assetFileName,
       record.ja?.assetFileNameJa,
@@ -130,16 +155,7 @@ const documents = recordsIndex.records.map((record) => {
   };
 });
 
-const miniSearch = new MiniSearch({
-  fields,
-  storeFields,
-  idField: "id",
-  tokenize: tokenizeForRuppeltSearch,
-});
-
-miniSearch.addAll(documents);
-
-const snippetDocuments = documents.map((document) => ({
+const makeSnippetDocument = (document) => ({
   id: document.id,
   recordId: document.recordId,
   documentId: document.documentId,
@@ -150,16 +166,44 @@ const snippetDocuments = documents.map((document) => ({
     document.fullTextJa,
     document.ocrTextEn,
   ),
-}));
+});
+
+const releaseGroups = Map.groupBy(documents, (document) => document.releaseId);
+const shardPayloads = Array.from(releaseGroups.entries())
+  .sort(([left], [right]) => left.localeCompare(right))
+  .map(([releaseId, shardDocuments]) => {
+    const shardSearch = new MiniSearch({
+      fields,
+      storeFields,
+      idField: "id",
+      tokenize: tokenizeForRuppeltSearch,
+    });
+    shardSearch.addAll(shardDocuments);
+
+    return {
+      releaseId,
+      file: `fulltext-index.${releaseId}.json`,
+      count: shardDocuments.length,
+      payload: {
+        version: 4,
+        engine: "minisearch",
+        generatedAt: new Date().toISOString(),
+        releaseId,
+        fields,
+        storeFields,
+        index: JSON.parse(JSON.stringify(shardSearch)),
+        documents: shardDocuments.map(makeSnippetDocument),
+      },
+    };
+  });
 
 const payload = {
-  version: 3,
+  version: 4,
   engine: "minisearch",
   generatedAt: new Date().toISOString(),
   fields,
   storeFields,
-  index: JSON.parse(JSON.stringify(miniSearch)),
-  documents: snippetDocuments,
+  shards: shardPayloads.map(({ releaseId, file, count }) => ({ releaseId, file, count })),
 };
 
 if (process.argv.includes("--check")) {
@@ -173,10 +217,30 @@ if (process.argv.includes("--check")) {
     process.exit(1);
   }
 
+  for (const shard of shardPayloads) {
+    const committedShard = await readJson(resolve(fulltextIndexDir, shard.file), null);
+
+    if (!committedShard || withoutTimestamp(committedShard) !== withoutTimestamp(shard.payload)) {
+      console.error(
+        `${shard.file} does not match its sources. Run \`node scripts/build-pursue-search-index.mjs\` and commit the result.`,
+      );
+      process.exit(1);
+    }
+  }
+
   console.log(`fulltext-index.json is up to date (${documents.length} records).`);
 } else {
   await writeFile(fulltextIndexPath, `${JSON.stringify(payload)}\n`);
 
+  for (const shard of shardPayloads) {
+    await writeFile(resolve(fulltextIndexDir, shard.file), `${JSON.stringify(shard.payload)}\n`);
+  }
+
   console.log(`Built ${fulltextIndexPath}`);
-  console.log(`Indexed ${documents.length} records, ${translations.size} Japanese full-text translations.`);
+  console.log(`Built ${shardPayloads.length} release shards.`);
+  console.log(
+    `Indexed ${documents.length} records, ` +
+      `${Array.from(translations.values()).filter((translation) => String(translation.fullTextJa || "").trim()).length} ` +
+      "Japanese full-text translations.",
+  );
 }

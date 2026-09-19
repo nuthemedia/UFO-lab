@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { readdirSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
 import { resolve } from "node:path";
 import pursueIndex from "@/data/pursue/pursue-records.json";
 import { RuppeltBrowser } from "@/app/ruppelt/RuppeltBrowser";
@@ -19,10 +19,10 @@ const statusDashboardOrder: StatusDashboardKey[] = [
   "unreviewed",
 ];
 // Legacy Vercel build guard compatibility marker: Ruppelt V2.0.
-const ruppeltOgpImage = `${siteUrl}/ogp-ruppelt-v40.jpg`;
-const ruppeltSocialUrl = `${siteUrl}/ruppelt?xcard=v40`;
+const ruppeltOgpImage = `${siteUrl}/ogp-ruppelt-v45.jpg`;
+const ruppeltSocialUrl = `${siteUrl}/ruppelt?xcard=v45`;
 const ruppeltDescription =
-  "PURSUE Release 01〜05の米政府UAP・UFO公開資料375件を日本語で検索。日本語資料説明375件、全文訳203件、動画120件、公開状況、公式資料リンクに対応。";
+  "PURSUE Release 01〜06の米政府UAP・UFO公開資料446件を日本語で検索。日本語資料説明446件、全文訳253件、動画135件、公開状況、公式資料リンクに対応。";
 
 function getStatusDashboardLabel(status: StatusDashboardKey) {
   return status === "unreviewed" ? "未判定" : priorDisclosureLabels[status];
@@ -32,6 +32,16 @@ function getFullTextRecordIds() {
   try {
     return readdirSync(resolve(process.cwd(), "data/shared/translations/ja"))
       .filter((fileName) => /^pursue-\d{4}\.json$/.test(fileName))
+      .filter((fileName) => {
+        try {
+          const translation = JSON.parse(
+            readFileSync(resolve(process.cwd(), "data/shared/translations/ja", fileName), "utf8"),
+          );
+          return Boolean(translation.fullTextJa?.trim());
+        } catch {
+          return false;
+        }
+      })
       .map((fileName) => fileName.replace(/\.json$/, ""))
       .sort();
   } catch {
@@ -40,13 +50,13 @@ function getFullTextRecordIds() {
 }
 
 export const metadata: Metadata = {
-  title: "Ruppelt V4.0 | PURSUE日本語インデックス",
+  title: "Ruppelt V4.5 | PURSUE日本語インデックス",
   description: ruppeltDescription,
   alternates: {
     canonical: "/ruppelt",
   },
   openGraph: {
-    title: "Ruppelt V4.0 - PURSUE日本語インデックス",
+    title: "Ruppelt V4.5 - PURSUE日本語インデックス",
     description: ruppeltDescription,
     url: ruppeltSocialUrl,
     siteName: "UFO Lab Tokyo",
@@ -55,7 +65,7 @@ export const metadata: Metadata = {
         url: ruppeltOgpImage,
         width: 1200,
         height: 630,
-        alt: "Ruppelt V4.0 - PURSUE日本語インデックス",
+        alt: "Ruppelt V4.5 - PURSUE日本語インデックス",
         type: "image/jpeg",
       },
     ],
@@ -63,12 +73,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ruppelt V4.0 - PURSUE日本語インデックス",
+    title: "Ruppelt V4.5 - PURSUE日本語インデックス",
     description: ruppeltDescription,
     images: [ruppeltOgpImage],
   },
   other: {
-    "twitter:image:alt": "Ruppelt V4.0 - PURSUE日本語インデックス",
+    "twitter:image:alt": "Ruppelt V4.5 - PURSUE日本語インデックス",
   },
 };
 
@@ -113,7 +123,7 @@ export default function RuppeltPage() {
           </div>
           <span className="sr-only">{siteConfig.shortName}</span>
         </div>
-        <h1>Ruppelt V4.0</h1>
+        <h1>Ruppelt V4.5</h1>
         <p className="tagline">PURSUE日本語インデックス</p>
         <p className="lead">アメリカ政府UAP公開資料をスマホでさくっと確認。</p>
         <p className="ruppelt-kean-note">

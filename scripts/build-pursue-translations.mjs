@@ -26,6 +26,7 @@ const releaseLabels = {
   release_03: "2026年6月12日（Release 03）",
   release_04: "2026年7月10日（Release 04）",
   release_05: "2026年8月7日（Release 05）",
+  release_06: "2026年9月18日（Release 06）",
 };
 const agencyLabels = {
   "Department of War": "米国戦争省",
@@ -45,6 +46,7 @@ const typeLabels = {
 function getReleaseId(record) {
   const release = String(record.source.release || "").toLowerCase();
 
+  if (release.includes("9/18") || release.includes("september 18")) return "release_06";
   if (release.includes("8/7") || release.includes("august 7")) return "release_05";
   if (release.includes("7/10") || release.includes("july 10")) return "release_04";
   if (release.includes("6/12") || release.includes("june 12")) return "release_03";

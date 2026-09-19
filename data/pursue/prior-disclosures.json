@@ -8044,5 +8044,3839 @@
     "ruppeltVerified": false,
     "manualReviewRequired": true,
     "reviewerNoteJa": "Release 05向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0376": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "TremontonフィルムとProject Blue Book関連資料は、PURSUE以前からNational Archivesの公開資料群で確認できます。",
+      "PURSUE版では関連資料がまとめて再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D102_Project-Blue-Book-File-on-Tremonton-Film-Utah-1952.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "National Archives Project Blue Book records",
+        "url": "https://www.archives.gov/research/catalog/catalog-bulk-downloads/uap-bulk-download",
+        "noteJa": "Project Blue Bookの事件ファイルと映像資料の公開コレクションにTremonton資料が含まれることを確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nara",
+        "sourceUrl": "https://www.archives.gov/research/catalog/catalog-bulk-downloads/uap-bulk-download",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0377": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D110_AAWSAP-Statement-of-Objectives-July-18-2008.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0378": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D111_AAWSAP-Solicitation-and-Original-Order-September-22-2008.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0379": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D117_AAWSAP-DIRD-Metallic-Glasses-for-Aerospace-Applications-December-14-2009.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0380": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D129_AAWSAP-DIRD-Metallic-Spintronics-March-23-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0381": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "Tremonton事件、Project Blue Book、Edward J. Ruppeltに関する元資料群は既公開です。",
+      "PURSUE版と同一の人事ファイル、講演書き起し、音声パッケージの先行公開は完全には確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D154_Transcript-of-a-Presentation-by-Captain-Edward-J-Ruppelt-1952.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "case_match",
+        "label": "National Archives Project Blue Book reference",
+        "url": "https://www.archives.gov/research/military/air-force/ufos",
+        "noteJa": "Project Blue Bookの事件・管理資料は既公開ですが、PURSUE版の同一ファイルまでは確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nara",
+        "sourceUrl": "https://www.archives.gov/research/military/air-force/ufos",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0382": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "TremontonフィルムとProject Blue Book関連資料は、PURSUE以前からNational Archivesの公開資料群で確認できます。",
+      "PURSUE版では関連資料がまとめて再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1023402",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "video_match",
+        "label": "National Archives Project Blue Book records",
+        "url": "https://www.archives.gov/research/catalog/catalog-bulk-downloads/uap-bulk-download",
+        "noteJa": "Project Blue Bookの事件ファイルと映像資料の公開コレクションにTremonton資料が含まれることを確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nara",
+        "sourceUrl": "https://www.archives.gov/research/catalog/catalog-bulk-downloads/uap-bulk-download",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0383": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "Tremonton事件、Project Blue Book、Edward J. Ruppeltに関する元資料群は既公開です。",
+      "PURSUE版と同一の人事ファイル、講演書き起し、音声パッケージの先行公開は完全には確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1023407",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "case_match",
+        "label": "National Archives Project Blue Book reference",
+        "url": "https://www.archives.gov/research/military/air-force/ufos",
+        "noteJa": "Project Blue Bookの事件・管理資料は既公開ですが、PURSUE版の同一ファイルまでは確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nara",
+        "sourceUrl": "https://www.archives.gov/research/military/air-force/ufos",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0384": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1023409",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS official media",
+        "url": "https://www.dvidshub.net/video/1023409",
+        "noteJa": "DVIDSの公式配信ページと資料名を照合し、PURSUE公開日より前の同一メディア公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/video/1023409",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0385": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1023412",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS official media",
+        "url": "https://www.dvidshub.net/video/1023412",
+        "noteJa": "DVIDSの公式配信ページと資料名を照合し、PURSUE公開日より前の同一メディア公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/video/1023412",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0386": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "TremontonフィルムとProject Blue Book関連資料は、PURSUE以前からNational Archivesの公開資料群で確認できます。",
+      "PURSUE版では関連資料がまとめて再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D103_Project-Blue-Book-Photo-File-Relating-to-Tremonton-Film-Utah-1952.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "National Archives Project Blue Book records",
+        "url": "https://www.archives.gov/research/catalog/catalog-bulk-downloads/uap-bulk-download",
+        "noteJa": "Project Blue Bookの事件ファイルと映像資料の公開コレクションにTremonton資料が含まれることを確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nara",
+        "sourceUrl": "https://www.archives.gov/research/catalog/catalog-bulk-downloads/uap-bulk-download",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0387": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "Tremonton事件、Project Blue Book、Edward J. Ruppeltに関する元資料群は既公開です。",
+      "PURSUE版と同一の人事ファイル、講演書き起し、音声パッケージの先行公開は完全には確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D104_Final-Personnel-Record-for-Newhouse-Delbert-C-US-Navy-1957.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "case_match",
+        "label": "National Archives Project Blue Book reference",
+        "url": "https://www.archives.gov/research/military/air-force/ufos",
+        "noteJa": "Project Blue Bookの事件・管理資料は既公開ですが、PURSUE版の同一ファイルまでは確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nara",
+        "sourceUrl": "https://www.archives.gov/research/military/air-force/ufos",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0388": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "TremontonフィルムとProject Blue Book関連資料は、PURSUE以前からNational Archivesの公開資料群で確認できます。",
+      "PURSUE版では関連資料がまとめて再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D105_US-Air-Force-Flying-Discs-File-September-December-1952.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "National Archives Project Blue Book records",
+        "url": "https://www.archives.gov/research/catalog/catalog-bulk-downloads/uap-bulk-download",
+        "noteJa": "Project Blue Bookの事件ファイルと映像資料の公開コレクションにTremonton資料が含まれることを確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nara",
+        "sourceUrl": "https://www.archives.gov/research/catalog/catalog-bulk-downloads/uap-bulk-download",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0389": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D106_Mission-Report-Iraq-2022.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "manual_review",
+        "label": "PURSUE file review",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D106_Mission-Report-Iraq-2022.pdf",
+        "noteJa": "公式資料名・文書種別・事件情報を照合し、PURSUE以前の同一ファイル公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D106_Mission-Report-Iraq-2022.pdf",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0390": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D107_Mission-Report-Middle-East-2025.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "manual_review",
+        "label": "PURSUE file review",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D107_Mission-Report-Middle-East-2025.pdf",
+        "noteJa": "公式資料名・文書種別・事件情報を照合し、PURSUE以前の同一ファイル公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D107_Mission-Report-Middle-East-2025.pdf",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0391": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D108_Mission-Report-Middle-East-2025.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "manual_review",
+        "label": "PURSUE file review",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D108_Mission-Report-Middle-East-2025.pdf",
+        "noteJa": "公式資料名・文書種別・事件情報を照合し、PURSUE以前の同一ファイル公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D108_Mission-Report-Middle-East-2025.pdf",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0392": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D109_Mission-Report-Middle-East-2022.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "manual_review",
+        "label": "PURSUE file review",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D109_Mission-Report-Middle-East-2022.pdf",
+        "noteJa": "公式資料名・文書種別・事件情報を照合し、PURSUE以前の同一ファイル公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D109_Mission-Report-Middle-East-2022.pdf",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0393": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D112_AAWSAP-Contract-Modification-P00001-September-2-2009.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0394": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D113_AAWSAP-Contract-Modification-P00002-February-2-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0395": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D114_AAWSAP-Contract-Modification-P00003-May-18- 2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0396": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D115_AAWSAP-Contract-Modification-P00004-May-18-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0397": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D116_AAWSAP-Contract-Modification-P00005-September-28-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0398": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D118_AAWSAP-DIRD-Aerospace-Applications-of-Programmable-Matter-December-14-2009.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0399": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D119_AAWSAP-DIRD-Biomaterials-January-7-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0400": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D120_AAWSAP-DIRD-Materials-for-Advanced-Aerospace-Platforms-January-12-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0401": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D121_AAWSAP-DIRD-Pulsed-High-Power-Microwave-Source-Technology-January-28-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0402": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D122_AAWSAP-DIRD-Invisibility-Cloaking-Theory-and-Experiments-March-2-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0403": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D123_AAWSAP-DIRD-Positron-Aerospace-Propulsion-March-2-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0404": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D124_AAWSAP-DIRD-Space Access-Where-Weve-Been-and-Where-We-Could-Go-March-8-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0405": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D125_AAWSA-DIRD-Inertial-Electrostatic-Confinement-Fusion-March-10-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0406": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D126_AAWSAP-DIRD-Advanced-Nuclear-Propulsion-for-Manned-Deep-Space-Missions-March-11-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0407": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D127_AAWSAP-DIRD-An-Introduction-to-the-Statistical-Drake-Equation-March-11-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0408": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D128_AAWSAP-DIRD-Anomalous-Acute-and-Subacute-Field-Effects-on-Human-Biological-Tissues-March-11-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0409": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D130_AAWSAP-DIRD-Technological-Approaches-to-Controlling-External-Devices-March-23-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0410": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D131_AAWSAP-DIRD-The-Role-of-Superconductors-in-Gravity-Research-March-23-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0411": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D132_AAWSAP-DIRD-Advanced-Space-Propulsion-Based-on-Vacuum-Spacetime Metric-Engineering-March-29-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0412": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D133_AAWSAP-DIRD-The-Space-Communication-Implications-of-Quantum-Entanglement-and-Nonlocality-March-30-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0413": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D134_AAWSAP-DIRD-Maverick-Inventor-Versus-Corporate-Inventor-Where-Will-the-Next-Major-Innovations-Arise-March-30-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0414": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D135_ AAWSAP-DIRD-Antigravity-for-Aerospace-Applications-March-30-2010-V2.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0415": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D136_AAWSAP-DIRD-Biosensors-and-BioMEMS-A-Survey-of-the-Present-Field-March-31-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0416": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D137_AAWSAP-DIRD-State-of-the-Art-and-Evolution-of-High-Energy-Lasers-March-31-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0417": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D138_AAWSAP-DIRD-Warp-Drive-Dark-Energy-and-the-Manipulation-of-Extra-Dimensions-April-2-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0418": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D139_AAWSAP-DIRD-Traversable-Wormholes-Stargates-and-Negative-Energy-April-6-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0419": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D140_AAWSAP-DIRD-High-Frequency-Gravitational-Wave-Communications-April-6-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0420": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D141_AAWSAP-DIRD-Metamaterials-for-Aerospace-Applications-April-6-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0421": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D142_AAWSAP-DIRD-Concepts-for-Extracting-Energy-from-the-Quantum-Vacuum-April-6-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0422": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D143_AAWSAP-DIRD-Laser-Lightcraft-Nanosatellites-November-1-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0423": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D144_AAWSAP-DIRD-Cockpits-in-the-Era-of-Breakthrough-Flight-November-1-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0424": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D145_AAWSAP-DIRD-Aneutronic-Fusion-Propulsion-I-November-1-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0425": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D146_AAWSAP-DIRD-Aneutronic-Fusion-Propulsion-II-November-1-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0426": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D147_AAWSAP-DIRD-Ultracapacitors-as-Energy-and-Power-Storage-Devices-November-1-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0427": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D148_AAWSAP-DIRD-Detection-and-High-Resolution-Tracking-of-Vehicles-at-Hypersonic-Velocities-November-20-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0428": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D149_AAWSAP-DIRD-MHD-Air-Breathing-Propulsion-and-Power-for-Aerospace-Applications-November-21-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0429": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D150_AAWSAP-DIRD-Quantum-Computing-and-Utilizing-Organic-Molecules-in-Automation-Technology-December-10-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0430": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D151_AAWSAP-DIRD-Cognitive-Limits-on-Simultaneous-Control-of-Multiple-Unmanned-Spacecraft-December-15-2010.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0431": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D152_AAWSAP-DIRD-Negative-Mass-Propulsion-January-3-2011.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0432": {
+    "status": "previously_public",
+    "labelJa": "既に公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同題のAAWSAP契約資料またはDIRDが、PURSUE以前からDIA FOIA Electronic Reading Roomで公開されています。",
+      "PURSUE版ではUAP関連資料として再掲されています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-D153_AAWSAP-DIRD-Quantum-Tomography-of-Negative-Energy-States-in-the-Vacuum-January-11-2011.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAPの契約資料とDefense Intelligence Reference Documentsの同題公開資料を確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0433": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-PR130_Unresolved-UAP-Report-Iraq-2022.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "manual_review",
+        "label": "PURSUE file review",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-PR130_Unresolved-UAP-Report-Iraq-2022.pdf",
+        "noteJa": "公式資料名・文書種別・事件情報を照合し、PURSUE以前の同一ファイル公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-PR130_Unresolved-UAP-Report-Iraq-2022.pdf",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0434": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-PR131_Unresolved-UAP-Report-Iraq-2022.pdf",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "manual_review",
+        "label": "PURSUE file review",
+        "url": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-PR131_Unresolved-UAP-Report-Iraq-2022.pdf",
+        "noteJa": "公式資料名・文書種別・事件情報を照合し、PURSUE以前の同一ファイル公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.war.gov/medialink/ufo/sept-18/release-06/assets/DOW-UAP-PR131_Unresolved-UAP-Report-Iraq-2022.pdf",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0435": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1023396",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS official media",
+        "url": "https://www.dvidshub.net/video/1023396",
+        "noteJa": "DVIDSの公式配信ページと資料名を照合し、PURSUE公開日より前の同一メディア公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/video/1023396",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0436": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1023397",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS official media",
+        "url": "https://www.dvidshub.net/video/1023397",
+        "noteJa": "DVIDSの公式配信ページと資料名を照合し、PURSUE公開日より前の同一メディア公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/video/1023397",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0437": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1023398",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS official media",
+        "url": "https://www.dvidshub.net/video/1023398",
+        "noteJa": "DVIDSの公式配信ページと資料名を照合し、PURSUE公開日より前の同一メディア公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/video/1023398",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0438": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1023400",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS official media",
+        "url": "https://www.dvidshub.net/video/1023400",
+        "noteJa": "DVIDSの公式配信ページと資料名を照合し、PURSUE公開日より前の同一メディア公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/video/1023400",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0439": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1023403",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS official media",
+        "url": "https://www.dvidshub.net/video/1023403",
+        "noteJa": "DVIDSの公式配信ページと資料名を照合し、PURSUE公開日より前の同一メディア公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/video/1023403",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0440": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1023404",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS official media",
+        "url": "https://www.dvidshub.net/video/1023404",
+        "noteJa": "DVIDSの公式配信ページと資料名を照合し、PURSUE公開日より前の同一メディア公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/video/1023404",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0441": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1023405",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS official media",
+        "url": "https://www.dvidshub.net/video/1023405",
+        "noteJa": "DVIDSの公式配信ページと資料名を照合し、PURSUE公開日より前の同一メディア公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/video/1023405",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0442": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1023406",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS official media",
+        "url": "https://www.dvidshub.net/video/1023406",
+        "noteJa": "DVIDSの公式配信ページと資料名を照合し、PURSUE公開日より前の同一メディア公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/video/1023406",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0443": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1023408",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS official media",
+        "url": "https://www.dvidshub.net/video/1023408",
+        "noteJa": "DVIDSの公式配信ページと資料名を照合し、PURSUE公開日より前の同一メディア公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/video/1023408",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0444": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1023410",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS official media",
+        "url": "https://www.dvidshub.net/video/1023410",
+        "noteJa": "DVIDSの公式配信ページと資料名を照合し、PURSUE公開日より前の同一メディア公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/video/1023410",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0445": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1023414",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS official media",
+        "url": "https://www.dvidshub.net/video/1023414",
+        "noteJa": "DVIDSの公式配信ページと資料名を照合し、PURSUE公開日より前の同一メディア公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/video/1023414",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0446": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "PURSUE以前の同一ファイル公開は、公的アーカイブと公式配信ページで確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/Portals/1/Interactive/2026/UFO/1023416",
+        "noteJa": "PURSUE Release 06の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "video_match",
+        "label": "DVIDS official media",
+        "url": "https://www.dvidshub.net/video/1023416",
+        "noteJa": "DVIDSの公式配信ページと資料名を照合し、PURSUE公開日より前の同一メディア公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "dvids",
+        "sourceUrl": "https://www.dvidshub.net/video/1023416",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-09-19",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
   }
 }

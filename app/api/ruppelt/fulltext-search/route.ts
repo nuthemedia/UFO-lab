@@ -1,9 +1,10 @@
 import { readFile } from "node:fs/promises";
-import { resolve } from "node:path";
+import { dirname, resolve } from "node:path";
 import { NextResponse } from "next/server";
 import MiniSearch from "minisearch";
 
 const fulltextIndexPath = resolve(process.cwd(), "data/shared/search/fulltext-index.json");
+const fulltextIndexDir = dirname(fulltextIndexPath);
 const bundlesPath = resolve(process.cwd(), "data/shared/pursue-document-bundles.json");
 const translationsDir = resolve(process.cwd(), "data/shared/translations/ja");
 const snippetHydrationLimit = 60;
@@ -24,6 +25,11 @@ type FulltextIndexPayload = {
   engine?: string;
   index?: unknown;
   documents?: FulltextIndexItem[];
+  shards?: Array<{
+    releaseId: string;
+    file: string;
+    count: number;
+  }>;
 };
 
 const fields = ["metadataText", "summaryText", "fullTextJa", "ocrTextEn"];
@@ -40,7 +46,7 @@ type SearchResult = {
 type LoadedSearchIndex = {
   documents: FulltextIndexItem[];
   documentById: Map<string, FulltextIndexItem>;
-  miniSearch: MiniSearch | null;
+  miniSearches: MiniSearch[];
 };
 
 type PursueDocumentBundle = {
@@ -77,14 +83,10 @@ function getJapaneseGrams(value: string) {
       grams.push(sequence);
     }
 
-    for (let size = 2; size <= 3; size += 1) {
-      if (sequence.length < size) {
-        continue;
-      }
+    const size = 2;
 
-      for (let index = 0; index <= sequence.length - size; index += 1) {
-        grams.push(sequence.slice(index, index + size));
-      }
+    for (let index = 0; index <= sequence.length - size; index += 1) {
+      grams.push(sequence.slice(index, index + size));
     }
   }
 
@@ -94,7 +96,9 @@ function getJapaneseGrams(value: string) {
 function tokenizeForRuppeltSearch(value: string) {
   const normalized = normalizeSearchText(value);
   const latinTokens = normalized.match(/[a-z0-9]+/g) || [];
-  return [...latinTokens, ...getJapaneseGrams(normalized)].filter((token) => token.length > 1);
+  return Array.from(
+    new Set([...latinTokens, ...getJapaneseGrams(normalized)].filter((token) => token.length > 1)),
+  );
 }
 
 function makeSnippet(text: string, query: string) {
@@ -184,22 +188,39 @@ async function makeHydratedSnippet(document: FulltextIndexItem, query: string) {
 async function loadSearchIndex() {
   if (!cachedSearchIndexPromise) {
     cachedSearchIndexPromise = readFile(fulltextIndexPath, "utf8")
-      .then((content) => {
+      .then(async (content) => {
         const payload = JSON.parse(content) as FulltextIndexPayload | FulltextIndexItem[];
-        const documents = Array.isArray(payload) ? payload : payload.documents || [];
+        const shardPayloads =
+          !Array.isArray(payload) && payload.shards?.length
+            ? await Promise.all(
+                payload.shards.map((shard) =>
+                  readFile(resolve(fulltextIndexDir, shard.file), "utf8").then(
+                    (shardContent) => JSON.parse(shardContent) as FulltextIndexPayload,
+                  ),
+                ),
+              )
+            : [];
+        const loadedPayloads = shardPayloads.length
+          ? shardPayloads
+          : Array.isArray(payload)
+            ? []
+            : [payload];
+        const documents = Array.isArray(payload)
+          ? payload
+          : loadedPayloads.flatMap((item) => item.documents || []);
         const documentById = new Map(documents.map((item) => [item.recordId, item]));
-        let miniSearch: MiniSearch | null = null;
+        const miniSearches = loadedPayloads
+          .filter((item) => item.engine === "minisearch" && item.index)
+          .map((item) =>
+            MiniSearch.loadJS(item.index as Parameters<typeof MiniSearch.loadJS>[0], {
+              fields,
+              storeFields,
+              idField: "id",
+              tokenize: tokenizeForRuppeltSearch,
+            }),
+          );
 
-        if (!Array.isArray(payload) && payload.engine === "minisearch" && payload.index) {
-          miniSearch = MiniSearch.loadJS(payload.index as Parameters<typeof MiniSearch.loadJS>[0], {
-            fields,
-            storeFields,
-            idField: "id",
-            tokenize: tokenizeForRuppeltSearch,
-          });
-        }
-
-        return { documents, documentById, miniSearch };
+        return { documents, documentById, miniSearches };
       })
       .catch((error) => {
         cachedSearchIndexPromise = null;
@@ -219,10 +240,10 @@ export async function GET(request: Request) {
   }
 
   try {
-    const { documents, documentById, miniSearch } = await loadSearchIndex();
+    const { documents, documentById, miniSearches } = await loadSearchIndex();
     let results: SearchResult[] = [];
 
-    if (miniSearch) {
+    if (miniSearches.length) {
       const searchOptions: {
         prefix: boolean;
         fuzzy?: number;
@@ -243,7 +264,9 @@ export async function GET(request: Request) {
         searchOptions.fuzzy = 0.12;
       }
 
-      results = miniSearch.search(query, searchOptions) as SearchResult[];
+      results = miniSearches
+        .flatMap((miniSearch) => miniSearch.search(query, searchOptions) as SearchResult[])
+        .sort((left, right) => (right.score || 0) - (left.score || 0));
     } else {
       const normalizedQuery = normalizeSearchText(query);
       results = documents

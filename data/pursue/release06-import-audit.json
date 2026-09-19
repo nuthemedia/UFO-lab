@@ -1,0 +1,25 @@
+{
+  "generatedAt": "2026-09-19",
+  "sourceManifestRows": 449,
+  "deduplicatedRecordCount": 446,
+  "release06RecordCount": 71,
+  "duplicateRowsExcluded": 3,
+  "duplicates": [
+    {
+      "release": "5/8/26",
+      "title": "NASA-UAP-D003A, Gemini 7 Audio Excerpt, 1965",
+      "upstreamIds": [21, 163]
+    },
+    {
+      "release": "5/22/26",
+      "title": "CIA-UAP-D001, Intelligence Information Report, USSR, 1973",
+      "upstreamIds": [167, 314]
+    },
+    {
+      "release": "5/22/26",
+      "title": "DOW-UAP-PR057b, \"[Platform] Observes UAP in East China Sea 05 JAN 2023 INDOPACOM\"",
+      "upstreamIds": [178, 179]
+    }
+  ],
+  "policy": "Preserve the existing Ruppelt IDs and records, exclude duplicate upstream rows, and append the 71 unique Release 06 records only."
+}
