@@ -33,6 +33,7 @@ describe("POST /api/jenny/analyze", () => {
     vi.resetModules();
     vi.clearAllMocks();
     process.env.AI_GATEWAY_API_KEY = "test-key";
+    delete process.env.VERCEL_OIDC_TOKEN;
     reserveJennyQuota.mockResolvedValue({ allowed: true, remainingToday: 4, resetsAt: "2026-09-20T15:00:00.000Z", rollback });
     analyzeJennyReport.mockResolvedValue(validCore);
   });
@@ -54,6 +55,18 @@ describe("POST /api/jenny/analyze", () => {
     expect(response.status).toBe(200);
     expect(analyzeJennyReport).toHaveBeenCalledTimes(1);
     expect((await response.json()).quota.remainingToday).toBe(4);
+  });
+
+  it("allows Vercel OIDC when no AI Gateway API key is configured", async () => {
+    delete process.env.AI_GATEWAY_API_KEY;
+    process.env.VERCEL_OIDC_TOKEN = "test-oidc-token";
+    const { POST } = await import("./route");
+    const response = await POST(new Request("http://localhost/api/jenny/analyze", {
+      method: "POST",
+      body: JSON.stringify({ reportText: "観測日時と場所、物体の形状、距離、動き、周囲の状況、複数の証言、記録の有無を含む十分に長い目撃報告です。".repeat(3) }),
+    }));
+    expect(response.status).toBe(200);
+    expect(analyzeJennyReport).toHaveBeenCalledTimes(1);
   });
 
   it("does not call Jev after the daily limit", async () => {

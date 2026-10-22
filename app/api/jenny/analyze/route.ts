@@ -51,7 +51,7 @@ export async function POST(request: Request) {
     return errorResponse("文章は20,000文字以内にしてください。", "INPUT_TOO_LONG", 413);
   }
 
-  if (!process.env.AI_GATEWAY_API_KEY) {
+  if (!process.env.AI_GATEWAY_API_KEY && !process.env.VERCEL_OIDC_TOKEN) {
     return errorResponse("現在Jev分析を利用できません。しばらくしてからお試しください。", "SERVICE_UNAVAILABLE", 503);
   }
 

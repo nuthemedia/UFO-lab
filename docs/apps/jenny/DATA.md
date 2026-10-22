@@ -92,7 +92,8 @@ Quota record:
 
 ## Environment Variables
 
-- `AI_GATEWAY_API_KEY`：Jenny専用のプロジェクトスコープAI Gatewayキー。未設定時は503。
+- Vercel本番・PreviewではAI Gatewayの自動OIDC認証を使い、長期有効な `AI_GATEWAY_API_KEY` を置かない。
+- ローカル開発では `AI_GATEWAY_API_KEY` を使える。Vercel OIDCトークンを利用する場合は `VERCEL_OIDC_TOKEN` を使う。
 - `KV_REST_API_URL` / `KV_REST_API_TOKEN`：本番の日次制限に必須。未設定または障害時は本番で503。
 - ローカル開発ではKV未設定時だけ、プロセス内メモリの回数管理を使用できる。
 
