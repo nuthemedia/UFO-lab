@@ -23,6 +23,10 @@ const priorDisclosureLabels = {
 function getReleaseId(record) {
   const release = record.source.release.toLowerCase();
 
+  if (release.includes("10/23") || release.includes("october 23")) {
+    return "release_07";
+  }
+
   if (release.includes("9/18") || release.includes("september 18")) {
     return "release_06";
   }
@@ -54,6 +58,7 @@ function makeDefaultPriorDisclosure(record) {
     release_04: "Release 04",
     release_05: "Release 05",
     release_06: "Release 06",
+    release_07: "Release 07",
   }[releaseId];
 
   return {

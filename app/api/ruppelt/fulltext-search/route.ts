@@ -59,9 +59,18 @@ type TranslationDocument = {
   fullTextJa?: string;
 };
 
-let cachedSearchIndexPromise: Promise<LoadedSearchIndex> | null = null;
+let cachedManifestPromise: Promise<FulltextIndexPayload | FulltextIndexItem[]> | null = null;
+const cachedSearchIndexPromises = new Map<string, Promise<LoadedSearchIndex>>();
 let cachedBundlesPromise: Promise<Record<string, PursueDocumentBundle>> | null = null;
 const cachedTranslationPromises = new Map<string, Promise<TranslationDocument>>();
+const resultCache = new Map<string, Array<{
+  documentId: string;
+  recordId: string;
+  score: number;
+  matchedFields: string[];
+  snippet: string;
+}>>();
+const resultCacheLimit = 40;
 
 function normalizeSearchText(value: string) {
   return String(value || "")
@@ -185,21 +194,39 @@ async function makeHydratedSnippet(document: FulltextIndexItem, query: string) {
   return "";
 }
 
-async function loadSearchIndex() {
-  if (!cachedSearchIndexPromise) {
-    cachedSearchIndexPromise = readFile(fulltextIndexPath, "utf8")
-      .then(async (content) => {
-        const payload = JSON.parse(content) as FulltextIndexPayload | FulltextIndexItem[];
-        const shardPayloads =
+async function loadManifest() {
+  if (!cachedManifestPromise) {
+    cachedManifestPromise = readFile(fulltextIndexPath, "utf8")
+      .then((content) => JSON.parse(content) as FulltextIndexPayload | FulltextIndexItem[])
+      .catch((error) => {
+        cachedManifestPromise = null;
+        throw error;
+      });
+  }
+
+  return cachedManifestPromise;
+}
+
+async function loadSearchIndex(releaseId: string) {
+  const cacheKey = releaseId || "all";
+
+  if (!cachedSearchIndexPromises.has(cacheKey)) {
+    cachedSearchIndexPromises.set(
+      cacheKey,
+      loadManifest().then(async (payload) => {
+        const selectedShards =
           !Array.isArray(payload) && payload.shards?.length
-            ? await Promise.all(
-                payload.shards.map((shard) =>
+            ? payload.shards.filter((shard) => !releaseId || shard.releaseId === releaseId)
+            : [];
+        const shardPayloads = selectedShards.length
+          ? await Promise.all(
+              selectedShards.map((shard) =>
                   readFile(resolve(fulltextIndexDir, shard.file), "utf8").then(
                     (shardContent) => JSON.parse(shardContent) as FulltextIndexPayload,
                   ),
                 ),
               )
-            : [];
+          : [];
         const loadedPayloads = shardPayloads.length
           ? shardPayloads
           : Array.isArray(payload)
@@ -221,26 +248,37 @@ async function loadSearchIndex() {
           );
 
         return { documents, documentById, miniSearches };
-      })
-      .catch((error) => {
-        cachedSearchIndexPromise = null;
+      }).catch((error) => {
+        cachedSearchIndexPromises.delete(cacheKey);
         throw error;
-      });
+      }),
+    );
   }
 
-  return cachedSearchIndexPromise;
+  return cachedSearchIndexPromises.get(cacheKey)!;
 }
 
 export async function GET(request: Request) {
   const url = new URL(request.url);
   const query = (url.searchParams.get("q") || "").trim();
+  const requestedRelease = (url.searchParams.get("release") || "").trim();
+  const releaseId = /^release_\d{2}$/.test(requestedRelease) ? requestedRelease : "";
 
   if (!query) {
     return NextResponse.json({ query, matches: [] });
   }
 
+  const resultCacheKey = `${releaseId}\0${normalizeSearchText(query)}`;
+  const cachedMatches = resultCache.get(resultCacheKey);
+
+  if (cachedMatches) {
+    resultCache.delete(resultCacheKey);
+    resultCache.set(resultCacheKey, cachedMatches);
+    return NextResponse.json({ query, matches: cachedMatches });
+  }
+
   try {
-    const { documents, documentById, miniSearches } = await loadSearchIndex();
+    const { documents, documentById, miniSearches } = await loadSearchIndex(releaseId);
     let results: SearchResult[] = [];
 
     if (miniSearches.length) {
@@ -303,6 +341,11 @@ export async function GET(request: Request) {
         };
       }),
     );
+
+    resultCache.set(resultCacheKey, matches);
+    if (resultCache.size > resultCacheLimit) {
+      resultCache.delete(resultCache.keys().next().value || "");
+    }
 
     return NextResponse.json({ query, matches });
   } catch (error) {

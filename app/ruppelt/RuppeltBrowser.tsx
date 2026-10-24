@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useReducer, useRef, useState, type PointerEvent } from "react";
 import {
+  getSearchText,
   priorDisclosureLabels,
   priorDisclosureStatusOptions,
   sortRecords,
@@ -41,6 +42,8 @@ type RuppeltBrowserProps = {
   index: PursueIndex;
   fullTextRecordIds: string[];
 };
+
+const initialRenderLimit = 24;
 
 type DescriptionFallbackFulltextState = {
   query: string;
@@ -109,6 +112,7 @@ export function RuppeltBrowser({ index, fullTextRecordIds }: RuppeltBrowserProps
   const [carouselDragging, setCarouselDragging] = useState(false);
   const [carouselScrolling, setCarouselScrolling] = useState(false);
   const [searchHydrated, setSearchHydrated] = useState(false);
+  const [renderLimit, setRenderLimit] = useState(initialRenderLimit);
   const carouselRef = useRef<HTMLDivElement | null>(null);
   const carouselItemRefs = useRef<Array<HTMLDivElement | null>>([]);
   const carouselScrollFrameRef = useRef(0);
@@ -178,10 +182,12 @@ export function RuppeltBrowser({ index, fullTextRecordIds }: RuppeltBrowserProps
 
     const controller = new AbortController();
     const requestQuery = query.trim();
+    const releaseId = index.records.find((record) => record.source.release === release)?.searchFacets?.releaseId || "";
+    const releaseParam = releaseId ? `&release=${encodeURIComponent(releaseId)}` : "";
 
     dispatchSearch({ type: "fulltextStart", query: requestQuery });
 
-    fetch(`/api/ruppelt/fulltext-search?q=${encodeURIComponent(requestQuery)}`, {
+    fetch(`/api/ruppelt/fulltext-search?q=${encodeURIComponent(requestQuery)}${releaseParam}`, {
       signal: controller.signal,
     })
       .then((response) => {
@@ -211,13 +217,17 @@ export function RuppeltBrowser({ index, fullTextRecordIds }: RuppeltBrowserProps
       });
 
     return () => controller.abort();
-  }, [query, searchMode]);
+  }, [index.records, query, release, searchMode]);
 
   const releases = useMemo(() => uniqueValues(index.records, (record) => record.source.release), [index.records]);
   const agencies = useMemo(() => uniqueValues(index.records, (record) => record.source.agency), [index.records]);
   const types = useMemo(() => uniqueValues(index.records, (record) => record.source.documentType), [index.records]);
   const recordById = useMemo(
     () => new Map(index.records.map((record) => [record.source.id, record])),
+    [index.records],
+  );
+  const preparedSearchTextById = useMemo(
+    () => new Map(index.records.map((record) => [record.source.id, getSearchText(record).normalize("NFKC")])),
     [index.records],
   );
   const priorDisclosureCounts = useMemo(() => {
@@ -262,18 +272,17 @@ export function RuppeltBrowser({ index, fullTextRecordIds }: RuppeltBrowserProps
     agency: "機関順",
   }[sort];
   const activeFilterChips = [
-    `公開日: ${release || "すべて"}`,
-    `機関: ${agency || "すべて"}`,
-    `種別: ${type || "すべて"}`,
-    `公開状況: ${
+    release ? `公開日: ${release}` : "",
+    agency ? `機関: ${agency}` : "",
+    type ? `種別: ${type}` : "",
+    priorDisclosureStatus ? `公開状況: ${
       priorDisclosureStatus === "unreviewed"
         ? "未判定"
-        : priorDisclosureStatus
-          ? priorDisclosureLabels[priorDisclosureStatus]
-          : "すべて"
-    }`,
-    sortLabel,
-  ];
+        : priorDisclosureLabels[priorDisclosureStatus]
+    }` : "",
+    showSavedOnly ? "保存済み" : "",
+    sort !== "newest" ? sortLabel : "",
+  ].filter(Boolean);
   const searchExamples = useMemo(() => ["Roswell", "日本"], []);
   const visibleRecords = useMemo(() => {
     const fulltextMatchedIds =
@@ -281,14 +290,31 @@ export function RuppeltBrowser({ index, fullTextRecordIds }: RuppeltBrowserProps
         ? new Set(fulltextMatches.map((match) => match.recordId))
         : new Set<string>();
     const filtered = index.records.filter((record) => {
-      const filterOnlyMatch = matchesRecord(record, "", release, agency, type, priorDisclosureStatus);
+      const preparedSearchText = preparedSearchTextById.get(record.source.id);
+      const filterOnlyMatch = matchesRecord(
+        record,
+        "",
+        release,
+        agency,
+        type,
+        priorDisclosureStatus,
+        preparedSearchText,
+      );
 
       if (!filterOnlyMatch) {
         return false;
       }
 
       if (searchMode !== "fulltext") {
-        return matchesRecord(record, query, release, agency, type, priorDisclosureStatus);
+        return matchesRecord(
+          record,
+          query,
+          release,
+          agency,
+          type,
+          priorDisclosureStatus,
+          preparedSearchText,
+        );
       }
 
       if (!query.trim()) {
@@ -300,7 +326,15 @@ export function RuppeltBrowser({ index, fullTextRecordIds }: RuppeltBrowserProps
       }
 
       return (
-        matchesRecord(record, query, release, agency, type, priorDisclosureStatus) ||
+        matchesRecord(
+          record,
+          query,
+          release,
+          agency,
+          type,
+          priorDisclosureStatus,
+          preparedSearchText,
+        ) ||
         fulltextMatchedIds.has(record.source.id)
       );
     });
@@ -312,6 +346,7 @@ export function RuppeltBrowser({ index, fullTextRecordIds }: RuppeltBrowserProps
     fulltextMatchesQuery,
     fulltextResultPending,
     index.records,
+    preparedSearchTextById,
     priorDisclosureStatus,
     query,
     release,
@@ -353,7 +388,15 @@ export function RuppeltBrowser({ index, fullTextRecordIds }: RuppeltBrowserProps
         return false;
       }
 
-      if (!matchesRecord(record, "", release, agency, type, priorDisclosureStatus)) {
+      if (!matchesRecord(
+        record,
+        "",
+        release,
+        agency,
+        type,
+        priorDisclosureStatus,
+        preparedSearchTextById.get(record.source.id),
+      )) {
         return false;
       }
 
@@ -363,6 +406,7 @@ export function RuppeltBrowser({ index, fullTextRecordIds }: RuppeltBrowserProps
     agency,
     descriptionFallbackFulltextMatches,
     priorDisclosureStatus,
+    preparedSearchTextById,
     recordById,
     release,
     savedIds,
@@ -391,8 +435,10 @@ export function RuppeltBrowser({ index, fullTextRecordIds }: RuppeltBrowserProps
 
     const controller = new AbortController();
     dispatchDescriptionFallbackFulltext({ type: "start", query: requestQuery });
+    const releaseId = index.records.find((record) => record.source.release === release)?.searchFacets?.releaseId || "";
+    const releaseParam = releaseId ? `&release=${encodeURIComponent(releaseId)}` : "";
 
-    fetch(`/api/ruppelt/fulltext-search?q=${encodeURIComponent(requestQuery)}`, {
+    fetch(`/api/ruppelt/fulltext-search?q=${encodeURIComponent(requestQuery)}${releaseParam}`, {
       signal: controller.signal,
     })
       .then((response) => {
@@ -425,7 +471,9 @@ export function RuppeltBrowser({ index, fullTextRecordIds }: RuppeltBrowserProps
   }, [
     descriptionFallbackFulltext.query,
     descriptionFallbackFulltext.status,
+    index.records,
     normalizedQuery,
+    release,
     shouldCheckDescriptionFallbackFulltext,
   ]);
 
@@ -560,11 +608,17 @@ export function RuppeltBrowser({ index, fullTextRecordIds }: RuppeltBrowserProps
   }
 
   const displayedRecords = fulltextResultPending ? stableVisibleRecordsRef.current : visibleRecords;
+  const renderedRecords = displayedRecords.slice(0, renderLimit);
+  const hasMoreRecords = renderLimit < displayedRecords.length;
   const resultCountLabel = !searchHydrated
     ? "検索準備中..."
     : fulltextResultPending
       ? "日本語全文訳を検索中..."
-      : `${displayedRecords.length} 件`;
+      : `${renderedRecords.length} / ${displayedRecords.length} 件表示`;
+
+  useEffect(() => {
+    queueMicrotask(() => setRenderLimit(initialRenderLimit));
+  }, [agency, priorDisclosureStatus, query, release, searchMode, showSavedOnly, sort, type]);
 
   useEffect(() => {
     if (viewMode !== "carousel") {
@@ -642,7 +696,7 @@ export function RuppeltBrowser({ index, fullTextRecordIds }: RuppeltBrowserProps
         carouselScrollTimeoutRef.current = 0;
       }
     };
-  }, [displayedRecords.length, viewMode]);
+  }, [renderedRecords.length, viewMode]);
 
   useEffect(() => {
     if (viewMode !== "carousel") {
@@ -668,7 +722,6 @@ export function RuppeltBrowser({ index, fullTextRecordIds }: RuppeltBrowserProps
     <section className="ruppelt-browser" aria-label="PURSUEレコード">
       <div className="ruppelt-controls">
         <RuppeltSearchControls
-          key={query}
           committedQuery={query}
           fulltextError={fulltextError}
           fulltextLoading={fulltextLoading}
@@ -691,9 +744,11 @@ export function RuppeltBrowser({ index, fullTextRecordIds }: RuppeltBrowserProps
             絞り込み
           </button>
           <div className="ruppelt-filter-chips" aria-label="現在の絞り込み条件">
-            {activeFilterChips.map((chip) => (
-              <span key={chip}>{chip}</span>
-            ))}
+            {activeFilterChips.length ? (
+              activeFilterChips.map((chip) => <span key={chip}>{chip}</span>)
+            ) : (
+              <span>絞り込みなし</span>
+            )}
           </div>
         </div>
 
@@ -876,7 +931,7 @@ export function RuppeltBrowser({ index, fullTextRecordIds }: RuppeltBrowserProps
                   }
                 }}
               >
-                {displayedRecords.map((record, itemIndex) => (
+                {renderedRecords.map((record, itemIndex) => (
                   <div
                     key={record.source.id}
                     className={`ruppelt-carousel-item${
@@ -906,7 +961,7 @@ export function RuppeltBrowser({ index, fullTextRecordIds }: RuppeltBrowserProps
             </div>
           ) : (
             <div className="ruppelt-card-grid ruppelt-card-grid--list" aria-label="一覧表示">
-              {displayedRecords.map((record) => (
+              {renderedRecords.map((record) => (
                 <RecordCard
                   key={record.source.id}
                   record={record}
@@ -922,6 +977,13 @@ export function RuppeltBrowser({ index, fullTextRecordIds }: RuppeltBrowserProps
               ))}
             </div>
           )}
+          {hasMoreRecords ? (
+            <div className="ruppelt-load-more">
+              <button type="button" onClick={() => setRenderLimit((current) => current + initialRenderLimit)}>
+                さらに24件表示
+              </button>
+            </div>
+          ) : null}
         </>
       )}
       {selectedDisclosureRecord ? (
@@ -965,9 +1027,33 @@ function RuppeltSearchControls({
 }) {
   const [draftQuery, setDraftQuery] = useState(committedQuery);
   const searchComposingRef = useRef(false);
+  const incrementalSearchTimerRef = useRef(0);
   const hasPendingSearch = draftQuery.trim() !== committedQuery;
 
+  useEffect(() => {
+    queueMicrotask(() => setDraftQuery(committedQuery));
+  }, [committedQuery]);
+
+  useEffect(() => {
+    if (incrementalSearchTimerRef.current) {
+      window.clearTimeout(incrementalSearchTimerRef.current);
+    }
+
+    if (searchMode !== "description" || searchComposingRef.current || !hasPendingSearch) {
+      return;
+    }
+
+    incrementalSearchTimerRef.current = window.setTimeout(() => {
+      onCommitSearch(draftQuery.trim());
+    }, 300);
+
+    return () => window.clearTimeout(incrementalSearchTimerRef.current);
+  }, [draftQuery, hasPendingSearch, onCommitSearch, searchMode]);
+
   const commitDraft = () => {
+    if (incrementalSearchTimerRef.current) {
+      window.clearTimeout(incrementalSearchTimerRef.current);
+    }
     const nextQuery = draftQuery.trim();
     setDraftQuery(nextQuery);
     onCommitSearch(nextQuery);
@@ -985,6 +1071,22 @@ function RuppeltSearchControls({
 
   return (
     <>
+      <div className="ruppelt-search-mode" role="group" aria-label="検索対象">
+        <button
+          type="button"
+          aria-pressed={searchMode === "description"}
+          onClick={() => onChangeSearchMode("description")}
+        >
+          日本語資料説明
+        </button>
+        <button
+          type="button"
+          aria-pressed={searchMode === "fulltext"}
+          onClick={() => onChangeSearchMode("fulltext")}
+        >
+          日本語全文訳
+        </button>
+      </div>
       <form
         className="ruppelt-search"
         role="search"
@@ -1004,14 +1106,31 @@ function RuppeltSearchControls({
             onChange={(event) => setDraftQuery(event.target.value)}
             onCompositionStart={() => {
               searchComposingRef.current = true;
+              if (incrementalSearchTimerRef.current) {
+                window.clearTimeout(incrementalSearchTimerRef.current);
+              }
             }}
-            onCompositionEnd={() => {
+            onCompositionEnd={(event) => {
               searchComposingRef.current = false;
+              if (searchMode === "description") {
+                const nextQuery = event.currentTarget.value.trim();
+                incrementalSearchTimerRef.current = window.setTimeout(() => {
+                  onCommitSearch(nextQuery);
+                }, 300);
+              }
             }}
             onKeyDown={(event) => {
-              if (event.key === "Enter" && (event.nativeEvent.isComposing || searchComposingRef.current)) {
-                event.preventDefault();
+              if (event.key !== "Enter") {
+                return;
               }
+
+              if (searchComposingRef.current) {
+                event.preventDefault();
+                return;
+              }
+
+              event.preventDefault();
+              commitDraft();
             }}
             placeholder={searchMode === "fulltext" ? "日本語全文・英語OCRを検索" : "資料名、機関、場所、説明を検索"}
             autoComplete="off"
@@ -1021,7 +1140,7 @@ function RuppeltSearchControls({
           />
         </label>
         <div className="ruppelt-search-actions">
-          <button type="submit">検索</button>
+          <button type="submit">{searchMode === "fulltext" ? "全文を検索" : "検索"}</button>
           {draftQuery || committedQuery ? (
             <button type="button" onClick={clearDraft}>
               クリア
@@ -1038,43 +1157,15 @@ function RuppeltSearchControls({
         ))}
       </div>
       <p className="ruppelt-search-note" aria-live="polite">
-        {committedQuery || hasPendingSearch ? (
-          <>
-            {committedQuery ? `検索中: ${committedQuery}` : "検索条件なし"}
-            {hasPendingSearch ? " / 未反映" : ""}
-          </>
-        ) : (
-          " "
-        )}
-      </p>
-      <div className="ruppelt-search-mode" role="group" aria-label="検索対象">
-        <button
-          type="button"
-          aria-pressed={searchMode === "description"}
-          onClick={() => onChangeSearchMode("description")}
-        >
-          日本語資料説明
-        </button>
-        <button
-          type="button"
-          aria-pressed={searchMode === "fulltext"}
-          onClick={() => onChangeSearchMode("fulltext")}
-        >
-          日本語全文訳
-        </button>
-      </div>
-      <p className="ruppelt-search-note" aria-live="polite">
-        {searchMode === "fulltext" ? (
-          <>
-            {committedQuery
-              ? "日本語全文訳と資料説明をまとめて検索しています"
-              : "日本語全文訳検索は検索語を入力してください"}
-            {fulltextLoading ? " / 検索中" : ""}
-            {fulltextError ? ` / ${fulltextError}` : ""}
-          </>
-        ) : (
-          " "
-        )}
+        {searchMode === "fulltext"
+          ? committedQuery
+            ? `検索中: ${committedQuery}${fulltextLoading ? " / 全文を検索中" : ""}${fulltextError ? ` / ${fulltextError}` : ""}`
+            : "日本語全文訳はEnterまたはボタンで検索します"
+          : committedQuery
+            ? `検索中: ${committedQuery}${hasPendingSearch ? " / 入力停止後に更新" : ""}`
+            : hasPendingSearch
+              ? "入力停止後に資料説明を検索します"
+              : "日本語資料説明は入力停止後に検索します"}
       </p>
     </>
   );

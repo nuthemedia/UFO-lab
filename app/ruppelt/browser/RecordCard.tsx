@@ -119,8 +119,12 @@ function RecordCardComponent({
           {disclosureLabel} <span aria-hidden="true">ⓘ</span>
         </button>
       </div>
-      <h2>{getTitle(record)}</h2>
-      {language === "ja" ? <p className="ruppelt-card-title-ja">{japaneseTitle}</p> : null}
+      <h2>{renderHighlightedText(getTitle(record), highlightQuery)}</h2>
+      {language === "ja" ? (
+        <p className="ruppelt-card-title-ja">
+          {renderHighlightedText(japaneseTitle, highlightQuery)}
+        </p>
+      ) : null}
       <div className={`ruppelt-card-thumbnail${hasVideoPreview ? " ruppelt-card-thumbnail--video" : ""}`} aria-hidden={!hasThumbnail && !hasVideoPreview}>
         {hasThumbnail ? (
           <img

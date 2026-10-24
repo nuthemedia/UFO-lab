@@ -1,0 +1,208 @@
+{
+  "generatedAt": "2026-10-24T04:31:19.769Z",
+  "releaseId": "release_07",
+  "sourceRepo": "abigailhaddad/ufo-releases",
+  "licenseStatus": "unverified_accepted",
+  "importedCount": 27,
+  "skippedCount": 1,
+  "imported": [
+    {
+      "recordId": "pursue-0447",
+      "githubId": 461,
+      "rawTextChars": 18336,
+      "normalizedTextChars": 8451,
+      "title": "DOW-UAP-D155, Air Intelligence Information Report, Saudi Arabia, 1957"
+    },
+    {
+      "recordId": "pursue-0448",
+      "githubId": 462,
+      "rawTextChars": 145879,
+      "normalizedTextChars": 72576,
+      "title": "DOW-UAP-D174, Utah Ranch Investigation Report, April 2010"
+    },
+    {
+      "recordId": "pursue-0449",
+      "githubId": 463,
+      "rawTextChars": 10633,
+      "normalizedTextChars": 9392,
+      "title": "DOW-UAP-D176, Triangular UAP AARO Memorandum for Record, 2026"
+    },
+    {
+      "recordId": "pursue-0450",
+      "githubId": 464,
+      "rawTextChars": 13309,
+      "normalizedTextChars": 3246,
+      "title": "DOW-UAP-D177, Unresolved UAP Report, Catalina Island, 1955"
+    },
+    {
+      "recordId": "pursue-0451",
+      "githubId": 465,
+      "rawTextChars": 9333,
+      "normalizedTextChars": 3243,
+      "title": "DOW-UAP-D178, Unresolved UAP Report, Catalina Island, 1953"
+    },
+    {
+      "recordId": "pursue-0452",
+      "githubId": 466,
+      "rawTextChars": 4724,
+      "normalizedTextChars": 2752,
+      "title": "DOW-UAP-D179, Air Intelligence Information Report, Catalina Island, 1952"
+    },
+    {
+      "recordId": "pursue-0453",
+      "githubId": 467,
+      "rawTextChars": 1874,
+      "normalizedTextChars": 951,
+      "title": "DOW-UAP-D181, Unresolved UAP Report, Catalina Island, 1949"
+    },
+    {
+      "recordId": "pursue-0455",
+      "githubId": 469,
+      "rawTextChars": 17050,
+      "normalizedTextChars": 11102,
+      "title": "DOW-UAP-D156, Air Intelligence Information Report, Guam, 1956"
+    },
+    {
+      "recordId": "pursue-0456",
+      "githubId": 470,
+      "rawTextChars": 20643,
+      "normalizedTextChars": 14331,
+      "title": "DOW-UAP-D157, Air Intelligence Information Report, Italy, 1952"
+    },
+    {
+      "recordId": "pursue-0457",
+      "githubId": 471,
+      "rawTextChars": 4321,
+      "normalizedTextChars": 2710,
+      "title": "DOW-UAP-D158, Flying Object Report, Canada, 1953"
+    },
+    {
+      "recordId": "pursue-0458",
+      "githubId": 472,
+      "rawTextChars": 8091,
+      "normalizedTextChars": 3648,
+      "title": "DOW-UAP-D159, Air Intelligence Information Report, Germany, 1953"
+    },
+    {
+      "recordId": "pursue-0459",
+      "githubId": 473,
+      "rawTextChars": 12954,
+      "normalizedTextChars": 5888,
+      "title": "DOW-UAP-D160, Air Intelligence Information Report, Morocco, 1953"
+    },
+    {
+      "recordId": "pursue-0460",
+      "githubId": 474,
+      "rawTextChars": 15729,
+      "normalizedTextChars": 7361,
+      "title": "DOW-UAP-D161, Air Intelligence Information Report, Alaska, 1953"
+    },
+    {
+      "recordId": "pursue-0461",
+      "githubId": 475,
+      "rawTextChars": 13584,
+      "normalizedTextChars": 7529,
+      "title": "DOW-UAP-D162, Air Intelligence Information Report, Alaska, 1953"
+    },
+    {
+      "recordId": "pursue-0462",
+      "githubId": 476,
+      "rawTextChars": 12306,
+      "normalizedTextChars": 7830,
+      "title": "DOW-UAP-D163, Air Intelligence Information Report, Sweden, 1953"
+    },
+    {
+      "recordId": "pursue-0463",
+      "githubId": 477,
+      "rawTextChars": 8592,
+      "normalizedTextChars": 5516,
+      "title": "DOW-UAP-D164, Flying Object Report, Indiana, 1953"
+    },
+    {
+      "recordId": "pursue-0464",
+      "githubId": 478,
+      "rawTextChars": 74560,
+      "normalizedTextChars": 59299,
+      "title": "DOW-UAP-D166, MUFON Reports Prepared for BAASS, November 2008"
+    },
+    {
+      "recordId": "pursue-0465",
+      "githubId": 479,
+      "rawTextChars": 112699,
+      "normalizedTextChars": 87626,
+      "title": "DOW-UAP-D167, Project Capella, December 2008"
+    },
+    {
+      "recordId": "pursue-0466",
+      "githubId": 480,
+      "rawTextChars": 105139,
+      "normalizedTextChars": 69625,
+      "title": "DOW-UAP-D168, BAASS Project Management Plan, December 2008"
+    },
+    {
+      "recordId": "pursue-0467",
+      "githubId": 481,
+      "rawTextChars": 79837,
+      "normalizedTextChars": 59869,
+      "title": "DOW-UAP-D169, BAASS Monthly Report, March 2009"
+    },
+    {
+      "recordId": "pursue-0468",
+      "githubId": 482,
+      "rawTextChars": 98735,
+      "normalizedTextChars": 81941,
+      "title": "DOW-UAP-D170, BAASS Monthly Report, April 2009"
+    },
+    {
+      "recordId": "pursue-0469",
+      "githubId": 483,
+      "rawTextChars": 259997,
+      "normalizedTextChars": 209256,
+      "title": "DOW-UAP-D171, BAASS Monthly Report, June 2009"
+    },
+    {
+      "recordId": "pursue-0470",
+      "githubId": 484,
+      "rawTextChars": 231956,
+      "normalizedTextChars": 173565,
+      "title": "DOW-UAP-D173, BAASS Monthly Report, November 2009"
+    },
+    {
+      "recordId": "pursue-0471",
+      "githubId": 485,
+      "rawTextChars": 219502,
+      "normalizedTextChars": 156780,
+      "title": "DOW-UAP-D175, BAASS Self-Assessment of UAP Analysis Capabilities, November 2010"
+    },
+    {
+      "recordId": "pursue-0472",
+      "githubId": 486,
+      "rawTextChars": 1464263,
+      "normalizedTextChars": 759781,
+      "title": "DOW-UAP-D180, Final Personnel Record for McCoy, Howard M., U.S. Air Force, 1954"
+    },
+    {
+      "recordId": "pursue-0473",
+      "githubId": 487,
+      "rawTextChars": 1772,
+      "normalizedTextChars": 1278,
+      "title": "EOP-UAP-D002, Memorandum on Interagency Coordination for the Recovery of Foreign Materiel, May 1963"
+    },
+    {
+      "recordId": "pursue-0474",
+      "githubId": 488,
+      "rawTextChars": 84774,
+      "normalizedTextChars": 56431,
+      "title": "USG-UAP-D002, Interagency Correspondence Concerning Space Fragments, 1962-1964"
+    }
+  ],
+  "skipped": [
+    {
+      "recordId": "pursue-0454",
+      "githubId": 468,
+      "type": "PDF",
+      "reason": "no_upstream_text",
+      "title": "FBI-UAP-D043, FD-302, Unidentified Aerial Object Observation Report, 2026"
+    }
+  ]
+}

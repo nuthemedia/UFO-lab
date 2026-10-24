@@ -213,6 +213,9 @@ const requiredPaths = [
   "data/pursue/release06-ocr-audit.json",
   "data/pursue/release06-ocr-import-audit.json",
   "data/pursue/release06-prior-disclosure-audit.json",
+  "data/pursue/release07-import-audit.json",
+  "data/pursue/release07-ocr-audit.json",
+  "data/pursue/release07-prior-disclosure-audit.json",
   "data/shared/pursue-document-bundles.json",
   "data/shared/search/fulltext-index.json",
   "public/ogp-ruppelt-v2.jpg",
@@ -221,6 +224,7 @@ const requiredPaths = [
   "public/ogp-ruppelt-v30.jpg",
   "public/ogp-ruppelt-v40.jpg",
   "public/ogp-ruppelt-v45.jpg",
+  "public/ogp-ruppelt-v50.jpg",
   "docs/apps/ruppelt/AGENTS.md",
   "docs/apps/ruppelt/PROJECT.md",
   "docs/apps/ruppelt/DESIGN.md",
@@ -297,13 +301,13 @@ if (missingBrandHomeHrefs.length > 0) {
 }
 
 const requiredFileContents = [
-  ["app/ruppelt/page.tsx", "Ruppelt V4.5"],
-  ["app/ruppelt/page.tsx", "ogp-ruppelt-v45.jpg"],
-  ["app/ruppelt/lp/page.tsx", "Ruppelt V4.5"],
-  ["app/ruppelt/lp/page.tsx", "ogp-ruppelt-v45.jpg"],
-  ["app/ruppelt/videos/page.tsx", "Ruppelt V4.5"],
-  ["data/pursue/pursue-records.json", '"recordCount": 446'],
-  ["lib/brandHomeContent.ts", "Ruppelt V4.5"],
+  ["app/ruppelt/page.tsx", "Ruppelt V5.0"],
+  ["app/ruppelt/page.tsx", "ogp-ruppelt-v50.jpg"],
+  ["app/ruppelt/lp/page.tsx", "Ruppelt V5.0"],
+  ["app/ruppelt/lp/page.tsx", "ogp-ruppelt-v50.jpg"],
+  ["app/ruppelt/videos/page.tsx", "Ruppelt V5.0"],
+  ["data/pursue/pursue-records.json", '"recordCount": 474'],
+  ["lib/brandHomeContent.ts", "Ruppelt V5.0"],
   ["app/sitemap.ts", "/ruppelt/videos"],
 ];
 
@@ -331,6 +335,7 @@ const v25RuppeltOgpHash = ogpImageHash("public/ogp-ruppelt-v25.jpg");
 const v30RuppeltOgpHash = ogpImageHash("public/ogp-ruppelt-v30.jpg");
 const v40RuppeltOgpHash = ogpImageHash("public/ogp-ruppelt-v40.jpg");
 const v45RuppeltOgpHash = ogpImageHash("public/ogp-ruppelt-v45.jpg");
+const v50RuppeltOgpHash = ogpImageHash("public/ogp-ruppelt-v50.jpg");
 
 if (
   legacyRuppeltOgpHash !== versionedRuppeltOgpHash ||
@@ -338,11 +343,12 @@ if (
   cacheBustedRuppeltOgpHash !== v25RuppeltOgpHash ||
   v25RuppeltOgpHash !== v30RuppeltOgpHash ||
   v30RuppeltOgpHash !== v40RuppeltOgpHash ||
-  v40RuppeltOgpHash !== v45RuppeltOgpHash
+  v40RuppeltOgpHash !== v45RuppeltOgpHash ||
+  v45RuppeltOgpHash !== v50RuppeltOgpHash
 ) {
   console.error("Ruppelt OGP images do not match. Refusing to continue:");
   console.error(
-    "- all versioned and legacy Ruppelt OGP images through public/ogp-ruppelt-v45.jpg must match",
+    "- all versioned and legacy Ruppelt OGP images through public/ogp-ruppelt-v50.jpg must match",
   );
   process.exit(1);
 }

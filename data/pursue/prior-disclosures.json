@@ -11878,5 +11878,1517 @@
     "ruppeltVerified": false,
     "manualReviewRequired": true,
     "reviewerNoteJa": "Release 06向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0447": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同時期の空軍UFO調査資料とProject Blue Book資料群はPURSUE以前から公的アーカイブで公開されています。",
+      "ただし、PURSUE版と同一のPDFの先行公開までは確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D155-Air_Intelligence_Information_Report_Saudi_Arabia-1957.pdf",
+        "noteJa": "PURSUE Release 07の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "National Archives Project Blue Book records",
+        "url": "https://www.archives.gov/research/military/air-force/ufos",
+        "noteJa": "同時期の空軍UFO調査記録群を確認しましたが、同一PDFの一致は未確認です。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nara",
+        "sourceUrl": "https://www.archives.gov/research/military/air-force/ufos",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-10-24",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 07向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0448": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "AAWSAP/BAASSの計画・契約・関連研究資料はPURSUE以前からDIAの公開資料等で確認できます。",
+      "今回の個別報告書と同一ファイルの先行公開は完全には確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D174-Utah_Ranch_Investigation_Report_April_2010.pdf",
+        "noteJa": "PURSUE Release 07の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "case_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAP/BAASS関連資料の公開履歴を確認しましたが、PURSUE版と同一の各ファイルまでは確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-10-24",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 07向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0449": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "2026年作成の同一文書について、PURSUE以前の公式公開は確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D176-Triangular_UAP_AARO_MFR_2026.pdf",
+        "noteJa": "PURSUE Release 07の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "manual_review",
+        "label": "AARO official site and PURSUE file review",
+        "url": "https://www.aaro.mil/",
+        "noteJa": "AARO公式情報と資料名を照合し、PURSUE公開日より前の同一文書公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.aaro.mil/",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-10-24",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 07向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0450": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同時期の空軍UFO調査資料とProject Blue Book資料群はPURSUE以前から公的アーカイブで公開されています。",
+      "ただし、PURSUE版と同一のPDFの先行公開までは確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D177_Unresolved_UAP_Report_Catalina_Island-1955.pdf",
+        "noteJa": "PURSUE Release 07の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "National Archives Project Blue Book records",
+        "url": "https://www.archives.gov/research/military/air-force/ufos",
+        "noteJa": "同時期の空軍UFO調査記録群を確認しましたが、同一PDFの一致は未確認です。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nara",
+        "sourceUrl": "https://www.archives.gov/research/military/air-force/ufos",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-10-24",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 07向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0451": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同時期の空軍UFO調査資料とProject Blue Book資料群はPURSUE以前から公的アーカイブで公開されています。",
+      "ただし、PURSUE版と同一のPDFの先行公開までは確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D178_Unresolved_UAP_Report_Catalina_Island-1953.pdf",
+        "noteJa": "PURSUE Release 07の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "National Archives Project Blue Book records",
+        "url": "https://www.archives.gov/research/military/air-force/ufos",
+        "noteJa": "同時期の空軍UFO調査記録群を確認しましたが、同一PDFの一致は未確認です。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nara",
+        "sourceUrl": "https://www.archives.gov/research/military/air-force/ufos",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-10-24",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 07向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0452": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同時期の空軍UFO調査資料とProject Blue Book資料群はPURSUE以前から公的アーカイブで公開されています。",
+      "ただし、PURSUE版と同一のPDFの先行公開までは確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D179_Unresolved_UAP_Report_Catalina_Island-1952.pdf",
+        "noteJa": "PURSUE Release 07の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "National Archives Project Blue Book records",
+        "url": "https://www.archives.gov/research/military/air-force/ufos",
+        "noteJa": "同時期の空軍UFO調査記録群を確認しましたが、同一PDFの一致は未確認です。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nara",
+        "sourceUrl": "https://www.archives.gov/research/military/air-force/ufos",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-10-24",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 07向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0453": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同時期の空軍UFO調査資料とProject Blue Book資料群はPURSUE以前から公的アーカイブで公開されています。",
+      "ただし、PURSUE版と同一のPDFの先行公開までは確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D181_Unresolved_UAP_Report_Catalina_Island-1949.pdf",
+        "noteJa": "PURSUE Release 07の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "National Archives Project Blue Book records",
+        "url": "https://www.archives.gov/research/military/air-force/ufos",
+        "noteJa": "同時期の空軍UFO調査記録群を確認しましたが、同一PDFの一致は未確認です。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nara",
+        "sourceUrl": "https://www.archives.gov/research/military/air-force/ufos",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-10-24",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 07向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0454": {
+    "status": "first_time_public",
+    "labelJa": "初公開",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "2026年作成の同一文書について、PURSUE以前の公式公開は確認できませんでした。",
+      "先行公開が存在しないことを完全には証明できないため、信頼度は低としています。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release-07/documents/FBI-UAP-D043-FD_302_Unidentified_Aerial_Object_Observation_Report-2026.pdf",
+        "noteJa": "PURSUE Release 07の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "manual_review",
+        "label": "AARO official site and PURSUE file review",
+        "url": "https://www.aaro.mil/",
+        "noteJa": "AARO公式情報と資料名を照合し、PURSUE公開日より前の同一文書公開を確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.aaro.mil/",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-10-24",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 07向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0455": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同時期の空軍UFO調査資料とProject Blue Book資料群はPURSUE以前から公的アーカイブで公開されています。",
+      "ただし、PURSUE版と同一のPDFの先行公開までは確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D156-Air_Intelligence_Information_Report_Guam-1956.pdf",
+        "noteJa": "PURSUE Release 07の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "National Archives Project Blue Book records",
+        "url": "https://www.archives.gov/research/military/air-force/ufos",
+        "noteJa": "同時期の空軍UFO調査記録群を確認しましたが、同一PDFの一致は未確認です。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nara",
+        "sourceUrl": "https://www.archives.gov/research/military/air-force/ufos",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-10-24",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 07向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0456": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同時期の空軍UFO調査資料とProject Blue Book資料群はPURSUE以前から公的アーカイブで公開されています。",
+      "ただし、PURSUE版と同一のPDFの先行公開までは確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D157-Air-Intelligence_Information-Report-Italy-1953.pdf",
+        "noteJa": "PURSUE Release 07の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "National Archives Project Blue Book records",
+        "url": "https://www.archives.gov/research/military/air-force/ufos",
+        "noteJa": "同時期の空軍UFO調査記録群を確認しましたが、同一PDFの一致は未確認です。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nara",
+        "sourceUrl": "https://www.archives.gov/research/military/air-force/ufos",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-10-24",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 07向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0457": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同時期の空軍UFO調査資料とProject Blue Book資料群はPURSUE以前から公的アーカイブで公開されています。",
+      "ただし、PURSUE版と同一のPDFの先行公開までは確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D158-Flying_Object_Report_Canada-1953.pdf",
+        "noteJa": "PURSUE Release 07の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "National Archives Project Blue Book records",
+        "url": "https://www.archives.gov/research/military/air-force/ufos",
+        "noteJa": "同時期の空軍UFO調査記録群を確認しましたが、同一PDFの一致は未確認です。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nara",
+        "sourceUrl": "https://www.archives.gov/research/military/air-force/ufos",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-10-24",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 07向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0458": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同時期の空軍UFO調査資料とProject Blue Book資料群はPURSUE以前から公的アーカイブで公開されています。",
+      "ただし、PURSUE版と同一のPDFの先行公開までは確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D159-Air_Intelligence_Information_Report_Germany-1953.pdf",
+        "noteJa": "PURSUE Release 07の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "National Archives Project Blue Book records",
+        "url": "https://www.archives.gov/research/military/air-force/ufos",
+        "noteJa": "同時期の空軍UFO調査記録群を確認しましたが、同一PDFの一致は未確認です。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nara",
+        "sourceUrl": "https://www.archives.gov/research/military/air-force/ufos",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-10-24",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 07向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0459": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同時期の空軍UFO調査資料とProject Blue Book資料群はPURSUE以前から公的アーカイブで公開されています。",
+      "ただし、PURSUE版と同一のPDFの先行公開までは確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D160-Air_Intelligence_Information_Report_Morocco-1953.pdf",
+        "noteJa": "PURSUE Release 07の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "National Archives Project Blue Book records",
+        "url": "https://www.archives.gov/research/military/air-force/ufos",
+        "noteJa": "同時期の空軍UFO調査記録群を確認しましたが、同一PDFの一致は未確認です。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nara",
+        "sourceUrl": "https://www.archives.gov/research/military/air-force/ufos",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-10-24",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 07向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0460": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同時期の空軍UFO調査資料とProject Blue Book資料群はPURSUE以前から公的アーカイブで公開されています。",
+      "ただし、PURSUE版と同一のPDFの先行公開までは確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D161-Air_Intelligence_Information_Report_Alaska-1953.pdf",
+        "noteJa": "PURSUE Release 07の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "National Archives Project Blue Book records",
+        "url": "https://www.archives.gov/research/military/air-force/ufos",
+        "noteJa": "同時期の空軍UFO調査記録群を確認しましたが、同一PDFの一致は未確認です。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nara",
+        "sourceUrl": "https://www.archives.gov/research/military/air-force/ufos",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-10-24",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 07向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0461": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同時期の空軍UFO調査資料とProject Blue Book資料群はPURSUE以前から公的アーカイブで公開されています。",
+      "ただし、PURSUE版と同一のPDFの先行公開までは確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D162-Air_Intelligence_Information_Report_Alaska-1953.pdf",
+        "noteJa": "PURSUE Release 07の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "National Archives Project Blue Book records",
+        "url": "https://www.archives.gov/research/military/air-force/ufos",
+        "noteJa": "同時期の空軍UFO調査記録群を確認しましたが、同一PDFの一致は未確認です。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nara",
+        "sourceUrl": "https://www.archives.gov/research/military/air-force/ufos",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-10-24",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 07向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0462": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同時期の空軍UFO調査資料とProject Blue Book資料群はPURSUE以前から公的アーカイブで公開されています。",
+      "ただし、PURSUE版と同一のPDFの先行公開までは確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D163-Air_Intelligence_Information_Report_Sweden-1953.pdf",
+        "noteJa": "PURSUE Release 07の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "National Archives Project Blue Book records",
+        "url": "https://www.archives.gov/research/military/air-force/ufos",
+        "noteJa": "同時期の空軍UFO調査記録群を確認しましたが、同一PDFの一致は未確認です。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nara",
+        "sourceUrl": "https://www.archives.gov/research/military/air-force/ufos",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-10-24",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 07向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0463": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "同時期の空軍UFO調査資料とProject Blue Book資料群はPURSUE以前から公的アーカイブで公開されています。",
+      "ただし、PURSUE版と同一のPDFの先行公開までは確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D164-Flying_Object_Report_Indiana-1954.pdf",
+        "noteJa": "PURSUE Release 07の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "archive_match",
+        "label": "National Archives Project Blue Book records",
+        "url": "https://www.archives.gov/research/military/air-force/ufos",
+        "noteJa": "同時期の空軍UFO調査記録群を確認しましたが、同一PDFの一致は未確認です。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nara",
+        "sourceUrl": "https://www.archives.gov/research/military/air-force/ufos",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-10-24",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 07向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0464": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "AAWSAP/BAASSの計画・契約・関連研究資料はPURSUE以前からDIAの公開資料等で確認できます。",
+      "今回の個別報告書と同一ファイルの先行公開は完全には確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D166-MUFON-Reports_Prepared_for_BAASS-November_2008.pdf",
+        "noteJa": "PURSUE Release 07の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "case_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAP/BAASS関連資料の公開履歴を確認しましたが、PURSUE版と同一の各ファイルまでは確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-10-24",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 07向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0465": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "AAWSAP/BAASSの計画・契約・関連研究資料はPURSUE以前からDIAの公開資料等で確認できます。",
+      "今回の個別報告書と同一ファイルの先行公開は完全には確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D167-Project_Capella-December-2008.pdf",
+        "noteJa": "PURSUE Release 07の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "case_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAP/BAASS関連資料の公開履歴を確認しましたが、PURSUE版と同一の各ファイルまでは確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-10-24",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 07向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0466": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "AAWSAP/BAASSの計画・契約・関連研究資料はPURSUE以前からDIAの公開資料等で確認できます。",
+      "今回の個別報告書と同一ファイルの先行公開は完全には確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D168-BAASS_Project_Management_Plan-December_2008.pdf",
+        "noteJa": "PURSUE Release 07の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "case_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAP/BAASS関連資料の公開履歴を確認しましたが、PURSUE版と同一の各ファイルまでは確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-10-24",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 07向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0467": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "AAWSAP/BAASSの計画・契約・関連研究資料はPURSUE以前からDIAの公開資料等で確認できます。",
+      "今回の個別報告書と同一ファイルの先行公開は完全には確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D169-BAASS_Monthly_Report-March_2009.pdf",
+        "noteJa": "PURSUE Release 07の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "case_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAP/BAASS関連資料の公開履歴を確認しましたが、PURSUE版と同一の各ファイルまでは確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-10-24",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 07向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0468": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "AAWSAP/BAASSの計画・契約・関連研究資料はPURSUE以前からDIAの公開資料等で確認できます。",
+      "今回の個別報告書と同一ファイルの先行公開は完全には確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D170-BAASS_Montly_Report_April_2009.pdf",
+        "noteJa": "PURSUE Release 07の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "case_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAP/BAASS関連資料の公開履歴を確認しましたが、PURSUE版と同一の各ファイルまでは確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-10-24",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 07向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0469": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "AAWSAP/BAASSの計画・契約・関連研究資料はPURSUE以前からDIAの公開資料等で確認できます。",
+      "今回の個別報告書と同一ファイルの先行公開は完全には確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D171-BAASS_Monthly_Report_June_2009.pdf",
+        "noteJa": "PURSUE Release 07の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "case_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAP/BAASS関連資料の公開履歴を確認しましたが、PURSUE版と同一の各ファイルまでは確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-10-24",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 07向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0470": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "AAWSAP/BAASSの計画・契約・関連研究資料はPURSUE以前からDIAの公開資料等で確認できます。",
+      "今回の個別報告書と同一ファイルの先行公開は完全には確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D173-BAASS_Monthly_Report_November_2009.pdf",
+        "noteJa": "PURSUE Release 07の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "case_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAP/BAASS関連資料の公開履歴を確認しましたが、PURSUE版と同一の各ファイルまでは確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-10-24",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 07向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0471": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "medium",
+    "evidenceSummaryJa": [
+      "AAWSAP/BAASSの計画・契約・関連研究資料はPURSUE以前からDIAの公開資料等で確認できます。",
+      "今回の個別報告書と同一ファイルの先行公開は完全には確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D175-BAASS_Self-Assessment_of_UAP_Analysis_Capabilities_November_2010.pdf",
+        "noteJa": "PURSUE Release 07の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "case_match",
+        "label": "DIA FOIA Electronic Reading Room",
+        "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "noteJa": "AAWSAP/BAASS関連資料の公開履歴を確認しましたが、PURSUE版と同一の各ファイルまでは確認できませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-10-24",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 07向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0472": {
+    "status": "partial",
+    "labelJa": "一部公開済み",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "Project Blue Book関係者Howard M. McCoyと当時の空軍資料群は既知です。",
+      "今回の人事記録と同一ファイルの先行公開は確認できませんでした。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D180_Final-Personnel-Record-for-McCoy-Howard-M-US-Air-Force-1954.pdf",
+        "noteJa": "PURSUE Release 07の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "case_match",
+        "label": "National Archives UAP records",
+        "url": "https://www.archives.gov/research/catalog/catalog-bulk-downloads/uap-bulk-download",
+        "noteJa": "関連する空軍・UAP資料群は公開済みですが、同一人事記録の一致は未確認です。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "nara",
+        "sourceUrl": "https://www.archives.gov/research/catalog/catalog-bulk-downloads/uap-bulk-download",
+        "role": "official_archive",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-10-24",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 07向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0473": {
+    "status": "unknown",
+    "labelJa": "判定不能",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "関連する政府記録や事件の公開履歴は確認できますが、同一文書の先行公開を判定できませんでした。",
+      "根拠が不足しているため、初公開とは断定していません。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release-07/documents/EOP-UAP-D002-Memo_on_Interagency_Coordination_for_the_Recovery_of_Foreign_Materiel-May_1963.pdf",
+        "noteJa": "PURSUE Release 07の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "manual_review",
+        "label": "PURSUE file and public archive review",
+        "url": "https://www.archives.gov/research/catalog/catalog-bulk-downloads/uap-bulk-download",
+        "noteJa": "資料名・機関・年代を公的アーカイブと照合しましたが、同一ファイルの確認には至りませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.archives.gov/research/catalog/catalog-bulk-downloads/uap-bulk-download",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-10-24",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 07向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
+  },
+  "pursue-0474": {
+    "status": "unknown",
+    "labelJa": "判定不能",
+    "confidence": "low",
+    "evidenceSummaryJa": [
+      "関連する政府記録や事件の公開履歴は確認できますが、同一文書の先行公開を判定できませんでした。",
+      "根拠が不足しているため、初公開とは断定していません。"
+    ],
+    "evidence": [
+      {
+        "type": "official_source",
+        "label": "PURSUE official",
+        "url": "https://www.war.gov/medialink/ufo/release-07/documents/USG-UAP-D002-Interagency_Correspondence_Concerning_Space_Fragments-1962_1964.pdf",
+        "noteJa": "PURSUE Release 07の公式掲載資料として確認しました。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "high"
+      },
+      {
+        "type": "manual_review",
+        "label": "PURSUE file and public archive review",
+        "url": "https://www.archives.gov/research/catalog/catalog-bulk-downloads/uap-bulk-download",
+        "noteJa": "資料名・機関・年代を公的アーカイブと照合しましたが、同一ファイルの確認には至りませんでした。",
+        "matchedFields": [
+          "assetFileName",
+          "agency",
+          "documentType"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "attribution": [
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://www.archives.gov/research/catalog/catalog-bulk-downloads/uap-bulk-download",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      },
+      {
+        "source": "ruppelt",
+        "sourceUrl": "https://ufolab.tokyo/ruppelt",
+        "role": "ruppelt_review",
+        "visible": "secondary"
+      }
+    ],
+    "checkedAt": "2026-10-24",
+    "checkedBy": "ruppelt",
+    "ruppeltVerified": false,
+    "manualReviewRequired": true,
+    "reviewerNoteJa": "Release 07向けの既存分類済み監査表は確認できなかったため、Ruppelt暫定照合として分類しました。"
   }
 }

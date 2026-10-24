@@ -13,7 +13,7 @@ Data rules:
 
 Current translation state:
 
-- Japanese full-text translations are available for 253 records, including 41 Release 03 records, 12 Release 04 records, 17 Release 05 records, and 50 Release 06 records.
+- Japanese full-text translations are available for 278 records, including 41 Release 03 records, 12 Release 04 records, 17 Release 05 records, 50 Release 06 records, and 25 Release 07 records.
 - Release 03 records are included in the lightweight index with Japanese source-field translations.
 - Release 03 includes Japanese full-text translations for 41 OCR-backed records. The remaining 11 OCR-backed giant records are intentionally kept as OCR-search-only / summary-first records rather than full Japanese translations.
 - Records without full-text data should be described as `全文OCR未取得`, not as missing official source data.
@@ -127,6 +127,19 @@ Release 06 public-disclosure review:
 - The provisional counts are `既に公開済み 48`, `一部公開済み 3`, and `初公開 20`.
 - AAWSAP/DIRD and historical Project Blue Book/Tremonton material use DIA or NARA archive evidence. Modern incident reports and media use low-confidence `first_time_public` only when no earlier same-file publication was found.
 - Keep every Release 06 classification `manualReviewRequired: true`; the audit trail is stored in `data/pursue/release06-prior-disclosure-audit.json`.
+
+Release 07 implementation policy:
+
+- Release 07 was published on October 23, 2026 and adds 28 PDF records. Ruppelt preserves the existing 446 record IDs and appends only the 28 unique Release 07 records.
+- The official source remains war.gov. `abigailhaddad/ufo-releases` may transport metadata and OCR when the official CSV blocks command-line access, but every record must retain its official war.gov URL.
+- Upstream extracted text is available for 27 records. Translate normalized OCR up to 250,000 characters; keep larger records as English-OCR-search and Japanese-summary-first records.
+- Classify all 28 records with provisional Ruppelt review when no equivalent external classification dataset is available. Weak evidence must resolve to `unknown`, not `first_time_public`.
+- Release 07 adds no videos, so the dedicated video viewer remains at 135 records.
+- `abigailhaddad/ufo-releases` maps all 28 Release 07 records and provides extracted text for 27 records. Twenty-six normalized OCR texts are within the 250,000-character translation limit; 25 produced translations that passed the quality gate.
+- DOW-UAP-D158 is within the nominal size limit but its OCR is too corrupted for a reliable full translation, so it remains English-OCR-search-only rather than being counted as translated.
+- DOW-UAP-D180 remains English-OCR-search and Japanese-summary-first because its normalized OCR is about 760,000 characters. FBI-UAP-D043 has no upstream OCR and official command-line retrieval was blocked, so it remains metadata-search-only.
+- Release 07 has no external classification dataset equivalent to the Release 01 audit. Its 28 statuses are provisional Ruppelt review data, all marked `manualReviewRequired: true`; the audit trail is stored in `data/pursue/release07-prior-disclosure-audit.json`.
+- Description search uses a 300ms IME-safe debounce. Full-text search runs only after Enter or the explicit search button. Record cards render in groups of 24 to keep mobile input and scrolling responsive.
 
 Future release import:
 

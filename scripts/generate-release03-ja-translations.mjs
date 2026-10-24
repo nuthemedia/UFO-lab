@@ -106,7 +106,7 @@ async function callOpenAi(input) {
 
   for (let attempt = 1; attempt <= 3; attempt += 1) {
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 120000);
+    const timeout = setTimeout(() => controller.abort(), 300000);
 
     try {
       response = await fetch("https://api.openai.com/v1/responses", {

@@ -1,0 +1,630 @@
+{
+  "generatedAt": "2026-10-24",
+  "release": "10/23/26",
+  "releaseId": "release_07",
+  "recordCount": 28,
+  "existingAuditSources": [
+    {
+      "source": "they_are_here",
+      "label": "they-are-here.com",
+      "result": "no_release_07_classification_dataset_found",
+      "noteJa": "Release 07の個別監査ページまたは機械可読な分類表は確認できませんでした。"
+    },
+    {
+      "source": "abigailhaddad_ufo_releases",
+      "label": "abigailhaddad/ufo-releases",
+      "url": "https://github.com/abigailhaddad/ufo-releases",
+      "result": "metadata_and_ocr_only",
+      "noteJa": "Release 07のメタデータと27件のOCRはありますが、既出・初出分類は含まれていません。"
+    },
+    {
+      "source": "public_archive_review",
+      "label": "NARA / DIA FOIA Reading Room / AARO",
+      "result": "used_for_record_level_provisional_review",
+      "noteJa": "公的アーカイブと公式サイトを資料単位の暫定照合に利用しました。"
+    }
+  ],
+  "summary": {
+    "existingClassificationDatasetFound": 0,
+    "ruppeltTemporaryReviewCount": 28,
+    "statusCounts": {
+      "partial": 24,
+      "first_time_public": 2,
+      "unknown": 2
+    }
+  },
+  "policy": {
+    "sourceOfTruth": "PURSUE / war.gov official metadata and official file links",
+    "release07Result": "No Release 07 classification dataset equivalent to the Release 01 external audit was found. All classifications are provisional and require manual review."
+  },
+  "records": [
+    {
+      "recordId": "pursue-0447",
+      "title": "DOW-UAP-D155, Air Intelligence Information Report, Saudi Arabia, 1957",
+      "officialUrl": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D155-Air_Intelligence_Information_Report_Saudi_Arabia-1957.pdf",
+      "status": "partial",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "label": "PURSUE official",
+          "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D155-Air_Intelligence_Information_Report_Saudi_Arabia-1957.pdf"
+        },
+        {
+          "label": "National Archives Project Blue Book records",
+          "url": "https://www.archives.gov/research/military/air-force/ufos"
+        }
+      ],
+      "attributionSources": [
+        "nara",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0448",
+      "title": "DOW-UAP-D174, Utah Ranch Investigation Report, April 2010",
+      "officialUrl": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D174-Utah_Ranch_Investigation_Report_April_2010.pdf",
+      "status": "partial",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "label": "PURSUE official",
+          "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D174-Utah_Ranch_Investigation_Report_April_2010.pdf"
+        },
+        {
+          "label": "DIA FOIA Electronic Reading Room",
+          "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/"
+        }
+      ],
+      "attributionSources": [
+        "ruppelt",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0449",
+      "title": "DOW-UAP-D176, Triangular UAP AARO Memorandum for Record, 2026",
+      "officialUrl": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D176-Triangular_UAP_AARO_MFR_2026.pdf",
+      "status": "first_time_public",
+      "confidence": "low",
+      "evidence": [
+        {
+          "label": "PURSUE official",
+          "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D176-Triangular_UAP_AARO_MFR_2026.pdf"
+        },
+        {
+          "label": "AARO official site and PURSUE file review",
+          "url": "https://www.aaro.mil/"
+        }
+      ],
+      "attributionSources": [
+        "ruppelt",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0450",
+      "title": "DOW-UAP-D177, Unresolved UAP Report, Catalina Island, 1955",
+      "officialUrl": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D177_Unresolved_UAP_Report_Catalina_Island-1955.pdf",
+      "status": "partial",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "label": "PURSUE official",
+          "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D177_Unresolved_UAP_Report_Catalina_Island-1955.pdf"
+        },
+        {
+          "label": "National Archives Project Blue Book records",
+          "url": "https://www.archives.gov/research/military/air-force/ufos"
+        }
+      ],
+      "attributionSources": [
+        "nara",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0451",
+      "title": "DOW-UAP-D178, Unresolved UAP Report, Catalina Island, 1953",
+      "officialUrl": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D178_Unresolved_UAP_Report_Catalina_Island-1953.pdf",
+      "status": "partial",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "label": "PURSUE official",
+          "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D178_Unresolved_UAP_Report_Catalina_Island-1953.pdf"
+        },
+        {
+          "label": "National Archives Project Blue Book records",
+          "url": "https://www.archives.gov/research/military/air-force/ufos"
+        }
+      ],
+      "attributionSources": [
+        "nara",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0452",
+      "title": "DOW-UAP-D179, Air Intelligence Information Report, Catalina Island, 1952",
+      "officialUrl": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D179_Unresolved_UAP_Report_Catalina_Island-1952.pdf",
+      "status": "partial",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "label": "PURSUE official",
+          "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D179_Unresolved_UAP_Report_Catalina_Island-1952.pdf"
+        },
+        {
+          "label": "National Archives Project Blue Book records",
+          "url": "https://www.archives.gov/research/military/air-force/ufos"
+        }
+      ],
+      "attributionSources": [
+        "nara",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0453",
+      "title": "DOW-UAP-D181, Unresolved UAP Report, Catalina Island, 1949",
+      "officialUrl": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D181_Unresolved_UAP_Report_Catalina_Island-1949.pdf",
+      "status": "partial",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "label": "PURSUE official",
+          "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D181_Unresolved_UAP_Report_Catalina_Island-1949.pdf"
+        },
+        {
+          "label": "National Archives Project Blue Book records",
+          "url": "https://www.archives.gov/research/military/air-force/ufos"
+        }
+      ],
+      "attributionSources": [
+        "nara",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0454",
+      "title": "FBI-UAP-D043, FD-302, Unidentified Aerial Object Observation Report, 2026",
+      "officialUrl": "https://www.war.gov/medialink/ufo/release-07/documents/FBI-UAP-D043-FD_302_Unidentified_Aerial_Object_Observation_Report-2026.pdf",
+      "status": "first_time_public",
+      "confidence": "low",
+      "evidence": [
+        {
+          "label": "PURSUE official",
+          "url": "https://www.war.gov/medialink/ufo/release-07/documents/FBI-UAP-D043-FD_302_Unidentified_Aerial_Object_Observation_Report-2026.pdf"
+        },
+        {
+          "label": "AARO official site and PURSUE file review",
+          "url": "https://www.aaro.mil/"
+        }
+      ],
+      "attributionSources": [
+        "ruppelt",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0455",
+      "title": "DOW-UAP-D156, Air Intelligence Information Report, Guam, 1956",
+      "officialUrl": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D156-Air_Intelligence_Information_Report_Guam-1956.pdf",
+      "status": "partial",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "label": "PURSUE official",
+          "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D156-Air_Intelligence_Information_Report_Guam-1956.pdf"
+        },
+        {
+          "label": "National Archives Project Blue Book records",
+          "url": "https://www.archives.gov/research/military/air-force/ufos"
+        }
+      ],
+      "attributionSources": [
+        "nara",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0456",
+      "title": "DOW-UAP-D157, Air Intelligence Information Report, Italy, 1952",
+      "officialUrl": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D157-Air-Intelligence_Information-Report-Italy-1953.pdf",
+      "status": "partial",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "label": "PURSUE official",
+          "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D157-Air-Intelligence_Information-Report-Italy-1953.pdf"
+        },
+        {
+          "label": "National Archives Project Blue Book records",
+          "url": "https://www.archives.gov/research/military/air-force/ufos"
+        }
+      ],
+      "attributionSources": [
+        "nara",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0457",
+      "title": "DOW-UAP-D158, Flying Object Report, Canada, 1953",
+      "officialUrl": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D158-Flying_Object_Report_Canada-1953.pdf",
+      "status": "partial",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "label": "PURSUE official",
+          "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D158-Flying_Object_Report_Canada-1953.pdf"
+        },
+        {
+          "label": "National Archives Project Blue Book records",
+          "url": "https://www.archives.gov/research/military/air-force/ufos"
+        }
+      ],
+      "attributionSources": [
+        "nara",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0458",
+      "title": "DOW-UAP-D159, Air Intelligence Information Report, Germany, 1953",
+      "officialUrl": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D159-Air_Intelligence_Information_Report_Germany-1953.pdf",
+      "status": "partial",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "label": "PURSUE official",
+          "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D159-Air_Intelligence_Information_Report_Germany-1953.pdf"
+        },
+        {
+          "label": "National Archives Project Blue Book records",
+          "url": "https://www.archives.gov/research/military/air-force/ufos"
+        }
+      ],
+      "attributionSources": [
+        "nara",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0459",
+      "title": "DOW-UAP-D160, Air Intelligence Information Report, Morocco, 1953",
+      "officialUrl": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D160-Air_Intelligence_Information_Report_Morocco-1953.pdf",
+      "status": "partial",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "label": "PURSUE official",
+          "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D160-Air_Intelligence_Information_Report_Morocco-1953.pdf"
+        },
+        {
+          "label": "National Archives Project Blue Book records",
+          "url": "https://www.archives.gov/research/military/air-force/ufos"
+        }
+      ],
+      "attributionSources": [
+        "nara",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0460",
+      "title": "DOW-UAP-D161, Air Intelligence Information Report, Alaska, 1953",
+      "officialUrl": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D161-Air_Intelligence_Information_Report_Alaska-1953.pdf",
+      "status": "partial",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "label": "PURSUE official",
+          "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D161-Air_Intelligence_Information_Report_Alaska-1953.pdf"
+        },
+        {
+          "label": "National Archives Project Blue Book records",
+          "url": "https://www.archives.gov/research/military/air-force/ufos"
+        }
+      ],
+      "attributionSources": [
+        "nara",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0461",
+      "title": "DOW-UAP-D162, Air Intelligence Information Report, Alaska, 1953",
+      "officialUrl": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D162-Air_Intelligence_Information_Report_Alaska-1953.pdf",
+      "status": "partial",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "label": "PURSUE official",
+          "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D162-Air_Intelligence_Information_Report_Alaska-1953.pdf"
+        },
+        {
+          "label": "National Archives Project Blue Book records",
+          "url": "https://www.archives.gov/research/military/air-force/ufos"
+        }
+      ],
+      "attributionSources": [
+        "nara",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0462",
+      "title": "DOW-UAP-D163, Air Intelligence Information Report, Sweden, 1953",
+      "officialUrl": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D163-Air_Intelligence_Information_Report_Sweden-1953.pdf",
+      "status": "partial",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "label": "PURSUE official",
+          "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D163-Air_Intelligence_Information_Report_Sweden-1953.pdf"
+        },
+        {
+          "label": "National Archives Project Blue Book records",
+          "url": "https://www.archives.gov/research/military/air-force/ufos"
+        }
+      ],
+      "attributionSources": [
+        "nara",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0463",
+      "title": "DOW-UAP-D164, Flying Object Report, Indiana, 1953",
+      "officialUrl": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D164-Flying_Object_Report_Indiana-1954.pdf",
+      "status": "partial",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "label": "PURSUE official",
+          "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D164-Flying_Object_Report_Indiana-1954.pdf"
+        },
+        {
+          "label": "National Archives Project Blue Book records",
+          "url": "https://www.archives.gov/research/military/air-force/ufos"
+        }
+      ],
+      "attributionSources": [
+        "nara",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0464",
+      "title": "DOW-UAP-D166, MUFON Reports Prepared for BAASS, November 2008",
+      "officialUrl": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D166-MUFON-Reports_Prepared_for_BAASS-November_2008.pdf",
+      "status": "partial",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "label": "PURSUE official",
+          "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D166-MUFON-Reports_Prepared_for_BAASS-November_2008.pdf"
+        },
+        {
+          "label": "DIA FOIA Electronic Reading Room",
+          "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/"
+        }
+      ],
+      "attributionSources": [
+        "ruppelt",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0465",
+      "title": "DOW-UAP-D167, Project Capella, December 2008",
+      "officialUrl": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D167-Project_Capella-December-2008.pdf",
+      "status": "partial",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "label": "PURSUE official",
+          "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D167-Project_Capella-December-2008.pdf"
+        },
+        {
+          "label": "DIA FOIA Electronic Reading Room",
+          "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/"
+        }
+      ],
+      "attributionSources": [
+        "ruppelt",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0466",
+      "title": "DOW-UAP-D168, BAASS Project Management Plan, December 2008",
+      "officialUrl": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D168-BAASS_Project_Management_Plan-December_2008.pdf",
+      "status": "partial",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "label": "PURSUE official",
+          "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D168-BAASS_Project_Management_Plan-December_2008.pdf"
+        },
+        {
+          "label": "DIA FOIA Electronic Reading Room",
+          "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/"
+        }
+      ],
+      "attributionSources": [
+        "ruppelt",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0467",
+      "title": "DOW-UAP-D169, BAASS Monthly Report, March 2009",
+      "officialUrl": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D169-BAASS_Monthly_Report-March_2009.pdf",
+      "status": "partial",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "label": "PURSUE official",
+          "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D169-BAASS_Monthly_Report-March_2009.pdf"
+        },
+        {
+          "label": "DIA FOIA Electronic Reading Room",
+          "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/"
+        }
+      ],
+      "attributionSources": [
+        "ruppelt",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0468",
+      "title": "DOW-UAP-D170, BAASS Monthly Report, April 2009",
+      "officialUrl": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D170-BAASS_Montly_Report_April_2009.pdf",
+      "status": "partial",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "label": "PURSUE official",
+          "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D170-BAASS_Montly_Report_April_2009.pdf"
+        },
+        {
+          "label": "DIA FOIA Electronic Reading Room",
+          "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/"
+        }
+      ],
+      "attributionSources": [
+        "ruppelt",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0469",
+      "title": "DOW-UAP-D171, BAASS Monthly Report, June 2009",
+      "officialUrl": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D171-BAASS_Monthly_Report_June_2009.pdf",
+      "status": "partial",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "label": "PURSUE official",
+          "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D171-BAASS_Monthly_Report_June_2009.pdf"
+        },
+        {
+          "label": "DIA FOIA Electronic Reading Room",
+          "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/"
+        }
+      ],
+      "attributionSources": [
+        "ruppelt",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0470",
+      "title": "DOW-UAP-D173, BAASS Monthly Report, November 2009",
+      "officialUrl": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D173-BAASS_Monthly_Report_November_2009.pdf",
+      "status": "partial",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "label": "PURSUE official",
+          "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D173-BAASS_Monthly_Report_November_2009.pdf"
+        },
+        {
+          "label": "DIA FOIA Electronic Reading Room",
+          "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/"
+        }
+      ],
+      "attributionSources": [
+        "ruppelt",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0471",
+      "title": "DOW-UAP-D175, BAASS Self-Assessment of UAP Analysis Capabilities, November 2010",
+      "officialUrl": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D175-BAASS_Self-Assessment_of_UAP_Analysis_Capabilities_November_2010.pdf",
+      "status": "partial",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "label": "PURSUE official",
+          "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D175-BAASS_Self-Assessment_of_UAP_Analysis_Capabilities_November_2010.pdf"
+        },
+        {
+          "label": "DIA FOIA Electronic Reading Room",
+          "url": "https://www.dia.mil/FOIA/FOIA-Electronic-Reading-Room/FileId/211378/"
+        }
+      ],
+      "attributionSources": [
+        "ruppelt",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0472",
+      "title": "DOW-UAP-D180, Final Personnel Record for McCoy, Howard M., U.S. Air Force, 1954",
+      "officialUrl": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D180_Final-Personnel-Record-for-McCoy-Howard-M-US-Air-Force-1954.pdf",
+      "status": "partial",
+      "confidence": "low",
+      "evidence": [
+        {
+          "label": "PURSUE official",
+          "url": "https://www.war.gov/medialink/ufo/release-07/documents/DOW-UAP-D180_Final-Personnel-Record-for-McCoy-Howard-M-US-Air-Force-1954.pdf"
+        },
+        {
+          "label": "National Archives UAP records",
+          "url": "https://www.archives.gov/research/catalog/catalog-bulk-downloads/uap-bulk-download"
+        }
+      ],
+      "attributionSources": [
+        "nara",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0473",
+      "title": "EOP-UAP-D002, Memorandum on Interagency Coordination for the Recovery of Foreign Materiel, May 1963",
+      "officialUrl": "https://www.war.gov/medialink/ufo/release-07/documents/EOP-UAP-D002-Memo_on_Interagency_Coordination_for_the_Recovery_of_Foreign_Materiel-May_1963.pdf",
+      "status": "unknown",
+      "confidence": "low",
+      "evidence": [
+        {
+          "label": "PURSUE official",
+          "url": "https://www.war.gov/medialink/ufo/release-07/documents/EOP-UAP-D002-Memo_on_Interagency_Coordination_for_the_Recovery_of_Foreign_Materiel-May_1963.pdf"
+        },
+        {
+          "label": "PURSUE file and public archive review",
+          "url": "https://www.archives.gov/research/catalog/catalog-bulk-downloads/uap-bulk-download"
+        }
+      ],
+      "attributionSources": [
+        "ruppelt",
+        "ruppelt"
+      ]
+    },
+    {
+      "recordId": "pursue-0474",
+      "title": "USG-UAP-D002, Interagency Correspondence Concerning Space Fragments, 1962-1964",
+      "officialUrl": "https://www.war.gov/medialink/ufo/release-07/documents/USG-UAP-D002-Interagency_Correspondence_Concerning_Space_Fragments-1962_1964.pdf",
+      "status": "unknown",
+      "confidence": "low",
+      "evidence": [
+        {
+          "label": "PURSUE official",
+          "url": "https://www.war.gov/medialink/ufo/release-07/documents/USG-UAP-D002-Interagency_Correspondence_Concerning_Space_Fragments-1962_1964.pdf"
+        },
+        {
+          "label": "PURSUE file and public archive review",
+          "url": "https://www.archives.gov/research/catalog/catalog-bulk-downloads/uap-bulk-download"
+        }
+      ],
+      "attributionSources": [
+        "ruppelt",
+        "ruppelt"
+      ]
+    }
+  ]
+}

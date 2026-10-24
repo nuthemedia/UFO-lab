@@ -1,0 +1,13 @@
+{
+  "documentId": "pursue-0472",
+  "recordId": "pursue-0472",
+  "fullTextJa": "",
+  "summaryJa": "文書は退役軍人関連の記録請求・回答に関する複数ページのOCR出力で、対象者は「MCCOY HOWARD M（Howard M. McCoy）」、住所は「5465 White Oak Ave, Encino, Calif」と記載されている。内容はVeterans Administration向けの「REQUEST FOR INFORMATION」（分離記録（separation records）添付）の様式（VA Form 07-3101に代わる使用についての指示を含む）および国立人事記録センター（NPRC／National Personnel Records Center）からの回答用様式（NA Form 13044）の抜粋である。文書中に連絡先として「Federal Building – Charles Center / 31 Hopkins Plaza, Baltimore, Maryland 21201」やNPRCの住所「9700 Page Avenue, St. Louis, MO 63132-5100」が記載されている。回答欄には、請求に対して複写物を添付した旨、分離書類の削除版（deleted）・未削除版（undeleted）の取り扱い、Title 32およびPrivacy Act（社会保障番号等の個人情報の公開制限）に基づく開示制限、医療記録の取り扱い（医師への開示は本人の同意が必要）等の説明文が並ぶ。別紙にはMPR（MPR FINDING AID）類似の検索結果一覧があり、レコード番号（例: 000018054 等）、対象名（MCCOY HOWARD M）、所属を示す略号（AF, AR 等）、記録が「charged to: FC5」である旨が記載されている。手書き・タイプの部分が混在し、一部個人情報（社会保障番号など）は断片的または削除されている。",
+  "summaryEn": "The documents are multi-page OCR outputs relating to a military records information request and response for the individual named MCCOY HOWARD M (Howard M. McCoy), with address listed as 5465 White Oak Ave, Encino, Calif. They include a Veterans Administration \"Request for Information\" form (used in lieu of VA Form 07-3101 when DD Form 214 or equivalent is attached) and portions of the National Personnel Records Center response form (NA Form 13044). Contact addresses appear (Federal Building – Charles Center / 31 Hopkins Plaza, Baltimore, MD 21201 and NPRC 9700 Page Avenue, St. Louis, MO 63132-5100). The response text explains possible outcomes: copies of requested records attached; treatment of separation documents (deleted vs. undeleted copies); statutory restrictions (Title 32 Part 45) and the Privacy Act limiting release of discharge characterization and social security numbers; procedures for medical records disclosure (may be sent to a designated physician only with written consent); and referral instructions for medals/awards. A finding-aid/search result excerpt (MPR FINDING AID) lists record numbers (e.g. 000018054), the subject name MCCOY HOWARD M, service branch codes (AF, AR), and indicates the record was charged to FC5. Some entries are handwritten or partially redacted.",
+  "status": {
+    "translationJa": "not_translated_large_document",
+    "summary": "summary_generated",
+    "humanReview": "unreviewed"
+  },
+  "noteJa": "長大資料のため日本語全文訳は未作成です。公式資料を正本とし、英語OCR検索と機械生成要約を利用できます。"
+}

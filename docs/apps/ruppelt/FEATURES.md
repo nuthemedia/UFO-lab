@@ -2,8 +2,8 @@
 
 Current core features:
 
-- Ruppelt V4.5 covers 446 unique records across PURSUE Releases 01–06.
-- Japanese descriptions are available for all 446 records; Japanese full-text translations are available for 253 records.
+- Ruppelt V5.0 covers 474 unique records across PURSUE Releases 01–07.
+- Japanese descriptions are available for all 474 records; Japanese full-text translations are available for 278 records.
 - The video viewer covers 135 official videos.
 
 - Record search.
@@ -19,8 +19,8 @@ Japanese full-text feature direction:
 - Show a `日本語全文` action on cards when a shared translation exists.
 - Show `全文未対応` when full-text OCR / translation is unavailable.
 - Open a mobile-friendly viewer with `要約`, `日本語全文`, `英語OCR`, and `出典` tabs.
-- Keep the default search as `資料説明`.
-- Add a separate `全文` search mode for records with full-text data.
+- Keep the default search as `日本語資料説明` and update it after a short input pause.
+- Keep `日本語全文訳` as an explicit Enter/button search for records with full-text data.
 
 Video viewer:
 

@@ -19,10 +19,10 @@ const statusDashboardOrder: StatusDashboardKey[] = [
   "unreviewed",
 ];
 // Legacy Vercel build guard compatibility marker: Ruppelt V2.0.
-const ruppeltOgpImage = `${siteUrl}/ogp-ruppelt-v45.jpg`;
-const ruppeltSocialUrl = `${siteUrl}/ruppelt?xcard=v45`;
+const ruppeltOgpImage = `${siteUrl}/ogp-ruppelt-v50.jpg`;
+const ruppeltSocialUrl = `${siteUrl}/ruppelt?xcard=v50`;
 const ruppeltDescription =
-  "PURSUE Release 01〜06の米政府UAP・UFO公開資料446件を日本語で検索。日本語資料説明446件、全文訳253件、動画135件、公開状況、公式資料リンクに対応。";
+  "PURSUE Release 01〜07の米政府UAP・UFO公開資料474件を日本語で検索。日本語資料説明474件、全文訳278件、動画135件、公開状況、公式資料リンクに対応。";
 
 function getStatusDashboardLabel(status: StatusDashboardKey) {
   return status === "unreviewed" ? "未判定" : priorDisclosureLabels[status];
@@ -50,13 +50,13 @@ function getFullTextRecordIds() {
 }
 
 export const metadata: Metadata = {
-  title: "Ruppelt V4.5 | PURSUE日本語インデックス",
+  title: "Ruppelt V5.0 | PURSUE日本語インデックス",
   description: ruppeltDescription,
   alternates: {
     canonical: "/ruppelt",
   },
   openGraph: {
-    title: "Ruppelt V4.5 - PURSUE日本語インデックス",
+    title: "Ruppelt V5.0 - PURSUE日本語インデックス",
     description: ruppeltDescription,
     url: ruppeltSocialUrl,
     siteName: "UFO Lab Tokyo",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
         url: ruppeltOgpImage,
         width: 1200,
         height: 630,
-        alt: "Ruppelt V4.5 - PURSUE日本語インデックス",
+        alt: "Ruppelt V5.0 - PURSUE日本語インデックス",
         type: "image/jpeg",
       },
     ],
@@ -73,12 +73,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ruppelt V4.5 - PURSUE日本語インデックス",
+    title: "Ruppelt V5.0 - PURSUE日本語インデックス",
     description: ruppeltDescription,
     images: [ruppeltOgpImage],
   },
   other: {
-    "twitter:image:alt": "Ruppelt V4.5 - PURSUE日本語インデックス",
+    "twitter:image:alt": "Ruppelt V5.0 - PURSUE日本語インデックス",
   },
 };
 
@@ -123,7 +123,7 @@ export default function RuppeltPage() {
           </div>
           <span className="sr-only">{siteConfig.shortName}</span>
         </div>
-        <h1>Ruppelt V4.5</h1>
+        <h1>Ruppelt V5.0</h1>
         <p className="tagline">PURSUE日本語インデックス</p>
         <p className="lead">アメリカ政府UAP公開資料をスマホでさくっと確認。</p>
         <p className="ruppelt-kean-note">

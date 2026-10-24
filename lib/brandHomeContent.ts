@@ -30,8 +30,8 @@ export const brandHomeContent = {
     },
     mission: "テクノロジーの魔法で、UFOコミュニティに貢献する",
     featuredApp: {
-      name: "Ruppelt V4.5",
-      description: "PURSUE Release 01〜06の重複を除く446件を日本語で検索できる資料ブラウザ",
+      name: "Ruppelt V5.0",
+      description: "PURSUE Release 01〜07の重複を除く474件を日本語で検索できる資料ブラウザ",
       href: "/ruppelt",
       note: "Ruppelt とは？",
       noteHref: "/ruppelt/lp",
@@ -59,7 +59,7 @@ export const brandHomeContent = {
         description: "過去のUFO研究が、現代の議論につながりにくい。",
       },
     ],
-    update: "Ruppelt V4.5を公開しました。PURSUE Release 06を追加し、重複を除く全446件、日本語全文訳253件、動画135件に対応しました。",
+    update: "Ruppelt V5.0でPURSUE Release 07を追加し、重複を除く全474件、日本語全文訳278件、動画135件に対応しました。",
     updateFeedback: {
       heading: "更新情報・フィードバック",
       body: [
@@ -74,9 +74,9 @@ export const brandHomeContent = {
     },
     products: [
       {
-        version: "Version 4.5",
-        name: "Ruppelt V4.5",
-        title: "Ruppelt V4.5 – PURSUE日本語インデックス",
+        version: "Version 5.0",
+        name: "Ruppelt V5.0",
+        title: "Ruppelt V5.0 – PURSUE日本語インデックス",
         href: "/ruppelt",
         cta: "Ruppeltを開く",
       },
@@ -191,8 +191,8 @@ export const brandHomeContent = {
     },
     mission: "Contributing to the UFO community through the magic of technology.",
     featuredApp: {
-      name: "Ruppelt V4.5",
-      description: "A Japanese search browser for 446 unique PURSUE records across Releases 01–06.",
+      name: "Ruppelt V5.0",
+      description: "A Japanese search browser for 474 unique PURSUE records across Releases 01–07.",
       href: "/ruppelt",
       note: "What is Ruppelt?",
       noteHref: "/ruppelt/lp",
@@ -222,7 +222,7 @@ export const brandHomeContent = {
         description: "Past UFO research does not easily connect to today's discussion.",
       },
     ],
-    update: "Ruppelt V4.5 adds PURSUE Release 06, covering 446 unique records, 253 Japanese full-text translations, and 135 videos.",
+    update: "Ruppelt V5.0 adds PURSUE Release 07, covering 474 unique records, 278 Japanese full-text translations, and 135 videos.",
     updateFeedback: {
       heading: "Updates & Feedback",
       body: [
@@ -237,9 +237,9 @@ export const brandHomeContent = {
     },
     products: [
       {
-        version: "Version 4.5",
-        name: "Ruppelt V4.5",
-        title: "Ruppelt V4.5 – UAP Public Records Viewer",
+        version: "Version 5.0",
+        name: "Ruppelt V5.0",
+        title: "Ruppelt V5.0 – UAP Public Records Viewer",
         href: "/ruppelt",
         cta: "Open Ruppelt",
       },

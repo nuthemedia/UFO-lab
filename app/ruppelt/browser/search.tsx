@@ -212,10 +212,11 @@ export function matchesRecord(
   agency: string,
   type: string,
   priorDisclosureStatus: PriorDisclosureFilter,
+  preparedSearchText?: string,
 ) {
-  const normalizedQuery = query.trim().toLowerCase();
+  const normalizedQuery = query.trim().normalize("NFKC").toLowerCase();
 
-  if (normalizedQuery && !getSearchText(record).includes(normalizedQuery)) {
+  if (normalizedQuery && !(preparedSearchText ?? getSearchText(record)).includes(normalizedQuery)) {
     return false;
   }
 

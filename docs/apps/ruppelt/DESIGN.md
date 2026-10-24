@@ -9,6 +9,8 @@ Design priorities:
 - Cards for record browsing.
 - Carousel as the default exploration mode, list as the comparison mode.
 - Full text opens in a viewer, not inside the card.
+- Description search updates after a short IME-safe pause; full-text search waits for an explicit submit.
+- Render result cards in groups of 24 so typing and mobile scrolling remain responsive as releases grow.
 
 For long Japanese full-text translations, use a focused viewer with tabs and a scrollable reading area. Avoid embedding a PDF viewer in the MVP.
 

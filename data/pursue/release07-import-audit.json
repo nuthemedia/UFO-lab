@@ -1,0 +1,16 @@
+{
+  "generatedAt": "2026-10-24",
+  "releaseId": "release_07",
+  "release": "10/23/26",
+  "beforeRecordCount": 446,
+  "appendedRecordCount": 28,
+  "afterRecordCount": 474,
+  "documentTypeCounts": {
+    "PDF": 28
+  },
+  "officialUrlCount": 28,
+  "transportSource": "abigailhaddad/ufo-releases",
+  "sourceOfTruth": "PURSUE / war.gov official metadata and official file links",
+  "officialCsvResult": "Command-line retrieval was blocked by the official site; matching mirror fields were accepted only for records retaining official war.gov URLs.",
+  "duplicatePolicy": "Preserve the existing 446 deduplicated records and append exactly 28 Release 07 records. Stop instead of guessing if the expected count does not match."
+}
