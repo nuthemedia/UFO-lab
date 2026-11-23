@@ -11,6 +11,7 @@ Design priorities:
 - Full text opens in a viewer, not inside the card.
 - Description search updates after a short IME-safe pause; full-text search waits for an explicit submit.
 - Render result cards in groups of 24 so typing and mobile scrolling remain responsive as releases grow.
+- Load full-text search indexes by release shard and cache each shard independently so an all-release search does not duplicate the complete index in memory.
 
 For long Japanese full-text translations, use a focused viewer with tabs and a scrollable reading area. Avoid embedding a PDF viewer in the MVP.
 

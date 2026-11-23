@@ -1,0 +1,313 @@
+{
+  "generatedAt": "2026-11-23T02:29:36.609Z",
+  "releaseId": "release_08",
+  "sourceRepo": "abigailhaddad/ufo-releases",
+  "licenseStatus": "unverified_accepted",
+  "importedCount": 40,
+  "skippedCount": 3,
+  "imported": [
+    {
+      "recordId": "pursue-0475",
+      "githubId": 489,
+      "rawTextChars": 15151,
+      "normalizedTextChars": 12167,
+      "title": "CIA-UAP-D027, Office of Scientific Intelligence Briefing on “Flying Saucers,” 1952"
+    },
+    {
+      "recordId": "pursue-0476",
+      "githubId": 490,
+      "rawTextChars": 6412,
+      "normalizedTextChars": 5224,
+      "title": "CIA-UAP-D029, Official Diary Entry on “Flying Saucers,” 1952"
+    },
+    {
+      "recordId": "pursue-0477",
+      "githubId": 491,
+      "rawTextChars": 4876,
+      "normalizedTextChars": 1342,
+      "title": "DOW-UAP-D165, Unresolved Radar Detection, North America, 2023"
+    },
+    {
+      "recordId": "pursue-0478",
+      "githubId": 492,
+      "rawTextChars": 1079488,
+      "normalizedTextChars": 832773,
+      "title": "DOW-UAP-D172, BAASS Ten-Month Report, July 2009"
+    },
+    {
+      "recordId": "pursue-0479",
+      "githubId": 493,
+      "rawTextChars": 26440,
+      "normalizedTextChars": 12562,
+      "title": "DOW-UAP-D190, Air Intelligence Information Report, Massachusetts, 1957"
+    },
+    {
+      "recordId": "pursue-0480",
+      "githubId": 494,
+      "rawTextChars": 13942,
+      "normalizedTextChars": 5944,
+      "title": "DOW-UAP-D197, Air Intelligence Information Report, Michigan, 1957"
+    },
+    {
+      "recordId": "pursue-0481",
+      "githubId": 495,
+      "rawTextChars": 6829,
+      "normalizedTextChars": 4038,
+      "title": "CIA-UAP-D024, Approval in Principle, Research Concerned with UFOs, 1952"
+    },
+    {
+      "recordId": "pursue-0482",
+      "githubId": 496,
+      "rawTextChars": 24525,
+      "normalizedTextChars": 17040,
+      "title": "CIA-UAP-D025, Proposal to Consider Psychological Warfare Implications of UFO-Related Issues, 1952"
+    },
+    {
+      "recordId": "pursue-0483",
+      "githubId": 497,
+      "rawTextChars": 3975,
+      "normalizedTextChars": 3111,
+      "title": "CIA-UAP-D026, Summary Assessment of “Flying Saucers,” 1952"
+    },
+    {
+      "recordId": "pursue-0484",
+      "githubId": 498,
+      "rawTextChars": 6267,
+      "normalizedTextChars": 3729,
+      "title": "CIA-UAP-D028, Assessment of National Security Issues Relating to “Flying Saucers,” 1952"
+    },
+    {
+      "recordId": "pursue-0485",
+      "githubId": 499,
+      "rawTextChars": 20142,
+      "normalizedTextChars": 18153,
+      "title": "DOW-UAP-D182, AAWSAP Statement of Work, August 2008"
+    },
+    {
+      "recordId": "pursue-0486",
+      "githubId": 500,
+      "rawTextChars": 8358,
+      "normalizedTextChars": 6910,
+      "title": "DOW-UAP-D183-Correspondence from Senator Harry Reid, June 2009"
+    },
+    {
+      "recordId": "pursue-0487",
+      "githubId": 501,
+      "rawTextChars": 4325,
+      "normalizedTextChars": 3776,
+      "title": "DOW-UAP-D184, AAWSAP Talking Paper for Senator Reid Engagement, May 2009"
+    },
+    {
+      "recordId": "pursue-0488",
+      "githubId": 502,
+      "rawTextChars": 7188,
+      "normalizedTextChars": 5137,
+      "title": "DOW-UAP-D185, Review of AAWSAP Special Access Program Request, November 2009"
+    },
+    {
+      "recordId": "pursue-0489",
+      "githubId": 503,
+      "rawTextChars": 3650,
+      "normalizedTextChars": 3311,
+      "title": "DOW-UAP-D186, DIA Information Memorandum on AATIP (AAWSAP), December 2010"
+    },
+    {
+      "recordId": "pursue-0490",
+      "githubId": 504,
+      "rawTextChars": 2468,
+      "normalizedTextChars": 2331,
+      "title": "DOW-UAP-D187, DIA Talking Paper for Senator Reid Engagement, January 2009"
+    },
+    {
+      "recordId": "pursue-0491",
+      "githubId": 505,
+      "rawTextChars": 20680,
+      "normalizedTextChars": 15417,
+      "title": "DOW-UAP-D188, Review of AAWSAP Contract Deliverables October 2009"
+    },
+    {
+      "recordId": "pursue-0492",
+      "githubId": 506,
+      "rawTextChars": 12219,
+      "normalizedTextChars": 5945,
+      "title": "DOW-UAP-D189, Air Intelligence Information Report, Virginia, 1957"
+    },
+    {
+      "recordId": "pursue-0493",
+      "githubId": 507,
+      "rawTextChars": 58662,
+      "normalizedTextChars": 36544,
+      "title": "DOW-UAP-D191, Air Intelligence Information Report, Texas, 1957"
+    },
+    {
+      "recordId": "pursue-0494",
+      "githubId": 508,
+      "rawTextChars": 34908,
+      "normalizedTextChars": 21275,
+      "title": "DOW-UAP-D192, Air Intelligence Information Report, Nebraska, 1957"
+    },
+    {
+      "recordId": "pursue-0495",
+      "githubId": 509,
+      "rawTextChars": 23841,
+      "normalizedTextChars": 15317,
+      "title": "DOW-UAP-D193, Air Intelligence Information Report, New Mexico, 1957"
+    },
+    {
+      "recordId": "pursue-0496",
+      "githubId": 510,
+      "rawTextChars": 25711,
+      "normalizedTextChars": 14946,
+      "title": "DOW-UAP-D194, Air Intelligence Information Report, New Mexico, 1957"
+    },
+    {
+      "recordId": "pursue-0497",
+      "githubId": 511,
+      "rawTextChars": 31226,
+      "normalizedTextChars": 13670,
+      "title": "DOW-UAP-D195, Air Intelligence Information Report, New Mexico, 1957"
+    },
+    {
+      "recordId": "pursue-0498",
+      "githubId": 512,
+      "rawTextChars": 19989,
+      "normalizedTextChars": 10096,
+      "title": "DOW-UAP-D196, Air Intelligence Information Report, Washington, 1957"
+    },
+    {
+      "recordId": "pursue-0499",
+      "githubId": 513,
+      "rawTextChars": 17721,
+      "normalizedTextChars": 5793,
+      "title": "DOW-UAP-D198, Air Intelligence Information Report, Japan, 1957"
+    },
+    {
+      "recordId": "pursue-0500",
+      "githubId": 514,
+      "rawTextChars": 6695,
+      "normalizedTextChars": 2978,
+      "title": "DOW-UAP-D199, Air Intelligence Information Report, Iran, 1957"
+    },
+    {
+      "recordId": "pursue-0501",
+      "githubId": 515,
+      "rawTextChars": 8497,
+      "normalizedTextChars": 4402,
+      "title": "DOW-UAP-D200, Air Intelligence Information Report, Peru, 1957"
+    },
+    {
+      "recordId": "pursue-0502",
+      "githubId": 516,
+      "rawTextChars": 9075,
+      "normalizedTextChars": 4088,
+      "title": "DOW-UAP-D201, Air Intelligence Information Report, Iran, 1957"
+    },
+    {
+      "recordId": "pursue-0503",
+      "githubId": 517,
+      "rawTextChars": 24031,
+      "normalizedTextChars": 9702,
+      "title": "DOW-UAP-D202, Air Intelligence Information Report, Peru, 1957"
+    },
+    {
+      "recordId": "pursue-0504",
+      "githubId": 518,
+      "rawTextChars": 17412,
+      "normalizedTextChars": 7587,
+      "title": "DOW-UAP-D203, Air Intelligence Information Report, California, 1957"
+    },
+    {
+      "recordId": "pursue-0505",
+      "githubId": 519,
+      "rawTextChars": 35823,
+      "normalizedTextChars": 16466,
+      "title": "DOW-UAP-D204, Air Intelligence Information Report, Virginia, 1957"
+    },
+    {
+      "recordId": "pursue-0506",
+      "githubId": 520,
+      "rawTextChars": 18019,
+      "normalizedTextChars": 11498,
+      "title": "DOW-UAP-D205, Air Intelligence Information Report, Japan, 1956"
+    },
+    {
+      "recordId": "pursue-0507",
+      "githubId": 521,
+      "rawTextChars": 25813,
+      "normalizedTextChars": 21524,
+      "title": "DOW-UAP-D206, Unresolved UAP Report, California, 1953"
+    },
+    {
+      "recordId": "pursue-0508",
+      "githubId": 522,
+      "rawTextChars": 31098,
+      "normalizedTextChars": 4685,
+      "title": "DOW-UAP-D207, Unresolved UAP Report, California, 1956"
+    },
+    {
+      "recordId": "pursue-0509",
+      "githubId": 523,
+      "rawTextChars": 21971,
+      "normalizedTextChars": 12253,
+      "title": "DOW-UAP-D208, Unresolved UAP Report, California, 1965"
+    },
+    {
+      "recordId": "pursue-0510",
+      "githubId": 524,
+      "rawTextChars": 11701,
+      "normalizedTextChars": 3083,
+      "title": "DOW-UAP-D209, Unresolved UAP Report, California, 1955"
+    },
+    {
+      "recordId": "pursue-0511",
+      "githubId": 525,
+      "rawTextChars": 28181,
+      "normalizedTextChars": 9762,
+      "title": "DOW-UAP-D210, Unresolved UAP Report, California, 1957"
+    },
+    {
+      "recordId": "pursue-0512",
+      "githubId": 526,
+      "rawTextChars": 5989,
+      "normalizedTextChars": 2207,
+      "title": "DOW-UAP-D211, Unresolved UAP Report, California, 1956"
+    },
+    {
+      "recordId": "pursue-0513",
+      "githubId": 527,
+      "rawTextChars": 140359,
+      "normalizedTextChars": 47372,
+      "title": "DOW-UAP-D212, Unresolved UAP Report, California, 1966"
+    },
+    {
+      "recordId": "pursue-0514",
+      "githubId": 528,
+      "rawTextChars": 26689,
+      "normalizedTextChars": 15284,
+      "title": "DOW-UAP-D213, Unresolved UAP Report, California, 1949"
+    }
+  ],
+  "skipped": [
+    {
+      "recordId": "pursue-0515",
+      "githubId": 529,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR166, Unresolved UAP Report, Middle East, 2020"
+    },
+    {
+      "recordId": "pursue-0516",
+      "githubId": 530,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR168, Unresolved UAP Report, Middle East, 2026"
+    },
+    {
+      "recordId": "pursue-0517",
+      "githubId": 531,
+      "type": "VID",
+      "reason": "no_upstream_text",
+      "title": "DOW-UAP-PR169, Unresolved UAP Report, Middle East, 2023"
+    }
+  ]
+}

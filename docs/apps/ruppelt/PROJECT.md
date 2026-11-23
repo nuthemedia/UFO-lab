@@ -14,4 +14,4 @@ The official PURSUE metadata and files remain the source of truth.
 
 ## Current Release
 
-Ruppelt V5.0 covers PURSUE Releases 01–07: 474 unique records, 278 Japanese full-text translations, and 135 official videos.
+Ruppelt V5.5 covers PURSUE Releases 01–08: 517 unique records, 317 Japanese full-text translations, and 138 official videos.

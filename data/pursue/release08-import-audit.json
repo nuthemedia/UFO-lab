@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-11-23",
+  "releaseId": "release_08",
+  "release": "11/20/26",
+  "beforeRecordCount": 474,
+  "appendedRecordCount": 43,
+  "afterRecordCount": 517,
+  "documentTypeCounts": {
+    "PDF": 40,
+    "VID": 3
+  },
+  "agencyCounts": {
+    "Department of War": 37,
+    "CIA": 6
+  },
+  "officialUrlCount": 43,
+  "transportSource": "abigailhaddad/ufo-releases",
+  "sourceOfTruth": "PURSUE / war.gov official metadata and official file links",
+  "officialCsvResult": "Command-line retrieval was blocked by the official site; matching mirror fields were accepted only for records retaining official war.gov URLs.",
+  "officialCumulativeCount": 521,
+  "deduplicatedCumulativeCount": 517,
+  "historicalDuplicateRowsExcluded": 4,
+  "duplicatePolicy": "Preserve the existing 474 deduplicated records and append exactly 43 Release 08 records. Stop instead of guessing if the expected count does not match."
+}

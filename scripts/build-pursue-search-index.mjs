@@ -14,6 +14,7 @@ const fulltextIndexDir = dirname(fulltextIndexPath);
 const fields = ["metadataText", "summaryText", "fullTextJa", "ocrTextEn"];
 const storeFields = ["recordId", "documentId"];
 const snippetSourceMaxLength = 1600;
+const routingBloomHashes = 4;
 
 function normalizeSearchText(value) {
   return String(value || "")
@@ -92,18 +93,67 @@ function normalizeFullTextForIndex(value) {
         return false;
       }
 
-      const duplicateKey = normalizeSearchText(line);
-      if (duplicateKey.length >= 24 && seen.has(duplicateKey)) {
+      if (/^(?:-{2,}\s*)?page\s+\d+(?:\s*-{2,})?$/i.test(line)) {
         return false;
       }
 
-      if (duplicateKey.length >= 24) {
+      const duplicateKey = normalizeSearchText(line);
+      if (duplicateKey.length >= 12 && seen.has(duplicateKey)) {
+        return false;
+      }
+
+      if (duplicateKey.length >= 12) {
         seen.add(duplicateKey);
       }
 
       return true;
     })
     .join("\n");
+}
+
+function compactOversizedTextForIndex(value) {
+  const normalized = normalizeFullTextForIndex(value);
+
+  if (normalized.length <= 120000) {
+    return normalized;
+  }
+
+  return Array.from(new Set(normalizeSearchText(normalized).split(" ").filter(Boolean))).join(" ");
+}
+
+function hashRoutingTerm(value) {
+  let first = 2166136261;
+  let second = 5381;
+
+  for (let index = 0; index < value.length; index += 1) {
+    const code = value.charCodeAt(index);
+    first ^= code;
+    first = Math.imul(first, 16777619);
+    second = Math.imul(second, 33) ^ code;
+  }
+
+  return [first >>> 0, (second >>> 0) || 1];
+}
+
+function makeRoutingBloom(terms) {
+  const targetBits = Math.max(1 << 14, terms.length * 6);
+  const routingBloomBits = 2 ** Math.ceil(Math.log2(targetBits));
+  const bytes = new Uint8Array(routingBloomBits / 8);
+
+  for (const term of terms) {
+    const [first, second] = hashRoutingTerm(term);
+
+    for (let index = 0; index < routingBloomHashes; index += 1) {
+      const bit = (first + Math.imul(index, second) + index * index) & (routingBloomBits - 1);
+      bytes[bit >>> 3] |= 1 << (bit & 7);
+    }
+  }
+
+  return {
+    bits: routingBloomBits,
+    hashes: routingBloomHashes,
+    data: Buffer.from(bytes).toString("base64"),
+  };
 }
 
 function makeSnippetSource(...values) {
@@ -123,8 +173,8 @@ const documents = recordsIndex.records.map((record) => {
   const recordId = record.source.id;
   const translation = translations.get(recordId) || {};
   const bundle = bundles[recordId] || {};
-  const ocrTextEn = normalizeFullTextForIndex(bundle.ocr?.ocrTextEn || "");
-  const fullTextJa = normalizeFullTextForIndex(translation.fullTextJa || "");
+  const ocrTextEn = compactOversizedTextForIndex(bundle.ocr?.ocrTextEn || "");
+  const fullTextJa = compactOversizedTextForIndex(translation.fullTextJa || "");
   const summaryJa = translation.summaryJa || "";
   const summaryEn = translation.summaryEn || "";
 
@@ -179,11 +229,13 @@ const shardPayloads = Array.from(releaseGroups.entries())
       tokenize: tokenizeForRuppeltSearch,
     });
     shardSearch.addAll(shardDocuments);
+    const serializedIndex = JSON.parse(JSON.stringify(shardSearch));
 
     return {
       releaseId,
       file: `fulltext-index.${releaseId}.json`,
       count: shardDocuments.length,
+      routingBloom: makeRoutingBloom(serializedIndex.index.map(([term]) => term)),
       payload: {
         version: 4,
         engine: "minisearch",
@@ -191,7 +243,7 @@ const shardPayloads = Array.from(releaseGroups.entries())
         releaseId,
         fields,
         storeFields,
-        index: JSON.parse(JSON.stringify(shardSearch)),
+        index: serializedIndex,
         documents: shardDocuments.map(makeSnippetDocument),
       },
     };
@@ -203,7 +255,12 @@ const payload = {
   generatedAt: new Date().toISOString(),
   fields,
   storeFields,
-  shards: shardPayloads.map(({ releaseId, file, count }) => ({ releaseId, file, count })),
+  shards: shardPayloads.map(({ releaseId, file, count, routingBloom }) => ({
+    releaseId,
+    file,
+    count,
+    routingBloom,
+  })),
 };
 
 if (process.argv.includes("--check")) {

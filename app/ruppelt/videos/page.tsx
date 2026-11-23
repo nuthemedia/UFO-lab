@@ -4,8 +4,8 @@ import type { PursueIndex } from "@/lib/pursue";
 import { RuppeltVideoViewer } from "./RuppeltVideoViewer";
 
 export const metadata: Metadata = {
-  title: "PURSUE動画ビューアー135件 | Ruppelt V5.0",
-  description: "PURSUE Release 01〜07で公開されたUAP関連動画135件を、スマホで連続して確認できます。",
+  title: "PURSUE動画ビューアー138件 | Ruppelt V5.5",
+  description: "PURSUE Release 01〜08で公開されたUAP関連動画138件を、スマホで連続して確認できます。",
   alternates: { canonical: "/ruppelt/videos" },
 };
 

@@ -5,6 +5,13 @@ const rootDir = resolve(process.cwd());
 const recordsPath = resolve(rootDir, "data/pursue/pursue-records.json");
 const releaseDefinitions = [
   {
+    id: "release_08",
+    date: "11/20/26",
+    number: "8",
+    expectedCount: 43,
+    matchers: ["11/20", "november 20"],
+  },
+  {
     id: "release_07",
     date: "10/23/26",
     number: "7",
@@ -246,7 +253,7 @@ async function loadCsvText(csvUrl, releaseDate) {
   return csvText;
 }
 
-const requestedReleaseId = cleanValue(readArg("--release-id", "release_07"));
+const requestedReleaseId = cleanValue(readArg("--release-id", "release_08"));
 const releaseDefinition = releaseDefinitions.find((item) => item.id === requestedReleaseId);
 
 if (!releaseDefinition) {
@@ -263,6 +270,12 @@ const sourceRows = rows.slice(1).filter((row) => getCell(row, headers, "Release 
 
 if (!sourceRows.length) {
   throw new Error(`No PURSUE records found for Release Date ${releaseDate}.`);
+}
+
+if (releaseDefinition.expectedCount && sourceRows.length !== releaseDefinition.expectedCount) {
+  throw new Error(
+    `Expected ${releaseDefinition.expectedCount} ${requestedReleaseId} records, found ${sourceRows.length}.`,
+  );
 }
 
 const index = JSON.parse(await readFile(recordsPath, "utf8"));

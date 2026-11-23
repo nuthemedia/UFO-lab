@@ -13,7 +13,7 @@ Data rules:
 
 Current translation state:
 
-- Japanese full-text translations are available for 278 records, including 41 Release 03 records, 12 Release 04 records, 17 Release 05 records, 50 Release 06 records, and 25 Release 07 records.
+- Japanese full-text translations are available for 317 records, including 41 Release 03 records, 12 Release 04 records, 17 Release 05 records, 50 Release 06 records, 25 Release 07 records, and 39 Release 08 records.
 - Release 03 records are included in the lightweight index with Japanese source-field translations.
 - Release 03 includes Japanese full-text translations for 41 OCR-backed records. The remaining 11 OCR-backed giant records are intentionally kept as OCR-search-only / summary-first records rather than full Japanese translations.
 - Records without full-text data should be described as `全文OCR未取得`, not as missing official source data.
@@ -140,6 +140,19 @@ Release 07 implementation policy:
 - DOW-UAP-D180 remains English-OCR-search and Japanese-summary-first because its normalized OCR is about 760,000 characters. FBI-UAP-D043 has no upstream OCR and official command-line retrieval was blocked, so it remains metadata-search-only.
 - Release 07 has no external classification dataset equivalent to the Release 01 audit. Its 28 statuses are provisional Ruppelt review data, all marked `manualReviewRequired: true`; the audit trail is stored in `data/pursue/release07-prior-disclosure-audit.json`.
 - Description search uses a 300ms IME-safe debounce. Full-text search runs only after Enter or the explicit search button. Record cards render in groups of 24 to keep mobile input and scrolling responsive.
+
+Release 08 implementation policy:
+
+- Release 08 was published on November 20, 2026 and adds 43 unique records: 40 PDFs and 3 videos. Ruppelt preserves the existing 474 record IDs and appends the new records as `pursue-0475` through `pursue-0517`.
+- The official cumulative manifest contains 521 rows. Ruppelt remains at 517 unique records because four historical duplicate rows are excluded; the reconciliation is recorded in `data/pursue/release08-import-audit.json`.
+- The official source remains war.gov. `abigailhaddad/ufo-releases` transports metadata and OCR only after title and official URL matching; all 43 Release 08 records retain official war.gov links.
+- Upstream OCR is available for all 40 PDFs. Thirty-nine normalized texts are within the 250,000-character translation limit and receive machine-generated Japanese full-text translations and summaries.
+- DOW-UAP-D172, BAASS Ten-Month Report, July 2009 remains English-OCR-search and Japanese-summary-first because its normalized OCR exceeds 800,000 characters.
+- The three videos remain metadata-search-only and increase the dedicated video viewer from 135 to 138 records.
+- No Release 08 external classification dataset equivalent to the Release 01 audit was found. All 43 statuses are provisional Ruppelt review data, marked `manualReviewRequired: true`; the audit trail is stored in `data/pursue/release08-prior-disclosure-audit.json`.
+- Full-text search stores Release 08 in its own MiniSearch shard. A compact Bloom filter routes exact query terms to candidate release shards; unmatched prefix/fuzzy queries safely fall back to every shard. Each loaded shard and query result is cached independently.
+- The Release 08 build produces 517 searchable records in eight shards. The manifest and shards total 26,025,152 bytes, below the 25 MiB operational limit.
+- Local production-build measurements on November 23, 2026: an uncached all-release `BAASS` query completed in 1.38 seconds, the same warm query in 2.5 milliseconds, and a Japanese query in 13 milliseconds. Release-scoped queries load only their matching shard.
 
 Future release import:
 

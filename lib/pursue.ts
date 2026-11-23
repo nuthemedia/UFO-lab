@@ -110,7 +110,8 @@ export type PursueSearchFacets = {
     | "release_04"
     | "release_05"
     | "release_06"
-    | "release_07";
+    | "release_07"
+    | "release_08";
   priorDisclosureStatus?: PriorDisclosureStatus;
   priorDisclosureConfidence?: PriorDisclosureConfidence;
   ruppeltVerified: boolean;
@@ -173,6 +174,10 @@ export function displayValue(primary: string, fallback: string) {
 export function getReleaseId(record: PursueRecord): PursueSearchFacets["releaseId"] {
   const release = record.source.release.toLowerCase();
 
+  if (release.includes("11/20") || release.includes("november 20")) {
+    return "release_08";
+  }
+
   if (release.includes("10/23") || release.includes("october 23")) {
     return "release_07";
   }
@@ -209,6 +214,7 @@ export function getDefaultPriorDisclosure(record: PursueRecord): PriorDisclosure
     release_05: "Release 05",
     release_06: "Release 06",
     release_07: "Release 07",
+    release_08: "Release 08",
   };
   const releaseLabel = releaseLabels[releaseId];
 

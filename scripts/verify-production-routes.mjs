@@ -216,8 +216,13 @@ const requiredPaths = [
   "data/pursue/release07-import-audit.json",
   "data/pursue/release07-ocr-audit.json",
   "data/pursue/release07-prior-disclosure-audit.json",
+  "data/pursue/release08-import-audit.json",
+  "data/pursue/release08-ocr-audit.json",
+  "data/pursue/release08-ocr-import-audit.json",
+  "data/pursue/release08-prior-disclosure-audit.json",
   "data/shared/pursue-document-bundles.json",
   "data/shared/search/fulltext-index.json",
+  "data/shared/search/fulltext-index.release_08.json",
   "public/ogp-ruppelt-v2.jpg",
   "public/ogp-ruppelt-v22.jpg",
   "public/ogp-ruppelt-v25.jpg",
@@ -225,6 +230,7 @@ const requiredPaths = [
   "public/ogp-ruppelt-v40.jpg",
   "public/ogp-ruppelt-v45.jpg",
   "public/ogp-ruppelt-v50.jpg",
+  "public/ogp-ruppelt-v55.jpg",
   "docs/apps/ruppelt/AGENTS.md",
   "docs/apps/ruppelt/PROJECT.md",
   "docs/apps/ruppelt/DESIGN.md",
@@ -233,7 +239,7 @@ const requiredPaths = [
 ];
 
 const requiredDirectoryMinimums = [
-  ["data/shared/translations/ja", 250],
+  ["data/shared/translations/ja", 300],
   ["data/shared/pursue-documents", 220],
 ];
 
@@ -301,13 +307,13 @@ if (missingBrandHomeHrefs.length > 0) {
 }
 
 const requiredFileContents = [
-  ["app/ruppelt/page.tsx", "Ruppelt V5.0"],
-  ["app/ruppelt/page.tsx", "ogp-ruppelt-v50.jpg"],
-  ["app/ruppelt/lp/page.tsx", "Ruppelt V5.0"],
-  ["app/ruppelt/lp/page.tsx", "ogp-ruppelt-v50.jpg"],
-  ["app/ruppelt/videos/page.tsx", "Ruppelt V5.0"],
-  ["data/pursue/pursue-records.json", '"recordCount": 474'],
-  ["lib/brandHomeContent.ts", "Ruppelt V5.0"],
+  ["app/ruppelt/page.tsx", "Ruppelt V5.5"],
+  ["app/ruppelt/page.tsx", "ogp-ruppelt-v55.jpg"],
+  ["app/ruppelt/lp/page.tsx", "Ruppelt V5.5"],
+  ["app/ruppelt/lp/page.tsx", "ogp-ruppelt-v55.jpg"],
+  ["app/ruppelt/videos/page.tsx", "Ruppelt V5.5"],
+  ["data/pursue/pursue-records.json", '"recordCount": 517'],
+  ["lib/brandHomeContent.ts", "Ruppelt V5.5"],
   ["app/sitemap.ts", "/ruppelt/videos"],
 ];
 
@@ -336,6 +342,7 @@ const v30RuppeltOgpHash = ogpImageHash("public/ogp-ruppelt-v30.jpg");
 const v40RuppeltOgpHash = ogpImageHash("public/ogp-ruppelt-v40.jpg");
 const v45RuppeltOgpHash = ogpImageHash("public/ogp-ruppelt-v45.jpg");
 const v50RuppeltOgpHash = ogpImageHash("public/ogp-ruppelt-v50.jpg");
+const v55RuppeltOgpHash = ogpImageHash("public/ogp-ruppelt-v55.jpg");
 
 if (
   legacyRuppeltOgpHash !== versionedRuppeltOgpHash ||
@@ -344,11 +351,12 @@ if (
   v25RuppeltOgpHash !== v30RuppeltOgpHash ||
   v30RuppeltOgpHash !== v40RuppeltOgpHash ||
   v40RuppeltOgpHash !== v45RuppeltOgpHash ||
-  v45RuppeltOgpHash !== v50RuppeltOgpHash
+  v45RuppeltOgpHash !== v50RuppeltOgpHash ||
+  v50RuppeltOgpHash !== v55RuppeltOgpHash
 ) {
   console.error("Ruppelt OGP images do not match. Refusing to continue:");
   console.error(
-    "- all versioned and legacy Ruppelt OGP images through public/ogp-ruppelt-v50.jpg must match",
+    "- all versioned and legacy Ruppelt OGP images through public/ogp-ruppelt-v55.jpg must match",
   );
   process.exit(1);
 }

@@ -29,6 +29,11 @@ type FulltextIndexPayload = {
     releaseId: string;
     file: string;
     count: number;
+    routingBloom?: {
+      bits: number;
+      hashes: number;
+      data: string;
+    };
   }>;
 };
 
@@ -60,7 +65,8 @@ type TranslationDocument = {
 };
 
 let cachedManifestPromise: Promise<FulltextIndexPayload | FulltextIndexItem[]> | null = null;
-const cachedSearchIndexPromises = new Map<string, Promise<LoadedSearchIndex>>();
+const cachedShardPromises = new Map<string, Promise<LoadedSearchIndex>>();
+let cachedLegacyIndexPromise: Promise<LoadedSearchIndex> | null = null;
 let cachedBundlesPromise: Promise<Record<string, PursueDocumentBundle>> | null = null;
 const cachedTranslationPromises = new Map<string, Promise<TranslationDocument>>();
 const resultCache = new Map<string, Array<{
@@ -207,55 +213,131 @@ async function loadManifest() {
   return cachedManifestPromise;
 }
 
-async function loadSearchIndex(releaseId: string) {
-  const cacheKey = releaseId || "all";
+function loadPayload(payload: FulltextIndexPayload, documents = payload.documents || []) {
+  const documentById = new Map(documents.map((item) => [item.recordId, item]));
+  const miniSearches =
+    payload.engine === "minisearch" && payload.index
+      ? [
+          MiniSearch.loadJS(payload.index as Parameters<typeof MiniSearch.loadJS>[0], {
+            fields,
+            storeFields,
+            idField: "id",
+            tokenize: tokenizeForRuppeltSearch,
+          }),
+        ]
+      : [];
 
-  if (!cachedSearchIndexPromises.has(cacheKey)) {
-    cachedSearchIndexPromises.set(
-      cacheKey,
-      loadManifest().then(async (payload) => {
-        const selectedShards =
-          !Array.isArray(payload) && payload.shards?.length
-            ? payload.shards.filter((shard) => !releaseId || shard.releaseId === releaseId)
-            : [];
-        const shardPayloads = selectedShards.length
-          ? await Promise.all(
-              selectedShards.map((shard) =>
-                  readFile(resolve(fulltextIndexDir, shard.file), "utf8").then(
-                    (shardContent) => JSON.parse(shardContent) as FulltextIndexPayload,
-                  ),
-                ),
-              )
-          : [];
-        const loadedPayloads = shardPayloads.length
-          ? shardPayloads
-          : Array.isArray(payload)
-            ? []
-            : [payload];
-        const documents = Array.isArray(payload)
-          ? payload
-          : loadedPayloads.flatMap((item) => item.documents || []);
-        const documentById = new Map(documents.map((item) => [item.recordId, item]));
-        const miniSearches = loadedPayloads
-          .filter((item) => item.engine === "minisearch" && item.index)
-          .map((item) =>
-            MiniSearch.loadJS(item.index as Parameters<typeof MiniSearch.loadJS>[0], {
-              fields,
-              storeFields,
-              idField: "id",
-              tokenize: tokenizeForRuppeltSearch,
-            }),
-          );
+  return { documents, documentById, miniSearches };
+}
 
-        return { documents, documentById, miniSearches };
-      }).catch((error) => {
-        cachedSearchIndexPromises.delete(cacheKey);
-        throw error;
-      }),
+async function loadShard(shard: NonNullable<FulltextIndexPayload["shards"]>[number]) {
+  if (!cachedShardPromises.has(shard.releaseId)) {
+    cachedShardPromises.set(
+      shard.releaseId,
+      readFile(resolve(fulltextIndexDir, shard.file), "utf8")
+        .then((content) => loadPayload(JSON.parse(content) as FulltextIndexPayload))
+        .catch((error) => {
+          cachedShardPromises.delete(shard.releaseId);
+          throw error;
+        }),
     );
   }
 
-  return cachedSearchIndexPromises.get(cacheKey)!;
+  return cachedShardPromises.get(shard.releaseId)!;
+}
+
+async function loadSearchIndex(releaseId: string, query: string) {
+  const payload = await loadManifest();
+
+  if (!Array.isArray(payload) && payload.shards?.length) {
+    const releaseShards = payload.shards.filter(
+      (shard) => !releaseId || shard.releaseId === releaseId,
+    );
+    const selectedShards = releaseId ? releaseShards : selectSearchShards(releaseShards, query);
+    const loadedShards = await Promise.all(selectedShards.map(loadShard));
+    const documents = loadedShards.flatMap((item) => item.documents);
+
+    return {
+      documents,
+      documentById: new Map(documents.map((item) => [item.recordId, item])),
+      miniSearches: loadedShards.flatMap((item) => item.miniSearches),
+    };
+  }
+
+  if (!cachedLegacyIndexPromise) {
+    cachedLegacyIndexPromise = Promise.resolve(
+      Array.isArray(payload)
+        ? {
+            documents: payload,
+            documentById: new Map(payload.map((item) => [item.recordId, item])),
+            miniSearches: [],
+          }
+        : loadPayload(payload),
+    ).catch((error) => {
+      cachedLegacyIndexPromise = null;
+      throw error;
+    });
+  }
+
+  return cachedLegacyIndexPromise;
+}
+
+function selectSearchShards(
+  shards: NonNullable<FulltextIndexPayload["shards"]>,
+  query: string,
+) {
+  const queryTokens = tokenizeForRuppeltSearch(query);
+
+  if (!queryTokens.length || shards.some((shard) => !shard.routingBloom?.data)) {
+    return shards;
+  }
+
+  const selected = shards.filter((shard) => {
+    return queryTokens.every((token) => routingBloomMayContain(shard.routingBloom!, token));
+  });
+
+  // Prefix and fuzzy queries may not have an exact routing term. In that case,
+  // search every shard so routing never turns a valid result into a false zero.
+  return selected.length ? selected : shards;
+}
+
+const routingBloomBytes = new Map<string, Uint8Array>();
+
+function hashRoutingTerm(value: string) {
+  let first = 2166136261;
+  let second = 5381;
+
+  for (let index = 0; index < value.length; index += 1) {
+    const code = value.charCodeAt(index);
+    first ^= code;
+    first = Math.imul(first, 16777619);
+    second = Math.imul(second, 33) ^ code;
+  }
+
+  return [first >>> 0, (second >>> 0) || 1];
+}
+
+function routingBloomMayContain(
+  bloom: NonNullable<NonNullable<FulltextIndexPayload["shards"]>[number]["routingBloom"]>,
+  term: string,
+) {
+  let bytes = routingBloomBytes.get(bloom.data);
+
+  if (!bytes) {
+    bytes = Uint8Array.from(Buffer.from(bloom.data, "base64"));
+    routingBloomBytes.set(bloom.data, bytes);
+  }
+
+  const [first, second] = hashRoutingTerm(term);
+
+  for (let index = 0; index < bloom.hashes; index += 1) {
+    const bit = (first + Math.imul(index, second) + index * index) & (bloom.bits - 1);
+    if ((bytes[bit >>> 3] & (1 << (bit & 7))) === 0) {
+      return false;
+    }
+  }
+
+  return true;
 }
 
 export async function GET(request: Request) {
@@ -278,7 +360,7 @@ export async function GET(request: Request) {
   }
 
   try {
-    const { documents, documentById, miniSearches } = await loadSearchIndex(releaseId);
+    const { documents, documentById, miniSearches } = await loadSearchIndex(releaseId, query);
     let results: SearchResult[] = [];
 
     if (miniSearches.length) {

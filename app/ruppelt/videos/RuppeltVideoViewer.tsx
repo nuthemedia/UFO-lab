@@ -9,6 +9,7 @@ import {
   getLocation,
   getPriorDisclosure,
   getRelease,
+  getReleaseId,
   getSearchText,
   getTitle,
   getVideoEmbedUrl,
@@ -87,7 +88,12 @@ export function RuppeltVideoViewer({ records }: { records: PursueRecord[] }) {
     const normalizedQuery = query.trim().toLowerCase();
     return allVideos.filter((record) => {
       if (normalizedQuery && !getSearchText(record).includes(normalizedQuery)) return false;
-      if (release && getRelease(record) !== release) return false;
+      if (
+        release &&
+        getRelease(record) !== release &&
+        record.source.release !== release &&
+        getReleaseId(record) !== release
+      ) return false;
       if (agency && getAgency(record) !== agency) return false;
       if (status && statusFor(record) !== status) return false;
       if (savedOnly && !savedIds.includes(record.source.id)) return false;
